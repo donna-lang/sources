@@ -2304,15 +2304,15 @@ parsetoml_parsetoml_parse_inline_pairs:
 	pushq %rsi
 	pushq %rdi
 	movq %r9, %r12
-	movq %r8, %r14
+	movq %r8, %r15
 	subq $32, %rsp
-	movq %r14, %r8
+	movq %r15, %r8
 	movq %rcx, %rsi
 	callq parsetoml_parsetoml_skip_ws
 	movq %rsi, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
-	cmpq %r14, %rdx
+	cmpq %r15, %rdx
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
@@ -2321,7 +2321,7 @@ parsetoml_parsetoml_parse_inline_pairs:
 	movq %rsp, %rax
 	movq $0, 32(%rax)
 	movl $0, %r9d
-	movq %r14, %r8
+	movq %r15, %r8
 	movq %rdx, %rdi
 	movq %rcx, %rsi
 	callq parsetoml_parsetoml_scan_elem
@@ -2349,53 +2349,55 @@ parsetoml_parsetoml_parse_inline_pairs:
 	callq donna_string_length
 	movq %rdi, %rdx
 	movq %rsi, %rcx
-	movq %rax, -24(%rbp)
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rax, %r9
-	movl $0, %r8d
-	movq %rdx, %rdi
-	movl $61, %edx
-	movq %rcx, %rsi
-	movq %rdi, %rcx
-	callq parsetoml_parsetoml_find_outside_str
-	movq %rdi, %rdx
-	movq %rsi, %rcx
 	movq %rax, %rdi
 	subq $-32, %rsp
-	cmpq $-1, %rdi
+	subq $32, %rsp
+	movq %rdi, %r9
+	movl $0, %r8d
+	movq %rdx, %rbx
+	movl $61, %edx
+	movq %rcx, %rsi
+	movq %rbx, %rcx
+	callq parsetoml_parsetoml_find_outside_str
+	movq %rbx, %rdx
+	movq %rsi, %rcx
+	movq %rax, %r8
+	subq $-32, %rsp
+	cmpq $-1, %r8
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rsi
+	movq %rsi, -24(%rbp)
 	cmpq $1, %rax
 	jz Lbb208
 	subq $32, %rsp
-	movq %rdi, %r8
-	movq %rdx, %r15
+	movq %r8, %r14
+	movq %rdx, %rbx
 	movl $0, %edx
-	movq %rcx, %rbx
-	movq %r15, %rcx
+	movq %rcx, %rsi
+	movq %rbx, %rcx
 	callq donna_string_slice
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_string_trim
-	movq %r15, %rdx
-	movq %rbx, %rcx
-	movq %rax, -32(%rbp)
-	movq -24(%rbp), %rax
+	movq %r14, %r8
+	movq %rbx, %rdx
+	movq %rsi, %rcx
+	movq %rax, %r14
+	movq -24(%rbp), %rsi
 	movq -16(%rbp), %rbx
 	subq $-32, %rsp
-	movq %rdx, %r15
-	movq %rdi, %rdx
+	movq %rdx, %rax
+	movq %r8, %rdx
 	addq $1, %rdx
-	subq %rdi, %rax
-	movq %rax, %r8
+	subq %r8, %rdi
+	movq %rdi, %r8
 	subq $1, %r8
 	subq $32, %rsp
 	movq %rcx, %rdi
-	movq %r15, %rcx
+	movq %rax, %rcx
 	callq donna_string_slice
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -2405,7 +2407,7 @@ parsetoml_parsetoml_parse_inline_pairs:
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq parsetoml_parsetoml_parse_value
-	movq %r14, %rdx
+	movq %r15, %rdx
 	movq %rdi, %rcx
 	subq $-32, %rsp
 	subq $16, %rsp
@@ -2416,7 +2418,8 @@ parsetoml_parsetoml_parse_inline_pairs:
 	movzbq %r8b, %r8
 	cmpl $0, %r8d
 	jnz Lbb206
-	movq 8(%rax), %r14
+	movq 8(%rax), %rax
+	movq %rax, -32(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rax
 	cmpq $1, %rbx
@@ -2439,8 +2442,8 @@ Lbb205:
 	movq %rax, %r13
 	movq -32(%rbp), %rax
 	subq $-32, %rsp
-	movq %rax, (%r13)
-	movq %r14, 8(%r13)
+	movq %r14, (%r13)
+	movq %rax, 8(%r13)
 	subq $32, %rsp
 	movq %rcx, %r14
 	movl $24, %ecx

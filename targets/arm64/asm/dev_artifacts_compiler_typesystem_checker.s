@@ -1019,11 +1019,10 @@ compiler_typesystem_checker_check_ctors:
 	str	x25, [x29, 72]
 	str	x26, [x29, 64]
 	mov	x25, x5
-	mov	x23, x4
+	mov	x26, x4
 	mov	x22, x1
 	mov	x1, x0
 	mov	x0, x6
-	str	x0, [x29, 40]
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
@@ -1031,7 +1030,7 @@ compiler_typesystem_checker_check_ctors:
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
-	mov	x26, x3
+	mov	x23, x3
 	mov	x3, #16
 	add	x1, x1, x3
 	ldr	x20, [x1]
@@ -1053,54 +1052,61 @@ compiler_typesystem_checker_check_ctors:
 	bl	donna_list_map
 	mov	x1, x20
 	mov	x20, x1
-	mov	x1, x26
+	mov	x1, x23
 	bl	compiler_typesystem_checker_subst_list
 	mov	x2, x21
 	mov	x1, x20
 	mov	x24, x0
 	mov	x0, x19
-	mov	x20, x2
+	mov	x21, x2
 	mov	x2, x25
-	mov	x21, x1
+	mov	x20, x1
 	mov	x1, x24
 	mov	x19, x0
-	mov	x0, x21
+	mov	x0, x20
 	bl	compiler_typesystem_typed_ast_TypedConstructor
-	str	x0, [x29, 32]
+	str	x0, [x29, 24]
 	mov	x0, x19
 	mov	x19, x0
 	mov	x0, x24
 	bl	donna_list_is_empty
-	mov	x3, x26
-	mov	x1, x21
+	mov	x3, x23
+	mov	x1, x20
 	mov	x2, x0
 	mov	x0, x19
 	ldr	x19, [x29, 48]
-	mov	x26, x3
+	mov	x23, x3
 	mov	x3, #16
 	sub	sp, sp, x3
-	mov	x21, sp
+	mov	x3, sp
+	str	x3, [x29, 40]
 	cmp	x2, #1
 	beq	.L55
-	mov	x19, x1
+	mov	x20, x1
 	mov	x1, x22
+	mov	x19, x0
 	mov	x0, x24
 	bl	compiler_typesystem_types_TFnType
-	mov	x4, x23
-	mov	x2, x20
-	mov	x1, x19
-	mov	x19, x0
+	mov	x4, x26
+	mov	x3, x23
+	mov	x2, x21
+	mov	x1, x20
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x26, x3
+	ldr	x3, [x29, 40]
+	mov	x20, x0
 	ldr	x0, [x29, 48]
-	ldr	x20, [x29, 40]
-	str	x19, [x21]
+	str	x19, [x3]
 	b	.L58
 .L55:
-	mov	x4, x23
-	mov	x2, x20
 	mov	x20, x0
 	mov	x0, x19
-	mov	x19, x21
-	str	x22, [x19]
+	mov	x4, x26
+	mov	x26, x23
+	mov	x2, x21
+	str	x22, [x3]
 	mov	x19, x22
 .L58:
 	mov	x23, x2
@@ -1109,7 +1115,7 @@ compiler_typesystem_checker_check_ctors:
 	mov	x19, x0
 	mov	x0, x4
 	bl	compiler_typesystem_env_env_bind
-	str	x0, [x29, 24]
+	str	x0, [x29, 32]
 	mov	x0, x19
 	mov	x19, x0
 	mov	x0, #24
@@ -1119,8 +1125,8 @@ compiler_typesystem_checker_check_ctors:
 	mov	x2, x0
 	mov	x0, x19
 	mov	x19, x0
-	ldr	x0, [x29, 24]
-	ldr	x21, [x29, 32]
+	ldr	x0, [x29, 32]
+	ldr	x21, [x29, 24]
 	str	x23, [x2]
 	mov	x4, #8
 	add	x4, x2, x4
@@ -1161,7 +1167,7 @@ compiler_typesystem_checker_check_ctors:
 	b	.L61
 .L59:
 	mov	x0, x19
-	mov	x20, x23
+	mov	x20, x26
 	bl	donna_list_reverse
 	mov	x19, x0
 	mov	x0, #16
@@ -2129,20 +2135,20 @@ compiler_typesystem_checker_check_function:
 	mov	x0, x1
 	ldr	x1, [x2]
 	cmp	x1, #1
-	beq	.L183
+	beq	.L184
 	mov	x1, #8
 	add	x1, x2, x1
 	ldr	x19, [x1]
 	mov	x1, #16
 	add	x1, x2, x1
 	ldr	x1, [x1]
-	mov	x22, x0
+	mov	x21, x0
 	mov	x0, #24
 	add	x0, x2, x0
 	ldr	x0, [x0]
 	mov	x3, #32
 	add	x3, x2, x3
-	ldr	x21, [x3]
+	ldr	x27, [x3]
 	mov	x3, #40
 	add	x3, x2, x3
 	ldr	x20, [x3]
@@ -2150,75 +2156,75 @@ compiler_typesystem_checker_check_function:
 	add	x2, x2, x3
 	ldr	x23, [x2]
 	str	x23, [x29, 40]
-	mov	x23, x1
-	mov	x1, x22
+	mov	x22, x1
+	mov	x1, x21
 	bl	compiler_typesystem_checker_build_param_pairs
-	mov	x1, x23
+	mov	x1, x22
 	mov	x2, x0
-	mov	x0, x22
-	mov	x25, x2
+	mov	x0, x21
+	mov	x24, x2
 	mov	x2, #16
 	sub	sp, sp, x2
-	mov	x23, sp
-	mov	x24, x1
-	ldr	x1, [x21]
+	mov	x22, sp
+	mov	x23, x1
+	ldr	x1, [x27]
 	cmp	x1, #0
 	beq	.L169
-	mov	x22, x0
+	mov	x21, x0
 	mov	x0, #8
-	add	x0, x21, x0
+	add	x0, x27, x0
 	ldr	x0, [x0]
 	bl	compiler_typesystem_checker_annotation_to_type
-	mov	x2, x25
-	mov	x1, x24
+	mov	x2, x24
+	mov	x1, x23
 	mov	x17, x0
-	mov	x0, x22
-	mov	x22, x17
-	str	x22, [x23]
-	mov	x25, x2
+	mov	x0, x21
+	mov	x21, x17
+	str	x21, [x22]
+	mov	x24, x2
 	b	.L172
 .L169:
-	mov	x22, x23
-	mov	x2, x25
-	mov	x1, x24
-	mov	x25, x2
+	mov	x21, x22
+	mov	x2, x24
+	mov	x1, x23
+	mov	x24, x2
 	adrp	x2, compiler_typesystem_types_TNil
 	add	x2, x2, #:lo12:compiler_typesystem_types_TNil
-	str	x2, [x22]
-	adrp	x22, compiler_typesystem_types_TNil
-	add	x22, x22, #:lo12:compiler_typesystem_types_TNil
+	str	x2, [x21]
+	adrp	x21, compiler_typesystem_types_TNil
+	add	x21, x21, #:lo12:compiler_typesystem_types_TNil
 .L172:
-	mov	x24, x1
+	mov	x22, x21
+	mov	x23, x1
 	adrp	x1, compiler_typesystem_checker_pair_snd
 	add	x1, x1, #:lo12:compiler_typesystem_checker_pair_snd
-	mov	x23, x0
-	mov	x0, x25
+	mov	x21, x0
+	mov	x0, x24
 	bl	donna_list_map
-	mov	x1, x24
-	mov	x24, x1
+	mov	x1, x23
+	mov	x23, x1
 	mov	x1, x22
 	bl	compiler_typesystem_types_TFnType
-	mov	x2, x25
-	mov	x1, x24
-	mov	x6, x0
-	mov	x0, x23
-	str	x6, [x29, 24]
+	mov	x2, x24
+	mov	x1, x23
+	mov	x26, x0
+	mov	x0, x21
 	mov	x23, x2
-	mov	x2, x6
-	mov	x24, x1
+	mov	x2, x26
+	mov	x21, x1
 	mov	x1, x19
 	bl	compiler_typesystem_env_env_bind
-	mov	x1, x24
+	mov	x1, x21
 	mov	x17, x0
 	mov	x0, x20
 	mov	x20, x17
-	mov	x24, x1
+	mov	x21, x1
 	mov	x1, x20
-	mov	x25, x0
+	mov	x24, x0
 	mov	x0, x23
 	bl	compiler_typesystem_checker_bind_param_pairs
 	mov	x1, x0
-	mov	x0, x25
+	mov	x0, x24
 	bl	compiler_typesystem_checker_infer_expr
 	mov	x2, x23
 	mov	x1, x0
@@ -2226,29 +2232,30 @@ compiler_typesystem_checker_check_function:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
-	str	x19, [x29, 32]
+	str	x19, [x29, 24]
 	ldr	x3, [x1]
 	cmp	x3, #1
-	beq	.L181
-	mov	x26, x2
+	beq	.L182
+	mov	x23, x2
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	ldr	x25, [x1]
-	mov	x23, x0
+	mov	x19, x0
 	mov	x0, x25
 	bl	compiler_typesystem_types_typed_expr_type
-	mov	x2, x26
-	mov	x1, x24
+	mov	x2, x23
+	mov	x1, x21
 	mov	x3, x0
-	mov	x0, x23
+	mov	x0, x19
+	ldr	x19, [x29, 24]
 	mov	x24, x3
 	mov	x3, #16
-	mov	x27, x20
 	sub	sp, sp, x3
-	mov	x20, sp
+	mov	x21, sp
+	str	x21, [x29, 32]
 	mov	x23, x2
-	ldr	x2, [x21]
+	ldr	x2, [x27]
 	cmp	x2, #0
 	beq	.L179
 	mov	x21, x1
@@ -2256,13 +2263,15 @@ compiler_typesystem_checker_check_function:
 	mov	x19, x0
 	mov	x0, x24
 	bl	compiler_typesystem_types_types_equal
+	mov	x6, x26
 	mov	x4, x25
 	mov	x2, x23
 	mov	x1, x21
 	mov	x3, x0
 	mov	x0, x19
-	ldr	x19, [x29, 32]
-	ldr	x6, [x29, 24]
+	mov	x27, x20
+	ldr	x20, [x29, 32]
+	ldr	x19, [x29, 24]
 	ldr	x23, [x29, 40]
 	mov	x5, #16
 	sub	sp, sp, x5
@@ -2328,8 +2337,10 @@ compiler_typesystem_checker_check_function:
 	str	x0, [x21]
 .L178:
 	str	x0, [x20]
-	b	.L180
+	b	.L181
 .L179:
+	mov	x27, x20
+	mov	x20, x21
 	mov	x22, x1
 	adrp	x1, compiler_typesystem_checker_pair_snd
 	add	x1, x1, #:lo12:compiler_typesystem_checker_pair_snd
@@ -2376,10 +2387,10 @@ compiler_typesystem_checker_check_function:
 	add	x1, x0, x1
 	str	x21, [x1]
 	str	x0, [x20]
-.L180:
-	str	x0, [x19]
-	b	.L190
 .L181:
+	str	x0, [x19]
+	b	.L191
+.L182:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
@@ -2409,8 +2420,8 @@ compiler_typesystem_checker_check_function:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L190
-.L183:
+	b	.L191
+.L184:
 	mov	x1, #8
 	add	x1, x2, x1
 	ldr	x19, [x1]
@@ -2426,15 +2437,14 @@ compiler_typesystem_checker_check_function:
 	ldr	x25, [x3]
 	mov	x3, #40
 	add	x3, x2, x3
-	ldr	x22, [x3]
+	ldr	x21, [x3]
 	mov	x3, #48
 	add	x2, x2, x3
-	ldr	x2, [x2]
-	str	x2, [x29, 16]
-	mov	x21, x1
+	ldr	x26, [x2]
+	mov	x22, x1
 	mov	x1, x20
 	bl	compiler_typesystem_checker_build_param_pairs
-	mov	x1, x21
+	mov	x1, x22
 	mov	x2, x0
 	mov	x0, x20
 	mov	x24, x2
@@ -2444,8 +2454,8 @@ compiler_typesystem_checker_check_function:
 	mov	x23, x1
 	ldr	x1, [x25]
 	cmp	x1, #0
-	beq	.L186
-	mov	x21, x0
+	beq	.L187
+	mov	x22, x0
 	mov	x0, #8
 	add	x0, x25, x0
 	ldr	x0, [x0]
@@ -2453,11 +2463,11 @@ compiler_typesystem_checker_check_function:
 	mov	x2, x24
 	mov	x1, x23
 	mov	x3, x0
-	mov	x0, x21
+	mov	x0, x22
 	str	x3, [x20]
 	mov	x24, x2
-	b	.L189
-.L186:
+	b	.L190
+.L187:
 	mov	x2, x24
 	mov	x1, x23
 	mov	x24, x2
@@ -2466,23 +2476,23 @@ compiler_typesystem_checker_check_function:
 	str	x2, [x20]
 	adrp	x3, compiler_typesystem_types_TNil
 	add	x3, x3, #:lo12:compiler_typesystem_types_TNil
-.L189:
+.L190:
 	mov	x23, x3
-	mov	x21, x1
+	mov	x22, x1
 	adrp	x1, compiler_typesystem_checker_pair_snd
 	add	x1, x1, #:lo12:compiler_typesystem_checker_pair_snd
 	mov	x20, x0
 	mov	x0, x24
 	bl	donna_list_map
-	mov	x1, x21
-	mov	x21, x1
+	mov	x1, x22
+	mov	x22, x1
 	mov	x1, x23
 	bl	compiler_typesystem_types_TFnType
 	mov	x2, x24
-	mov	x1, x21
+	mov	x1, x22
 	mov	x25, x0
 	mov	x0, x20
-	mov	x26, x2
+	mov	x22, x2
 	mov	x2, x25
 	mov	x20, x1
 	mov	x1, x19
@@ -2491,27 +2501,25 @@ compiler_typesystem_checker_check_function:
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	mov	x21, x1
+	mov	x24, x1
 	adrp	x1, compiler_typesystem_types_TNil
 	add	x1, x1, #:lo12:compiler_typesystem_types_TNil
 	mov	x20, x0
 	adrp	x0, str855
 	add	x0, x0, #:lo12:str855
 	bl	compiler_typesystem_types_TEIntLit
-	mov	x24, x0
+	str	x0, [x29, 16]
 	mov	x0, x20
 	mov	x20, x0
 	mov	x0, #16
 	bl	malloc
-	mov	x2, x26
-	mov	x1, x21
+	mov	x1, x24
+	ldr	x24, [x29, 16]
+	str	x21, [x0]
 	mov	x21, x1
-	ldr	x1, [x29, 16]
-	str	x22, [x0]
-	mov	x22, x2
-	mov	x2, #8
-	add	x2, x0, x2
-	str	x1, [x2]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x26, [x1]
 	bl	donna_option_Some
 	mov	x6, x25
 	mov	x4, x24
@@ -2534,7 +2542,7 @@ compiler_typesystem_checker_check_function:
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x19, [x1]
-.L190:
+.L191:
 	ldr	x19, [x29, 120]
 	ldr	x20, [x29, 112]
 	ldr	x21, [x29, 104]
@@ -2565,7 +2573,7 @@ compiler_typesystem_checker_build_param_pairs:
 	mov	x2, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L198
+	beq	.L199
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -2586,7 +2594,7 @@ compiler_typesystem_checker_build_param_pairs:
 	mov	x21, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L195
+	beq	.L196
 	mov	x22, x1
 	mov	x1, #8
 	add	x0, x0, x1
@@ -2598,8 +2606,8 @@ compiler_typesystem_checker_build_param_pairs:
 	str	x20, [x21]
 	mov	x1, x22
 	mov	x22, x20
-	b	.L197
-.L195:
+	b	.L198
+.L196:
 	mov	x0, x20
 	mov	x20, x21
 	mov	x22, x1
@@ -2611,7 +2619,7 @@ compiler_typesystem_checker_build_param_pairs:
 	mov	x22, x0
 	mov	x0, x21
 	str	x22, [x20]
-.L197:
+.L198:
 	bl	compiler_typesystem_checker_build_param_pairs
 	mov	x20, x0
 	mov	x0, #16
@@ -2632,11 +2640,11 @@ compiler_typesystem_checker_build_param_pairs:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L199
-.L198:
+	b	.L200
+.L199:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L199:
+.L200:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2661,7 +2669,7 @@ compiler_typesystem_checker_bind_param_pairs:
 	mov	x0, x17
 	ldr	x2, [x1]
 	cmp	x2, #0
-	beq	.L202
+	beq	.L203
 	mov	x2, #8
 	add	x2, x1, x2
 	ldr	x2, [x2]
@@ -2676,7 +2684,7 @@ compiler_typesystem_checker_bind_param_pairs:
 	mov	x1, x0
 	mov	x0, x19
 	bl	compiler_typesystem_checker_bind_param_pairs
-.L202:
+.L203:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -2701,41 +2709,41 @@ compiler_typesystem_checker_infer_expr:
 	str	x26, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L341
+	beq	.L342
 	cmp	x2, #1
-	beq	.L340
+	beq	.L341
 	cmp	x2, #2
-	beq	.L339
+	beq	.L340
 	cmp	x2, #3
-	beq	.L338
+	beq	.L339
 	cmp	x2, #4
-	beq	.L334
+	beq	.L335
 	cmp	x2, #5
-	beq	.L314
+	beq	.L315
 	cmp	x2, #9
-	beq	.L301
+	beq	.L302
 	cmp	x2, #10
-	beq	.L289
+	beq	.L290
 	cmp	x2, #11
-	beq	.L280
+	beq	.L281
 	cmp	x2, #14
-	beq	.L275
+	beq	.L276
 	cmp	x2, #12
-	beq	.L267
+	beq	.L268
 	cmp	x2, #6
-	beq	.L264
+	beq	.L265
 	cmp	x2, #7
-	beq	.L252
+	beq	.L253
 	cmp	x2, #8
-	beq	.L235
+	beq	.L236
 	cmp	x2, #13
-	beq	.L232
+	beq	.L233
 	cmp	x2, #16
-	beq	.L229
+	beq	.L230
 	cmp	x2, #15
-	beq	.L225
+	beq	.L226
 	cmp	x2, #17
-	beq	.L222
+	beq	.L223
 	mov	x0, x1
 	bl	compiler_typesystem_env_fresh_var
 	mov	x1, x0
@@ -2752,8 +2760,8 @@ compiler_typesystem_checker_infer_expr:
 	add	x1, x0, x1
 	str	x19, [x1]
 	bl	donna_result_Ok
-	b	.L342
-.L222:
+	b	.L343
+.L223:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -2763,7 +2771,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L224
+	beq	.L225
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -2788,15 +2796,15 @@ compiler_typesystem_checker_infer_expr:
 	str	x20, [x1]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L342
-.L224:
+	b	.L343
+.L225:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L225:
+	b	.L343
+.L226:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -2824,7 +2832,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L227
+	beq	.L228
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -2855,16 +2863,16 @@ compiler_typesystem_checker_infer_expr:
 	str	x1, [x2]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L342
-.L227:
+	b	.L343
+.L228:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L229:
+	b	.L343
+.L230:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -2874,7 +2882,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L231
+	beq	.L232
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
@@ -2894,15 +2902,15 @@ compiler_typesystem_checker_infer_expr:
 	str	x20, [x1]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L342
-.L231:
+	b	.L343
+.L232:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L232:
+	b	.L343
+.L233:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -2918,7 +2926,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L234
+	beq	.L235
 	mov	x2, #8
 	add	x0, x0, x2
 	mov	x21, x1
@@ -2938,15 +2946,15 @@ compiler_typesystem_checker_infer_expr:
 	str	x1, [x2]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L342
-.L234:
+	b	.L343
+.L235:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L235:
+	b	.L343
+.L236:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -2964,7 +2972,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L250
+	beq	.L251
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -2980,7 +2988,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x20, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L247
+	beq	.L248
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x2, [x1]
@@ -2996,20 +3004,20 @@ compiler_typesystem_checker_infer_expr:
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x3, #1
-	beq	.L240
+	beq	.L241
 	mov	x3, #0
 	str	x3, [x2]
 	mov	x23, x1
 	mov	x1, #0
-	b	.L242
-.L240:
+	b	.L243
+.L241:
 	mov	x23, x1
 	mov	x1, #1
 	str	x1, [x2]
 	mov	x1, #1
-.L242:
+.L243:
 	cmp	w1, #0
-	bne	.L245
+	bne	.L246
 	mov	x22, x0
 	mov	x0, x23
 	bl	compiler_typesystem_types_typed_expr_type
@@ -3018,15 +3026,15 @@ compiler_typesystem_checker_infer_expr:
 	str	x1, [x24]
 	mov	x22, x0
 	mov	x0, x1
-	b	.L246
-.L245:
+	b	.L247
+.L246:
 	mov	x22, x0
 	mov	x0, #8
 	add	x0, x22, x0
 	ldr	x0, [x0]
 	bl	compiler_typesystem_types_typed_expr_type
 	str	x0, [x24]
-.L246:
+.L247:
 	bl	compiler_typesystem_types_TListType
 	mov	x1, x23
 	mov	x2, x0
@@ -3041,26 +3049,26 @@ compiler_typesystem_checker_infer_expr:
 	str	x21, [x1]
 	bl	donna_result_Ok
 	str	x0, [x20]
-	b	.L249
-.L247:
+	b	.L250
+.L248:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x20]
-.L249:
-	str	x0, [x19]
-	b	.L342
 .L250:
+	str	x0, [x19]
+	b	.L343
+.L251:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L252:
+	b	.L343
+.L253:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -3072,7 +3080,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L263
+	beq	.L264
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
@@ -3088,18 +3096,18 @@ compiler_typesystem_checker_infer_expr:
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x1, #1
-	beq	.L256
+	beq	.L257
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	.L258
-.L256:
+	b	.L259
+.L257:
 	mov	x1, #1
 	str	x1, [x2]
 	mov	x1, #1
-.L258:
+.L259:
 	cmp	w1, #0
-	bne	.L261
+	bne	.L262
 	mov	x21, x0
 	mov	x0, x20
 	bl	compiler_typesystem_env_fresh_var
@@ -3109,15 +3117,15 @@ compiler_typesystem_checker_infer_expr:
 	str	x1, [x22]
 	mov	x21, x0
 	mov	x0, x1
-	b	.L262
-.L261:
+	b	.L263
+.L262:
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x21, x0
 	ldr	x0, [x0]
 	bl	compiler_typesystem_types_typed_expr_type
 	str	x0, [x22]
-.L262:
+.L263:
 	bl	compiler_typesystem_types_TListType
 	mov	x1, x0
 	mov	x0, x21
@@ -3131,15 +3139,15 @@ compiler_typesystem_checker_infer_expr:
 	str	x20, [x1]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L342
-.L263:
+	b	.L343
+.L264:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L264:
+	b	.L343
+.L265:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -3151,7 +3159,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L266
+	beq	.L267
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
@@ -3176,15 +3184,15 @@ compiler_typesystem_checker_infer_expr:
 	str	x20, [x1]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L342
-.L266:
+	b	.L343
+.L267:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L267:
+	b	.L343
+.L268:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -3200,7 +3208,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L273
+	beq	.L274
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -3217,7 +3225,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x20, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L270
+	beq	.L271
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x2, [x1]
@@ -3235,26 +3243,26 @@ compiler_typesystem_checker_infer_expr:
 	str	x21, [x1]
 	bl	donna_result_Ok
 	str	x0, [x20]
-	b	.L272
-.L270:
+	b	.L273
+.L271:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x20]
-.L272:
-	str	x0, [x19]
-	b	.L342
 .L273:
+	str	x0, [x19]
+	b	.L343
+.L274:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L275:
+	b	.L343
+.L276:
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x22, [x2]
@@ -3270,7 +3278,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x0, [x23]
 	cmp	x0, #9
-	beq	.L277
+	beq	.L278
 	mov	x0, #24
 	bl	malloc
 	mov	x2, x21
@@ -3289,8 +3297,8 @@ compiler_typesystem_checker_infer_expr:
 	bl	compiler_parser_ast_Call
 	mov	x1, x20
 	str	x0, [x19]
-	b	.L279
-.L277:
+	b	.L280
+.L278:
 	mov	x1, x20
 	mov	x0, #8
 	add	x0, x23, x0
@@ -3319,10 +3327,10 @@ compiler_typesystem_checker_infer_expr:
 	bl	compiler_parser_ast_Call
 	mov	x1, x20
 	str	x0, [x19]
-.L279:
-	bl	compiler_typesystem_checker_infer_expr
-	b	.L342
 .L280:
+	bl	compiler_typesystem_checker_infer_expr
+	b	.L343
+.L281:
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x19, [x2]
@@ -3337,7 +3345,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L287
+	beq	.L288
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x2, [x1]
@@ -3350,7 +3358,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x21, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L284
+	beq	.L285
 	mov	x23, x1
 	adrp	x1, compiler_typesystem_types_TBool
 	add	x1, x1, #:lo12:compiler_typesystem_types_TBool
@@ -3358,8 +3366,8 @@ compiler_typesystem_checker_infer_expr:
 	mov	x1, x23
 	adrp	x2, compiler_typesystem_types_TBool
 	add	x2, x2, #:lo12:compiler_typesystem_types_TBool
-	b	.L286
-.L284:
+	b	.L287
+.L285:
 	mov	x23, x1
 	mov	x22, x0
 	mov	x0, x23
@@ -3368,7 +3376,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x2, x0
 	mov	x0, x22
 	str	x2, [x21]
-.L286:
+.L287:
 	bl	compiler_typesystem_types_TEUnaryOp
 	mov	x21, x0
 	mov	x0, #16
@@ -3379,16 +3387,16 @@ compiler_typesystem_checker_infer_expr:
 	str	x20, [x1]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L342
-.L287:
+	b	.L343
+.L288:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L289:
+	b	.L343
+.L290:
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x20, [x2]
@@ -3410,7 +3418,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L299
+	beq	.L300
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -3426,7 +3434,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x20, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L296
+	beq	.L297
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -3458,7 +3466,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x21, sp
 	ldr	x3, [x2]
 	cmp	x3, #1
-	beq	.L293
+	beq	.L294
 	mov	x23, x0
 	bl	compiler_typesystem_checker_binop_result_type
 	mov	x2, x25
@@ -3475,36 +3483,36 @@ compiler_typesystem_checker_infer_expr:
 	str	x22, [x1]
 	bl	donna_result_Ok
 	str	x0, [x21]
-	b	.L295
-.L293:
+	b	.L296
+.L294:
 	mov	x0, x2
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x21]
-.L295:
-	str	x0, [x20]
-	b	.L298
 .L296:
+	str	x0, [x20]
+	b	.L299
+.L297:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x20]
-.L298:
-	str	x0, [x19]
-	b	.L342
 .L299:
+	str	x0, [x19]
+	b	.L343
+.L300:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L301:
+	b	.L343
+.L302:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -3520,7 +3528,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L312
+	beq	.L313
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -3538,7 +3546,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x20, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L309
+	beq	.L310
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -3563,7 +3571,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x22, sp
 	ldr	x3, [x2]
 	cmp	x3, #7
-	beq	.L306
+	beq	.L307
 	mov	x23, x0
 	mov	x0, x21
 	bl	compiler_typesystem_env_fresh_var
@@ -3571,8 +3579,8 @@ compiler_typesystem_checker_infer_expr:
 	str	x2, [x22]
 	mov	x1, x24
 	mov	x0, x23
-	b	.L308
-.L306:
+	b	.L309
+.L307:
 	mov	x23, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -3590,7 +3598,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x2, x0
 	mov	x0, x23
 	str	x2, [x22]
-.L308:
+.L309:
 	bl	compiler_typesystem_types_TECall
 	mov	x22, x0
 	mov	x0, #16
@@ -3601,26 +3609,26 @@ compiler_typesystem_checker_infer_expr:
 	str	x21, [x1]
 	bl	donna_result_Ok
 	str	x0, [x20]
-	b	.L311
-.L309:
+	b	.L312
+.L310:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x20]
-.L311:
-	str	x0, [x19]
-	b	.L342
 .L312:
+	str	x0, [x19]
+	b	.L343
+.L313:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L314:
+	b	.L343
+.L315:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -3638,7 +3646,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L333
+	beq	.L334
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x2, [x0]
@@ -3651,7 +3659,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x20, sp
 	ldr	x2, [x0]
 	cmp	x2, #4
-	beq	.L317
+	beq	.L318
 	mov	x21, x0
 	mov	x0, x23
 	bl	compiler_typesystem_env_fresh_var
@@ -3675,8 +3683,8 @@ compiler_typesystem_checker_infer_expr:
 	str	x21, [x1]
 	bl	donna_result_Ok
 	str	x0, [x20]
-	b	.L332
-.L317:
+	b	.L333
+.L318:
 	mov	x24, x0
 	mov	x17, x23
 	mov	x23, x22
@@ -3700,7 +3708,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x21, sp
 	ldr	x3, [x2]
 	cmp	x3, #0
-	beq	.L329
+	beq	.L330
 	mov	x3, #8
 	add	x2, x2, x3
 	ldr	x23, [x2]
@@ -3718,19 +3726,19 @@ compiler_typesystem_checker_infer_expr:
 	mov	x1, sp
 	ldr	x3, [x2]
 	cmp	x3, #1
-	beq	.L322
+	beq	.L323
 	str	x0, [x1]
 	mov	x17, x23
 	mov	x23, x0
 	mov	x0, x17
-	b	.L324
-.L322:
+	b	.L325
+.L323:
 	mov	x0, x23
 	mov	x3, #8
 	add	x2, x2, x3
 	ldr	x23, [x2]
 	str	x23, [x1]
-.L324:
+.L325:
 	bl	compiler_typesystem_checker_iface_bindings
 	mov	x1, x25
 	mov	x25, x1
@@ -3744,7 +3752,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x26, x1
 	ldr	x1, [x2]
 	cmp	x1, #1
-	beq	.L326
+	beq	.L327
 	mov	x25, x0
 	mov	x0, x22
 	bl	compiler_typesystem_env_fresh_var
@@ -3753,14 +3761,14 @@ compiler_typesystem_checker_infer_expr:
 	mov	x0, x25
 	ldr	x3, [x2]
 	str	x3, [x24]
-	b	.L328
-.L326:
+	b	.L329
+.L327:
 	mov	x1, x26
 	mov	x3, #8
 	add	x2, x2, x3
 	ldr	x3, [x2]
 	str	x3, [x24]
-.L328:
+.L329:
 	mov	x2, x23
 	bl	compiler_typesystem_types_TEFieldAccess
 	mov	x23, x0
@@ -3772,25 +3780,25 @@ compiler_typesystem_checker_infer_expr:
 	str	x22, [x1]
 	bl	donna_result_Ok
 	str	x0, [x21]
-	b	.L331
-.L329:
+	b	.L332
+.L330:
 	mov	x1, x23
 	bl	errors_error_TypeUndefinedModule
 	bl	donna_result_Error
 	str	x0, [x21]
-.L331:
-	str	x0, [x20]
 .L332:
-	str	x0, [x19]
-	b	.L342
+	str	x0, [x20]
 .L333:
+	str	x0, [x19]
+	b	.L343
+.L334:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L342
-.L334:
+	b	.L343
+.L335:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -3806,7 +3814,7 @@ compiler_typesystem_checker_infer_expr:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L336
+	beq	.L337
 	mov	x21, x0
 	mov	x0, x20
 	bl	compiler_typesystem_env_fresh_var
@@ -3814,13 +3822,13 @@ compiler_typesystem_checker_infer_expr:
 	mov	x0, x21
 	ldr	x1, [x1]
 	str	x1, [x19]
-	b	.L337
-.L336:
+	b	.L338
+.L337:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	str	x1, [x19]
-.L337:
+.L338:
 	bl	compiler_typesystem_types_TEVar
 	mov	x19, x0
 	mov	x0, #16
@@ -3831,8 +3839,8 @@ compiler_typesystem_checker_infer_expr:
 	add	x2, x0, x2
 	str	x1, [x2]
 	bl	donna_result_Ok
-	b	.L342
-.L338:
+	b	.L343
+.L339:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -3849,8 +3857,8 @@ compiler_typesystem_checker_infer_expr:
 	add	x2, x0, x2
 	str	x1, [x2]
 	bl	donna_result_Ok
-	b	.L342
-.L339:
+	b	.L343
+.L340:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -3867,8 +3875,8 @@ compiler_typesystem_checker_infer_expr:
 	add	x2, x0, x2
 	str	x1, [x2]
 	bl	donna_result_Ok
-	b	.L342
-.L340:
+	b	.L343
+.L341:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -3885,8 +3893,8 @@ compiler_typesystem_checker_infer_expr:
 	add	x2, x0, x2
 	str	x1, [x2]
 	bl	donna_result_Ok
-	b	.L342
-.L341:
+	b	.L343
+.L342:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -3903,7 +3911,7 @@ compiler_typesystem_checker_infer_expr:
 	add	x2, x0, x2
 	str	x1, [x2]
 	bl	donna_result_Ok
-.L342:
+.L343:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -3936,7 +3944,7 @@ compiler_typesystem_checker_infer_exprs:
 	mov	x20, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L348
+	beq	.L349
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -3951,7 +3959,7 @@ compiler_typesystem_checker_infer_exprs:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L346
+	beq	.L347
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -3975,16 +3983,16 @@ compiler_typesystem_checker_infer_exprs:
 	str	x20, [x3]
 	bl	compiler_typesystem_checker_infer_exprs
 	str	x0, [x19]
-	b	.L350
-.L346:
+	b	.L351
+.L347:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L350
-.L348:
+	b	.L351
+.L349:
 	mov	x0, x20
 	mov	x20, x1
 	bl	donna_list_reverse
@@ -3997,7 +4005,7 @@ compiler_typesystem_checker_infer_exprs:
 	add	x2, x0, x2
 	str	x1, [x2]
 	bl	donna_result_Ok
-.L350:
+.L351:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -4018,14 +4026,14 @@ compiler_typesystem_checker_infer_clauses:
 	mov	x29, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L353
+	beq	.L354
 	adrp	x3, compiler_typesystem_types_TNil
 	add	x3, x3, #:lo12:compiler_typesystem_types_TNil
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	compiler_typesystem_checker_infer_clauses_loop
-	b	.L354
-.L353:
+	b	.L355
+.L354:
 	mov	x0, #16
 	bl	malloc
 	adrp	x1, donna_nil
@@ -4037,7 +4045,7 @@ compiler_typesystem_checker_infer_clauses:
 	add	x1, x1, #:lo12:compiler_typesystem_types_TNil
 	str	x1, [x2]
 	bl	donna_result_Ok
-.L354:
+.L355:
 	ldp	x29, x30, [sp], 16
 	ret
 .type compiler_typesystem_checker_infer_clauses, @function
@@ -4063,17 +4071,17 @@ compiler_typesystem_checker_infer_clauses_loop:
 	mov	x25, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L365
+	beq	.L366
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
 	mov	x2, #16
 	add	x0, x0, x2
 	ldr	x23, [x0]
-	str	x23, [x29, 16]
 	mov	x0, #16
 	sub	sp, sp, x0
 	mov	x19, sp
+	str	x19, [x29, 16]
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x21, [x0]
@@ -4084,14 +4092,14 @@ compiler_typesystem_checker_infer_clauses_loop:
 	add	x1, x1, x2
 	ldr	x20, [x1]
 	mov	x1, x25
-	mov	x23, x0
+	mov	x24, x0
 	mov	x0, x21
 	bl	compiler_typesystem_checker_bind_pattern
 	mov	x1, x0
-	mov	x0, x23
-	mov	x23, x1
+	mov	x0, x24
+	mov	x24, x1
 	bl	compiler_typesystem_checker_infer_guard
-	mov	x1, x23
+	mov	x1, x24
 	mov	x2, x0
 	mov	x0, x20
 	mov	x3, #16
@@ -4099,7 +4107,7 @@ compiler_typesystem_checker_infer_clauses_loop:
 	mov	x20, sp
 	ldr	x3, [x2]
 	cmp	x3, #1
-	beq	.L362
+	beq	.L363
 	mov	x3, #8
 	add	x2, x2, x3
 	ldr	x24, [x2]
@@ -4111,19 +4119,19 @@ compiler_typesystem_checker_infer_clauses_loop:
 	mov	x21, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L359
+	beq	.L360
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	ldr	x26, [x1]
-	mov	x23, x0
+	mov	x19, x0
 	mov	x0, x26
 	bl	compiler_typesystem_types_typed_expr_type
 	mov	x2, x26
 	mov	x1, x24
 	mov	x3, x0
-	mov	x0, x23
-	ldr	x23, [x29, 16]
+	mov	x0, x19
+	ldr	x19, [x29, 16]
 	mov	x26, x3
 	bl	compiler_typesystem_types_TypedClause
 	mov	x17, x0
@@ -4146,28 +4154,28 @@ compiler_typesystem_checker_infer_clauses_loop:
 	str	x22, [x4]
 	bl	compiler_typesystem_checker_infer_clauses_loop
 	str	x0, [x21]
-	b	.L361
-.L359:
+	b	.L362
+.L360:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x21]
-.L361:
-	str	x0, [x20]
-	b	.L364
 .L362:
+	str	x0, [x20]
+	b	.L365
+.L363:
 	mov	x0, x2
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x20]
-.L364:
-	str	x0, [x19]
-	b	.L367
 .L365:
+	str	x0, [x19]
+	b	.L368
+.L366:
 	mov	x0, x22
 	bl	donna_list_reverse
 	mov	x19, x0
@@ -4179,7 +4187,7 @@ compiler_typesystem_checker_infer_clauses_loop:
 	add	x1, x0, x1
 	str	x3, [x1]
 	bl	donna_result_Ok
-.L367:
+.L368:
 	ldr	x19, [x29, 88]
 	ldr	x20, [x29, 80]
 	ldr	x21, [x29, 72]
@@ -4204,7 +4212,7 @@ compiler_typesystem_checker_infer_guard:
 	str	x19, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L372
+	beq	.L373
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -4214,7 +4222,7 @@ compiler_typesystem_checker_infer_guard:
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L371
+	beq	.L372
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -4222,19 +4230,19 @@ compiler_typesystem_checker_infer_guard:
 	bl	donna_option_Some
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L373
-.L371:
+	b	.L374
+.L372:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L373
-.L372:
+	b	.L374
+.L373:
 	adrp	x0, donna_option_None
 	add	x0, x0, #:lo12:donna_option_None
 	bl	donna_result_Ok
-.L373:
+.L374:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -4261,7 +4269,7 @@ compiler_typesystem_checker_check_stmts:
 	mov	x20, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L379
+	beq	.L380
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -4276,7 +4284,7 @@ compiler_typesystem_checker_check_stmts:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L377
+	beq	.L378
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -4304,16 +4312,16 @@ compiler_typesystem_checker_check_stmts:
 	str	x20, [x4]
 	bl	compiler_typesystem_checker_check_stmts
 	str	x0, [x19]
-	b	.L381
-.L377:
+	b	.L382
+.L378:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L381
-.L379:
+	b	.L382
+.L380:
 	mov	x0, x20
 	mov	x20, x3
 	bl	donna_list_reverse
@@ -4326,7 +4334,7 @@ compiler_typesystem_checker_check_stmts:
 	add	x1, x0, x1
 	str	x3, [x1]
 	bl	donna_result_Ok
-.L381:
+.L382:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -4355,9 +4363,9 @@ compiler_typesystem_checker_check_stmt:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L393
+	beq	.L394
 	cmp	x1, #1
-	beq	.L388
+	beq	.L389
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -4370,7 +4378,7 @@ compiler_typesystem_checker_check_stmt:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L386
+	beq	.L387
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -4398,16 +4406,16 @@ compiler_typesystem_checker_check_stmt:
 	str	x20, [x1]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L401
-.L386:
+	b	.L402
+.L387:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L401
-.L388:
+	b	.L402
+.L389:
 	mov	x20, x19
 	mov	x1, #8
 	add	x1, x0, x1
@@ -4424,7 +4432,7 @@ compiler_typesystem_checker_check_stmt:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L391
+	beq	.L392
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -4452,16 +4460,16 @@ compiler_typesystem_checker_check_stmt:
 	str	x20, [x1]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L401
-.L391:
+	b	.L402
+.L392:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L401
-.L393:
+	b	.L402
+.L394:
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x20, [x1]
@@ -4480,7 +4488,7 @@ compiler_typesystem_checker_check_stmt:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	.L399
+	beq	.L400
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -4490,7 +4498,7 @@ compiler_typesystem_checker_check_stmt:
 	mov	x22, sp
 	ldr	x1, [x24]
 	cmp	x1, #0
-	beq	.L397
+	beq	.L398
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x24, x0
@@ -4501,8 +4509,8 @@ compiler_typesystem_checker_check_stmt:
 	mov	x21, x17
 	str	x21, [x22]
 	mov	x2, x23
-	b	.L398
-.L397:
+	b	.L399
+.L398:
 	mov	x21, x0
 	mov	x0, x23
 	bl	compiler_typesystem_types_typed_expr_type
@@ -4511,7 +4519,7 @@ compiler_typesystem_checker_check_stmt:
 	mov	x0, x21
 	mov	x21, x17
 	str	x21, [x22]
-.L398:
+.L399:
 	mov	x22, x2
 	mov	x2, x21
 	mov	x1, x20
@@ -4534,15 +4542,15 @@ compiler_typesystem_checker_check_stmt:
 	str	x20, [x1]
 	bl	donna_result_Ok
 	str	x0, [x19]
-	b	.L401
-.L399:
+	b	.L402
+.L400:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-.L401:
+.L402:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -4572,31 +4580,31 @@ compiler_typesystem_checker_bind_pattern:
 	mov	x0, x17
 	ldr	x2, [x1]
 	cmp	x2, #2
-	beq	.L422
+	beq	.L423
 	cmp	x2, #0
-	beq	.L423
+	beq	.L424
 	cmp	x2, #1
-	beq	.L423
+	beq	.L424
 	cmp	x2, #3
-	beq	.L423
+	beq	.L424
 	cmp	x2, #4
-	beq	.L423
+	beq	.L424
 	cmp	x2, #5
-	beq	.L423
+	beq	.L424
 	cmp	x2, #6
-	beq	.L423
+	beq	.L424
 	cmp	x2, #7
-	beq	.L421
+	beq	.L422
 	cmp	x2, #8
-	beq	.L412
+	beq	.L413
 	mov	x19, x0
 	mov	x0, #24
 	add	x0, x1, x0
 	ldr	x0, [x0]
 	mov	x1, x19
 	bl	compiler_typesystem_checker_bind_pattern_list
-	b	.L423
-.L412:
+	b	.L424
+.L413:
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -4611,19 +4619,19 @@ compiler_typesystem_checker_bind_pattern:
 	mov	x19, sp
 	ldr	x1, [x20]
 	cmp	x1, #0
-	beq	.L420
+	beq	.L421
 	cmp	x1, #1
 	cset	x22, eq
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x21, sp
 	cmp	w22, #0
-	bne	.L416
+	bne	.L417
 	mov	x1, #0
 	str	x1, [x21]
 	mov	x1, #0
-	b	.L417
-.L416:
+	b	.L418
+.L417:
 	mov	x23, x0
 	mov	x0, #8
 	add	x0, x20, x0
@@ -4637,9 +4645,9 @@ compiler_typesystem_checker_bind_pattern:
 	cset	x1, eq
 	and	x1, x1, x22
 	str	x1, [x21]
-.L417:
+.L418:
 	cmp	w1, #0
-	bne	.L419
+	bne	.L420
 	mov	x1, #8
 	add	x1, x20, x1
 	ldr	x21, [x1]
@@ -4652,22 +4660,22 @@ compiler_typesystem_checker_bind_pattern:
 	mov	x0, x20
 	bl	compiler_typesystem_env_env_bind
 	str	x0, [x19]
-	b	.L423
-.L419:
-	str	x0, [x19]
-	b	.L423
+	b	.L424
 .L420:
 	str	x0, [x19]
-	b	.L423
+	b	.L424
 .L421:
+	str	x0, [x19]
+	b	.L424
+.L422:
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
 	mov	x1, x19
 	bl	compiler_typesystem_checker_bind_pattern_list
-	b	.L423
-.L422:
+	b	.L424
+.L423:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x20, [x1]
@@ -4678,7 +4686,7 @@ compiler_typesystem_checker_bind_pattern:
 	mov	x2, x0
 	mov	x0, x19
 	bl	compiler_typesystem_env_env_bind
-.L423:
+.L424:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -4702,7 +4710,7 @@ compiler_typesystem_checker_bind_pattern_list:
 	mov	x0, x1
 	ldr	x1, [x2]
 	cmp	x1, #0
-	beq	.L426
+	beq	.L427
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -4714,7 +4722,7 @@ compiler_typesystem_checker_bind_pattern_list:
 	mov	x1, x0
 	mov	x0, x19
 	bl	compiler_typesystem_checker_bind_pattern_list
-.L426:
+.L427:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -4736,10 +4744,10 @@ compiler_typesystem_checker_annotation_to_type:
 	cmp	x1, #0
 	cset	x19, eq
 	cmp	w19, #0
-	bne	.L429
+	bne	.L430
 	mov	x3, #0
-	b	.L430
-.L429:
+	b	.L431
+.L430:
 	mov	x20, x0
 	mov	x0, #8
 	add	x0, x20, x0
@@ -4752,17 +4760,17 @@ compiler_typesystem_checker_annotation_to_type:
 	cmp	x1, #0
 	cset	x1, eq
 	and	x3, x19, x1
-.L430:
+.L431:
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x2, sp
 	cmp	w3, #0
-	bne	.L433
+	bne	.L434
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	.L434
-.L433:
+	b	.L435
+.L434:
 	mov	x1, #16
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -4771,9 +4779,9 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x1, x1, x3
 	str	x1, [x2]
-.L434:
+.L435:
 	cmp	w1, #0
-	bne	.L497
+	bne	.L498
 	ldr	x1, [x0]
 	cmp	x1, #0
 	cset	x20, eq
@@ -4781,12 +4789,12 @@ compiler_typesystem_checker_annotation_to_type:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	w20, #0
-	bne	.L438
+	bne	.L439
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x3, #0
-	b	.L439
-.L438:
+	b	.L440
+.L439:
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x21, x0
@@ -4800,17 +4808,17 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x3, x1, x20
 	str	x3, [x19]
-.L439:
+.L440:
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x2, sp
 	cmp	w3, #0
-	bne	.L442
+	bne	.L443
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	.L443
-.L442:
+	b	.L444
+.L443:
 	mov	x1, #16
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -4819,9 +4827,9 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x1, x1, x3
 	str	x1, [x2]
-.L443:
+.L444:
 	cmp	w1, #0
-	bne	.L496
+	bne	.L497
 	ldr	x1, [x0]
 	cmp	x1, #0
 	cset	x20, eq
@@ -4829,12 +4837,12 @@ compiler_typesystem_checker_annotation_to_type:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	w20, #0
-	bne	.L447
+	bne	.L448
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x3, #0
-	b	.L448
-.L447:
+	b	.L449
+.L448:
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x21, x0
@@ -4848,17 +4856,17 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x3, x1, x20
 	str	x3, [x19]
-.L448:
+.L449:
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x2, sp
 	cmp	w3, #0
-	bne	.L451
+	bne	.L452
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	.L452
-.L451:
+	b	.L453
+.L452:
 	mov	x1, #16
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -4867,9 +4875,9 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x1, x1, x3
 	str	x1, [x2]
-.L452:
+.L453:
 	cmp	w1, #0
-	bne	.L495
+	bne	.L496
 	ldr	x1, [x0]
 	cmp	x1, #0
 	cset	x20, eq
@@ -4877,12 +4885,12 @@ compiler_typesystem_checker_annotation_to_type:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	w20, #0
-	bne	.L456
+	bne	.L457
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x3, #0
-	b	.L457
-.L456:
+	b	.L458
+.L457:
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x21, x0
@@ -4896,17 +4904,17 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x3, x1, x20
 	str	x3, [x19]
-.L457:
+.L458:
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x2, sp
 	cmp	w3, #0
-	bne	.L460
+	bne	.L461
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	.L461
-.L460:
+	b	.L462
+.L461:
 	mov	x1, #16
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -4915,9 +4923,9 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x1, x1, x3
 	str	x1, [x2]
-.L461:
+.L462:
 	cmp	w1, #0
-	bne	.L494
+	bne	.L495
 	ldr	x1, [x0]
 	cmp	x1, #0
 	cset	x20, eq
@@ -4925,12 +4933,12 @@ compiler_typesystem_checker_annotation_to_type:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	w20, #0
-	bne	.L465
+	bne	.L466
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x3, #0
-	b	.L466
-.L465:
+	b	.L467
+.L466:
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x21, x0
@@ -4944,17 +4952,17 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x3, x1, x20
 	str	x3, [x19]
-.L466:
+.L467:
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x2, sp
 	cmp	w3, #0
-	bne	.L469
+	bne	.L470
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	.L470
-.L469:
+	b	.L471
+.L470:
 	mov	x1, #16
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -4963,9 +4971,9 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x1, x1, x3
 	str	x1, [x2]
-.L470:
+.L471:
 	cmp	w1, #0
-	bne	.L493
+	bne	.L494
 	ldr	x1, [x0]
 	cmp	x1, #0
 	cset	x20, eq
@@ -4973,12 +4981,12 @@ compiler_typesystem_checker_annotation_to_type:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	w20, #0
-	bne	.L474
+	bne	.L475
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x1, #0
-	b	.L475
-.L474:
+	b	.L476
+.L475:
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x21, x0
@@ -4992,17 +5000,17 @@ compiler_typesystem_checker_annotation_to_type:
 	cset	x1, eq
 	and	x1, x1, x20
 	str	x1, [x19]
-.L475:
+.L476:
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	w1, #0
-	bne	.L478
+	bne	.L479
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	.L483
-.L478:
+	b	.L484
+.L479:
 	mov	x3, #16
 	add	x3, x0, x3
 	ldr	x3, [x3]
@@ -5011,12 +5019,12 @@ compiler_typesystem_checker_annotation_to_type:
 	sub	sp, sp, x4
 	mov	x4, sp
 	cmp	x5, #1
-	beq	.L481
+	beq	.L482
 	mov	x3, #0
 	str	x3, [x4]
 	mov	x3, #0
-	b	.L482
-.L481:
+	b	.L483
+.L482:
 	mov	x5, #16
 	add	x3, x3, x5
 	ldr	x3, [x3]
@@ -5026,17 +5034,17 @@ compiler_typesystem_checker_annotation_to_type:
 	mov	x5, #1
 	and	x3, x3, x5
 	str	x3, [x4]
-.L482:
+.L483:
 	and	x1, x1, x3
 	str	x1, [x2]
-.L483:
+.L484:
 	cmp	w1, #0
-	bne	.L492
+	bne	.L493
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L488
+	beq	.L489
 	cmp	x1, #1
-	beq	.L487
+	beq	.L488
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x19, x0
@@ -5054,8 +5062,8 @@ compiler_typesystem_checker_annotation_to_type:
 	mov	x1, x0
 	mov	x0, x19
 	bl	compiler_typesystem_types_TFnType
-	b	.L498
-.L487:
+	b	.L499
+.L488:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -5063,8 +5071,8 @@ compiler_typesystem_checker_annotation_to_type:
 	add	x1, x1, #:lo12:compiler_typesystem_checker_annotation_to_type
 	bl	donna_list_map
 	bl	compiler_typesystem_types_TTupleType
-	b	.L498
-.L488:
+	b	.L499
+.L489:
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x19, x0
@@ -5084,7 +5092,7 @@ compiler_typesystem_checker_annotation_to_type:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L490
+	beq	.L491
 	adrp	x1, compiler_typesystem_checker_annotation_to_type
 	add	x1, x1, #:lo12:compiler_typesystem_checker_annotation_to_type
 	bl	donna_list_map
@@ -5092,15 +5100,15 @@ compiler_typesystem_checker_annotation_to_type:
 	mov	x0, x20
 	bl	compiler_typesystem_types_TNamedType
 	str	x0, [x19]
-	b	.L498
-.L490:
+	b	.L499
+.L491:
 	mov	x0, x20
 	mov	x1, #0
 	bl	donna_string_char_at
 	bl	compiler_typesystem_types_TTypeVar
 	str	x0, [x19]
-	b	.L498
-.L492:
+	b	.L499
+.L493:
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -5109,27 +5117,27 @@ compiler_typesystem_checker_annotation_to_type:
 	ldr	x0, [x0]
 	bl	compiler_typesystem_checker_annotation_to_type
 	bl	compiler_typesystem_types_TListType
-	b	.L498
-.L493:
+	b	.L499
+.L494:
 	adrp	x0, compiler_typesystem_types_TNil
 	add	x0, x0, #:lo12:compiler_typesystem_types_TNil
-	b	.L498
-.L494:
+	b	.L499
+.L495:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L498
-.L495:
+	b	.L499
+.L496:
 	adrp	x0, compiler_typesystem_types_TString
 	add	x0, x0, #:lo12:compiler_typesystem_types_TString
-	b	.L498
-.L496:
+	b	.L499
+.L497:
 	adrp	x0, compiler_typesystem_types_TFloat
 	add	x0, x0, #:lo12:compiler_typesystem_types_TFloat
-	b	.L498
-.L497:
+	b	.L499
+.L498:
 	adrp	x0, compiler_typesystem_types_TInt
 	add	x0, x0, #:lo12:compiler_typesystem_types_TInt
-.L498:
+.L499:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5190,17 +5198,17 @@ compiler_typesystem_checker_last_segment:
 	mov	x29, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L511
+	beq	.L512
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x3, sp
 	cmp	x2, #1
-	beq	.L507
+	beq	.L508
 	mov	x2, #0
 	str	x2, [x3]
 	mov	x2, #0
-	b	.L508
-.L507:
+	b	.L509
+.L508:
 	mov	x2, #16
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -5210,22 +5218,22 @@ compiler_typesystem_checker_last_segment:
 	mov	x4, #1
 	and	x2, x2, x4
 	str	x2, [x3]
-.L508:
+.L509:
 	cmp	w2, #0
-	bne	.L510
+	bne	.L511
 	mov	x2, #16
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	bl	compiler_typesystem_checker_last_segment
-	b	.L512
-.L510:
+	b	.L513
+.L511:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L512
-.L511:
-	mov	x0, x1
+	b	.L513
 .L512:
+	mov	x0, x1
+.L513:
 	mov sp, x29
 	ldp	x29, x30, [sp], 16
 	ret
@@ -5248,7 +5256,7 @@ compiler_typesystem_checker_collect_all_bindings:
 	mov	x2, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L518
+	beq	.L519
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -5260,7 +5268,7 @@ compiler_typesystem_checker_collect_all_bindings:
 	mov	x19, sp
 	ldr	x1, [x3]
 	cmp	x1, #0
-	beq	.L516
+	beq	.L517
 	mov	x1, #8
 	add	x1, x3, x1
 	ldr	x1, [x1]
@@ -5273,14 +5281,14 @@ compiler_typesystem_checker_collect_all_bindings:
 	mov	x0, x20
 	bl	compiler_typesystem_checker_collect_all_bindings
 	str	x0, [x19]
-	b	.L519
-.L516:
+	b	.L520
+.L517:
 	mov	x0, x2
 	str	x0, [x19]
-	b	.L519
-.L518:
-	mov	x0, x2
+	b	.L520
 .L519:
+	mov	x0, x2
+.L520:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5307,18 +5315,18 @@ compiler_typesystem_checker_collect_bindings:
 	mov	x22, x0
 	ldr	x0, [x2]
 	cmp	x0, #9
-	beq	.L548
+	beq	.L549
 	cmp	x0, #5
-	beq	.L543
+	beq	.L544
 	cmp	x0, #6
-	beq	.L538
+	beq	.L539
 	cmp	x0, #7
-	beq	.L534
+	beq	.L535
 	cmp	x0, #8
-	beq	.L526
+	beq	.L527
 	mov	x0, x22
-	b	.L552
-.L526:
+	b	.L553
+.L527:
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -5330,11 +5338,11 @@ compiler_typesystem_checker_collect_bindings:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #8
-	beq	.L529
+	beq	.L530
 	str	x22, [x19]
 	mov	x0, x22
-	b	.L552
-.L529:
+	b	.L553
+.L530:
 	mov	x21, x1
 	mov	x1, #8
 	add	x1, x21, x1
@@ -5350,18 +5358,18 @@ compiler_typesystem_checker_collect_bindings:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	.L532
+	beq	.L533
 	str	x22, [x20]
 	mov	x0, x22
-	b	.L533
-.L532:
+	b	.L534
+.L533:
 	mov	x2, x22
 	bl	compiler_typesystem_checker_collect_bindings_list
 	str	x0, [x20]
-.L533:
-	str	x0, [x19]
-	b	.L552
 .L534:
+	str	x0, [x19]
+	b	.L553
+.L535:
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -5373,11 +5381,11 @@ compiler_typesystem_checker_collect_bindings:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #7
-	beq	.L537
+	beq	.L538
 	str	x22, [x19]
 	mov	x0, x22
-	b	.L552
-.L537:
+	b	.L553
+.L538:
 	mov	x21, x1
 	mov	x1, #8
 	add	x1, x21, x1
@@ -5392,8 +5400,8 @@ compiler_typesystem_checker_collect_bindings:
 	mov	x0, x20
 	bl	compiler_typesystem_checker_collect_bindings
 	str	x0, [x19]
-	b	.L552
-.L538:
+	b	.L553
+.L539:
 	mov	x0, x22
 	mov	x20, x0
 	mov	x0, #8
@@ -5404,19 +5412,19 @@ compiler_typesystem_checker_collect_bindings:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #6
-	beq	.L542
+	beq	.L543
 	str	x20, [x19]
 	mov	x0, x20
-	b	.L552
-.L542:
+	b	.L553
+.L543:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x2, x20
 	bl	compiler_typesystem_checker_collect_bindings_list
 	str	x0, [x19]
-	b	.L552
-.L543:
+	b	.L553
+.L544:
 	mov	x0, x22
 	mov	x20, x0
 	mov	x0, #8
@@ -5427,19 +5435,19 @@ compiler_typesystem_checker_collect_bindings:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #5
-	beq	.L547
+	beq	.L548
 	str	x20, [x19]
 	mov	x0, x20
-	b	.L552
-.L547:
+	b	.L553
+.L548:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x2, x20
 	bl	compiler_typesystem_checker_collect_bindings
 	str	x0, [x19]
-	b	.L552
-.L548:
+	b	.L553
+.L549:
 	mov	x0, x22
 	mov	x3, #8
 	add	x2, x2, x3
@@ -5455,7 +5463,7 @@ compiler_typesystem_checker_collect_bindings:
 	mov	x19, sp
 	ldr	x1, [x1]
 	cmp	x1, #1
-	beq	.L551
+	beq	.L552
 	mov	x21, x0
 	mov	x0, #16
 	bl	malloc
@@ -5479,10 +5487,10 @@ compiler_typesystem_checker_collect_bindings:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L552
-.L551:
-	str	x0, [x19]
+	b	.L553
 .L552:
+	str	x0, [x19]
+.L553:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5509,7 +5517,7 @@ compiler_typesystem_checker_collect_bindings_list:
 	mov	x2, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L558
+	beq	.L559
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -5521,7 +5529,7 @@ compiler_typesystem_checker_collect_bindings_list:
 	mov	x19, sp
 	ldr	x1, [x3]
 	cmp	x1, #0
-	beq	.L556
+	beq	.L557
 	mov	x1, #8
 	add	x1, x3, x1
 	ldr	x1, [x1]
@@ -5534,14 +5542,14 @@ compiler_typesystem_checker_collect_bindings_list:
 	mov	x0, x20
 	bl	compiler_typesystem_checker_collect_bindings_list
 	str	x0, [x19]
-	b	.L559
-.L556:
+	b	.L560
+.L557:
 	mov	x0, x2
 	str	x0, [x19]
-	b	.L559
-.L558:
-	mov	x0, x2
+	b	.L560
 .L559:
+	mov	x0, x2
+.L560:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5561,7 +5569,7 @@ compiler_typesystem_checker_lookup_int_binding:
 	str	x19, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L565
+	beq	.L566
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -5578,19 +5586,19 @@ compiler_typesystem_checker_lookup_int_binding:
 	sub	sp, sp, x4
 	mov	x19, sp
 	cmp	x3, #1
-	beq	.L563
+	beq	.L564
 	bl	compiler_typesystem_checker_lookup_int_binding
 	str	x0, [x19]
-	b	.L566
-.L563:
+	b	.L567
+.L564:
 	mov	x0, x2
 	bl	donna_option_Some
 	str	x0, [x19]
-	b	.L566
-.L565:
+	b	.L567
+.L566:
 	adrp	x0, donna_option_None
 	add	x0, x0, #:lo12:donna_option_None
-.L566:
+.L567:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -5610,15 +5618,15 @@ compiler_typesystem_checker_apply_subst:
 	mov	x20, x1
 	ldr	x1, [x0]
 	cmp	x1, #9
-	beq	.L578
+	beq	.L579
 	cmp	x1, #5
-	beq	.L576
+	beq	.L577
 	cmp	x1, #6
-	beq	.L574
+	beq	.L575
 	cmp	x1, #7
-	beq	.L573
+	beq	.L574
 	cmp	x1, #8
-	bne	.L583
+	bne	.L584
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x19, [x1]
@@ -5630,8 +5638,8 @@ compiler_typesystem_checker_apply_subst:
 	mov	x1, x0
 	mov	x0, x19
 	bl	compiler_typesystem_types_TNamedType
-	b	.L583
-.L573:
+	b	.L584
+.L574:
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x19, x0
@@ -5649,8 +5657,8 @@ compiler_typesystem_checker_apply_subst:
 	mov	x1, x0
 	mov	x0, x19
 	bl	compiler_typesystem_types_TFnType
-	b	.L583
-.L574:
+	b	.L584
+.L575:
 	mov	x19, x20
 	mov	x1, #8
 	add	x0, x0, x1
@@ -5658,8 +5666,8 @@ compiler_typesystem_checker_apply_subst:
 	mov	x1, x19
 	bl	compiler_typesystem_checker_apply_subst_list
 	bl	compiler_typesystem_types_TTupleType
-	b	.L583
-.L576:
+	b	.L584
+.L577:
 	mov	x19, x20
 	mov	x1, #8
 	add	x0, x0, x1
@@ -5667,8 +5675,8 @@ compiler_typesystem_checker_apply_subst:
 	mov	x1, x19
 	bl	compiler_typesystem_checker_apply_subst
 	bl	compiler_typesystem_types_TListType
-	b	.L583
-.L578:
+	b	.L584
+.L579:
 	mov	x19, x0
 	mov	x0, x20
 	mov	x1, #8
@@ -5682,16 +5690,16 @@ compiler_typesystem_checker_apply_subst:
 	mov	x1, sp
 	ldr	x3, [x2]
 	cmp	x3, #1
-	beq	.L581
+	beq	.L582
 	str	x0, [x1]
-	b	.L583
-.L581:
+	b	.L584
+.L582:
 	mov	x0, x2
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	str	x0, [x1]
-.L583:
+.L584:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -5711,7 +5719,7 @@ compiler_typesystem_checker_apply_subst_list:
 	str	x20, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L586
+	beq	.L587
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x19, [x2]
@@ -5736,11 +5744,11 @@ compiler_typesystem_checker_apply_subst_list:
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x19, [x1]
-	b	.L587
-.L586:
+	b	.L588
+.L587:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L587:
+.L588:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -5769,36 +5777,36 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x2, x17
 	ldr	x3, [x3]
 	cmp	x3, #5
-	beq	.L662
+	beq	.L663
 	cmp	x3, #6
-	beq	.L655
+	beq	.L656
 	cmp	x3, #7
-	beq	.L648
+	beq	.L649
 	cmp	x3, #8
-	beq	.L641
+	beq	.L642
 	cmp	x3, #15
-	beq	.L634
+	beq	.L635
 	cmp	x3, #16
-	beq	.L627
+	beq	.L628
 	cmp	x3, #17
-	beq	.L620
+	beq	.L621
 	cmp	x3, #18
-	beq	.L613
+	beq	.L614
 	cmp	x3, #19
-	beq	.L606
+	beq	.L607
 	cmp	x3, #20
-	beq	.L599
+	beq	.L600
 	mov	x0, #1
 	bl	donna_result_Ok
-	b	.L669
-.L599:
+	b	.L670
+.L600:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #3
-	beq	.L601
+	beq	.L602
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -5808,8 +5816,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L601:
+	b	.L670
+.L602:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -5817,7 +5825,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #3
-	beq	.L604
+	beq	.L605
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -5827,22 +5835,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L605
-.L604:
+	b	.L606
+.L605:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L605:
-	str	x0, [x19]
-	b	.L669
 .L606:
+	str	x0, [x19]
+	b	.L670
+.L607:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #3
-	beq	.L608
+	beq	.L609
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -5852,8 +5860,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L608:
+	b	.L670
+.L609:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -5861,7 +5869,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #3
-	beq	.L611
+	beq	.L612
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -5871,22 +5879,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L612
-.L611:
+	b	.L613
+.L612:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L612:
-	str	x0, [x19]
-	b	.L669
 .L613:
+	str	x0, [x19]
+	b	.L670
+.L614:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L615
+	beq	.L616
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -5896,8 +5904,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L615:
+	b	.L670
+.L616:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -5905,7 +5913,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L618
+	beq	.L619
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -5915,22 +5923,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L619
-.L618:
+	b	.L620
+.L619:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L619:
-	str	x0, [x19]
-	b	.L669
 .L620:
+	str	x0, [x19]
+	b	.L670
+.L621:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L622
+	beq	.L623
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -5940,8 +5948,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L622:
+	b	.L670
+.L623:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -5949,7 +5957,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L625
+	beq	.L626
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -5959,22 +5967,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L626
-.L625:
+	b	.L627
+.L626:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L626:
-	str	x0, [x19]
-	b	.L669
 .L627:
+	str	x0, [x19]
+	b	.L670
+.L628:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L629
+	beq	.L630
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -5984,8 +5992,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L629:
+	b	.L670
+.L630:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -5993,7 +6001,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L632
+	beq	.L633
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -6003,22 +6011,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L633
-.L632:
+	b	.L634
+.L633:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L633:
-	str	x0, [x19]
-	b	.L669
 .L634:
+	str	x0, [x19]
+	b	.L670
+.L635:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L636
+	beq	.L637
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -6028,8 +6036,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L636:
+	b	.L670
+.L637:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -6037,7 +6045,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L639
+	beq	.L640
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -6047,22 +6055,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L640
-.L639:
+	b	.L641
+.L640:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L640:
-	str	x0, [x19]
-	b	.L669
 .L641:
+	str	x0, [x19]
+	b	.L670
+.L642:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L643
+	beq	.L644
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -6072,8 +6080,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L643:
+	b	.L670
+.L644:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -6081,7 +6089,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L646
+	beq	.L647
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -6091,22 +6099,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L647
-.L646:
+	b	.L648
+.L647:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L647:
-	str	x0, [x19]
-	b	.L669
 .L648:
+	str	x0, [x19]
+	b	.L670
+.L649:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L650
+	beq	.L651
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -6116,8 +6124,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L650:
+	b	.L670
+.L651:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -6125,7 +6133,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L653
+	beq	.L654
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -6135,22 +6143,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L654
-.L653:
+	b	.L655
+.L654:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L654:
-	str	x0, [x19]
-	b	.L669
 .L655:
+	str	x0, [x19]
+	b	.L670
+.L656:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L657
+	beq	.L658
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -6160,8 +6168,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L657:
+	b	.L670
+.L658:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -6169,7 +6177,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L660
+	beq	.L661
 	mov	x1, x0
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
@@ -6179,22 +6187,22 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L661
-.L660:
+	b	.L662
+.L661:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L661:
-	str	x0, [x19]
-	b	.L669
 .L662:
+	str	x0, [x19]
+	b	.L670
+.L663:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	.L664
+	beq	.L665
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
@@ -6204,8 +6212,8 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L669
-.L664:
+	b	.L670
+.L665:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -6213,7 +6221,7 @@ compiler_typesystem_checker_check_binop_types:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L667
+	beq	.L668
 	bl	compiler_typesystem_types_type_to_string
 	mov	x2, x21
 	mov	x1, x0
@@ -6222,14 +6230,14 @@ compiler_typesystem_checker_check_binop_types:
 	bl	errors_error_TypeMismatch
 	bl	donna_result_Error
 	str	x0, [x20]
-	b	.L668
-.L667:
+	b	.L669
+.L668:
 	mov	x0, #1
 	bl	donna_result_Ok
 	str	x0, [x20]
-.L668:
-	str	x0, [x19]
 .L669:
+	str	x0, [x19]
+.L670:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -6248,134 +6256,134 @@ compiler_typesystem_checker_binop_result_type:
 	mov	x29, sp
 	ldr	x0, [x0]
 	cmp	x0, #0
-	beq	.L712
+	beq	.L713
 	cmp	x0, #1
-	beq	.L711
+	beq	.L712
 	cmp	x0, #2
-	beq	.L710
+	beq	.L711
 	cmp	x0, #3
-	beq	.L709
+	beq	.L710
 	cmp	x0, #4
-	beq	.L708
+	beq	.L709
 	cmp	x0, #5
-	beq	.L707
+	beq	.L708
 	cmp	x0, #6
-	beq	.L706
+	beq	.L707
 	cmp	x0, #7
-	beq	.L705
+	beq	.L706
 	cmp	x0, #8
-	beq	.L704
+	beq	.L705
 	cmp	x0, #9
-	beq	.L703
+	beq	.L704
 	cmp	x0, #10
-	beq	.L702
+	beq	.L703
 	cmp	x0, #11
-	beq	.L701
+	beq	.L702
 	cmp	x0, #12
-	beq	.L700
+	beq	.L701
 	cmp	x0, #13
-	beq	.L699
+	beq	.L700
 	cmp	x0, #14
-	beq	.L698
+	beq	.L699
 	cmp	x0, #15
-	beq	.L697
+	beq	.L698
 	cmp	x0, #16
-	beq	.L696
+	beq	.L697
 	cmp	x0, #17
-	beq	.L695
+	beq	.L696
 	cmp	x0, #18
-	beq	.L694
+	beq	.L695
 	cmp	x0, #19
-	beq	.L693
+	beq	.L694
 	cmp	x0, #20
-	beq	.L692
+	beq	.L693
 	adrp	x0, compiler_typesystem_types_TString
 	add	x0, x0, #:lo12:compiler_typesystem_types_TString
-	b	.L713
-.L692:
-	adrp	x0, compiler_typesystem_types_TBool
-	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L693:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L694:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L695:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L696:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L697:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L698:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L699:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L700:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L701:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L702:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L703:
 	adrp	x0, compiler_typesystem_types_TBool
 	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
-	b	.L713
+	b	.L714
 .L704:
-	adrp	x0, compiler_typesystem_types_TFloat
-	add	x0, x0, #:lo12:compiler_typesystem_types_TFloat
-	b	.L713
+	adrp	x0, compiler_typesystem_types_TBool
+	add	x0, x0, #:lo12:compiler_typesystem_types_TBool
+	b	.L714
 .L705:
 	adrp	x0, compiler_typesystem_types_TFloat
 	add	x0, x0, #:lo12:compiler_typesystem_types_TFloat
-	b	.L713
+	b	.L714
 .L706:
 	adrp	x0, compiler_typesystem_types_TFloat
 	add	x0, x0, #:lo12:compiler_typesystem_types_TFloat
-	b	.L713
+	b	.L714
 .L707:
 	adrp	x0, compiler_typesystem_types_TFloat
 	add	x0, x0, #:lo12:compiler_typesystem_types_TFloat
-	b	.L713
+	b	.L714
 .L708:
-	adrp	x0, compiler_typesystem_types_TInt
-	add	x0, x0, #:lo12:compiler_typesystem_types_TInt
-	b	.L713
+	adrp	x0, compiler_typesystem_types_TFloat
+	add	x0, x0, #:lo12:compiler_typesystem_types_TFloat
+	b	.L714
 .L709:
 	adrp	x0, compiler_typesystem_types_TInt
 	add	x0, x0, #:lo12:compiler_typesystem_types_TInt
-	b	.L713
+	b	.L714
 .L710:
 	adrp	x0, compiler_typesystem_types_TInt
 	add	x0, x0, #:lo12:compiler_typesystem_types_TInt
-	b	.L713
+	b	.L714
 .L711:
 	adrp	x0, compiler_typesystem_types_TInt
 	add	x0, x0, #:lo12:compiler_typesystem_types_TInt
-	b	.L713
+	b	.L714
 .L712:
 	adrp	x0, compiler_typesystem_types_TInt
 	add	x0, x0, #:lo12:compiler_typesystem_types_TInt
+	b	.L714
 .L713:
+	adrp	x0, compiler_typesystem_types_TInt
+	add	x0, x0, #:lo12:compiler_typesystem_types_TInt
+.L714:
 	ldp	x29, x30, [sp], 16
 	ret
 .type compiler_typesystem_checker_binop_result_type, @function
@@ -6416,7 +6424,7 @@ compiler_typesystem_checker_lookup_binding:
 	str	x21, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L721
+	beq	.L722
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -6437,19 +6445,19 @@ compiler_typesystem_checker_lookup_binding:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L719
+	beq	.L720
 	bl	compiler_typesystem_checker_lookup_binding
 	str	x0, [x19]
-	b	.L722
-.L719:
+	b	.L723
+.L720:
 	mov	x0, x20
 	bl	donna_option_Some
 	str	x0, [x19]
-	b	.L722
-.L721:
+	b	.L723
+.L722:
 	adrp	x0, donna_option_None
 	add	x0, x0, #:lo12:donna_option_None
-.L722:
+.L723:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -6474,7 +6482,7 @@ compiler_typesystem_checker_pub_fns_to_bindings:
 	str	x24, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L728
+	beq	.L729
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x2, [x1]
@@ -6497,11 +6505,11 @@ compiler_typesystem_checker_pub_fns_to_bindings:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #1
-	beq	.L726
+	beq	.L727
 	bl	compiler_typesystem_checker_pub_fns_to_bindings
 	str	x0, [x20]
-	b	.L727
-.L726:
+	b	.L728
+.L727:
 	bl	compiler_typesystem_checker_pub_fns_to_bindings
 	mov	x21, x0
 	mov	x0, #16
@@ -6522,13 +6530,13 @@ compiler_typesystem_checker_pub_fns_to_bindings:
 	add	x1, x0, x1
 	str	x21, [x1]
 	str	x0, [x20]
-.L727:
-	str	x0, [x19]
-	b	.L729
 .L728:
+	str	x0, [x19]
+	b	.L730
+.L729:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L729:
+.L730:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -6556,7 +6564,7 @@ compiler_typesystem_checker_pub_consts_to_bindings:
 	str	x24, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L735
+	beq	.L736
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x2, [x1]
@@ -6579,11 +6587,11 @@ compiler_typesystem_checker_pub_consts_to_bindings:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #1
-	beq	.L733
+	beq	.L734
 	bl	compiler_typesystem_checker_pub_consts_to_bindings
 	str	x0, [x20]
-	b	.L734
-.L733:
+	b	.L735
+.L734:
 	bl	compiler_typesystem_checker_pub_consts_to_bindings
 	mov	x21, x0
 	mov	x0, #16
@@ -6604,13 +6612,13 @@ compiler_typesystem_checker_pub_consts_to_bindings:
 	add	x1, x0, x1
 	str	x21, [x1]
 	str	x0, [x20]
-.L734:
-	str	x0, [x19]
-	b	.L736
 .L735:
+	str	x0, [x19]
+	b	.L737
+.L736:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L736:
+.L737:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -6636,7 +6644,7 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	str	x22, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L743
+	beq	.L744
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x2, [x1]
@@ -6659,7 +6667,7 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #0
-	beq	.L740
+	beq	.L741
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	compiler_typesystem_types_TNamedType
@@ -6674,18 +6682,18 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	mov	x0, x21
 	bl	donna_list_append
 	str	x0, [x20]
-	b	.L742
-.L740:
+	b	.L743
+.L741:
 	mov	x0, x21
 	bl	compiler_typesystem_checker_pub_type_defs_to_ctor_bindings
 	str	x0, [x20]
-.L742:
-	str	x0, [x19]
-	b	.L744
 .L743:
+	str	x0, [x19]
+	b	.L745
+.L744:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L744:
+.L745:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -6711,7 +6719,7 @@ compiler_typesystem_checker_ctors_to_bindings:
 	mov	x2, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L753
+	beq	.L754
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -6737,7 +6745,7 @@ compiler_typesystem_checker_ctors_to_bindings:
 	sub	sp, sp, x3
 	mov	x21, sp
 	cmp	x2, #1
-	beq	.L749
+	beq	.L750
 	mov	x23, x1
 	bl	compiler_typesystem_types_TFnType
 	mov	x1, x23
@@ -6746,13 +6754,13 @@ compiler_typesystem_checker_ctors_to_bindings:
 	mov	x20, x17
 	str	x20, [x21]
 	mov	x21, x20
-	b	.L752
-.L749:
+	b	.L753
+.L750:
 	mov	x0, x20
 	mov	x20, x21
 	str	x1, [x20]
 	mov	x21, x1
-.L752:
+.L753:
 	bl	compiler_typesystem_checker_ctors_to_bindings
 	mov	x20, x0
 	mov	x0, #16
@@ -6774,11 +6782,11 @@ compiler_typesystem_checker_ctors_to_bindings:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L754
-.L753:
+	b	.L755
+.L754:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L754:
+.L755:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -6803,7 +6811,7 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	mov	x1, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L761
+	beq	.L762
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -6826,7 +6834,7 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #0
-	beq	.L758
+	beq	.L759
 	bl	compiler_typesystem_checker_ctors_to_info
 	mov	x17, x0
 	mov	x0, x21
@@ -6836,18 +6844,18 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	mov	x0, x21
 	bl	donna_list_append
 	str	x0, [x20]
-	b	.L760
-.L758:
+	b	.L761
+.L759:
 	mov	x0, x21
 	bl	compiler_typesystem_checker_pub_type_defs_to_ctor_info
 	str	x0, [x20]
-.L760:
-	str	x0, [x19]
-	b	.L762
 .L761:
+	str	x0, [x19]
+	b	.L763
+.L762:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L762:
+.L763:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -6872,7 +6880,7 @@ compiler_typesystem_checker_ctors_to_info:
 	str	x24, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L765
+	beq	.L766
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -6923,11 +6931,11 @@ compiler_typesystem_checker_ctors_to_info:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L766
-.L765:
+	b	.L767
+.L766:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L766:
+.L767:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]

@@ -727,16 +727,16 @@ compiler_parser_parse_patterns_parse_pattern:
 	cmpl $0, %ecx
 	jnz .Lbb115
 	movq 8(%rax), %rdx
-	movq %rdx, -8(%rbp)
+	movq %rdx, -16(%rbp)
 	movq %rsi, %r14
 	movq 16(%rax), %rsi
-	movq %rsi, -16(%rbp)
+	movq %rsi, -8(%rbp)
 	callq donna_option_Some
 	movq %r15, %rcx
 	movq %r14, %rsi
 	movq %rax, %rdi
-	movq -16(%rbp), %r14
-	movq -8(%rbp), %rdx
+	movq -8(%rbp), %r14
+	movq -16(%rbp), %rdx
 	callq compiler_parser_ast_PCons
 	movq %r14, %rsi
 	movq %rax, %rdi

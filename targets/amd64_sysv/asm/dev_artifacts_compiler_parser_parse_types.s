@@ -630,10 +630,10 @@ compiler_parser_parse_types_parse_type:
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
 	jnz .Lbb98
-	movq 8(%rax), %rcx
-	movq %rcx, -16(%rbp)
-	movq 16(%rax), %r14
+	movq 8(%rax), %r14
 	movq %r14, -8(%rbp)
+	movq 16(%rax), %r14
+	movq %r14, -16(%rbp)
 	movq %rsi, %r14
 	leaq str209(%rip), %rsi
 	callq __rt_str_concat
@@ -644,8 +644,7 @@ compiler_parser_parse_types_parse_type:
 	movq %r15, %rdx
 	movq %r14, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r14
-	movq -16(%rbp), %rsi
+	movq -16(%rbp), %r14
 	callq compiler_parser_ast_TyName
 	movq %r14, %rsi
 	movq %rax, %rdi

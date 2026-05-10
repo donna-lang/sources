@@ -295,20 +295,20 @@ compiler_parser_ast_Function:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %r9, %r15
-	movq %r8, %r14
-	movq %rcx, %r13
-	movq %rdx, %r12
-	movq %rsi, %rbx
-	movq %rdi, -16(%rbp)
+	movq %r9, -16(%rbp)
+	movq %r8, %r15
+	movq %rcx, %r14
+	movq %rdx, %r13
+	movq %rsi, %r12
+	movq %rdi, %rbx
 	movl $56, %edi
 	callq malloc
-	movq %r15, %r9
-	movq %r14, %r8
-	movq %r13, %rcx
-	movq %r12, %rdx
-	movq %rbx, %rsi
-	movq -16(%rbp), %rdi
+	movq %r15, %r8
+	movq %r14, %rcx
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq -16(%rbp), %r9
 	movq $0, (%rax)
 	movq %rdi, 8(%rax)
 	movq %rsi, 16(%rax)
@@ -341,24 +341,24 @@ compiler_parser_ast_ExternalFn:
 	pushq %r14
 	pushq %r15
 	movq 16(%rbp), %rax
-	movq %rax, -16(%rbp)
-	movq %r9, %rbx
-	movq %r8, %r12
-	movq %rcx, %r13
-	movq %rdx, %r14
-	movq %rsi, %r15
-	movq %rdi, -8(%rbp)
+	movq %rax, -8(%rbp)
+	movq %r9, -16(%rbp)
+	movq %r8, %rbx
+	movq %rcx, %r12
+	movq %rdx, %r13
+	movq %rsi, %r14
+	movq %rdi, %r15
 	movl $64, %edi
 	callq malloc
-	movq -16(%rbp), %rcx
-	movq -8(%rbp), %rdx
+	movq -8(%rbp), %rcx
+	movq -16(%rbp), %rdx
 	movq $1, (%rax)
-	movq %rdx, 8(%rax)
-	movq %r15, 16(%rax)
-	movq %r14, 24(%rax)
-	movq %r13, 32(%rax)
-	movq %r12, 40(%rax)
-	movq %rbx, 48(%rax)
+	movq %r15, 8(%rax)
+	movq %r14, 16(%rax)
+	movq %r13, 24(%rax)
+	movq %r12, 32(%rax)
+	movq %rbx, 40(%rax)
+	movq %rdx, 48(%rax)
 	movq %rcx, 56(%rax)
 	popq %r15
 	popq %r14
@@ -416,20 +416,20 @@ compiler_parser_ast_TypeDef:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %r9, %r15
-	movq %r8, %r14
-	movq %rcx, %r13
-	movq %rdx, %r12
-	movq %rsi, %rbx
-	movq %rdi, -16(%rbp)
+	movq %r9, -16(%rbp)
+	movq %r8, %r15
+	movq %rcx, %r14
+	movq %rdx, %r13
+	movq %rsi, %r12
+	movq %rdi, %rbx
 	movl $56, %edi
 	callq malloc
-	movq %r15, %r9
-	movq %r14, %r8
-	movq %r13, %rcx
-	movq %r12, %rdx
-	movq %rbx, %rsi
-	movq -16(%rbp), %rdi
+	movq %r15, %r8
+	movq %r14, %rcx
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq -16(%rbp), %r9
 	movq $0, (%rax)
 	movq %rdi, 8(%rax)
 	movq %rsi, 16(%rax)

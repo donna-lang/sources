@@ -1033,13 +1033,13 @@ _donna_string_replace_helper:
 	pushq %r14
 	pushq %r15
 	movq 24(%rbp), %rbx
-	movq %rbx, -24(%rbp)
+	movq %rbx, -32(%rbp)
 	movq 16(%rbp), %r14
 	movq %r9, %r13
 	movq %r8, %r15
 	movq %rcx, %r12
-	movq %rdx, -32(%rbp)
-	movq %rsi, -16(%rbp)
+	movq %rdx, -16(%rbp)
+	movq %rsi, -24(%rbp)
 	movq %r15, %r9
 	addq %r14, %r9
 	movq %r9, -48(%rbp)
@@ -1059,17 +1059,17 @@ _donna_string_replace_helper:
 	movq %r15, %rsi
 	callq _strndup
 	movq %rax, %rdi
-	movq -16(%rbp), %rsi
+	movq -24(%rbp), %rsi
 	callq _strcmp
 	movq %r15, %r8
 	movq %r14, %rcx
 	movq %rbx, %rdi
 	movq %rax, %r10
-	movq %r13, %rax
 	movq -8(%rbp), %r9
-	movq -24(%rbp), %r14
-	movq -32(%rbp), %rdx
-	movq -16(%rbp), %rsi
+	movq %r13, %rax
+	movq -32(%rbp), %r13
+	movq -16(%rbp), %rdx
+	movq -24(%rbp), %rsi
 	cmpq $0, %r10
 	setz %r10b
 	movzbq %r10b, %r10
@@ -1081,7 +1081,7 @@ _donna_string_replace_helper:
 	addq $1, %rcx
 	subq $16, %rsp
 	movq %rsp, %r9
-	movq %r14, 8(%r9)
+	movq %r13, 8(%r9)
 	movq %rcx, 0(%r9)
 	movq %rax, %r9
 	movq %r8, %r15
@@ -1093,15 +1093,17 @@ _donna_string_replace_helper:
 	jmp Lbb103
 Lbb99:
 	movq %r8, %r15
+	movq %rdx, %r14
 	movq %rdi, %rbx
 	movq %r9, %rdi
 	movq %rsi, %r13
 	movq %rcx, %rsi
 	subq %rax, %rsi
 	callq _strndup
-	movq %r14, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq -32(%rbp), %r14
+	movq %rdi, %rbx
+	movq -32(%rbp), %rdi
 	callq ___rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
@@ -1577,58 +1579,59 @@ _donna_string_slug_helper:
 	pushq %r14
 	pushq %r15
 	movq %rcx, %rax
-	movq %rdx, %r13
+	movq %rdx, %r15
 	movq %rsi, %rbx
-	cmpq %r13, %rbx
+	cmpq %r15, %rbx
 	setge %cl
 	movzbq %cl, %rcx
 	cmpq $1, %rcx
 	jz Lbb172
-	movq %rdi, %r15
+	movq %rdi, %r14
 	movzbq (%rdi, %rbx, 1), %rdi
 	cmpq $32, %rdi
-	movq %rax, %r14
+	movq %rax, %r13
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %r12
-	movq %r12, -16(%rbp)
 	cmpq $1, %rax
 	jz Lbb168
 	callq _donna_string_is_slug_char
-	movq %r15, %rdi
-	movq %rax, %rcx
-	movq %r14, %rax
-	movq %r12, %r14
+	movq %r15, %rdx
+	movq %r14, %rdi
+	movq %rax, %rsi
+	movq %r13, %rax
 	subq $16, %rsp
-	movq %rsp, %r12
-	cmpq $1, %rcx
+	movq %rsp, %rcx
+	movq %rcx, -16(%rbp)
+	cmpq $1, %rsi
 	jz Lbb165
-	leaq _str468(%rip), %rcx
-	movq %rcx, (%r12)
-	movq %rax, %r12
+	movq %rdx, %r13
+	leaq _str468(%rip), %rdx
+	movq %rdx, (%rcx)
+	movq %rax, %r14
 	leaq _str468(%rip), %rax
 	movq %rax, %rsi
-	movq %r12, %rax
-	movq %r14, %r12
+	movq %r14, %rax
 	jmp Lbb167
 Lbb165:
-	movq %r12, %r14
-	movq %rax, %r12
+	movq %rax, %r14
+	movq %rdx, %r13
 	movq %rbx, %rsi
 	movq %rdi, %r15
 	callq _donna_string_char_str
 	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %r12, %rax
-	movq -16(%rbp), %r12
-	movq %rsi, (%r14)
+	movq %r14, %rax
+	movq -16(%rbp), %rcx
+	movq %rsi, (%rcx)
 Lbb167:
 	movq %rsi, (%r12)
 	jmp Lbb171
 Lbb168:
-	movq %r14, %rax
-	movq %r15, %rdi
+	movq %r13, %rax
+	movq %r15, %r13
+	movq %r14, %rdi
 	leaq _str460(%rip), %rcx
 	movq %rcx, (%r12)
 	leaq _str460(%rip), %rcx

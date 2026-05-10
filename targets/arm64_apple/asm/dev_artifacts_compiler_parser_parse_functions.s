@@ -834,7 +834,7 @@ L108:
 	beq	L111
 	mov	x2, #0
 	str	x2, [x3]
-	mov	x20, x6
+	mov	x22, x6
 	mov	x2, #0
 	b	L124
 L111:
@@ -854,7 +854,7 @@ L111:
 	beq	L114
 	mov	x4, #0
 	str	x4, [x5]
-	mov	x20, x6
+	mov	x22, x6
 	mov	x4, #0
 	b	L123
 L114:
@@ -874,7 +874,7 @@ L114:
 	beq	L117
 	mov	x8, #0
 	str	x8, [x7]
-	mov	x20, x6
+	mov	x22, x6
 	mov	x6, #0
 	b	L122
 L117:
@@ -909,7 +909,7 @@ L120:
 	str	x8, [x10]
 L121:
 	cmp	x9, #2
-	mov	x20, x6
+	mov	x22, x6
 	cset	x6, eq
 	mov	x9, #1
 	and	x6, x6, x9
@@ -948,7 +948,7 @@ L128:
 L130:
 	cmp	w1, #0
 	bne	L132
-	mov	x1, x20
+	mov	x1, x22
 	adrp	x0, _str702@page
 	add	x0, x0, _str702@pageoff
 	bl	_errors_error_ParseUnexpectedEof
@@ -981,8 +981,7 @@ L133:
 	ldr	x1, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x4, [x1]
-	str	x4, [x29, 24]
+	ldr	x20, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -995,14 +994,15 @@ L133:
 	ldr	x1, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x5, [x1]
-	str	x5, [x29, 16]
+	ldr	x21, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_parser_parse_result_skip_newlines
 	bl	_compiler_parser_parse_functions_parse_pub
-	mov	x6, x20
+	mov	x6, x22
+	mov	x5, x21
+	mov	x4, x20
 	ldr	x1, [x0]
 	mov	x2, #8
 	add	x0, x0, x2
@@ -1019,6 +1019,8 @@ L133:
 	beq	L136
 	mov	x2, #0
 	str	x2, [x3]
+	mov	x25, x5
+	mov	x24, x4
 	mov	x26, x6
 	mov	x2, #0
 	b	L145
@@ -1026,64 +1028,65 @@ L136:
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
-	mov	x4, #16
-	add	x4, x0, x4
-	ldr	x7, [x4]
+	mov	x7, #16
+	add	x7, x0, x7
+	ldr	x7, [x7]
 	ldr	x2, [x2]
 	ldr	x2, [x2]
-	ldr	x4, [x7]
-	mov	x5, #16
-	sub	sp, sp, x5
-	mov	x5, sp
-	cmp	x4, #1
-	beq	L139
-	mov	x4, #0
-	str	x4, [x5]
+	ldr	x8, [x7]
 	mov	x26, x6
+	mov	x6, #16
+	sub	sp, sp, x6
+	mov	x6, sp
+	cmp	x8, #1
+	beq	L139
+	mov	x7, #0
+	str	x7, [x6]
+	mov	x24, x4
 	mov	x4, #0
 	b	L144
 L139:
-	mov	x4, #8
-	add	x4, x7, x4
-	ldr	x4, [x4]
-	mov	x8, #16
-	add	x7, x7, x8
-	ldr	x8, [x7]
-	ldr	x4, [x4]
-	ldr	x4, [x4]
-	ldr	x9, [x8]
-	mov	x7, #16
-	sub	sp, sp, x7
-	mov	x7, sp
-	cmp	x9, #1
+	mov	x8, #8
+	add	x8, x7, x8
+	ldr	x8, [x8]
+	mov	x9, #16
+	add	x7, x7, x9
+	ldr	x7, [x7]
+	ldr	x8, [x8]
+	ldr	x8, [x8]
+	ldr	x10, [x7]
+	mov	x9, #16
+	sub	sp, sp, x9
+	mov	x9, sp
+	cmp	x10, #1
 	beq	L142
-	mov	x8, #0
-	str	x8, [x7]
-	mov	x26, x6
-	mov	x6, #0
+	mov	x7, #0
+	str	x7, [x9]
+	mov	x7, #0
 	b	L143
 L142:
-	mov	x9, #8
-	add	x8, x8, x9
-	ldr	x8, [x8]
-	ldr	x8, [x8]
-	ldr	x8, [x8]
-	cmp	x8, #30
-	mov	x26, x6
-	cset	x6, eq
-	mov	x8, #1
-	and	x6, x6, x8
-	str	x6, [x7]
+	mov	x10, #8
+	add	x7, x7, x10
+	ldr	x7, [x7]
+	ldr	x7, [x7]
+	ldr	x7, [x7]
+	cmp	x7, #30
+	cset	x7, eq
+	mov	x10, #1
+	and	x7, x7, x10
+	str	x7, [x9]
 L143:
-	cmp	x4, #4
+	cmp	x8, #4
+	mov	x24, x4
 	cset	x4, eq
-	mov	x7, #1
+	mov	x8, #1
+	and	x4, x4, x8
 	and	x4, x4, x7
-	and	x4, x4, x6
-	str	x4, [x5]
+	str	x4, [x6]
 L144:
 	cmp	x2, #14
 	cset	x2, eq
+	mov	x25, x5
 	mov	x5, #1
 	and	x2, x2, x5
 	and	x2, x2, x4
@@ -1159,28 +1162,30 @@ L154:
 	beq	L157
 	mov	x2, #8
 	add	x2, x0, x2
-	ldr	x24, [x2]
+	ldr	x2, [x2]
+	str	x2, [x29, 16]
 	mov	x23, x1
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_parser_parse_functions_parse_optional_return
 	mov	x1, x23
-	ldr	x25, [x0]
+	ldr	x3, [x0]
+	str	x3, [x29, 24]
 	mov	x23, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_parser_parse_result_skip_newlines
 	mov	x6, x26
-	mov	x3, x25
-	mov	x2, x24
+	mov	x5, x25
+	mov	x4, x24
 	mov	x1, x23
 	mov	x17, x0
 	mov	x0, x22
 	mov	x22, x17
-	ldr	x5, [x29, 16]
-	ldr	x4, [x29, 24]
+	ldr	x3, [x29, 24]
+	ldr	x2, [x29, 16]
 	bl	_compiler_parser_ast_ExternalFn
 	mov	x1, x22
 	bl	_compiler_parser_parse_result_POk

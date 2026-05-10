@@ -1870,74 +1870,78 @@ _tools_docgen_render_render_index:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $40, %rsp
+	subq $56, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rdi, %r15
+	movq %rdi, %r14
 	movq %rsi, %rdi
 	movq %rdi, %rbx
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq _builder_scanner_meta_name
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq _builder_scanner_meta_version
 	movq %r12, %rdi
 	movq %rax, %r13
 	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq _builder_scanner_meta_description
-	movq %r12, %rdi
-	movq %rax, -24(%rbp)
-	movq %rdi, %r12
-	movq %r15, %rdi
-	callq _builder_scanner_meta_authors
 	movq %r12, %rdi
 	movq %rax, -16(%rbp)
 	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %r14, %rdi
+	callq _builder_scanner_meta_authors
+	movq %r12, %rdi
+	movq %rax, -24(%rbp)
+	movq %rdi, %r12
+	movq %r14, %rdi
 	callq _builder_scanner_meta_licence
 	movq %r12, %rdi
-	movq %rax, -32(%rbp)
+	movq %rax, -40(%rbp)
 	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq _builder_scanner_meta_repository
 	movq %r13, %rsi
 	movq %r12, %rdi
-	movq %rax, %r14
-	movq %rsi, %r12
+	movq %rax, %r15
+	movq %rsi, %r13
 	leaq _str6(%rip), %rsi
-	movq %rdi, %r13
+	movq %rdi, %r12
 	callq _donna_string_split
-	movq %r12, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r12
+	movq %rsi, %r13
 	leaq _donna_nil(%rip), %rsi
 	callq _tools_docgen_render_collect_headings
-	movq %r13, %rdi
-	movq %rax, %r13
+	movq %r12, %rdi
+	movq %rax, -32(%rbp)
+	movq -16(%rbp), %r12
 	callq _markdown_markdown_to_html
-	movq %r15, %rdi
-	movq %rax, %r15
+	movq %r14, %rdi
+	movq %rax, -48(%rbp)
+	movq -24(%rbp), %r14
 	callq _builder_scanner_meta_links
-	movq %r13, %rdx
-	movq %r12, %rsi
+	movq %r14, %rdx
+	movq %r13, %rsi
 	movq %rax, %r8
-	movq -16(%rbp), %r13
-	movq -24(%rbp), %r12
-	movq %r14, %rcx
+	movq %rdx, %r13
+	movq -32(%rbp), %rdx
+	movq -40(%rbp), %rcx
+	movq %rcx, %r14
+	movq %r15, %rcx
 	movq %rbx, %rdi
 	callq _tools_docgen_render_render_index_sidebar
-	movq %r15, %r9
-	movq %r14, %r8
+	movq %r15, %r8
+	movq %r14, %rcx
 	movq %r13, %rdx
 	movq %r12, %rsi
 	movq %rax, %r13
-	movq -32(%rbp), %rcx
+	movq -48(%rbp), %r9
 	movq %rbx, %rdi
 	callq _tools_docgen_render_render_index_main
 	movq %rax, %r12
@@ -2403,29 +2407,30 @@ _tools_docgen_render_render_index_main:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %r9, %rbx
+	movq %r9, -16(%rbp)
 	movq %r8, %r15
 	movq %rcx, %r14
-	movq %rdx, -16(%rbp)
-	movq %rsi, %r13
-	movq %rdi, %r12
+	movq %rdx, %r13
+	movq %rsi, %r12
+	movq %rdi, %rbx
 	callq _tools_docgen_render_h
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	leaq _str172(%rip), %rdi
 	callq ___rt_str_concat
-	movq %r13, %rsi
+	movq %r12, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r13
+	movq %rsi, %r12
 	leaq _str175(%rip), %rsi
 	callq ___rt_str_concat
 	movq %r15, %r8
 	movq %r14, %rcx
-	movq %r13, %rsi
-	movq %r12, %rdi
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
 	movq %rax, %r12
-	movq -16(%rbp), %rdx
+	movq -16(%rbp), %rbx
 	callq _tools_docgen_render_render_pkg_header
 	movq %r12, %rsi
 	movq %rax, %r12
@@ -2675,24 +2680,23 @@ _tools_docgen_render_collect_headings:
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rbx, -16(%rbp)
 	cmpq $0, %rax
 	jz Lbb69
 	callq _tools_docgen_render_parse_heading
 	movq %r12, %rdi
-	movq %rbx, %r14
-	movq (%rax), %rbx
+	movq (%rax), %r12
 	movq 8(%rax), %r15
-	movq %rdi, %r12
+	movq %rdi, %r14
 	movq %r15, %rdi
 	callq _donna_string_is_empty
-	movq %r12, %rdi
-	cmpq $1, %rbx
+	movq %r14, %rdi
+	cmpq $1, %r12
 	setle %cl
 	movzbq %cl, %rcx
 	orq %rcx, %rax
 	subq $16, %rsp
-	movq %rsp, %r12
+	movq %rsp, %r14
+	movq %r14, -16(%rbp)
 	cmpq $1, %rax
 	jz Lbb66
 	movq %rdi, %r14
@@ -2700,8 +2704,8 @@ _tools_docgen_render_collect_headings:
 	callq _malloc
 	movq %r14, %rdi
 	movq %rax, %r14
-	movq %rbx, %rax
-	movq -16(%rbp), %rbx
+	movq %r12, %rax
+	movq -16(%rbp), %r12
 	movq %rax, (%r14)
 	movq %r15, 8(%r14)
 	movq %rdi, %r15
@@ -2716,7 +2720,7 @@ _tools_docgen_render_collect_headings:
 	movq %rax, (%r12)
 	jmp Lbb68
 Lbb66:
-	movq %r14, %rbx
+	movq %r14, %r12
 	movq %r13, %rsi
 	callq _tools_docgen_render_collect_headings
 	movq %rax, (%r12)
@@ -3175,29 +3179,32 @@ _tools_docgen_render_render_docs_main:
 	pushq %r14
 	pushq %r15
 	movq 16(%rbp), %rbx
-	movq %r9, %r15
-	movq %r8, %r14
-	movq %rcx, %r13
-	movq %rdx, -8(%rbp)
-	movq %rsi, -16(%rbp)
-	movq %rdi, %r12
+	movq %rbx, -8(%rbp)
+	movq %r9, -16(%rbp)
+	movq %r8, %r15
+	movq %rcx, %r14
+	movq %rdx, %r13
+	movq %rsi, %r12
+	movq %rdi, %rbx
 	callq _tools_docgen_render_h
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	leaq _str504(%rip), %rdi
 	callq ___rt_str_concat
+	movq %r12, %rsi
 	movq %rax, %rdi
+	movq %rsi, %r12
 	leaq _str507(%rip), %rsi
 	callq ___rt_str_concat
-	movq %r15, %r9
-	movq %r14, %r8
-	movq %r13, %rcx
-	movq %r12, %rdi
-	movq %rax, %rsi
-	movq -8(%rbp), %rdx
-	movq %rsi, %r12
-	movq -16(%rbp), %rsi
+	movq %r15, %r8
+	movq %r14, %rcx
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq %rax, %r12
+	movq -8(%rbp), %rbx
+	movq -16(%rbp), %r9
 	callq _tools_docgen_render_render_page_head
 	movq %r12, %rsi
 	movq %rbx, %rdi
@@ -3554,7 +3561,7 @@ _tools_docgen_render_render_module:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $24, %rsp
+	subq $40, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -3566,12 +3573,12 @@ _tools_docgen_render_render_module:
 	movq 24(%rax), %r15
 	movq 32(%rax), %r14
 	movq 40(%rax), %r13
-	movq %r13, -8(%rbp)
 	movq 48(%rax), %r12
-	movq %rdi, %r13
+	movq %r12, -16(%rbp)
+	movq %rdi, %r12
 	callq _donna_string_is_empty
-	movq %r13, %rdi
-	movq -8(%rbp), %r13
+	movq %r12, %rdi
+	movq -16(%rbp), %r12
 	cmpq $1, %rax
 	jz Lbb156
 	callq _markdown_markdown_to_html
@@ -3597,19 +3604,19 @@ Lbb159:
 	callq _tools_docgen_render_render_items_section
 	movq %r15, %rsi
 	movq %r14, %rdi
-	movq %rax, -16(%rbp)
+	movq %rax, %r14
 	leaq _tools_docgen_render_render_fn_cards(%rip), %rdx
-	movq %rsi, %r14
+	movq %rsi, %r15
 	leaq _str676(%rip), %rsi
 	callq _tools_docgen_render_render_items_section
-	movq %r14, %rsi
+	movq %r15, %rsi
 	movq %r13, %rdi
 	movq %rax, %r13
 	leaq _tools_docgen_render_render_const_cards(%rip), %rdx
-	movq %rsi, %r14
+	movq %rsi, %r15
 	leaq _str678(%rip), %rsi
 	callq _tools_docgen_render_render_items_section
-	movq %r14, %rsi
+	movq %r15, %rsi
 	movq %r12, %rdi
 	movq %rax, %r12
 	leaq _tools_docgen_render_render_fn_cards(%rip), %rdx
@@ -3617,12 +3624,12 @@ Lbb159:
 	leaq _str680(%rip), %rsi
 	callq _tools_docgen_render_render_items_section
 	movq %rbx, %rdi
-	movq %rax, %rbx
-	movq %rdi, %r14
+	movq %rax, -24(%rbp)
+	movq %rdi, %rbx
 	callq _tools_docgen_render_h
-	movq %r14, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r14
+	movq %rdi, %rbx
 	leaq _str682(%rip), %rdi
 	callq ___rt_str_concat
 	movq %r15, %rsi
@@ -3635,12 +3642,12 @@ Lbb159:
 	movq %rsi, %r15
 	leaq _str687(%rip), %rsi
 	callq ___rt_str_concat
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq %rbx, %rdi
+	movq %rax, -32(%rbp)
+	movq -24(%rbp), %rbx
 	callq _tools_docgen_render_h
-	movq %r14, %rdi
 	movq %rax, %rsi
-	movq -16(%rbp), %r14
+	movq -32(%rbp), %rdi
 	callq ___rt_str_concat
 	movq %r15, %rsi
 	movq %rax, %rdi

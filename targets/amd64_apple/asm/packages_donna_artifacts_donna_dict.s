@@ -677,7 +677,6 @@ _donna_dict_update:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rdx, -16(%rbp)
 	movq %rdi, %rax
 	movq %rcx, %r15
 	movq (%rax), %rcx
@@ -685,7 +684,9 @@ _donna_dict_update:
 	jz Lbb81
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r12
-	movq 24(%rax), %r14
+	movq %rdx, %r14
+	movq 24(%rax), %rdx
+	movq %rdx, -16(%rbp)
 	movq %rsi, %r13
 	movq %rdi, %rsi
 	movq %rdi, %rbx
@@ -695,8 +696,7 @@ _donna_dict_update:
 	movq %r14, %rdx
 	movq %r13, %rsi
 	movq %rbx, %rdi
-	movq %rdx, %r14
-	movq -16(%rbp), %rdx
+	movq -16(%rbp), %r14
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax

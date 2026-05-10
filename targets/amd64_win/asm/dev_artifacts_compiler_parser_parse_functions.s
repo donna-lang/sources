@@ -772,7 +772,7 @@ Lbb104:
 Lbb105:
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rax
-	movq 8(%rcx), %r13
+	movq 8(%rcx), %r15
 	movq 16(%rax), %rax
 	movq 16(%rax), %rax
 	subq $16, %rsp
@@ -827,11 +827,11 @@ Lbb114:
 	movq (%r10), %r10
 	movq (%rbx), %r12
 	cmpq $1, %r12
-	setz %r14b
-	movzbq %r14b, %r14
+	setz %r13b
+	movzbq %r13b, %r13
 	subq $16, %rsp
 	movq %rsp, %r12
-	cmpl $0, %r14d
+	cmpl $0, %r13d
 	jnz Lbb117
 	movq $0, (%r12)
 	movl $0, %ebx
@@ -883,7 +883,7 @@ Lbb127:
 	cmpl $0, %ecx
 	jnz Lbb129
 	subq $32, %rsp
-	movq %r13, %rdx
+	movq %r15, %rdx
 	leaq str702(%rip), %rcx
 	callq errors_error_ParseUnexpectedEof
 	movq %rax, %rcx
@@ -916,14 +916,12 @@ Lbb130:
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rax
 	movq (%rcx), %rcx
-	movq 8(%rcx), %rcx
-	movq %rcx, -16(%rbp)
+	movq 8(%rcx), %r13
 	movq 16(%rax), %rax
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rax
 	movq (%rcx), %rcx
-	movq 8(%rcx), %r11
-	movq %r11, -24(%rbp)
+	movq 8(%rcx), %r14
 	movq 16(%rax), %rcx
 	subq $32, %rsp
 	callq compiler_parser_parse_result_skip_newlines
@@ -933,10 +931,10 @@ Lbb130:
 	callq compiler_parser_parse_functions_parse_pub
 	subq $-32, %rsp
 	movq (%rax), %rdx
-	movq %rdx, -32(%rbp)
 	movq 8(%rax), %rax
 	subq $16, %rsp
 	movq %rsp, %rdi
+	movq %rdx, %r12
 	movq (%rax), %rdx
 	cmpq $1, %rdx
 	setz %cl
@@ -971,11 +969,12 @@ Lbb136:
 	movq (%r9), %r9
 	movq (%r11), %rbx
 	cmpq $1, %rbx
-	setz %r12b
-	movzbq %r12b, %r12
+	setz %bl
+	movzbq %bl, %rbx
+	movq %rbx, -8(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rbx
-	cmpl $0, %r12d
+	cmpl $0, -8(%rbp)
 	jnz Lbb139
 	movq $0, (%rbx)
 	movl $0, %r11d
@@ -1020,7 +1019,7 @@ Lbb148:
 	cmpl $0, %ecx
 	jnz Lbb150
 	subq $32, %rsp
-	movq %r13, %rdx
+	movq %r15, %rdx
 	leaq str672(%rip), %rcx
 	callq errors_error_ParseUnexpectedEof
 	movq %rax, %rcx
@@ -1055,46 +1054,41 @@ Lbb151:
 	movq 16(%rax), %rax
 	movq (%rcx), %rcx
 	movq 8(%rcx), %rcx
-	movq %rcx, %rbx
+	movq %rcx, -32(%rbp)
 	movq 16(%rax), %rcx
 	subq $32, %rsp
 	callq compiler_parser_parse_params_parse_params
-	movq %rbx, %rcx
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq (%rax), %rdx
-	cmpq $1, %rdx
-	setz %dl
-	movzbq %dl, %rdx
-	cmpl $0, %edx
+	movq (%rax), %rcx
+	cmpq $1, %rcx
+	setz %cl
+	movzbq %cl, %rcx
+	cmpl $0, %ecx
 	jnz Lbb153
-	movq 8(%rax), %r14
-	movq %rcx, %r12
+	movq 8(%rax), %r8
+	movq %r8, -24(%rbp)
 	movq 16(%rax), %rcx
 	subq $32, %rsp
 	callq compiler_parser_parse_functions_parse_optional_return
-	movq %r12, %rcx
 	subq $-32, %rsp
-	movq (%rax), %r15
-	movq %rcx, %r12
+	movq (%rax), %r9
+	movq %r9, -16(%rbp)
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq compiler_parser_parse_result_skip_newlines
-	movq %r15, %r9
-	movq %r14, %r8
-	movq %r12, %rcx
-	movq %rax, %rdx
-	movq %rdx, %r12
-	movq -32(%rbp), %rdx
-	movq -24(%rbp), %r11
-	movq -16(%rbp), %rax
+	movq %r12, %rdx
+	movq %rax, %r12
+	movq -16(%rbp), %r9
+	movq -24(%rbp), %r8
+	movq -32(%rbp), %rcx
 	subq $-32, %rsp
 	subq $64, %rsp
-	movq %rsp, %r10
-	movq %r13, 48(%r10)
-	movq %r11, 40(%r10)
-	movq %rax, 32(%r10)
+	movq %rsp, %rax
+	movq %r15, 48(%rax)
+	movq %r14, 40(%rax)
+	movq %r13, 32(%rax)
 	callq compiler_parser_ast_ExternalFn
 	movq %r12, %rdx
 	movq %rax, %rcx

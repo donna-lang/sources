@@ -232,36 +232,34 @@ compiler_typesystem_env_env_bind:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rsi, -8(%rbp)
+	movq %rsi, %r12
 	movq %rdi, %rax
 	movq %rdx, %rdi
-	movq 8(%rax), %rcx
-	movq %rcx, -16(%rbp)
-	movq 16(%rax), %r12
-	movq 24(%rax), %r13
-	movq 32(%rax), %r14
-	movq 40(%rax), %r15
+	movq 8(%rax), %rbx
+	movq 16(%rax), %r13
+	movq 24(%rax), %r14
+	movq 32(%rax), %r15
+	movq 40(%rax), %r8
+	movq %r8, -16(%rbp)
 	callq compiler_typesystem_types_Mono
-	movq %rax, %rbx
+	movq %rax, -8(%rbp)
 	movl $16, %edi
 	callq malloc
 	movq %r12, %rsi
-	xchgq %rax, %rbx
-	movq %rsi, %r12
-	movq -8(%rbp), %rsi
-	movq %rsi, (%rbx)
-	movq %rax, 8(%rbx)
+	movq %rax, %r12
+	movq -8(%rbp), %rax
+	movq %rsi, (%r12)
+	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
-	movq %r15, %r8
-	movq %r14, %rcx
-	movq %r13, %rdx
-	movq %r12, %rsi
+	movq %r15, %rcx
+	movq %r14, %rdx
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq -16(%rbp), %rax
+	movq -16(%rbp), %r8
 	movq $1, (%rdi)
-	movq %rbx, 8(%rdi)
-	movq %rax, 16(%rdi)
+	movq %r12, 8(%rdi)
+	movq %rbx, 16(%rdi)
 	callq compiler_typesystem_env_Env
 	popq %r15
 	popq %r14
@@ -287,30 +285,34 @@ compiler_typesystem_env_env_register_alias:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rdx, %r13
-	movq %rsi, -8(%rbp)
-	movq 8(%rdi), %rax
-	movq %rax, -16(%rbp)
-	movq 16(%rdi), %r12
-	movq 24(%rdi), %rbx
-	movq 32(%rdi), %r14
-	movq 40(%rdi), %r15
+	movq %rdx, %r15
+	movq %rsi, %r13
+	movq %rdi, %rax
+	movq 8(%rax), %rdi
+	movq 16(%rax), %r14
+	movq 24(%rax), %rbx
+	movq 32(%rax), %rcx
+	movq %rcx, -8(%rbp)
+	movq 40(%rax), %r8
+	movq %r8, -16(%rbp)
+	movq %rdi, %r12
 	movl $16, %edi
 	callq malloc
-	movq %r13, %rdx
-	movq %r12, %rsi
+	movq %r15, %rdx
+	movq %r13, %rsi
+	movq %r12, %rdi
 	movq %rax, %r12
-	movq %rsi, %r13
-	movq -8(%rbp), %rsi
+	movq -8(%rbp), %r15
 	movq %rsi, (%r12)
 	movq %rdx, 8(%r12)
+	movq %rdi, %r13
 	movl $24, %edi
 	callq malloc
-	movq %r15, %r8
-	movq %r14, %rcx
-	movq %r13, %rsi
+	movq %r15, %rcx
+	movq %r14, %rsi
+	movq %r13, %rdi
 	movq %rax, %rdx
-	movq -16(%rbp), %rdi
+	movq -16(%rbp), %r8
 	movq $1, (%rdx)
 	movq %r12, 8(%rdx)
 	movq %rbx, 16(%rdx)
@@ -340,45 +342,53 @@ compiler_typesystem_env_env_add_module:
 	pushq %r14
 	pushq %r15
 	movq %rdx, %r15
-	movq %rsi, %r12
-	movq 8(%rdi), %rax
-	movq %rax, -32(%rbp)
-	movq 16(%rdi), %r13
-	movq 24(%rdi), %rbx
+	movq %rsi, %r13
+	movq %rdi, %rax
+	movq 8(%rax), %rdi
+	movq 16(%rax), %r12
+	movq 24(%rax), %rbx
+	movq %rbx, -16(%rbp)
 	movq %rcx, %r14
-	movq 32(%rdi), %rcx
-	movq %rcx, -16(%rbp)
-	movq 40(%rdi), %r8
-	movq %r8, -24(%rbp)
+	movq 32(%rax), %rcx
+	movq %rcx, -24(%rbp)
+	movq 40(%rax), %r8
+	movq %r8, -32(%rbp)
+	movq %rdi, %rbx
 	movl $16, %edi
 	callq malloc
 	movq %r14, %rcx
-	movq %rax, %r14
-	movq %r12, (%r14)
-	movq %rcx, 8(%r14)
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq %r13, (%rbx)
+	movq %rcx, 8(%rbx)
+	movq %rdi, %r14
 	movl $24, %edi
 	callq malloc
-	movq %r14, %rcx
-	xchgq %rax, %r13
-	movq -16(%rbp), %r14
-	movq $1, (%r13)
-	movq %rcx, 8(%r13)
-	movq %rax, 16(%r13)
+	movq %r14, %rdi
+	movq %rax, %r14
+	movq %rbx, %rax
+	movq -16(%rbp), %rbx
+	movq $1, (%r14)
+	movq %rax, 8(%r14)
+	movq %r12, 16(%r14)
+	movq %rdi, %r12
 	movl $16, %edi
 	callq malloc
 	movq %r15, %rdx
-	movq %r12, %rsi
+	movq %r13, %rsi
+	movq %r12, %rdi
 	movq %rax, %r12
 	movq -24(%rbp), %r15
 	movq %rsi, (%r12)
 	movq %rdx, 8(%r12)
+	movq %rdi, %r13
 	movl $24, %edi
 	callq malloc
-	movq %r15, %r8
-	movq %r14, %rcx
-	movq %r13, %rsi
+	movq %r15, %rcx
+	movq %r14, %rsi
+	movq %r13, %rdi
 	movq %rax, %rdx
-	movq -32(%rbp), %rdi
+	movq -32(%rbp), %r8
 	movq $1, (%rdx)
 	movq %r12, 8(%rdx)
 	movq %rbx, 16(%rdx)
@@ -408,29 +418,33 @@ compiler_typesystem_env_env_add_ctor:
 	pushq %r14
 	pushq %r15
 	movq %rdx, %r13
-	movq %rsi, -8(%rbp)
-	movq 8(%rdi), %rax
-	movq %rax, -16(%rbp)
-	movq 16(%rdi), %r12
-	movq 24(%rdi), %r14
-	movq 32(%rdi), %rbx
-	movq 40(%rdi), %r15
+	movq %rsi, %r12
+	movq %rdi, %rax
+	movq 8(%rax), %rdi
+	movq 16(%rax), %r14
+	movq 24(%rax), %r15
+	movq 32(%rax), %rbx
+	movq %rbx, -8(%rbp)
+	movq 40(%rax), %r8
+	movq %r8, -16(%rbp)
+	movq %rdi, %rbx
 	movl $16, %edi
 	callq malloc
 	movq %r13, %rdx
 	movq %r12, %rsi
+	movq %rbx, %rdi
 	movq %rax, %r12
-	movq %rsi, %r13
-	movq -8(%rbp), %rsi
+	movq -8(%rbp), %rbx
 	movq %rsi, (%r12)
 	movq %rdx, 8(%r12)
+	movq %rdi, %r13
 	movl $24, %edi
 	callq malloc
-	movq %r15, %r8
-	movq %r14, %rdx
-	movq %r13, %rsi
+	movq %r15, %rdx
+	movq %r14, %rsi
+	movq %r13, %rdi
 	movq %rax, %rcx
-	movq -16(%rbp), %rdi
+	movq -16(%rbp), %r8
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)

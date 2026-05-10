@@ -5844,7 +5844,7 @@ Lbb848:
 	movzbq %dl, %rdx
 	cmpl $0, %edx
 	jnz Lbb867
-	movq %rcx, %r14
+	movq %rcx, %r13
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rax
 	subq $16, %rsp
@@ -5924,15 +5924,16 @@ Lbb862:
 	movzbq %dl, %rdx
 	cmpl $0, %edx
 	jnz Lbb864
-	movq 8(%rax), %r8
-	movq %r8, -16(%rbp)
-	movq 16(%rax), %r13
+	movq 8(%rax), %r14
+	movq 16(%rax), %rdx
+	movq %rdx, -16(%rbp)
 	subq $32, %rsp
 	callq donna_option_Some
 	movq %r15, %r9
-	movq %r14, %rcx
+	movq %r14, %r8
+	movq %r13, %rcx
 	movq %rax, %rdx
-	movq -16(%rbp), %r8
+	movq -16(%rbp), %r13
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq compiler_parser_ast_CaseClause

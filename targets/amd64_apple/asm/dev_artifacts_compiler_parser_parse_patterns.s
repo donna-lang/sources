@@ -727,16 +727,16 @@ Lbb112:
 	cmpl $0, %ecx
 	jnz Lbb115
 	movq 8(%rax), %rdx
-	movq %rdx, -8(%rbp)
+	movq %rdx, -16(%rbp)
 	movq %rsi, %r14
 	movq 16(%rax), %rsi
-	movq %rsi, -16(%rbp)
+	movq %rsi, -8(%rbp)
 	callq _donna_option_Some
 	movq %r15, %rcx
 	movq %r14, %rsi
 	movq %rax, %rdi
-	movq -16(%rbp), %r14
-	movq -8(%rbp), %rdx
+	movq -8(%rbp), %r14
+	movq -16(%rbp), %rdx
 	callq _compiler_parser_ast_PCons
 	movq %r14, %rsi
 	movq %rax, %rdi

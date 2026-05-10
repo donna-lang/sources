@@ -840,7 +840,7 @@ _builder_pipeline_compile_loop:
 	str	x27, [x29, 56]
 	mov	x21, x6
 	mov	x19, x4
-	mov	x25, x3
+	mov	x24, x3
 	mov	x23, x1
 	mov	x1, x0
 	mov	x0, x5
@@ -851,8 +851,7 @@ _builder_pipeline_compile_loop:
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
-	str	x0, [x29, 40]
-	mov	x24, x2
+	mov	x26, x2
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x22, [x1]
@@ -865,21 +864,25 @@ _builder_pipeline_compile_loop:
 	mov	x22, x0
 	mov	x0, x23
 	bl	_donna_string_is_empty
-	mov	x2, x24
+	mov	x3, x24
 	mov	x1, x23
-	mov	x26, x2
-	mov	x2, #16
-	sub	sp, sp, x2
+	mov	x2, x0
+	mov	x0, x22
+	mov	x25, x3
+	mov	x3, #16
+	sub	sp, sp, x3
 	mov	x23, sp
-	cmp	x0, #1
+	str	x23, [x29, 40]
+	cmp	x2, #1
 	beq	L43
-	mov	x22, x1
+	mov	x23, x1
 	adrp	x1, _str179@page
 	add	x1, x1, _str179@pageoff
-	mov	x0, x22
+	mov	x22, x0
+	mov	x0, x23
 	bl	___rt_str_concat
-	mov	x1, x22
-	ldr	x22, [x29, 40]
+	mov	x1, x23
+	ldr	x23, [x29, 40]
 	mov	x24, x1
 	mov	x1, x27
 	bl	___rt_str_concat
@@ -890,7 +893,6 @@ _builder_pipeline_compile_loop:
 	str	x22, [x23]
 	b	L45
 L43:
-	mov	x0, x22
 	mov	x22, x27
 	str	x22, [x23]
 L45:
@@ -1972,7 +1974,6 @@ _builder_pipeline_collect_pairs_recursive:
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x20, sp
-	str	x20, [x29, 16]
 	cmp	x1, #0
 	beq	L151
 	mov	x22, x0
@@ -1984,16 +1985,17 @@ _builder_pipeline_collect_pairs_recursive:
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x22, sp
+	str	x22, [x29, 16]
 	cmp	x2, #1
 	beq	L148
-	mov	x20, x1
+	mov	x22, x1
 	adrp	x1, _str561@page
 	add	x1, x1, _str561@pageoff
 	mov	x27, x0
 	mov	x0, x26
 	bl	___rt_str_concat
-	mov	x1, x20
-	ldr	x20, [x29, 16]
+	mov	x1, x22
+	ldr	x22, [x29, 16]
 	mov	x23, x1
 	mov	x1, x27
 	bl	___rt_str_concat

@@ -593,7 +593,7 @@ _compiler_analysis_analyser_analyse_block:
 	pushq %r15
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb105
+	jz Lbb106
 	movq 8(%rdi), %r15
 	movq 16(%rdi), %rdi
 	movq %rdi, %rbx
@@ -619,7 +619,7 @@ _compiler_analysis_analyser_analyse_block:
 	movq %rsi, %r13
 	callq _donna_list_append
 	movq %rax, (%rbx)
-	jmp Lbb106
+	jmp Lbb107
 Lbb92:
 	movq %r12, %r13
 	movq 8(%r15), %rdi
@@ -636,41 +636,40 @@ Lbb92:
 	callq _compiler_analysis_analyser_check_unused_bindings
 	movq %r13, %rsi
 	movq %rax, %rdi
+	movq %rsi, %r15
 	callq _donna_list_append
 	movq %r12, %rdi
 	movq %rax, %rsi
 	callq _donna_list_append
 	movq %rax, (%rbx)
-	jmp Lbb106
+	jmp Lbb107
 Lbb94:
 	movq %r14, %rdi
-	movq %r12, %rsi
-	movq %r15, %r13
-	movq 8(%r13), %r14
-	movq %rdi, %r12
-	movq 24(%r13), %rdi
-	movq %rsi, %r15
-	movq 32(%r13), %rsi
-	movq %rsi, -8(%rbp)
-	callq _compiler_analysis_analyser_analyse_expr
-	movq %r12, %rdi
-	movq %rax, %r12
+	movq %r15, %r14
+	movq %r12, %r15
+	movq 8(%r14), %r12
 	movq %rdi, %r13
-	movq %r14, %rdi
-	callq _compiler_analysis_scope_is_discard
-	movq %r15, %rsi
+	movq 24(%r14), %rdi
+	movq 32(%r14), %r14
+	callq _compiler_analysis_analyser_analyse_expr
 	movq %r13, %rdi
+	movq %rax, -8(%rbp)
+	movq %rdi, %r13
+	movq %r12, %rdi
+	callq _compiler_analysis_scope_is_discard
+	movq %r14, %rsi
+	movq %r13, %rdi
+	movq -8(%rbp), %r14
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
 	jz Lbb102
-	movq %rsi, %r15
-	movq %r14, %rsi
+	movq %rsi, %r14
+	movq %r12, %rsi
 	callq _compiler_analysis_scope_contains_name
-	movq %r15, %rsi
-	movq %r14, %rdi
-	movq %rsi, %r15
-	movq -8(%rbp), %rsi
+	movq %r14, %rsi
+	movq %r12, %rdi
+	movq -8(%rbp), %r12
 	subq $16, %rsp
 	movq %rsp, %r14
 	cmpq $1, %rax
@@ -698,22 +697,24 @@ Lbb98:
 	movq %rax, %rdi
 Lbb101:
 	movq %rdi, (%r13)
-	jmp Lbb104
+	jmp Lbb105
 Lbb102:
+	movq %r14, %r12
+	movq %r15, %rsi
 	leaq _donna_nil(%rip), %rax
 	movq %rax, (%r13)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, %rdi
-Lbb104:
+Lbb105:
 	callq _donna_list_append
 	movq %r12, %rdi
 	movq %rax, %rsi
 	callq _donna_list_append
 	movq %rax, (%rbx)
-	jmp Lbb106
-Lbb105:
-	leaq _donna_nil(%rip), %rax
+	jmp Lbb107
 Lbb106:
+	leaq _donna_nil(%rip), %rax
+Lbb107:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -738,7 +739,7 @@ _compiler_analysis_analyser_check_unused_bindings:
 	movq %rsi, %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb116
+	jz Lbb117
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq (%rax), %r12
@@ -756,7 +757,7 @@ _compiler_analysis_analyser_check_unused_bindings:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb114
+	jz Lbb115
 	movq %rsi, %r14
 	movq %r12, %rsi
 	callq _compiler_analysis_scope_contains_name
@@ -765,7 +766,7 @@ _compiler_analysis_analyser_check_unused_bindings:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rax
-	jz Lbb111
+	jz Lbb112
 	callq _errors_error_WarnUnusedVariable
 	movq %rax, %r14
 	movl $24, %edi
@@ -774,20 +775,20 @@ _compiler_analysis_analyser_check_unused_bindings:
 	movq %r14, 8(%rax)
 	movq %r13, 16(%rax)
 	movq %rax, (%r12)
-	jmp Lbb113
-Lbb111:
+	jmp Lbb114
+Lbb112:
 	movq %r13, %rax
 	movq %rax, (%r12)
-Lbb113:
-	movq %rax, (%rbx)
-	jmp Lbb117
 Lbb114:
+	movq %rax, (%rbx)
+	jmp Lbb118
+Lbb115:
 	movq %r13, %rax
 	movq %rax, (%rbx)
-	jmp Lbb117
-Lbb116:
-	leaq _donna_nil(%rip), %rax
+	jmp Lbb118
 Lbb117:
+	leaq _donna_nil(%rip), %rax
+Lbb118:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14

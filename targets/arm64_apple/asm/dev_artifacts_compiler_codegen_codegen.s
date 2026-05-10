@@ -937,17 +937,20 @@ _compiler_codegen_codegen_CgState:
 	str	x24, [x29, 64]
 	str	x25, [x29, 56]
 	str	x26, [x29, 48]
-	ldr	x19, [x29, 128]
-	ldr	x20, [x29, 120]
-	ldr	x21, [x29, 112]
-	mov	x22, x7
-	mov	x23, x6
-	mov	x24, x5
-	mov	x25, x4
-	mov	x26, x3
-	str	x2, [x29, 32]
-	str	x1, [x29, 24]
-	str	x0, [x29, 16]
+	ldr	x8, [x29, 128]
+	str	x8, [x29, 32]
+	ldr	x8, [x29, 120]
+	str	x8, [x29, 24]
+	ldr	x8, [x29, 112]
+	str	x8, [x29, 16]
+	mov	x19, x7
+	mov	x20, x6
+	mov	x21, x5
+	mov	x22, x4
+	mov	x23, x3
+	mov	x24, x2
+	mov	x25, x1
+	mov	x26, x0
 	mov	x0, #96
 	bl	_malloc
 	ldr	x1, [x29, 32]
@@ -957,37 +960,37 @@ _compiler_codegen_codegen_CgState:
 	str	x4, [x0]
 	mov	x4, #8
 	add	x4, x0, x4
+	str	x26, [x4]
+	mov	x4, #16
+	add	x4, x0, x4
+	str	x25, [x4]
+	mov	x4, #24
+	add	x4, x0, x4
+	str	x24, [x4]
+	mov	x4, #32
+	add	x4, x0, x4
+	str	x23, [x4]
+	mov	x4, #40
+	add	x4, x0, x4
+	str	x22, [x4]
+	mov	x4, #48
+	add	x4, x0, x4
+	str	x21, [x4]
+	mov	x4, #56
+	add	x4, x0, x4
+	str	x20, [x4]
+	mov	x4, #64
+	add	x4, x0, x4
+	str	x19, [x4]
+	mov	x4, #72
+	add	x4, x0, x4
 	str	x3, [x4]
-	mov	x3, #16
+	mov	x3, #80
 	add	x3, x0, x3
 	str	x2, [x3]
-	mov	x2, #24
+	mov	x2, #88
 	add	x2, x0, x2
 	str	x1, [x2]
-	mov	x1, #32
-	add	x1, x0, x1
-	str	x26, [x1]
-	mov	x1, #40
-	add	x1, x0, x1
-	str	x25, [x1]
-	mov	x1, #48
-	add	x1, x0, x1
-	str	x24, [x1]
-	mov	x1, #56
-	add	x1, x0, x1
-	str	x23, [x1]
-	mov	x1, #64
-	add	x1, x0, x1
-	str	x22, [x1]
-	mov	x1, #72
-	add	x1, x0, x1
-	str	x21, [x1]
-	mov	x1, #80
-	add	x1, x0, x1
-	str	x20, [x1]
-	mov	x1, #88
-	add	x1, x0, x1
-	str	x19, [x1]
 	ldr	x19, [x29, 104]
 	ldr	x20, [x29, 96]
 	ldr	x21, [x29, 88]
@@ -4635,7 +4638,6 @@ _compiler_codegen_codegen_gen_constructor:
 	str	x24, [x29, 80]
 	str	x25, [x29, 72]
 	str	x26, [x29, 64]
-	str	x27, [x29, 56]
 	mov	x19, x2
 	mov	x17, x1
 	mov	x1, x0
@@ -4648,7 +4650,7 @@ _compiler_codegen_codegen_gen_constructor:
 	ldr	x22, [x2]
 	mov	x2, #24
 	add	x1, x1, x2
-	ldr	x24, [x1]
+	ldr	x25, [x1]
 	mov	x20, x0
 	bl	_donna_string_is_empty
 	mov	x1, x21
@@ -4671,109 +4673,130 @@ L178:
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
-	mov	x23, x1
+	mov	x21, x1
 	ldr	x1, [x22]
 	cmp	x1, #0
 	beq	L180
 	mov	x20, x0
 	mov	x0, x22
 	bl	_compiler_codegen_codegen_list_length
-	mov	x1, x0
+	mov	x1, x21
+	mov	x2, x0
 	mov	x0, x20
-	mov	x2, #8
-	mul	x1, x1, x2
-	mov	x2, #8
-	add	x20, x1, x2
+	mov	x3, #8
+	mul	x2, x2, x3
+	mov	x3, #8
+	add	x20, x2, x3
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
+	mov	x26, x1
 	mov	x1, #0
 	mov	x21, x0
 	mov	x0, x22
 	bl	_compiler_codegen_codegen_build_ctor_params
-	str	x0, [x29, 16]
+	mov	x23, x0
 	mov	x0, x21
 	mov	x21, x0
 	adrp	x0, _str1547@page
 	add	x0, x0, _str1547@pageoff
 	bl	_compiler_codegen_il_new_block
-	str	x0, [x29, 24]
+	mov	x17, x0
 	mov	x0, x21
-	mov	x21, x0
+	mov	x21, x17
+	mov	x24, x0
 	bl	_compiler_codegen_codegen_state_finished_blocks
+	mov	x1, x26
 	str	x0, [x29, 40]
-	mov	x0, x21
+	mov	x0, x24
+	mov	x24, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	bl	_compiler_codegen_codegen_set_finished_blocks
 	bl	_compiler_codegen_codegen_fresh_temp
+	mov	x2, x23
 	mov	x1, x0
 	mov	x0, x20
 	ldr	x20, [x1]
+	mov	x26, x2
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x26, [x1]
-	mov	x21, x0
+	ldr	x4, [x1]
+	str	x4, [x29, 24]
+	mov	x23, x0
 	mov	x0, x20
 	bl	_compiler_codegen_il_Temporary
 	str	x0, [x29, 32]
-	mov	x0, x21
-	mov	x21, x0
+	mov	x0, x23
+	mov	x23, x0
 	adrp	x0, _str1557@page
 	add	x0, x0, _str1557@pageoff
 	bl	_compiler_codegen_il_Global
-	mov	x17, x0
-	mov	x0, x21
-	mov	x21, x17
+	str	x0, [x29, 48]
+	mov	x0, x23
 	bl	_compiler_codegen_il_Const
 	mov	x17, x0
 	mov	x0, x21
 	mov	x21, x17
-	mov	x25, x0
+	mov	x23, x0
 	mov	x0, #16
 	bl	_malloc
-	mov	x27, x0
-	mov	x0, x25
-	adrp	x1, _compiler_codegen_il_Long@page
-	add	x1, x1, _compiler_codegen_il_Long@pageoff
-	str	x1, [x27]
+	mov	x2, x26
+	mov	x1, x24
+	mov	x26, x0
+	mov	x0, x23
+	mov	x23, x2
+	adrp	x2, _compiler_codegen_il_Long@page
+	add	x2, x2, _compiler_codegen_il_Long@pageoff
+	str	x2, [x26]
+	mov	x24, x1
 	mov	x1, #8
-	add	x1, x27, x1
+	add	x1, x26, x1
 	str	x21, [x1]
 	mov	x21, x0
 	mov	x0, #24
 	bl	_malloc
+	mov	x2, x23
 	mov	x1, x0
 	mov	x0, x21
-	ldr	x25, [x29, 32]
+	mov	x23, x0
+	ldr	x0, [x29, 48]
 	ldr	x21, [x29, 40]
-	mov	x2, #1
-	str	x2, [x1]
-	mov	x2, #8
-	add	x2, x1, x2
-	str	x27, [x2]
-	mov	x2, #16
-	add	x3, x1, x2
+	mov	x3, #1
+	str	x3, [x1]
+	mov	x3, #8
+	add	x3, x1, x3
+	str	x26, [x3]
+	mov	x3, #16
+	add	x3, x1, x3
+	mov	x26, x2
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
 	str	x2, [x3]
 	bl	_compiler_codegen_il_Call
-	mov	x1, x25
+	mov	x2, x26
+	mov	x1, x24
 	mov	x3, x0
-	mov	x0, x24
-	mov	x24, x0
-	ldr	x0, [x29, 24]
+	mov	x0, x23
+	mov	x23, x1
+	ldr	x1, [x29, 32]
+	ldr	x26, [x29, 24]
+	mov	x24, x2
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	mov	x25, x0
-	mov	x0, x24
+	mov	x17, x0
+	mov	x0, x25
+	mov	x25, x17
 	bl	_compiler_codegen_il_Const
-	mov	x24, x0
+	str	x0, [x29, 16]
+	mov	x0, x25
+	mov	x25, x0
 	mov	x0, x20
 	bl	_compiler_codegen_il_Temporary
 	mov	x1, x0
-	mov	x0, x24
-	ldr	x24, [x29, 16]
+	mov	x0, x25
+	mov	x25, x0
+	ldr	x0, [x29, 16]
 	bl	_compiler_codegen_il_Storel
 	mov	x1, x0
 	mov	x0, x25
@@ -4856,9 +4879,9 @@ L178:
 	str	x0, [x19]
 	b	L182
 L180:
-	mov	x22, x23
+	mov	x22, x21
 	mov	x20, x0
-	mov	x0, x24
+	mov	x0, x25
 	bl	_compiler_codegen_il_Constant
 	mov	x21, x0
 	mov	x0, x20
@@ -4920,7 +4943,6 @@ L182:
 	ldr	x24, [x29, 80]
 	ldr	x25, [x29, 72]
 	ldr	x26, [x29, 64]
-	ldr	x27, [x29, 56]
 	mov sp, x29
 	ldp	x29, x30, [sp], 128
 	ret
@@ -5255,7 +5277,7 @@ _compiler_codegen_codegen_gen_function:
 	str	x25, [x29, 56]
 	str	x26, [x29, 48]
 	str	x27, [x29, 40]
-	mov	x22, x2
+	mov	x20, x2
 	mov	x3, x0
 	mov	x0, x1
 	mov	x1, #8
@@ -5266,43 +5288,43 @@ _compiler_codegen_codegen_gen_function:
 	ldr	x2, [x2]
 	mov	x4, #24
 	add	x4, x3, x4
-	ldr	x25, [x4]
+	ldr	x24, [x4]
 	mov	x4, #32
 	add	x4, x3, x4
 	ldr	x21, [x4]
 	mov	x4, #40
 	add	x3, x3, x4
-	ldr	x19, [x3]
+	ldr	x25, [x3]
 	cmp	x2, #1
 	beq	L207
-	adrp	x20, _compiler_codegen_il_Private@page
-	add	x20, x20, _compiler_codegen_il_Private@pageoff
+	adrp	x19, _compiler_codegen_il_Private@page
+	add	x19, x19, _compiler_codegen_il_Private@pageoff
 	b	L208
 L207:
-	adrp	x20, _compiler_codegen_il_Public@page
-	add	x20, x20, _compiler_codegen_il_Public@pageoff
+	adrp	x19, _compiler_codegen_il_Public@page
+	add	x19, x19, _compiler_codegen_il_Public@pageoff
 L208:
 	mov	x26, x1
 	adrp	x1, _str1746@page
 	add	x1, x1, _str1746@pageoff
-	mov	x23, x0
+	mov	x22, x0
 	mov	x0, x26
 	bl	_donna_string_equal
 	mov	x1, x0
-	mov	x0, x23
+	mov	x0, x22
 	mov	x2, #16
 	sub	sp, sp, x2
-	mov	x23, sp
+	mov	x22, sp
 	cmp	x1, #1
 	beq	L214
-	mov	x24, x0
+	mov	x23, x0
 	bl	_donna_string_is_empty
 	mov	x1, x26
 	mov	x2, x0
-	mov	x0, x24
+	mov	x0, x23
 	mov	x3, #16
 	sub	sp, sp, x3
-	mov	x24, sp
+	mov	x23, sp
 	cmp	x2, #1
 	beq	L211
 	mov	x26, x1
@@ -5312,34 +5334,35 @@ L208:
 	mov	x1, x26
 	bl	___rt_str_concat
 	mov	x1, x0
-	mov	x0, x25
-	str	x1, [x24]
+	mov	x0, x24
+	str	x1, [x23]
 	b	L213
 L211:
-	mov	x0, x25
-	str	x1, [x24]
-L213:
+	mov	x0, x24
 	str	x1, [x23]
+L213:
+	str	x1, [x22]
 	b	L217
 L214:
-	mov	x0, x25
+	mov	x0, x24
 	adrp	x1, _str1753@page
 	add	x1, x1, _str1753@pageoff
-	str	x1, [x23]
+	str	x1, [x22]
 	adrp	x1, _str1753@page
 	add	x1, x1, _str1753@pageoff
 L217:
-	mov	x23, x1
+	mov	x22, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	bl	_compiler_codegen_codegen_build_fn_params
-	mov	x1, x23
-	str	x0, [x29, 24]
-	mov	x0, x22
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x20
+	mov	x20, x2
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x22, sp
-	mov	x25, x1
+	mov	x24, x1
 	ldr	x1, [x21]
 	cmp	x1, #4
 	beq	L219
@@ -5360,43 +5383,51 @@ L219:
 	mov	x0, x23
 	str	x3, [x22]
 L220:
-	mov	x26, x3
+	mov	x23, x3
 	mov	x22, x0
 	adrp	x0, _str1776@page
 	add	x0, x0, _str1776@pageoff
 	bl	_compiler_codegen_il_new_block
-	mov	x23, x0
+	mov	x26, x0
 	mov	x0, x22
 	mov	x22, x0
 	bl	_compiler_codegen_codegen_state_finished_blocks
-	mov	x1, x23
+	mov	x1, x26
 	mov	x17, x0
 	mov	x0, x22
 	mov	x22, x17
 	str	x22, [x29, 16]
-	mov	x23, x1
+	mov	x26, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	bl	_compiler_codegen_codegen_set_finished_blocks
-	mov	x1, x23
+	mov	x1, x26
 	mov	x2, x0
-	mov	x0, x19
+	mov	x0, x25
 	bl	_compiler_codegen_codegen_gen_expr
+	mov	x3, x23
+	mov	x2, x20
 	mov	x1, x0
-	ldr	x0, [x1]
-	mov	x2, #8
-	add	x2, x1, x2
-	ldr	x23, [x2]
+	mov	x0, x19
+	ldr	x4, [x1]
+	str	x4, [x29, 24]
+	mov	x26, x3
+	mov	x3, #8
+	add	x3, x1, x3
+	ldr	x23, [x3]
+	mov	x25, x2
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x19, [x1]
-	mov	x24, x0
+	mov	x20, x0
 	mov	x0, x23
 	bl	_compiler_codegen_codegen_block_jumps
-	mov	x1, x25
+	mov	x2, x25
+	mov	x1, x24
 	mov	x3, x0
-	mov	x0, x24
-	ldr	x2, [x29, 24]
+	mov	x0, x20
+	mov	x20, x0
+	ldr	x0, [x29, 24]
 	mov	x4, #16
 	sub	sp, sp, x4
 	mov	x24, sp
@@ -6191,7 +6222,7 @@ L281:
 	ldr	x0, [x0]
 	mov	x4, #16
 	add	x4, x3, x4
-	ldr	x24, [x4]
+	ldr	x25, [x4]
 	mov	x4, #24
 	add	x3, x3, x4
 	ldr	x21, [x3]
@@ -6217,14 +6248,14 @@ L281:
 	adrp	x3, _compiler_typesystem_types_TNil@page
 	add	x3, x3, _compiler_typesystem_types_TNil@pageoff
 	str	x3, [x2]
-	adrp	x25, _compiler_typesystem_types_TNil@page
-	add	x25, x25, _compiler_typesystem_types_TNil@pageoff
+	adrp	x22, _compiler_typesystem_types_TNil@page
+	add	x22, x22, _compiler_typesystem_types_TNil@pageoff
 	b	L285
 L284:
 	mov	x3, #16
 	add	x3, x21, x3
-	ldr	x25, [x3]
-	str	x25, [x2]
+	ldr	x22, [x3]
+	str	x22, [x2]
 L285:
 	mov	x21, x1
 	adrp	x1, _donna_nil@page
@@ -6233,72 +6264,72 @@ L285:
 	mov	x1, x21
 	mov	x2, x0
 	mov	x0, x20
-	str	x2, [x29, 80]
-	mov	x22, x2
+	mov	x23, x2
 	mov	x2, #16
 	sub	sp, sp, x2
-	mov	x20, sp
-	mov	x21, x1
-	ldr	x1, [x25]
+	mov	x21, sp
+	mov	x20, x1
+	ldr	x1, [x22]
 	cmp	x1, #4
 	beq	L287
-	mov	x23, x0
-	mov	x0, x25
+	mov	x24, x0
+	mov	x0, x22
 	bl	_compiler_codegen_codegen_donna_type_to_qbe
 	bl	_donna_option_Some
 	mov	x3, x0
-	mov	x0, x23
-	str	x3, [x20]
+	mov	x0, x24
+	str	x3, [x21]
 	b	L288
 L287:
-	mov	x23, x0
+	mov	x24, x0
 	adrp	x0, _compiler_codegen_il_Word@page
 	add	x0, x0, _compiler_codegen_il_Word@pageoff
 	bl	_donna_option_Some
 	mov	x3, x0
-	mov	x0, x23
-	str	x3, [x20]
+	mov	x0, x24
+	str	x3, [x21]
 L288:
-	mov	x23, x3
-	mov	x20, x0
+	mov	x24, x3
+	mov	x21, x0
 	adrp	x0, _str2811@page
 	add	x0, x0, _str2811@pageoff
 	bl	_compiler_codegen_il_new_block
 	mov	x26, x0
-	mov	x0, x20
-	mov	x20, x0
+	mov	x0, x21
+	mov	x21, x0
 	bl	_compiler_codegen_codegen_state_finished_blocks
 	mov	x1, x26
 	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
+	mov	x0, x21
+	mov	x21, x17
+	str	x21, [x29, 80]
 	mov	x26, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	bl	_compiler_codegen_codegen_set_finished_blocks
 	mov	x1, x26
 	mov	x2, x0
-	mov	x0, x24
+	mov	x0, x25
 	bl	_compiler_codegen_codegen_gen_expr
-	mov	x3, x23
-	mov	x2, x22
+	mov	x3, x24
+	mov	x2, x23
 	mov	x1, x20
 	mov	x26, x3
 	ldr	x3, [x0]
 	str	x3, [x29, 88]
-	mov	x24, x2
+	mov	x25, x2
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x23, [x2]
-	mov	x22, x1
+	mov	x24, x1
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	mov	x20, x0
 	mov	x0, x23
 	bl	_compiler_codegen_codegen_block_jumps
-	mov	x2, x24
-	mov	x1, x22
+	mov	x2, x25
+	mov	x1, x24
 	mov	x3, x0
 	mov	x0, x20
 	mov	x20, x0
@@ -6308,18 +6339,19 @@ L288:
 	mov	x24, sp
 	cmp	x3, #1
 	beq	L295
+	mov	x25, x2
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x27, sp
-	mov	x22, x1
-	ldr	x1, [x25]
+	mov	x21, x1
+	ldr	x1, [x22]
 	cmp	x1, #4
 	beq	L292
 	bl	_donna_option_Some
 	bl	_compiler_codegen_il_Ret
 	mov	x1, x0
 	mov	x0, x20
-	ldr	x25, [x29, 80]
+	ldr	x22, [x29, 80]
 	mov	x20, x0
 	mov	x0, x23
 	bl	_compiler_codegen_il_volatile_inst
@@ -6337,7 +6369,7 @@ L292:
 	bl	_compiler_codegen_il_Ret
 	mov	x1, x0
 	mov	x0, x20
-	ldr	x25, [x29, 80]
+	ldr	x22, [x29, 80]
 	mov	x20, x0
 	mov	x0, x23
 	bl	_compiler_codegen_il_volatile_inst
@@ -6347,8 +6379,9 @@ L294:
 	str	x23, [x24]
 	b	L297
 L295:
-	mov	x22, x1
+	mov	x22, x21
 	mov	x25, x2
+	mov	x21, x1
 	str	x23, [x24]
 L297:
 	mov	x0, x20
@@ -6979,17 +7012,17 @@ L328:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x24, [x1]
-	str	x24, [x29, 24]
+	str	x24, [x29, 16]
 	mov	x24, x0
 	mov	x0, x23
 	bl	_compiler_codegen_il_Temporary
-	str	x0, [x29, 32]
+	str	x0, [x29, 24]
 	mov	x0, x24
 	mov	x24, x0
 	adrp	x0, _str2517@page
 	add	x0, x0, _str2517@pageoff
 	bl	_compiler_codegen_il_Global
-	str	x0, [x29, 16]
+	str	x0, [x29, 32]
 	mov	x0, x24
 	mov	x24, x0
 	mov	x0, #16
@@ -7035,9 +7068,9 @@ L328:
 	mov	x1, x0
 	mov	x0, x21
 	mov	x24, x0
-	ldr	x0, [x29, 16]
-	ldr	x26, [x29, 32]
-	ldr	x21, [x29, 24]
+	ldr	x0, [x29, 32]
+	ldr	x26, [x29, 24]
+	ldr	x21, [x29, 16]
 	mov	x2, #1
 	str	x2, [x1]
 	mov	x2, #8
@@ -8629,20 +8662,23 @@ _compiler_codegen_codegen_gen_case:
 	str	x25, [x29, 40]
 	str	x26, [x29, 32]
 	mov	x19, x4
-	str	x3, [x29, 16]
+	mov	x24, x3
 	mov	x20, x2
-	mov	x22, x1
-	mov	x21, x0
+	mov	x21, x1
+	mov	x1, x0
 	mov	x0, x5
+	mov	x22, x1
 	adrp	x1, _str3114@page
 	add	x1, x1, _str3114@pageoff
 	bl	_compiler_codegen_codegen_fresh_label
+	mov	x1, x22
 	ldr	x23, [x0]
+	mov	x22, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_codegen_codegen_fresh_temp
-	mov	x2, x22
+	mov	x2, x21
 	mov	x1, x0
 	mov	x0, x19
 	ldr	x19, [x1]
@@ -8650,20 +8686,21 @@ _compiler_codegen_codegen_gen_case:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x26, [x1]
-	mov	x22, x0
+	mov	x21, x0
 	mov	x0, x19
 	bl	_compiler_codegen_il_Temporary
-	mov	x24, x0
-	mov	x0, x22
-	mov	x22, x0
+	str	x0, [x29, 16]
+	mov	x0, x21
+	mov	x21, x0
 	mov	x0, #8
 	bl	_compiler_codegen_il_Const
 	bl	_compiler_codegen_il_Alloc8
 	mov	x2, x25
-	mov	x1, x24
+	mov	x1, x22
 	mov	x3, x0
-	mov	x0, x22
-	ldr	x24, [x29, 16]
+	mov	x0, x21
+	mov	x21, x1
+	ldr	x1, [x29, 16]
 	mov	x22, x2
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
@@ -8797,180 +8834,184 @@ L483:
 .balign 4
 _compiler_codegen_codegen_gen_case_clauses:
 	hint	#34
-	stp	x29, x30, [sp, -336]!
+	stp	x29, x30, [sp, -352]!
 	mov	x29, sp
-	str	x19, [x29, 328]
-	str	x20, [x29, 320]
-	str	x21, [x29, 312]
-	str	x22, [x29, 304]
-	str	x23, [x29, 296]
-	str	x24, [x29, 288]
-	str	x25, [x29, 280]
-	str	x26, [x29, 272]
-	str	x27, [x29, 264]
+	str	x19, [x29, 344]
+	str	x20, [x29, 336]
+	str	x21, [x29, 328]
+	str	x22, [x29, 320]
+	str	x23, [x29, 312]
+	str	x24, [x29, 304]
+	str	x25, [x29, 296]
+	str	x26, [x29, 288]
+	str	x27, [x29, 280]
 	mov	x23, x7
-	mov	x19, x1
+	mov	x21, x4
+	mov	x25, x1
 	mov	x1, x3
-	mov	x3, x0
-	mov	x0, x4
-	mov	x21, x0
-	ldr	x0, [x3]
-	cmp	x0, #0
+	ldr	x3, [x0]
+	cmp	x3, #0
 	beq	L498
-	mov	x0, #8
-	add	x0, x3, x0
-	ldr	x0, [x0]
-	mov	x4, #16
-	add	x3, x3, x4
-	ldr	x25, [x3]
-	str	x25, [x29, 120]
 	mov	x3, #8
 	add	x3, x0, x3
-	ldr	x20, [x3]
-	mov	x3, #16
-	add	x3, x0, x3
-	ldr	x22, [x3]
-	mov	x3, #24
-	add	x0, x0, x3
+	ldr	x3, [x3]
+	mov	x4, #16
+	add	x0, x0, x4
 	ldr	x0, [x0]
+	str	x0, [x29, 256]
+	mov	x4, #8
+	add	x4, x3, x4
+	ldr	x22, [x4]
+	mov	x4, #16
+	add	x4, x3, x4
+	ldr	x20, [x4]
+	mov	x4, #24
+	add	x3, x3, x4
+	ldr	x19, [x3]
 	mov	x3, #16
+	mov	x24, x20
 	sub	sp, sp, x3
-	mov	x24, sp
-	str	x24, [x29, 136]
-	ldr	x3, [x25]
-	cmp	x3, #0
+	mov	x20, sp
+	str	x20, [x29, 112]
+	ldr	x0, [x0]
+	cmp	x0, #0
 	beq	L492
 	mov	x4, x6
 	mov	x3, x5
 	mov	x26, x2
-	mov	x25, x1
-	mov	x1, x19
-	mov	x24, x0
-	mov	x0, x20
+	mov	x20, x1
+	mov	x1, x25
+	mov	x0, x22
 	bl	_compiler_codegen_codegen_gen_pattern_check
 	mov	x2, x26
-	mov	x1, x25
+	mov	x1, x20
 	mov	x3, x0
-	mov	x0, x24
-	ldr	x27, [x3]
+	ldr	x0, [x29, 256]
+	ldr	x6, [x3]
+	str	x6, [x29, 168]
 	mov	x4, #8
 	add	x4, x3, x4
-	ldr	x4, [x4]
-	str	x4, [x29, 168]
-	mov	x5, #16
-	add	x3, x3, x5
-	ldr	x3, [x3]
-	str	x3, [x29, 176]
-	mov	x5, #16
-	sub	sp, sp, x5
-	mov	x24, sp
-	str	x24, [x29, 184]
-	mov	x25, x0
-	ldr	x0, [x22]
+	ldr	x5, [x4]
+	str	x5, [x29, 176]
+	mov	x4, #16
+	add	x3, x3, x4
+	ldr	x4, [x3]
+	str	x4, [x29, 184]
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x3, sp
+	str	x3, [x29, 192]
+	mov	x20, x0
+	ldr	x0, [x24]
 	cmp	x0, #0
 	beq	L489
 	mov	x0, #8
-	add	x0, x22, x0
+	add	x0, x24, x0
 	ldr	x0, [x0]
-	mov	x24, x2
-	mov	x2, x3
-	mov	x22, x1
-	mov	x1, x4
+	mov	x26, x2
+	mov	x2, x4
+	mov	x24, x1
+	mov	x1, x5
 	bl	_compiler_codegen_codegen_gen_expr
-	mov	x2, x24
-	mov	x1, x22
+	mov	x2, x26
+	mov	x1, x24
 	ldr	x3, [x0]
-	str	x3, [x29, 240]
-	mov	x24, x2
+	str	x3, [x29, 248]
+	mov	x26, x2
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x4, [x2]
-	str	x4, [x29, 216]
-	mov	x22, x1
+	str	x4, [x29, 232]
+	mov	x24, x1
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_codegen_codegen_fresh_temp
-	mov	x2, x24
+	mov	x2, x26
 	mov	x1, x0
+	mov	x0, x20
+	mov	x20, x0
 	ldr	x0, [x1]
-	str	x0, [x29, 232]
+	str	x0, [x29, 224]
 	mov	x3, #8
 	add	x1, x1, x3
 	mov	x26, x2
 	ldr	x2, [x1]
-	str	x2, [x29, 192]
+	str	x2, [x29, 200]
 	bl	_compiler_codegen_il_Temporary
-	mov	x1, x22
-	str	x0, [x29, 224]
-	ldr	x0, [x29, 232]
+	mov	x1, x24
+	str	x0, [x29, 240]
+	mov	x0, x20
 	mov	x24, x1
-	ldr	x1, [x29, 240]
-	mov	x22, x0
-	mov	x0, x27
+	ldr	x1, [x29, 248]
+	ldr	x6, [x29, 168]
+	mov	x20, x0
+	mov	x0, x6
 	bl	_compiler_codegen_il_And
 	mov	x2, x26
 	mov	x1, x24
 	mov	x3, x0
-	mov	x0, x22
+	mov	x0, x20
 	mov	x24, x1
-	ldr	x1, [x29, 224]
-	mov	x22, x0
-	ldr	x0, [x29, 216]
+	ldr	x1, [x29, 240]
+	mov	x20, x0
+	ldr	x0, [x29, 232]
 	mov	x26, x2
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	str	x0, [x29, 200]
-	mov	x0, x22
-	ldr	x22, [x29, 184]
-	bl	_compiler_codegen_il_Temporary
 	str	x0, [x29, 208]
-	mov	x0, x25
-	mov	x25, x0
+	mov	x0, x20
+	mov	x20, x0
+	ldr	x0, [x29, 224]
+	bl	_compiler_codegen_il_Temporary
+	str	x0, [x29, 216]
+	mov	x0, x20
+	mov	x20, x0
 	mov	x0, #24
 	bl	_malloc
 	mov	x2, x26
 	mov	x1, x0
-	mov	x0, x25
+	mov	x0, x20
+	ldr	x3, [x29, 192]
+	ldr	x5, [x29, 216]
 	ldr	x4, [x29, 208]
-	ldr	x3, [x29, 200]
 	mov	x26, x2
-	ldr	x2, [x29, 192]
-	str	x4, [x1]
-	mov	x4, #8
+	ldr	x2, [x29, 200]
+	str	x5, [x1]
+	mov	x5, #8
+	add	x5, x1, x5
+	str	x4, [x5]
+	mov	x4, #16
 	add	x4, x1, x4
-	str	x3, [x4]
-	mov	x3, #16
-	add	x3, x1, x3
-	str	x2, [x3]
-	str	x1, [x22]
-	mov	x22, x0
+	str	x2, [x4]
+	str	x1, [x3]
+	mov	x20, x0
 	mov	x2, x26
 	mov	x0, x1
-	mov	x1, x19
+	mov	x1, x25
 	b	L491
 L489:
-	mov	x0, x25
-	mov	x25, x27
+	mov	x0, x20
 	mov	x24, x1
 	mov	x26, x2
-	mov	x22, x0
+	mov	x20, x0
 	mov	x0, #24
 	bl	_malloc
 	mov	x2, x26
-	mov	x1, x19
-	ldr	x19, [x29, 184]
-	ldr	x3, [x29, 176]
-	ldr	x4, [x29, 168]
-	str	x25, [x0]
-	mov	x5, #8
+	mov	x1, x25
+	ldr	x3, [x29, 192]
+	ldr	x4, [x29, 184]
+	ldr	x5, [x29, 176]
+	ldr	x6, [x29, 168]
+	str	x6, [x0]
+	mov	x6, #8
+	add	x6, x0, x6
+	str	x5, [x6]
+	mov	x5, #16
 	add	x5, x0, x5
 	str	x4, [x5]
-	mov	x4, #16
-	add	x4, x0, x4
-	str	x3, [x4]
-	str	x0, [x19]
+	str	x0, [x3]
 L491:
 	ldr	x3, [x0]
 	str	x3, [x29, 160]
@@ -8978,65 +9019,67 @@ L491:
 	add	x3, x0, x3
 	ldr	x3, [x3]
 	str	x3, [x29, 152]
-	mov	x25, x2
+	mov	x26, x2
 	mov	x2, #16
 	add	x0, x0, x2
 	ldr	x0, [x0]
-	mov	x19, x1
+	mov	x25, x1
 	adrp	x1, _str3336@page
 	add	x1, x1, _str3336@pageoff
 	bl	_compiler_codegen_codegen_fresh_label
-	mov	x2, x25
-	mov	x1, x19
-	ldr	x26, [x0]
-	str	x26, [x29, 112]
-	mov	x25, x2
+	mov	x2, x26
+	mov	x1, x25
+	ldr	x27, [x0]
+	str	x27, [x29, 120]
+	mov	x26, x2
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
-	mov	x19, x1
+	mov	x25, x1
 	adrp	x1, _str3342@page
 	add	x1, x1, _str3342@pageoff
 	bl	_compiler_codegen_codegen_fresh_label
-	mov	x2, x25
-	mov	x1, x19
+	mov	x2, x26
+	mov	x1, x25
 	mov	x3, x0
+	ldr	x27, [x29, 120]
 	ldr	x0, [x29, 160]
-	ldr	x19, [x3]
+	mov	x26, x1
+	ldr	x1, [x3]
+	str	x1, [x29, 136]
 	mov	x4, #8
 	add	x3, x3, x4
 	ldr	x3, [x3]
 	str	x3, [x29, 144]
 	mov	x25, x2
-	mov	x2, x26
-	mov	x26, x1
-	mov	x1, x19
+	mov	x2, x27
 	bl	_compiler_codegen_il_Jnz
 	mov	x1, x0
-	mov	x0, x19
-	mov	x19, x0
+	mov	x0, x22
+	mov	x22, x0
 	ldr	x0, [x29, 152]
 	bl	_compiler_codegen_il_volatile_inst
 	mov	x1, x0
-	mov	x0, x19
-	mov	x19, x0
+	mov	x0, x22
+	mov	x22, x0
 	ldr	x0, [x29, 144]
 	bl	_compiler_codegen_codegen_push_block
 	str	x0, [x29, 128]
-	mov	x0, x19
-	ldr	x19, [x29, 136]
+	mov	x0, x22
+	mov	x22, x0
+	ldr	x0, [x29, 136]
 	bl	_compiler_codegen_il_new_block
 	mov	x1, x26
 	mov	x2, x0
-	mov	x0, x20
-	ldr	x3, [x29, 128]
-	ldr	x20, [x29, 120]
-	mov	x26, x1
-	bl	_compiler_codegen_codegen_emit_pattern_bindings
-	mov	x1, x26
-	mov	x2, x0
 	mov	x0, x22
-	ldr	x26, [x29, 112]
+	ldr	x3, [x29, 128]
+	ldr	x26, [x29, 120]
+	mov	x22, x1
+	bl	_compiler_codegen_codegen_emit_pattern_bindings
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x19
+	ldr	x19, [x29, 112]
 	mov	x22, x1
 	ldr	x1, [x2]
 	mov	x3, #8
@@ -9096,14 +9139,12 @@ L491:
 	str	x0, [x19]
 	b	L500
 L492:
-	mov	x25, x20
-	mov	x20, x22
-	mov	x17, x24
-	mov	x24, x19
-	mov	x19, x17
-	mov	x17, x1
-	mov	x1, x24
-	mov	x24, x17
+	mov	x0, x19
+	mov	x19, x20
+	mov	x20, x24
+	mov	x24, x1
+	mov	x1, x25
+	mov	x25, x22
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x26, sp
@@ -9335,17 +9376,17 @@ L498:
 	add	x1, x0, x1
 	str	x6, [x1]
 L500:
-	ldr	x19, [x29, 328]
-	ldr	x20, [x29, 320]
-	ldr	x21, [x29, 312]
-	ldr	x22, [x29, 304]
-	ldr	x23, [x29, 296]
-	ldr	x24, [x29, 288]
-	ldr	x25, [x29, 280]
-	ldr	x26, [x29, 272]
-	ldr	x27, [x29, 264]
+	ldr	x19, [x29, 344]
+	ldr	x20, [x29, 336]
+	ldr	x21, [x29, 328]
+	ldr	x22, [x29, 320]
+	ldr	x23, [x29, 312]
+	ldr	x24, [x29, 304]
+	ldr	x25, [x29, 296]
+	ldr	x26, [x29, 288]
+	ldr	x27, [x29, 280]
 	mov sp, x29
-	ldp	x29, x30, [sp], 336
+	ldp	x29, x30, [sp], 352
 	ret
 /* end function compiler_codegen_codegen_gen_case_clauses */
 
@@ -9485,27 +9526,25 @@ L517:
 .balign 4
 _compiler_codegen_codegen_emit_constructor_field_bindings:
 	hint	#34
-	stp	x29, x30, [sp, -112]!
+	stp	x29, x30, [sp, -128]!
 	mov	x29, sp
-	str	x19, [x29, 104]
-	str	x20, [x29, 96]
-	str	x21, [x29, 88]
-	str	x22, [x29, 80]
-	str	x23, [x29, 72]
-	str	x24, [x29, 64]
-	str	x25, [x29, 56]
-	str	x26, [x29, 48]
-	mov	x6, x0
-	ldr	x0, [x6]
-	cmp	x0, #0
+	str	x19, [x29, 120]
+	str	x20, [x29, 112]
+	str	x21, [x29, 104]
+	str	x22, [x29, 96]
+	str	x23, [x29, 88]
+	str	x24, [x29, 80]
+	str	x25, [x29, 72]
+	str	x26, [x29, 64]
+	ldr	x6, [x0]
+	cmp	x6, #0
 	beq	L538
-	mov	x0, #8
-	add	x0, x6, x0
+	mov	x6, #8
+	add	x6, x0, x6
+	ldr	x23, [x6]
+	mov	x6, #16
+	add	x0, x0, x6
 	ldr	x0, [x0]
-	mov	x7, #16
-	add	x6, x6, x7
-	ldr	x19, [x6]
-	str	x19, [x29, 24]
 	mov	x6, #16
 	sub	sp, sp, x6
 	mov	x7, sp
@@ -9538,8 +9577,8 @@ L527:
 	ldr	x19, [x8]
 	str	x19, [x7]
 L528:
-	mov	x24, x19
-	mov	x23, x0
+	mov	x20, x19
+	mov	x19, x0
 	mov	x0, #16
 	sub	sp, sp, x0
 	mov	x0, sp
@@ -9576,20 +9615,23 @@ L536:
 	ldr	x1, [x1]
 	str	x1, [x0]
 L537:
-	mov	x20, x1
+	mov	x24, x1
 	mov	x0, x5
 	bl	_compiler_codegen_codegen_fresh_temp
-	ldr	x19, [x0]
+	mov	x1, x24
+	ldr	x25, [x0]
+	mov	x24, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	str	x0, [x29, 40]
-	mov	x0, x19
+	str	x0, [x29, 48]
+	mov	x0, x25
 	bl	_compiler_codegen_il_Temporary
-	mov	x1, x0
+	mov	x1, x24
+	str	x0, [x29, 56]
 	mov	x0, #8
 	mul	x0, x21, x0
-	mov	x25, x1
+	mov	x24, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	bl	_compiler_codegen_il_Const
@@ -9597,40 +9639,44 @@ L537:
 	mov	x0, x22
 	bl	_compiler_codegen_il_Add
 	mov	x4, x26
-	mov	x1, x25
+	mov	x1, x24
 	mov	x3, x0
-	ldr	x0, [x29, 40]
+	mov	x26, x1
+	ldr	x1, [x29, 56]
+	ldr	x0, [x29, 48]
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
-	mov	x25, x0
+	mov	x24, x0
 	mov	x0, x4
 	bl	_compiler_codegen_il_assign_inst
-	str	x0, [x29, 32]
-	mov	x0, x25
+	str	x0, [x29, 40]
+	mov	x0, x24
 	bl	_compiler_codegen_codegen_fresh_temp
 	mov	x1, x0
-	mov	x0, x24
+	mov	x0, x20
 	ldr	x24, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x25, [x1]
-	mov	x26, x0
+	ldr	x3, [x1]
+	str	x3, [x29, 32]
+	mov	x20, x0
 	mov	x0, x24
 	bl	_compiler_codegen_il_Temporary
-	mov	x17, x0
-	mov	x0, x26
-	mov	x26, x17
-	bl	_compiler_codegen_codegen_donna_type_to_qbe
 	str	x0, [x29, 16]
-	mov	x0, x19
-	ldr	x19, [x29, 32]
+	mov	x0, x20
+	ldr	x20, [x29, 40]
+	bl	_compiler_codegen_codegen_donna_type_to_qbe
+	str	x0, [x29, 24]
+	mov	x0, x25
+	ldr	x25, [x29, 32]
 	bl	_compiler_codegen_il_Temporary
 	bl	_compiler_codegen_il_Loadl
 	mov	x1, x26
 	mov	x3, x0
-	mov	x0, x19
-	ldr	x2, [x29, 16]
-	ldr	x19, [x29, 24]
+	mov	x0, x20
+	ldr	x2, [x29, 24]
+	mov	x20, x1
+	ldr	x1, [x29, 16]
 	bl	_compiler_codegen_il_assign_inst
 	mov	x17, x0
 	mov	x0, x24
@@ -9666,16 +9712,16 @@ L538:
 	add	x1, x0, x1
 	str	x5, [x1]
 L540:
-	ldr	x19, [x29, 104]
-	ldr	x20, [x29, 96]
-	ldr	x21, [x29, 88]
-	ldr	x22, [x29, 80]
-	ldr	x23, [x29, 72]
-	ldr	x24, [x29, 64]
-	ldr	x25, [x29, 56]
-	ldr	x26, [x29, 48]
+	ldr	x19, [x29, 120]
+	ldr	x20, [x29, 112]
+	ldr	x21, [x29, 104]
+	ldr	x22, [x29, 96]
+	ldr	x23, [x29, 88]
+	ldr	x24, [x29, 80]
+	ldr	x25, [x29, 72]
+	ldr	x26, [x29, 64]
 	mov sp, x29
-	ldp	x29, x30, [sp], 112
+	ldp	x29, x30, [sp], 128
 	ret
 /* end function compiler_codegen_codegen_emit_constructor_field_bindings */
 
@@ -9764,18 +9810,17 @@ _compiler_codegen_codegen_emit_list_bindings:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x24, [x1]
-	str	x24, [x29, 16]
-	mov	x24, x0
+	mov	x26, x0
 	mov	x0, x21
 	bl	_compiler_codegen_il_Temporary
+	str	x0, [x29, 16]
+	mov	x0, x26
 	mov	x26, x0
-	mov	x0, x24
-	mov	x24, x0
 	mov	x0, #16
 	bl	_compiler_codegen_il_Const
 	mov	x1, x0
-	mov	x0, x24
-	ldr	x24, [x29, 16]
+	mov	x0, x26
+	ldr	x26, [x29, 16]
 	bl	_compiler_codegen_il_Add
 	mov	x1, x26
 	mov	x3, x0
@@ -10933,7 +10978,7 @@ L627:
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	str	x0, [x29, 184]
+	str	x0, [x29, 168]
 	ldr	x0, [x29, 200]
 	bl	_compiler_codegen_codegen_fresh_temp
 	mov	x4, x26
@@ -10946,7 +10991,7 @@ L627:
 	add	x1, x1, x2
 	mov	x26, x4
 	ldr	x4, [x1]
-	str	x4, [x29, 152]
+	str	x4, [x29, 144]
 	bl	_compiler_codegen_il_Temporary
 	mov	x2, x23
 	str	x0, [x29, 176]
@@ -10954,7 +10999,7 @@ L627:
 	ldr	x2, [x29, 128]
 	mov	x0, x2
 	bl	_compiler_codegen_codegen_donna_type_to_qbe
-	str	x0, [x29, 168]
+	str	x0, [x29, 184]
 	ldr	x0, [x29, 192]
 	bl	_compiler_codegen_il_Temporary
 	bl	_compiler_codegen_il_Loadl
@@ -10962,12 +11007,12 @@ L627:
 	mov	x1, x22
 	mov	x3, x0
 	mov	x23, x2
-	ldr	x2, [x29, 168]
+	ldr	x2, [x29, 184]
 	mov	x22, x1
 	ldr	x1, [x29, 176]
-	ldr	x0, [x29, 184]
+	ldr	x0, [x29, 168]
 	bl	_compiler_codegen_il_assign_inst
-	str	x0, [x29, 144]
+	str	x0, [x29, 152]
 	ldr	x0, [x29, 160]
 	bl	_compiler_codegen_il_Temporary
 	mov	x4, x26
@@ -10977,9 +11022,9 @@ L627:
 	mov	x23, x2
 	ldr	x2, [x29, 128]
 	mov	x25, x3
-	ldr	x3, [x29, 144]
+	ldr	x3, [x29, 152]
 	mov	x26, x4
-	ldr	x4, [x29, 152]
+	ldr	x4, [x29, 144]
 	ldr	x0, [x29, 136]
 	bl	_compiler_codegen_codegen_gen_pattern_check
 	mov	x4, x26
@@ -10994,7 +11039,7 @@ L627:
 	add	x2, x0, x2
 	mov	x25, x4
 	ldr	x4, [x2]
-	str	x4, [x29, 104]
+	str	x4, [x29, 96]
 	mov	x22, x1
 	mov	x1, #16
 	add	x0, x0, x1
@@ -11014,7 +11059,7 @@ L627:
 	bl	_compiler_codegen_il_Temporary
 	mov	x4, x25
 	mov	x1, x22
-	str	x0, [x29, 96]
+	str	x0, [x29, 104]
 	mov	x25, x1
 	ldr	x1, [x29, 120]
 	ldr	x0, [x29, 112]
@@ -11026,9 +11071,9 @@ L627:
 	mov	x3, x0
 	mov	x0, x22
 	mov	x22, x1
-	ldr	x1, [x29, 96]
+	ldr	x1, [x29, 104]
 	mov	x26, x0
-	ldr	x0, [x29, 104]
+	ldr	x0, [x29, 96]
 	mov	x25, x2
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
@@ -11217,19 +11262,19 @@ L639:
 .balign 4
 _compiler_codegen_codegen_gen_list_pattern_check:
 	hint	#34
-	stp	x29, x30, [sp, -160]!
+	stp	x29, x30, [sp, -224]!
 	mov	x29, sp
-	str	x19, [x29, 152]
-	str	x20, [x29, 144]
-	str	x21, [x29, 136]
-	str	x22, [x29, 128]
-	str	x23, [x29, 120]
-	str	x24, [x29, 112]
-	str	x25, [x29, 104]
-	str	x26, [x29, 96]
+	str	x19, [x29, 216]
+	str	x20, [x29, 208]
+	str	x21, [x29, 200]
+	str	x22, [x29, 192]
+	str	x23, [x29, 184]
+	str	x24, [x29, 176]
+	str	x25, [x29, 168]
+	str	x26, [x29, 160]
 	mov	x19, x3
 	mov	x22, x2
-	mov	x24, x1
+	mov	x21, x1
 	mov	x1, x0
 	mov	x0, x4
 	ldr	x2, [x1]
@@ -11238,12 +11283,10 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	mov	x2, #8
 	add	x2, x1, x2
 	ldr	x25, [x2]
-	str	x25, [x29, 32]
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x23, [x1]
-	str	x23, [x29, 24]
-	mov	x21, x0
+	str	x23, [x29, 48]
 	bl	_compiler_codegen_codegen_fresh_temp
 	mov	x1, x0
 	mov	x0, x19
@@ -11251,21 +11294,21 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x20, [x1]
-	mov	x21, x0
+	mov	x23, x0
 	mov	x0, x19
 	bl	_compiler_codegen_il_Temporary
+	mov	x24, x0
+	mov	x0, x23
 	mov	x23, x0
-	mov	x0, x21
-	mov	x21, x0
 	mov	x0, x22
 	bl	_compiler_codegen_il_Loadl
-	mov	x1, x23
+	mov	x1, x24
 	mov	x3, x0
-	mov	x0, x21
+	mov	x0, x23
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	mov	x21, x0
+	mov	x23, x0
 	mov	x0, x20
 	bl	_compiler_codegen_codegen_fresh_temp
 	mov	x1, x0
@@ -11274,55 +11317,63 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x20, [x1]
-	mov	x23, x0
+	mov	x24, x0
 	mov	x0, x19
 	bl	_compiler_codegen_il_Temporary
 	mov	x17, x0
-	mov	x0, x23
-	mov	x23, x17
+	mov	x0, x24
+	mov	x24, x17
 	bl	_compiler_codegen_il_Temporary
-	mov	x25, x0
-	mov	x0, x21
-	mov	x21, x0
+	mov	x26, x0
+	mov	x0, x23
+	mov	x23, x0
 	mov	x0, #1
 	bl	_compiler_codegen_il_Const
-	mov	x2, x25
-	mov	x1, x23
+	mov	x2, x26
+	mov	x1, x24
 	mov	x3, x0
-	mov	x0, x21
-	mov	x23, x1
+	mov	x0, x23
+	mov	x24, x1
 	adrp	x1, _compiler_codegen_il_Ceql@page
 	add	x1, x1, _compiler_codegen_il_Ceql@pageoff
-	mov	x21, x0
+	mov	x23, x0
 	adrp	x0, _compiler_codegen_il_Long@page
 	add	x0, x0, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_Cmp
-	mov	x1, x23
+	mov	x1, x24
 	mov	x3, x0
-	mov	x0, x21
+	mov	x0, x23
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	str	x0, [x29, 72]
+	mov	x1, x21
+	str	x0, [x29, 136]
 	mov	x0, x20
+	mov	x20, x1
 	adrp	x1, _str4149@page
 	add	x1, x1, _str4149@pageoff
 	bl	_compiler_codegen_codegen_fresh_label
+	mov	x1, x20
 	ldr	x23, [x0]
-	mov	x1, #8
-	add	x0, x0, x1
+	mov	x2, #8
+	add	x0, x0, x2
 	ldr	x0, [x0]
+	mov	x20, x1
 	adrp	x1, _str4155@page
 	add	x1, x1, _str4155@pageoff
 	bl	_compiler_codegen_codegen_fresh_label
+	mov	x1, x20
 	ldr	x21, [x0]
-	mov	x1, #8
-	add	x0, x0, x1
+	mov	x2, #8
+	add	x0, x0, x2
 	ldr	x0, [x0]
+	mov	x20, x1
 	adrp	x1, _str4161@page
 	add	x1, x1, _str4161@pageoff
 	bl	_compiler_codegen_codegen_fresh_label
+	mov	x1, x20
 	ldr	x20, [x0]
+	mov	x26, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -11332,97 +11383,109 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	ldr	x19, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x25, [x1]
-	str	x25, [x29, 80]
-	mov	x25, x0
+	ldr	x24, [x1]
+	str	x24, [x29, 128]
+	mov	x24, x0
 	mov	x0, x19
 	bl	_compiler_codegen_il_Temporary
-	mov	x26, x0
-	mov	x0, x25
-	mov	x25, x0
+	str	x0, [x29, 144]
+	mov	x0, x24
+	mov	x24, x0
 	mov	x0, #8
 	bl	_compiler_codegen_il_Const
 	bl	_compiler_codegen_il_Alloc8
 	mov	x1, x26
 	mov	x3, x0
-	mov	x0, x25
-	ldr	x25, [x29, 80]
-	mov	x26, x0
-	ldr	x0, [x29, 72]
+	mov	x0, x24
+	mov	x26, x1
+	ldr	x1, [x29, 144]
+	mov	x24, x0
+	ldr	x0, [x29, 136]
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	mov	x17, x0
-	mov	x0, x26
-	mov	x26, x17
+	str	x0, [x29, 120]
+	mov	x0, x24
+	ldr	x24, [x29, 128]
 	bl	_compiler_codegen_il_Temporary
+	mov	x1, x26
 	mov	x2, x21
+	mov	x26, x1
 	mov	x1, x23
 	bl	_compiler_codegen_il_Jnz
 	mov	x1, x0
-	mov	x0, x26
+	mov	x0, x24
+	mov	x24, x0
+	ldr	x0, [x29, 120]
 	bl	_compiler_codegen_il_volatile_inst
 	mov	x1, x0
-	mov	x0, x25
+	mov	x0, x24
 	bl	_compiler_codegen_codegen_push_block
 	mov	x17, x0
 	mov	x0, x23
 	mov	x23, x17
 	bl	_compiler_codegen_il_new_block
-	str	x0, [x29, 64]
+	mov	x17, x0
 	mov	x0, x23
+	mov	x23, x17
 	bl	_compiler_codegen_codegen_fresh_temp
-	ldr	x23, [x0]
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	mov	x25, x0
+	mov	x1, x0
+	mov	x0, x23
+	ldr	x23, [x1]
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x24, [x1]
+	str	x24, [x29, 104]
+	mov	x24, x0
 	mov	x0, x23
 	bl	_compiler_codegen_il_Temporary
-	mov	x26, x0
-	mov	x0, x25
-	mov	x25, x0
+	str	x0, [x29, 112]
+	mov	x0, x24
+	mov	x24, x0
 	mov	x0, #8
 	bl	_compiler_codegen_il_Const
 	mov	x1, x0
-	mov	x0, x25
-	mov	x25, x0
+	mov	x0, x24
+	mov	x24, x0
 	mov	x0, x22
 	bl	_compiler_codegen_il_Add
 	mov	x1, x26
 	mov	x3, x0
-	mov	x0, x25
-	mov	x25, x0
-	ldr	x0, [x29, 64]
+	mov	x0, x24
+	mov	x26, x1
+	ldr	x1, [x29, 112]
+	ldr	x24, [x29, 104]
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	str	x0, [x29, 56]
-	mov	x0, x25
+	str	x0, [x29, 96]
+	mov	x0, x24
 	bl	_compiler_codegen_codegen_fresh_temp
 	mov	x1, x0
 	mov	x0, x23
-	ldr	x26, [x1]
+	ldr	x24, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x23, [x1]
-	mov	x25, x0
-	mov	x0, x26
+	str	x23, [x29, 80]
+	mov	x23, x0
+	mov	x0, x24
 	bl	_compiler_codegen_il_Temporary
-	mov	x17, x0
-	mov	x0, x25
-	mov	x25, x17
+	str	x0, [x29, 88]
+	mov	x0, x23
+	ldr	x23, [x29, 96]
 	bl	_compiler_codegen_il_Temporary
 	bl	_compiler_codegen_il_Loadl
-	mov	x1, x25
+	mov	x1, x26
 	mov	x3, x0
 	mov	x0, x23
-	mov	x23, x0
-	ldr	x0, [x29, 56]
+	mov	x26, x1
+	ldr	x1, [x29, 88]
+	ldr	x23, [x29, 80]
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	str	x0, [x29, 48]
+	str	x0, [x29, 72]
 	mov	x0, x23
 	bl	_compiler_codegen_codegen_fresh_temp
 	mov	x1, x0
@@ -11431,27 +11494,30 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x23, [x1]
-	mov	x25, x0
+	str	x23, [x29, 56]
+	mov	x23, x0
 	mov	x0, x22
 	bl	_compiler_codegen_il_Temporary
-	str	x0, [x29, 40]
-	mov	x0, x25
-	mov	x25, x0
+	str	x0, [x29, 64]
+	mov	x0, x23
+	mov	x23, x0
 	mov	x0, #16
 	bl	_compiler_codegen_il_Const
 	mov	x1, x0
-	mov	x0, x25
-	ldr	x25, [x29, 48]
+	mov	x0, x23
+	ldr	x23, [x29, 72]
 	bl	_compiler_codegen_il_Add
+	mov	x1, x26
 	mov	x3, x0
-	mov	x0, x25
-	ldr	x1, [x29, 40]
+	mov	x0, x23
+	mov	x26, x1
+	ldr	x1, [x29, 64]
+	ldr	x23, [x29, 56]
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	mov	x17, x0
+	str	x0, [x29, 32]
 	mov	x0, x23
-	mov	x23, x17
 	bl	_compiler_codegen_codegen_fresh_temp
 	mov	x1, x0
 	mov	x0, x22
@@ -11459,31 +11525,33 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x4, [x1]
-	str	x4, [x29, 16]
-	mov	x25, x0
+	str	x4, [x29, 24]
+	mov	x23, x0
 	mov	x0, x22
 	bl	_compiler_codegen_il_Temporary
-	mov	x17, x0
-	mov	x0, x25
-	mov	x25, x17
+	str	x0, [x29, 40]
+	mov	x0, x23
+	ldr	x23, [x29, 48]
 	bl	_compiler_codegen_il_Temporary
 	bl	_compiler_codegen_il_Loadl
-	mov	x1, x25
+	mov	x1, x26
 	mov	x3, x0
-	mov	x0, x23
-	ldr	x23, [x29, 24]
-	ldr	x25, [x29, 32]
+	mov	x0, x24
+	mov	x24, x1
+	ldr	x1, [x29, 40]
+	mov	x26, x0
+	ldr	x0, [x29, 32]
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
 	bl	_compiler_codegen_il_assign_inst
-	mov	x17, x0
+	str	x0, [x29, 16]
 	mov	x0, x26
-	mov	x26, x17
+	ldr	x26, [x29, 24]
 	bl	_compiler_codegen_il_Temporary
-	mov	x3, x26
+	mov	x4, x26
 	mov	x1, x0
 	mov	x0, x25
-	ldr	x4, [x29, 16]
+	ldr	x3, [x29, 16]
 	adrp	x2, _compiler_typesystem_types_TInt@page
 	add	x2, x2, _compiler_typesystem_types_TInt@pageoff
 	bl	_compiler_codegen_codegen_gen_pattern_check
@@ -11622,10 +11690,10 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	str	x19, [x1]
 	b	L648
 L642:
+	mov	x20, x22
+	mov	x1, x21
 	mov	x21, x0
 	mov	x0, x19
-	mov	x20, x22
-	mov	x1, x24
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
@@ -11728,16 +11796,16 @@ L646:
 	str	x20, [x1]
 	str	x0, [x19]
 L648:
-	ldr	x19, [x29, 152]
-	ldr	x20, [x29, 144]
-	ldr	x21, [x29, 136]
-	ldr	x22, [x29, 128]
-	ldr	x23, [x29, 120]
-	ldr	x24, [x29, 112]
-	ldr	x25, [x29, 104]
-	ldr	x26, [x29, 96]
+	ldr	x19, [x29, 216]
+	ldr	x20, [x29, 208]
+	ldr	x21, [x29, 200]
+	ldr	x22, [x29, 192]
+	ldr	x23, [x29, 184]
+	ldr	x24, [x29, 176]
+	ldr	x25, [x29, 168]
+	ldr	x26, [x29, 160]
 	mov sp, x29
-	ldp	x29, x30, [sp], 160
+	ldp	x29, x30, [sp], 224
 	ret
 /* end function compiler_codegen_codegen_gen_list_pattern_check */
 
@@ -11841,32 +11909,31 @@ _compiler_codegen_codegen_gen_tuple_elem_checks:
 	mov	x26, x0
 	mov	x0, x4
 	bl	_compiler_codegen_il_assign_inst
-	str	x0, [x29, 32]
+	str	x0, [x29, 40]
 	mov	x0, x26
 	bl	_compiler_codegen_codegen_fresh_temp
 	mov	x2, x24
 	mov	x1, x0
 	mov	x0, x23
-	ldr	x23, [x1]
-	mov	x24, x2
+	ldr	x24, [x1]
+	mov	x26, x2
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x26, [x1]
-	str	x26, [x29, 40]
-	mov	x26, x0
-	mov	x0, x23
+	ldr	x4, [x1]
+	str	x4, [x29, 24]
+	mov	x23, x0
+	mov	x0, x24
 	bl	_compiler_codegen_il_Temporary
-	str	x0, [x29, 24]
-	mov	x0, x26
-	ldr	x26, [x29, 40]
+	str	x0, [x29, 32]
+	mov	x0, x23
+	ldr	x23, [x29, 40]
 	bl	_compiler_codegen_il_Temporary
 	bl	_compiler_codegen_il_Loadl
-	mov	x2, x24
+	mov	x2, x26
 	mov	x3, x0
 	mov	x0, x23
-	ldr	x1, [x29, 24]
-	mov	x24, x0
-	ldr	x0, [x29, 32]
+	ldr	x1, [x29, 32]
+	ldr	x26, [x29, 24]
 	mov	x23, x2
 	adrp	x2, _compiler_codegen_il_Long@page
 	add	x2, x2, _compiler_codegen_il_Long@pageoff
@@ -11886,28 +11953,32 @@ _compiler_codegen_codegen_gen_tuple_elem_checks:
 	bl	_compiler_codegen_codegen_gen_pattern_check
 	mov	x2, x22
 	ldr	x1, [x0]
-	mov	x26, x2
+	mov	x23, x2
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x22, [x2]
-	str	x22, [x29, 16]
-	mov	x22, x1
+	mov	x24, x1
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_codegen_codegen_fresh_temp
-	mov	x1, x22
-	ldr	x23, [x0]
-	mov	x22, x1
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x24, [x0]
+	mov	x2, x23
+	mov	x1, x0
+	mov	x0, x22
+	ldr	x23, [x1]
+	mov	x26, x2
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x5, [x1]
+	str	x5, [x29, 16]
+	mov	x22, x0
 	mov	x0, x23
 	bl	_compiler_codegen_il_Temporary
 	mov	x3, x25
-	mov	x1, x22
+	mov	x1, x24
 	mov	x25, x0
-	ldr	x0, [x29, 16]
+	mov	x0, x22
+	ldr	x24, [x29, 16]
 	mov	x22, x0
 	mov	x0, x3
 	bl	_compiler_codegen_il_And
@@ -12695,24 +12766,33 @@ _compiler_codegen_codegen_gen_list_elements:
 	mov	x1, x0
 	mov	x0, x22
 	bl	_compiler_codegen_il_volatile_inst
-	mov	x25, x0
+	mov	x17, x0
 	mov	x0, x21
+	mov	x21, x17
 	bl	_compiler_codegen_codegen_fresh_temp
-	ldr	x22, [x0]
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x21, [x0]
+	mov	x1, x0
+	mov	x0, x21
+	ldr	x22, [x1]
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x21, [x1]
+	mov	x25, x0
 	mov	x0, x22
 	bl	_compiler_codegen_il_Temporary
-	str	x0, [x29, 16]
+	mov	x26, x0
+	mov	x0, x25
+	mov	x25, x0
 	mov	x0, x20
 	bl	_compiler_codegen_il_Temporary
-	mov	x26, x0
+	str	x0, [x29, 16]
+	mov	x0, x25
+	mov	x25, x0
 	mov	x0, #8
 	bl	_compiler_codegen_il_Const
 	mov	x1, x0
-	mov	x0, x26
-	ldr	x26, [x29, 16]
+	mov	x0, x25
+	mov	x25, x0
+	ldr	x0, [x29, 16]
 	bl	_compiler_codegen_il_Add
 	mov	x1, x26
 	mov	x3, x0

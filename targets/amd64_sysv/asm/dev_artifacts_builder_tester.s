@@ -1278,7 +1278,6 @@ builder_tester_collect_fns:
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %r12
-	movq %r12, -16(%rbp)
 	cmpq $0, %rax
 	jz .Lbb16
 	movl $0, %esi
@@ -1292,6 +1291,7 @@ builder_tester_collect_fns:
 	movq %r13, %rdi
 	subq $16, %rsp
 	movq %rsp, %r13
+	movq %r13, -16(%rbp)
 	cmpq $1, %rax
 	jz .Lbb14
 	movq %r14, %rsi
@@ -1299,12 +1299,12 @@ builder_tester_collect_fns:
 	movq %rax, (%r13)
 	jmp .Lbb15
 .Lbb14:
-	movq %rdi, %r12
+	movq %rdi, %r13
 	movl $24, %edi
 	callq malloc
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq -16(%rbp), %r12
+	movq -16(%rbp), %r13
 	movq $1, (%rsi)
 	movq %r15, 8(%rsi)
 	movq %r14, 16(%rsi)
@@ -1936,22 +1936,23 @@ builder_tester_filter_modules_loop:
 	jz .Lbb40
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
-	movq (%rax), %r14
+	movq (%rax), %rbx
 	movq %rsi, %r15
 	movq 8(%rax), %rsi
 	leaq donna_nil(%rip), %rcx
 	movq %r15, %rdx
-	movq %rdi, %rbx
-	movq %r14, %rdi
+	movq %rdi, %r13
+	movq %rbx, %rdi
 	callq builder_tester_filter_fns
-	movq %rbx, %rdi
-	movq %rax, -16(%rbp)
-	movq %rdi, %rbx
-	movq %rax, %rdi
+	movq %r13, %rdi
+	movq %rax, %r14
+	movq %rdi, %r13
+	movq %r14, %rdi
 	callq donna_list_is_empty
-	movq %rbx, %rdi
+	movq %r13, %rdi
 	subq $16, %rsp
-	movq %rsp, %rbx
+	movq %rsp, %r13
+	movq %r13, -16(%rbp)
 	cmpq $1, %rax
 	jz .Lbb38
 	movq %rdi, %r13
@@ -1959,9 +1960,10 @@ builder_tester_filter_modules_loop:
 	callq malloc
 	movq %r13, %rdi
 	movq %rax, %r13
-	movq -16(%rbp), %rax
-	movq %r14, (%r13)
-	movq %rax, 8(%r13)
+	movq %rbx, %rax
+	movq -16(%rbp), %rbx
+	movq %rax, (%r13)
+	movq %r14, 8(%r13)
 	movq %rdi, %r14
 	movl $24, %edi
 	callq malloc
@@ -1975,6 +1977,7 @@ builder_tester_filter_modules_loop:
 	movq %rax, (%rbx)
 	jmp .Lbb42
 .Lbb38:
+	movq %r13, %rbx
 	movq %r15, %rsi
 	movq %r12, %rdx
 	callq builder_tester_filter_modules_loop

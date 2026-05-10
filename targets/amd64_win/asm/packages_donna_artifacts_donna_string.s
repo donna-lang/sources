@@ -1156,7 +1156,7 @@ donna_string_replace_helper:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $56, %rsp
+	subq $40, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -1164,56 +1164,54 @@ donna_string_replace_helper:
 	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq 72(%rbp), %rsi
-	movq %rsi, -40(%rbp)
-	movq 64(%rbp), %r13
+	movq 72(%rbp), %r13
+	movq %r13, -24(%rbp)
+	movq 64(%rbp), %r14
 	movq 56(%rbp), %rbx
 	movq %rbx, %r12
 	movq 48(%rbp), %rbx
 	movq %r9, %rdi
-	movq %rdx, -32(%rbp)
-	movq %rbx, %r15
-	addq %r13, %r15
-	movq %r15, -16(%rbp)
-	cmpq %rdi, %r15
+	movq %r8, %r15
+	movq %rbx, %rsi
+	addq %r14, %rsi
+	movq %rsi, -16(%rbp)
+	cmpq %rdi, %rsi
 	setg %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	movq %r8, %r14
-	setz %r8b
-	movzbq %r8b, %r8
+	setz %sil
+	movzbq %sil, %rsi
 	movq %rcx, %rax
 	addq %r12, %rax
-	movq %rax, -24(%rbp)
-	cmpl $0, %r8d
+	movq %rax, -8(%rbp)
+	cmpl $0, %esi
 	jnz Lbb101
 	movq %rcx, %rsi
-	addq %r13, %rcx
+	addq %r14, %rcx
 	subq $32, %rsp
-	movq %rdx, %r15
+	movq %rdx, %r13
 	movq %rbx, %rdx
 	callq strndup
-	movq %r15, %rdx
+	movq %r13, %rdx
 	movq %rax, %rcx
-	movq -16(%rbp), %r15
 	subq $-32, %rsp
 	subq $32, %rsp
+	movq %rdx, %r13
 	callq strcmp
-	movq %r14, %r8
+	movq %r15, %r8
 	movq %r13, %rdx
 	movq %rsi, %rcx
 	movq %rax, %rsi
-	movq -24(%rbp), %rax
-	movq -40(%rbp), %r13
-	movq %rdx, %r14
-	movq -32(%rbp), %rdx
+	movq -8(%rbp), %rax
+	movq -16(%rbp), %r15
+	movq -24(%rbp), %r13
 	subq $-32, %rsp
 	cmpq $0, %rsi
 	setz %r9b
 	movzbq %r9b, %r9
 	subq $16, %rsp
 	movq %rsp, %rsi
-	movq %rsi, -48(%rbp)
+	movq %rsi, -32(%rbp)
 	cmpq $1, %r9
 	jz Lbb99
 	movq %r14, %r9
@@ -1245,7 +1243,7 @@ Lbb99:
 	callq strndup
 	movq %rsi, %rcx
 	movq %rax, %rdx
-	movq -48(%rbp), %rsi
+	movq -32(%rbp), %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq __rt_str_concat
@@ -1274,6 +1272,7 @@ Lbb99:
 	jmp Lbb103
 Lbb101:
 	movq %rax, %rcx
+	movq %r13, %rsi
 	movq %r12, %rbx
 	movq %rdi, %rdx
 	subq %rbx, %rdx
@@ -1287,7 +1286,7 @@ Lbb101:
 	subq $-32, %rsp
 Lbb103:
 	movq %rbp, %rsp
-	subq $112, %rsp
+	subq $96, %rsp
 	popq %rdi
 	popq %rsi
 	popq %r15

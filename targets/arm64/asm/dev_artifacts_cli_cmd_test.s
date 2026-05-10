@@ -640,166 +640,166 @@ cli_cmd_test_do_test:
 .balign 16
 cli_cmd_test_build_and_run:
 	hint	#34
-	stp	x29, x30, [sp, -208]!
+	stp	x29, x30, [sp, -240]!
 	mov	x29, sp
-	str	x19, [x29, 200]
-	str	x20, [x29, 192]
-	str	x21, [x29, 184]
-	str	x22, [x29, 176]
-	str	x23, [x29, 168]
-	str	x24, [x29, 160]
-	str	x25, [x29, 152]
-	str	x26, [x29, 144]
-	str	x27, [x29, 136]
-	mov	x25, x5
-	str	x4, [x29, 88]
-	str	x2, [x29, 120]
-	mov	x20, x1
-	mov	x21, x0
+	str	x19, [x29, 232]
+	str	x20, [x29, 224]
+	str	x21, [x29, 216]
+	str	x22, [x29, 208]
+	str	x23, [x29, 200]
+	str	x24, [x29, 192]
+	str	x25, [x29, 184]
+	str	x26, [x29, 176]
+	str	x27, [x29, 168]
+	mov	x26, x5
+	str	x4, [x29, 136]
+	mov	x21, x2
+	mov	x19, x1
+	mov	x22, x0
 	adrp	x1, str76
 	add	x1, x1, #:lo12:str76
-	mov	x0, x21
+	mov	x0, x22
 	bl	donna_files_join
-	mov	x19, x0
-	mov	x0, x20
+	mov	x20, x0
+	mov	x0, x19
 	bl	builder_scanner_project_build_dir
-	mov	x23, x0
-	mov	x0, x19
-	mov	x19, x0
+	mov	x24, x0
 	mov	x0, x20
+	mov	x20, x0
+	mov	x0, x19
 	bl	builder_scanner_project_dev_artifacts_dir
-	mov	x22, x0
-	mov	x0, x19
-	mov	x19, x0
+	mov	x23, x0
 	mov	x0, x20
+	mov	x20, x0
+	mov	x0, x19
 	bl	builder_scanner_project_dev_dir
 	bl	donna_files_mkdir
-	mov	x0, x19
-	mov	x19, x0
-	mov	x0, x22
+	mov	x0, x20
+	mov	x20, x0
+	mov	x0, x23
 	bl	donna_files_mkdir
-	mov	x1, x23
-	mov	x0, x19
-	mov	x23, x1
-	mov	x1, x21
-	mov	x19, x0
-	bl	builder_dependencies_resolve_deps
-	mov	x1, x23
-	mov	x17, x0
-	mov	x0, x19
-	mov	x19, x17
-	mov	x23, x1
-	mov	x1, x21
-	bl	builder_dependencies_resolve_dev_deps
-	mov	x1, x23
-	str	x0, [x29, 104]
-	mov	x0, x21
-	mov	x21, x1
+	mov	x1, x24
+	mov	x0, x20
+	mov	x24, x1
 	mov	x1, x22
+	mov	x20, x0
+	bl	builder_dependencies_resolve_deps
+	mov	x1, x24
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x24, x1
+	mov	x1, x22
+	bl	builder_dependencies_resolve_dev_deps
+	mov	x1, x24
+	str	x0, [x29, 120]
+	mov	x0, x22
+	mov	x22, x1
+	mov	x1, x23
 	bl	builder_pipeline_compile_ffi
-	mov	x2, x22
-	mov	x1, x21
+	mov	x2, x23
+	mov	x1, x22
 	mov	x4, x0
-	mov	x0, x19
+	mov	x0, x20
 	adrp	x3, donna_nil
 	add	x3, x3, #:lo12:donna_nil
-	mov	x21, x2
+	mov	x20, x2
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
-	mov	x19, x1
+	mov	x24, x1
 	bl	cli_cmd_test_compile_deps
-	mov	x2, x21
-	mov	x1, x19
-	mov	x23, x1
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	.L47
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x1, [x0]
-	ldr	x0, [x1]
+	mov	x2, x20
+	mov	x1, x0
+	mov	x0, x19
+	ldr	x3, [x1]
+	cmp	x3, #1
+	beq	.L48
+	mov	x3, #8
+	add	x1, x1, x3
+	ldr	x1, [x1]
+	ldr	x25, [x1]
 	mov	x3, #8
 	add	x3, x1, x3
-	ldr	x24, [x3]
-	str	x24, [x29, 112]
+	ldr	x23, [x3]
+	str	x23, [x29, 128]
 	mov	x3, #16
 	add	x3, x1, x3
 	ldr	x19, [x3]
-	str	x19, [x29, 40]
-	mov	x21, x2
+	str	x19, [x29, 96]
+	mov	x20, x2
 	mov	x2, #24
 	add	x1, x1, x2
 	ldr	x22, [x1]
 	mov	x19, x0
-	mov	x0, x20
 	bl	builder_scanner_project_src_dir
 	mov	x4, x22
-	mov	x2, x21
+	mov	x2, x20
 	mov	x1, x0
 	mov	x0, x19
-	mov	x3, x0
-	mov	x19, x1
+	mov	x3, x25
+	mov	x23, x1
 	adrp	x1, str111
 	add	x1, x1, #:lo12:str111
-	mov	x26, x0
-	mov	x0, x19
+	mov	x19, x0
+	mov	x0, x23
 	bl	builder_pipeline_compile_dir
-	mov	x1, x19
+	mov	x1, x0
+	mov	x0, x19
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
-	mov	x22, x1
-	ldr	x1, [x0]
-	cmp	x1, #1
+	ldr	x2, [x1]
+	cmp	x2, #1
 	beq	.L46
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	ldr	x21, [x0]
-	str	x21, [x29, 96]
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x1, [x1]
+	ldr	x2, [x1]
+	str	x2, [x29, 112]
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x3, [x1]
+	str	x3, [x29, 144]
 	adrp	x1, str134
 	add	x1, x1, #:lo12:str134
-	mov	x21, x0
-	mov	x0, x25
+	mov	x20, x0
+	mov	x0, x26
 	bl	donna_files_join
-	mov	x24, x0
-	mov	x0, x21
-	mov	x21, x0
-	mov	x0, x24
+	mov	x22, x0
+	mov	x0, x20
+	mov	x20, x0
+	mov	x0, x22
 	bl	donna_files_mkdir
-	mov	x1, x24
-	mov	x0, x21
-	ldr	x24, [x29, 112]
-	ldr	x21, [x29, 120]
+	mov	x1, x22
+	mov	x0, x20
+	mov	x20, x0
+	ldr	x0, [x29, 144]
+	ldr	x22, [x29, 136]
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	cli_cmd_test_scrub_main_from_ssa
-	mov	x1, x22
-	str	x0, [x29, 80]
-	mov	x0, x20
-	ldr	x22, [x29, 96]
-	ldr	x20, [x29, 104]
-	mov	x3, x26
-	mov	x2, x25
-	bl	cli_cmd_test_compile_self_alias
 	mov	x1, x23
+	str	x0, [x29, 104]
+	mov	x0, x20
+	ldr	x23, [x29, 128]
+	ldr	x20, [x29, 120]
+	mov	x3, x25
+	mov	x2, x26
+	bl	cli_cmd_test_compile_self_alias
+	mov	x1, x24
 	mov	x2, x0
-	mov	x0, x22
-	ldr	x23, [x29, 88]
-	mov	x22, x1
+	ldr	x0, [x29, 112]
+	mov	x24, x1
 	ldr	x1, [x2]
 	mov	x3, #8
 	add	x2, x2, x3
-	ldr	x27, [x2]
-	str	x27, [x29, 64]
+	ldr	x2, [x2]
+	str	x2, [x29, 48]
 	bl	donna_list_append
 	mov	x1, x0
-	mov	x0, x26
+	mov	x0, x25
 	bl	donna_list_append
-	mov	x1, x22
+	mov	x1, x24
 	mov	x17, x0
 	mov	x0, x20
 	mov	x20, x17
@@ -827,24 +827,26 @@ cli_cmd_test_build_and_run:
 	str	x3, [x29, 56]
 	mov	x3, #16
 	add	x2, x2, x3
-	ldr	x22, [x2]
-	str	x22, [x29, 48]
+	ldr	x24, [x2]
+	str	x24, [x29, 40]
 	bl	donna_list_append
 	mov	x17, x0
 	mov	x0, x21
 	mov	x21, x17
 	adrp	x1, str170
 	add	x1, x1, #:lo12:str170
-	mov	x22, x0
-	mov	x0, x25
-	bl	donna_files_join
-	mov	x26, x0
-	mov	x0, x22
-	mov	x22, x0
+	mov	x24, x0
 	mov	x0, x26
+	bl	donna_files_join
+	mov	x25, x0
+	mov	x0, x24
+	mov	x24, x0
+	mov	x0, x25
 	bl	donna_files_mkdir
-	mov	x2, x26
-	mov	x0, x22
+	mov	x2, x25
+	mov	x0, x24
+	ldr	x24, [x29, 104]
+	ldr	x25, [x29, 96]
 	mov	x3, x21
 	adrp	x1, str173
 	add	x1, x1, #:lo12:str173
@@ -863,21 +865,22 @@ cli_cmd_test_build_and_run:
 	ldr	x1, [x2]
 	mov	x3, #8
 	add	x2, x2, x3
-	ldr	x22, [x2]
+	ldr	x27, [x2]
+	str	x27, [x29, 80]
 	bl	donna_list_append
-	mov	x26, x0
-	mov	x0, x23
+	str	x0, [x29, 88]
+	mov	x0, x22
 	adrp	x1, str197
 	add	x1, x1, #:lo12:str197
-	mov	x23, x0
-	mov	x0, x25
+	mov	x22, x0
+	mov	x0, x26
 	bl	donna_files_join
 	bl	donna_files_delete
-	mov	x3, x26
-	mov	x0, x23
-	ldr	x26, [x29, 80]
+	mov	x0, x22
+	ldr	x3, [x29, 88]
+	ldr	x22, [x29, 80]
 	mov	x4, #1
-	mov	x2, x25
+	mov	x2, x26
 	adrp	x1, str200
 	add	x1, x1, #:lo12:str200
 	bl	builder_pipeline_compile_module
@@ -895,15 +898,18 @@ cli_cmd_test_build_and_run:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x2, [x1]
-	str	x2, [x29, 72]
+	str	x2, [x29, 64]
 	bl	donna_list_reverse
-	mov	x23, x0
+	str	x0, [x29, 72]
+	mov	x0, x24
+	mov	x24, x0
 	mov	x0, #24
 	bl	malloc
 	mov	x1, x0
-	mov	x0, x23
-	ldr	x2, [x29, 72]
-	ldr	x23, [x29, 64]
+	mov	x0, x24
+	mov	x24, x0
+	ldr	x0, [x29, 72]
+	ldr	x2, [x29, 64]
 	mov	x3, #1
 	str	x3, [x1]
 	mov	x3, #8
@@ -916,46 +922,42 @@ cli_cmd_test_build_and_run:
 	str	x2, [x3]
 	bl	donna_list_append
 	mov	x1, x0
-	mov	x0, x23
-	mov	x23, x0
+	mov	x0, x24
+	mov	x24, x0
 	ldr	x0, [x29, 56]
 	bl	donna_list_append
 	mov	x1, x0
-	mov	x0, x23
-	ldr	x23, [x29, 48]
-	bl	donna_list_append
-	mov	x1, x0
-	mov	x0, x26
+	mov	x0, x24
+	mov	x24, x0
+	ldr	x0, [x29, 48]
 	bl	donna_list_append
 	mov	x1, x0
 	mov	x0, x24
 	bl	donna_list_append
+	mov	x1, x0
+	mov	x0, x23
+	bl	donna_list_append
 	mov	x24, x0
 	bl	builder_pipeline_qbe_available
-	mov	x1, x23
-	mov	x26, x1
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x23, sp
 	cmp	x0, #0
 	beq	.L35
 	bl	builder_pipeline_c_compiler_available
-	mov	x1, x26
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x24
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x24, sp
-	cmp	x2, #0
+	cmp	x1, #0
 	beq	.L33
-	mov	x26, x1
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	builder_pipeline_run_qbe_all
-	mov	x1, x26
-	str	x0, [x29, 16]
-	mov	x0, x25
-	ldr	x25, [x29, 40]
+	str	x0, [x29, 24]
+	mov	x0, x26
+	ldr	x1, [x29, 40]
 	mov	x26, x1
 	adrp	x1, str247
 	add	x1, x1, #:lo12:str247
@@ -965,9 +967,9 @@ cli_cmd_test_build_and_run:
 	mov	x0, x25
 	mov	x25, x17
 	bl	donna_list_append
-	str	x0, [x29, 32]
+	str	x0, [x29, 16]
 	bl	cli_cmd_test_linker_flags
-	str	x0, [x29, 24]
+	str	x0, [x29, 32]
 	mov	x0, #24
 	bl	malloc
 	mov	x27, x0
@@ -984,8 +986,8 @@ cli_cmd_test_build_and_run:
 	mov	x0, #24
 	bl	malloc
 	mov	x1, x0
-	ldr	x0, [x29, 24]
-	ldr	x26, [x29, 32]
+	ldr	x0, [x29, 32]
+	ldr	x26, [x29, 24]
 	mov	x2, #1
 	str	x2, [x1]
 	mov	x2, #8
@@ -999,7 +1001,8 @@ cli_cmd_test_build_and_run:
 	bl	donna_list_append
 	mov	x1, x0
 	mov	x0, x26
-	ldr	x26, [x29, 16]
+	mov	x26, x0
+	ldr	x0, [x29, 16]
 	bl	donna_list_append
 	mov	x1, x0
 	mov	x0, x26
@@ -1145,8 +1148,9 @@ cli_cmd_test_build_and_run:
 	str	x0, [x20]
 .L45:
 	str	x0, [x19]
-	b	.L48
+	b	.L50
 .L46:
+	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x20, [x0]
@@ -1161,8 +1165,9 @@ cli_cmd_test_build_and_run:
 	mov	x1, x20
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L48
-.L47:
+	b	.L50
+.L48:
+	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x19, [x0]
@@ -1176,18 +1181,18 @@ cli_cmd_test_build_and_run:
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
-.L48:
-	ldr	x19, [x29, 200]
-	ldr	x20, [x29, 192]
-	ldr	x21, [x29, 184]
-	ldr	x22, [x29, 176]
-	ldr	x23, [x29, 168]
-	ldr	x24, [x29, 160]
-	ldr	x25, [x29, 152]
-	ldr	x26, [x29, 144]
-	ldr	x27, [x29, 136]
+.L50:
+	ldr	x19, [x29, 232]
+	ldr	x20, [x29, 224]
+	ldr	x21, [x29, 216]
+	ldr	x22, [x29, 208]
+	ldr	x23, [x29, 200]
+	ldr	x24, [x29, 192]
+	ldr	x25, [x29, 184]
+	ldr	x26, [x29, 176]
+	ldr	x27, [x29, 168]
 	mov sp, x29
-	ldp	x29, x30, [sp], 208
+	ldp	x29, x30, [sp], 240
 	ret
 .type cli_cmd_test_build_and_run, @function
 .size cli_cmd_test_build_and_run, .-cli_cmd_test_build_and_run
@@ -1268,7 +1273,7 @@ cli_cmd_test_compile_self_alias:
 	mov	x1, x0
 	mov	x0, x20
 	cmp	x1, #0
-	beq	.L57
+	beq	.L59
 	adrp	x1, str327
 	add	x1, x1, #:lo12:str327
 	bl	donna_files_join
@@ -1289,7 +1294,7 @@ cli_cmd_test_compile_self_alias:
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L56
+	beq	.L58
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -1304,8 +1309,8 @@ cli_cmd_test_compile_self_alias:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L58
-.L56:
+	b	.L60
+.L58:
 	mov	x0, #16
 	bl	malloc
 	adrp	x1, donna_nil
@@ -1317,8 +1322,8 @@ cli_cmd_test_compile_self_alias:
 	add	x1, x1, #:lo12:donna_nil
 	str	x1, [x2]
 	str	x0, [x19]
-	b	.L58
-.L57:
+	b	.L60
+.L59:
 	mov	x0, #16
 	bl	malloc
 	adrp	x1, donna_nil
@@ -1329,7 +1334,7 @@ cli_cmd_test_compile_self_alias:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	str	x1, [x2]
-.L58:
+.L60:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1344,77 +1349,77 @@ cli_cmd_test_compile_self_alias:
 .balign 16
 cli_cmd_test_compile_deps:
 	hint	#34
-	stp	x29, x30, [sp, -96]!
+	stp	x29, x30, [sp, -112]!
 	mov	x29, sp
-	str	x19, [x29, 88]
-	str	x20, [x29, 80]
-	str	x21, [x29, 72]
-	str	x22, [x29, 64]
-	str	x23, [x29, 56]
-	str	x24, [x29, 48]
-	str	x25, [x29, 40]
-	str	x26, [x29, 32]
-	mov	x25, x4
-	mov	x24, x3
-	mov	x23, x2
+	str	x19, [x29, 104]
+	str	x20, [x29, 96]
+	str	x21, [x29, 88]
+	str	x22, [x29, 80]
+	str	x23, [x29, 72]
+	str	x24, [x29, 64]
+	str	x25, [x29, 56]
+	str	x26, [x29, 48]
+	str	x27, [x29, 40]
+	mov	x26, x4
+	mov	x25, x3
+	mov	x24, x2
 	mov	x21, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L71
+	beq	.L73
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x19, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	str	x0, [x29, 16]
+	ldr	x20, [x0]
 	adrp	x1, str372
 	add	x1, x1, #:lo12:str372
 	mov	x0, x21
 	bl	donna_files_join
-	mov	x20, x0
+	mov	x22, x0
 	mov	x0, x19
 	bl	builder_dependencies_dep_name
 	mov	x1, x0
-	mov	x0, x20
+	mov	x0, x22
 	bl	donna_files_join
 	adrp	x1, str376
 	add	x1, x1, #:lo12:str376
-	mov	x20, x0
+	mov	x22, x0
 	bl	donna_files_join
 	mov	x1, x0
-	mov	x0, x20
-	mov	x20, x1
+	mov	x0, x22
+	mov	x22, x1
 	adrp	x1, str378
 	add	x1, x1, #:lo12:str378
-	mov	x22, x0
+	mov	x23, x0
 	mov	x0, x21
 	bl	donna_files_join
 	bl	donna_files_mkdir
-	mov	x0, x22
+	mov	x0, x23
 	bl	donna_files_mkdir
-	mov	x0, x20
+	mov	x0, x22
 	bl	donna_files_mkdir
 	mov	x0, x19
 	bl	builder_dependencies_dep_src_dir
-	mov	x22, x0
+	mov	x23, x0
 	mov	x0, x19
 	bl	builder_dependencies_dep_name
+	mov	x4, x26
+	mov	x3, x25
+	mov	x2, x24
+	mov	x1, x0
+	mov	x0, x23
+	mov	x25, x4
+	mov	x4, #0
+	mov	x24, x3
+	mov	x3, x2
+	mov	x23, x2
+	mov	x2, x22
+	bl	builder_pipeline_compile_dir
 	mov	x4, x25
 	mov	x3, x24
 	mov	x2, x23
-	mov	x1, x0
-	mov	x0, x22
-	mov	x24, x4
-	mov	x4, #0
-	mov	x23, x3
-	mov	x3, x2
-	mov	x22, x2
-	mov	x2, x20
-	bl	builder_pipeline_compile_dir
-	mov	x4, x24
-	mov	x3, x23
-	mov	x2, x22
 	mov	x1, x0
 	mov	x0, x19
 	mov	x5, #16
@@ -1422,29 +1427,31 @@ cli_cmd_test_compile_deps:
 	mov	x19, sp
 	ldr	x5, [x1]
 	cmp	x5, #1
-	beq	.L69
+	beq	.L71
 	mov	x24, x4
 	mov	x4, #8
 	add	x1, x1, x4
 	ldr	x1, [x1]
-	ldr	x22, [x1]
-	str	x22, [x29, 24]
+	ldr	x23, [x1]
 	mov	x26, x3
 	mov	x3, #8
 	add	x3, x1, x3
-	ldr	x22, [x3]
-	mov	x23, x2
+	ldr	x25, [x3]
+	str	x25, [x29, 24]
+	mov	x25, x2
 	mov	x2, #16
 	add	x1, x1, x2
-	ldr	x25, [x1]
+	ldr	x27, [x1]
+	str	x27, [x29, 16]
 	bl	builder_dependencies_dep_path
-	mov	x1, x20
-	ldr	x20, [x29, 24]
+	mov	x1, x22
+	ldr	x22, [x29, 24]
 	bl	builder_pipeline_compile_ffi
-	mov	x2, x23
-	mov	x1, x20
+	mov	x2, x25
+	mov	x1, x23
 	mov	x23, x0
-	ldr	x0, [x29, 16]
+	mov	x0, x20
+	ldr	x25, [x29, 16]
 	mov	x20, x0
 	mov	x0, x2
 	bl	donna_list_append
@@ -1473,7 +1480,7 @@ cli_cmd_test_compile_deps:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L67
+	beq	.L69
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -1491,14 +1498,14 @@ cli_cmd_test_compile_deps:
 	sub	sp, sp, x0
 	mov	x1, sp
 	cmp	x25, #1
-	beq	.L64
+	beq	.L66
 	str	x21, [x1]
-	b	.L66
-.L64:
+	b	.L68
+.L66:
 	mov	x0, #1
 	str	x0, [x1]
 	mov	x21, #1
-.L66:
+.L68:
 	mov	x0, #32
 	bl	malloc
 	str	x24, [x0]
@@ -1513,28 +1520,28 @@ cli_cmd_test_compile_deps:
 	str	x21, [x1]
 	bl	donna_result_Ok
 	str	x0, [x20]
-	b	.L68
-.L67:
+	b	.L70
+.L69:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x20]
-.L68:
+.L70:
 	str	x0, [x19]
-	b	.L73
-.L69:
+	b	.L75
+.L71:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	donna_result_Error
 	str	x0, [x19]
-	b	.L73
-.L71:
-	mov	x21, x25
-	mov	x20, x24
-	mov	x19, x23
+	b	.L75
+.L73:
+	mov	x21, x26
+	mov	x20, x25
+	mov	x19, x24
 	mov	x0, #32
 	bl	malloc
 	mov	x4, x21
@@ -1552,17 +1559,18 @@ cli_cmd_test_compile_deps:
 	mov	x1, #0
 	str	x1, [x2]
 	bl	donna_result_Ok
-.L73:
-	ldr	x19, [x29, 88]
-	ldr	x20, [x29, 80]
-	ldr	x21, [x29, 72]
-	ldr	x22, [x29, 64]
-	ldr	x23, [x29, 56]
-	ldr	x24, [x29, 48]
-	ldr	x25, [x29, 40]
-	ldr	x26, [x29, 32]
+.L75:
+	ldr	x19, [x29, 104]
+	ldr	x20, [x29, 96]
+	ldr	x21, [x29, 88]
+	ldr	x22, [x29, 80]
+	ldr	x23, [x29, 72]
+	ldr	x24, [x29, 64]
+	ldr	x25, [x29, 56]
+	ldr	x26, [x29, 48]
+	ldr	x27, [x29, 40]
 	mov sp, x29
-	ldp	x29, x30, [sp], 96
+	ldp	x29, x30, [sp], 112
 	ret
 .type cli_cmd_test_compile_deps, @function
 .size cli_cmd_test_compile_deps, .-cli_cmd_test_compile_deps
@@ -1603,7 +1611,7 @@ cli_cmd_test_collect_donna:
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L81
+	beq	.L83
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x21, [x2]
@@ -1623,13 +1631,13 @@ cli_cmd_test_collect_donna:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L79
+	beq	.L81
 	mov	x2, x20
 	mov	x23, x1
 	bl	cli_cmd_test_collect_donna
 	str	x0, [x19]
-	b	.L83
-.L79:
+	b	.L85
+.L81:
 	mov	x23, x1
 	mov	x1, x21
 	mov	x21, x0
@@ -1654,11 +1662,11 @@ cli_cmd_test_collect_donna:
 	str	x20, [x3]
 	bl	cli_cmd_test_collect_donna
 	str	x0, [x19]
-	b	.L83
-.L81:
+	b	.L85
+.L83:
 	mov	x0, x20
 	bl	donna_list_reverse
-.L83:
+.L85:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1692,7 +1700,7 @@ cli_cmd_test_parse_test_args:
 	mov	x19, x0
 	ldr	x0, [x20]
 	cmp	x0, #0
-	beq	.L89
+	beq	.L91
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x21, [x0]
@@ -1706,7 +1714,7 @@ cli_cmd_test_parse_test_args:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	x0, #1
-	beq	.L87
+	beq	.L89
 	mov	x0, #24
 	bl	malloc
 	mov	x1, #1
@@ -1730,8 +1738,8 @@ cli_cmd_test_parse_test_args:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L90
-.L87:
+	b	.L92
+.L89:
 	mov	x20, x23
 	mov	x0, #24
 	bl	malloc
@@ -1754,8 +1762,8 @@ cli_cmd_test_parse_test_args:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L90
-.L89:
+	b	.L92
+.L91:
 	mov	x0, #24
 	bl	malloc
 	mov	x1, #1
@@ -1780,7 +1788,7 @@ cli_cmd_test_parse_test_args:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x19, [x1]
-.L90:
+.L92:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1806,7 +1814,7 @@ cli_cmd_test_filter_values:
 	mov	x20, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L95
+	beq	.L97
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x21, [x1]
@@ -1822,7 +1830,7 @@ cli_cmd_test_filter_values:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L94
+	beq	.L96
 	mov	x22, x0
 	mov	x0, #24
 	bl	malloc
@@ -1838,16 +1846,16 @@ cli_cmd_test_filter_values:
 	str	x20, [x2]
 	bl	cli_cmd_test_filter_values
 	str	x0, [x19]
-	b	.L97
-.L94:
+	b	.L99
+.L96:
 	mov	x1, x20
 	bl	cli_cmd_test_filter_values
 	str	x0, [x19]
-	b	.L97
-.L95:
+	b	.L99
+.L97:
 	mov	x0, x20
 	bl	donna_list_reverse
-.L97:
+.L99:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1871,7 +1879,7 @@ cli_cmd_test_linker_flags:
 	cmp	x0, #0
 	cset	x0, eq
 	cmp	x0, #1
-	beq	.L100
+	beq	.L102
 	mov	x0, #24
 	bl	malloc
 	mov	x1, #1
@@ -1886,8 +1894,8 @@ cli_cmd_test_linker_flags:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	str	x1, [x2]
-	b	.L101
-.L100:
+	b	.L103
+.L102:
 	mov	x0, #24
 	bl	malloc
 	mov	x1, #1
@@ -1902,7 +1910,7 @@ cli_cmd_test_linker_flags:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	str	x1, [x2]
-.L101:
+.L103:
 	ldp	x29, x30, [sp], 16
 	ret
 .type cli_cmd_test_linker_flags, @function
@@ -1925,7 +1933,7 @@ cli_cmd_test_scrub_main_from_ssa:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L104
+	beq	.L106
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -1976,11 +1984,11 @@ cli_cmd_test_scrub_main_from_ssa:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	cli_cmd_test_scrub_main_from_ssa
-	b	.L106
-.L104:
+	b	.L108
+.L106:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L106:
+.L108:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]

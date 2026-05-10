@@ -936,36 +936,36 @@ _compiler_codegen_codegen_CgState:
 	pushq %r14
 	pushq %r15
 	movq 48(%rbp), %rax
-	movq %rax, -16(%rbp)
+	movq %rax, -8(%rbp)
 	movq 40(%rbp), %rax
-	movq %rax, -24(%rbp)
+	movq %rax, -16(%rbp)
 	movq 32(%rbp), %rax
-	movq %rax, -32(%rbp)
+	movq %rax, -24(%rbp)
 	movq 24(%rbp), %rax
-	movq %rax, -40(%rbp)
+	movq %rax, -32(%rbp)
 	movq 16(%rbp), %rax
-	movq %rax, -48(%rbp)
-	movq %r9, %rbx
-	movq %r8, %r12
-	movq %rcx, %r13
-	movq %rdx, %r14
-	movq %rsi, %r15
-	movq %rdi, -8(%rbp)
+	movq %rax, -40(%rbp)
+	movq %r9, -48(%rbp)
+	movq %r8, %rbx
+	movq %rcx, %r12
+	movq %rdx, %r13
+	movq %rsi, %r14
+	movq %rdi, %r15
 	movl $96, %edi
 	callq _malloc
-	movq -16(%rbp), %rcx
-	movq -24(%rbp), %rdx
-	movq -32(%rbp), %rsi
-	movq -40(%rbp), %rdi
-	movq -48(%rbp), %r8
-	movq -8(%rbp), %r9
+	movq -8(%rbp), %rcx
+	movq -16(%rbp), %rdx
+	movq -24(%rbp), %rsi
+	movq -32(%rbp), %rdi
+	movq -40(%rbp), %r8
+	movq -48(%rbp), %r9
 	movq $0, (%rax)
-	movq %r9, 8(%rax)
-	movq %r15, 16(%rax)
-	movq %r14, 24(%rax)
-	movq %r13, 32(%rax)
-	movq %r12, 40(%rax)
-	movq %rbx, 48(%rax)
+	movq %r15, 8(%rax)
+	movq %r14, 16(%rax)
+	movq %r13, 24(%rax)
+	movq %r12, 32(%rax)
+	movq %rbx, 40(%rax)
+	movq %r9, 48(%rax)
 	movq %r8, 56(%rax)
 	movq %rdi, 64(%rax)
 	movq %rsi, 72(%rax)
@@ -2578,28 +2578,27 @@ _compiler_codegen_codegen_ensure_int_to_string_helper:
 	movq %rax, %r13
 	movl $16, %edi
 	callq _malloc
+	xchgq %rax, %rbx
 	movq %rax, %r12
-	movq %rbx, %rax
-	movq %rax, %rbx
 	leaq _compiler_codegen_il_Byte(%rip), %rax
-	movq %rax, (%r12)
-	movq %r13, 8(%r12)
+	movq %rax, (%rbx)
+	movq %r13, 8(%rbx)
 	movl $24, %edi
 	callq _malloc
-	xchgq %rax, %rbx
-	movq $1, (%rbx)
-	movq %r12, 8(%rbx)
-	movq %rax, %r12
+	xchgq %rax, %r12
+	movq $1, (%r12)
+	movq %rbx, 8(%r12)
+	movq %rax, %rbx
 	leaq _donna_nil(%rip), %rax
-	movq %rax, 16(%rbx)
+	movq %rax, 16(%r12)
 	leaq _str985(%rip), %rdi
 	callq _compiler_codegen_il_Str
 	movq %rax, %r14
 	movl $16, %edi
 	callq _malloc
 	movq %rax, %r13
-	movq %r12, %rax
-	movq %rax, %r12
+	movq %rbx, %rax
+	movq %rax, %rbx
 	leaq _compiler_codegen_il_Byte(%rip), %rax
 	movq %rax, (%r13)
 	movq %r14, 8(%r13)
@@ -2608,80 +2607,88 @@ _compiler_codegen_codegen_ensure_int_to_string_helper:
 	movq %rax, %rcx
 	movq $1, (%rcx)
 	movq %r13, 8(%rcx)
-	movq %rbx, 16(%rcx)
+	movq %r12, 16(%rcx)
 	leaq _donna_option_None(%rip), %rdx
 	leaq _str977(%rip), %rsi
 	leaq _compiler_codegen_il_Private(%rip), %rdi
 	callq _compiler_codegen_il_DataDef
-	movq %rax, -16(%rbp)
+	movq %rax, %r13
 	leaq _str994(%rip), %rdi
 	callq _compiler_codegen_il_new_block
-	movq %rax, %rbx
+	movq %rax, %rdi
+	movq %rdi, %r12
 	leaq _str996(%rip), %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %rax, %r13
+	movq %r12, %rdi
+	movq %rax, %r14
+	movq %rdi, %r12
 	leaq _str998(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %rax, %rdi
-	movq %rdi, %r14
+	movq %r12, %rdi
+	movq %rax, -8(%rbp)
+	movq %rdi, %r12
 	movl $32, %edi
 	callq _compiler_codegen_il_Const
-	movq %r14, %rdi
+	movq %r12, %rdi
 	movq %rax, %r15
-	movq %rdi, %r14
+	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
-	movq %r14, %rdi
-	xchgq %rax, %r12
-	movq %rax, %r14
+	movq %r12, %rdi
+	xchgq %rax, %rbx
+	movq %rax, %r12
 	leaq _compiler_codegen_il_Long(%rip), %rax
-	movq %rax, (%r12)
-	movq %r15, 8(%r12)
+	movq %rax, (%rbx)
+	movq %r15, 8(%rbx)
 	movq %rdi, %r15
 	movl $24, %edi
 	callq _malloc
 	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %r14, %rax
+	movq %r12, %rax
+	movq %rdi, %r12
+	movq -8(%rbp), %rdi
 	movq $1, (%rsi)
-	movq %r12, 8(%rsi)
-	movq %rax, %r12
+	movq %rbx, 8(%rsi)
+	movq %rax, %rbx
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%rsi)
 	callq _compiler_codegen_il_Call
-	movq %r13, %rsi
-	movq %rbx, %rdi
+	movq %r14, %rsi
+	movq %r12, %rdi
 	movq %rax, %rcx
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %rax, %rbx
+	movq %rax, %rdi
+	movq %rdi, %r12
 	leaq _str1009(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %rax, %rdi
-	movq %rdi, %r13
+	movq %r12, %rdi
+	movq %rax, -16(%rbp)
+	movq %rdi, %r12
 	leaq _str1011(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %r13, %rdi
+	movq %r12, %rdi
 	movq %rax, %r14
-	movq %rdi, %r13
+	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
-	movq %r13, %rdi
-	xchgq %rax, %r12
-	movq %rax, %r13
+	movq %r12, %rdi
+	xchgq %rax, %rbx
+	movq %rax, %r12
 	leaq _compiler_codegen_il_Long(%rip), %rax
-	movq %rax, (%r12)
-	movq %r14, 8(%r12)
+	movq %rax, (%rbx)
+	movq %r14, 8(%rbx)
 	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
 	movq %r14, %rdi
-	xchgq %rax, %r13
-	movq $1, (%r13)
-	movq %r12, 8(%r13)
-	movq %rax, %r12
+	xchgq %rax, %r12
+	movq $1, (%r12)
+	movq %rbx, 8(%r12)
+	movq %rax, %rbx
 	leaq _donna_nil(%rip), %rax
-	movq %rax, 16(%r13)
+	movq %rax, 16(%r12)
 	movq %rdi, %r14
 	leaq _str1019(%rip), %rdi
 	callq _compiler_codegen_il_Temporary
@@ -2692,8 +2699,8 @@ _compiler_codegen_codegen_ensure_int_to_string_helper:
 	callq _malloc
 	movq %r14, %rdi
 	movq %rax, %r14
-	movq %r12, %rax
-	movq %rax, %r12
+	movq %rbx, %rax
+	movq %rax, %rbx
 	leaq _compiler_codegen_il_Long(%rip), %rax
 	movq %rax, (%r14)
 	movq %r15, 8(%r14)
@@ -2704,18 +2711,19 @@ _compiler_codegen_codegen_ensure_int_to_string_helper:
 	movq %rax, %r15
 	movq $1, (%r15)
 	movq %r14, 8(%r15)
-	movq %r13, 16(%r15)
-	movq %rdi, %r13
+	movq %r12, 16(%r15)
+	movq %rdi, %r12
 	leaq _str1027(%rip), %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r13, %rdi
+	movq %r12, %rdi
 	movq %rax, %r14
-	movq %rdi, %r13
+	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
-	movq %r13, %rdi
-	xchgq %rax, %r12
-	movq %rax, %r13
+	movq %r12, %rdi
+	movq %rax, %r12
+	movq %rbx, %rax
+	movq %rax, %rbx
 	leaq _compiler_codegen_il_Long(%rip), %rax
 	movq %rax, (%r12)
 	movq %r14, 8(%r12)
@@ -2725,8 +2733,9 @@ _compiler_codegen_codegen_ensure_int_to_string_helper:
 	movq %r15, %rsi
 	movq %r14, %rdi
 	movq %rax, %rdx
-	movq %r13, %rax
-	movq -16(%rbp), %r13
+	movq %rbx, %rax
+	movq %rdi, %rbx
+	movq -16(%rbp), %rdi
 	movq $1, (%rdx)
 	movq %r12, 8(%rdx)
 	movq %rax, %r12
@@ -2857,28 +2866,27 @@ _compiler_codegen_codegen_ensure_print_str_helper:
 	movq %rax, %r13
 	movl $16, %edi
 	callq _malloc
+	xchgq %rax, %rbx
 	movq %rax, %r12
-	movq %rbx, %rax
-	movq %rax, %rbx
 	leaq _compiler_codegen_il_Byte(%rip), %rax
-	movq %rax, (%r12)
-	movq %r13, 8(%r12)
+	movq %rax, (%rbx)
+	movq %r13, 8(%rbx)
 	movl $24, %edi
 	callq _malloc
-	xchgq %rax, %rbx
-	movq $1, (%rbx)
-	movq %r12, 8(%rbx)
-	movq %rax, %r12
+	xchgq %rax, %r12
+	movq $1, (%r12)
+	movq %rbx, 8(%r12)
+	movq %rax, %rbx
 	leaq _donna_nil(%rip), %rax
-	movq %rax, 16(%rbx)
+	movq %rax, 16(%r12)
 	leaq _str1085(%rip), %rdi
 	callq _compiler_codegen_il_Str
 	movq %rax, %r14
 	movl $16, %edi
 	callq _malloc
 	movq %rax, %r13
-	movq %r12, %rax
-	movq %rax, %r12
+	movq %rbx, %rax
+	movq %rax, %rbx
 	leaq _compiler_codegen_il_Byte(%rip), %rax
 	movq %rax, (%r13)
 	movq %r14, 8(%r13)
@@ -2887,54 +2895,57 @@ _compiler_codegen_codegen_ensure_print_str_helper:
 	movq %rax, %rcx
 	movq $1, (%rcx)
 	movq %r13, 8(%rcx)
-	movq %rbx, 16(%rcx)
+	movq %r12, 16(%rcx)
 	leaq _donna_option_None(%rip), %rdx
 	leaq _str1077(%rip), %rsi
 	leaq _compiler_codegen_il_Private(%rip), %rdi
 	callq _compiler_codegen_il_DataDef
-	movq %rax, -16(%rbp)
+	movq %rax, %r13
 	leaq _str1094(%rip), %rdi
 	callq _compiler_codegen_il_new_block
-	movq %rax, %rbx
+	movq %rax, %rdi
+	movq %rdi, %r12
 	leaq _str1096(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %rax, %rdi
-	movq %rdi, %r13
+	movq %r12, %rdi
+	movq %rax, -16(%rbp)
+	movq %rdi, %r12
 	leaq _str1098(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %r13, %rdi
+	movq %r12, %rdi
 	movq %rax, %r14
-	movq %rdi, %r13
+	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
-	movq %r13, %rdi
-	xchgq %rax, %r12
-	movq %rax, %r13
+	movq %r12, %rdi
+	xchgq %rax, %rbx
+	movq %rax, %r12
 	leaq _compiler_codegen_il_Long(%rip), %rax
-	movq %rax, (%r12)
-	movq %r14, 8(%r12)
+	movq %rax, (%rbx)
+	movq %r14, 8(%rbx)
 	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
 	movq %r14, %rdi
 	movq %rax, %r15
-	movq %r13, %rax
+	movq %r12, %rax
 	movq $1, (%r15)
-	movq %r12, 8(%r15)
-	movq %rax, %r12
+	movq %rbx, 8(%r15)
+	movq %rax, %rbx
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r15)
-	movq %rdi, %r13
+	movq %rdi, %r12
 	leaq _str1106(%rip), %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r13, %rdi
+	movq %r12, %rdi
 	movq %rax, %r14
-	movq %rdi, %r13
+	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
-	movq %r13, %rdi
-	xchgq %rax, %r12
-	movq %rax, %r13
+	movq %r12, %rdi
+	movq %rax, %r12
+	movq %rbx, %rax
+	movq %rax, %rbx
 	leaq _compiler_codegen_il_Long(%rip), %rax
 	movq %rax, (%r12)
 	movq %r14, 8(%r12)
@@ -2944,8 +2955,9 @@ _compiler_codegen_codegen_ensure_print_str_helper:
 	movq %r15, %rsi
 	movq %r14, %rdi
 	movq %rax, %rdx
-	movq %r13, %rax
-	movq -16(%rbp), %r13
+	movq %rbx, %rax
+	movq %rdi, %rbx
+	movq -16(%rbp), %rdi
 	movq $1, (%rdx)
 	movq %r12, 8(%rdx)
 	movq %rax, %r12
@@ -3613,32 +3625,31 @@ _compiler_codegen_codegen_register_ctors:
 	pushq %r14
 	pushq %r15
 	movq %rsi, %rax
-	movq %rax, %rbx
+	movq %rax, %r13
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz Lbb164
 	movq 8(%rdi), %rax
-	movq 16(%rdi), %rdi
-	movq %rdi, -16(%rbp)
+	movq 16(%rdi), %rbx
 	movq 8(%rax), %r15
 	movq 16(%rax), %r14
-	movq 24(%rax), %r13
-	movq %rbx, %rdi
+	movq 24(%rax), %r12
+	movq %r13, %rdi
 	callq _compiler_codegen_codegen_state_ctor_tags
-	movq %rax, %r12
+	movq %rax, -16(%rbp)
 	movl $16, %edi
 	callq _malloc
-	xchgq %rax, %r13
-	movq %r15, (%r13)
-	movq %rax, 8(%r13)
+	xchgq %rax, %r12
+	movq %r15, (%r12)
+	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %rsi
-	movq %rbx, %rax
-	movq -16(%rbp), %rbx
+	movq %r13, %rax
+	movq -16(%rbp), %rcx
 	movq $1, (%rsi)
-	movq %r13, 8(%rsi)
-	movq %r12, 16(%rsi)
+	movq %r12, 8(%rsi)
+	movq %rcx, 16(%rsi)
 	movq %rax, %rdi
 	callq _compiler_codegen_codegen_set_ctor_tags
 	movq %rax, %rdi
@@ -3667,7 +3678,7 @@ _compiler_codegen_codegen_register_ctors:
 	callq _compiler_codegen_codegen_register_ctors
 	jmp Lbb165
 Lbb164:
-	movq %rbx, %rax
+	movq %r13, %rax
 Lbb165:
 	popq %r15
 	popq %r14
@@ -3697,7 +3708,6 @@ _compiler_codegen_codegen_gen_constructors:
 	jz Lbb173
 	movq 8(%rax), %rdi
 	movq 16(%rax), %rbx
-	movq %rbx, -16(%rbp)
 	movq %rsi, %r14
 	callq _compiler_codegen_codegen_gen_constructor
 	movq %r12, %rcx
@@ -3711,15 +3721,18 @@ _compiler_codegen_codegen_gen_constructors:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz Lbb169
-	movq 8(%rax), %r13
+	movq 8(%rax), %rax
+	movq %rax, -16(%rbp)
+	movq %rdi, %r13
 	movl $24, %edi
 	callq _malloc
 	movq %r15, %rdx
 	movq %r14, %rsi
+	movq %r13, %rdi
 	movq %rax, %rcx
-	movq -16(%rbp), %rdi
+	movq -16(%rbp), %rax
 	movq $1, (%rcx)
-	movq %r13, 8(%rcx)
+	movq %rax, 8(%rcx)
 	movq %r12, 16(%rcx)
 	movq %rcx, (%rbx)
 	jmp Lbb172
@@ -3757,7 +3770,7 @@ _compiler_codegen_codegen_gen_constructor:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $72, %rsp
+	subq $120, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -3790,7 +3803,7 @@ Lbb179:
 	movq %rsi, %r14
 	subq $16, %rsp
 	movq %rsp, %r12
-	movq %r12, -16(%rbp)
+	movq %r12, -24(%rbp)
 	movq (%r13), %rax
 	cmpq $0, %rax
 	jz Lbb181
@@ -3809,17 +3822,17 @@ Lbb179:
 	movq %r13, %rdi
 	callq _compiler_codegen_codegen_build_ctor_params
 	movq %r14, %rdi
-	movq %rax, -56(%rbp)
+	movq %rax, -48(%rbp)
 	movq %rdi, %r14
 	leaq _str1547(%rip), %rdi
 	callq _compiler_codegen_il_new_block
 	movq %r14, %rdi
-	movq %rax, -24(%rbp)
+	movq %rax, -40(%rbp)
 	movq %rdi, %r14
 	callq _compiler_codegen_codegen_state_finished_blocks
 	movq %r15, %rsi
 	movq %r14, %rdi
-	movq %rax, -64(%rbp)
+	movq %rax, -88(%rbp)
 	movq %rsi, %r15
 	leaq _donna_nil(%rip), %rsi
 	callq _compiler_codegen_codegen_set_finished_blocks
@@ -3828,7 +3841,7 @@ Lbb179:
 	movq %r12, %rdi
 	movq (%rax), %r12
 	movq 8(%rax), %r8
-	movq %r8, -48(%rbp)
+	movq %r8, -80(%rbp)
 	movq %rdi, %r14
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
@@ -3838,7 +3851,7 @@ Lbb179:
 	leaq _str1557(%rip), %rdi
 	callq _compiler_codegen_il_Global
 	movq %r14, %rdi
-	movq %rax, -8(%rbp)
+	movq %rax, -16(%rbp)
 	callq _compiler_codegen_il_Const
 	movq %rbx, %rdi
 	movq %rax, %r14
@@ -3856,9 +3869,9 @@ Lbb179:
 	movq %r14, %rdi
 	movq %rax, %rsi
 	movq %rbx, %rax
-	movq -16(%rbp), %rbx
+	movq -24(%rbp), %rbx
 	movq %rdi, %r14
-	movq -8(%rbp), %rdi
+	movq -16(%rbp), %rdi
 	movq $1, (%rsi)
 	movq %rax, 8(%rsi)
 	leaq _donna_nil(%rip), %rax
@@ -3870,63 +3883,73 @@ Lbb179:
 	movq %rsi, %r14
 	movq -32(%rbp), %rsi
 	movq %rdi, %r15
-	movq -24(%rbp), %rdi
+	movq -40(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r15, %rdi
-	movq %rax, -40(%rbp)
+	movq %rax, -64(%rbp)
+	movq -48(%rbp), %r15
 	callq _compiler_codegen_il_Const
-	movq %rax, %rdi
-	movq %rdi, %r15
-	movq %r12, %rdi
-	callq _compiler_codegen_il_Temporary
-	movq %r15, %rdi
-	movq %rax, %rsi
-	movq -40(%rbp), %r15
-	callq _compiler_codegen_il_Storel
-	movq %r15, %rdi
-	movq %rax, %rsi
-	callq _compiler_codegen_il_volatile_inst
 	movq %r13, %rdi
-	movq %rax, %r15
+	movq %rax, -56(%rbp)
 	movq %rdi, %r13
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r15, %rcx
 	movq %r13, %rdi
 	movq %rax, %rsi
-	movq -48(%rbp), %r8
+	movq %rdi, %r13
+	movq -56(%rbp), %rdi
+	callq _compiler_codegen_il_Storel
+	movq %r13, %rdi
+	movq %rax, %rsi
+	movq %rdi, %r13
+	movq -64(%rbp), %rdi
+	callq _compiler_codegen_il_volatile_inst
+	movq %r13, %rdi
+	movq %rax, -72(%rbp)
+	movq %rdi, %r13
+	movq %r12, %rdi
+	callq _compiler_codegen_il_Temporary
+	movq %r15, %rdx
+	movq %r13, %rdi
+	movq %rax, %rsi
+	movq -72(%rbp), %rcx
+	movq -80(%rbp), %r8
+	movq -88(%rbp), %r13
+	movq %rdx, %r15
 	movl $0, %edx
 	callq _compiler_codegen_codegen_gen_field_stores
 	movq %r12, %rdi
-	movq (%rax), %r13
-	movq 8(%rax), %r12
+	movq (%rax), %r12
+	movq 8(%rax), %rax
+	movq %rax, -96(%rbp)
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _donna_option_Some
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Ret
-	movq %r13, %rdi
+	movq %r12, %rdi
 	movq %rax, %rsi
+	movq -96(%rbp), %r12
 	callq _compiler_codegen_il_volatile_inst
 	movq %r12, %rdi
-	movq %rax, %r12
-	movq %rdi, %r13
+	movq %rax, -112(%rbp)
+	movq %rdi, %r12
 	leaq _compiler_codegen_il_Long(%rip), %rdi
 	callq _donna_option_Some
-	movq %r13, %rdi
-	movq %rax, %r15
-	movq %rdi, %r13
+	movq %r12, %rdi
+	movq %rax, -104(%rbp)
+	movq %rdi, %r12
 	movl $24, %edi
 	callq _malloc
-	movq %r15, %rcx
+	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %r13, %rdi
+	movq %r12, %rdi
 	movq %rax, %r8
-	movq -64(%rbp), %r13
-	movq -56(%rbp), %rdx
+	movq -104(%rbp), %rcx
+	movq -112(%rbp), %rax
 	movq $1, (%r8)
-	movq %r12, 8(%r8)
+	movq %rax, 8(%r8)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r8)
 	movq %rsi, %r14
@@ -3987,7 +4010,7 @@ Lbb181:
 	movq %rax, (%rbx)
 Lbb183:
 	movq %rbp, %rsp
-	subq $112, %rsp
+	subq $160, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -4073,76 +4096,68 @@ _compiler_codegen_codegen_gen_field_stores:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $40, %rsp
+	subq $56, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %r8, %r13
-	movq %rcx, %r15
-	movq %rdx, %r14
+	movq %r8, %r15
+	movq %rcx, %r14
+	movq %rdx, %r13
 	movq %rsi, %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz Lbb191
 	movq 16(%rdi), %rbx
-	movq %rbx, -8(%rbp)
-	imulq $8, %r14, %rax
+	imulq $8, %r13, %rax
 	movq %rax, %rdi
 	addq $8, %rdi
-	movq %rdi, %rbx
-	movq %r14, %rdi
+	movq %rdi, -8(%rbp)
+	movq %r13, %rdi
 	callq _donna_int_to_string
-	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %rbx
 	leaq _str1634(%rip), %rdi
 	callq ___rt_str_concat
-	movq %r13, %r8
-	movq %rbx, %rdi
+	movq %r15, %r8
 	movq %rax, -24(%rbp)
-	movq %rdi, %rbx
 	movq %r8, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %rbx, %rdi
-	movq (%rax), %rbx
+	movq (%rax), %r15
 	movq 8(%rax), %r8
-	movq %r8, -16(%rbp)
-	movq %rdi, %r13
-	movq %rbx, %rdi
+	movq %r8, -32(%rbp)
+	movq %r15, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r13, %rdi
-	movq %rax, %r13
+	movq %rax, -16(%rbp)
+	movq -8(%rbp), %rdi
 	callq _compiler_codegen_il_Const
-	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %rbx
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Add
-	movq %r14, %rdx
-	movq %r13, %rsi
-	movq %rbx, %rdi
+	movq %r13, %rdx
+	movq %r12, %rsi
 	movq %rax, %rcx
-	movq %r15, %rax
-	movq -16(%rbp), %r14
-	movq -8(%rbp), %rbx
+	movq %r14, %rax
+	movq %rsi, %r12
+	movq -16(%rbp), %rsi
+	movq -24(%rbp), %rdi
 	movq %rdx, %r13
 	leaq _compiler_codegen_il_Long(%rip), %rdx
-	movq %rdi, %r15
+	movq %rdi, %r14
 	movq %rax, %rdi
 	callq _compiler_codegen_il_assign_inst
-	movq %r15, %rdi
-	movq %rax, -32(%rbp)
-	movq %rdi, %r15
-	movq -24(%rbp), %rdi
+	movq %r14, %rdi
+	movq %rax, -40(%rbp)
+	movq -32(%rbp), %r14
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rdi
-	movq %rax, %r15
+	movq %rax, -48(%rbp)
+	movq -40(%rbp), %r15
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rdi
 	movq %rax, %rsi
-	movq -32(%rbp), %r15
+	movq %rdi, %r15
+	movq -48(%rbp), %rdi
 	callq _compiler_codegen_il_Storel
 	movq %r15, %rdi
 	movq %rax, %rsi
@@ -4156,8 +4171,8 @@ _compiler_codegen_codegen_gen_field_stores:
 	callq _compiler_codegen_codegen_gen_field_stores
 	jmp Lbb193
 Lbb191:
-	movq %r13, %r12
-	movq %r15, %rbx
+	movq %r15, %r12
+	movq %r14, %rbx
 	movl $16, %edi
 	callq _malloc
 	movq %r12, %r8
@@ -4191,14 +4206,14 @@ _compiler_codegen_codegen_gen_functions:
 	cmpq $0, %rdi
 	jz Lbb203
 	movq 8(%rax), %rdi
-	movq 16(%rax), %r12
+	movq 16(%rax), %r13
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	setz %r8b
 	movzbq %r8b, %r8
-	movq %rcx, %r13
+	movq %rcx, %r12
 	subq $16, %rsp
 	movq %rsp, %rcx
 	cmpl $0, %r8d
@@ -4217,31 +4232,28 @@ Lbb198:
 Lbb199:
 	cmpl $0, %eax
 	jnz Lbb201
-	movq %rsi, %r14
+	movq %rsi, %r15
 	callq _compiler_codegen_codegen_gen_function
-	movq %r13, %rcx
-	movq %r12, %rdi
-	movq %rcx, %r12
-	movq (%rax), %rcx
-	movq %rcx, -16(%rbp)
-	movq 8(%rax), %r15
-	movq %rdi, %r13
+	movq %r13, %rdi
+	movq (%rax), %r13
+	movq 8(%rax), %rdx
+	movq %rdx, -16(%rbp)
+	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
-	movq %r15, %rdx
-	movq %r14, %rsi
-	movq %r13, %rdi
+	movq %r15, %rsi
+	movq %r14, %rdi
 	movq %rax, %rcx
-	movq -16(%rbp), %rax
+	movq -16(%rbp), %rdx
 	movq $1, (%rcx)
-	movq %rax, 8(%rcx)
+	movq %r13, 8(%rcx)
 	movq %r12, 16(%rcx)
 	callq _compiler_codegen_codegen_gen_functions
 	movq %rax, (%rbx)
 	jmp Lbb205
 Lbb201:
-	movq %r12, %rdi
-	movq %r13, %rcx
+	movq %r13, %rdi
+	movq %r12, %rcx
 	movq %rcx, %r12
 	callq _compiler_codegen_codegen_gen_functions
 	movq %rax, (%rbx)
@@ -4279,13 +4291,13 @@ _compiler_codegen_codegen_gen_function:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rdx, %r13
+	movq %rdx, %r14
 	movq %rdi, %rdx
 	movq %rsi, %rdi
 	movq 8(%rdx), %rsi
 	movq 16(%rdx), %rcx
-	movq 24(%rdx), %r14
-	movq %r14, -16(%rbp)
+	movq 24(%rdx), %r13
+	movq %r13, -16(%rbp)
 	movq 32(%rdx), %rax
 	movq 40(%rdx), %rbx
 	movq %rbx, -24(%rbp)
@@ -4293,9 +4305,8 @@ _compiler_codegen_codegen_gen_function:
 	leaq _compiler_codegen_il_Private(%rip), %rcx
 	movq %rax, %rbx
 	leaq _compiler_codegen_il_Public(%rip), %rax
-	mov %rax, %r12
-	cmovnz %rcx, %r12
-	movq %r12, -64(%rbp)
+	cmovnz %rcx, %rax
+	movq %rax, -80(%rbp)
 	movq %rsi, %r15
 	leaq _str1746(%rip), %rsi
 	movq %rdi, %r12
@@ -4304,23 +4315,23 @@ _compiler_codegen_codegen_gen_function:
 	movq %r12, %rdi
 	movq %rax, %rcx
 	movq %rbx, %rax
-	movq %rax, %rbx
+	movq %rax, %r12
 	movq -24(%rbp), %rax
 	subq $16, %rsp
-	movq %rsp, %r12
+	movq %rsp, %rbx
 	cmpq $1, %rcx
 	jz Lbb214
-	movq %rdi, %r14
+	movq %rdi, %r13
 	callq _donna_string_is_empty
 	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, %rcx
-	movq %rbx, %rax
-	movq %rax, %rbx
+	movq %r12, %rax
+	movq %rax, %r12
 	movq -24(%rbp), %rax
 	movq -16(%rbp), %r15
 	subq $16, %rsp
-	movq %rsp, %r14
+	movq %rsp, %r13
 	cmpq $1, %rcx
 	jz Lbb210
 	movq %rsi, %r15
@@ -4332,47 +4343,47 @@ _compiler_codegen_codegen_gen_function:
 	callq ___rt_str_concat
 	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %rbx, %rax
-	movq -24(%rbp), %rbx
-	movq %rsi, (%r14)
+	movq %r12, %rax
+	movq -24(%rbp), %r12
+	movq %rsi, (%r13)
 	jmp Lbb212
 Lbb210:
-	xchgq %rax, %rbx
+	xchgq %rax, %r12
 	movq %r15, %rdi
-	movq %rsi, (%r14)
+	movq %rsi, (%r13)
 Lbb212:
-	movq %rsi, (%r12)
-	movq %rax, %r12
+	movq %rsi, (%rbx)
+	movq %rax, %rbx
 	jmp Lbb217
 Lbb214:
-	xchgq %rax, %rbx
-	movq %r14, %rdi
+	xchgq %rax, %r12
+	movq %r13, %rdi
 	leaq _str1753(%rip), %rcx
-	movq %rcx, (%r12)
-	movq %rax, %r12
+	movq %rcx, (%rbx)
+	movq %rax, %rbx
 	leaq _str1753(%rip), %rax
 	movq %rax, %rsi
 Lbb217:
-	movq %rsi, %r14
+	movq %rsi, %r13
 	leaq _donna_nil(%rip), %rsi
 	callq _compiler_codegen_codegen_build_fn_params
-	movq %r13, %rdi
-	movq %rax, -80(%rbp)
-	movq %r12, %rax
+	movq %r14, %rdi
+	movq %rax, -56(%rbp)
+	movq %rbx, %rax
 	subq $16, %rsp
-	movq %rsp, %r13
-	movq %rax, %r12
+	movq %rsp, %r14
+	movq %rax, %rbx
 	movq (%rax), %rax
 	cmpq $4, %rax
 	jz Lbb219
 	movq %rdi, %r15
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	callq _compiler_codegen_codegen_donna_type_to_qbe
 	movq %rax, %rdi
 	callq _donna_option_Some
 	movq %r15, %rdi
 	movq %rax, %rcx
-	movq %rcx, (%r13)
+	movq %rcx, (%r14)
 	jmp Lbb220
 Lbb219:
 	movq %rdi, %r15
@@ -4380,118 +4391,121 @@ Lbb219:
 	callq _donna_option_Some
 	movq %r15, %rdi
 	movq %rax, %rcx
-	movq %rcx, (%r13)
+	movq %rcx, (%r14)
 Lbb220:
 	movq %rcx, %r15
-	movq %rdi, %r13
+	movq %r15, -48(%rbp)
+	movq %rdi, %r14
 	leaq _str1776(%rip), %rdi
 	callq _compiler_codegen_il_new_block
-	movq %r13, %rdi
+	movq %r14, %rdi
 	movq %rax, -32(%rbp)
-	movq %rdi, %r13
+	movq %rdi, %r14
 	callq _compiler_codegen_codegen_state_finished_blocks
-	movq %r13, %rdi
-	movq %rax, -56(%rbp)
+	movq %r14, %rdi
+	movq %rax, -72(%rbp)
 	movq -32(%rbp), %rsi
-	movq %rsi, %r13
+	movq %rsi, %r14
 	leaq _donna_nil(%rip), %rsi
 	callq _compiler_codegen_codegen_set_finished_blocks
-	movq %r13, %rsi
-	movq %rbx, %rdi
+	movq %r14, %rsi
+	movq %r12, %rdi
 	movq %rax, %rdx
 	callq _compiler_codegen_codegen_gen_expr
 	movq (%rax), %rdi
 	movq %rdi, -40(%rbp)
-	movq 8(%rax), %rbx
+	movq 8(%rax), %r14
 	movq 16(%rax), %rdi
-	movq %rdi, %r13
-	movq %rbx, %rdi
+	movq %rdi, %r12
+	movq %r14, %rdi
 	callq _compiler_codegen_codegen_block_jumps
 	movq %r15, %rcx
-	movq %r13, %rdi
-	movq %rax, %rdx
-	movq %r12, %rax
-	movq %rdi, %r13
+	movq %r12, %rdi
+	movq %rax, %rsi
+	movq %rbx, %rax
+	movq %rdi, %r15
 	movq -40(%rbp), %rdi
-	movq -56(%rbp), %r12
-	movq %rcx, %r15
+	movq -56(%rbp), %rdx
 	subq $16, %rsp
-	movq %rsp, %rcx
-	movq %rcx, -48(%rbp)
-	cmpq $1, %rdx
-	jz Lbb227
+	movq %rsp, %rbx
+	cmpq $1, %rsi
+	jz Lbb226
 	subq $16, %rsp
 	movq %rsp, %r12
 	movq (%rax), %rax
 	cmpq $4, %rax
-	jz Lbb224
+	jz Lbb223
 	callq _donna_option_Some
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Ret
-	movq %r13, %rdi
+	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %rbx, %rax
-	movq -48(%rbp), %r13
-	movq %rdi, %rbx
+	movq %r14, %rax
+	movq -48(%rbp), %r15
+	movq %rdi, %r14
 	movq %rax, %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %r12, %rcx
-	movq %rbx, %rdi
-	movq -56(%rbp), %r12
-	movq %rax, (%rcx)
-	movq %rdi, %rbx
-	jmp Lbb226
-Lbb224:
-	movq %r13, %rdi
-	movq %rdi, %r13
+	movq %r14, %rdi
+	movq -56(%rbp), %r14
+	movq %rax, (%r12)
+	jmp Lbb225
+Lbb223:
+	movq %r15, %rdi
+	movq %rdi, %r15
 	movl $0, %edi
 	callq _compiler_codegen_il_Const
 	movq %rax, %rdi
 	callq _donna_option_Some
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Ret
-	movq %r13, %rdi
+	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %rbx, %rax
-	movq -48(%rbp), %r13
-	movq %rdi, %rbx
+	movq %r14, %rax
+	movq -48(%rbp), %r15
+	movq %rdi, %r14
 	movq %rax, %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %r12, %rcx
-	movq -56(%rbp), %r12
-	movq %rax, (%rcx)
+	movq %r14, %rdi
+	movq -56(%rbp), %r14
+	movq %rax, (%r12)
+Lbb225:
+	movq %rax, (%rbx)
+	jmp Lbb228
 Lbb226:
-	movq %rax, (%r13)
-	jmp Lbb229
-Lbb227:
-	movq %rbx, %rax
-	movq %r13, %rbx
-	movq %rcx, %r13
-	movq %rax, (%r13)
-Lbb229:
-	movq %rax, %r13
-	movq %rbx, %rdi
+	movq %r15, %rdi
+	movq %rcx, %r15
+	movq %r14, %rax
+	movq %rdx, %r14
+	movq %rax, (%rbx)
+Lbb228:
+	movq %rax, %rbx
+	movq %rdi, %r12
 	callq _compiler_codegen_codegen_state_finished_blocks
 	movq %rax, %rdi
 	callq _donna_list_reverse
-	movq %rax, -72(%rbp)
+	movq %r12, %rdi
+	movq %rax, -64(%rbp)
+	movq %rdi, %r12
 	movl $24, %edi
 	callq _malloc
+	movq %r12, %rdi
 	movq %rax, %rsi
-	movq %r13, %rax
+	movq %rbx, %rax
+	movq %rdi, %rbx
 	movq -64(%rbp), %rdi
-	movq %rdi, %r13
-	movq -72(%rbp), %rdi
+	movq -72(%rbp), %r12
 	movq $1, (%rsi)
 	movq %rax, 8(%rsi)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%rsi)
 	callq _donna_list_append
 	movq %r15, %rcx
-	movq %r14, %rsi
-	movq %r13, %rdi
+	movq %r14, %rdx
+	movq %r13, %rsi
+	movq %rbx, %rdi
 	movq %rax, %r8
-	movq -80(%rbp), %rdx
+	movq %rdi, %rbx
+	movq -80(%rbp), %rdi
 	callq _compiler_codegen_il_Function
 	movq %r12, %rsi
 	movq %rbx, %rdi
@@ -4526,7 +4540,7 @@ _compiler_codegen_codegen_build_fn_params:
 	movq %rsi, %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb233
+	jz Lbb232
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %r12
 	movq (%rax), %rdi
@@ -4554,11 +4568,11 @@ _compiler_codegen_codegen_build_fn_params:
 	movq %r12, 8(%rsi)
 	movq %rbx, 16(%rsi)
 	callq _compiler_codegen_codegen_build_fn_params
-	jmp Lbb235
-Lbb233:
+	jmp Lbb234
+Lbb232:
 	movq %rbx, %rdi
 	callq _donna_list_reverse
-Lbb235:
+Lbb234:
 	popq %r14
 	popq %r13
 	popq %r12
@@ -4579,7 +4593,7 @@ _compiler_codegen_codegen_gen_constants:
 	movq %rdi, %rcx
 	movq (%rcx), %rdx
 	cmpq $0, %rdx
-	jz Lbb238
+	jz Lbb237
 	movq 8(%rcx), %rdi
 	movq 16(%rcx), %rbx
 	movq %rax, %rdx
@@ -4589,7 +4603,7 @@ _compiler_codegen_codegen_gen_constants:
 	movq %rbx, %rdi
 	movq %rax, %rdx
 	callq _compiler_codegen_codegen_gen_constants
-Lbb238:
+Lbb237:
 	popq %r12
 	popq %rbx
 	leave
@@ -4629,7 +4643,7 @@ _compiler_codegen_codegen_gen_constant:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb242
+	jz Lbb241
 	movq %rsi, %r15
 	leaq _str1880(%rip), %rsi
 	callq ___rt_str_concat
@@ -4640,12 +4654,12 @@ _compiler_codegen_codegen_gen_constant:
 	movq %rax, %rsi
 	movq %r12, %rax
 	movq %rsi, (%rbx)
-	jmp Lbb244
-Lbb242:
+	jmp Lbb243
+Lbb241:
 	movq %r13, %rdi
 	movq %r12, %rax
 	movq %rsi, (%rbx)
-Lbb244:
+Lbb243:
 	movq %rsi, %r15
 	subq $16, %rsp
 	movq %rsp, %rbx
@@ -4655,15 +4669,15 @@ Lbb244:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb256
+	jnz Lbb255
 	cmpq $0, %rax
-	jz Lbb250
-	cmpq $1, %rax
 	jz Lbb249
+	cmpq $1, %rax
+	jz Lbb248
 	movq %r12, (%rbx)
 	movq %r12, %rax
-	jmp Lbb258
-Lbb249:
+	jmp Lbb257
+Lbb248:
 	movq %rdi, %r13
 	movq 8(%r14), %rdi
 	callq _compiler_codegen_il_FloatConst
@@ -4697,8 +4711,8 @@ Lbb249:
 	movq %r12, %rdi
 	callq _compiler_codegen_codegen_add_data_def
 	movq %rax, (%rbx)
-	jmp Lbb258
-Lbb250:
+	jmp Lbb257
+Lbb249:
 	movq %rdi, %r13
 	movq 8(%r14), %rdi
 	callq _donna_int_parse
@@ -4710,16 +4724,16 @@ Lbb250:
 	movq %rsp, %rax
 	movq (%rcx), %rdx
 	cmpq $0, %rdx
-	jz Lbb252
+	jz Lbb251
 	movq %rdi, %r13
 	movq 8(%rcx), %rdi
 	movq %rdi, (%rax)
-	jmp Lbb255
-Lbb252:
+	jmp Lbb254
+Lbb251:
 	movq %rdi, %r13
 	movq $0, (%rax)
 	movl $0, %edi
-Lbb255:
+Lbb254:
 	callq _compiler_codegen_il_Constant
 	movq %r13, %rdi
 	movq %rax, %r14
@@ -4751,8 +4765,8 @@ Lbb255:
 	movq %r12, %rdi
 	callq _compiler_codegen_codegen_add_data_def
 	movq %rax, (%rbx)
-	jmp Lbb258
-Lbb256:
+	jmp Lbb257
+Lbb255:
 	movq %r14, %r13
 	movq 8(%r13), %rdi
 	movq %rdi, %r13
@@ -4800,7 +4814,7 @@ Lbb256:
 	movq %rax, %rdi
 	callq _compiler_codegen_codegen_add_data_def
 	movq %rax, (%rbx)
-Lbb258:
+Lbb257:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -4818,7 +4832,7 @@ _compiler_codegen_codegen_gen_expr:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $600, %rsp
+	subq $616, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -4829,45 +4843,45 @@ _compiler_codegen_codegen_gen_expr:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb434
+	jnz Lbb433
 	cmpq $1, %rax
-	jz Lbb432
+	jz Lbb431
 	cmpq $2, %rax
-	jz Lbb430
+	jz Lbb429
 	cmpq $3, %rax
-	jz Lbb426
+	jz Lbb425
 	cmpq $4, %rax
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb390
+	jnz Lbb389
 	cmpq $5, %rax
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb378
+	jnz Lbb377
 	cmpq $6, %rax
 	jz Lbb336
 	cmpq $7, %rax
-	jz Lbb316
+	jz Lbb315
 	cmpq $8, %rax
-	jz Lbb307
-	cmpq $9, %rax
 	jz Lbb306
-	cmpq $10, %rax
+	cmpq $9, %rax
 	jz Lbb305
-	cmpq $11, %rax
+	cmpq $10, %rax
 	jz Lbb304
-	cmpq $12, %rax
+	cmpq $11, %rax
 	jz Lbb303
-	cmpq $13, %rax
+	cmpq $12, %rax
 	jz Lbb302
+	cmpq $13, %rax
+	jz Lbb301
 	cmpq $14, %rax
-	jz Lbb296
+	jz Lbb295
 	cmpq $15, %rax
-	jz Lbb278
-	cmpq $16, %rax
 	jz Lbb277
+	cmpq $16, %rax
+	jz Lbb276
 	movq %rsi, %r12
 	leaq _str2922(%rip), %rsi
 	movq %rdx, %rdi
@@ -4933,13 +4947,12 @@ _compiler_codegen_codegen_gen_expr:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb440
-Lbb277:
+	jmp Lbb439
+Lbb276:
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
 	callq _compiler_codegen_codegen_gen_expr
 	movq (%rax), %r14
-	movq %r14, -16(%rbp)
 	movq 8(%rax), %r12
 	movq 16(%rax), %rdi
 	leaq _str2876(%rip), %rsi
@@ -4950,47 +4963,35 @@ Lbb277:
 	leaq _str2882(%rip), %rdi
 	callq _compiler_codegen_il_Global
 	movq %r13, %rdi
-	movq %rax, %r13
+	movq %rax, -8(%rbp)
 	callq _compiler_codegen_il_Global
-	movq %r13, %rdi
 	movq %rax, %r13
-	movq %rdi, %r14
 	movl $16, %edi
 	callq _malloc
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq %rax, %r15
 	leaq _compiler_codegen_il_Long(%rip), %rax
-	movq %rax, (%r14)
-	movq %r13, 8(%r14)
-	movq %rdi, %r13
+	movq %rax, (%r15)
+	movq %r13, 8(%r15)
 	movl $24, %edi
 	callq _malloc
-	movq %r13, %rdi
 	movq %rax, %r13
 	movq $1, (%r13)
-	movq %r14, 8(%r13)
+	movq %r15, 8(%r13)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r13)
-	movq %rdi, %r14
 	leaq _str2891(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %r14, %rdi
 	movq %rax, %r15
-	movq %rdi, %r14
 	movl $16, %edi
 	callq _malloc
-	movq %r14, %rdi
-	movq %rax, %r14
-	leaq _compiler_codegen_il_Long(%rip), %rax
-	movq %rax, (%r14)
-	movq %r15, 8(%r14)
-	movq %rdi, %r15
+	xchgq %rax, %r15
+	leaq _compiler_codegen_il_Long(%rip), %rcx
+	movq %rcx, (%r15)
+	movq %rax, 8(%r15)
 	movl $24, %edi
 	callq _malloc
-	movq %r15, %rdi
-	movq %rax, %r15
-	movq %r14, %rax
-	movq -16(%rbp), %r14
+	xchgq %rax, %r15
+	movq -8(%rbp), %rdi
 	movq $1, (%r15)
 	movq %rax, 8(%r15)
 	movq %r13, 16(%r15)
@@ -5046,44 +5047,44 @@ Lbb277:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb440
-Lbb278:
+	jmp Lbb439
+Lbb277:
 	movq %rdi, %rax
 	movq 8(%rax), %rdi
-	movq 16(%rax), %rcx
-	movq %rcx, -32(%rbp)
-	movq 24(%rax), %rbx
+	movq 16(%rax), %r14
+	movq %r14, -16(%rbp)
+	movq 24(%rax), %r12
 	movq %rsi, %r13
 	leaq _str2783(%rip), %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq %rdx, %rdi
 	callq _compiler_codegen_codegen_fresh_label
 	movq %r13, %rsi
-	movq %r12, %rdi
-	movq (%rax), %r15
-	movq 8(%rax), %r12
+	movq %rbx, %rdi
+	movq (%rax), %rbx
+	movq 8(%rax), %r14
 	subq $16, %rsp
 	movq %rsp, %rcx
-	movq (%rbx), %rax
+	movq (%r12), %rax
 	cmpq $7, %rax
-	jz Lbb281
+	jz Lbb280
 	leaq _compiler_typesystem_types_TNil(%rip), %rax
 	movq %rax, (%rcx)
 	leaq _compiler_typesystem_types_TNil(%rip), %rax
-	jmp Lbb282
+	jmp Lbb281
+Lbb280:
+	movq 16(%r12), %rax
+	movq %rax, (%rcx)
 Lbb281:
-	movq 16(%rbx), %rax
-	movq %rax, (%rcx)
-Lbb282:
-	movq %rax, %rbx
+	movq %rax, %r12
 	movq %rsi, %r13
 	leaq _donna_nil(%rip), %rsi
 	callq _compiler_codegen_codegen_build_fn_params
-	movq %r12, %rdi
-	movq %rax, -72(%rbp)
-	movq %rbx, %rax
+	movq %r14, %rdi
+	movq %rax, -64(%rbp)
+	movq %r12, %rax
 	subq $16, %rsp
-	movq %rsp, %rbx
+	movq %rsp, %r15
 	movq %rax, %r12
 	movq (%rax), %rax
 	cmpq $4, %rax
@@ -5095,73 +5096,75 @@ Lbb282:
 	callq _donna_option_Some
 	movq %r14, %rdi
 	movq %rax, %rcx
-	movq %rcx, (%rbx)
-	jmp Lbb285
+	movq -16(%rbp), %r14
+	movq %rcx, (%r15)
+	movq %rcx, -48(%rbp)
+	jmp Lbb286
 Lbb284:
 	movq %rdi, %r14
 	leaq _compiler_codegen_il_Word(%rip), %rdi
 	callq _donna_option_Some
 	movq %r14, %rdi
 	movq %rax, %rcx
-	movq %rcx, (%rbx)
-Lbb285:
-	movq %rcx, %r14
-	movq %r14, -48(%rbp)
-	movq %rdi, %rbx
+	movq -16(%rbp), %r14
+	movq %rcx, (%r15)
+	movq %rcx, -48(%rbp)
+Lbb286:
+	movq %rdi, %r15
 	leaq _str2811(%rip), %rdi
 	callq _compiler_codegen_il_new_block
-	movq %rbx, %rdi
+	movq %r15, %rdi
 	movq %rax, -24(%rbp)
-	movq %rdi, %rbx
+	movq %rdi, %r15
 	callq _compiler_codegen_codegen_state_finished_blocks
-	movq %rbx, %rdi
-	movq %rax, -80(%rbp)
+	movq %r15, %rdi
+	movq %rax, -72(%rbp)
 	movq -24(%rbp), %rsi
-	movq %rsi, %rbx
+	movq %rsi, %r15
 	leaq _donna_nil(%rip), %rsi
 	callq _compiler_codegen_codegen_set_finished_blocks
-	movq %rbx, %rsi
+	movq %r15, %rsi
+	movq %r14, %rdi
 	movq %rax, %rdx
-	movq -32(%rbp), %rdi
 	callq _compiler_codegen_codegen_gen_expr
-	movq (%rax), %rdx
-	movq %rdx, -40(%rbp)
-	movq 8(%rax), %rbx
+	movq (%rax), %rdi
+	movq %rdi, -32(%rbp)
+	movq 8(%rax), %r14
 	movq 16(%rax), %rdi
-	movq %rdi, -56(%rbp)
-	movq %rbx, %rdi
+	movq %rdi, %r15
+	movq %r14, %rdi
 	callq _compiler_codegen_codegen_block_jumps
-	movq %r14, %rcx
-	movq %rax, %rsi
+	movq %r15, %rdi
+	movq %rax, %rdx
 	movq %r12, %rax
-	movq -56(%rbp), %rdi
-	movq -40(%rbp), %rdx
+	movq -48(%rbp), %rcx
+	movq %rdi, %r15
+	movq -32(%rbp), %rdi
 	subq $16, %rsp
 	movq %rsp, %r12
-	cmpq $1, %rsi
-	jz Lbb293
-	movq %rdx, %rdi
+	cmpq $1, %rdx
+	jz Lbb292
 	subq $16, %rsp
-	movq %rsp, %r14
+	movq %rsp, %rcx
+	movq %rcx, -40(%rbp)
 	movq (%rax), %rax
 	cmpq $4, %rax
-	jz Lbb290
+	jz Lbb289
 	callq _donna_option_Some
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Ret
 	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %rbx, %rax
-	movq -48(%rbp), %r15
-	movq %rdi, %rbx
+	movq %r14, %rax
+	movq -40(%rbp), %r14
+	movq %rdi, %r15
 	movq %rax, %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %rbx, %rdi
-	movq -56(%rbp), %rbx
+	movq %r15, %rdi
+	movq -48(%rbp), %r15
 	movq %rax, (%r14)
-	xchgq %rbx, %rdi
-	jmp Lbb292
-Lbb290:
+	jmp Lbb291
+Lbb289:
 	movq %r15, %rdi
 	movq %rdi, %r15
 	movl $0, %edi
@@ -5172,31 +5175,30 @@ Lbb290:
 	callq _compiler_codegen_il_Ret
 	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %rbx, %rax
-	movq -48(%rbp), %r15
-	movq %rdi, %rbx
+	movq %r14, %rax
+	movq -40(%rbp), %r14
+	movq %rdi, %r15
 	movq %rax, %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %rbx, %rdi
-	movq %rdi, %rbx
-	movq -56(%rbp), %rdi
+	movq %r15, %rdi
+	movq -48(%rbp), %r15
 	movq %rax, (%r14)
+Lbb291:
+	movq %rax, (%r12)
+	jmp Lbb294
 Lbb292:
-	movq %rax, (%r12)
-	jmp Lbb295
-Lbb293:
-	movq %rbx, %rax
-	movq %r15, %rbx
+	movq %r15, %rdi
 	movq %rcx, %r15
+	movq %r14, %rax
 	movq %rax, (%r12)
-Lbb295:
+Lbb294:
 	movq %rax, %r12
 	movq %rdi, %r14
 	callq _compiler_codegen_codegen_state_finished_blocks
 	movq %rax, %rdi
 	callq _donna_list_reverse
 	movq %r14, %rdi
-	movq %rax, -64(%rbp)
+	movq %rax, -56(%rbp)
 	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
@@ -5204,8 +5206,8 @@ Lbb295:
 	movq %rax, %rsi
 	movq %r12, %rax
 	movq %rdi, %r12
-	movq -64(%rbp), %rdi
-	movq -72(%rbp), %r14
+	movq -56(%rbp), %rdi
+	movq -64(%rbp), %r14
 	movq $1, (%rsi)
 	movq %rax, 8(%rsi)
 	leaq _donna_nil(%rip), %rax
@@ -5215,7 +5217,7 @@ Lbb295:
 	movq %r14, %rdx
 	movq %r12, %rdi
 	movq %rax, %r8
-	movq -80(%rbp), %rsi
+	movq -72(%rbp), %rsi
 	movq %rsi, %r14
 	movq %rbx, %rsi
 	movq %rdi, %r12
@@ -5249,14 +5251,13 @@ Lbb295:
 	movq %r12, (%rax)
 	movq %rsi, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb440
-Lbb296:
+	jmp Lbb439
+Lbb295:
 	movq 8(%rdi), %rdi
 	movq %rdi, %rbx
 	callq _compiler_codegen_codegen_gen_expr
 	movq %rbx, %rdi
-	movq (%rax), %rcx
-	movq %rcx, -88(%rbp)
+	movq (%rax), %r14
 	movq 8(%rax), %r12
 	movq 16(%rax), %rbx
 	callq _compiler_typesystem_types_typed_expr_type
@@ -5265,9 +5266,9 @@ Lbb296:
 	movq %rsp, %rbx
 	movq (%rax), %rax
 	cmpq $1, %rax
-	jz Lbb300
-	cmpq $2, %rax
 	jz Lbb299
+	cmpq $2, %rax
+	jz Lbb298
 	movq %rdi, %r13
 	movl $16, %edi
 	callq _malloc
@@ -5277,8 +5278,8 @@ Lbb296:
 	leaq _compiler_codegen_il_Long(%rip), %rcx
 	movq %rcx, 8(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb301
-Lbb299:
+	jmp Lbb300
+Lbb298:
 	movq %rdi, %r13
 	movl $16, %edi
 	callq _malloc
@@ -5288,8 +5289,8 @@ Lbb299:
 	leaq _compiler_codegen_il_Long(%rip), %rcx
 	movq %rcx, 8(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb301
-Lbb300:
+	jmp Lbb300
+Lbb299:
 	movq %rdi, %r13
 	movl $16, %edi
 	callq _malloc
@@ -5299,9 +5300,9 @@ Lbb300:
 	leaq _compiler_codegen_il_Double(%rip), %rcx
 	movq %rcx, 8(%rax)
 	movq %rax, (%rbx)
-Lbb301:
+Lbb300:
 	movq (%rax), %rsi
-	movq 8(%rax), %r14
+	movq 8(%rax), %r15
 	callq _compiler_codegen_codegen_intern_string_nl
 	movq (%rax), %rdi
 	movq 8(%rax), %rbx
@@ -5309,35 +5310,29 @@ Lbb301:
 	leaq _str2751(%rip), %rdi
 	callq _compiler_codegen_il_Global
 	movq %r13, %rdi
-	movq %rax, %r13
+	movq %rax, -80(%rbp)
 	callq _compiler_codegen_il_Global
-	movq %r13, %rdi
-	movq %rax, %r15
-	movq %rdi, %r13
+	movq %rax, %r13
 	movl $16, %edi
 	callq _malloc
-	movq %r13, %rdi
-	movq %rax, %r13
-	leaq _compiler_codegen_il_Long(%rip), %rax
-	movq %rax, (%r13)
-	movq %r15, 8(%r13)
-	movq %rdi, %r15
+	xchgq %rax, %r13
+	leaq _compiler_codegen_il_Long(%rip), %rcx
+	movq %rcx, (%r13)
+	movq %rax, 8(%r13)
 	movl $24, %edi
 	callq _malloc
-	movq %r15, %rdi
-	movq %rax, %r15
+	xchgq %rax, %r15
 	movq $1, (%r15)
 	movq %r13, 8(%r15)
+	movq %rax, %r13
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r15)
-	movq %rdi, %r13
 	movl $16, %edi
 	callq _malloc
-	movq %r13, %rdi
-	movq %rax, %r13
-	movq -88(%rbp), %rax
-	movq %r14, (%r13)
-	movq %rax, 8(%r13)
+	xchgq %rax, %r13
+	movq -80(%rbp), %rdi
+	movq %rax, (%r13)
+	movq %r14, 8(%r13)
 	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
@@ -5361,12 +5356,12 @@ Lbb301:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb440
-Lbb302:
+	jmp Lbb439
+Lbb301:
 	movq 8(%rdi), %rdi
 	callq _compiler_codegen_codegen_gen_block_as_expr
-	jmp Lbb440
-Lbb303:
+	jmp Lbb439
+Lbb302:
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
 	movq %rsi, %rbx
@@ -5374,16 +5369,16 @@ Lbb303:
 	movq %rdx, %rcx
 	movq %rbx, %rdx
 	callq _compiler_codegen_codegen_gen_list_spread
-	jmp Lbb440
-Lbb304:
+	jmp Lbb439
+Lbb303:
 	movq 8(%rdi), %rdi
 	callq _compiler_codegen_codegen_gen_list
-	jmp Lbb440
-Lbb305:
+	jmp Lbb439
+Lbb304:
 	movq 8(%rdi), %rdi
 	callq _compiler_codegen_codegen_gen_tuple
-	jmp Lbb440
-Lbb306:
+	jmp Lbb439
+Lbb305:
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
 	movq 16(%rax), %r12
@@ -5402,8 +5397,8 @@ Lbb306:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq _compiler_codegen_codegen_gen_case
-	jmp Lbb440
-Lbb307:
+	jmp Lbb439
+Lbb306:
 	movq 8(%rdi), %rbx
 	movq 16(%rdi), %rdi
 	movq %rdi, %r12
@@ -5423,19 +5418,19 @@ Lbb307:
 	movq %rsp, %rbx
 	movq (%rax), %rax
 	cmpq $0, %rax
-	jz Lbb310
+	jz Lbb309
 	movq %r15, %rdi
 	movq %rdi, %r15
 	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rdi
-	movq %rax, -96(%rbp)
+	movq %rax, -88(%rbp)
 	movq %rdi, %r15
 	movl $1, %edi
 	callq _compiler_codegen_il_Const
 	movq %r15, %rdi
 	movq %rax, %rsi
-	movq -96(%rbp), %r15
+	movq -88(%rbp), %r15
 	callq _compiler_codegen_il_Xor
 	movq %r15, %rsi
 	movq %r14, %rdi
@@ -5453,37 +5448,37 @@ Lbb307:
 	movq %r13, 8(%rax)
 	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb310:
+	jmp Lbb439
+Lbb309:
 	callq _compiler_typesystem_types_typed_expr_type
 	movq %r15, %rdi
 	subq $16, %rsp
 	movq %rsp, %rcx
 	movq (%rax), %rax
 	cmpq $1, %rax
-	jz Lbb313
+	jz Lbb312
 	leaq _compiler_codegen_il_Long(%rip), %rax
 	movq %rax, (%rcx)
 	leaq _compiler_codegen_il_Long(%rip), %rax
-	movq %rax, -104(%rbp)
-	jmp Lbb315
-Lbb313:
+	movq %rax, -96(%rbp)
+	jmp Lbb314
+Lbb312:
 	leaq _compiler_codegen_il_Double(%rip), %rax
 	movq %rax, (%rcx)
 	leaq _compiler_codegen_il_Double(%rip), %rax
-	movq %rax, -104(%rbp)
-Lbb315:
+	movq %rax, -96(%rbp)
+Lbb314:
 	movq %rdi, %r15
 	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rdi
-	movq %rax, -112(%rbp)
-	movq -104(%rbp), %r15
+	movq %rax, -104(%rbp)
+	movq -96(%rbp), %r15
 	callq _compiler_codegen_il_Neg
 	movq %r15, %rdx
 	movq %r14, %rdi
 	movq %rax, %rcx
-	movq -112(%rbp), %rsi
+	movq -104(%rbp), %rsi
 	callq _compiler_codegen_il_assign_inst
 	movq %r13, %rdi
 	movq %rax, %r13
@@ -5495,68 +5490,71 @@ Lbb315:
 	movq %r13, 8(%rax)
 	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb316:
-	movq 8(%rdi), %r15
-	movq %rdi, %rax
+	jmp Lbb439
+Lbb315:
+	movq 8(%rdi), %rax
+	movq %rdi, %rcx
 	movq 16(%rdi), %rdi
-	movq 24(%rax), %r13
-	movq 32(%rax), %rax
-	movq %rax, -144(%rbp)
+	movq 24(%rcx), %r13
+	movq 32(%rcx), %r8
+	movq %r8, -144(%rbp)
 	subq $16, %rsp
-	movq %rsp, %rbx
-	movq %rbx, -232(%rbp)
-	movq (%r15), %rax
+	movq %rsp, %r12
+	movq %r12, -232(%rbp)
+	movq %rax, %rbx
+	movq (%rax), %rax
 	cmpq $21, %rax
 	jz Lbb334
-	movq %rdi, %rbx
+	movq %rdi, %r12
 	callq _compiler_codegen_codegen_gen_expr
-	movq %rbx, %rdi
+	movq %r12, %rdi
 	movq (%rax), %r12
 	movq 8(%rax), %rsi
 	movq 16(%rax), %rdx
-	movq %rdi, %rbx
+	movq %rdi, %r14
 	movq %r13, %rdi
 	callq _compiler_codegen_codegen_gen_expr
-	movq %rbx, %rdi
-	movq (%rax), %r14
+	movq %r14, %rdi
+	movq (%rax), %r15
+	movq %r15, -120(%rbp)
+	movq 8(%rax), %r14
 	movq %r14, -128(%rbp)
-	movq 8(%rax), %rbx
-	movq %rbx, -216(%rbp)
-	movq %rdi, %rbx
+	movq %rdi, %r14
 	movq 16(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %rbx, %rdi
-	movq %r15, %rbx
-	movq (%rax), %r15
-	movq 8(%rax), %rax
-	movq %rax, -152(%rbp)
-	movq %rdi, %r14
-	callq _compiler_typesystem_types_typed_expr_type
 	movq %r14, %rdi
-	movq %rax, -120(%rbp)
-	movq %rdi, %r14
+	movq (%rax), %r14
+	movq 8(%rax), %rcx
+	movq %rcx, -152(%rbp)
+	movq %rdi, %r15
+	callq _compiler_typesystem_types_typed_expr_type
+	movq %r15, %rdi
+	movq %rax, -112(%rbp)
+	movq %rdi, %r15
 	movq %r13, %rdi
 	callq _compiler_typesystem_types_typed_expr_type
-	movq %r14, %rdi
+	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r14
-	movq -120(%rbp), %rdi
+	movq %rdi, %r15
+	movq -112(%rbp), %rdi
 	movq %rbx, %rdx
 	callq _compiler_codegen_codegen_is_string_eq_op
-	movq %r14, %rdi
-	movq %rax, %rcx
-	movq -152(%rbp), %rax
-	movq -128(%rbp), %r14
+	movq %r15, %rdi
+	movq %rax, %rdx
+	movq %rbx, %rax
+	movq -152(%rbp), %rcx
+	movq %rax, %rbx
+	movq -128(%rbp), %rax
+	movq -120(%rbp), %r15
 	subq $16, %rsp
-	movq %rsp, %rdx
-	movq %rdx, -256(%rbp)
-	cmpq $1, %rcx
-	jz Lbb328
+	movq %rsp, %rsi
+	movq %rsi, -256(%rbp)
+	cmpq $1, %rdx
+	jz Lbb327
 	callq _compiler_typesystem_types_typed_expr_type
 	movq %r13, %rdi
 	movq %rax, -136(%rbp)
-	movq -216(%rbp), %r13
+	movq -128(%rbp), %r13
 	callq _compiler_typesystem_types_typed_expr_type
 	movq %r13, %rdi
 	movq %rax, %rsi
@@ -5564,62 +5562,60 @@ Lbb316:
 	movq -136(%rbp), %rdi
 	movq %rbx, %rdx
 	callq _compiler_codegen_codegen_is_float_eq_op
-	movq %r14, %rcx
+	movq %r15, %rcx
 	movq %r13, %rdi
-	movq %rax, %r8
+	movq %rax, %rdx
 	movq %rbx, %rax
-	movq -256(%rbp), %rdx
+	movq %r12, %r13
+	movq -256(%rbp), %r12
 	movq -232(%rbp), %rbx
-	movq -152(%rbp), %r14
+	movq -152(%rbp), %r15
 	movq -144(%rbp), %rsi
 	subq $16, %rsp
-	movq %rsp, %r13
-	movq %r13, -200(%rbp)
-	cmpq $1, %r8
-	jz Lbb320
-	movq %r12, %rdx
-	movq %rdi, %r12
+	movq %rsp, %r8
+	movq %r8, -200(%rbp)
+	cmpq $1, %rdx
+	jz Lbb319
+	movq %r13, %rdx
+	movq %rdi, %r13
 	movq %rax, %rdi
 	callq _compiler_codegen_codegen_binop_to_qbe
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq (%rax), %rcx
-	movq %rcx, -160(%rbp)
+	movq %rcx, -168(%rbp)
 	movq 8(%rax), %rdx
-	movq %rdx, -168(%rbp)
-	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %rdx, -160(%rbp)
+	movq %rdi, %r13
+	movq %r14, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq -256(%rbp), %r12
-	movq -168(%rbp), %rdx
-	movq -160(%rbp), %rcx
+	movq -200(%rbp), %r13
+	movq -160(%rbp), %rdx
+	movq -168(%rbp), %rcx
 	callq _compiler_codegen_il_assign_inst
+	movq %r14, %rdi
+	movq %rax, %r14
+	callq _compiler_codegen_il_Temporary
 	movq %r15, %rdi
 	movq %rax, -176(%rbp)
 	movq %rdi, %r15
-	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, %r15
-	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
 	movq -176(%rbp), %rcx
-	movq %r15, (%rax)
-	movq %rcx, 8(%rax)
-	movq %r14, 16(%rax)
+	movq %rcx, (%rax)
+	movq %r14, 8(%rax)
+	movq %r15, 16(%rax)
 	movq %rax, (%r13)
-	jmp Lbb327
-Lbb320:
-	movq %r12, %r13
-	movq %rdx, %r12
+	jmp Lbb326
+Lbb319:
 	xchgq %rcx, %rax
 	subq $16, %rsp
 	movq %rsp, %rdx
 	movq %rdx, -184(%rbp)
 	movq (%rcx), %rcx
 	cmpq $9, %rcx
-	jz Lbb324
+	jz Lbb323
 	movq %rax, %rcx
 	movq %r13, %rdx
 	leaq _compiler_codegen_il_Cned(%rip), %rsi
@@ -5631,8 +5627,8 @@ Lbb320:
 	movq -184(%rbp), %rax
 	movq %rcx, (%rax)
 	movq %rcx, -192(%rbp)
-	jmp Lbb326
-Lbb324:
+	jmp Lbb325
+Lbb323:
 	movq %rax, %rcx
 	movq %r13, %rdx
 	leaq _compiler_codegen_il_Ceqd(%rip), %rsi
@@ -5644,9 +5640,9 @@ Lbb324:
 	movq -184(%rbp), %rax
 	movq %rcx, (%rax)
 	movq %rcx, -192(%rbp)
-Lbb326:
+Lbb325:
 	movq %rdi, %r13
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r13, %rdi
 	movq %rax, %rsi
@@ -5654,55 +5650,67 @@ Lbb326:
 	movq -200(%rbp), %r13
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %r15, %rdi
-	movq %rax, -208(%rbp)
-	callq _compiler_codegen_il_Temporary
 	movq %r14, %rdi
 	movq %rax, %r14
+	callq _compiler_codegen_il_Temporary
+	movq %r15, %rdi
+	movq %rax, -208(%rbp)
 	movq %rdi, %r15
 	movl $24, %edi
 	callq _malloc
 	movq %r15, %rdi
 	movq -208(%rbp), %rcx
-	movq %r14, (%rax)
-	movq %rcx, 8(%rax)
+	movq %rcx, (%rax)
+	movq %r14, 8(%rax)
 	movq %rdi, 16(%rax)
 	movq %rax, (%r13)
-Lbb327:
+Lbb326:
 	movq %rax, (%r12)
 	jmp Lbb333
-Lbb328:
-	movq %rax, %rdi
-	xchgq %r14, %rbx
-	xchgq %r15, %r14
+Lbb327:
+	movq %rcx, %rdi
+	xchgq %r14, %r15
+	movq %rbx, %r13
+	movq %rax, %rbx
 	callq _compiler_codegen_codegen_fresh_temp
-	movq (%rax), %r13
+	movq %rbx, %rdi
+	movq %rdi, %rbx
+	movq (%rax), %rdi
+	movq %rdi, -216(%rbp)
 	movq 8(%rax), %rax
-	movq %rax, -272(%rbp)
-	movq %r13, %rdi
+	movq %rax, -264(%rbp)
 	callq _compiler_codegen_il_Temporary
+	movq %rbx, %rdi
 	movq %rax, -248(%rbp)
+	movq %rdi, %rbx
 	leaq _str2517(%rip), %rdi
 	callq _compiler_codegen_il_Global
+	movq %rbx, %rdi
 	movq %rax, -224(%rbp)
+	movq %rdi, %rbx
 	movl $16, %edi
 	callq _malloc
-	xchgq %rax, %rbx
-	leaq _compiler_codegen_il_Long(%rip), %rcx
-	movq %rcx, (%rbx)
-	movq %rax, 8(%rbx)
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	leaq _compiler_codegen_il_Long(%rip), %rax
+	movq %rax, (%rbx)
+	movq %r14, 8(%rbx)
+	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
+	movq %r14, %rdi
 	movq $1, (%rax)
 	movq %rbx, 8(%rax)
 	movq %rax, %rbx
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%rbx)
+	movq %rdi, %r14
 	movl $16, %edi
 	callq _malloc
+	movq %r14, %rdi
 	movq %rax, %rcx
 	movq %rbx, %rax
-	movq -216(%rbp), %rdi
+	movq -216(%rbp), %r14
 	movq %rcx, -240(%rbp)
 	movq %rax, %rbx
 	leaq _compiler_codegen_il_Long(%rip), %rax
@@ -5728,52 +5736,58 @@ Lbb328:
 	movq -248(%rbp), %rsi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %r13, %rdi
-	movq %rax, -264(%rbp)
+	movq %r14, %rdi
+	movq %rax, -288(%rbp)
+	movq %r13, %rax
+	movq -264(%rbp), %r13
 	subq $16, %rsp
-	movq %rsp, %r13
-	movq (%r15), %rax
+	movq %rsp, %r14
+	movq (%rax), %rax
 	cmpq $9, %rax
 	jz Lbb331
 	callq _compiler_codegen_il_Temporary
-	movq %rax, %r15
+	movq %r15, %rdi
+	movq %rax, -272(%rbp)
+	movq %rdi, %r15
 	movl $0, %edi
 	callq _compiler_codegen_il_Const
-	movq %r15, %rdx
+	movq %r15, %rdi
 	movq %rax, %rcx
-	movq -264(%rbp), %rdi
+	movq -272(%rbp), %rdx
 	leaq _compiler_codegen_il_Cnel(%rip), %rsi
 	movq %rdi, %r15
 	leaq _compiler_codegen_il_Long(%rip), %rdi
 	callq _compiler_codegen_il_Cmp
-	movq %r15, %rdi
 	movq %rax, %rcx
-	movq %rcx, (%r13)
+	movq %rcx, (%r14)
+	movq %r15, %rdi
 	jmp Lbb332
 Lbb331:
 	callq _compiler_codegen_il_Temporary
-	movq %rax, %r15
+	movq %r15, %rdi
+	movq %rax, -280(%rbp)
+	movq %rdi, %r15
 	movl $0, %edi
 	callq _compiler_codegen_il_Const
-	movq %r15, %rdx
+	movq %r15, %rdi
 	movq %rax, %rcx
-	movq -264(%rbp), %rdi
+	movq -280(%rbp), %rdx
 	leaq _compiler_codegen_il_Ceql(%rip), %rsi
 	movq %rdi, %r15
 	leaq _compiler_codegen_il_Long(%rip), %rdi
 	callq _compiler_codegen_il_Cmp
 	movq %r15, %rdi
 	movq %rax, %rcx
-	movq %rcx, (%r13)
+	movq %rcx, (%r14)
 Lbb332:
 	movq %rcx, %r15
-	movq %rdi, %r13
-	movq %r14, %rdi
+	movq %rdi, %r14
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rcx
-	movq %r13, %rdi
+	movq %r14, %rdi
 	movq %rax, %rsi
-	movq -272(%rbp), %r13
+	movq %rdi, %r14
+	movq -288(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r14, %rdi
@@ -5788,8 +5802,9 @@ Lbb332:
 	movq %rax, (%r12)
 Lbb333:
 	movq %rax, (%rbx)
-	jmp Lbb440
+	jmp Lbb439
 Lbb334:
+	movq %r12, %rbx
 	movq %r13, %r12
 	movq %rdx, %r15
 	callq _compiler_codegen_codegen_gen_expr
@@ -5800,20 +5815,25 @@ Lbb334:
 	callq _compiler_codegen_codegen_gen_expr
 	movq (%rax), %r15
 	movq 8(%rax), %rdi
-	movq %rdi, -280(%rbp)
+	movq %rdi, %r12
 	movq 16(%rax), %rdi
 	callq _compiler_codegen_codegen_ensure_string_concat_helper
 	movq %rax, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
+	movq %r12, %rdi
 	movq (%rax), %r13
 	movq 8(%rax), %r12
-	movq %r12, -288(%rbp)
+	movq %r12, -312(%rbp)
+	movq %rdi, %r12
 	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %rax, -296(%rbp)
+	movq %r12, %rdi
+	movq %rax, -304(%rbp)
+	movq %rdi, %r12
 	leaq _str2463(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %rax, %rdi
+	movq %r12, %rdi
+	movq %rax, -296(%rbp)
 	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
@@ -5848,9 +5868,10 @@ Lbb334:
 	movq %r14, %rdi
 	movq %rax, %rsi
 	movq %r12, %rax
-	movq -296(%rbp), %r15
-	movq -288(%rbp), %r12
-	movq -280(%rbp), %r14
+	movq %rdi, %r14
+	movq -296(%rbp), %rdi
+	movq -304(%rbp), %r15
+	movq -312(%rbp), %r12
 	movq $1, (%rsi)
 	movq %rcx, 8(%rsi)
 	movq %rax, 16(%rsi)
@@ -5870,24 +5891,24 @@ Lbb334:
 	movq %r13, 8(%rax)
 	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
+	jmp Lbb439
 Lbb336:
 	movq %rdx, %r15
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
-	movq 16(%rax), %r13
-	movq 24(%rax), %r12
-	movq %r12, -368(%rbp)
+	movq 16(%rax), %r12
+	movq 24(%rax), %r13
+	movq %r13, -400(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq (%rdi), %rax
 	cmpq $4, %rax
 	setz %r8b
 	movzbq %r8b, %r8
-	movq %r8, -304(%rbp)
+	movq %r8, -328(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rcx
-	movq %rcx, -312(%rbp)
+	movq %rcx, -320(%rbp)
 	cmpl $0, %r8d
 	jnz Lbb340
 	movq $0, (%rcx)
@@ -5895,17 +5916,17 @@ Lbb336:
 	movl $0, %eax
 	jmp Lbb341
 Lbb340:
-	movq %rdi, %r12
+	movq %rdi, %r13
 	movq 8(%rdi), %rdi
 	movq %rsi, %r14
 	leaq _str2289(%rip), %rsi
 	callq _strcmp
 	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %r12, %rdi
-	movq -312(%rbp), %rcx
-	movq -304(%rbp), %r8
-	movq -368(%rbp), %r12
+	movq %r13, %rdi
+	movq -320(%rbp), %rcx
+	movq -328(%rbp), %r8
+	movq -400(%rbp), %r13
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
@@ -5913,34 +5934,34 @@ Lbb340:
 	movq %rax, (%rcx)
 Lbb341:
 	cmpl $0, %eax
-	jnz Lbb376
+	jnz Lbb375
 	movq (%rdi), %rax
 	cmpq $4, %rax
 	movq %rdx, %r15
 	setz %dl
 	movzbq %dl, %rdx
-	movq %rdx, -320(%rbp)
+	movq %rdx, -344(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rcx
-	movq %rcx, -328(%rbp)
+	movq %rcx, -336(%rbp)
 	cmpl $0, %edx
 	jnz Lbb345
 	movq $0, (%rcx)
 	movl $0, %eax
 	jmp Lbb346
 Lbb345:
-	movq %rdi, %r12
+	movq %rdi, %r13
 	movq 8(%rdi), %rdi
 	movq %rsi, %r14
 	leaq _str2309(%rip), %rsi
 	callq _strcmp
 	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %r12, %rdi
-	movq -328(%rbp), %rcx
+	movq %r13, %rdi
+	movq -336(%rbp), %rcx
 	movq %rdx, %r15
-	movq -320(%rbp), %rdx
-	movq -368(%rbp), %r12
+	movq -344(%rbp), %rdx
+	movq -400(%rbp), %r13
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
@@ -5948,15 +5969,15 @@ Lbb345:
 	movq %rax, (%rcx)
 Lbb346:
 	cmpl $0, %eax
-	jnz Lbb374
+	jnz Lbb373
 	movq (%rdi), %rax
 	cmpq $4, %rax
 	setz %r8b
 	movzbq %r8b, %r8
-	movq %r8, -336(%rbp)
+	movq %r8, -360(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rcx
-	movq %rcx, -344(%rbp)
+	movq %rcx, -352(%rbp)
 	cmpl $0, %r8d
 	jnz Lbb350
 	movq $0, (%rcx)
@@ -5964,17 +5985,17 @@ Lbb346:
 	movl $0, %eax
 	jmp Lbb351
 Lbb350:
-	movq %rdi, %r12
+	movq %rdi, %r13
 	movq 8(%rdi), %rdi
 	movq %rsi, %r14
 	leaq _str2329(%rip), %rsi
 	callq _strcmp
 	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %r12, %rdi
-	movq -344(%rbp), %rcx
-	movq -336(%rbp), %r8
-	movq -368(%rbp), %r12
+	movq %r13, %rdi
+	movq -352(%rbp), %rcx
+	movq -360(%rbp), %r8
+	movq -400(%rbp), %r13
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
@@ -5982,34 +6003,34 @@ Lbb350:
 	movq %rax, (%rcx)
 Lbb351:
 	cmpl $0, %eax
-	jnz Lbb372
+	jnz Lbb371
 	movq (%rdi), %rax
 	cmpq $4, %rax
 	movq %rdx, %r15
 	setz %dl
 	movzbq %dl, %rdx
-	movq %rdx, -352(%rbp)
+	movq %rdx, -376(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rcx
-	movq %rcx, -360(%rbp)
+	movq %rcx, -368(%rbp)
 	cmpl $0, %edx
 	jnz Lbb355
 	movq $0, (%rcx)
 	movl $0, %eax
 	jmp Lbb356
 Lbb355:
-	movq %rdi, %r12
+	movq %rdi, %r13
 	movq 8(%rdi), %rdi
 	movq %rsi, %r14
 	leaq _str2349(%rip), %rsi
 	callq _strcmp
 	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %r12, %rdi
-	movq -360(%rbp), %rcx
+	movq %r13, %rdi
+	movq -368(%rbp), %rcx
 	movq %rdx, %r15
-	movq -352(%rbp), %rdx
-	movq -368(%rbp), %r12
+	movq -376(%rbp), %rdx
+	movq -400(%rbp), %r13
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
@@ -6017,12 +6038,12 @@ Lbb355:
 	movq %rax, (%rcx)
 Lbb356:
 	cmpl $0, %eax
-	jnz Lbb370
+	jnz Lbb369
 	movq (%rdi), %rax
 	cmpq $4, %rax
 	setz %r8b
 	movzbq %r8b, %r8
-	movq %r8, -376(%rbp)
+	movq %r8, -392(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rcx
 	movq %rcx, -384(%rbp)
@@ -6033,17 +6054,17 @@ Lbb356:
 	movl $0, %eax
 	jmp Lbb361
 Lbb360:
-	movq %rdi, %r12
+	movq %rdi, %r13
 	movq 8(%rdi), %rdi
 	movq %rsi, %r14
 	leaq _str2369(%rip), %rsi
 	callq _strcmp
 	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq -384(%rbp), %rcx
-	movq -376(%rbp), %r8
-	movq -368(%rbp), %r12
+	movq -392(%rbp), %r8
+	movq -400(%rbp), %r13
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
@@ -6051,49 +6072,48 @@ Lbb360:
 	movq %rax, (%rcx)
 Lbb361:
 	cmpl $0, %eax
-	jnz Lbb368
+	jnz Lbb367
 	callq _compiler_codegen_codegen_gen_call_target
-	movq %r13, %rdi
-	movq (%rax), %r15
-	movq %r15, -392(%rbp)
+	movq %r12, %rdi
+	movq (%rax), %r12
 	movq 8(%rax), %rsi
 	movq 16(%rax), %rdx
 	leaq _donna_nil(%rip), %rcx
 	callq _compiler_codegen_codegen_gen_args
-	movq %r12, %rdi
-	movq (%rax), %rsi
-	movq %rsi, -400(%rbp)
-	movq 8(%rax), %r13
-	movq 16(%rax), %r14
+	movq %r13, %rdi
+	movq (%rax), %r13
+	movq 8(%rax), %r15
+	movq 16(%rax), %rax
 	subq $16, %rsp
-	movq %rsp, %r12
-	movq (%rdi), %rax
-	cmpq $4, %rax
-	jz Lbb365
-	movq %r14, %r15
+	movq %rsp, %r14
+	movq %r14, -424(%rbp)
+	movq (%rdi), %rcx
+	cmpq $4, %rcx
+	jz Lbb364
 	movq %rdi, %r14
-	movq %r15, %rdi
+	movq %rax, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %r14, %rdi
-	movq (%rax), %r14
-	movq 8(%rax), %r15
-	movq %r15, -408(%rbp)
-	movq %rdi, %r15
-	movq %r14, %rdi
-	callq _compiler_codegen_il_Temporary
-	movq %r15, %rdi
+	movq %rdi, %r14
+	movq (%rax), %rdi
+	movq %rdi, -408(%rbp)
+	movq 8(%rax), %rax
 	movq %rax, -416(%rbp)
-	movq -392(%rbp), %r15
+	callq _compiler_codegen_il_Temporary
+	movq %r14, %rdi
+	movq %rax, -440(%rbp)
+	movq -408(%rbp), %r14
 	callq _compiler_codegen_codegen_donna_type_to_qbe
-	movq %r15, %rdi
-	movq %rax, %r15
-	movq -400(%rbp), %rsi
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq %rax, -432(%rbp)
+	movq -424(%rbp), %r12
+	movq -416(%rbp), %r13
 	callq _compiler_codegen_il_Call
-	movq %r15, %rdx
-	movq %r13, %rdi
+	movq %r15, %rdi
 	movq %rax, %rcx
-	movq -416(%rbp), %rsi
-	movq -408(%rbp), %r13
+	movq -432(%rbp), %rdx
+	movq -440(%rbp), %rsi
 	callq _compiler_codegen_il_assign_inst
 	movq %r14, %rdi
 	movq %rax, %r14
@@ -6105,10 +6125,13 @@ Lbb361:
 	movq %r14, 8(%rax)
 	movq %r13, 16(%rax)
 	movq %rax, (%r12)
-	jmp Lbb367
-Lbb365:
-	xchgq %r14, %r13
-	movq %r15, %rdi
+	jmp Lbb366
+Lbb364:
+	movq %r13, %rsi
+	movq %rax, %r13
+	movq %r12, %rdi
+	movq %r14, %r12
+	movq %r15, %r14
 	callq _compiler_codegen_il_Call
 	movq %r14, %rdi
 	movq %rax, %rsi
@@ -6123,55 +6146,55 @@ Lbb365:
 	movq %r14, 8(%rax)
 	movq %r13, 16(%rax)
 	movq %rax, (%r12)
-Lbb367:
+Lbb366:
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb368:
-	movq %r13, %rdi
+	jmp Lbb439
+Lbb367:
+	movq %r12, %rdi
 	callq _compiler_codegen_codegen_gen_builtin_print_str
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb370:
-	movq %r13, %rdi
+	jmp Lbb439
+Lbb369:
+	movq %r12, %rdi
 	movq %r15, %rdx
 	callq _compiler_codegen_codegen_gen_builtin_int_to_string
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb372:
-	movq %r13, %rdi
+	jmp Lbb439
+Lbb371:
+	movq %r12, %rdi
 	callq _compiler_codegen_codegen_gen_builtin_substring
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb374:
-	movq %r13, %rdi
+	jmp Lbb439
+Lbb373:
+	movq %r12, %rdi
 	movq %r15, %rdx
 	callq _compiler_codegen_codegen_gen_builtin_string_equal
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb376:
-	movq %r13, %rdi
-	movq %rdx, %r14
-	movq %rsi, %r13
+	jmp Lbb439
+Lbb375:
+	movq %r12, %rdi
+	movq %rdx, %r15
+	movq %rsi, %r14
 	callq _compiler_codegen_codegen_gen_builtin_char_at
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb378:
-	movq %rdx, %r14
-	movq %rsi, %r13
-	movq 16(%rdi), %r15
+	jmp Lbb439
+Lbb377:
+	movq %rdx, %r15
+	movq %rsi, %r14
+	movq 16(%rdi), %r13
 	movq %rdi, %rax
 	movq 24(%rdi), %rdi
 	movq 32(%rax), %r12
 	movq %rdi, %rbx
 	callq _donna_string_is_empty
-	movq %r14, %rdx
-	movq %r13, %rsi
+	movq %r15, %rdx
+	movq %r14, %rsi
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb381
-	movq %rdx, %r13
+	jz Lbb380
+	movq %rdx, %r15
 	leaq _str2201(%rip), %rdx
 	movq %rsi, %r14
 	leaq _str2200(%rip), %rsi
@@ -6184,38 +6207,38 @@ Lbb378:
 	movq %r14, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r14
-	movq %r15, %rsi
+	movq %r13, %rsi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	movq %rdi, (%rbx)
-	jmp Lbb383
-Lbb381:
-	movq %r15, %rdi
-	movq %rdx, %r13
+	jmp Lbb382
+Lbb380:
+	movq %r13, %rdi
+	movq %rdx, %r15
 	movq %rsi, %r14
 	movq %rdi, (%rbx)
-Lbb383:
+Lbb382:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq (%r12), %rax
 	cmpq $0, %rax
-	jz Lbb389
-	cmpq $1, %rax
 	jz Lbb388
-	cmpq $3, %rax
+	cmpq $1, %rax
 	jz Lbb387
+	cmpq $3, %rax
+	jz Lbb386
 	callq _compiler_codegen_il_Global
 	movq %rax, %r12
 	movl $24, %edi
 	callq _malloc
 	movq %r12, (%rax)
 	movq %r14, 8(%rax)
-	movq %r13, 16(%rax)
+	movq %r15, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb387:
+	jmp Lbb439
+Lbb386:
 	movq %rdi, %r12
-	movq %r13, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %r12, %rdi
 	movq (%rax), %r13
@@ -6245,10 +6268,10 @@ Lbb387:
 	movq %r13, 8(%rax)
 	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb388:
+	jmp Lbb439
+Lbb387:
 	movq %rdi, %r12
-	movq %r13, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %r12, %rdi
 	movq (%rax), %r13
@@ -6278,10 +6301,10 @@ Lbb388:
 	movq %r13, 8(%rax)
 	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb389:
+	jmp Lbb439
+Lbb388:
 	movq %rdi, %r12
-	movq %r13, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %r12, %rdi
 	movq (%rax), %r13
@@ -6311,326 +6334,332 @@ Lbb389:
 	movq %r13, 8(%rax)
 	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb390:
-	movq %rdx, %r13
+	jmp Lbb439
+Lbb389:
+	movq %rdx, %r15
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
-	movq 16(%rax), %rcx
-	movq %rcx, -472(%rbp)
-	movq %rsi, %r14
+	movq 16(%rax), %rax
+	movq %rax, -488(%rbp)
+	movq %rsi, %r13
 	leaq _str2044(%rip), %rsi
 	movq %rdi, %rbx
 	callq _donna_string_equal
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rbx, -560(%rbp)
 	cmpq $1, %rax
-	jz Lbb424
+	jz Lbb423
 	movq %rdi, %r12
-	movq %r13, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_state_extern_aliases
-	movq %r14, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r15
+	movq %rsi, %r13
 	movq %r12, %rsi
 	callq _compiler_codegen_codegen_lookup_alist
 	movq %r12, %rdi
 	subq $16, %rsp
 	movq %rsp, %r12
-	movq %r12, -456(%rbp)
+	movq %r12, -568(%rbp)
 	movq (%rax), %rcx
 	cmpq $1, %rcx
-	jz Lbb421
+	jz Lbb420
 	movq %rdi, %r12
-	movq %r13, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_state_fn_prefix
 	movq %r12, %rdi
 	movq %rax, %r12
 	movq %rdi, %r14
-	movq %r13, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_state_globals
-	movq %r15, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r15
+	movq %rsi, %r13
 	movq %r14, %rsi
 	callq _donna_list_contains_str
 	movq %r14, %rdi
 	subq $16, %rsp
 	movq %rsp, %r14
-	movq %r14, -488(%rbp)
+	movq %r14, -584(%rbp)
 	cmpq $1, %rax
-	jz Lbb404
+	jz Lbb403
 	movq %rdi, %r14
-	movq %r13, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_state_local_fn_names
-	movq %r15, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r15
+	movq %rsi, %r13
 	movq %r14, %rsi
 	callq _donna_list_contains_str
+	movq %r15, %rdx
 	movq %r14, %rdi
 	movq %rax, %rcx
 	movq %r12, %rax
-	movq -456(%rbp), %r12
+	movq -584(%rbp), %r14
+	movq -568(%rbp), %r12
+	movq %rdx, %r15
 	subq $16, %rsp
-	movq %rsp, %r14
-	movq %r14, -440(%rbp)
+	movq %rsp, %rdx
+	movq %rdx, -472(%rbp)
 	cmpq $1, %rcx
 	jz Lbb396
 	callq _compiler_codegen_il_Temporary
-	movq %rax, -424(%rbp)
-	movl $24, %edi
-	callq _malloc
-	movq %r13, %rdx
-	movq -488(%rbp), %r13
-	movq -424(%rbp), %rcx
-	movq %rcx, (%rax)
-	movq %r15, 8(%rax)
-	movq %rdx, 16(%rax)
-	movq %rax, (%r14)
-	jmp Lbb403
-Lbb396:
-	movq %rdi, %r14
-	movq %rax, %rdi
-	movq %rdi, %r12
-	callq _donna_string_is_empty
-	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, %rdx
-	movq -440(%rbp), %rax
-	movq -456(%rbp), %r12
-	subq $16, %rsp
-	movq %rsp, %rcx
-	movq %rcx, -432(%rbp)
-	cmpq $1, %rdx
-	jz Lbb399
-	movq %rsi, %r15
-	leaq _str2164(%rip), %rsi
-	callq ___rt_str_concat
-	movq %r15, %rsi
-	movq %rax, %rdi
-	movq %r14, %rax
-	movq -432(%rbp), %r14
-	movq %rsi, %r15
-	movq %rax, %rsi
-	callq ___rt_str_concat
-	movq %r14, %rcx
-	movq %rax, %rdi
-	movq -440(%rbp), %rax
-	movq %rdi, (%rcx)
-	jmp Lbb402
-Lbb399:
-	movq %rsi, %r15
-	movq %r14, (%rcx)
-	movq %r14, %rdi
-Lbb402:
-	movq %rax, %r14
-	callq _compiler_codegen_il_Global
 	movq %rax, -448(%rbp)
 	movl $24, %edi
 	callq _malloc
-	movq %r13, %rdx
-	movq -488(%rbp), %r13
-	movq -448(%rbp), %rcx
-	movq %rcx, (%rax)
+	movq %r15, %rdx
+	movq %r13, %rsi
+	movq -472(%rbp), %rcx
+	movq %rdx, %r15
+	movq -448(%rbp), %rdx
+	movq %rdx, (%rax)
+	movq %rsi, 8(%rax)
+	movq %r15, 16(%rax)
+	movq %rax, (%rcx)
+	movq %r14, %r13
+	jmp Lbb402
+Lbb396:
+	movq %r13, %r14
+	movq %rdi, %r13
+	movq %rax, %rdi
+	movq %rdi, %r12
+	callq _donna_string_is_empty
+	movq %r14, %rsi
+	movq %r12, %rdi
+	movq %rax, %rcx
+	movq -584(%rbp), %r14
+	movq -568(%rbp), %r12
+	subq $16, %rsp
+	movq %rsp, %rax
+	movq %rax, -456(%rbp)
+	cmpq $1, %rcx
+	jz Lbb399
+	movq %rsi, %r14
+	leaq _str2164(%rip), %rsi
+	callq ___rt_str_concat
+	movq %r14, %rsi
+	movq %rax, %rdi
+	movq %r13, %rax
+	movq -584(%rbp), %r13
+	movq %rsi, %r14
+	movq %rax, %rsi
+	callq ___rt_str_concat
+	movq %rax, %rdi
+	movq -456(%rbp), %rax
+	movq %rdi, (%rax)
+	jmp Lbb401
+Lbb399:
+	movq %r13, %rdi
+	movq %r14, %r13
+	movq %rsi, %r14
+	movq %rdi, (%rax)
+Lbb401:
+	callq _compiler_codegen_il_Global
+	movq %rax, -464(%rbp)
+	movl $24, %edi
+	callq _malloc
+	movq %r15, %rdx
+	movq %r14, %rsi
+	movq -472(%rbp), %rcx
+	movq %rsi, %r15
+	movq -464(%rbp), %rsi
+	movq %rsi, (%rax)
 	movq %r15, 8(%rax)
 	movq %rdx, 16(%rax)
-	movq %rax, (%r14)
-Lbb403:
+	movq %rax, (%rcx)
+Lbb402:
 	movq %rax, (%r13)
-	jmp Lbb420
-Lbb404:
-	movq %r14, %rbx
+	jmp Lbb419
+Lbb403:
 	movq %rdi, %r14
 	movq %r12, %rdi
+	xchgq %r15, %r13
 	movq %rdi, %r12
 	callq _donna_string_is_empty
 	movq %r15, %rsi
 	movq %r12, %rdi
-	movq %rax, %rdx
-	movq %rbx, %rax
-	movq -456(%rbp), %r12
-	movq -560(%rbp), %rbx
-	movq -472(%rbp), %rcx
+	movq %rax, %rcx
+	movq -568(%rbp), %r12
+	movq -488(%rbp), %rax
 	subq $16, %rsp
 	movq %rsp, %r15
-	movq %r15, -464(%rbp)
-	cmpq $1, %rdx
-	jz Lbb407
+	movq %r15, -480(%rbp)
+	cmpq $1, %rcx
+	jz Lbb406
 	movq %rsi, %r15
 	leaq _str2085(%rip), %rsi
 	callq ___rt_str_concat
 	movq %r15, %rsi
 	movq %rax, %rdi
 	movq %r14, %rax
-	movq -464(%rbp), %r14
+	movq -480(%rbp), %r14
 	movq %rsi, %r15
 	movq %rax, %rsi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	movq -488(%rbp), %rax
-	movq -472(%rbp), %rcx
 	movq %rdi, (%r14)
-	jmp Lbb409
-Lbb407:
+	jmp Lbb408
+Lbb406:
 	movq %r14, %rdi
 	movq %r15, %r14
 	movq %rsi, %r15
 	movq %rdi, (%r14)
-Lbb409:
+Lbb408:
 	subq $16, %rsp
 	movq %rsp, %r14
-	movq (%rcx), %rcx
-	cmpq $0, %rcx
-	jz Lbb417
-	cmpq $1, %rcx
-	jz Lbb415
-	cmpq $3, %rcx
-	jz Lbb413
+	movq (%rax), %rax
+	cmpq $0, %rax
+	jz Lbb416
+	cmpq $1, %rax
+	jz Lbb414
+	cmpq $3, %rax
+	jz Lbb412
 	callq _compiler_codegen_il_Global
-	movq %rax, -480(%rbp)
+	movq %rax, -496(%rbp)
 	movl $24, %edi
 	callq _malloc
 	movq %r13, %rdx
-	movq -488(%rbp), %r13
-	movq -480(%rbp), %rcx
+	movq -584(%rbp), %r13
+	movq -496(%rbp), %rcx
 	movq %rcx, (%rax)
 	movq %r15, 8(%rax)
 	movq %rdx, 16(%rax)
 	movq %rax, (%r14)
-	jmp Lbb419
-Lbb413:
+	jmp Lbb418
+Lbb412:
 	movq %r13, %rdx
-	movq %rax, %r13
-	movq %rdi, %rbx
+	movq %rdi, %r12
 	movq %rdx, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %rbx, %rdi
-	movq %rdi, %rbx
-	movq (%rax), %rdi
-	movq %rdi, -504(%rbp)
-	movq 8(%rax), %rcx
-	movq %rcx, -512(%rbp)
+	movq %r12, %rdi
+	movq (%rax), %r13
+	movq 8(%rax), %r12
+	movq %r12, -512(%rbp)
+	movq %rdi, %r12
+	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %rbx, %rdi
-	movq %rax, -496(%rbp)
-	movq -560(%rbp), %rbx
+	movq %r12, %rdi
+	movq %rax, -504(%rbp)
+	movq -568(%rbp), %r12
 	callq _compiler_codegen_il_Global
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
 	movq %r15, %rsi
+	movq %r13, %rdi
 	movq %rax, %rcx
+	movq -584(%rbp), %r13
 	movq %rsi, %rax
-	movq -496(%rbp), %rsi
-	movq -504(%rbp), %rdi
+	movq -504(%rbp), %rsi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	movq %rdi, %r15
 	movq %rax, %rdi
 	callq _compiler_codegen_il_assign_inst
 	movq %r15, %rdi
-	movq %rax, %r15
+	movq %rax, -528(%rbp)
+	movq -512(%rbp), %r15
 	callq _compiler_codegen_il_Temporary
 	movq %rax, -520(%rbp)
 	movl $24, %edi
 	callq _malloc
 	movq -520(%rbp), %rdx
-	movq -512(%rbp), %rcx
+	movq -528(%rbp), %rcx
 	movq %rdx, (%rax)
-	movq %r15, 8(%rax)
-	movq %rcx, 16(%rax)
+	movq %rcx, 8(%rax)
+	movq %r15, 16(%rax)
 	movq %rax, (%r14)
-	jmp Lbb419
-Lbb415:
+	jmp Lbb418
+Lbb414:
 	movq %r13, %rdx
-	movq %rax, %r13
-	movq %rdi, %rbx
+	movq %rdi, %r12
 	movq %rdx, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %rbx, %rdi
-	movq %rdi, %rbx
-	movq (%rax), %rdi
-	movq %rdi, -536(%rbp)
-	movq 8(%rax), %rcx
-	movq %rcx, -544(%rbp)
+	movq %r12, %rdi
+	movq (%rax), %r13
+	movq 8(%rax), %r12
+	movq %r12, -544(%rbp)
+	movq %rdi, %r12
+	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %rbx, %rdi
-	movq %rax, -528(%rbp)
-	movq -560(%rbp), %rbx
+	movq %r12, %rdi
+	movq %rax, -536(%rbp)
+	movq -568(%rbp), %r12
 	callq _compiler_codegen_il_Global
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadd
 	movq %r15, %rsi
+	movq %r13, %rdi
 	movq %rax, %rcx
+	movq -584(%rbp), %r13
 	movq %rsi, %rax
-	movq -528(%rbp), %rsi
-	movq -536(%rbp), %rdi
+	movq -536(%rbp), %rsi
 	leaq _compiler_codegen_il_Double(%rip), %rdx
 	movq %rdi, %r15
 	movq %rax, %rdi
 	callq _compiler_codegen_il_assign_inst
 	movq %r15, %rdi
-	movq %rax, %r15
+	movq %rax, -560(%rbp)
+	movq -544(%rbp), %r15
 	callq _compiler_codegen_il_Temporary
 	movq %rax, -552(%rbp)
 	movl $24, %edi
 	callq _malloc
 	movq -552(%rbp), %rdx
-	movq -544(%rbp), %rcx
+	movq -560(%rbp), %rcx
 	movq %rdx, (%rax)
-	movq %r15, 8(%rax)
-	movq %rcx, 16(%rax)
+	movq %rcx, 8(%rax)
+	movq %r15, 16(%rax)
 	movq %rax, (%r14)
-	jmp Lbb419
-Lbb417:
+	jmp Lbb418
+Lbb416:
 	movq %r13, %rdx
-	movq %rax, %r13
-	movq %rdi, %rbx
+	movq %rdi, %r12
 	movq %rdx, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %rbx, %rdi
-	movq %rdi, %rbx
-	movq (%rax), %rdi
-	movq %rdi, -576(%rbp)
-	movq 8(%rax), %rcx
-	movq %rcx, -584(%rbp)
+	movq %r12, %rdi
+	movq (%rax), %r13
+	movq 8(%rax), %r12
+	movq %r12, -592(%rbp)
+	movq %rdi, %r12
+	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %rbx, %rdi
-	movq %rax, -568(%rbp)
-	movq -560(%rbp), %rbx
+	movq %r12, %rdi
+	movq %rax, -576(%rbp)
+	movq -568(%rbp), %r12
 	callq _compiler_codegen_il_Global
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
 	movq %r15, %rsi
+	movq %r13, %rdi
 	movq %rax, %rcx
+	movq -584(%rbp), %r13
 	movq %rsi, %rax
-	movq -568(%rbp), %rsi
-	movq -576(%rbp), %rdi
+	movq -576(%rbp), %rsi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	movq %rdi, %r15
 	movq %rax, %rdi
 	callq _compiler_codegen_il_assign_inst
 	movq %r15, %rdi
-	movq %rax, %r15
+	movq %rax, -608(%rbp)
+	movq -592(%rbp), %r15
 	callq _compiler_codegen_il_Temporary
-	movq %rax, -592(%rbp)
+	movq %rax, -600(%rbp)
 	movl $24, %edi
 	callq _malloc
-	movq -592(%rbp), %rdx
-	movq -584(%rbp), %rcx
+	movq -600(%rbp), %rdx
+	movq -608(%rbp), %rcx
 	movq %rdx, (%rax)
-	movq %r15, 8(%rax)
-	movq %rcx, 16(%rax)
+	movq %rcx, 8(%rax)
+	movq %r15, 16(%rax)
 	movq %rax, (%r14)
-Lbb419:
+Lbb418:
 	movq %rax, (%r13)
-Lbb420:
+Lbb419:
 	movq %rax, (%r12)
-	jmp Lbb423
-Lbb421:
-	movq %r13, %r14
-	movq %r15, %r13
+	jmp Lbb422
+Lbb420:
+	movq %r15, %r14
 	movq 8(%rax), %rdi
 	callq _compiler_codegen_il_Global
 	movq %rax, %r15
@@ -6640,11 +6669,11 @@ Lbb421:
 	movq %r13, 8(%rax)
 	movq %r14, 16(%rax)
 	movq %rax, (%r12)
-Lbb423:
+Lbb422:
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb424:
-	xchgq %r13, %r14
+	jmp Lbb439
+Lbb423:
+	movq %r15, %r14
 	movl $0, %edi
 	callq _compiler_codegen_il_Const
 	movq %rax, %r12
@@ -6654,15 +6683,15 @@ Lbb424:
 	movq %r13, 8(%rax)
 	movq %r14, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb426:
+	jmp Lbb439
+Lbb425:
 	movq %rdx, %r14
 	movq %rsi, %r13
 	movq 8(%rdi), %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb429
+	jz Lbb428
 	movl $0, %edi
 	callq _compiler_codegen_il_Const
 	movq %rax, %r12
@@ -6672,8 +6701,8 @@ Lbb426:
 	movq %r13, 8(%rax)
 	movq %r14, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb429:
+	jmp Lbb439
+Lbb428:
 	movl $1, %edi
 	callq _compiler_codegen_il_Const
 	movq %rax, %r12
@@ -6685,8 +6714,8 @@ Lbb429:
 	movq %rsi, 8(%rax)
 	movq %rdx, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb440
-Lbb430:
+	jmp Lbb439
+Lbb429:
 	movq %rdx, %rbx
 	movq %rsi, %r12
 	movq 8(%rdi), %rsi
@@ -6701,8 +6730,8 @@ Lbb430:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb440
-Lbb432:
+	jmp Lbb439
+Lbb431:
 	movq %rdx, %rbx
 	movq %rsi, %r12
 	movq 8(%rdi), %rdi
@@ -6713,8 +6742,8 @@ Lbb432:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb440
-Lbb434:
+	jmp Lbb439
+Lbb433:
 	movq %rdx, %rbx
 	movq %rsi, %r12
 	movq 8(%rdi), %rdi
@@ -6726,14 +6755,14 @@ Lbb434:
 	movq %rdx, %r13
 	movq (%rcx), %rdx
 	cmpq $0, %rdx
-	jz Lbb437
+	jz Lbb436
 	movq 8(%rcx), %rdi
 	movq %rdi, (%rax)
-	jmp Lbb439
-Lbb437:
+	jmp Lbb438
+Lbb436:
 	movq $0, (%rax)
 	movl $0, %edi
-Lbb439:
+Lbb438:
 	callq _compiler_codegen_il_Const
 	movq %rax, %rbx
 	movl $24, %edi
@@ -6743,9 +6772,9 @@ Lbb439:
 	movq %rbx, (%rax)
 	movq %rsi, 8(%rax)
 	movq %rdx, 16(%rax)
-Lbb440:
+Lbb439:
 	movq %rbp, %rsp
-	subq $640, %rsp
+	subq $656, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -6771,7 +6800,7 @@ _compiler_codegen_codegen_gen_block_as_expr:
 	movq %rsi, %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb449
+	jz Lbb448
 	movq %rdi, %rbx
 	callq _compiler_codegen_codegen_list_length
 	movq %r12, %rsi
@@ -6812,12 +6841,12 @@ _compiler_codegen_codegen_gen_block_as_expr:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb447
+	jnz Lbb446
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
 	cmpl $0, %eax
-	jnz Lbb445
+	jnz Lbb444
 	movq 8(%r13), %rdi
 	movq %rdi, %r12
 	movq 16(%r13), %rdi
@@ -6836,8 +6865,8 @@ _compiler_codegen_codegen_gen_block_as_expr:
 	movq %r13, 8(%rax)
 	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb450
-Lbb445:
+	jmp Lbb449
+Lbb444:
 	movq %r13, %r12
 	movq 8(%r12), %r13
 	movq 24(%r12), %rdi
@@ -6874,14 +6903,14 @@ Lbb445:
 	movq %r13, 8(%rax)
 	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb450
-Lbb447:
+	jmp Lbb449
+Lbb446:
 	movq %r13, %r12
 	movq 16(%r12), %rdi
 	callq _compiler_codegen_codegen_gen_expr
 	movq %rax, (%rbx)
-	jmp Lbb450
-Lbb449:
+	jmp Lbb449
+Lbb448:
 	movl $0, %edi
 	callq _compiler_codegen_il_Const
 	movq %rax, %rbx
@@ -6892,7 +6921,7 @@ Lbb449:
 	movq %rbx, (%rax)
 	movq %rsi, 8(%rax)
 	movq %rdx, 16(%rax)
-Lbb450:
+Lbb449:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -6915,7 +6944,7 @@ _compiler_codegen_codegen_gen_stmts_no_ret:
 	movq %rdi, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb453
+	jz Lbb452
 	movq 8(%rax), %rdi
 	movq 16(%rax), %rbx
 	movq %rdx, %r12
@@ -6924,8 +6953,8 @@ _compiler_codegen_codegen_gen_stmts_no_ret:
 	movq (%rax), %rsi
 	movq 8(%rax), %rdx
 	callq _compiler_codegen_codegen_gen_stmts_no_ret
-	jmp Lbb455
-Lbb453:
+	jmp Lbb454
+Lbb452:
 	movq %rdx, %r12
 	movq %rsi, %rbx
 	movl $16, %edi
@@ -6934,7 +6963,7 @@ Lbb453:
 	movq %rbx, %rsi
 	movq %rsi, (%rax)
 	movq %rdx, 8(%rax)
-Lbb455:
+Lbb454:
 	popq %r12
 	popq %rbx
 	leave
@@ -6956,12 +6985,12 @@ _compiler_codegen_codegen_gen_stmt_no_ret:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb460
+	jnz Lbb459
 	cmpq $1, %rax
 	setz %al
 	movzbq %al, %rax
 	cmpl $0, %eax
-	jnz Lbb459
+	jnz Lbb458
 	movq 16(%rdi), %rdi
 	callq _compiler_codegen_codegen_gen_expr
 	movq 8(%rax), %r12
@@ -6970,8 +6999,8 @@ _compiler_codegen_codegen_gen_stmt_no_ret:
 	callq _malloc
 	movq %r12, (%rax)
 	movq %rbx, 8(%rax)
-	jmp Lbb461
-Lbb459:
+	jmp Lbb460
+Lbb458:
 	movq 8(%rdi), %rbx
 	movq 16(%rdi), %rdi
 	callq _compiler_codegen_codegen_gen_expr
@@ -6980,8 +7009,8 @@ Lbb459:
 	movq 8(%rax), %rdx
 	movq 16(%rax), %rcx
 	callq _compiler_codegen_codegen_emit_pattern_bindings
-	jmp Lbb461
-Lbb460:
+	jmp Lbb460
+Lbb459:
 	movq 8(%rdi), %r14
 	movq 24(%rdi), %rdi
 	movq %rdi, %rbx
@@ -7009,7 +7038,7 @@ Lbb460:
 	callq _malloc
 	movq %r12, (%rax)
 	movq %rbx, 8(%rax)
-Lbb461:
+Lbb460:
 	popq %r14
 	popq %r13
 	popq %r12
@@ -7030,44 +7059,49 @@ _compiler_codegen_codegen_gen_case:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %r8, %rbx
+	movq %r8, -24(%rbp)
 	movq %rcx, %r13
-	movq %rdx, -16(%rbp)
-	movq %rsi, -24(%rbp)
-	movq %rdi, -32(%rbp)
+	movq %rdx, %rbx
+	movq %rsi, %r15
+	movq %rdi, %rsi
 	movq %r9, %rdi
+	movq %rsi, %r14
 	leaq _str3114(%rip), %rsi
 	callq _compiler_codegen_codegen_fresh_label
 	movq %rbx, %rdi
-	movq (%rax), %r15
+	movq (%rax), %r8
+	movq %r8, -48(%rbp)
 	movq %rdi, %rbx
 	movq 8(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %rbx, %rdi
 	movq (%rax), %r12
 	movq 8(%rax), %rax
-	movq %rax, -48(%rbp)
+	movq %rax, -40(%rbp)
 	movq %rdi, %rbx
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %rbx, %rdi
-	movq %rax, %r14
+	movq %rax, -16(%rbp)
 	movq %rdi, %rbx
 	movl $8, %edi
 	callq _compiler_codegen_il_Const
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Alloc8
+	movq %r15, %rdx
 	movq %r14, %rsi
 	movq %rbx, %rdi
 	movq %rax, %rcx
-	movq -16(%rbp), %rbx
-	movq -24(%rbp), %rdx
-	movq %rdx, %r14
+	movq %rsi, %r14
+	movq -16(%rbp), %rsi
+	movq %rdi, %rbx
+	movq -24(%rbp), %rdi
+	movq %rdx, %r15
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r13, %rcx
 	movq %rbx, %rdi
-	movq %rax, -40(%rbp)
+	movq %rax, -32(%rbp)
 	movq (%rcx), %rax
 	cmpq $1, %rax
 	movl $0, %ecx
@@ -7077,15 +7111,15 @@ _compiler_codegen_codegen_gen_case:
 	movq %rdi, %r13
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r15, %r8
-	movq %r14, %rdx
+	movq %r15, %rdx
+	movq %r14, %rsi
 	movq %r13, %rdi
 	movq %rax, %rcx
 	movq %rbx, %rax
-	movq -40(%rbp), %r9
+	movq -32(%rbp), %r9
 	movq %rax, %rbx
-	movq -48(%rbp), %rax
-	movq -32(%rbp), %rsi
+	movq -40(%rbp), %rax
+	movq -48(%rbp), %r8
 	subq $16, %rsp
 	movq %rsp, %r10
 	movq %rbx, 8(%r10)
@@ -7105,36 +7139,36 @@ _compiler_codegen_codegen_gen_case:
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
-	jz Lbb465
+	jz Lbb464
 	leaq _compiler_codegen_il_Long(%rip), %rcx
 	movq %rcx, (%rdx)
 	leaq _compiler_codegen_il_Long(%rip), %rcx
-	jmp Lbb466
+	jmp Lbb465
+Lbb464:
+	leaq _compiler_codegen_il_Double(%rip), %rcx
+	movq %rcx, (%rdx)
+	leaq _compiler_codegen_il_Double(%rip), %rcx
 Lbb465:
-	leaq _compiler_codegen_il_Double(%rip), %rcx
-	movq %rcx, (%rdx)
-	leaq _compiler_codegen_il_Double(%rip), %rcx
-Lbb466:
 	movq %rcx, %r14
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz Lbb469
+	jz Lbb468
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
 	movq %rax, %rcx
 	movq %rcx, (%r13)
 	movq %r15, %rdi
-	jmp Lbb470
-Lbb469:
+	jmp Lbb469
+Lbb468:
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadd
 	movq %r15, %rdi
 	movq %rax, %rcx
 	movq %rcx, (%r13)
-Lbb470:
+Lbb469:
 	movq %rcx, %r15
 	movq %rdi, %r13
 	movq %r12, %rdi
@@ -7171,12 +7205,12 @@ _compiler_codegen_codegen_store_result:
 	pushq %rbp
 	movq %rsp, %rbp
 	cmpq $1, %rdx
-	jz Lbb474
+	jz Lbb473
 	callq _compiler_codegen_il_Storel
-	jmp Lbb475
-Lbb474:
+	jmp Lbb474
+Lbb473:
 	callq _compiler_codegen_il_Stored
-Lbb475:
+Lbb474:
 	leave
 	ret
 /* end function compiler_codegen_codegen_store_result */
@@ -7204,7 +7238,7 @@ _compiler_codegen_codegen_gen_case_clauses:
 	movq %rdi, %rbx
 	movq (%rcx), %rdi
 	cmpq $0, %rdi
-	jz Lbb490
+	jz Lbb489
 	movq 8(%rcx), %r8
 	movq 16(%rcx), %rdi
 	movq %rdi, -192(%rbp)
@@ -7222,7 +7256,7 @@ _compiler_codegen_codegen_gen_case_clauses:
 	setz %r9b
 	movzbq %r9b, %r9
 	cmpl $0, %r9d
-	jnz Lbb484
+	jnz Lbb483
 	movq %r12, %r8
 	movq %rax, %rcx
 	movq %rsi, %r14
@@ -7246,7 +7280,7 @@ _compiler_codegen_codegen_gen_case_clauses:
 	movq %rax, -72(%rbp)
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb481
+	jz Lbb480
 	movq %rdi, %rax
 	movq 8(%rcx), %rdi
 	movq %rsi, %r14
@@ -7316,8 +7350,8 @@ _compiler_codegen_codegen_gen_case_clauses:
 	movq %rax, (%rcx)
 	movq %rdi, %r12
 	movq %r13, %rsi
-	jmp Lbb483
-Lbb481:
+	jmp Lbb482
+Lbb480:
 	movq %r12, %rdi
 	movq %rsi, %r14
 	movq %rdi, %r12
@@ -7336,7 +7370,7 @@ Lbb481:
 	movq %rdi, 8(%rax)
 	movq %rdx, 16(%rax)
 	movq %rax, (%rcx)
-Lbb483:
+Lbb482:
 	movq (%rax), %rdi
 	movq %rdi, -104(%rbp)
 	movq 8(%rax), %rdi
@@ -7383,12 +7417,12 @@ Lbb483:
 	movq %r12, %rdi
 	movq %rax, %rdx
 	movq -136(%rbp), %rcx
-	movq -296(%rbp), %r12
-	movq %rsi, %r13
+	movq -144(%rbp), %r13
+	movq %rsi, %r12
 	callq _compiler_codegen_codegen_emit_pattern_bindings
-	movq %r13, %rsi
-	movq %r12, %rdi
-	movq -144(%rbp), %rdx
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq -296(%rbp), %rdi
 	movq %rsi, %r12
 	movq (%rax), %rsi
 	movq %rdx, %r13
@@ -7448,8 +7482,8 @@ Lbb483:
 	movq %rbx, %r8
 	subq $-16, %rsp
 	movq %rax, (%r8)
-	jmp Lbb492
-Lbb484:
+	jmp Lbb491
+Lbb483:
 	xchgq %rbx, %r13
 	xchgq %rdi, %rbx
 	xchgq %r14, %rdi
@@ -7459,7 +7493,7 @@ Lbb484:
 	movq %r9, -304(%rbp)
 	movq (%rcx), %r9
 	cmpq $0, %r9
-	jz Lbb487
+	jz Lbb486
 	movq 8(%rcx), %rdi
 	movq %rdi, -200(%rbp)
 	movq %r12, %r8
@@ -7585,8 +7619,8 @@ Lbb484:
 	movq %r14, (%rax)
 	movq %r13, 8(%rax)
 	movq %rax, (%r12)
-	jmp Lbb489
-Lbb487:
+	jmp Lbb488
+Lbb486:
 	movq %rax, %rdx
 	movq %r12, %rax
 	movq %rdi, %r12
@@ -7631,10 +7665,10 @@ Lbb487:
 	movq %r14, (%rax)
 	movq %r13, 8(%rax)
 	movq %rax, (%r12)
-Lbb489:
+Lbb488:
 	movq %rax, (%rbx)
-	jmp Lbb492
-Lbb490:
+	jmp Lbb491
+Lbb489:
 	movq %rbx, %rdi
 	movq %r12, %rbx
 	callq _compiler_codegen_il_new_block
@@ -7643,7 +7677,7 @@ Lbb490:
 	callq _malloc
 	movq %r12, (%rax)
 	movq %rbx, 8(%rax)
-Lbb492:
+Lbb491:
 	movq %rbp, %rsp
 	subq $352, %rsp
 	popq %r15
@@ -7674,33 +7708,33 @@ _compiler_codegen_codegen_emit_pattern_bindings:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb506
+	jnz Lbb505
 	cmpq $9, %rax
 	movq %rcx, %r14
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb501
+	jnz Lbb500
 	cmpq $8, %rax
-	jz Lbb500
-	cmpq $7, %rax
 	jz Lbb499
+	cmpq $7, %rax
+	jz Lbb498
 	movq %rbx, %rdi
 	movq %rdi, %rbx
 	movl $16, %edi
 	callq _malloc
 	movq %rbx, (%rax)
 	movq %r14, 8(%rax)
-	jmp Lbb508
-Lbb499:
+	jmp Lbb507
+Lbb498:
 	movq 8(%rdi), %rdi
 	movq %r14, %r8
 	movq %rbx, %rcx
 	movl $0, %edx
 	movq %r13, %rsi
 	callq _compiler_codegen_codegen_emit_tuple_bindings
-	jmp Lbb508
-Lbb500:
+	jmp Lbb507
+Lbb499:
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
 	movq 16(%rax), %rsi
@@ -7708,8 +7742,8 @@ Lbb500:
 	movq %rbx, %rcx
 	movq %r13, %rdx
 	callq _compiler_codegen_codegen_emit_list_bindings
-	jmp Lbb508
-Lbb501:
+	jmp Lbb507
+Lbb500:
 	movq 16(%rdi), %r15
 	movq 24(%rdi), %rdi
 	movq %rdi, %r12
@@ -7725,23 +7759,23 @@ Lbb501:
 	movq %rsp, %rcx
 	movq (%rax), %rdx
 	cmpq $0, %rdx
-	jz Lbb503
+	jz Lbb502
 	movq 8(%rax), %rsi
 	movq %rsi, (%rcx)
-	jmp Lbb505
-Lbb503:
+	jmp Lbb504
+Lbb502:
 	leaq _donna_nil(%rip), %rax
 	movq %rax, (%rcx)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, %rsi
-Lbb505:
+Lbb504:
 	movq %r12, %r9
 	movq %rbx, %r8
 	movq %r13, %rcx
 	movl $0, %edx
 	callq _compiler_codegen_codegen_emit_constructor_field_bindings
-	jmp Lbb508
-Lbb506:
+	jmp Lbb507
+Lbb505:
 	movq %rcx, %r12
 	movq 8(%rdi), %rdi
 	callq _compiler_codegen_il_Temporary
@@ -7759,7 +7793,7 @@ Lbb506:
 	movq %r12, %rcx
 	movq %rbx, (%rax)
 	movq %rcx, 8(%rax)
-Lbb508:
+Lbb507:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -7783,45 +7817,46 @@ _compiler_codegen_codegen_emit_constructor_field_bindings:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rdx, -24(%rbp)
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz Lbb531
-	movq 8(%rdi), %rax
-	movq %rax, -72(%rbp)
+	movq 8(%rdi), %r13
+	movq %r13, -32(%rbp)
 	movq 16(%rdi), %rbx
 	movq %rbx, -64(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rax
 	movq (%rsi), %rdi
 	cmpq $1, %rdi
-	movq %r8, %r13
-	setz %r8b
-	movzbq %r8b, %r8
+	setz %r11b
+	movzbq %r11b, %r11
 	subq $16, %rsp
-	movq %rsp, %rdx
-	cmpl $0, %r8d
-	jnz Lbb513
-	movq $0, (%rdx)
-	movl $0, %edx
-	jmp Lbb515
-Lbb513:
-	movq $1, (%rdx)
-	movl $1, %edx
-Lbb515:
-	cmpl $0, %edx
-	jnz Lbb518
-	leaq _compiler_typesystem_types_TInt(%rip), %rdx
-	movq %rdx, (%rax)
+	movq %rsp, %r10
+	cmpl $0, %r11d
+	jnz Lbb512
+	movq $0, (%r10)
+	movl $0, %r10d
+	jmp Lbb514
+Lbb512:
+	movq $1, (%r10)
+	movl $1, %r10d
+Lbb514:
+	cmpl $0, %r10d
+	jnz Lbb517
+	movq %r8, %r15
+	leaq _compiler_typesystem_types_TInt(%rip), %r8
+	movq %r8, (%rax)
 	leaq _compiler_typesystem_types_TInt(%rip), %rax
 	movq %rax, %rbx
 	jmp Lbb519
-Lbb518:
+Lbb517:
+	movq %r8, %r15
 	movq 8(%rsi), %rbx
 	movq %rbx, (%rax)
 Lbb519:
 	subq $16, %rsp
 	movq %rsp, %rax
+	movq %rdx, %r14
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rdi
@@ -7835,87 +7870,88 @@ Lbb522:
 Lbb524:
 	cmpl $0, %edx
 	jnz Lbb527
-	movq %rcx, %r14
+	movq %rcx, %r12
 	leaq _donna_nil(%rip), %rcx
 	movq %rcx, (%rax)
 	leaq _donna_nil(%rip), %rax
-	movq %rax, %r12
+	movq %rax, -24(%rbp)
 	jmp Lbb530
 Lbb527:
-	movq %rcx, %r14
+	movq %rcx, %r12
 	movq 16(%rsi), %rsi
 	movq %rsi, (%rax)
-	movq %rsi, %r12
+	movq %rsi, -24(%rbp)
 Lbb530:
 	movq %r9, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq (%rax), %r15
+	movq (%rax), %r13
 	movq 8(%rax), %rdi
 	movq %rdi, -16(%rbp)
-	movq %r15, %rdi
+	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %rax, -8(%rbp)
-	movq -24(%rbp), %rdx
-	imulq $8, %rdx, %rax
+	imulq $8, %r14, %rax
 	movq %rax, %rdi
 	addq $8, %rdi
 	callq _compiler_codegen_il_Const
 	movq %rax, %rsi
-	movq %r14, %rdi
+	movq %r12, %rdi
 	callq _compiler_codegen_il_Add
-	movq %r13, %r8
-	movq %r12, %rsi
+	movq %r15, %r8
+	movq %r14, %rdx
 	movq %rax, %rcx
-	movq %rsi, %r12
 	movq -8(%rbp), %rsi
 	movq -16(%rbp), %rdi
+	movq %rdx, %r14
 	leaq _compiler_codegen_il_Long(%rip), %rdx
-	movq %rdi, %r13
+	movq %rdi, %r15
 	movq %r8, %rdi
 	callq _compiler_codegen_il_assign_inst
-	movq %r13, %rdi
-	movq %rax, -40(%rbp)
+	movq %r15, %rdi
+	movq %rax, -56(%rbp)
 	callq _compiler_codegen_codegen_fresh_temp
+	movq %r12, %rcx
 	movq %rbx, %rdi
 	movq (%rax), %rbx
+	movq %rcx, %r15
 	movq 8(%rax), %rcx
-	movq %rcx, -32(%rbp)
-	movq %rdi, %r13
+	movq %rcx, -80(%rbp)
+	movq %rdi, %r12
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r13, %rdi
-	movq %rax, -56(%rbp)
-	movq -24(%rbp), %r13
-	callq _compiler_codegen_codegen_donna_type_to_qbe
-	movq %r15, %rdi
+	movq %r12, %rdi
 	movq %rax, -48(%rbp)
-	movq -32(%rbp), %r15
+	movq -24(%rbp), %r12
+	callq _compiler_codegen_codegen_donna_type_to_qbe
+	movq %r13, %rdi
+	movq %rax, -40(%rbp)
+	movq -32(%rbp), %r13
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
-	movq %r13, %rdx
+	movq %r14, %rdx
 	movq %r12, %rsi
 	movq %rbx, %rdi
 	movq %rax, %rcx
-	movq %rdx, %r13
-	movq -48(%rbp), %rdx
+	movq %rdx, %r14
+	movq -40(%rbp), %rdx
 	movq %rsi, %r12
-	movq -56(%rbp), %rsi
+	movq -48(%rbp), %rsi
 	movq %rdi, %rbx
-	movq -40(%rbp), %rdi
+	movq -56(%rbp), %rdi
 	callq _compiler_codegen_il_assign_inst
 	movq %rbx, %rdi
-	movq %rax, -80(%rbp)
+	movq %rax, -72(%rbp)
 	movq -64(%rbp), %rbx
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rcx
-	movq %r13, %rdx
-	movq %rbx, %rdi
+	movq %r14, %rdx
+	movq %r13, %rdi
 	movq %rax, %rsi
 	movq %rdx, %r13
-	movq -80(%rbp), %rdx
-	movq %rdi, %rbx
-	movq -72(%rbp), %rdi
+	movq -72(%rbp), %rdx
+	movq %rcx, %r14
+	movq -80(%rbp), %rcx
 	callq _compiler_codegen_codegen_emit_pattern_bindings
 	movq %r14, %rcx
 	movq %r13, %rdx
@@ -7953,123 +7989,128 @@ _compiler_codegen_codegen_emit_list_bindings:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $72, %rsp
+	subq $120, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
 	movq %rcx, %r15
-	movq %rdx, %r13
-	movq %rsi, %r12
+	movq %rdx, %rbx
+	movq %rsi, %r13
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz Lbb536
 	movq 8(%rdi), %r14
-	movq %r14, -32(%rbp)
-	movq 16(%rdi), %rbx
-	movq %rbx, -56(%rbp)
+	movq 16(%rdi), %rdi
+	movq %rdi, -80(%rbp)
 	movq %r8, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq (%rax), %rbx
+	movq (%rax), %r12
 	movq 8(%rax), %rdi
-	movq %rdi, %r14
-	movq %rbx, %rdi
+	movq %rdi, -24(%rbp)
+	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, -8(%rbp)
-	movq %rdi, %r14
+	movq %rax, -16(%rbp)
 	movl $8, %edi
 	callq _compiler_codegen_il_Const
-	movq %r14, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r14
-	movq %r13, %rdi
+	movq %rbx, %rdi
 	callq _compiler_codegen_il_Add
-	movq %r14, %rdi
+	movq %r13, %rsi
 	movq %rax, %rcx
-	movq -8(%rbp), %rsi
+	movq %r15, %rax
+	movq %rsi, %r15
+	movq -16(%rbp), %rsi
+	movq -24(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
-	movq %rdi, %r14
-	movq %r15, %rdi
+	movq %rdi, %r13
+	movq %rax, %rdi
 	callq _compiler_codegen_il_assign_inst
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq %r13, %rdi
+	movq %rax, -32(%rbp)
+	callq _compiler_codegen_codegen_fresh_temp
+	movq %r12, %rdi
+	movq (%rax), %r12
+	movq 8(%rax), %r13
+	movq %r13, -48(%rbp)
+	movq %rdi, %r13
+	movq %r12, %rdi
+	callq _compiler_codegen_il_Temporary
+	movq %r13, %rdi
+	movq %rax, -40(%rbp)
+	movq -32(%rbp), %r13
+	callq _compiler_codegen_il_Temporary
+	movq %rax, %rdi
+	callq _compiler_codegen_il_Loadl
+	movq %r15, %rsi
+	movq %r13, %rdi
+	movq %rax, %rcx
+	movq %rsi, %r15
+	movq -40(%rbp), %rsi
+	movq -48(%rbp), %r13
+	leaq _compiler_codegen_il_Long(%rip), %rdx
+	callq _compiler_codegen_il_assign_inst
+	movq %r13, %rdi
+	movq %rax, -56(%rbp)
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %rbx, %rdi
 	movq (%rax), %rbx
-	movq 8(%rax), %r15
-	movq %r15, -16(%rbp)
-	movq %rdi, %r15
+	movq 8(%rax), %r13
+	movq %r13, -72(%rbp)
+	movq %rdi, %r13
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r15, %rdi
-	movq %rax, %r15
-	callq _compiler_codegen_il_Temporary
-	movq %rax, %rdi
-	callq _compiler_codegen_il_Loadl
-	movq %r15, %rsi
-	movq %r14, %rdi
-	movq %rax, %rcx
-	movq -16(%rbp), %r14
-	leaq _compiler_codegen_il_Long(%rip), %rdx
-	callq _compiler_codegen_il_assign_inst
-	movq %r14, %rdi
-	movq %rax, -24(%rbp)
-	callq _compiler_codegen_codegen_fresh_temp
 	movq %r13, %rdi
-	movq (%rax), %r13
-	movq 8(%rax), %r15
-	movq %r15, -40(%rbp)
-	movq %rdi, %r14
-	movq %r13, %rdi
-	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, %r15
-	movq %rdi, %r14
+	movq %rax, -64(%rbp)
+	movq %rdi, %r13
 	movl $16, %edi
 	callq _compiler_codegen_il_Const
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq -24(%rbp), %r14
+	movq -56(%rbp), %r13
 	callq _compiler_codegen_il_Add
 	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, %rcx
-	movq -40(%rbp), %r15
-	movq -32(%rbp), %r14
+	movq %rsi, %r15
+	movq -64(%rbp), %rsi
+	movq -72(%rbp), %r13
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %r15, %rdi
-	movq %rax, -48(%rbp)
-	callq _compiler_codegen_codegen_fresh_temp
 	movq %r13, %rdi
+	movq %rax, -96(%rbp)
+	callq _compiler_codegen_codegen_fresh_temp
+	movq %rbx, %rdi
 	movq (%rax), %r13
 	movq 8(%rax), %rcx
-	movq %rcx, -64(%rbp)
-	movq %rdi, %r15
+	movq %rcx, -104(%rbp)
+	movq %rdi, %rbx
 	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r15, %rdi
-	movq %rax, %r15
+	movq %rbx, %rdi
+	movq %rax, -88(%rbp)
+	movq -80(%rbp), %rbx
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
 	movq %r15, %rsi
-	movq %rbx, %rdi
+	movq %r12, %rdi
 	movq %rax, %rcx
+	movq %rsi, %r12
+	movq -88(%rbp), %rsi
 	movq %rdi, %r15
-	movq -48(%rbp), %rdi
-	movq -56(%rbp), %rbx
+	movq -96(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r15, %rdi
-	movq %rax, %r15
+	movq %rax, -112(%rbp)
+	movq -104(%rbp), %r15
 	callq _compiler_codegen_il_Temporary
-	movq %r15, %rdx
+	movq %r15, %rcx
 	movq %r14, %rdi
 	movq %rax, %rsi
-	movq -64(%rbp), %rcx
+	movq -112(%rbp), %rdx
 	callq _compiler_codegen_codegen_emit_pattern_bindings
 	movq %r13, %rdi
 	movq (%rax), %r13
@@ -8084,9 +8125,9 @@ _compiler_codegen_codegen_emit_list_bindings:
 	jmp Lbb544
 Lbb536:
 	movq %r15, %r14
-	movq %r13, %r15
+	movq %rbx, %r15
+	movq %r13, %rsi
 	movq %r8, %r13
-	movq %r12, %rsi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq (%rsi), %rax
@@ -8138,7 +8179,7 @@ Lbb542:
 	movq %rax, (%rbx)
 Lbb544:
 	movq %rbp, %rsp
-	subq $112, %rsp
+	subq $160, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -8154,78 +8195,85 @@ _compiler_codegen_codegen_emit_tuple_bindings:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $56, %rsp
+	subq $72, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
 	movq %rcx, %r15
-	movq %rdx, %r13
+	movq %rdx, %r14
 	movq %rsi, %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz Lbb547
-	movq 8(%rdi), %r14
-	movq %r14, -16(%rbp)
+	movq 8(%rdi), %r13
 	movq 16(%rdi), %rbx
-	movq %rbx, -40(%rbp)
-	imulq $8, %r13, %rdi
-	movq %rdi, %rbx
+	movq %rbx, -32(%rbp)
+	imulq $8, %r14, %rdi
+	movq %rdi, -8(%rbp)
 	movq %r8, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %rbx, %rdi
 	movq (%rax), %rbx
-	movq 8(%rax), %r14
-	movq %r14, -24(%rbp)
-	movq %rdi, %r14
+	movq 8(%rax), %rdi
+	movq %rdi, -24(%rbp)
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq %rax, -16(%rbp)
+	movq -8(%rbp), %rdi
 	callq _compiler_codegen_il_Const
 	movq %rax, %rsi
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Add
-	movq %r14, %rsi
+	movq %r14, %rdx
+	movq %r12, %rsi
 	movq %rax, %rcx
 	movq %r15, %rax
+	movq %rsi, %r14
+	movq -16(%rbp), %rsi
 	movq -24(%rbp), %rdi
-	movq -16(%rbp), %r14
+	movq %rdx, %r15
 	leaq _compiler_codegen_il_Long(%rip), %rdx
-	movq %rdi, %r15
+	movq %rdi, %r12
 	movq %rax, %rdi
 	callq _compiler_codegen_il_assign_inst
-	movq %r15, %rdi
-	movq %rax, -32(%rbp)
+	movq %r12, %rdi
+	movq %rax, -48(%rbp)
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %rbx, %rdi
-	movq (%rax), %rbx
+	movq (%rax), %r12
 	movq 8(%rax), %rcx
-	movq %rcx, -48(%rbp)
-	movq %rdi, %r15
-	movq %rbx, %rdi
+	movq %rcx, -56(%rbp)
+	movq %rdi, %rbx
+	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r15, %rdi
-	movq %rax, %r15
+	movq %rbx, %rdi
+	movq %rax, -40(%rbp)
+	movq -32(%rbp), %rbx
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
-	movq %r15, %rsi
-	movq %rbx, %rdi
+	movq %r15, %rdx
+	movq %r14, %rsi
+	movq %r12, %rdi
 	movq %rax, %rcx
+	movq %rsi, %r12
+	movq -40(%rbp), %rsi
 	movq %rdi, %r15
-	movq -32(%rbp), %rdi
-	movq -40(%rbp), %rbx
+	movq -48(%rbp), %rdi
+	movq %rdx, %r14
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r15, %rdi
-	movq %rax, %r15
+	movq %rax, -64(%rbp)
+	movq -56(%rbp), %r15
 	callq _compiler_codegen_il_Temporary
-	movq %r15, %rdx
-	movq %r14, %rdi
+	movq %r15, %rcx
+	movq %r14, %rdx
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq -48(%rbp), %rcx
+	movq %rdx, %r13
+	movq -64(%rbp), %rdx
 	callq _compiler_codegen_codegen_emit_pattern_bindings
 	movq %r13, %rdx
 	movq %r12, %rsi
@@ -8260,7 +8308,7 @@ _compiler_codegen_codegen_gen_pattern_check:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $72, %rsp
+	subq $88, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -8270,22 +8318,22 @@ _compiler_codegen_codegen_gen_pattern_check:
 	movq %rsi, %rdx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb597
+	jz Lbb598
 	cmpq $1, %rax
-	jz Lbb595
+	jz Lbb596
 	cmpq $2, %rax
-	jz Lbb593
+	jz Lbb594
 	cmpq $3, %rax
 	setz %sil
 	movzbq %sil, %rsi
 	cmpl $0, %esi
-	jnz Lbb587
+	jnz Lbb588
 	cmpq $6, %rax
-	jz Lbb580
+	jz Lbb581
 	cmpq $4, %rax
-	jz Lbb578
+	jz Lbb579
 	cmpq $5, %rax
-	jz Lbb576
+	jz Lbb577
 	cmpq $9, %rax
 	movq %rcx, %r12
 	setz %cl
@@ -8306,7 +8354,7 @@ _compiler_codegen_codegen_gen_pattern_check:
 	movq %rbx, (%rax)
 	movq %rcx, 8(%rax)
 	movq %r8, 16(%rax)
-	jmp Lbb599
+	jmp Lbb600
 Lbb561:
 	movq %r13, %r8
 	movq %r12, %rcx
@@ -8317,7 +8365,7 @@ Lbb561:
 	movq %r12, %rdx
 	movq %rbx, %rsi
 	callq _compiler_codegen_codegen_gen_tuple_pattern_check
-	jmp Lbb599
+	jmp Lbb600
 Lbb563:
 	movq %r13, %r8
 	movq %r12, %rcx
@@ -8325,24 +8373,22 @@ Lbb563:
 	movq 8(%rdi), %rdi
 	movq 16(%rax), %rsi
 	movq %r8, %r12
-	movq %rcx, %r14
+	movq %rcx, %r13
 	movq %rdx, %rbx
 	callq _compiler_codegen_codegen_gen_list_pattern_check
-	jmp Lbb599
+	jmp Lbb600
 Lbb565:
-	movq %r12, %r14
-	movq %r13, %r12
+	xchgq %r13, %r12
 	movq %rdx, %rbx
-	movq 16(%rdi), %r13
+	movq 16(%rdi), %r14
 	movq 24(%rdi), %rdi
-	movq %rdi, -48(%rbp)
+	movq %rdi, -32(%rbp)
 	movq %r12, %rdi
 	callq _compiler_codegen_codegen_state_ctor_tags
-	movq %r13, %rsi
+	movq %r14, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r13
+	movq %rsi, %r14
 	callq _compiler_codegen_codegen_lookup_alist
-	movq %r12, %r8
 	movq %rbx, %rdx
 	movq %rax, %rcx
 	subq $16, %rsp
@@ -8350,118 +8396,123 @@ Lbb565:
 	movq %rdx, %r15
 	movq (%rcx), %rdx
 	cmpq $0, %rdx
-	jz Lbb568
+	jz Lbb569
 	movq 8(%rcx), %rdi
 	movq %rdi, (%rax)
-	jmp Lbb570
-Lbb568:
+	movq %rdi, -24(%rbp)
+	jmp Lbb571
+Lbb569:
 	movq $-1, (%rax)
-	movq $-1, %rdi
-Lbb570:
-	movq %rdi, %rbx
-	movq %r8, %rdi
+	movq $-1, -24(%rbp)
+Lbb571:
+	movq %r12, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq (%rax), %rdi
-	movq %rdi, -16(%rbp)
-	movq 8(%rax), %r12
-	movq %r12, -8(%rbp)
+	movq (%rax), %rbx
+	movq 8(%rax), %rdi
+	movq %rdi, %r12
+	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %rax, %r12
+	movq %r12, %rdi
+	movq %rax, -16(%rbp)
+	movq %rdi, %r12
 	movq %r15, %rdi
 	callq _compiler_codegen_il_Loadl
-	movq %r15, %rdx
-	movq %r12, %rsi
-	movq %rax, %rcx
-	movq -8(%rbp), %rdi
-	movq %rdx, %r15
-	leaq _compiler_codegen_il_Long(%rip), %rdx
-	movq %rdi, %r12
-	movq %r14, %rdi
-	callq _compiler_codegen_il_assign_inst
-	movq %r12, %rdi
-	movq %rax, -40(%rbp)
-	callq _compiler_codegen_codegen_fresh_temp
-	movq %rbx, %rdi
-	movq (%rax), %r12
-	movq 8(%rax), %rbx
-	movq %rdi, %r14
-	movq %r12, %rdi
-	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, -24(%rbp)
-	movq %rdi, %r14
-	movq -16(%rbp), %rdi
-	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, -32(%rbp)
-	movq -24(%rbp), %r14
-	callq _compiler_codegen_il_Const
 	movq %r15, %rdx
 	movq %r14, %rsi
 	movq %r12, %rdi
 	movq %rax, %rcx
+	movq %rsi, %r14
+	movq -16(%rbp), %rsi
 	movq %rdx, %r15
-	movq -32(%rbp), %rdx
+	leaq _compiler_codegen_il_Long(%rip), %rdx
+	movq %rdi, %r12
+	movq %r13, %rdi
+	callq _compiler_codegen_il_assign_inst
+	movq %r12, %rdi
+	movq %rax, -56(%rbp)
+	callq _compiler_codegen_codegen_fresh_temp
+	movq %rbx, %rdi
+	movq (%rax), %r13
+	movq 8(%rax), %rbx
+	movq %rdi, %r12
+	movq %r13, %rdi
+	callq _compiler_codegen_il_Temporary
+	movq %r12, %rdi
+	movq %rax, -48(%rbp)
+	movq -24(%rbp), %r12
+	callq _compiler_codegen_il_Temporary
+	movq %r12, %rdi
+	movq %rax, -40(%rbp)
+	movq -32(%rbp), %r12
+	callq _compiler_codegen_il_Const
+	movq %r15, %rdx
+	movq %r14, %rsi
+	movq %r13, %rdi
+	movq %rax, %rcx
+	movq %rdx, %r15
+	movq -40(%rbp), %rdx
 	movq %rsi, %r14
 	leaq _compiler_codegen_il_Ceql(%rip), %rsi
-	movq %rdi, %r12
+	movq %rdi, %r13
 	leaq _compiler_codegen_il_Long(%rip), %rdi
 	callq _compiler_codegen_il_Cmp
 	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %rcx
-	movq %rdi, %r12
-	movq -40(%rbp), %rdi
+	movq %rsi, %r15
+	movq -48(%rbp), %rsi
+	movq %rdi, %r13
+	movq -56(%rbp), %rdi
 	movq %rdx, %r14
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %r12, %rdi
-	movq %rax, %r15
-	movq %rdi, %r12
+	movq %r13, %rdi
+	movq %rax, -64(%rbp)
+	movq %rdi, %r13
 	movq %rbx, %rdi
 	callq _compiler_codegen_codegen_state_ctor_field_types
-	movq %r13, %rsi
+	movq %r15, %rsi
 	movq %rax, %rdi
-	movq -48(%rbp), %r13
+	movq -64(%rbp), %r15
 	callq _compiler_codegen_codegen_lookup_alist
 	movq %r14, %rdx
-	movq %r12, %rdi
+	movq %r13, %rdi
 	subq $16, %rsp
 	movq %rsp, %rcx
-	movq %rdx, %r12
+	movq %rdx, %r14
 	movq (%rax), %rdx
 	cmpq $0, %rdx
-	jz Lbb573
+	jz Lbb574
 	movq 8(%rax), %rsi
 	movq %rsi, (%rcx)
-	movq %rsi, %r14
-	jmp Lbb575
-Lbb573:
+	movq %rsi, %r13
+	jmp Lbb576
+Lbb574:
 	leaq _donna_nil(%rip), %rax
 	movq %rax, (%rcx)
 	leaq _donna_nil(%rip), %rax
-	movq %rax, %r14
-Lbb575:
+	movq %rax, %r13
+Lbb576:
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %r9
-	movq %r14, %rsi
-	movq %r13, %rdi
+	movq %r13, %rsi
+	movq %r12, %rdi
 	movq %rax, %r8
 	subq $16, %rsp
 	movq %rsp, %rax
 	movq %rbx, 0(%rax)
-	movq %r12, %rcx
+	movq %r14, %rcx
 	movl $0, %edx
 	callq _compiler_codegen_codegen_check_nested_patterns
 	subq $-16, %rsp
-	jmp Lbb599
-Lbb576:
-	movq %r13, %r8
-	movq %rcx, %r15
-	movq %rdx, %r12
+	jmp Lbb600
+Lbb577:
+	movq %r13, %r12
+	movq %rcx, %r13
+	movq %rdx, %r14
 	movq 8(%rdi), %rsi
-	movq %r8, %rdi
+	movq %r12, %rdi
 	callq _compiler_codegen_codegen_intern_string
 	movq (%rax), %rdi
 	movq %rdi, %rbx
@@ -8469,49 +8520,55 @@ Lbb576:
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %rbx, %rdi
 	movq (%rax), %rbx
-	movq 8(%rax), %r13
-	movq %r13, -56(%rbp)
-	movq %rdi, %r13
+	movq 8(%rax), %r12
+	movq %rdi, %r15
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r13, %rdi
-	movq %rax, %r14
-	movq %rdi, %r13
+	movq %r15, %rdi
+	movq %rax, -80(%rbp)
+	movq %rdi, %r15
 	leaq _str3787(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %r13, %rdi
-	movq %rax, -64(%rbp)
+	movq %r15, %rdi
+	movq %rax, -72(%rbp)
 	callq _compiler_codegen_il_Global
-	movq %rax, %r13
+	movq %r12, %rdi
+	movq %rax, %r15
+	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
-	movq %r15, %rcx
-	movq %rax, %r15
-	movq %r13, %rax
-	movq %rcx, %r13
-	leaq _compiler_codegen_il_Long(%rip), %rcx
-	movq %rcx, (%r15)
-	movq %rax, 8(%r15)
+	movq %r12, %rdi
+	movq %rax, %r12
+	leaq _compiler_codegen_il_Long(%rip), %rax
+	movq %rax, (%r12)
+	movq %r15, 8(%r12)
+	movq %rdi, %r15
 	movl $24, %edi
 	callq _malloc
-	xchgq %rax, %r15
+	movq %r15, %rdi
+	movq %rax, %r15
 	movq $1, (%r15)
-	movq %rax, 8(%r15)
+	movq %r12, 8(%r15)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r15)
+	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
-	movq %r12, %rdx
+	movq %r14, %rdx
+	movq %r12, %rdi
 	movq %rax, %r12
 	leaq _compiler_codegen_il_Long(%rip), %rax
 	movq %rax, (%r12)
 	movq %rdx, 8(%r12)
+	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
+	movq %r14, %rdi
 	movq %rax, %rsi
 	movq %r12, %rax
-	movq -64(%rbp), %rdi
-	movq -56(%rbp), %r12
+	movq %rdi, %r12
+	movq -72(%rbp), %rdi
+	movq -80(%rbp), %r14
 	movq $1, (%rsi)
 	movq %rax, 8(%rsi)
 	movq %r15, 16(%rsi)
@@ -8563,8 +8620,8 @@ Lbb576:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb599
-Lbb578:
+	jmp Lbb600
+Lbb579:
 	movq %r13, %r12
 	movq %rcx, %r13
 	movq %rdx, %r15
@@ -8607,8 +8664,8 @@ Lbb578:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb599
-Lbb580:
+	jmp Lbb600
+Lbb581:
 	movq %r13, %r12
 	movq %rdx, %r15
 	movq %rcx, %r13
@@ -8616,14 +8673,14 @@ Lbb580:
 	subq $16, %rsp
 	movq %rsp, %rax
 	cmpq $1, %rcx
-	jz Lbb584
+	jz Lbb585
 	movq $0, (%rax)
 	movl $0, %edi
-	jmp Lbb586
-Lbb584:
+	jmp Lbb587
+Lbb585:
 	movq $1, (%rax)
 	movl $1, %edi
-Lbb586:
+Lbb587:
 	movq %rdi, %rbx
 	movq %r12, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
@@ -8661,8 +8718,8 @@ Lbb586:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb599
-Lbb587:
+	jmp Lbb600
+Lbb588:
 	movq %r13, %r12
 	movq %rcx, %r13
 	movq %rdx, %rbx
@@ -8676,14 +8733,14 @@ Lbb587:
 	movq %rdx, %r15
 	movq (%rcx), %rdx
 	cmpq $0, %rdx
-	jz Lbb590
+	jz Lbb591
 	movq 8(%rcx), %rdi
 	movq %rdi, (%rax)
-	jmp Lbb592
-Lbb590:
+	jmp Lbb593
+Lbb591:
 	movq $0, (%rax)
 	movl $0, %edi
-Lbb592:
+Lbb593:
 	movq %rdi, %rbx
 	movq %r8, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
@@ -8721,8 +8778,8 @@ Lbb592:
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp Lbb599
-Lbb593:
+	jmp Lbb600
+Lbb594:
 	movq %rcx, %r12
 	movl $1, %edi
 	callq _compiler_codegen_il_Const
@@ -8732,8 +8789,8 @@ Lbb593:
 	movq %rbx, (%rax)
 	movq %r12, 8(%rax)
 	movq %r13, 16(%rax)
-	jmp Lbb599
-Lbb595:
+	jmp Lbb600
+Lbb596:
 	movq %rcx, %r12
 	movl $1, %edi
 	callq _compiler_codegen_il_Const
@@ -8743,8 +8800,8 @@ Lbb595:
 	movq %rbx, (%rax)
 	movq %r12, 8(%rax)
 	movq %r13, 16(%rax)
-	jmp Lbb599
-Lbb597:
+	jmp Lbb600
+Lbb598:
 	movq %rcx, %r12
 	movl $1, %edi
 	callq _compiler_codegen_il_Const
@@ -8756,9 +8813,9 @@ Lbb597:
 	movq %rbx, (%rax)
 	movq %rcx, 8(%rax)
 	movq %r8, 16(%rax)
-Lbb599:
+Lbb600:
 	movq %rbp, %rsp
-	subq $112, %rsp
+	subq $128, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -8780,111 +8837,107 @@ _compiler_codegen_codegen_check_nested_patterns:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq 16(%rbp), %rbx
+	movq 16(%rbp), %rax
 	movq %r9, %r12
 	movq %r8, %r13
-	movq %rdx, %rax
-	movq %rsi, %rdx
-	movq %rdi, %rsi
-	movq %rax, -56(%rbp)
-	movq (%rsi), %rdi
+	movq %rdx, %r8
+	movq %rdi, %rdx
+	movq %r8, -56(%rbp)
+	movq (%rdx), %rdi
 	cmpq $0, %rdi
-	jz Lbb632
-	movq 8(%rsi), %rdi
+	jz Lbb631
+	movq 8(%rdx), %rdi
 	movq %rdi, -152(%rbp)
 	movq %rdi, %r9
-	movq 16(%rsi), %rdi
-	movq %rdi, -296(%rbp)
+	movq 16(%rdx), %rdi
 	subq $16, %rsp
-	movq %rsp, %r8
-	movq (%rdx), %r10
-	cmpq $1, %r10
-	setz %r11b
-	movzbq %r11b, %r11
+	movq %rsp, %r10
+	movq (%rsi), %r11
+	cmpq $1, %r11
+	movq %r12, %rbx
+	setz %r12b
+	movzbq %r12b, %r12
 	subq $16, %rsp
-	movq %rsp, %rsi
-	cmpl $0, %r11d
-	jnz Lbb604
-	movq $0, (%rsi)
-	movl $0, %esi
-	jmp Lbb606
-Lbb604:
-	movq $1, (%rsi)
-	movl $1, %esi
-Lbb606:
-	cmpl $0, %esi
-	jnz Lbb609
-	leaq _compiler_typesystem_types_TInt(%rip), %rsi
-	movq %rsi, (%r8)
-	leaq _compiler_typesystem_types_TInt(%rip), %rsi
-	movq %rsi, -160(%rbp)
-	jmp Lbb611
-Lbb609:
-	movq 8(%rdx), %rsi
-	movq %rsi, (%r8)
-	movq %rsi, -160(%rbp)
-Lbb611:
+	movq %rsp, %rdx
+	cmpl $0, %r12d
+	jnz Lbb605
+	movq $0, (%rdx)
+	movl $0, %edx
+	jmp Lbb607
+Lbb605:
+	movq $1, (%rdx)
+	movl $1, %edx
+Lbb607:
+	cmpl $0, %edx
+	jnz Lbb610
+	leaq _compiler_typesystem_types_TInt(%rip), %rdx
+	movq %rdx, (%r10)
+	leaq _compiler_typesystem_types_TInt(%rip), %rdx
+	movq %rdx, -160(%rbp)
+	jmp Lbb612
+Lbb610:
+	movq 8(%rsi), %rdx
+	movq %rdx, (%r10)
+	movq %rdx, -160(%rbp)
+Lbb612:
 	subq $16, %rsp
-	movq %rsp, %rsi
+	movq %rsp, %rdx
 	subq $16, %rsp
-	movq %rsp, %r8
-	cmpq $1, %r10
-	jz Lbb614
-	movq $0, (%r8)
-	movl $0, %r8d
-	jmp Lbb616
-Lbb614:
-	movq $1, (%r8)
-	movl $1, %r8d
-Lbb616:
-	cmpl $0, %r8d
+	movq %rsp, %r10
+	cmpq $1, %r11
+	jz Lbb615
+	movq $0, (%r10)
+	movl $0, %r10d
+	jmp Lbb617
+Lbb615:
+	movq $1, (%r10)
+	movl $1, %r10d
+Lbb617:
+	cmpl $0, %r10d
 	jnz Lbb620
-	movq %rsi, %rdx
 	leaq _donna_nil(%rip), %rsi
 	movq %rsi, (%rdx)
-	movq %rax, %r8
-	leaq _donna_nil(%rip), %rax
-	movq %rax, %rsi
-	jmp Lbb622
+	leaq _donna_nil(%rip), %rdx
+	movq %rdx, %rsi
+	jmp Lbb621
 Lbb620:
-	movq %rax, %r8
-	movq %rsi, %rax
-	movq 16(%rdx), %rsi
-	movq %rsi, (%rax)
-Lbb622:
-	movq %rbx, %rax
-	subq $16, %rsp
-	movq %rsp, %rbx
-	movq %rbx, -16(%rbp)
+	movq 16(%rsi), %rsi
+	movq %rsi, (%rdx)
+Lbb621:
 	movq %rcx, %r15
-	movq (%r9), %rcx
-	cmpq $0, %rcx
-	setz %dl
-	movzbq %dl, %rdx
+	subq $16, %rsp
+	movq %rsp, %rcx
+	movq %rcx, -296(%rbp)
+	movq (%r9), %rdx
+	cmpq $0, %rdx
+	movq %rdi, %r12
+	setz %dil
+	movzbq %dil, %rdi
 	movq %r8, %r14
 	addq $1, %r14
-	cmpl $0, %edx
-	jnz Lbb630
-	cmpq $2, %rcx
-	jz Lbb628
-	cmpq $1, %rcx
-	jz Lbb626
-	movq %rsi, %rbx
+	movq %r14, -176(%rbp)
+	cmpl $0, %edi
+	jnz Lbb629
+	cmpq $2, %rdx
+	jz Lbb627
+	cmpq $1, %rdx
+	jz Lbb625
+	movq %rsi, %r14
 	leaq _str3986(%rip), %rsi
 	movq %rax, %rdi
 	callq _compiler_codegen_codegen_fresh_label
-	movq %rbx, %rsi
+	movq %r14, %rsi
 	movq (%rax), %rdi
 	movq %rdi, -40(%rbp)
 	movq 8(%rax), %rdi
-	movq %rsi, %rbx
+	movq %rsi, %r14
 	leaq _str3992(%rip), %rsi
 	callq _compiler_codegen_codegen_fresh_label
-	movq %rbx, %rsi
+	movq %r14, %rsi
 	movq (%rax), %rdi
 	movq %rdi, -240(%rbp)
 	movq 8(%rax), %rdi
-	movq %rsi, %rbx
+	movq %rsi, %r14
 	leaq _str3998(%rip), %rsi
 	callq _compiler_codegen_codegen_fresh_label
 	movq (%rax), %rdi
@@ -8892,7 +8945,7 @@ Lbb622:
 	movq 8(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq (%rax), %rdi
-	movq %rdi, -176(%rbp)
+	movq %rdi, -16(%rbp)
 	movq 8(%rax), %rax
 	movq %rax, -32(%rbp)
 	callq _compiler_codegen_il_Temporary
@@ -8901,26 +8954,22 @@ Lbb622:
 	callq _compiler_codegen_il_Const
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Alloc8
-	movq %r14, %rdx
-	movq %rbx, %rsi
+	movq %r14, %rsi
 	movq %rax, %rcx
-	movq %r12, %rax
-	movq -16(%rbp), %rbx
-	movq %rsi, %r12
+	movq %rbx, %rax
+	movq %rsi, %r14
 	movq -8(%rbp), %rsi
-	movq %rdx, %r14
+	movq -16(%rbp), %rbx
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	movq %rax, %rdi
 	callq _compiler_codegen_il_assign_inst
-	movq %r14, %rdx
-	movq %r12, %rsi
+	movq %r14, %rsi
 	movq %rax, -24(%rbp)
 	movq -240(%rbp), %rdi
 	movq %rdi, %rax
 	movq -40(%rbp), %rdi
-	movq %rdx, %r14
 	movq %rax, %rdx
-	movq %rsi, %r12
+	movq %rsi, %r14
 	movq %rdi, %rsi
 	movq %r13, %rdi
 	callq _compiler_codegen_il_Jnz
@@ -8933,7 +8982,7 @@ Lbb622:
 	movq %rax, -48(%rbp)
 	movq -40(%rbp), %rdi
 	callq _compiler_codegen_il_new_block
-	movq %rax, -72(%rbp)
+	movq %rax, -80(%rbp)
 	movq -48(%rbp), %rdi
 	movq -56(%rbp), %rax
 	imulq $8, %rax, %rax
@@ -8945,22 +8994,20 @@ Lbb622:
 	movq 8(%rax), %rax
 	movq %rax, -88(%rbp)
 	callq _compiler_codegen_il_Temporary
-	movq %rax, -80(%rbp)
+	movq %rax, -72(%rbp)
 	movq -64(%rbp), %rdi
 	callq _compiler_codegen_il_Const
 	movq %rax, %rsi
 	movq %r15, %rdi
 	callq _compiler_codegen_il_Add
-	movq %r14, %rdx
-	movq %r12, %rsi
+	movq %r14, %rsi
 	movq %rax, %rcx
-	movq %rsi, %r12
-	movq -80(%rbp), %rsi
-	movq -72(%rbp), %rdi
-	movq %rdx, %r14
+	movq %rsi, %r14
+	movq -72(%rbp), %rsi
+	movq -80(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %rax, -104(%rbp)
+	movq %rax, -120(%rbp)
 	movq -88(%rbp), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq (%rax), %rdi
@@ -8968,41 +9015,35 @@ Lbb622:
 	movq 8(%rax), %r8
 	movq %r8, -144(%rbp)
 	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdx
-	movq %rax, -120(%rbp)
-	movq %rdx, %r14
+	movq %rax, -112(%rbp)
 	movq -160(%rbp), %rdx
 	movq %rdx, %rdi
 	callq _compiler_codegen_codegen_donna_type_to_qbe
-	movq %rax, -112(%rbp)
+	movq %rax, -104(%rbp)
 	movq -96(%rbp), %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
-	movq %r14, %rdx
-	movq %r12, %rsi
+	movq %r14, %rsi
 	movq %rax, %rcx
-	movq %rdx, %r14
-	movq -112(%rbp), %rdx
-	movq %rsi, %r12
-	movq -120(%rbp), %rsi
-	movq -104(%rbp), %rdi
+	movq -104(%rbp), %rdx
+	movq %rsi, %r14
+	movq -112(%rbp), %rsi
+	movq -120(%rbp), %rdi
 	callq _compiler_codegen_il_assign_inst
 	movq %rax, -136(%rbp)
 	movq -128(%rbp), %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rcx
-	movq %r14, %rdx
 	movq %rax, %rsi
-	movq %rdx, %r14
 	movq -160(%rbp), %rdx
 	movq %rcx, %r15
 	movq -136(%rbp), %rcx
 	movq -144(%rbp), %r8
 	movq -152(%rbp), %rdi
 	callq _compiler_codegen_codegen_gen_pattern_check
-	movq %r12, %rsi
-	movq %rsi, %r12
+	movq %r14, %rsi
+	movq %rsi, %r14
 	movq (%rax), %rsi
 	movq %rsi, -168(%rbp)
 	movq 8(%rax), %rdi
@@ -9014,119 +9055,120 @@ Lbb622:
 	movq 8(%rax), %rax
 	movq %rax, -232(%rbp)
 	callq _compiler_codegen_il_Temporary
-	movq %r12, %rsi
+	movq %r14, %rsi
+	movq %rbx, %rdi
 	movq %rax, -184(%rbp)
 	movq %r13, %rax
+	movq -176(%rbp), %r14
 	movq %rsi, %r13
 	movq -168(%rbp), %rsi
-	movq -176(%rbp), %rdi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq %rax, %rdi
 	callq _compiler_codegen_il_And
 	movq %r14, %rdx
 	movq %r13, %rsi
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rcx
 	movq %rsi, %r13
 	movq -184(%rbp), %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -192(%rbp), %rdi
 	movq %rdx, %r14
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -216(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -200(%rbp), %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -208(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	callq _compiler_codegen_il_Temporary
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -208(%rbp), %rdi
 	callq _compiler_codegen_il_Storel
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -216(%rbp), %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -224(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -280(%rbp), %rdi
 	callq _compiler_codegen_il_Jmp
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -224(%rbp), %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -232(%rbp), %rdi
 	callq _compiler_codegen_codegen_push_block
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -272(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -240(%rbp), %rdi
 	callq _compiler_codegen_il_new_block
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -256(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movl $0, %edi
 	callq _compiler_codegen_il_Const
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -248(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	callq _compiler_codegen_il_Temporary
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -248(%rbp), %rdi
 	callq _compiler_codegen_il_Storel
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -256(%rbp), %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -264(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -280(%rbp), %rdi
 	callq _compiler_codegen_il_Jmp
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -264(%rbp), %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -272(%rbp), %rdi
 	callq _compiler_codegen_codegen_push_block
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -288(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -280(%rbp), %rdi
 	callq _compiler_codegen_il_new_block
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -312(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -288(%rbp), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %r12, %rdi
-	movq %rdi, %r12
+	movq %rbx, %rdi
+	movq %rdi, %rbx
 	movq (%rax), %rdi
 	movq %rdi, -320(%rbp)
 	movq 8(%rax), %rax
 	movq %rax, -336(%rbp)
 	callq _compiler_codegen_il_Temporary
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, -304(%rbp)
-	movq -296(%rbp), %r12
+	movq -296(%rbp), %rbx
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
@@ -9160,9 +9202,12 @@ Lbb622:
 	subq $-16, %rsp
 	movq %rax, (%rbx)
 	jmp Lbb633
-Lbb626:
+Lbb625:
 	movq %r14, %rdx
+	movq %r12, %rdi
 	movq %rax, %r14
+	movq %rbx, %r12
+	movq %rcx, %rbx
 	movq %r15, %rcx
 	subq $16, %rsp
 	movq %rsp, %rax
@@ -9173,9 +9218,12 @@ Lbb626:
 	subq $-16, %rsp
 	movq %rax, (%rbx)
 	jmp Lbb633
-Lbb628:
+Lbb627:
 	movq %r14, %rdx
+	movq %r12, %rdi
 	movq %rax, %r14
+	movq %rbx, %r12
+	movq %rcx, %rbx
 	movq %r15, %rcx
 	subq $16, %rsp
 	movq %rsp, %rax
@@ -9186,9 +9234,12 @@ Lbb628:
 	subq $-16, %rsp
 	movq %rax, (%rbx)
 	jmp Lbb633
-Lbb630:
+Lbb629:
 	movq %r14, %rdx
+	movq %r12, %rdi
 	movq %rax, %r14
+	movq %rbx, %r12
+	movq %rcx, %rbx
 	movq %r15, %rcx
 	subq $16, %rsp
 	movq %rsp, %rax
@@ -9199,7 +9250,8 @@ Lbb630:
 	subq $-16, %rsp
 	movq %rax, (%rbx)
 	jmp Lbb633
-Lbb632:
+Lbb631:
+	movq %rax, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %r13, (%rax)
@@ -9223,85 +9275,100 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $280, %rsp
+	subq $328, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
 	movq %rcx, %rbx
-	movq %rdx, %r13
+	movq %rdx, %r14
+	movq %rsi, %r15
 	movq %rdi, %rax
 	movq %r8, %rdi
-	movq %rsi, -32(%rbp)
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz Lbb636
 	movq 8(%rax), %r9
-	movq %r9, -192(%rbp)
-	movq 16(%rax), %r14
-	movq %r14, -200(%rbp)
+	movq %r9, -240(%rbp)
+	movq 16(%rax), %r12
+	movq %r12, -248(%rbp)
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %rbx, %rdi
 	movq (%rax), %rbx
 	movq 8(%rax), %r12
-	movq %rdi, %r14
+	movq %rdi, %r13
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, %r15
-	movq %rdi, %r14
 	movq %r13, %rdi
+	movq %rax, -16(%rbp)
+	movq %rdi, %r13
+	movq %r14, %rdi
 	callq _compiler_codegen_il_Loadl
 	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, %rcx
+	movq %rsi, %r15
+	movq -16(%rbp), %rsi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
-	movq %rdi, %r14
 	callq _compiler_codegen_il_assign_inst
 	movq %r12, %rdi
-	movq %rax, %r12
+	movq %rax, %r13
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %rbx, %rdi
-	movq %rdi, %r14
-	movq (%rax), %rdi
-	movq %rdi, -24(%rbp)
-	movq 8(%rax), %rbx
-	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq (%rax), %rbx
+	movq 8(%rax), %r12
+	movq %r12, -24(%rbp)
+	movq %rdi, %r12
+	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r12, %rdi
-	movq %rax, %r15
-	movq %rdi, %r12
+	movq %rax, -40(%rbp)
+	movq -24(%rbp), %r12
+	callq _compiler_codegen_il_Temporary
+	movq %r13, %rdi
+	movq %rax, -32(%rbp)
+	movq %rdi, %r13
 	movl $1, %edi
 	callq _compiler_codegen_il_Const
-	movq %r15, %rdx
-	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r15, %rsi
+	movq %r13, %rdi
 	movq %rax, %rcx
-	movq %rsi, %r14
+	movq -32(%rbp), %rdx
+	movq %rsi, %r15
 	leaq _compiler_codegen_il_Ceql(%rip), %rsi
-	movq %rdi, %r12
+	movq %rdi, %r13
 	leaq _compiler_codegen_il_Long(%rip), %rdi
 	callq _compiler_codegen_il_Cmp
-	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r15, %rsi
+	movq %r13, %rdi
 	movq %rax, %rcx
+	movq %rsi, %r13
+	movq -40(%rbp), %rsi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %rbx, %rdi
-	movq %rax, -16(%rbp)
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq %rax, -56(%rbp)
+	movq %rsi, %r12
 	leaq _str4149(%rip), %rsi
 	callq _compiler_codegen_codegen_fresh_label
-	movq (%rax), %r14
-	movq 8(%rax), %rdi
-	leaq _str4155(%rip), %rsi
-	callq _compiler_codegen_codegen_fresh_label
-	movq (%rax), %rdi
-	movq %rdi, -112(%rbp)
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq (%rax), %r13
+	movq %r13, -64(%rbp)
 	movq %rdi, %rbx
 	movq 8(%rax), %rdi
+	movq %rsi, %r12
+	leaq _str4155(%rip), %rsi
+	callq _compiler_codegen_codegen_fresh_label
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq (%rax), %r15
+	movq %r15, -88(%rbp)
+	movq %rdi, %rbx
+	movq 8(%rax), %rdi
+	movq %rsi, %r15
 	leaq _str4161(%rip), %rsi
 	callq _compiler_codegen_codegen_fresh_label
 	movq %rbx, %rdi
@@ -9312,132 +9379,134 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	movq %rbx, %rdi
 	movq (%rax), %rbx
 	movq 8(%rax), %rax
-	movq %rax, -48(%rbp)
-	movq %rdi, %r15
+	movq %rax, -80(%rbp)
+	movq %rdi, %r13
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r15, %rdi
-	movq %rax, -8(%rbp)
-	movq %rdi, %r15
+	movq %r13, %rdi
+	movq %rax, -48(%rbp)
+	movq %rdi, %r13
 	movl $8, %edi
 	callq _compiler_codegen_il_Const
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Alloc8
-	movq %r15, %rdi
+	movq %r15, %rsi
+	movq %r13, %rdi
 	movq %rax, %rcx
-	movq -8(%rbp), %rsi
-	movq %rdi, %r15
-	movq -16(%rbp), %rdi
+	movq %rsi, %r15
+	movq -48(%rbp), %rsi
+	movq %rdi, %r13
+	movq -56(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %r15, %rdi
-	movq %rax, -40(%rbp)
-	movq %rdi, %r15
-	movq -24(%rbp), %rdi
+	movq %r13, %rdi
+	movq %rax, -72(%rbp)
+	movq -64(%rbp), %r13
 	callq _compiler_codegen_il_Temporary
+	movq %r15, %rsi
 	movq %rax, %rdi
-	movq -32(%rbp), %rsi
+	movq -88(%rbp), %r15
 	movq %r15, %rdx
 	movq %rsi, %r15
-	movq %r14, %rsi
+	movq %r13, %rsi
 	callq _compiler_codegen_il_Jnz
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r14
-	movq -40(%rbp), %rdi
+	movq %rdi, %r13
+	movq -72(%rbp), %rdi
 	callq _compiler_codegen_il_volatile_inst
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r14
-	movq -48(%rbp), %rdi
+	movq %rdi, %r13
+	movq -80(%rbp), %rdi
 	callq _compiler_codegen_codegen_push_block
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq %r13, %rdi
+	movq %rax, -96(%rbp)
+	movq -88(%rbp), %r13
 	callq _compiler_codegen_il_new_block
-	movq %r14, %rdi
-	movq %rax, -64(%rbp)
+	movq %rax, -112(%rbp)
+	movq -96(%rbp), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq (%rax), %r14
-	movq 8(%rax), %rdi
-	movq %rdi, -72(%rbp)
-	movq %r14, %rdi
+	movq (%rax), %rdi
+	movq %rdi, -128(%rbp)
+	movq 8(%rax), %rax
+	movq %rax, -120(%rbp)
 	callq _compiler_codegen_il_Temporary
-	movq %rax, -56(%rbp)
+	movq %rax, -104(%rbp)
 	movl $8, %edi
 	callq _compiler_codegen_il_Const
 	movq %rax, %rsi
-	movq %r13, %rdi
+	movq %r14, %rdi
 	callq _compiler_codegen_il_Add
 	movq %r15, %rsi
 	movq %rax, %rcx
 	movq %rsi, %r15
-	movq -56(%rbp), %rsi
-	movq -64(%rbp), %rdi
+	movq -104(%rbp), %rsi
+	movq -112(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %rax, -96(%rbp)
-	movq -72(%rbp), %rdi
+	movq %rax, -144(%rbp)
+	movq -120(%rbp), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq (%rax), %rdi
-	movq %rdi, -80(%rbp)
+	movq %rdi, -160(%rbp)
 	movq 8(%rax), %rax
-	movq %rax, -104(%rbp)
+	movq %rax, -152(%rbp)
 	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, -88(%rbp)
-	movq -80(%rbp), %r14
+	movq %rax, -136(%rbp)
+	movq -128(%rbp), %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
 	movq %r15, %rsi
 	movq %rax, %rcx
 	movq %rsi, %r15
-	movq -88(%rbp), %rsi
-	movq -96(%rbp), %rdi
+	movq -136(%rbp), %rsi
+	movq -144(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %rax, -128(%rbp)
-	movq -104(%rbp), %rdi
+	movq %rax, -176(%rbp)
+	movq -152(%rbp), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq (%rax), %rdi
-	movq %rdi, -144(%rbp)
+	movq %rdi, -192(%rbp)
 	movq 8(%rax), %rax
-	movq %rax, -136(%rbp)
+	movq %rax, -184(%rbp)
 	callq _compiler_codegen_il_Temporary
-	movq %r13, %rdi
-	movq %rax, -120(%rbp)
-	movq %rdi, %r13
+	movq %r14, %rdi
+	movq %rax, -168(%rbp)
+	movq %rdi, %r14
 	movl $16, %edi
 	callq _compiler_codegen_il_Const
-	movq %r13, %rdi
+	movq %r14, %rdi
 	movq %rax, %rsi
-	movq -112(%rbp), %r13
+	movq -160(%rbp), %r14
 	callq _compiler_codegen_il_Add
 	movq %r15, %rsi
 	movq %r14, %rdi
 	movq %rax, %rcx
 	movq %rsi, %r15
-	movq -120(%rbp), %rsi
+	movq -168(%rbp), %rsi
 	movq %rdi, %r14
-	movq -128(%rbp), %rdi
+	movq -176(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r14, %rdi
-	movq %rax, -160(%rbp)
+	movq %rax, -208(%rbp)
 	movq %rdi, %r14
-	movq -136(%rbp), %rdi
+	movq -184(%rbp), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %r14, %rdi
 	movq %rdi, %r14
 	movq (%rax), %rdi
-	movq %rdi, -168(%rbp)
+	movq %rdi, -216(%rbp)
 	movq 8(%rax), %r8
-	movq %r8, -184(%rbp)
+	movq %r8, -232(%rbp)
 	callq _compiler_codegen_il_Temporary
 	movq %r14, %rdi
-	movq %rax, -152(%rbp)
+	movq %rax, -200(%rbp)
 	movq %rdi, %r14
-	movq -144(%rbp), %rdi
+	movq -192(%rbp), %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %rax, %rdi
 	callq _compiler_codegen_il_Loadl
@@ -9445,77 +9514,77 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	movq %r14, %rdi
 	movq %rax, %rcx
 	movq %rsi, %r15
-	movq -152(%rbp), %rsi
+	movq -200(%rbp), %rsi
 	movq %rdi, %r14
-	movq -160(%rbp), %rdi
+	movq -208(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r14, %rdi
-	movq %rax, -176(%rbp)
-	movq -168(%rbp), %r14
+	movq %rax, -224(%rbp)
+	movq -216(%rbp), %r14
 	callq _compiler_codegen_il_Temporary
 	movq %r14, %rdi
 	movq %rax, %rsi
-	movq -176(%rbp), %rcx
-	movq -184(%rbp), %r8
+	movq -224(%rbp), %rcx
+	movq -232(%rbp), %r8
 	movq %rdi, %r14
-	movq -192(%rbp), %rdi
+	movq -240(%rbp), %rdi
 	leaq _compiler_typesystem_types_TInt(%rip), %rdx
 	callq _compiler_codegen_codegen_gen_pattern_check
 	movq %r14, %rdi
-	movq -200(%rbp), %r14
+	movq -248(%rbp), %r14
 	movq (%rax), %rcx
-	movq %rcx, -224(%rbp)
+	movq %rcx, -272(%rbp)
 	movq 8(%rax), %rcx
-	movq %rcx, -216(%rbp)
+	movq %rcx, -264(%rbp)
 	movq 16(%rax), %r8
-	movq %r8, -208(%rbp)
+	movq %r8, -256(%rbp)
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rsi
 	movq %r14, %rdi
 	movq %rax, %rdx
-	movq -208(%rbp), %r8
-	movq -216(%rbp), %rcx
-	movq -224(%rbp), %r14
+	movq -256(%rbp), %r8
+	movq -264(%rbp), %rcx
+	movq -272(%rbp), %r14
 	callq _compiler_codegen_codegen_gen_list_pattern_check
 	movq %r14, %rdi
 	movq (%rax), %rsi
-	movq %rsi, -240(%rbp)
+	movq %rsi, -288(%rbp)
 	movq 8(%rax), %r14
-	movq %r14, -232(%rbp)
+	movq %r14, -280(%rbp)
 	movq %rdi, %r14
 	movq 16(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %r14, %rdi
 	movq (%rax), %r15
 	movq 8(%rax), %r14
-	movq %r14, -256(%rbp)
+	movq %r14, -304(%rbp)
 	movq %rdi, %r14
 	movq %r15, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r14, %rdi
-	movq %rax, -248(%rbp)
-	movq -232(%rbp), %r14
-	movq -240(%rbp), %rsi
+	movq %rax, -296(%rbp)
+	movq -280(%rbp), %r14
+	movq -288(%rbp), %rsi
 	callq _compiler_codegen_il_And
 	movq %r14, %rdi
 	movq %rax, %rcx
-	movq -248(%rbp), %rsi
-	movq -256(%rbp), %r14
+	movq -296(%rbp), %rsi
+	movq -304(%rbp), %r14
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r15, %rdi
 	movq %rax, %r15
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rdi
-	movq %rax, -264(%rbp)
+	movq %rax, -312(%rbp)
 	movq %rdi, %r15
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r15
-	movq -264(%rbp), %rdi
+	movq -312(%rbp), %rdi
 	callq _compiler_codegen_il_Storel
 	movq %r15, %rdi
 	movq %rax, %rsi
@@ -9589,8 +9658,9 @@ _compiler_codegen_codegen_gen_list_pattern_check:
 	movq %rbx, 16(%rax)
 	jmp Lbb640
 Lbb636:
+	movq %r14, %r12
 	movq %rbx, %r14
-	movq %r13, %r12
+	movq %r15, %rsi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq (%rsi), %rax
@@ -9627,24 +9697,26 @@ Lbb639:
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r13, %rdi
-	movq %rax, -272(%rbp)
+	movq %rax, %r14
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %r12, %rdi
 	movq (%rax), %r13
 	movq 8(%rax), %r12
-	movq %rdi, %r14
+	movq %rdi, %r15
 	movq %r13, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, %r14
-	callq _compiler_codegen_il_Temporary
+	movq %r15, %rdi
 	movq %rax, %r15
+	callq _compiler_codegen_il_Temporary
+	movq %r14, %rdi
+	movq %rax, -320(%rbp)
+	movq %rdi, %r14
 	movl $0, %edi
 	callq _compiler_codegen_il_Const
-	movq %r15, %rdx
-	movq %r14, %rsi
+	movq %r15, %rsi
+	movq %r14, %rdi
 	movq %rax, %rcx
-	movq -272(%rbp), %rdi
+	movq -320(%rbp), %rdx
 	movq %rsi, %r15
 	leaq _compiler_codegen_il_Ceql(%rip), %rsi
 	movq %rdi, %r14
@@ -9667,7 +9739,7 @@ Lbb639:
 	movq %rax, (%rbx)
 Lbb640:
 	movq %rbp, %rsp
-	subq $320, %rsp
+	subq $368, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -9777,7 +9849,7 @@ _compiler_codegen_codegen_gen_tuple_elem_checks:
 	movq (%rax), %rdi
 	movq %rdi, -72(%rbp)
 	movq 8(%rax), %r8
-	movq %r8, -80(%rbp)
+	movq %r8, -88(%rbp)
 	callq _compiler_codegen_il_Temporary
 	movq %rax, -56(%rbp)
 	movq -48(%rbp), %rdi
@@ -9793,15 +9865,15 @@ _compiler_codegen_codegen_gen_tuple_elem_checks:
 	movq %rdx, %r14
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %rax, -88(%rbp)
+	movq %rax, -80(%rbp)
 	movq -72(%rbp), %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r15, %rcx
 	movq %r14, %rdx
 	movq %rax, %rsi
 	movq %rcx, %r14
-	movq -88(%rbp), %rcx
-	movq -80(%rbp), %r8
+	movq -80(%rbp), %rcx
+	movq -88(%rbp), %r8
 	movq -96(%rbp), %rdi
 	movq %rdx, %r15
 	leaq _compiler_typesystem_types_TInt(%rip), %rdx
@@ -9811,7 +9883,7 @@ _compiler_codegen_codegen_gen_tuple_elem_checks:
 	movq (%rax), %rsi
 	movq %rsi, -104(%rbp)
 	movq 8(%rax), %rdi
-	movq %rdi, -120(%rbp)
+	movq %rdi, -128(%rbp)
 	movq 16(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq (%rax), %rdi
@@ -9821,7 +9893,7 @@ _compiler_codegen_codegen_gen_tuple_elem_checks:
 	callq _compiler_codegen_il_Temporary
 	movq %r14, %rcx
 	movq %r13, %rsi
-	movq %rax, -128(%rbp)
+	movq %rax, -120(%rbp)
 	movq -112(%rbp), %rdi
 	movq %rsi, %r14
 	movq -104(%rbp), %rsi
@@ -9833,9 +9905,9 @@ _compiler_codegen_codegen_gen_tuple_elem_checks:
 	movq %r13, %rdi
 	movq %rax, %rcx
 	movq %rsi, %r13
-	movq -128(%rbp), %rsi
+	movq -120(%rbp), %rsi
 	movq %rdi, %r15
-	movq -120(%rbp), %rdi
+	movq -128(%rbp), %rdi
 	movq %rdx, %r14
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
@@ -9925,19 +9997,19 @@ _compiler_codegen_codegen_gen_call_target:
 	jz Lbb675
 	cmpq $5, %rax
 	jz Lbb660
-	movq %rdx, %r14
+	movq %rdx, %r15
 	callq _compiler_codegen_codegen_gen_expr
 	jmp Lbb706
 Lbb660:
-	movq %rdx, %r14
-	movq 16(%rdi), %r15
+	movq %rdx, %r15
+	movq 16(%rdi), %r14
 	movq 24(%rdi), %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq %rsi, %r13
 	leaq _str4486(%rip), %rsi
 	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq _strcmp
 	movq %r13, %rsi
 	movq %r12, %rdi
@@ -9946,21 +10018,21 @@ Lbb660:
 	movq %rsi, %r13
 	leaq _str4492(%rip), %rsi
 	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq _strcmp
 	movq %r12, %rdi
 	cmpq $0, %rax
 	jz Lbb668
 	movq %rdi, %r12
 	callq _donna_string_is_empty
-	movq %r14, %rdx
+	movq %r15, %rdx
 	movq %r13, %rsi
 	movq %r12, %rdi
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
 	jz Lbb665
-	movq %rdx, %r14
+	movq %rdx, %r15
 	leaq _str4505(%rip), %rdx
 	movq %rsi, %r12
 	leaq _str4504(%rip), %rsi
@@ -9973,14 +10045,14 @@ Lbb660:
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r12
-	movq %r15, %rsi
+	movq %r14, %rsi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	movq %rdi, (%r13)
 	jmp Lbb667
 Lbb665:
-	movq %r15, %rdi
-	movq %rdx, %r14
+	movq %r14, %rdi
+	movq %rdx, %r15
 	movq %rsi, %r12
 	movq %rdi, (%r13)
 Lbb667:
@@ -10007,10 +10079,10 @@ Lbb674:
 	movq %r12, %rsi
 	movq %rbx, (%rax)
 	movq %rsi, 8(%rax)
-	movq %r14, 16(%rax)
+	movq %r15, 16(%rax)
 	jmp Lbb706
 Lbb675:
-	movq %rdx, %r14
+	movq %rdx, %r15
 	movq 8(%rdi), %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
@@ -10036,13 +10108,13 @@ Lbb675:
 	callq _strcmp
 	movq %r12, %rdi
 	cmpq $0, %rax
-	jz Lbb701
+	jz Lbb700
 	movq %rdi, %r12
-	movq %r14, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_state_extern_aliases
 	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r15
+	movq %rsi, %r13
 	movq %r12, %rsi
 	callq _compiler_codegen_codegen_lookup_alist
 	movq %r12, %rdi
@@ -10051,68 +10123,75 @@ Lbb675:
 	movq %r12, -40(%rbp)
 	movq (%rax), %rcx
 	cmpq $1, %rcx
-	jz Lbb698
+	jz Lbb697
 	movq %rdi, %r12
-	movq %r14, %rdi
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_state_fn_prefix
 	movq %r12, %rdi
 	movq %rax, %r12
-	movq %rdi, %r13
-	movq %r14, %rdi
+	movq %rdi, %r14
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_state_globals
-	movq %r15, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r15
 	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	movq %r14, %rsi
 	callq _donna_list_contains_str
-	movq %r13, %rdi
-	subq $16, %rsp
-	movq %rsp, %r13
-	movq %r13, -48(%rbp)
-	cmpq $1, %rax
-	jz Lbb691
-	movq %rdi, %r13
 	movq %r14, %rdi
+	subq $16, %rsp
+	movq %rsp, %r14
+	movq %r14, -48(%rbp)
+	cmpq $1, %rax
+	jz Lbb690
+	movq %rdi, %r14
+	movq %r15, %rdi
 	callq _compiler_codegen_codegen_state_local_fn_names
-	movq %r15, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r15
 	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	movq %r14, %rsi
 	callq _donna_list_contains_str
-	movq %r13, %rdi
+	movq %r15, %rdx
+	movq %r14, %rdi
 	movq %rax, %rcx
 	movq %r12, %rax
+	movq -48(%rbp), %r15
 	movq -40(%rbp), %r12
+	movq %rdx, %r14
 	subq $16, %rsp
-	movq %rsp, %r13
-	movq %r13, -16(%rbp)
+	movq %rsp, %rdx
+	movq %rdx, -32(%rbp)
 	cmpq $1, %rcx
 	jz Lbb683
 	callq _compiler_codegen_il_Temporary
 	movq %rax, -8(%rbp)
 	movl $24, %edi
 	callq _malloc
-	movq %r15, %rsi
-	movq -48(%rbp), %r15
-	movq -8(%rbp), %rcx
-	movq %rcx, (%rax)
+	movq %r14, %rdx
+	movq %r13, %rsi
+	movq -32(%rbp), %rcx
+	movq %rdx, %r14
+	movq -8(%rbp), %rdx
+	movq %rdx, (%rax)
 	movq %rsi, 8(%rax)
 	movq %r14, 16(%rax)
-	movq %rax, (%r13)
-	jmp Lbb690
+	movq %rax, (%rcx)
+	jmp Lbb689
 Lbb683:
+	movq %r13, %r15
 	movq %rdi, %r13
 	movq %rax, %rdi
 	movq %rdi, %r12
 	callq _donna_string_is_empty
 	movq %r15, %rsi
 	movq %r12, %rdi
-	movq -16(%rbp), %r15
+	movq %rax, %rcx
+	movq -48(%rbp), %r15
 	movq -40(%rbp), %r12
 	subq $16, %rsp
-	movq %rsp, %rcx
-	movq %rcx, -24(%rbp)
-	cmpq $1, %rax
+	movq %rsp, %rax
+	movq %rax, -16(%rbp)
+	cmpq $1, %rcx
 	jz Lbb686
 	movq %rsi, %r15
 	leaq _str4454(%rip), %rsi
@@ -10120,37 +10199,39 @@ Lbb683:
 	movq %r15, %rsi
 	movq %rax, %rdi
 	movq %r13, %rax
-	movq -16(%rbp), %r13
-	movq %rsi, %r15
+	movq -48(%rbp), %r15
+	movq %rsi, %r13
 	movq %rax, %rsi
 	callq ___rt_str_concat
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %r13, %rax
-	movq -24(%rbp), %rcx
-	movq %rdi, (%rcx)
-	jmp Lbb689
+	movq -16(%rbp), %rax
+	movq %rdi, (%rax)
+	jmp Lbb688
 Lbb686:
-	movq %r15, %rax
-	movq %rsi, %r15
-	movq %r13, (%rcx)
+	movq %r13, (%rax)
 	movq %r13, %rdi
-Lbb689:
-	movq %rax, %r13
+Lbb688:
+	movq %rsi, %r13
 	callq _compiler_codegen_il_Global
-	movq %rax, -32(%rbp)
+	movq %rax, -24(%rbp)
 	movl $24, %edi
 	callq _malloc
-	movq %r15, %rsi
-	movq -48(%rbp), %r15
+	movq %r14, %rdx
+	movq %r13, %rsi
 	movq -32(%rbp), %rcx
-	movq %rcx, (%rax)
+	movq %rdx, %r14
+	movq -24(%rbp), %rdx
+	movq %rdx, (%rax)
 	movq %rsi, 8(%rax)
 	movq %r14, 16(%rax)
-	movq %rax, (%r13)
-Lbb690:
+	movq %rax, (%rcx)
+Lbb689:
 	movq %rax, (%r15)
-	jmp Lbb697
-Lbb691:
+	jmp Lbb696
+Lbb690:
+	movq %r15, %r14
+	movq %r13, %r15
 	movq %rdi, %r13
 	movq %r12, %rdi
 	movq %rdi, %r12
@@ -10164,7 +10245,7 @@ Lbb691:
 	movq %rsp, %rax
 	movq %rax, -56(%rbp)
 	cmpq $1, %rcx
-	jz Lbb694
+	jz Lbb693
 	movq %rsi, %r15
 	leaq _str4432(%rip), %rsi
 	callq ___rt_str_concat
@@ -10178,13 +10259,13 @@ Lbb691:
 	movq %rax, %rdi
 	movq -56(%rbp), %rax
 	movq %rdi, (%rax)
-	jmp Lbb696
-Lbb694:
+	jmp Lbb695
+Lbb693:
 	movq %r13, %rdi
 	movq %r15, %r13
 	movq %rsi, %r15
 	movq %rdi, (%rax)
-Lbb696:
+Lbb695:
 	callq _compiler_codegen_il_Global
 	movq %rax, -64(%rbp)
 	movl $24, %edi
@@ -10195,11 +10276,11 @@ Lbb696:
 	movq %rsi, 8(%rax)
 	movq %r14, 16(%rax)
 	movq %rax, (%r13)
-Lbb697:
+Lbb696:
 	movq %rax, (%r12)
-	jmp Lbb700
-Lbb698:
-	movq %r15, %r13
+	jmp Lbb699
+Lbb697:
+	movq %r15, %r14
 	movq 8(%rax), %rdi
 	callq _compiler_codegen_il_Global
 	movq %rax, %r15
@@ -10209,10 +10290,11 @@ Lbb698:
 	movq %r13, 8(%rax)
 	movq %r14, 16(%rax)
 	movq %rax, (%r12)
-Lbb700:
+Lbb699:
 	movq %rax, (%rbx)
 	jmp Lbb706
-Lbb701:
+Lbb700:
+	movq %r15, %r14
 	leaq _str4397(%rip), %rdi
 	callq _compiler_codegen_il_Global
 	movq %rax, %r12
@@ -10224,6 +10306,7 @@ Lbb701:
 	movq %rax, (%rbx)
 	jmp Lbb706
 Lbb702:
+	movq %r15, %r14
 	movq %rsi, %r13
 	leaq _str4386(%rip), %rdi
 	callq _compiler_codegen_il_Global
@@ -10236,6 +10319,7 @@ Lbb702:
 	movq %rax, (%rbx)
 	jmp Lbb706
 Lbb704:
+	movq %r15, %r14
 	movq %rsi, %r13
 	leaq _str4375(%rip), %rdi
 	callq _compiler_codegen_il_Global
@@ -10283,23 +10367,22 @@ _compiler_codegen_codegen_gen_args:
 	movq %rdi, %r13
 	callq _compiler_codegen_codegen_gen_expr
 	movq %r13, %rdi
-	movq (%rax), %rcx
-	movq %rcx, -16(%rbp)
+	movq (%rax), %r13
 	movq 8(%rax), %r14
 	movq 16(%rax), %r15
 	callq _compiler_typesystem_types_typed_expr_type
 	movq %rax, %rdi
 	callq _compiler_codegen_codegen_donna_type_to_qbe
 	movq %r12, %rdi
-	movq %rax, %r13
+	movq %rax, -16(%rbp)
 	movq %rdi, %r12
 	movl $16, %edi
 	callq _malloc
 	movq %r12, %rdi
 	movq %rax, %r12
 	movq -16(%rbp), %rax
-	movq %r13, (%r12)
-	movq %rax, 8(%r12)
+	movq %rax, (%r12)
+	movq %r13, 8(%r12)
 	movq %rdi, %r13
 	movl $24, %edi
 	callq _malloc
@@ -10410,13 +10493,12 @@ _compiler_codegen_codegen_gen_list_elements:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $104, %rsp
+	subq $120, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rsi, %r15
 	movq %rdi, %rax
 	movq %rcx, %r13
 	movq (%rax), %rcx
@@ -10426,115 +10508,110 @@ _compiler_codegen_codegen_gen_list_elements:
 	movq 16(%rax), %rbx
 	movq %rdx, %r12
 	movq %r13, %rdx
+	movq %rsi, %r15
 	movq %r12, %rsi
 	callq _compiler_codegen_codegen_gen_expr
-	movq (%rax), %r13
-	movq %r13, -64(%rbp)
-	movq 8(%rax), %rdi
-	movq %rdi, %r12
+	movq (%rax), %r14
+	movq 8(%rax), %r13
+	movq %r13, -16(%rbp)
 	movq 16(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %r12, %rdi
 	movq (%rax), %r12
 	movq 8(%rax), %r13
 	movq %r13, -32(%rbp)
-	movq %rdi, %r13
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r13, %rdi
 	movq %rax, -24(%rbp)
-	movq %rdi, %r13
 	leaq _str4593(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %r13, %rdi
-	movq %rax, -16(%rbp)
-	movq %rdi, %r13
+	movq %rax, -8(%rbp)
 	movl $24, %edi
 	callq _compiler_codegen_il_Const
-	movq %r13, %rdi
-	movq %rax, %r14
-	movq %rdi, %r13
+	movq %rax, %r13
 	movl $16, %edi
 	callq _malloc
-	movq %r13, %rdi
-	movq %rax, %r13
-	leaq _compiler_codegen_il_Long(%rip), %rax
-	movq %rax, (%r13)
-	movq %r14, 8(%r13)
-	movq %rdi, %r14
+	xchgq %rax, %r13
+	leaq _compiler_codegen_il_Long(%rip), %rcx
+	movq %rcx, (%r13)
+	movq %rax, 8(%r13)
 	movl $24, %edi
 	callq _malloc
-	movq %r14, %rdi
 	movq %rax, %rsi
 	movq %r13, %rax
-	movq %rdi, %r13
-	movq -16(%rbp), %rdi
-	movq -24(%rbp), %r14
+	movq -8(%rbp), %rdi
+	movq -16(%rbp), %r13
 	movq $1, (%rsi)
 	movq %rax, 8(%rsi)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%rsi)
 	callq _compiler_codegen_il_Call
-	movq %r14, %rsi
+	movq %r15, %rsi
 	movq %r13, %rdi
 	movq %rax, %rcx
+	movq %rsi, %r15
+	movq -24(%rbp), %rsi
 	movq -32(%rbp), %r13
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %rax, %rdi
-	movq %rdi, %r14
+	movq %r13, %rdi
+	movq %rax, -48(%rbp)
+	movq %rdi, %r13
 	movl $1, %edi
 	callq _compiler_codegen_il_Const
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, -40(%rbp)
-	movq %rdi, %r14
+	movq %rdi, %r13
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r14
+	movq %rdi, %r13
 	movq -40(%rbp), %rdi
 	callq _compiler_codegen_il_Storel
-	movq %r14, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
+	movq %rdi, %r13
+	movq -48(%rbp), %rdi
 	callq _compiler_codegen_il_volatile_inst
 	movq %r13, %rdi
-	movq %rax, -56(%rbp)
+	movq %rax, -72(%rbp)
 	callq _compiler_codegen_codegen_fresh_temp
 	movq (%rax), %rdi
 	movq 8(%rax), %r13
-	movq %r13, -72(%rbp)
+	movq %r13, -80(%rbp)
 	movq %rdi, %r13
 	callq _compiler_codegen_il_Temporary
 	movq %r13, %rdi
-	movq %rax, %r14
+	movq %rax, -64(%rbp)
 	movq %rdi, %r13
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r13, %rdi
-	movq %rax, -48(%rbp)
+	movq %rax, -56(%rbp)
 	movq %rdi, %r13
 	movl $8, %edi
 	callq _compiler_codegen_il_Const
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r13
-	movq -48(%rbp), %rdi
+	movq -56(%rbp), %rdi
 	callq _compiler_codegen_il_Add
-	movq %r14, %rsi
+	movq %r15, %rsi
 	movq %r13, %rdi
 	movq %rax, %rcx
-	movq %rdi, %r14
-	movq -56(%rbp), %rdi
-	movq -64(%rbp), %r13
+	movq %rsi, %r15
+	movq -64(%rbp), %rsi
+	movq %rdi, %r13
+	movq -72(%rbp), %rdi
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
-	movq %r14, %rdi
-	movq %rax, %r14
-	callq _compiler_codegen_il_Temporary
 	movq %r13, %rdi
+	movq %rax, -88(%rbp)
+	movq -80(%rbp), %r13
+	callq _compiler_codegen_il_Temporary
+	movq %r14, %rdi
 	movq %rax, %rsi
-	movq -72(%rbp), %r13
+	movq -88(%rbp), %r14
 	callq _compiler_codegen_il_Storel
 	movq %r14, %rdi
 	movq %rax, %rsi
@@ -10545,31 +10622,31 @@ _compiler_codegen_codegen_gen_list_elements:
 	movq %r13, %rdi
 	movq (%rax), %r14
 	movq 8(%rax), %r13
-	movq %r13, -96(%rbp)
+	movq %r13, -112(%rbp)
 	movq %rdi, %r13
 	movq %r14, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r13, %rdi
-	movq %rax, -88(%rbp)
+	movq %rax, -104(%rbp)
 	movq %rdi, %r13
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %r13, %rdi
-	movq %rax, -80(%rbp)
+	movq %rax, -96(%rbp)
 	movq %rdi, %r13
 	movl $16, %edi
 	callq _compiler_codegen_il_Const
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r13
-	movq -80(%rbp), %rdi
+	movq -96(%rbp), %rdi
 	callq _compiler_codegen_il_Add
 	movq %r15, %rsi
 	movq %r13, %rdi
 	movq %rax, %rcx
 	movq %rsi, %r15
-	movq -88(%rbp), %rsi
-	movq -96(%rbp), %r13
+	movq -104(%rbp), %rsi
+	movq -112(%rbp), %r13
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r14, %rdi
@@ -10594,7 +10671,7 @@ _compiler_codegen_codegen_gen_list_elements:
 	jmp Lbb720
 Lbb718:
 	movq %rdx, %r12
-	movq %r15, %rbx
+	movq %rsi, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %r13, %rcx
@@ -10643,37 +10720,42 @@ _compiler_codegen_codegen_gen_tuple:
 	movq %rbx, %rdi
 	movq (%rax), %r12
 	movq 8(%rax), %r13
-	movq %r13, -8(%rbp)
 	movq %rdi, %rbx
 	movq 16(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %rbx, %rdi
 	movq (%rax), %rbx
 	movq 8(%rax), %r14
-	movq %rdi, %r13
+	movq %rdi, %r15
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
+	movq %r15, %rdi
+	movq %rax, -16(%rbp)
+	movq %rdi, %r15
+	leaq _str4663(%rip), %rdi
+	callq _compiler_codegen_il_Global
+	movq %r15, %rdi
+	movq %rax, -8(%rbp)
+	callq _compiler_codegen_il_Const
 	movq %r13, %rdi
 	movq %rax, %r15
 	movq %rdi, %r13
-	leaq _str4663(%rip), %rdi
-	callq _compiler_codegen_il_Global
-	movq %r13, %rdi
-	movq %rax, -16(%rbp)
-	callq _compiler_codegen_il_Const
-	movq %rax, %r13
 	movl $16, %edi
 	callq _malloc
-	xchgq %rax, %r13
-	leaq _compiler_codegen_il_Long(%rip), %rcx
-	movq %rcx, (%r13)
-	movq %rax, 8(%r13)
+	movq %r13, %rdi
+	movq %rax, %r13
+	leaq _compiler_codegen_il_Long(%rip), %rax
+	movq %rax, (%r13)
+	movq %r15, 8(%r13)
+	movq %rdi, %r15
 	movl $24, %edi
 	callq _malloc
+	movq %r15, %rdi
 	movq %rax, %rsi
 	movq %r13, %rax
-	movq -16(%rbp), %rdi
-	movq -8(%rbp), %r13
+	movq %rdi, %r13
+	movq -8(%rbp), %rdi
+	movq -16(%rbp), %r15
 	movq $1, (%rsi)
 	movq %rax, 8(%rsi)
 	leaq _donna_nil(%rip), %rax
@@ -10793,62 +10875,60 @@ _compiler_codegen_codegen_store_tuple_fields:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $40, %rsp
+	subq $56, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %r8, %r12
-	movq %rcx, %r15
-	movq %rdx, %r14
-	movq %rsi, %r13
+	movq %rcx, %r14
+	movq %rdx, %r13
+	movq %rsi, %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz Lbb732
-	movq 8(%rdi), %rbx
-	movq %rbx, -16(%rbp)
+	movq 8(%rdi), %r15
 	movq 16(%rdi), %rbx
-	movq %rbx, -8(%rbp)
-	imulq $8, %r14, %rdi
-	movq %rdi, %rbx
-	movq %r12, %rdi
+	movq %rbx, -32(%rbp)
+	imulq $8, %r13, %rdi
+	movq %rdi, -16(%rbp)
+	movq %r8, %rdi
 	callq _compiler_codegen_codegen_fresh_temp
-	movq %rbx, %rdi
-	movq (%rax), %r12
+	movq (%rax), %rdi
 	movq 8(%rax), %r8
-	movq %r8, -32(%rbp)
+	movq %r8, -40(%rbp)
 	movq %rdi, %rbx
-	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
 	movq %rbx, %rdi
 	movq %rax, -24(%rbp)
-	movq -8(%rbp), %rbx
+	movq %rdi, %rbx
+	movq -16(%rbp), %rdi
 	callq _compiler_codegen_il_Const
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
-	movq %r13, %rdi
-	callq _compiler_codegen_il_Add
-	movq %r14, %rdx
-	movq %r13, %rsi
+	movq %rdi, %rbx
 	movq %r12, %rdi
+	callq _compiler_codegen_il_Add
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
 	movq %rax, %rcx
-	movq %r15, %rax
+	movq %r14, %rax
 	movq %rsi, %r12
 	movq -24(%rbp), %rsi
-	movq -16(%rbp), %r14
+	movq -32(%rbp), %rbx
 	movq %rdx, %r13
 	leaq _compiler_codegen_il_Long(%rip), %rdx
-	movq %rdi, %r15
+	movq %rdi, %r14
 	movq %rax, %rdi
 	callq _compiler_codegen_il_assign_inst
-	movq %r15, %rdi
-	movq %rax, %r15
-	callq _compiler_codegen_il_Temporary
 	movq %r14, %rdi
+	movq %rax, -48(%rbp)
+	movq -40(%rbp), %r14
+	callq _compiler_codegen_il_Temporary
+	movq %r15, %rdi
 	movq %rax, %rsi
-	movq -32(%rbp), %r14
+	movq -48(%rbp), %r15
 	callq _compiler_codegen_il_Storel
 	movq %r15, %rdi
 	movq %rax, %rsi
@@ -10862,7 +10942,8 @@ _compiler_codegen_codegen_store_tuple_fields:
 	callq _compiler_codegen_codegen_store_tuple_fields
 	jmp Lbb734
 Lbb732:
-	movq %r15, %rbx
+	movq %r8, %r12
+	movq %r14, %rbx
 	movl $16, %edi
 	callq _malloc
 	movq %r12, %r8
@@ -11464,49 +11545,62 @@ Lbb867:
 	movq 8(%rax), %rbx
 	callq _compiler_codegen_codegen_gen_expr
 	movq %rbx, %rdi
-	movq (%rax), %r15
+	movq (%rax), %r14
 	movq 8(%rax), %rsi
 	movq 16(%rax), %rdx
 	callq _compiler_codegen_codegen_gen_expr
-	movq (%rax), %r13
+	movq (%rax), %r15
 	movq 8(%rax), %rdi
-	movq %rdi, -8(%rbp)
+	movq %rdi, %rbx
 	movq 16(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
+	movq %rbx, %rdi
 	movq (%rax), %rbx
 	movq 8(%rax), %r12
+	movq %rdi, %r13
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %rax, %r14
+	movq %r13, %rdi
+	movq %rax, -16(%rbp)
+	movq %rdi, %r13
 	leaq _str5120(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %rax, -16(%rbp)
+	movq %r13, %rdi
+	movq %rax, -8(%rbp)
+	movq %rdi, %r13
 	movl $16, %edi
 	callq _malloc
-	xchgq %rax, %r13
-	leaq _compiler_codegen_il_Long(%rip), %rcx
-	movq %rcx, (%r13)
-	movq %rax, 8(%r13)
+	movq %r13, %rdi
+	movq %rax, %r13
+	leaq _compiler_codegen_il_Long(%rip), %rax
+	movq %rax, (%r13)
+	movq %r15, 8(%r13)
+	movq %rdi, %r15
 	movl $24, %edi
 	callq _malloc
-	xchgq %rax, %r15
+	movq %r15, %rdi
+	movq %rax, %r15
 	movq $1, (%r15)
 	movq %r13, 8(%r15)
-	movq %rax, %r13
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r15)
+	movq %rdi, %r13
 	movl $16, %edi
 	callq _malloc
-	xchgq %rax, %r13
-	leaq _compiler_codegen_il_Long(%rip), %rcx
-	movq %rcx, (%r13)
-	movq %rax, 8(%r13)
+	movq %r13, %rdi
+	movq %rax, %r13
+	leaq _compiler_codegen_il_Long(%rip), %rax
+	movq %rax, (%r13)
+	movq %r14, 8(%r13)
+	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
+	movq %r14, %rdi
 	movq %rax, %rsi
 	movq %r13, %rax
-	movq -16(%rbp), %rdi
-	movq -8(%rbp), %r13
+	movq %rdi, %r13
+	movq -8(%rbp), %rdi
+	movq -16(%rbp), %r14
 	movq $1, (%rsi)
 	movq %rax, 8(%rsi)
 	movq %r15, 16(%rsi)
@@ -11658,7 +11752,7 @@ Lbb884:
 	callq _compiler_codegen_codegen_gen_expr
 	movq %r12, %rdi
 	movq (%rax), %rsi
-	movq %rsi, -16(%rbp)
+	movq %rsi, %r14
 	movq 8(%rax), %rsi
 	movq 16(%rax), %rdx
 	callq _compiler_codegen_codegen_gen_expr
@@ -11671,13 +11765,14 @@ Lbb884:
 	movq %rbx, %rdi
 	movq (%rax), %rbx
 	movq 8(%rax), %r12
-	movq %rdi, %r14
+	movq %r12, -16(%rbp)
+	movq %rdi, %r12
 	movq %rbx, %rdi
 	callq _compiler_codegen_il_Temporary
-	movq %r14, %rdi
-	movq %rax, %rsi
-	movq %rsi, %r14
-	movq -16(%rbp), %rsi
+	movq %r14, %rsi
+	movq %r12, %rdi
+	movq %rax, %r14
+	movq -16(%rbp), %r12
 	callq _compiler_codegen_il_Add
 	movq %r14, %rsi
 	movq %r13, %rdi
@@ -11685,21 +11780,41 @@ Lbb884:
 	leaq _compiler_codegen_il_Long(%rip), %rdx
 	callq _compiler_codegen_il_assign_inst
 	movq %r12, %rdi
-	movq %rax, -24(%rbp)
+	movq %rax, %r13
 	callq _compiler_codegen_codegen_fresh_temp
 	movq %rbx, %rdi
 	movq (%rax), %r12
 	movq 8(%rax), %rbx
-	movq %rdi, %r13
+	movq %rdi, %r14
 	movq %r12, %rdi
+	callq _compiler_codegen_il_Temporary
+	movq %r14, %rdi
+	movq %rax, -32(%rbp)
+	movq %rdi, %r14
+	leaq _str5244(%rip), %rdi
+	callq _compiler_codegen_il_Global
+	movq %r14, %rdi
+	movq %rax, -24(%rbp)
+	movq %rdi, %r14
+	movl $16, %edi
+	callq _malloc
+	movq %r14, %rdi
+	movq %rax, %r14
+	leaq _compiler_codegen_il_Long(%rip), %rax
+	movq %rax, (%r14)
+	movq %r15, 8(%r14)
+	movq %rdi, %r15
+	movl $24, %edi
+	callq _malloc
+	movq %r15, %rdi
+	movq %rax, %r15
+	movq $1, (%r15)
+	movq %r14, 8(%r15)
+	leaq _donna_nil(%rip), %rax
+	movq %rax, 16(%r15)
 	callq _compiler_codegen_il_Temporary
 	movq %r13, %rdi
 	movq %rax, %r14
-	movq %rdi, %r13
-	leaq _str5244(%rip), %rdi
-	callq _compiler_codegen_il_Global
-	movq %r13, %rdi
-	movq %rax, -32(%rbp)
 	movq %rdi, %r13
 	movl $16, %edi
 	callq _malloc
@@ -11707,30 +11822,16 @@ Lbb884:
 	movq %rax, %r13
 	leaq _compiler_codegen_il_Long(%rip), %rax
 	movq %rax, (%r13)
-	movq %r15, 8(%r13)
-	movq %rdi, %r15
+	movq %r14, 8(%r13)
+	movq %rdi, %r14
 	movl $24, %edi
 	callq _malloc
-	movq %r15, %rdi
-	movq %rax, %r15
-	movq $1, (%r15)
-	movq %r13, 8(%r15)
-	leaq _donna_nil(%rip), %rax
-	movq %rax, 16(%r15)
-	callq _compiler_codegen_il_Temporary
-	movq %rax, %r13
-	movl $16, %edi
-	callq _malloc
-	xchgq %rax, %r13
-	leaq _compiler_codegen_il_Long(%rip), %rcx
-	movq %rcx, (%r13)
-	movq %rax, 8(%r13)
-	movl $24, %edi
-	callq _malloc
+	movq %r14, %rdi
 	movq %rax, %rsi
 	movq %r13, %rax
-	movq -32(%rbp), %rdi
-	movq -24(%rbp), %r13
+	movq %rdi, %r13
+	movq -24(%rbp), %rdi
+	movq -32(%rbp), %r14
 	movq $1, (%rsi)
 	movq %rax, 8(%rsi)
 	movq %r15, 16(%rsi)
@@ -11805,17 +11906,22 @@ Lbb890:
 	callq _compiler_codegen_codegen_gen_expr
 	movq (%rax), %r13
 	movq 8(%rax), %rdi
-	movq %rdi, -16(%rbp)
+	movq %rdi, %rbx
 	movq 16(%rax), %rdi
 	callq _compiler_codegen_codegen_fresh_temp
+	movq %rbx, %rdi
 	movq (%rax), %r12
 	movq 8(%rax), %rbx
+	movq %rdi, %r14
 	movq %r12, %rdi
 	callq _compiler_codegen_il_Temporary
+	movq %r14, %rdi
 	movq %rax, %r14
+	movq %rdi, %r15
 	leaq _str5306(%rip), %rdi
 	callq _compiler_codegen_il_Global
-	movq %rax, %rdi
+	movq %r15, %rdi
+	movq %rax, -16(%rbp)
 	movq %rdi, %r15
 	movl $16, %edi
 	callq _malloc
@@ -11829,7 +11935,8 @@ Lbb890:
 	callq _malloc
 	movq %r13, %rdi
 	movq %rax, %rsi
-	movq -16(%rbp), %r13
+	movq %rdi, %r13
+	movq -16(%rbp), %rdi
 	movq $1, (%rsi)
 	movq %r15, 8(%rsi)
 	leaq _donna_nil(%rip), %rax

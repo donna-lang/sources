@@ -407,29 +407,33 @@ cli_cmd_check_check_project:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rsi, %r13
+	movq %rsi, %rbx
 	movq %rdi, %r15
 	callq donna_time_now_us
-	movq %rax, -8(%rbp)
-	movq %r13, %rdi
+	movq %rbx, %rdi
+	movq %rax, %r12
+	movq %rdi, %rbx
 	callq builder_scanner_project_name
+	movq %rbx, %rdi
 	movq %rax, -16(%rbp)
-	movq %r13, %rdi
+	movq %rdi, %rbx
 	callq builder_scanner_project_build_dir
+	movq %rbx, %rdi
 	movq %rax, %rbx
-	movq %r13, %rdi
+	movq %rdi, %r13
 	callq builder_scanner_project_dev_dir
-	movq %rax, %rdi
-	movq %rdi, %r12
 	movq %r13, %rdi
+	movq %rax, -8(%rbp)
+	movq %rdi, %r13
 	callq builder_scanner_project_dev_artifacts_dir
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %r14
-	movq %rdi, %r12
+	movq %rdi, %r13
 	movq %rbx, %rdi
 	callq donna_files_mkdir
-	movq %r12, %rdi
-	movq -8(%rbp), %r12
+	movq %r13, %rdi
+	movq %rdi, %r13
+	movq -8(%rbp), %rdi
 	callq donna_files_mkdir
 	movq %r13, %rdi
 	movq %rdi, %r13

@@ -336,20 +336,20 @@ _tools_docgen_extractor_DocModule:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %r9, %r15
-	movq %r8, %r14
-	movq %rcx, %r13
-	movq %rdx, %r12
-	movq %rsi, %rbx
-	movq %rdi, -16(%rbp)
+	movq %r9, -16(%rbp)
+	movq %r8, %r15
+	movq %rcx, %r14
+	movq %rdx, %r13
+	movq %rsi, %r12
+	movq %rdi, %rbx
 	movl $56, %edi
 	callq _malloc
-	movq %r15, %r9
-	movq %r14, %r8
-	movq %r13, %rcx
-	movq %r12, %rdx
-	movq %rbx, %rsi
-	movq -16(%rbp), %rdi
+	movq %r15, %r8
+	movq %r14, %rcx
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq -16(%rbp), %r9
 	movq $0, (%rax)
 	movq %rdi, 8(%rax)
 	movq %rsi, 16(%rax)
@@ -455,32 +455,30 @@ _tools_docgen_extractor_extract_from_ast:
 	movq %rdx, %rsi
 	movq %rdi, %rax
 	movq 8(%rax), %rdi
-	movq 24(%rax), %r12
-	movq 32(%rax), %r14
+	movq 24(%rax), %r14
+	movq 32(%rax), %r12
 	movq 40(%rax), %r13
 	movq %rsi, %r15
 	leaq _str74(%rip), %rsi
 	callq _donna_string_join
 	movq %r15, %rsi
+	movq %r12, %rdi
+	movq %rax, %r12
+	leaq _donna_nil(%rip), %rdx
+	movq %rsi, %r15
+	callq _tools_docgen_extractor_extract_types
+	movq %r15, %rsi
 	movq %r14, %rdi
 	movq %rax, -8(%rbp)
 	leaq _donna_nil(%rip), %rdx
-	movq %rsi, %r14
-	callq _tools_docgen_extractor_extract_types
-	movq %r14, %rsi
-	movq %r12, %rdi
-	movq %rax, %rdx
-	movq %rdx, %r15
-	leaq _donna_nil(%rip), %rdx
-	movq %rsi, %r14
-	movq %rdi, %r12
+	movq %rsi, %r15
+	movq %rdi, %r14
 	movq %r13, %rdi
 	callq _tools_docgen_extractor_extract_regular_fns
-	movq %r15, %rdx
-	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r15, %rsi
+	movq %r14, %rdi
 	movq %rax, -16(%rbp)
-	movq -8(%rbp), %r12
+	movq -8(%rbp), %rdx
 	movq %rdx, %r15
 	leaq _donna_nil(%rip), %rdx
 	movq %rsi, %r14
@@ -526,25 +524,24 @@ _tools_docgen_extractor_extract_types:
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz Lbb34
-	movq 8(%rdi), %rax
+	movq 8(%rdi), %rcx
 	movq 16(%rdi), %rdi
 	subq $16, %rsp
-	movq %rsp, %rcx
-	movq %rcx, -40(%rbp)
-	movq 8(%rax), %r9
-	movq %r9, -32(%rbp)
-	movq 16(%rax), %r14
-	movq 24(%rax), %r9
-	movq %r9, -16(%rbp)
-	movq 32(%rax), %rdx
-	movq %rdx, -24(%rbp)
-	movq 40(%rax), %r8
-	movq %r8, -8(%rbp)
+	movq %rsp, %rax
+	movq %rax, -64(%rbp)
+	movq 8(%rcx), %r9
+	movq %r9, -48(%rbp)
+	movq 16(%rcx), %r14
+	movq 24(%rcx), %r9
+	movq %r9, -24(%rbp)
+	movq 32(%rcx), %rdx
+	movq %rdx, -40(%rbp)
+	movq 40(%rcx), %r8
+	movq %r8, -16(%rbp)
 	movq %rdi, %rbx
-	movq 48(%rax), %rdi
+	movq 48(%rcx), %rdi
 	subq $16, %rsp
 	movq %rsp, %r12
-	movq %r12, -56(%rbp)
 	cmpq $0, %r14
 	jz Lbb31
 	callq _tools_docgen_extractor_span_line
@@ -553,61 +550,58 @@ _tools_docgen_extractor_extract_types:
 	callq _tools_docgen_extractor_find_doc
 	movq %r14, %rsi
 	movq %rax, %r8
-	movq -40(%rbp), %rcx
-	movq -8(%rbp), %rdi
-	movq -24(%rbp), %rdx
-	movq -16(%rbp), %r9
-	movq %rdi, %rax
-	movq -32(%rbp), %rdi
-	movq %r8, -48(%rbp)
+	movq -16(%rbp), %rdi
+	movq -40(%rbp), %rdx
+	movq -24(%rbp), %r9
+	movq %rdi, %rcx
+	movq -48(%rbp), %rdi
+	movq %r8, -32(%rbp)
 	subq $16, %rsp
-	movq %rsp, %r14
+	movq %rsp, %rax
+	movq %rax, -56(%rbp)
 	cmpq $1, %r9
 	jz Lbb27
-	movq %rax, %rdi
+	movq %rcx, %rdi
 	leaq _donna_nil(%rip), %rdx
-	movq %rsi, %r12
+	movq %rsi, %r14
 	movq %r15, %rsi
 	callq _tools_docgen_extractor_extract_ctors
-	movq %r12, %rsi
+	movq %r14, %rsi
 	movq %rbx, %rdi
 	movq %rax, %rcx
-	movq %r14, %rax
-	movq -56(%rbp), %r12
-	movq -40(%rbp), %rbx
-	movq -48(%rbp), %r8
-	movq -24(%rbp), %rdx
-	movq %rdi, %r14
-	movq -32(%rbp), %rdi
+	movq -56(%rbp), %rax
+	movq -32(%rbp), %r8
+	movq -40(%rbp), %rdx
+	movq %rdi, %rbx
+	movq -48(%rbp), %rdi
 	movq %rcx, (%rax)
 	jmp Lbb30
 Lbb27:
-	xchgq %rcx, %rbx
-	xchgq %r14, %rcx
+	movq %rax, %rcx
 	leaq _donna_nil(%rip), %rax
 	movq %rax, (%rcx)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, %rcx
 Lbb30:
 	callq _tools_docgen_extractor_DocType
-	movq %r14, %rdi
-	movq %rax, -64(%rbp)
-	movq %rdi, %r14
+	movq %rbx, %rdi
+	movq %rax, %r14
+	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rdx
-	movq -64(%rbp), %rax
+	movq -64(%rbp), %rbx
 	movq $1, (%rdx)
-	movq %rax, 8(%rdx)
+	movq %r14, 8(%rdx)
 	movq %r13, 16(%rdx)
 	callq _tools_docgen_extractor_extract_types
 	movq %rax, (%r12)
 	jmp Lbb33
 Lbb31:
 	movq %rbx, %rdi
-	movq %rcx, %rbx
+	movq %rax, %rbx
 	movq %r15, %rsi
 	movq %r13, %rdx
 	callq _tools_docgen_extractor_extract_types
@@ -636,7 +630,7 @@ _tools_docgen_extractor_extract_ctors:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $40, %rsp
+	subq $24, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -651,27 +645,29 @@ _tools_docgen_extractor_extract_ctors:
 	movq 16(%rdi), %r13
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq 8(%rax), %r14
-	movq %r14, -24(%rbp)
+	movq %rbx, -16(%rbp)
+	movq 8(%rax), %rbx
 	movq 16(%rax), %rdi
-	movq %rdi, -16(%rbp)
-	movq 24(%rax), %r14
+	movq 24(%rax), %rsi
+	movq %rsi, -8(%rbp)
+	movq %rdi, %r14
 	movq 32(%rax), %rdi
 	callq _tools_docgen_extractor_span_line
+	movq %r14, %rdi
 	movq %rax, %rsi
+	movq %rdi, %r14
 	movq %r15, %rdi
 	callq _tools_docgen_extractor_find_doc
-	movq %r14, %rsi
-	movq %rax, -32(%rbp)
-	movq -16(%rbp), %rdi
-	movq -24(%rbp), %r14
+	movq %r14, %rdi
+	movq %rax, %rsi
+	movq %rsi, %r14
+	movq -8(%rbp), %rsi
 	leaq _donna_nil(%rip), %rdx
 	callq _tools_docgen_extractor_render_fields
-	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %r14, %rsi
+	movq %rbx, %rdi
 	movq %rax, %rdx
-	movq %rsi, %r15
-	movq -32(%rbp), %rsi
+	movq -16(%rbp), %rbx
 	callq _tools_docgen_extractor_DocCtor
 	movq %r13, %rdi
 	movq %rax, %r13
@@ -692,7 +688,7 @@ Lbb39:
 	callq _donna_list_reverse
 Lbb41:
 	movq %rbp, %rsp
-	subq $80, %rsp
+	subq $64, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -936,7 +932,7 @@ _tools_docgen_extractor_extract_consts:
 	pushq %r14
 	pushq %r15
 	movq %rdx, %r13
-	movq %rsi, %r14
+	movq %rsi, %r15
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz Lbb77
@@ -944,78 +940,76 @@ _tools_docgen_extractor_extract_consts:
 	movq 16(%rdi), %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rbx, -24(%rbp)
+	movq %rbx, -32(%rbp)
 	movq 8(%rdx), %r8
-	movq %r8, -16(%rbp)
+	movq %r8, -24(%rbp)
 	movq 16(%rdx), %rcx
 	movq %rbx, %rax
 	movq 24(%rdx), %rbx
-	movq %rdi, %r15
+	movq %rdi, %r14
 	movq 40(%rdx), %rdi
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $0, %rcx
 	jz Lbb74
 	callq _tools_docgen_extractor_span_line
-	movq %r15, %rdi
-	movq %rax, %rsi
-	movq %rdi, %r15
 	movq %r14, %rdi
-	callq _tools_docgen_extractor_find_doc
+	movq %rax, %rsi
+	movq %rdi, %r14
 	movq %r15, %rdi
+	callq _tools_docgen_extractor_find_doc
+	movq %r14, %rdi
 	movq %rax, %rcx
 	movq %rbx, %rax
-	movq -24(%rbp), %rbx
-	movq -16(%rbp), %r8
-	movq %rcx, -8(%rbp)
+	movq -24(%rbp), %r8
+	movq %rcx, -16(%rbp)
 	subq $16, %rsp
-	movq %rsp, %r15
+	movq %rsp, %r14
 	movq (%rax), %rdx
 	cmpq $0, %rdx
 	jz Lbb70
 	movq %rdi, %rbx
 	movq 8(%rax), %rdi
 	callq _tools_fmt_formatter_format_type_ann
-	movq %r14, %rsi
+	movq %r15, %rsi
 	movq %rbx, %rdi
 	movq %rax, %rdx
-	movq -24(%rbp), %rbx
-	movq -8(%rbp), %rcx
-	movq %rdi, %r14
-	movq -16(%rbp), %rdi
-	movq %rdx, (%r15)
+	movq -16(%rbp), %rcx
+	movq %rdi, %rbx
+	movq -24(%rbp), %rdi
+	movq %rdx, (%r14)
 	jmp Lbb73
 Lbb70:
-	movq %r14, %rsi
-	movq %rdi, %r14
+	movq %rdi, %rbx
 	movq %r8, %rdi
+	movq %r15, %rsi
 	leaq _str322(%rip), %rax
-	movq %rax, (%r15)
+	movq %rax, (%r14)
 	leaq _str322(%rip), %rax
 	movq %rax, %rdx
 Lbb73:
 	movq %rsi, %r15
 	movl $1, %esi
 	callq _tools_docgen_extractor_DocConst
-	movq %r14, %rdi
-	movq %rax, -32(%rbp)
-	movq %rdi, %r14
+	movq %rbx, %rdi
+	movq %rax, %r14
+	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rdx
-	movq -32(%rbp), %rax
+	movq -32(%rbp), %rbx
 	movq $1, (%rdx)
-	movq %rax, 8(%rdx)
+	movq %r14, 8(%rdx)
 	movq %r13, 16(%rdx)
 	callq _tools_docgen_extractor_extract_consts
 	movq %rax, (%r12)
 	jmp Lbb76
 Lbb74:
 	movq %rax, %rbx
-	movq %r15, %rdi
-	movq %r14, %rsi
+	movq %r14, %rdi
+	movq %r15, %rsi
 	movq %r13, %rdx
 	callq _tools_docgen_extractor_extract_consts
 	movq %rax, (%r12)

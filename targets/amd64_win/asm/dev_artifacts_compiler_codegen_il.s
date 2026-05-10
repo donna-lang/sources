@@ -5443,7 +5443,7 @@ Lbb396:
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %r13
-	movq %r13, -16(%rbp)
+	movq %r13, -8(%rbp)
 	cmpq $1, %rax
 	jz Lbb405
 	subq $32, %rsp
@@ -5466,22 +5466,23 @@ Lbb396:
 	movq %r12, %rcx
 	movq %rax, %r8
 	movq %rbx, %rax
-	movq -16(%rbp), %rbx
+	movq -8(%rbp), %rbx
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %r13
+	movq %r13, -16(%rbp)
 	cmpq $1, %r8
 	jz Lbb401
 	subq $32, %rsp
-	movq %rdx, %r12
+	movq %rdx, %r13
 	leaq str1385(%rip), %rdx
-	movq %rcx, %rbx
+	movq %rcx, %r12
 	movq %rax, %rcx
 	callq __rt_str_concat
-	movq %r12, %rdx
+	movq %r13, %rdx
 	movq %rax, %rcx
-	movq %rbx, %rax
-	movq -16(%rbp), %rbx
+	movq %r12, %rax
+	movq -16(%rbp), %r13
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %r12

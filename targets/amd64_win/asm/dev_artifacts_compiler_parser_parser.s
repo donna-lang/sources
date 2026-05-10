@@ -389,36 +389,35 @@ Lbb68:
 Lbb72:
 	movq %rdi, %rbx
 	movq 8(%r13), %rdi
-	movq 16(%r13), %r12
+	movq 16(%r13), %r14
 	movq (%rdi), %rdi
 	movq (%rdi), %r10
-	movq %r10, -8(%rbp)
 	movq %rsi, %rdi
-	movq (%r12), %rsi
+	movq (%r14), %rsi
 	cmpq $1, %rsi
-	setz %r14b
-	movzbq %r14b, %r14
+	setz %r12b
+	movzbq %r12b, %r12
 	movq %r13, %rsi
 	subq $16, %rsp
 	movq %rsp, %r13
-	cmpl $0, %r14d
+	cmpl $0, %r12d
 	jnz Lbb75
 	movq $0, (%r13)
 	movl $0, %r12d
 	jmp Lbb80
 Lbb75:
-	movq 8(%r12), %r10
-	movq 16(%r12), %r14
-	movq (%r10), %r10
-	movq (%r10), %r12
-	movq (%r14), %r10
-	cmpq $1, %r10
-	setz %r10b
-	movzbq %r10b, %r10
+	movq 8(%r14), %r12
+	movq 16(%r14), %r14
+	movq (%r12), %r12
+	movq (%r12), %r12
+	movq (%r14), %r15
+	cmpq $1, %r15
+	setz %r15b
+	movzbq %r15b, %r15
+	movq %r15, -8(%rbp)
 	subq $16, %rsp
 	movq %rsp, %r15
-	cmpl $0, %r10d
-	movq -8(%rbp), %r10
+	cmpl $0, -8(%rbp)
 	jnz Lbb78
 	movq $0, (%r15)
 	movl $0, %r14d
