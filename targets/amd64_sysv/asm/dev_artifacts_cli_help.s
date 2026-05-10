@@ -1146,89 +1146,82 @@ cli_help_commands_block:
 	leaq str102(%rip), %rsi
 	leaq str101(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, -48(%rbp)
+	movq %rax, %r12
 	leaq str105(%rip), %rsi
 	leaq str104(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, -40(%rbp)
+	movq %rax, %r14
 	leaq str108(%rip), %rsi
 	leaq str107(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, -32(%rbp)
+	movq %rax, %r15
 	leaq str111(%rip), %rsi
 	leaq str110(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, -24(%rbp)
+	movq %rax, %rbx
 	leaq str114(%rip), %rsi
 	leaq str113(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, -16(%rbp)
+	movq %rax, -48(%rbp)
 	leaq str117(%rip), %rsi
 	leaq str116(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, %r14
+	movq %rax, -40(%rbp)
 	leaq str120(%rip), %rsi
 	leaq str119(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, %r15
+	movq %rax, -32(%rbp)
 	leaq str123(%rip), %rsi
 	leaq str122(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, %r12
+	movq %rax, -24(%rbp)
 	leaq str126(%rip), %rsi
 	leaq str125(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, %r13
+	movq %rax, -16(%rbp)
 	leaq str129(%rip), %rsi
 	leaq str128(%rip), %rdi
 	callq cli_help_command_row
-	movq %rax, %rbx
+	movq %rax, %r13
 	movl $24, %edi
 	callq malloc
 	movq $1, (%rax)
-	movq %rbx, 8(%rax)
-	movq %rax, %rbx
-	leaq donna_nil(%rip), %rax
-	movq %rax, 16(%rbx)
-	movl $24, %edi
-	callq malloc
-	movq %r13, %rcx
-	xchgq %rax, %rbx
-	movq -16(%rbp), %r13
-	movq $1, (%rbx)
-	movq %rcx, 8(%rbx)
-	movq %rax, 16(%rbx)
-	movl $24, %edi
-	callq malloc
-	movq %r12, %rcx
-	movq %rax, %r12
-	movq %rbx, %rax
-	movq -24(%rbp), %rbx
-	movq $1, (%r12)
-	movq %rcx, 8(%r12)
-	movq %rax, 16(%r12)
-	movl $24, %edi
-	callq malloc
-	movq %r15, %rcx
-	xchgq %rax, %r12
-	movq -32(%rbp), %r15
-	movq $1, (%r12)
-	movq %rcx, 8(%r12)
-	movq %rax, 16(%r12)
-	movl $24, %edi
-	callq malloc
-	movq %r14, %rcx
-	xchgq %rax, %r12
-	movq -40(%rbp), %r14
-	movq $1, (%r12)
-	movq %rcx, 8(%r12)
-	movq %rax, 16(%r12)
-	movl $24, %edi
-	callq malloc
-	movq %r13, %rcx
+	movq %r13, 8(%rax)
 	movq %rax, %r13
-	movq %r12, %rax
-	movq -48(%rbp), %r12
+	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%r13)
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r13
+	movq -16(%rbp), %rcx
+	movq $1, (%r13)
+	movq %rcx, 8(%r13)
+	movq %rax, 16(%r13)
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r13
+	movq -24(%rbp), %rcx
+	movq $1, (%r13)
+	movq %rcx, 8(%r13)
+	movq %rax, 16(%r13)
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r13
+	movq -32(%rbp), %rcx
+	movq $1, (%r13)
+	movq %rcx, 8(%r13)
+	movq %rax, 16(%r13)
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r13
+	movq -40(%rbp), %rcx
+	movq $1, (%r13)
+	movq %rcx, 8(%r13)
+	movq %rax, 16(%r13)
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r13
+	movq -48(%rbp), %rcx
 	movq $1, (%r13)
 	movq %rcx, 8(%r13)
 	movq %rax, 16(%r13)

@@ -4947,7 +4947,7 @@ compiler_codegen_il_escape_str_loop:
 	movq -16(%rbp), %r12
 	subq $16, %rsp
 	movq %rsp, %rcx
-	movq %rcx, -48(%rbp)
+	movq %rcx, -40(%rbp)
 	cmpq $1, %rax
 	jz .Lbb404
 	leaq str1372(%rip), %rdi
@@ -4959,14 +4959,16 @@ compiler_codegen_il_escape_str_loop:
 	movq %rdi, %r12
 	movq %rbx, %rdi
 	callq donna_string_is_empty
+	movq %r15, %rdx
 	movq %r12, %rdi
 	movq %rax, %rcx
 	movq %rbx, %rax
 	movq -32(%rbp), %rbx
 	movq -16(%rbp), %rsi
+	movq %rdx, %r15
 	subq $16, %rsp
-	movq %rsp, %r12
-	movq %r12, -24(%rbp)
+	movq %rsp, %rdx
+	movq %rdx, -24(%rbp)
 	cmpq $1, %rcx
 	jz .Lbb401
 	movq %rsi, %r12
@@ -4989,14 +4991,14 @@ compiler_codegen_il_escape_str_loop:
 	movq %r13, %r8
 	movq %r12, %rsi
 	movq %rax, %rdi
-	movq -24(%rbp), %r12
+	movq -40(%rbp), %r12
 	movq %rsi, %r13
 	movq %r8, %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %r8
-	movq -48(%rbp), %rcx
-	movq %r8, (%r12)
+	movq -24(%rbp), %rax
+	movq %r8, (%rax)
 	movq %rsi, %r13
 	movq %r14, %rdi
 	jmp .Lbb402
@@ -5007,16 +5009,16 @@ compiler_codegen_il_escape_str_loop:
 	movq %r13, %r8
 	movq %r12, %rsi
 	movq %rax, %rdi
-	movq -24(%rbp), %r12
+	movq -40(%rbp), %r12
 	movq %rsi, %r13
 	movq %r8, %rsi
 	callq __rt_str_concat
 	movq %r14, %rdi
 	movq %rax, %r8
-	movq -48(%rbp), %rcx
-	movq %r8, (%r12)
+	movq -24(%rbp), %rax
+	movq %r8, (%rax)
 .Lbb402:
-	movq %r8, (%rcx)
+	movq %r8, (%r12)
 	movq %r13, %rsi
 	movq %r15, %rdx
 	jmp .Lbb410
@@ -5031,11 +5033,11 @@ compiler_codegen_il_escape_str_loop:
 	movq %r12, %rdi
 	movq %rax, %rdx
 	movq %rbx, %rax
-	movq -48(%rbp), %rcx
+	movq -40(%rbp), %r12
 	movq -32(%rbp), %rbx
 	subq $16, %rsp
-	movq %rsp, %r12
-	movq %r12, -40(%rbp)
+	movq %rsp, %rcx
+	movq %rcx, -48(%rbp)
 	cmpq $1, %rdx
 	jz .Lbb407
 	movq %rsi, %r12
@@ -5055,15 +5057,15 @@ compiler_codegen_il_escape_str_loop:
 	movq %r13, %rdi
 	movq %rax, %r8
 	movq -48(%rbp), %rax
-	movq %r8, (%r12)
+	movq %r8, (%rax)
 	jmp .Lbb409
 .Lbb407:
 	movq %rcx, %rax
 	movq %r14, %r8
 	movq %r15, %rdx
-	movq %r8, (%r12)
-.Lbb409:
 	movq %r8, (%rax)
+.Lbb409:
+	movq %r8, (%r12)
 .Lbb410:
 	leaq str1394(%rip), %rcx
 	callq compiler_codegen_il_escape_str_loop

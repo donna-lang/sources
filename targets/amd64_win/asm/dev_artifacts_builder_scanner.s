@@ -477,28 +477,29 @@ builder_scanner_ProjectMeta:
 	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq 72(%rbp), %rsi
-	movq 64(%rbp), %rdi
-	movq 56(%rbp), %rbx
-	movq 48(%rbp), %r12
-	movq %r9, %r13
-	movq %r8, %r14
-	movq %rdx, %r15
-	movq %rcx, -16(%rbp)
+	movq 72(%rbp), %rax
+	movq %rax, -16(%rbp)
+	movq 64(%rbp), %rsi
+	movq 56(%rbp), %rdi
+	movq 48(%rbp), %rbx
+	movq %r9, %r12
+	movq %r8, %r13
+	movq %rdx, %r14
+	movq %rcx, %r15
 	subq $32, %rsp
 	movl $72, %ecx
 	callq malloc
 	movq -16(%rbp), %rcx
 	subq $-32, %rsp
 	movq $0, (%rax)
-	movq %rcx, 8(%rax)
-	movq %r15, 16(%rax)
-	movq %r14, 24(%rax)
-	movq %r13, 32(%rax)
-	movq %r12, 40(%rax)
-	movq %rbx, 48(%rax)
-	movq %rdi, 56(%rax)
-	movq %rsi, 64(%rax)
+	movq %r15, 8(%rax)
+	movq %r14, 16(%rax)
+	movq %r13, 24(%rax)
+	movq %r12, 32(%rax)
+	movq %rbx, 40(%rax)
+	movq %rdi, 48(%rax)
+	movq %rsi, 56(%rax)
+	movq %rcx, 64(%rax)
 	popq %rdi
 	popq %rsi
 	popq %r15
@@ -938,7 +939,7 @@ builder_scanner_scan_meta:
 	movq %rcx, %rdi
 	callq builder_scanner_opt_str
 	movq %rdi, %rcx
-	movq %rax, -16(%rbp)
+	movq %rax, %r12
 	subq $-32, %rsp
 	subq $32, %rsp
 	leaq str285(%rip), %rdx
@@ -977,26 +978,28 @@ builder_scanner_scan_meta:
 	movq %rcx, %rbx
 	callq builder_scanner_opt_str
 	movq %rbx, %rcx
-	movq %rax, %rbx
+	movq %rax, -8(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rcx, %r12
+	movq %rcx, %rbx
 	callq builder_scanner_parse_repository
-	movq %r12, %rcx
-	movq %rax, %r12
+	movq %rbx, %rcx
+	movq %rax, -16(%rbp)
+	movq -8(%rbp), %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq builder_scanner_parse_links
 	movq %r15, %r9
 	movq %r14, %r8
 	movq %r13, %rdx
-	movq %rax, %r10
-	movq -16(%rbp), %rcx
+	movq %r12, %rcx
+	movq %rax, %r11
+	movq -16(%rbp), %r10
 	subq $-32, %rsp
 	subq $64, %rsp
 	movq %rsp, %rax
-	movq %r10, 56(%rax)
-	movq %r12, 48(%rax)
+	movq %r11, 56(%rax)
+	movq %r10, 48(%rax)
 	movq %rbx, 40(%rax)
 	movq %rdi, 32(%rax)
 	callq builder_scanner_ProjectMeta

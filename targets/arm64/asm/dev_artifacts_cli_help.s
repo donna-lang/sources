@@ -1226,7 +1226,6 @@ cli_help_commands_block:
 	str	x25, [x29, 56]
 	str	x26, [x29, 48]
 	str	x27, [x29, 40]
-	str	x28, [x29, 32]
 	adrp	x1, str102
 	add	x1, x1, #:lo12:str102
 	adrp	x0, str101
@@ -1238,13 +1237,13 @@ cli_help_commands_block:
 	adrp	x0, str104
 	add	x0, x0, #:lo12:str104
 	bl	cli_help_command_row
-	str	x0, [x29, 16]
+	mov	x22, x0
 	adrp	x1, str108
 	add	x1, x1, #:lo12:str108
 	adrp	x0, str107
 	add	x0, x0, #:lo12:str107
 	bl	cli_help_command_row
-	str	x0, [x29, 24]
+	mov	x23, x0
 	adrp	x1, str111
 	add	x1, x1, #:lo12:str111
 	adrp	x0, str110
@@ -1274,13 +1273,13 @@ cli_help_commands_block:
 	adrp	x0, str122
 	add	x0, x0, #:lo12:str122
 	bl	cli_help_command_row
-	mov	x28, x0
+	str	x0, [x29, 16]
 	adrp	x1, str126
 	add	x1, x1, #:lo12:str126
 	adrp	x0, str125
 	add	x0, x0, #:lo12:str125
 	bl	cli_help_command_row
-	mov	x22, x0
+	str	x0, [x29, 24]
 	adrp	x1, str129
 	add	x1, x1, #:lo12:str129
 	adrp	x0, str128
@@ -1303,24 +1302,24 @@ cli_help_commands_block:
 	mov	x0, #24
 	bl	malloc
 	mov	x21, x0
-	ldr	x23, [x29, 24]
-	mov	x0, #1
-	str	x0, [x21]
-	mov	x0, #8
-	add	x0, x21, x0
-	str	x22, [x0]
+	ldr	x0, [x29, 24]
+	mov	x1, #1
+	str	x1, [x21]
+	mov	x1, #8
+	add	x1, x21, x1
+	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x21, x0
 	str	x19, [x0]
 	mov	x0, #24
 	bl	malloc
 	mov	x19, x0
-	ldr	x22, [x29, 16]
-	mov	x0, #1
-	str	x0, [x19]
-	mov	x0, #8
-	add	x0, x19, x0
-	str	x28, [x0]
+	ldr	x0, [x29, 16]
+	mov	x1, #1
+	str	x1, [x19]
+	mov	x1, #8
+	add	x1, x19, x1
+	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x19, x0
 	str	x21, [x0]
@@ -1412,7 +1411,6 @@ cli_help_commands_block:
 	ldr	x25, [x29, 56]
 	ldr	x26, [x29, 48]
 	ldr	x27, [x29, 40]
-	ldr	x28, [x29, 32]
 	ldp	x29, x30, [sp], 112
 	ret
 .type cli_help_commands_block, @function

@@ -293,7 +293,7 @@ errors_reporter_render:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $56, %rsp
+	subq $88, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -301,10 +301,11 @@ errors_reporter_render:
 	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq 56(%rbp), %r13
-	movq 48(%rbp), %r15
+	movq 56(%rbp), %r15
+	movq %r15, -16(%rbp)
+	movq 48(%rbp), %r12
 	movq %r8, %r14
-	movq %rdx, -24(%rbp)
+	movq %rdx, %r13
 	movq %rcx, %rdi
 	movq %r9, %rcx
 	subq $32, %rsp
@@ -315,7 +316,7 @@ errors_reporter_render:
 	subq $32, %rsp
 	callq utilities_location_pos_line
 	movq %rsi, %rcx
-	movq %rax, %r12
+	movq %rax, %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
@@ -325,17 +326,17 @@ errors_reporter_render:
 	subq $32, %rsp
 	callq utilities_location_pos_col
 	movq %rsi, %rcx
-	movq %rax, -8(%rbp)
+	movq %rax, -32(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
 	callq utilities_location_span_length
 	movq %rsi, %rcx
-	movq %rax, -16(%rbp)
+	movq %rax, -40(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	movq %r12, %rcx
+	movq %rbx, %rcx
 	callq donna_int_to_string
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -348,28 +349,33 @@ errors_reporter_render:
 	movq %rcx, %rsi
 	leaq str35(%rip), %rcx
 	callq donna_string_repeat
+	movq %r13, %rdx
 	movq %rsi, %rcx
 	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
+	movq %rdx, %r15
 	leaq str39(%rip), %rdx
-	movq %rcx, %rbx
+	movq %rcx, %r13
 	movq %rsi, %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq utilities_colors_dim
-	movq %rbx, %rcx
-	movq %rax, -32(%rbp)
+	movq %r15, %rdx
+	movq %r13, %rcx
+	movq %rax, -48(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
+	movq %rdx, %r13
 	leaq str42(%rip), %rdx
-	movq %rcx, %rbx
+	movq %rcx, %r15
 	movq %rsi, %rcx
 	callq __rt_str_concat
-	movq %rbx, %rcx
-	movq %rax, %rbx
+	movq %r15, %rcx
+	movq %rax, -24(%rbp)
+	movq -16(%rbp), %r15
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq utilities_location_short_label
@@ -377,60 +383,70 @@ errors_reporter_render:
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq utilities_colors_dim
-	movq %rbx, %rcx
+	movq %r12, %rcx
 	movq %rax, %rdx
-	movq -8(%rbp), %rbx
+	movq %rcx, %r12
+	movq -24(%rbp), %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq __rt_str_concat
-	movq %r15, %rcx
-	movq %rax, -40(%rbp)
-	movq -16(%rbp), %rdx
+	movq %r13, %rdx
+	movq %r12, %rcx
+	movq %rax, -64(%rbp)
+	movq -32(%rbp), %r12
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdx, %r15
-	movq %r12, %rdx
-	callq errors_reporter_get_line
-	movq %r15, %rdx
-	movq %rax, -48(%rbp)
-	movq -24(%rbp), %r15
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str48(%rip), %rcx
-	callq donna_string_repeat
-	movq %r15, %rdx
-	movq %rax, %rcx
-	subq $-32, %rsp
-	movq %rdx, %r15
+	movq %rdx, %r13
 	movq %rbx, %rdx
-	subq $1, %rdx
+	callq errors_reporter_get_line
+	movq %r13, %rdx
+	movq %rbx, %rcx
+	movq %rax, -72(%rbp)
+	movq %rdx, %r13
+	movq -40(%rbp), %rdx
+	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rbx
+	leaq str48(%rip), %rcx
+	callq donna_string_repeat
+	movq %r13, %rdx
+	movq %rbx, %rcx
+	movq %rax, -56(%rbp)
+	movq -48(%rbp), %rbx
+	subq $-32, %rsp
+	movq %rdx, %r13
+	movq %r12, %rdx
+	subq $1, %rdx
+	subq $32, %rsp
+	movq %rcx, %r12
 	leaq str50(%rip), %rcx
 	callq donna_string_repeat
-	movq %r15, %rdx
-	movq %rbx, %rcx
-	movq %rax, %r15
+	movq %r13, %rdx
+	movq %r12, %rcx
+	movq %rax, -80(%rbp)
+	movq %rcx, %r12
+	movq -56(%rbp), %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdx, %rbx
+	movq %rdx, %r13
 	leaq str53(%rip), %rdx
 	callq __rt_str_concat
-	movq %rbx, %rdx
+	movq %r13, %rdx
 	movq %rax, %rcx
-	movq -32(%rbp), %rbx
+	movq -64(%rbp), %r13
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq __rt_str_concat
 	movq %rax, %rcx
-	movq %r13, %rax
-	movq -40(%rbp), %r13
+	movq %r15, %rax
+	movq -72(%rbp), %r15
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq *%rax
-	movq %r15, %rcx
+	movq %r12, %rcx
 	movq %rax, %rdx
-	movq -48(%rbp), %r15
+	movq %rcx, %r12
+	movq -80(%rbp), %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq __rt_str_concat

@@ -69,7 +69,6 @@ _compiler_parser_parse_constants_parse_const:
 	pushq %r15
 	callq _compiler_parser_parse_constants_parse_pub
 	movq (%rax), %rsi
-	movq %rsi, -8(%rbp)
 	movq 8(%rax), %rcx
 	movq (%rcx), %rdx
 	cmpq $1, %rdx
@@ -77,29 +76,32 @@ _compiler_parser_parse_constants_parse_const:
 	movzbq %al, %rax
 	cmpl $0, %eax
 	jnz Lbb2
+	movq %rsi, %r12
 	movl $0, %eax
 	jmp Lbb7
 Lbb2:
 	movq 8(%rcx), %rax
-	movq 16(%rcx), %rsi
+	movq 16(%rcx), %r8
 	movq (%rax), %rax
 	movq (%rax), %rax
-	movq (%rsi), %rdi
+	movq (%r8), %rdi
 	cmpq $1, %rdi
-	setz %r8b
-	movzbq %r8b, %r8
+	setz %r9b
+	movzbq %r9b, %r9
 	subq $16, %rsp
 	movq %rsp, %rdi
-	cmpl $0, %r8d
+	cmpl $0, %r9d
 	jnz Lbb5
 	movq $0, (%rdi)
+	movq %rsi, %r12
 	movl $0, %esi
 	jmp Lbb6
 Lbb5:
-	movq 8(%rsi), %rsi
-	movq (%rsi), %rsi
-	movq (%rsi), %rsi
-	cmpq $4, %rsi
+	movq 8(%r8), %r8
+	movq (%r8), %r8
+	movq (%r8), %r8
+	cmpq $4, %r8
+	movq %rsi, %r12
 	setz %sil
 	movzbq %sil, %rsi
 	andq $1, %rsi
@@ -225,23 +227,24 @@ Lbb32:
 Lbb33:
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
-	movq 8(%rax), %r8
-	movq %r8, -16(%rbp)
+	movq 8(%rax), %r15
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rdi
 	movq (%rax), %rax
 	movq 8(%rax), %rbx
 	callq _compiler_parser_parse_constants_parse_optional_annotation
+	movq %r12, %rsi
 	movq %rbx, %rdi
 	movq (%rax), %rdx
+	movq %rdx, -16(%rbp)
 	movq 8(%rax), %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rdx, %r14
 	movq (%rax), %rdx
 	cmpq $1, %rdx
 	setz %cl
 	movzbq %cl, %rcx
+	movq %rsi, %r14
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpl $0, %ecx
@@ -309,17 +312,17 @@ Lbb46:
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
 	jnz Lbb48
-	movq 8(%rax), %r15
+	movq 8(%rax), %rcx
+	movq %rcx, -8(%rbp)
 	movq %rdi, %r13
 	movq 16(%rax), %rdi
 	callq _compiler_parser_parse_result_skip_newlines
-	movq %r15, %rcx
-	movq %r14, %rdx
+	movq %r15, %r8
+	movq %r14, %rsi
 	movq %r13, %rdi
-	movq %rax, %rsi
-	movq -16(%rbp), %r8
-	movq %rsi, %r13
-	movq -8(%rbp), %rsi
+	movq %rax, %r13
+	movq -8(%rbp), %rcx
+	movq -16(%rbp), %rdx
 	callq _compiler_parser_ast_Const
 	movq %r13, %rsi
 	movq %rax, %rdi

@@ -1081,14 +1081,14 @@ donna_string_replace_helper:
 	str	x24, [x29, 48]
 	str	x25, [x29, 40]
 	str	x26, [x29, 32]
-	mov	x19, x7
-	mov	x26, x6
-	mov	x24, x5
+	mov	x26, x7
+	mov	x25, x6
 	mov	x23, x4
 	mov	x22, x3
-	str	x19, [x29, 16]
-	add	x25, x23, x26
-	cmp	x25, x22
+	mov	x24, x5
+	add	x5, x23, x25
+	str	x5, [x29, 16]
+	cmp	x5, x22
 	mov	x21, x2
 	cset	x2, gt
 	add	x7, x0, x24
@@ -1096,14 +1096,14 @@ donna_string_replace_helper:
 	cmp	x2, #1
 	beq	.L101
 	mov	x19, x0
-	add	x0, x0, x26
+	add	x0, x0, x25
 	mov	x20, x1
 	mov	x1, x23
 	bl	strndup
 	mov	x1, x20
 	mov	x20, x1
 	bl	strcmp
-	mov	x6, x26
+	mov	x6, x25
 	mov	x5, x24
 	mov	x4, x23
 	mov	x3, x22
@@ -1112,7 +1112,7 @@ donna_string_replace_helper:
 	mov	x8, x0
 	mov	x0, x19
 	ldr	x7, [x29, 24]
-	ldr	x26, [x29, 16]
+	ldr	x25, [x29, 16]
 	cmp	x8, #0
 	cset	x8, eq
 	mov	x9, #16
@@ -1159,6 +1159,7 @@ donna_string_replace_helper:
 	b	.L103
 .L101:
 	mov	x0, x7
+	mov	x19, x26
 	mov	x5, x24
 	mov	x3, x22
 	sub	x1, x3, x5

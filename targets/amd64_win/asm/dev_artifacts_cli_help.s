@@ -1231,19 +1231,19 @@ cli_help_commands_block:
 	leaq str102(%rip), %rdx
 	leaq str101(%rip), %rcx
 	callq cli_help_command_row
-	movq %rax, -32(%rbp)
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
 	leaq str105(%rip), %rdx
 	leaq str104(%rip), %rcx
 	callq cli_help_command_row
-	movq %rax, -24(%rbp)
+	movq %rax, %r12
 	subq $-32, %rsp
 	subq $32, %rsp
 	leaq str108(%rip), %rdx
 	leaq str107(%rip), %rcx
 	callq cli_help_command_row
-	movq %rax, -16(%rbp)
+	movq %rax, %r13
 	subq $-32, %rsp
 	subq $32, %rsp
 	leaq str111(%rip), %rdx
@@ -1267,74 +1267,58 @@ cli_help_commands_block:
 	leaq str120(%rip), %rdx
 	leaq str119(%rip), %rcx
 	callq cli_help_command_row
-	movq %rax, %rcx
+	movq %rax, -32(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	leaq str123(%rip), %rdx
-	movq %rcx, %rdi
 	leaq str122(%rip), %rcx
 	callq cli_help_command_row
-	movq %rdi, %rcx
-	movq %rax, %rdi
+	movq %rax, -24(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	leaq str126(%rip), %rdx
-	movq %rcx, %rbx
 	leaq str125(%rip), %rcx
 	callq cli_help_command_row
-	movq %rbx, %rcx
-	movq %rax, %r12
+	movq %rax, -16(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	leaq str129(%rip), %rdx
-	movq %rcx, %rbx
 	leaq str128(%rip), %rcx
 	callq cli_help_command_row
-	movq %rbx, %rcx
 	movq %rax, %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rcx, %r13
 	movl $24, %ecx
 	callq malloc
-	movq %r13, %rcx
-	xchgq %rax, %r12
 	subq $-32, %rsp
-	movq $1, (%r12)
-	movq %rbx, 8(%r12)
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
 	movq %rax, %rbx
 	leaq donna_nil(%rip), %rax
-	movq %rax, 16(%r12)
+	movq %rax, 16(%rbx)
 	subq $32, %rsp
-	movq %rcx, %r13
 	movl $24, %ecx
 	callq malloc
-	movq %r13, %rcx
 	xchgq %rax, %rbx
-	movq -16(%rbp), %r13
+	movq -16(%rbp), %rcx
 	subq $-32, %rsp
 	movq $1, (%rbx)
-	movq %rax, 8(%rbx)
-	movq %r12, 16(%rbx)
+	movq %rcx, 8(%rbx)
+	movq %rax, 16(%rbx)
 	subq $32, %rsp
-	movq %rcx, %r12
 	movl $24, %ecx
 	callq malloc
-	movq %r12, %rcx
-	xchgq %rax, %rdi
-	movq -24(%rbp), %r12
+	xchgq %rax, %rbx
+	movq -24(%rbp), %rcx
 	subq $-32, %rsp
-	movq $1, (%rdi)
-	movq %rax, 8(%rdi)
-	movq %rbx, 16(%rdi)
+	movq $1, (%rbx)
+	movq %rcx, 8(%rbx)
+	movq %rax, 16(%rbx)
 	subq $32, %rsp
-	movq %rcx, %rbx
 	movl $24, %ecx
 	callq malloc
-	movq %rbx, %rcx
-	movq %rax, %rbx
-	movq %rdi, %rax
-	movq -32(%rbp), %rdi
+	xchgq %rax, %rbx
+	movq -32(%rbp), %rcx
 	subq $-32, %rsp
 	movq $1, (%rbx)
 	movq %rcx, 8(%rbx)

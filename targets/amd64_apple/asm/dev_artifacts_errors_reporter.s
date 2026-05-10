@@ -261,36 +261,36 @@ _errors_reporter_render:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $88, %rsp
+	subq $120, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %r9, -56(%rbp)
-	movq %r8, -16(%rbp)
-	movq %rdx, %r13
-	movq %rsi, %r12
-	movq %rdi, -80(%rbp)
+	movq %r9, -64(%rbp)
+	movq %r8, -32(%rbp)
+	movq %rdx, %r14
+	movq %rsi, -16(%rbp)
+	movq %rdi, %r12
 	movq %rcx, %rdi
 	movq %rdi, %rbx
 	callq _utilities_location_span_start
 	movq %rax, %rdi
 	callq _utilities_location_pos_line
 	movq %rbx, %rdi
-	movq %rax, %r14
+	movq %rax, %r13
 	movq %rdi, %rbx
 	callq _utilities_location_span_start
 	movq %rax, %rdi
 	callq _utilities_location_pos_col
 	movq %rbx, %rdi
-	movq %rax, -24(%rbp)
+	movq %rax, -48(%rbp)
 	movq %rdi, %rbx
 	callq _utilities_location_span_length
 	movq %rbx, %rdi
-	movq %rax, -32(%rbp)
+	movq %rax, -40(%rbp)
 	movq %rdi, %rbx
-	movq %r14, %rdi
+	movq %r13, %rdi
 	callq _donna_int_to_string
 	movq %rax, %rdi
 	callq _donna_string_length
@@ -299,121 +299,121 @@ _errors_reporter_render:
 	movq %rdi, %rbx
 	leaq _str35(%rip), %rdi
 	callq _donna_string_repeat
-	movq %r12, %rsi
 	movq %rbx, %rdi
 	movq %rax, %rbx
-	movq %rsi, %r15
 	leaq _str39(%rip), %rsi
-	movq %rdi, %r12
+	movq %rdi, %r15
 	movq %rbx, %rdi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _utilities_colors_dim
-	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, -48(%rbp)
-	movq %rsi, %r15
+	movq %r15, %rdi
+	movq %rax, -72(%rbp)
 	leaq _str42(%rip), %rsi
-	movq %rdi, %r12
+	movq %rdi, %r15
 	movq %rbx, %rdi
 	callq ___rt_str_concat
-	movq %r12, %rdi
-	movq %rax, %r12
+	movq %r15, %rdi
+	movq %rax, -24(%rbp)
+	movq -16(%rbp), %r15
 	callq _utilities_location_short_label
 	movq %rax, %rdi
 	callq _utilities_colors_dim
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq -16(%rbp), %r12
+	movq %rdi, %r13
+	movq -24(%rbp), %rdi
 	callq ___rt_str_concat
 	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, -40(%rbp)
-	movq -24(%rbp), %r12
+	movq %r13, %rdi
+	movq %rax, -88(%rbp)
+	movq %rdi, %r13
+	movq -32(%rbp), %rdi
 	movq %rsi, %r15
-	movq %r14, %rsi
+	movq %r13, %rsi
 	callq _errors_reporter_get_line
 	movq %r15, %rsi
-	movq %rax, -72(%rbp)
+	movq %r13, %rdi
+	movq %rax, -96(%rbp)
 	movq %rsi, %r15
-	movq -32(%rbp), %rsi
+	movq -40(%rbp), %rsi
+	movq %rdi, %r13
 	leaq _str48(%rip), %rdi
 	callq _donna_string_repeat
 	movq %r15, %rsi
-	movq %rax, %rdi
+	movq %r13, %rdi
+	movq %rax, -56(%rbp)
+	movq -48(%rbp), %rax
 	movq %rsi, %r15
-	movq %r12, %rsi
+	movq %rax, %rsi
 	subq $1, %rsi
-	movq %rdi, %r12
+	movq %rdi, %r13
 	leaq _str50(%rip), %rdi
 	callq _donna_string_repeat
 	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, -64(%rbp)
-	movq -40(%rbp), %r15
-	movq %rsi, %r12
+	movq %r13, %rdi
+	movq %rax, -80(%rbp)
+	movq %rdi, %r15
+	movq -56(%rbp), %rdi
+	movq %rsi, %r13
 	leaq _str53(%rip), %rsi
 	callq ___rt_str_concat
-	movq %r12, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq -48(%rbp), %r12
+	movq -64(%rbp), %r13
 	callq ___rt_str_concat
+	movq %r13, %r9
 	movq %rax, %rdi
-	movq -56(%rbp), %r9
+	movq -72(%rbp), %r13
 	callq *%r9
-	movq %r14, %rdi
+	movq %r15, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r14
-	movq -64(%rbp), %rdi
+	movq %rdi, %r15
+	movq -80(%rbp), %rdi
 	callq ___rt_str_concat
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq %r15, %rdi
+	movq %rax, -104(%rbp)
+	movq -88(%rbp), %r15
 	callq _donna_int_to_string
-	movq %r14, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r14
 	leaq _str59(%rip), %rsi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _utilities_colors_dim
-	movq %r14, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r14
 	leaq _str62(%rip), %rsi
 	callq ___rt_str_concat
-	movq %r14, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r14
-	movq -72(%rbp), %rsi
+	movq -96(%rbp), %rsi
 	callq ___rt_str_concat
-	movq %r14, %rsi
-	movq %r12, %rdi
-	movq %rax, %r14
-	movq %rsi, %r12
+	movq %r13, %rdi
+	movq %rax, -112(%rbp)
+	movq -104(%rbp), %rsi
+	movq %rsi, %r13
 	leaq _str65(%rip), %rsi
 	callq ___rt_str_concat
-	movq %r12, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
 	callq ___rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
-	movq %rdi, %r12
-	movq %r13, %rdi
+	movq %rdi, %r13
+	movq %r14, %rdi
 	callq _donna_string_is_empty
-	movq %r13, %rsi
-	movq %r12, %rdi
+	movq %r14, %rsi
+	movq %r13, %rdi
 	cmpq $1, %rax
 	jz Lbb7
-	movq %rdi, %r12
+	movq %rdi, %r13
 	leaq _str75(%rip), %rdi
 	callq ___rt_str_concat
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
-	movq %rsi, %r12
+	movq %rsi, %r14
 	jmp Lbb9
 Lbb7:
 	leaq _str74(%rip), %rax
-	movq %rax, %r12
+	movq %rax, %r14
 Lbb9:
 	movq %rdi, %r13
 	movl $24, %edi
@@ -427,12 +427,12 @@ Lbb9:
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
-	movq %r12, %rsi
+	movq %r14, %rsi
 	movq %rbx, %rdi
 	movq %rax, %rbx
-	movq -80(%rbp), %r12
+	movq -112(%rbp), %rax
 	movq $1, (%rbx)
-	movq %r14, 8(%rbx)
+	movq %rax, 8(%rbx)
 	movq %r13, 16(%rbx)
 	movq %rsi, %r13
 	leaq _str84(%rip), %rsi

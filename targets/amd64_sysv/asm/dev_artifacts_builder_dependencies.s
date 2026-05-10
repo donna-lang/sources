@@ -882,22 +882,28 @@ builder_dependencies_resolve_git_dep:
 	pushq %r14
 	pushq %r15
 	movq %rcx, %r12
-	movq %rdx, -8(%rbp)
+	movq %rdx, %r14
 	movq %rsi, %r13
 	movq %rdi, %rbx
 	callq builder_dependencies_git_cache_dir
+	movq %r14, %rsi
 	movq %rax, %rdi
+	movq %rsi, %r15
 	movq %rdi, %rsi
 	movq %rdi, %r14
 	leaq str166(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq donna_shell_run
+	movq %r15, %rsi
 	movq %r14, %rdi
+	movq %rsi, %r14
 	movq %rbx, %rsi
 	callq donna_files_join
+	movq %r14, %rsi
 	movq %r12, %rdi
 	movq %rax, %r14
+	movq %rsi, %r12
 	movq %rbx, %rsi
 	callq builder_lock_find_rev
 	movq %rbx, %rdi
@@ -906,14 +912,15 @@ builder_dependencies_resolve_git_dep:
 	movq %r14, %rdi
 	callq builder_lock_read_cached_rev
 	movq %rbx, %rdi
-	movq %rax, %r12
+	movq %rax, -8(%rbp)
 	movq %rdi, %rbx
 	movq %r15, %rdi
 	callq donna_string_is_empty
 	movq %r15, %rdx
 	movq %r12, %rsi
 	movq %rbx, %rdi
-	movq -8(%rbp), %r12
+	movq %rsi, %r12
+	movq -8(%rbp), %rsi
 	cmpq $0, %rax
 	jz .Lbb44
 	movq %rdi, %rbx

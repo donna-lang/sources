@@ -621,7 +621,7 @@ tools_docgen_extractor_extract_types:
 	mov	x21, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L36
+	beq	.L35
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -631,25 +631,24 @@ tools_docgen_extractor_extract_types:
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
-	str	x19, [x29, 32]
+	str	x19, [x29, 24]
 	mov	x1, #8
 	add	x1, x0, x1
-	ldr	x5, [x1]
-	str	x5, [x29, 16]
+	mov	x27, x19
+	ldr	x19, [x1]
 	mov	x1, #16
 	add	x1, x0, x1
 	ldr	x1, [x1]
 	mov	x2, #24
 	add	x2, x0, x2
-	ldr	x27, [x2]
+	ldr	x26, [x2]
 	mov	x2, #32
 	add	x2, x0, x2
 	ldr	x2, [x2]
-	str	x2, [x29, 24]
 	mov	x3, #40
 	add	x3, x0, x3
-	mov	x26, x19
-	ldr	x19, [x3]
+	ldr	x3, [x3]
+	str	x3, [x29, 32]
 	mov	x25, x2
 	mov	x2, #48
 	add	x0, x0, x2
@@ -659,7 +658,7 @@ tools_docgen_extractor_extract_types:
 	sub	sp, sp, x1
 	mov	x20, sp
 	cmp	x23, #0
-	beq	.L33
+	beq	.L32
 	bl	tools_docgen_extractor_span_line
 	mov	x1, x0
 	mov	x0, x19
@@ -668,39 +667,40 @@ tools_docgen_extractor_extract_types:
 	bl	tools_docgen_extractor_find_doc
 	mov	x2, x25
 	mov	x1, x23
-	mov	x26, x0
+	mov	x4, x0
 	mov	x0, x19
-	ldr	x19, [x29, 32]
-	mov	x25, x0
-	ldr	x0, [x29, 16]
+	ldr	x25, [x29, 24]
+	mov	x19, x0
+	ldr	x0, [x29, 32]
+	str	x4, [x29, 16]
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x23, sp
-	cmp	x27, #1
-	beq	.L29
-	mov	x0, x25
+	cmp	x26, #1
+	beq	.L28
+	mov	x26, x2
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	mov	x25, x1
 	mov	x1, x24
 	bl	tools_docgen_extractor_extract_ctors
-	mov	x4, x26
+	mov	x2, x26
 	mov	x1, x25
 	mov	x3, x0
-	mov	x0, x22
-	ldr	x2, [x29, 24]
-	mov	x22, x0
-	ldr	x0, [x29, 16]
+	mov	x0, x19
+	ldr	x19, [x29, 24]
+	ldr	x4, [x29, 16]
 	str	x3, [x23]
-	b	.L32
-.L29:
-	mov	x4, x26
+	b	.L31
+.L28:
+	mov	x0, x19
+	mov	x19, x25
 	adrp	x3, donna_nil
 	add	x3, x3, #:lo12:donna_nil
 	str	x3, [x23]
 	adrp	x3, donna_nil
 	add	x3, x3, #:lo12:donna_nil
-.L32:
+.L31:
 	bl	tools_docgen_extractor_DocType
 	mov	x17, x0
 	mov	x0, x22
@@ -721,21 +721,21 @@ tools_docgen_extractor_extract_types:
 	str	x21, [x3]
 	bl	tools_docgen_extractor_extract_types
 	str	x0, [x20]
-	b	.L35
-.L33:
-	mov	x19, x26
+	b	.L34
+.L32:
+	mov	x19, x27
 	mov	x0, x22
 	mov	x1, x24
 	mov	x2, x21
 	bl	tools_docgen_extractor_extract_types
 	str	x0, [x20]
-.L35:
+.L34:
 	str	x0, [x19]
-	b	.L38
-.L36:
+	b	.L37
+.L35:
 	mov	x0, x21
 	bl	donna_list_reverse
-.L38:
+.L37:
 	ldr	x19, [x29, 120]
 	ldr	x20, [x29, 112]
 	ldr	x21, [x29, 104]
@@ -771,7 +771,7 @@ tools_docgen_extractor_extract_ctors:
 	mov	x20, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L41
+	beq	.L40
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -830,11 +830,11 @@ tools_docgen_extractor_extract_ctors:
 	str	x20, [x3]
 	bl	tools_docgen_extractor_extract_ctors
 	str	x0, [x19]
-	b	.L43
-.L41:
+	b	.L42
+.L40:
 	mov	x0, x20
 	bl	donna_list_reverse
-.L43:
+.L42:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -869,7 +869,7 @@ tools_docgen_extractor_extract_regular_fns:
 	mov	x21, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L54
+	beq	.L53
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -881,14 +881,14 @@ tools_docgen_extractor_extract_regular_fns:
 	mov	x19, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L48
+	beq	.L47
 	mov	x0, x20
 	mov	x2, x21
 	mov	x22, x0
 	bl	tools_docgen_extractor_extract_regular_fns
 	str	x0, [x19]
-	b	.L56
-.L48:
+	b	.L55
+.L47:
 	mov	x22, x20
 	mov	x2, #8
 	add	x2, x0, x2
@@ -912,7 +912,7 @@ tools_docgen_extractor_extract_regular_fns:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #0
-	beq	.L51
+	beq	.L50
 	bl	tools_docgen_extractor_span_line
 	mov	x1, x0
 	mov	x0, x23
@@ -954,20 +954,20 @@ tools_docgen_extractor_extract_regular_fns:
 	str	x21, [x3]
 	bl	tools_docgen_extractor_extract_regular_fns
 	str	x0, [x20]
-	b	.L53
-.L51:
+	b	.L52
+.L50:
 	mov	x0, x22
 	mov	x1, x24
 	mov	x2, x21
 	bl	tools_docgen_extractor_extract_regular_fns
 	str	x0, [x20]
-.L53:
+.L52:
 	str	x0, [x19]
-	b	.L56
-.L54:
+	b	.L55
+.L53:
 	mov	x0, x21
 	bl	donna_list_reverse
-.L56:
+.L55:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -1003,7 +1003,7 @@ tools_docgen_extractor_extract_external_fns:
 	mov	x21, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L66
+	beq	.L65
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -1015,7 +1015,7 @@ tools_docgen_extractor_extract_external_fns:
 	mov	x19, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L64
+	beq	.L63
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x23, [x2]
@@ -1038,7 +1038,7 @@ tools_docgen_extractor_extract_external_fns:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #0
-	beq	.L61
+	beq	.L60
 	bl	tools_docgen_extractor_span_line
 	mov	x1, x0
 	mov	x0, x23
@@ -1086,27 +1086,27 @@ tools_docgen_extractor_extract_external_fns:
 	str	x21, [x3]
 	bl	tools_docgen_extractor_extract_external_fns
 	str	x0, [x20]
-	b	.L63
-.L61:
+	b	.L62
+.L60:
 	mov	x0, x22
 	mov	x1, x24
 	mov	x2, x21
 	bl	tools_docgen_extractor_extract_external_fns
 	str	x0, [x20]
-.L63:
+.L62:
 	str	x0, [x19]
-	b	.L68
-.L64:
+	b	.L67
+.L63:
 	mov	x0, x22
 	mov	x20, x21
 	mov	x2, x20
 	bl	tools_docgen_extractor_extract_external_fns
 	str	x0, [x19]
-	b	.L68
-.L66:
+	b	.L67
+.L65:
 	mov	x0, x21
 	bl	donna_list_reverse
-.L68:
+.L67:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -1143,7 +1143,7 @@ tools_docgen_extractor_extract_consts:
 	mov	x21, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L80
+	beq	.L79
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -1170,7 +1170,7 @@ tools_docgen_extractor_extract_consts:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #0
-	beq	.L77
+	beq	.L76
 	bl	tools_docgen_extractor_span_line
 	mov	x1, x0
 	mov	x0, x23
@@ -1186,7 +1186,7 @@ tools_docgen_extractor_extract_consts:
 	mov	x25, x1
 	ldr	x1, [x27]
 	cmp	x1, #0
-	beq	.L73
+	beq	.L72
 	mov	x24, x0
 	mov	x0, #8
 	add	x0, x27, x0
@@ -1197,8 +1197,8 @@ tools_docgen_extractor_extract_consts:
 	mov	x2, x0
 	mov	x0, x24
 	str	x2, [x23]
-	b	.L76
-.L73:
+	b	.L75
+.L72:
 	mov	x3, x26
 	mov	x1, x25
 	adrp	x2, str322
@@ -1206,7 +1206,7 @@ tools_docgen_extractor_extract_consts:
 	str	x2, [x23]
 	adrp	x2, str322
 	add	x2, x2, #:lo12:str322
-.L76:
+.L75:
 	mov	x24, x1
 	mov	x1, #1
 	bl	tools_docgen_extractor_DocConst
@@ -1229,20 +1229,20 @@ tools_docgen_extractor_extract_consts:
 	str	x21, [x3]
 	bl	tools_docgen_extractor_extract_consts
 	str	x0, [x20]
-	b	.L79
-.L77:
+	b	.L78
+.L76:
 	mov	x0, x22
 	mov	x1, x24
 	mov	x2, x21
 	bl	tools_docgen_extractor_extract_consts
 	str	x0, [x20]
-.L79:
+.L78:
 	str	x0, [x19]
-	b	.L82
-.L80:
+	b	.L81
+.L79:
 	mov	x0, x21
 	bl	donna_list_reverse
-.L82:
+.L81:
 	ldr	x19, [x29, 88]
 	ldr	x20, [x29, 80]
 	ldr	x21, [x29, 72]
@@ -1273,14 +1273,14 @@ tools_docgen_extractor_render_fn_sig:
 	mov	x22, x0
 	mov	x0, x2
 	cmp	x1, #1
-	beq	.L85
+	beq	.L84
 	adrp	x19, str341
 	add	x19, x19, #:lo12:str341
-	b	.L86
-.L85:
+	b	.L85
+.L84:
 	adrp	x19, str340
 	add	x19, x19, #:lo12:str340
-.L86:
+.L85:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_docgen_extractor_render_params
@@ -1296,7 +1296,7 @@ tools_docgen_extractor_render_fn_sig:
 	mov	x20, x1
 	ldr	x1, [x3]
 	cmp	x1, #0
-	beq	.L88
+	beq	.L87
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x3, x0
@@ -1313,8 +1313,8 @@ tools_docgen_extractor_render_fn_sig:
 	mov	x0, x19
 	mov	x19, x17
 	str	x19, [x21]
-	b	.L91
-.L88:
+	b	.L90
+.L87:
 	mov	x19, x21
 	mov	x1, x22
 	adrp	x2, str352
@@ -1322,7 +1322,7 @@ tools_docgen_extractor_render_fn_sig:
 	str	x2, [x19]
 	adrp	x19, str352
 	add	x19, x19, #:lo12:str352
-.L91:
+.L90:
 	mov	x21, x1
 	adrp	x1, str359
 	add	x1, x1, #:lo12:str359
@@ -1367,7 +1367,7 @@ tools_docgen_extractor_render_params:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L103
+	beq	.L102
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -1384,13 +1384,13 @@ tools_docgen_extractor_render_params:
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	w3, #0
-	bne	.L97
+	bne	.L96
 	mov	x3, #0
 	str	x3, [x2]
 	mov	x20, x0
 	mov	x0, #0
-	b	.L98
-.L97:
+	b	.L97
+.L96:
 	mov	x4, #16
 	add	x4, x1, x4
 	ldr	x4, [x4]
@@ -1400,9 +1400,9 @@ tools_docgen_extractor_render_params:
 	cset	x0, eq
 	and	x0, x0, x3
 	str	x0, [x2]
-.L98:
+.L97:
 	cmp	w0, #0
-	bne	.L100
+	bne	.L99
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -1426,14 +1426,14 @@ tools_docgen_extractor_render_params:
 	mov	x0, x20
 	mov	x20, x17
 	str	x20, [x21]
-	b	.L102
-.L100:
+	b	.L101
+.L99:
 	mov	x0, x20
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x20, [x1]
 	str	x20, [x21]
-.L102:
+.L101:
 	mov	x21, x0
 	mov	x0, #24
 	bl	malloc
@@ -1448,11 +1448,11 @@ tools_docgen_extractor_render_params:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	tools_docgen_extractor_render_params
-	b	.L105
-.L103:
+	b	.L104
+.L102:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L105:
+.L104:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1494,7 +1494,7 @@ tools_docgen_extractor_render_fields:
 	mov	x3, #1
 	and	x2, x2, x3
 	cmp	w2, #0
-	bne	.L116
+	bne	.L115
 	ldr	x2, [x1]
 	cmp	x2, #0
 	mov	x19, x0
@@ -1502,7 +1502,7 @@ tools_docgen_extractor_render_fields:
 	mov	x2, #1
 	and	x0, x0, x2
 	cmp	w0, #0
-	bne	.L114
+	bne	.L113
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
@@ -1524,7 +1524,7 @@ tools_docgen_extractor_render_fields:
 	sub	sp, sp, x3
 	mov	x23, sp
 	cmp	x2, #1
-	beq	.L111
+	beq	.L110
 	mov	x22, x1
 	adrp	x1, str467
 	add	x1, x1, #:lo12:str467
@@ -1540,8 +1540,8 @@ tools_docgen_extractor_render_fields:
 	str	x21, [x23]
 	mov	x0, x20
 	mov	x20, x21
-	b	.L113
-.L111:
+	b	.L112
+.L110:
 	mov	x22, x1
 	mov	x0, x21
 	mov	x21, x23
@@ -1550,7 +1550,7 @@ tools_docgen_extractor_render_fields:
 	mov	x0, x20
 	mov	x20, x17
 	str	x20, [x21]
-.L113:
+.L112:
 	mov	x21, x0
 	mov	x0, #24
 	bl	malloc
@@ -1566,14 +1566,14 @@ tools_docgen_extractor_render_fields:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_docgen_extractor_render_fields
-	b	.L117
-.L114:
+	b	.L116
+.L113:
 	mov	x0, x19
 	bl	donna_list_reverse
-	b	.L117
-.L116:
+	b	.L116
+.L115:
 	bl	donna_list_reverse
-.L117:
+.L116:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1628,7 +1628,7 @@ tools_docgen_extractor_collect_blocks:
 	mov	x3, #1
 	sub	x22, x23, x3
 	cmp	x2, #0
-	beq	.L129
+	beq	.L128
 	mov	x2, #8
 	add	x2, x1, x2
 	ldr	x20, [x2]
@@ -1648,14 +1648,14 @@ tools_docgen_extractor_collect_blocks:
 	mov	x3, #1
 	add	x1, x1, x3
 	cmp	x2, #1
-	beq	.L127
+	beq	.L126
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x20, sp
 	mov	x23, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L124
+	beq	.L123
 	bl	donna_list_reverse
 	mov	x1, x23
 	mov	x25, x1
@@ -1694,8 +1694,8 @@ tools_docgen_extractor_collect_blocks:
 	add	x2, x2, #:lo12:donna_nil
 	bl	tools_docgen_extractor_collect_blocks
 	str	x0, [x20]
-	b	.L126
-.L124:
+	b	.L125
+.L123:
 	mov	x1, x23
 	mov	x0, x22
 	mov	x3, x21
@@ -1705,10 +1705,10 @@ tools_docgen_extractor_collect_blocks:
 	mov	x22, x0
 	bl	tools_docgen_extractor_collect_blocks
 	str	x0, [x20]
-.L126:
+.L125:
 	str	x0, [x19]
-	b	.L134
-.L127:
+	b	.L133
+.L126:
 	mov	x24, x1
 	mov	x17, x20
 	mov	x20, x0
@@ -1737,15 +1737,15 @@ tools_docgen_extractor_collect_blocks:
 	mov	x3, x20
 	bl	tools_docgen_extractor_collect_blocks
 	str	x0, [x19]
-	b	.L134
-.L129:
+	b	.L133
+.L128:
 	mov	x20, x21
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L132
+	beq	.L131
 	bl	donna_list_reverse
 	adrp	x1, str494
 	add	x1, x1, #:lo12:str494
@@ -1776,12 +1776,12 @@ tools_docgen_extractor_collect_blocks:
 	str	x20, [x1]
 	bl	donna_list_reverse
 	str	x0, [x19]
-	b	.L134
-.L132:
+	b	.L133
+.L131:
 	mov	x0, x20
 	bl	donna_list_reverse
 	str	x0, [x19]
-.L134:
+.L133:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -1812,7 +1812,7 @@ tools_docgen_extractor_is_doc_line:
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	.L145
+	beq	.L144
 	mov	x19, x0
 	bl	donna_string_length
 	mov	x1, x0
@@ -1823,7 +1823,7 @@ tools_docgen_extractor_is_doc_line:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #0
-	beq	.L143
+	beq	.L142
 	mov	x1, #3
 	bl	donna_string_char_str
 	mov	x1, #16
@@ -1833,26 +1833,26 @@ tools_docgen_extractor_is_doc_line:
 	add	x1, x1, #:lo12:str562
 	bl	strcmp
 	cmp	x0, #0
-	beq	.L140
+	beq	.L139
 	mov	x0, #1
 	str	x0, [x20]
 	mov	x0, #1
-	b	.L142
-.L140:
+	b	.L141
+.L139:
 	mov	x0, #0
 	str	x0, [x20]
 	mov	x0, #0
+.L141:
+	str	x0, [x19]
+	b	.L145
 .L142:
-	str	x0, [x19]
-	b	.L146
-.L143:
 	mov	x0, #1
 	str	x0, [x19]
 	mov	x0, #1
-	b	.L146
-.L145:
+	b	.L145
+.L144:
 	mov	x0, #0
-.L146:
+.L145:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -1885,7 +1885,7 @@ tools_docgen_extractor_strip_doc_prefix:
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #1
-	bne	.L149
+	bne	.L148
 	mov	x19, x0
 	bl	donna_string_length
 	mov	x1, x0
@@ -1894,7 +1894,7 @@ tools_docgen_extractor_strip_doc_prefix:
 	sub	x2, x1, x2
 	mov	x1, #1
 	bl	donna_string_slice
-.L149:
+.L148:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -1912,7 +1912,7 @@ tools_docgen_extractor_find_doc:
 	mov	x2, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L155
+	beq	.L154
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -1931,18 +1931,18 @@ tools_docgen_extractor_find_doc:
 	sub	sp, sp, x4
 	mov	x19, sp
 	cmp	x3, #1
-	beq	.L154
+	beq	.L153
 	mov	x0, x2
 	bl	tools_docgen_extractor_find_doc
 	str	x0, [x19]
-	b	.L156
-.L154:
+	b	.L155
+.L153:
 	str	x0, [x19]
-	b	.L156
-.L155:
+	b	.L155
+.L154:
 	adrp	x0, str591
 	add	x0, x0, #:lo12:str591
-.L156:
+.L155:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32

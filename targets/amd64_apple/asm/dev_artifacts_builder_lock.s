@@ -280,14 +280,13 @@ _builder_lock_collect_locked:
 	cmpq $0, %rax
 	jz Lbb25
 	movq 8(%rdi), %rax
-	movq 16(%rdi), %rbx
-	movq (%rax), %rdi
-	movq %rdi, -16(%rbp)
+	movq 16(%rdi), %r13
+	movq (%rax), %rbx
 	movq 8(%rax), %rdi
 	leaq _str86(%rip), %rsi
-	movq %rdi, %r13
+	movq %rdi, %r14
 	callq _builder_lock_opt_str
-	movq %r13, %rdi
+	movq %r14, %rdi
 	movq %rax, %rsi
 	movq %rsi, %r14
 	leaq _str88(%rip), %rsi
@@ -298,16 +297,16 @@ _builder_lock_collect_locked:
 	movq %r14, %rdi
 	callq _donna_string_is_empty
 	movq %rbx, %rdi
-	movq %rax, %rbx
-	movq %rdi, %r13
+	movq %rax, -16(%rbp)
+	movq %rdi, %rbx
 	movq %r15, %rdi
 	callq _donna_string_is_empty
 	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %r13, %rdi
-	movq %rdi, %r13
-	movq -16(%rbp), %rdi
-	orq %rbx, %rax
+	movq %rbx, %rdi
+	movq %rax, %rcx
+	movq -16(%rbp), %rax
+	orq %rcx, %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax

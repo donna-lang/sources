@@ -1870,7 +1870,7 @@ tools_docgen_render_render_index:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $24, %rsp
+	subq $40, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -1878,77 +1878,79 @@ tools_docgen_render_render_index:
 	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq %rcx, %r12
+	movq %rcx, %r14
 	movq %rdx, %rcx
 	subq $32, %rsp
 	movq %rcx, %rsi
-	movq %r12, %rcx
+	movq %r14, %rcx
 	callq builder_scanner_meta_name
 	movq %rsi, %rcx
 	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rdi
-	movq %r12, %rcx
+	movq %r14, %rcx
 	callq builder_scanner_meta_version
 	movq %rdi, %rcx
-	movq %rax, %r13
+	movq %rax, %r12
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rdi
-	movq %r12, %rcx
+	movq %r14, %rcx
 	callq builder_scanner_meta_description
 	movq %rdi, %rcx
 	movq %rax, %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rdi
-	movq %r12, %rcx
+	movq %r14, %rcx
 	callq builder_scanner_meta_authors
+	movq %rdi, %rcx
+	movq %rax, %r13
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rcx, %rdi
+	movq %r14, %rcx
+	callq builder_scanner_meta_licence
 	movq %rdi, %rcx
 	movq %rax, -16(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rdi
-	movq %r12, %rcx
-	callq builder_scanner_meta_licence
-	movq %rdi, %rcx
-	movq %rax, %r15
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rcx, %rdi
-	movq %r12, %rcx
+	movq %r14, %rcx
 	callq builder_scanner_meta_repository
-	movq %r13, %rdx
+	movq %r12, %rdx
 	movq %rdi, %rcx
 	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdx, %r13
+	movq %rdx, %r12
 	leaq str6(%rip), %rdx
-	movq %rcx, %r14
+	movq %rcx, %r15
 	callq donna_string_split
-	movq %r13, %rdx
+	movq %r12, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdx, %r13
+	movq %rdx, %r12
 	leaq donna_nil(%rip), %rdx
 	callq tools_docgen_render_collect_headings
-	movq %r14, %rcx
-	movq %rax, %r14
+	movq %r15, %rcx
+	movq %rax, -24(%rbp)
+	movq -16(%rbp), %r15
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq markdown_markdown_to_html
-	movq %r12, %rcx
-	movq %rax, %r12
+	movq %r14, %rcx
+	movq %rax, -32(%rbp)
+	movq -24(%rbp), %r14
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq builder_scanner_meta_links
 	movq %r15, %r9
 	movq %r14, %r8
-	movq %r13, %rdx
-	movq -16(%rbp), %r13
+	movq %r12, %rdx
+	movq -32(%rbp), %r12
 	subq $-32, %rsp
 	subq $48, %rsp
 	movq %rsp, %rcx

@@ -198,7 +198,7 @@ _argparse_argparse_parse_loop:
 	movq %rax, %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb42
+	jz Lbb40
 	movq 8(%rdi), %r15
 	movq 16(%rdi), %rdi
 	leaq _str37(%rip), %rsi
@@ -215,7 +215,7 @@ _argparse_argparse_parse_loop:
 	setz %al
 	movzbq %al, %rax
 	cmpl $0, %eax
-	jnz Lbb28
+	jnz Lbb27
 	leaq _str112(%rip), %rsi
 	movq %rdi, %r12
 	movq %r15, %rdi
@@ -230,26 +230,26 @@ _argparse_argparse_parse_loop:
 	movl $16, %edi
 	callq _malloc
 	movq %r14, %rdi
-	xchgq %rax, %r13
 	movq %rax, %r14
+	movq %r13, %rax
+	movq %rax, %r13
 	leaq _str164(%rip), %rax
-	movq %rax, (%r13)
-	movq %r15, 8(%r13)
+	movq %rax, (%r14)
+	movq %r15, 8(%r14)
 	movq %rdi, %r15
 	movl $24, %edi
 	callq _malloc
 	movq %r15, %rdi
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	movq %r13, 8(%rsi)
-	movq %r14, 16(%rsi)
-	movq %rdi, %r13
+	movq %r14, 8(%rsi)
+	movq %r13, 16(%rsi)
+	movq %rdi, %r14
 	callq _argparse_argparse_parse_loop
 	movq %rax, (%r12)
-	jmp Lbb27
+	jmp Lbb26
 Lbb17:
-	movq %r13, %r14
-	movq %rdi, %r13
+	movq %rdi, %r14
 	movq %r15, %rdi
 	movq %rdi, %r15
 	callq _donna_string_length
@@ -258,40 +258,37 @@ Lbb17:
 	subq $1, %rdx
 	movl $1, %esi
 	callq _donna_string_slice
-	movq %r13, %rdi
+	movq %r14, %rdi
 	movq %rax, %r15
-	movq %r12, %rax
+	movq %r13, %rax
 	subq $16, %rsp
 	movq %rsp, %r13
 	movq %r13, -40(%rbp)
-	movq (%rdi), %rcx
-	cmpq $0, %rcx
+	movq %rax, %r14
+	movq (%rdi), %rax
+	cmpq $0, %rax
 	jz Lbb24
 	movq 8(%rdi), %rax
-	movq %rax, %r12
+	movq %rax, %r13
 	movq 16(%rdi), %rax
 	movq %rax, -24(%rbp)
 	leaq _str140(%rip), %rsi
-	movq %rdi, %r13
-	movq %r12, %rdi
-	callq _donna_string_starts_with
+	movq %rdi, %r12
 	movq %r13, %rdi
-	movq %rax, %rcx
-	movq %r12, %rax
-	movq -40(%rbp), %r13
-	movq %rax, %r12
-	movq -16(%rbp), %rax
+	callq _donna_string_starts_with
+	movq %r12, %rdi
+	movq -16(%rbp), %r12
 	subq $16, %rsp
-	movq %rsp, %rdx
-	movq %rdx, -32(%rbp)
-	cmpq $1, %rcx
+	movq %rsp, %rcx
+	movq %rcx, -32(%rbp)
+	cmpq $1, %rax
 	jz Lbb21
 	movl $16, %edi
 	callq _malloc
 	movq %r15, %rcx
 	movq %rax, %r15
-	movq %r12, %rax
-	movq -16(%rbp), %r12
+	movq %r13, %rax
+	movq -40(%rbp), %r13
 	movq %rcx, (%r15)
 	movq %rax, 8(%r15)
 	movl $24, %edi
@@ -307,7 +304,6 @@ Lbb17:
 	movq %rax, (%r14)
 	jmp Lbb23
 Lbb21:
-	movq %rax, %r12
 	movq %r15, %r13
 	movq %rdi, %r15
 	movl $16, %edi
@@ -334,9 +330,8 @@ Lbb21:
 	movq %rax, (%r14)
 Lbb23:
 	movq %rax, (%r13)
-	jmp Lbb26
+	jmp Lbb25
 Lbb24:
-	movq %rax, %r12
 	movl $16, %edi
 	callq _malloc
 	xchgq %rax, %r14
@@ -354,12 +349,12 @@ Lbb24:
 	leaq _donna_nil(%rip), %rdi
 	callq _argparse_argparse_parse_loop
 	movq %rax, (%r13)
-Lbb26:
+Lbb25:
 	movq %rax, (%r12)
-Lbb27:
+Lbb26:
 	movq %rax, (%rbx)
-	jmp Lbb43
-Lbb28:
+	jmp Lbb41
+Lbb27:
 	movq %r13, %r12
 	movq %rdi, %r13
 	movq %r15, %rdi
@@ -387,7 +382,7 @@ Lbb28:
 	movq %rsp, %r12
 	movq %r12, -72(%rbp)
 	cmpq $1, %rax
-	jz Lbb31
+	jz Lbb30
 	movq %r14, %rdx
 	movl $0, %esi
 	movq %rdi, %r12
@@ -429,46 +424,43 @@ Lbb28:
 	callq _malloc
 	movq %r15, %rdi
 	movq %rax, %rsi
+	movq %r14, %rax
 	movq $1, (%rsi)
 	movq %r13, 8(%rsi)
-	movq %r14, 16(%rsi)
+	movq %rax, 16(%rsi)
 	callq _argparse_argparse_parse_loop
 	movq %rax, (%r12)
-	jmp Lbb41
-Lbb31:
-	movq %r12, %rax
-	movq %r13, %r14
+	jmp Lbb39
+Lbb30:
+	movq %r13, %rax
 	subq $16, %rsp
 	movq %rsp, %r13
 	movq %r13, -96(%rbp)
-	movq (%rdi), %rcx
-	cmpq $0, %rcx
-	jz Lbb38
+	movq %rax, %r14
+	movq (%rdi), %rax
+	cmpq $0, %rax
+	jz Lbb37
 	movq 8(%rdi), %rax
-	movq %rax, %r12
+	movq %rax, %r13
 	movq 16(%rdi), %rax
 	movq %rax, -80(%rbp)
 	leaq _str74(%rip), %rsi
-	movq %rdi, %r13
-	movq %r12, %rdi
-	callq _donna_string_starts_with
+	movq %rdi, %r12
 	movq %r13, %rdi
-	movq %rax, %rcx
-	movq %r12, %rax
-	movq -96(%rbp), %r13
-	movq %rax, %r12
-	movq -72(%rbp), %rax
+	callq _donna_string_starts_with
+	movq %r12, %rdi
+	movq -72(%rbp), %r12
 	subq $16, %rsp
-	movq %rsp, %rdx
-	movq %rdx, -88(%rbp)
-	cmpq $1, %rcx
-	jz Lbb35
+	movq %rsp, %rcx
+	movq %rcx, -88(%rbp)
+	cmpq $1, %rax
+	jz Lbb34
 	movl $16, %edi
 	callq _malloc
 	movq %r15, %rcx
 	movq %rax, %r15
-	movq %r12, %rax
-	movq -72(%rbp), %r12
+	movq %r13, %rax
+	movq -96(%rbp), %r13
 	movq %rcx, (%r15)
 	movq %rax, 8(%r15)
 	movl $24, %edi
@@ -482,9 +474,8 @@ Lbb31:
 	movq %rax, 16(%rsi)
 	callq _argparse_argparse_parse_loop
 	movq %rax, (%r14)
-	jmp Lbb37
-Lbb35:
-	movq %rax, %r12
+	jmp Lbb36
+Lbb34:
 	movq %r15, %r13
 	movq %rdi, %r15
 	movl $16, %edi
@@ -509,11 +500,10 @@ Lbb35:
 	movq %rax, 16(%rsi)
 	callq _argparse_argparse_parse_loop
 	movq %rax, (%r14)
-Lbb37:
+Lbb36:
 	movq %rax, (%r13)
-	jmp Lbb40
-Lbb38:
-	movq %rax, %r12
+	jmp Lbb38
+Lbb37:
 	movl $16, %edi
 	callq _malloc
 	xchgq %rax, %r14
@@ -531,14 +521,14 @@ Lbb38:
 	leaq _donna_nil(%rip), %rdi
 	callq _argparse_argparse_parse_loop
 	movq %rax, (%r13)
-Lbb40:
+Lbb38:
 	movq %rax, (%r12)
-Lbb41:
+Lbb39:
 	movq %rax, (%rbx)
-	jmp Lbb43
-Lbb42:
+	jmp Lbb41
+Lbb40:
 	movq %rbx, %rax
-Lbb43:
+Lbb41:
 	movq %rbp, %rsp
 	subq $144, %rsp
 	popq %r15
@@ -565,7 +555,7 @@ _argparse_argparse_get:
 	movq %rdi, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb49
+	jz Lbb47
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r12
 	movq %rdi, %rbx
@@ -579,18 +569,18 @@ _argparse_argparse_get:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb48
+	jz Lbb46
 	movq %r12, %rdi
 	callq _argparse_argparse_get
 	movq %rax, (%rbx)
-	jmp Lbb50
-Lbb48:
+	jmp Lbb48
+Lbb46:
 	callq _argparse_argparse_val_of
 	movq %rax, (%rbx)
-	jmp Lbb50
-Lbb49:
+	jmp Lbb48
+Lbb47:
 	leaq _str181(%rip), %rax
-Lbb50:
+Lbb48:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r13
@@ -613,7 +603,7 @@ _argparse_argparse_has:
 	movq %rdi, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb56
+	jz Lbb54
 	movq 8(%rax), %rdi
 	movq 16(%rax), %rbx
 	callq _argparse_argparse_key_of
@@ -626,17 +616,17 @@ _argparse_argparse_has:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb54
+	jz Lbb52
 	callq _argparse_argparse_has
 	movq %rax, (%rbx)
-	jmp Lbb57
-Lbb54:
+	jmp Lbb55
+Lbb52:
 	movq $1, (%rbx)
 	movl $1, %eax
-	jmp Lbb57
-Lbb56:
+	jmp Lbb55
+Lbb54:
 	movl $0, %eax
-Lbb57:
+Lbb55:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %r12
@@ -674,7 +664,7 @@ _argparse_argparse_positional_loop:
 	movq %rdi, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb65
+	jz Lbb63
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r12
 	movq %rdi, %rbx
@@ -686,14 +676,14 @@ _argparse_argparse_positional_loop:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb64
+	jz Lbb62
 	movq %r12, %rdi
 	movq %r13, %rsi
 	movq %rdi, %r12
 	callq _argparse_argparse_positional_loop
 	movq %rax, (%rbx)
-	jmp Lbb66
-Lbb64:
+	jmp Lbb64
+Lbb62:
 	callq _argparse_argparse_val_of
 	movq %r12, %rdi
 	movq %rax, %r12
@@ -708,10 +698,10 @@ Lbb64:
 	movq %rax, 16(%rsi)
 	callq _argparse_argparse_positional_loop
 	movq %rax, (%rbx)
-	jmp Lbb66
-Lbb65:
+	jmp Lbb64
+Lbb63:
 	movq %r13, %rax
-Lbb66:
+Lbb64:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14

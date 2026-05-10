@@ -1499,7 +1499,7 @@ _parsetoml_parsetoml_read_dq:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $40, %rsp
+	subq $24, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -1509,7 +1509,6 @@ _parsetoml_parsetoml_read_dq:
 	movq %rsi, %r15
 	movq %rdi, %r12
 	movq %rcx, %rdi
-	movq %rdi, -16(%rbp)
 	cmpq %r13, %r15
 	setge %al
 	movzbq %al, %rax
@@ -1523,7 +1522,7 @@ _parsetoml_parsetoml_read_dq:
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rbx, -32(%rbp)
+	movq %rbx, -16(%rbp)
 	cmpq $34, %rax
 	jz Lbb166
 	cmpq $92, %rax
@@ -1548,30 +1547,31 @@ _parsetoml_parsetoml_read_dq:
 	movq %r12, %rdi
 	movq %rax, %rcx
 	movq %rdx, %r15
+	movq %rdi, %r13
 	callq _parsetoml_parsetoml_read_dq
 	movq %rax, (%rbx)
 	jmp Lbb168
 Lbb140:
 	movq %r15, %r14
 	movq %rdx, %r15
-	movq %r12, %rdi
+	movq %r12, %r13
 	cmpq %r15, %rsi
 	setge %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %r12
-	movq %r12, -24(%rbp)
+	movq %r12, -8(%rbp)
 	cmpq $1, %rax
 	jz Lbb164
-	movq %rsi, %r13
-	movq %rdi, %r12
+	movq %rsi, %r12
+	movq %rdi, %rbx
+	movq %r13, %rdi
 	callq _donna_string_char_at
 	movq %r15, %rdx
-	movq %r13, %rsi
-	movq %r12, %rdi
-	movq -24(%rbp), %r12
-	movq %rdi, %r13
-	movq -16(%rbp), %rdi
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq -8(%rbp), %r12
+	movq -16(%rbp), %rbx
 	movq %r12, %r15
 	subq $16, %rsp
 	movq %rsp, %r12
@@ -1593,8 +1593,8 @@ Lbb140:
 	movq %r12, %rcx
 	movq %rbx, %rdi
 	movq %rax, %rsi
-	movq -24(%rbp), %r12
-	movq -32(%rbp), %rbx
+	movq -8(%rbp), %r12
+	movq -16(%rbp), %rbx
 	movq %rsi, (%rcx)
 	jmp Lbb163
 Lbb148:
@@ -1667,7 +1667,7 @@ Lbb167:
 	callq _parsetoml_parsetoml_Err
 Lbb168:
 	movq %rbp, %rsp
-	subq $80, %rsp
+	subq $64, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -1975,31 +1975,30 @@ _parsetoml_parsetoml_parse_inline_pairs:
 	pushq %r14
 	pushq %r15
 	movq %rcx, %r14
-	movq %rdx, %r15
-	movq %r14, -32(%rbp)
-	movq %r15, %rdx
+	movq %rdx, %r13
+	movq %r13, %rdx
 	movq %rdi, %rbx
 	callq _parsetoml_parsetoml_skip_ws
 	movq %rbx, %rdi
 	movq %rax, %rsi
-	cmpq %r15, %rsi
+	cmpq %r13, %rsi
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb210
+	jz Lbb211
 	movl $0, %r8d
 	movl $0, %ecx
-	movq %r15, %rdx
+	movq %r13, %rdx
 	movq %rsi, %r12
 	movq %rdi, %rbx
 	callq _parsetoml_parsetoml_scan_elem
 	movq %r12, %rsi
 	movq %rbx, %rdi
-	movq (%rax), %r12
-	movq %r12, -24(%rbp)
+	movq (%rax), %r15
+	movq %r15, -24(%rbp)
 	movq 8(%rax), %rcx
 	movq %rcx, -40(%rbp)
-	movq %r12, %rdx
+	movq %r15, %rdx
 	subq %rsi, %rdx
 	movq %rdi, %rbx
 	callq _donna_string_slice
@@ -2022,113 +2021,118 @@ _parsetoml_parsetoml_parse_inline_pairs:
 	callq _parsetoml_parsetoml_find_outside_str
 	movq %r12, %rsi
 	movq %rbx, %rdi
-	movq %rax, %r13
-	cmpq $-1, %r13
+	movq %rax, %r12
+	cmpq $-1, %r12
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rbx, -64(%rbp)
+	movq %rbx, -8(%rbp)
 	cmpq $1, %rax
-	jz Lbb209
-	movq %r13, %rdx
-	movq %rsi, %r14
+	jz Lbb210
+	movq %r12, %rdx
+	movq %rsi, %r15
 	movl $0, %esi
-	movq %rdi, %r12
-	movq %r14, %rdi
+	movq %rdi, %rbx
+	movq %r15, %rdi
 	callq _donna_string_slice
 	movq %rax, %rdi
 	callq _donna_string_trim
-	movq %r14, %rsi
-	movq %r12, %rdi
-	movq %rax, -48(%rbp)
+	movq %r15, %rsi
+	movq %rbx, %rdi
+	movq %rax, -32(%rbp)
+	movq -8(%rbp), %rbx
 	movq -16(%rbp), %rcx
-	movq -24(%rbp), %r12
-	movq -32(%rbp), %r14
+	movq -24(%rbp), %r15
 	movq %rsi, %rax
-	movq %r13, %rsi
+	movq %r12, %rsi
 	addq $1, %rsi
-	subq %r13, %rcx
+	subq %r12, %rcx
 	movq %rcx, %rdx
 	subq $1, %rdx
-	movq %rdi, %r13
+	movq %rdi, %r12
 	movq %rax, %rdi
 	callq _donna_string_slice
 	movq %rax, %rdi
 	callq _donna_string_trim
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_parse_value
-	movq %r15, %rsi
-	movq %r13, %rdi
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq -32(%rbp), %r12
 	movq -40(%rbp), %rcx
+	movq %r12, %r13
 	subq $16, %rsp
-	movq %rsp, %r13
-	movq %r13, -56(%rbp)
+	movq %rsp, %r12
+	movq %r12, -64(%rbp)
 	movq (%rax), %rdx
 	cmpq $1, %rdx
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb206
-	movq 8(%rax), %rbx
+	jnz Lbb208
+	movq %r13, %r12
+	movq 8(%rax), %rax
+	movq %rax, -48(%rbp)
 	subq $16, %rsp
 	movq %rsp, %rax
 	cmpq $1, %rcx
-	jz Lbb204
+	jz Lbb205
 	movq %rsi, (%rax)
 	movq %rsi, %r13
-	jmp Lbb205
-Lbb204:
+	movq %rsi, -56(%rbp)
+	jmp Lbb207
+Lbb205:
 	movq %rsi, %r13
-	movq %r12, %rsi
+	movq %r15, %rsi
 	addq $1, %rsi
 	movq %rsi, (%rax)
-Lbb205:
-	movq %rsi, %r12
+	movq %rsi, -56(%rbp)
+Lbb207:
 	movq %rdi, %r15
 	movl $16, %edi
 	callq _malloc
 	movq %r15, %rdi
 	movq %rax, %r15
 	movq -48(%rbp), %rax
-	movq %rax, (%r15)
-	movq %rbx, 8(%r15)
-	movq %rdi, %rbx
+	movq %r12, (%r15)
+	movq %rax, 8(%r15)
+	movq %rdi, %r12
 	movl $24, %edi
 	callq _malloc
-	movq %r12, %rsi
-	movq %rbx, %rdi
+	movq %r13, %rsi
+	movq %r12, %rdi
 	movq %rax, %rcx
-	movq -56(%rbp), %r12
-	movq -64(%rbp), %rbx
+	movq %rsi, %r13
+	movq -56(%rbp), %rsi
+	movq -64(%rbp), %r12
 	movq $1, (%rcx)
 	movq %r15, 8(%rcx)
 	movq %r14, 16(%rcx)
 	movq %r13, %rdx
 	callq _parsetoml_parsetoml_parse_inline_pairs
 	movq %rax, (%r12)
-	jmp Lbb208
-Lbb206:
-	movq %r13, %r12
+	jmp Lbb209
+Lbb208:
 	movq 8(%rax), %rdi
 	callq _parsetoml_parsetoml_Err
 	movq %rax, (%r12)
-Lbb208:
-	movq %rax, (%rbx)
-	jmp Lbb212
 Lbb209:
+	movq %rax, (%rbx)
+	jmp Lbb213
+Lbb210:
 	leaq _str695(%rip), %rdi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_Err
 	movq %rax, (%rbx)
-	jmp Lbb212
-Lbb210:
+	jmp Lbb213
+Lbb211:
 	movq %r14, %rdi
 	callq _donna_list_reverse
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_Ok
-Lbb212:
+Lbb213:
 	movq %rbp, %rsp
 	subq $112, %rsp
 	popq %r15
@@ -2153,7 +2157,7 @@ _parsetoml_parsetoml_parse_scalar:
 	callq _donna_string_equal
 	movq %rbx, %rdi
 	cmpq $1, %rax
-	jz Lbb217
+	jz Lbb218
 	leaq _str743(%rip), %rsi
 	movq %rdi, %rbx
 	callq _donna_string_equal
@@ -2161,23 +2165,23 @@ _parsetoml_parsetoml_parse_scalar:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb216
+	jz Lbb217
 	callq _parsetoml_parsetoml_parse_int
 	movq %rax, (%rbx)
-	jmp Lbb218
-Lbb216:
+	jmp Lbb219
+Lbb217:
 	movl $0, %edi
 	callq _parsetoml_parsetoml_TomlBool
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_Ok
 	movq %rax, (%rbx)
-	jmp Lbb218
-Lbb217:
+	jmp Lbb219
+Lbb218:
 	movl $1, %edi
 	callq _parsetoml_parsetoml_TomlBool
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_Ok
-Lbb218:
+Lbb219:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rbx
@@ -2203,7 +2207,7 @@ _parsetoml_parsetoml_parse_int:
 	movq %rbx, %rsi
 	movq %rax, %rbx
 	cmpq $0, %rbx
-	jz Lbb236
+	jz Lbb237
 	movq %rsi, %r13
 	movl $0, %esi
 	movq %r13, %rdi
@@ -2215,21 +2219,21 @@ _parsetoml_parsetoml_parse_int:
 	subq $16, %rsp
 	movq %rsp, %rax
 	cmpq $1, %r14
-	jz Lbb223
+	jz Lbb224
 	movq $0, (%rax)
 	movl $0, %esi
-	jmp Lbb225
-Lbb223:
+	jmp Lbb226
+Lbb224:
 	movq $1, (%rax)
 	movl $1, %esi
-Lbb225:
+Lbb226:
 	cmpq %rdx, %rsi
 	setge %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb234
+	jz Lbb235
 	movq %rdx, %r15
 	movq %rsi, %r12
 	movq %r13, %rdi
@@ -2239,52 +2243,52 @@ Lbb225:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $0, %rax
-	jz Lbb231
+	jz Lbb232
 	movl $0, %ecx
 	movq %r13, %rdi
 	callq _parsetoml_parsetoml_parse_digits
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %r14
-	jz Lbb229
+	jz Lbb230
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_TomlInt
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_Ok
 	movq %rax, (%r13)
-	jmp Lbb230
-Lbb229:
+	jmp Lbb231
+Lbb230:
 	movl $0, %edi
 	subq %rax, %rdi
 	callq _parsetoml_parsetoml_TomlInt
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_Ok
 	movq %rax, (%r13)
-Lbb230:
-	movq %rax, (%r12)
-	jmp Lbb233
 Lbb231:
+	movq %rax, (%r12)
+	jmp Lbb234
+Lbb232:
 	movq %r13, %rsi
 	leaq _str786(%rip), %rdi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_Err
 	movq %rax, (%r12)
-Lbb233:
-	movq %rax, (%rbx)
-	jmp Lbb237
 Lbb234:
+	movq %rax, (%rbx)
+	jmp Lbb238
+Lbb235:
 	movq %r13, %rsi
 	leaq _str777(%rip), %rdi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_Err
 	movq %rax, (%rbx)
-	jmp Lbb237
-Lbb236:
+	jmp Lbb238
+Lbb237:
 	leaq _str761(%rip), %rdi
 	callq _parsetoml_parsetoml_Err
-Lbb237:
+Lbb238:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -2321,7 +2325,7 @@ _parsetoml_parsetoml_fold_entries:
 	movq %rsi, %rax
 	movq (%rdi), %rcx
 	cmpq $0, %rcx
-	jz Lbb242
+	jz Lbb243
 	movq 8(%rdi), %rcx
 	movq 16(%rdi), %rdi
 	movq (%rcx), %rsi
@@ -2332,7 +2336,7 @@ _parsetoml_parsetoml_fold_entries:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq _parsetoml_parsetoml_fold_entries
-Lbb242:
+Lbb243:
 	popq %rbx
 	leave
 	ret
@@ -2351,20 +2355,20 @@ _parsetoml_parsetoml_set_nested:
 	movq %rdi, %rax
 	movq (%rsi), %rcx
 	cmpq $0, %rcx
-	jz Lbb258
+	jz Lbb259
 	cmpq $1, %rcx
 	setz %dil
 	movzbq %dil, %rdi
 	subq $16, %rsp
 	movq %rsp, %rcx
 	cmpl $0, %edi
-	jnz Lbb247
+	jnz Lbb248
 	movq $0, (%rcx)
 	movq %rdx, %r14
 	movq %rax, %rbx
 	movl $0, %eax
-	jmp Lbb248
-Lbb247:
+	jmp Lbb249
+Lbb248:
 	movq %rdx, %r14
 	movq 16(%rsi), %rdx
 	movq (%rdx), %rdx
@@ -2374,9 +2378,9 @@ Lbb247:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rcx)
-Lbb248:
+Lbb249:
 	cmpl $0, %eax
-	jnz Lbb256
+	jnz Lbb257
 	movq 8(%rsi), %r12
 	movq 16(%rsi), %rsi
 	movq %rsi, %r13
@@ -2391,19 +2395,19 @@ Lbb248:
 	movq %rsp, %rcx
 	movq (%rdi), %r8
 	cmpq $1, %r8
-	jz Lbb252
+	jz Lbb253
 	movq 8(%rdi), %rdi
 	movq %rdi, (%rcx)
 	movq %rax, %rbx
-	jmp Lbb255
-Lbb252:
+	jmp Lbb256
+Lbb253:
 	movq %rcx, %rdi
 	leaq _donna_nil(%rip), %rcx
 	movq %rcx, (%rdi)
 	movq %rax, %rbx
 	leaq _donna_nil(%rip), %rax
 	movq %rax, %rdi
-Lbb255:
+Lbb256:
 	callq _parsetoml_parsetoml_set_nested
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_TomlTable
@@ -2412,14 +2416,14 @@ Lbb255:
 	movq %rbx, %rax
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_upsert
-	jmp Lbb258
-Lbb256:
+	jmp Lbb259
+Lbb257:
 	movq %r14, %rdx
 	movq %rbx, %rax
 	movq 8(%rsi), %rsi
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_upsert
-Lbb258:
+Lbb259:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14
@@ -2458,7 +2462,7 @@ _parsetoml_parsetoml_upsert_loop:
 	movq %rdx, %r15
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb266
+	jz Lbb267
 	movq 8(%rdi), %r14
 	movq 16(%rdi), %r12
 	movq (%r14), %rdi
@@ -2469,7 +2473,7 @@ _parsetoml_parsetoml_upsert_loop:
 	movq %rsp, %rax
 	movq %rax, -16(%rbp)
 	cmpq $1, %rcx
-	jz Lbb264
+	jz Lbb265
 	movl $24, %edi
 	callq _malloc
 	movq %r15, %rdx
@@ -2484,8 +2488,8 @@ _parsetoml_parsetoml_upsert_loop:
 	movq %r12, %rdi
 	callq _parsetoml_parsetoml_upsert_loop
 	movq %rax, (%rbx)
-	jmp Lbb268
-Lbb264:
+	jmp Lbb269
+Lbb265:
 	movq %r13, %rcx
 	movq %rbx, %r14
 	movq %rax, %rbx
@@ -2511,8 +2515,8 @@ Lbb264:
 	movq %r12, 16(%rsi)
 	callq _donna_list_append
 	movq %rax, (%rbx)
-	jmp Lbb268
-Lbb266:
+	jmp Lbb269
+Lbb267:
 	movq %r13, %r12
 	movq %r15, %r13
 	movq %rsi, %rbx
@@ -2531,7 +2535,7 @@ Lbb266:
 	movq %rbx, 8(%rdi)
 	movq %rcx, 16(%rdi)
 	callq _donna_list_reverse
-Lbb268:
+Lbb269:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -2555,7 +2559,7 @@ _parsetoml_parsetoml_get_sub_pairs:
 	pushq %r13
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb276
+	jz Lbb277
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq %rdi, %rbx
@@ -2568,30 +2572,30 @@ _parsetoml_parsetoml_get_sub_pairs:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb272
+	jz Lbb273
 	callq _parsetoml_parsetoml_get_sub_pairs
 	movq %rax, (%rbx)
-	jmp Lbb277
-Lbb272:
+	jmp Lbb278
+Lbb273:
 	subq $16, %rsp
 	movq %rsp, %r12
 	movq (%r13), %rax
 	cmpq $4, %rax
-	jz Lbb274
+	jz Lbb275
 	leaq _parsetoml_parsetoml_NoPairs(%rip), %rax
 	movq %rax, (%r12)
 	leaq _parsetoml_parsetoml_NoPairs(%rip), %rax
-	jmp Lbb275
-Lbb274:
+	jmp Lbb276
+Lbb275:
 	movq 8(%r13), %rdi
 	callq _parsetoml_parsetoml_GotPairs
 	movq %rax, (%r12)
-Lbb275:
-	movq %rax, (%rbx)
-	jmp Lbb277
 Lbb276:
-	leaq _parsetoml_parsetoml_NoPairs(%rip), %rax
+	movq %rax, (%rbx)
+	jmp Lbb278
 Lbb277:
+	leaq _parsetoml_parsetoml_NoPairs(%rip), %rax
+Lbb278:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r13
@@ -2609,13 +2613,13 @@ _parsetoml_parsetoml_table_lookup:
 	movq %rsp, %rbp
 	movq (%rdi), %rax
 	cmpq $4, %rax
-	jz Lbb280
+	jz Lbb281
 	leaq _parsetoml_parsetoml_NotFound(%rip), %rax
-	jmp Lbb281
-Lbb280:
+	jmp Lbb282
+Lbb281:
 	movq 8(%rdi), %rdi
 	callq _parsetoml_parsetoml_lookup_pairs
-Lbb281:
+Lbb282:
 	leave
 	ret
 /* end function parsetoml_parsetoml_table_lookup */
@@ -2632,7 +2636,7 @@ _parsetoml_parsetoml_lookup_pairs:
 	pushq %r13
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb287
+	jz Lbb288
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq %rdi, %rbx
@@ -2645,18 +2649,18 @@ _parsetoml_parsetoml_lookup_pairs:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb285
+	jz Lbb286
 	callq _parsetoml_parsetoml_lookup_pairs
 	movq %rax, (%rbx)
-	jmp Lbb288
-Lbb285:
+	jmp Lbb289
+Lbb286:
 	movq %r12, %rdi
 	callq _parsetoml_parsetoml_Found
 	movq %rax, (%rbx)
-	jmp Lbb288
-Lbb287:
-	leaq _parsetoml_parsetoml_NotFound(%rip), %rax
+	jmp Lbb289
 Lbb288:
+	leaq _parsetoml_parsetoml_NotFound(%rip), %rax
+Lbb289:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r13
@@ -2694,7 +2698,7 @@ _parsetoml_parsetoml_skip_ws:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb295
+	jz Lbb296
 	movq %rbx, %rsi
 	movq %rdi, %r12
 	callq _donna_string_char_at
@@ -2716,18 +2720,18 @@ _parsetoml_parsetoml_skip_ws:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rcx
-	jz Lbb294
+	jz Lbb295
 	movq %rax, (%rbx)
-	jmp Lbb296
-Lbb294:
+	jmp Lbb297
+Lbb295:
 	movq %rax, %rsi
 	addq $1, %rsi
 	callq _parsetoml_parsetoml_skip_ws
 	movq %rax, (%rbx)
-	jmp Lbb296
-Lbb295:
-	movq %rbx, %rax
+	jmp Lbb297
 Lbb296:
+	movq %rbx, %rax
+Lbb297:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r13
@@ -2769,7 +2773,7 @@ _parsetoml_parsetoml_fos_loop:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb318
+	jz Lbb319
 	movq %rsi, %r13
 	movq %rbx, %rsi
 	movq %rdi, %r12
@@ -2791,42 +2795,42 @@ _parsetoml_parsetoml_fos_loop:
 	movq %rax, %rdx
 	addq $1, %rdx
 	cmpl $0, %r10d
-	jnz Lbb310
+	jnz Lbb311
 	cmpq %r9, %rsi
 	setz %r8b
 	movzbq %r8b, %r8
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %r8
-	jz Lbb308
+	jz Lbb309
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $34, %r9
-	jz Lbb306
+	jz Lbb307
 	cmpq $39, %r9
-	jz Lbb305
+	jz Lbb306
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_fos_loop
 	movq %rax, (%r13)
-	jmp Lbb307
-Lbb305:
+	jmp Lbb308
+Lbb306:
 	movl $39, %r8d
 	callq _parsetoml_parsetoml_fos_loop
 	movq %rax, (%r13)
-	jmp Lbb307
-Lbb306:
+	jmp Lbb308
+Lbb307:
 	movl $34, %r8d
 	callq _parsetoml_parsetoml_fos_loop
 	movq %rax, (%r13)
-Lbb307:
-	movq %rax, (%r12)
-	jmp Lbb309
 Lbb308:
 	movq %rax, (%r12)
+	jmp Lbb310
 Lbb309:
-	movq %rax, (%rbx)
-	jmp Lbb319
+	movq %rax, (%r12)
 Lbb310:
+	movq %rax, (%rbx)
+	jmp Lbb320
+Lbb311:
 	cmpq $92, %r9
 	setz %r10b
 	movzbq %r10b, %r10
@@ -2837,7 +2841,7 @@ Lbb310:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %r10
-	jz Lbb316
+	jz Lbb317
 	movq %r9, %rax
 	cmpq %rax, %r8
 	setz %al
@@ -2845,28 +2849,28 @@ Lbb310:
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz Lbb314
+	jz Lbb315
 	callq _parsetoml_parsetoml_fos_loop
 	movq %rax, (%r13)
-	jmp Lbb315
-Lbb314:
+	jmp Lbb316
+Lbb315:
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_fos_loop
 	movq %rax, (%r13)
-Lbb315:
-	movq %rax, (%r12)
-	jmp Lbb317
 Lbb316:
+	movq %rax, (%r12)
+	jmp Lbb318
+Lbb317:
 	movq %rax, %rdx
 	addq $2, %rdx
 	callq _parsetoml_parsetoml_fos_loop
 	movq %rax, (%r12)
-Lbb317:
-	movq %rax, (%rbx)
-	jmp Lbb319
 Lbb318:
-	movq $-1, %rax
+	movq %rax, (%rbx)
+	jmp Lbb320
 Lbb319:
+	movq $-1, %rax
+Lbb320:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -2895,7 +2899,7 @@ _parsetoml_parsetoml_find_char:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb324
+	jz Lbb325
 	movq %rsi, %r13
 	movq %rbx, %rsi
 	movq %rdi, %r12
@@ -2911,18 +2915,18 @@ _parsetoml_parsetoml_find_char:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rdx
-	jz Lbb323
+	jz Lbb324
 	movq %rax, %rdx
 	addq $1, %rdx
 	callq _parsetoml_parsetoml_find_char
 	movq %rax, (%rbx)
-	jmp Lbb325
-Lbb323:
-	movq %rax, (%rbx)
-	jmp Lbb325
+	jmp Lbb326
 Lbb324:
-	movq $-1, %rax
+	movq %rax, (%rbx)
+	jmp Lbb326
 Lbb325:
+	movq $-1, %rax
+Lbb326:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14
@@ -2952,7 +2956,7 @@ _parsetoml_parsetoml_scan_elem:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb360
+	jz Lbb361
 	movq %rsi, %r12
 	movq %rdi, %rbx
 	callq _donna_string_char_at
@@ -2972,96 +2976,96 @@ _parsetoml_parsetoml_scan_elem:
 	movq %rsi, %r14
 	addq $1, %rsi
 	cmpl $0, %r9d
-	jnz Lbb351
+	jnz Lbb352
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $34, %rax
-	jz Lbb349
+	jz Lbb350
 	cmpq $39, %rax
-	jz Lbb348
+	jz Lbb349
 	cmpq $91, %rax
 	setz %r8b
 	movzbq %r8b, %r8
 	movq %rcx, %r9
 	addq $1, %r9
 	cmpl $0, %r8d
-	jnz Lbb346
+	jnz Lbb347
 	cmpq $123, %rax
-	jz Lbb344
+	jz Lbb345
 	cmpq $93, %rax
 	setz %r8b
 	movzbq %r8b, %r8
 	movq %rcx, %r9
 	subq $1, %r9
 	cmpl $0, %r8d
-	jnz Lbb342
+	jnz Lbb343
 	cmpq $125, %rax
-	jz Lbb340
+	jz Lbb341
 	cmpq $44, %rax
-	jz Lbb336
+	jz Lbb337
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r12)
-	jmp Lbb350
-Lbb336:
+	jmp Lbb351
+Lbb337:
 	cmpq $0, %rcx
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz Lbb338
+	jz Lbb339
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r13)
-	jmp Lbb339
-Lbb338:
+	jmp Lbb340
+Lbb339:
 	movl $16, %edi
 	callq _malloc
 	movq %r14, %rsi
 	movq %rsi, (%rax)
 	movq $1, 8(%rax)
 	movq %rax, (%r13)
-Lbb339:
-	movq %rax, (%r12)
-	jmp Lbb350
 Lbb340:
+	movq %rax, (%r12)
+	jmp Lbb351
+Lbb341:
 	movq %r9, %rcx
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r12)
-	jmp Lbb350
-Lbb342:
+	jmp Lbb351
+Lbb343:
 	movq %r9, %rcx
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r12)
-	jmp Lbb350
-Lbb344:
+	jmp Lbb351
+Lbb345:
 	movq %r9, %rcx
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r12)
-	jmp Lbb350
-Lbb346:
+	jmp Lbb351
+Lbb347:
 	movq %r9, %rcx
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r12)
-	jmp Lbb350
-Lbb348:
+	jmp Lbb351
+Lbb349:
 	movl $39, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r12)
-	jmp Lbb350
-Lbb349:
+	jmp Lbb351
+Lbb350:
 	movl $34, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r12)
-Lbb350:
-	movq %rax, (%rbx)
-	jmp Lbb362
 Lbb351:
+	movq %rax, (%rbx)
+	jmp Lbb363
+Lbb352:
 	movq %r14, %r13
 	cmpq $92, %rax
 	setz %r9b
@@ -3073,40 +3077,40 @@ Lbb351:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %r9
-	jz Lbb357
+	jz Lbb358
 	cmpq %rax, %r8
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz Lbb355
+	jz Lbb356
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r13)
-	jmp Lbb356
-Lbb355:
+	jmp Lbb357
+Lbb356:
 	movl $0, %r8d
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r13)
-Lbb356:
-	movq %rax, (%r12)
-	jmp Lbb359
 Lbb357:
+	movq %rax, (%r12)
+	jmp Lbb360
+Lbb358:
 	movq %r13, %rsi
 	addq $2, %rsi
 	callq _parsetoml_parsetoml_scan_elem
 	movq %rax, (%r12)
-Lbb359:
-	movq %rax, (%rbx)
-	jmp Lbb362
 Lbb360:
+	movq %rax, (%rbx)
+	jmp Lbb363
+Lbb361:
 	movq %r13, %rbx
 	movl $16, %edi
 	callq _malloc
 	movq %rbx, %rdx
 	movq %rdx, (%rax)
 	movq $0, 8(%rax)
-Lbb362:
+Lbb363:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -3156,7 +3160,7 @@ _parsetoml_parsetoml_sc_loop:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb387
+	jz Lbb388
 	movq %rsi, %r12
 	movq %rbx, %rdi
 	callq _donna_string_char_at
@@ -3176,24 +3180,24 @@ _parsetoml_parsetoml_sc_loop:
 	movq %rsi, %r8
 	addq $1, %r8
 	cmpl $0, %r9d
-	jnz Lbb379
+	jnz Lbb380
 	movq %rdi, %rcx
 	movq %r8, %rdi
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $34, %rcx
-	jz Lbb376
+	jz Lbb377
 	cmpq $39, %rcx
-	jz Lbb374
+	jz Lbb375
 	cmpq $35, %rcx
-	jz Lbb373
+	jz Lbb374
 	movq %rdi, %rsi
 	movl $0, %ecx
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_sc_loop
 	movq %rax, (%r12)
-	jmp Lbb378
-Lbb373:
+	jmp Lbb379
+Lbb374:
 	movq %rsi, %rdx
 	movl $0, %esi
 	movq %rax, %rdi
@@ -3201,25 +3205,25 @@ Lbb373:
 	movq %rax, %rdi
 	callq _donna_string_trim
 	movq %rax, (%r12)
-	jmp Lbb378
-Lbb374:
+	jmp Lbb379
+Lbb375:
 	movq %rdi, %rsi
 	movl $39, %ecx
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_sc_loop
 	movq %rax, (%r12)
-	jmp Lbb378
-Lbb376:
+	jmp Lbb379
+Lbb377:
 	movq %rdi, %rsi
 	movl $34, %ecx
 	movq %rsi, %r8
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_sc_loop
 	movq %rax, (%r12)
-Lbb378:
-	movq %rax, (%rbx)
-	jmp Lbb388
 Lbb379:
+	movq %rax, (%rbx)
+	jmp Lbb389
+Lbb380:
 	cmpq $92, %rdi
 	setz %r9b
 	movzbq %r9b, %r9
@@ -3230,7 +3234,7 @@ Lbb379:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %r9
-	jz Lbb385
+	jz Lbb386
 	movq %r8, %rsi
 	cmpq %rdi, %rcx
 	setz %dil
@@ -3238,30 +3242,30 @@ Lbb379:
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rdi
-	jz Lbb383
+	jz Lbb384
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_sc_loop
 	movq %rax, (%r13)
-	jmp Lbb384
-Lbb383:
+	jmp Lbb385
+Lbb384:
 	movl $0, %ecx
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_sc_loop
 	movq %rax, (%r13)
-Lbb384:
-	movq %rax, (%r12)
-	jmp Lbb386
 Lbb385:
+	movq %rax, (%r12)
+	jmp Lbb387
+Lbb386:
 	addq $2, %rsi
 	movq %rax, %rdi
 	callq _parsetoml_parsetoml_sc_loop
 	movq %rax, (%r12)
-Lbb386:
-	movq %rax, (%rbx)
-	jmp Lbb388
 Lbb387:
-	movq %rbx, %rax
+	movq %rax, (%rbx)
+	jmp Lbb389
 Lbb388:
+	movq %rbx, %rax
+Lbb389:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14
@@ -3287,7 +3291,7 @@ _parsetoml_parsetoml_all_digits:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb394
+	jz Lbb395
 	movq %rsi, %r12
 	movq %rdi, %rbx
 	callq _donna_string_char_at
@@ -3305,18 +3309,18 @@ _parsetoml_parsetoml_all_digits:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb393
+	jz Lbb394
 	movq $0, (%rbx)
 	movl $0, %eax
-	jmp Lbb395
-Lbb393:
+	jmp Lbb396
+Lbb394:
 	addq $1, %rsi
 	callq _parsetoml_parsetoml_all_digits
 	movq %rax, (%rbx)
-	jmp Lbb395
-Lbb394:
-	movl $1, %eax
+	jmp Lbb396
 Lbb395:
+	movl $1, %eax
+Lbb396:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r13
@@ -3343,7 +3347,7 @@ _parsetoml_parsetoml_parse_digits:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb401
+	jz Lbb402
 	movq %rsi, %r13
 	movq %rdi, %rbx
 	callq _donna_string_char_at
@@ -3360,11 +3364,11 @@ _parsetoml_parsetoml_parse_digits:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rcx
-	jz Lbb400
+	jz Lbb401
 	movq %r12, (%rbx)
 	movq %r12, %rax
-	jmp Lbb402
-Lbb400:
+	jmp Lbb403
+Lbb401:
 	addq $1, %rsi
 	imulq $10, %r12, %rcx
 	addq %rcx, %rax
@@ -3372,10 +3376,10 @@ Lbb400:
 	subq $48, %rcx
 	callq _parsetoml_parsetoml_parse_digits
 	movq %rax, (%rbx)
-	jmp Lbb402
-Lbb401:
-	movq %r12, %rax
+	jmp Lbb403
 Lbb402:
+	movq %r12, %rax
+Lbb403:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14

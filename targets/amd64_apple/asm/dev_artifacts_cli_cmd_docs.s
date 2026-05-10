@@ -186,44 +186,45 @@ _cli_cmd_docs_run:
 	movq %rax, %r12
 	callq _donna_time_now_us
 	movq %r14, %rdi
-	movq %rax, -16(%rbp)
+	movq %rax, -8(%rbp)
 	movq %rdi, %r14
 	movq %r12, %rdi
 	callq _donna_files_mkdir
 	movq %r15, %rsi
 	movq %r14, %rdi
-	movq %rsi, %r15
+	movq %rsi, %r14
 	leaq _donna_nil(%rip), %rsi
-	movq %rdi, %r14
-	movq %r15, %rdi
+	movq %rdi, %r15
+	movq %r14, %rdi
 	callq _cli_cmd_docs_find_donna_files
-	movq %r15, %rsi
+	movq %r14, %rsi
 	movq %rax, %rdi
+	movq -8(%rbp), %r14
 	leaq _donna_nil(%rip), %rdx
 	callq _cli_cmd_docs_extract_modules
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq %r15, %rdi
+	movq %rax, %r15
 	callq _cli_cmd_docs_read_readme
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r13
 	callq _tools_docgen_render_render_index
-	movq %r14, %rsi
-	movq %r13, %rdi
-	movq %rax, %r14
-	movq %rdi, %r13
-	callq _tools_docgen_render_render_docs
-	movq %r14, %rsi
+	movq %r15, %rsi
 	movq %r13, %rdi
 	movq %rax, %r15
-	movq %rsi, %r14
+	movq %rdi, %r13
+	callq _tools_docgen_render_render_docs
+	movq %r15, %rsi
+	movq %r13, %rdi
+	movq %rax, -16(%rbp)
+	movq %rsi, %r15
 	leaq _str36(%rip), %rsi
 	movq %rdi, %r13
 	movq %r12, %rdi
 	callq _donna_files_join
-	movq %r14, %rsi
+	movq %r15, %rsi
 	movq %rax, %rdi
-	movq -16(%rbp), %r14
+	movq -16(%rbp), %r15
 	callq _donna_files_write
 	movq %r15, %rsi
 	movq %r13, %rdi

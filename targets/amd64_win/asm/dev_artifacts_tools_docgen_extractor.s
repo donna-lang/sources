@@ -561,71 +561,71 @@ tools_docgen_extractor_extract_types:
 	movq %rcx, %rbx
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb34
+	jz Lbb32
 	movq 8(%rax), %rcx
-	movq 16(%rax), %rsi
+	movq 16(%rax), %r12
 	subq $16, %rsp
-	movq %rsp, %rax
-	movq %rax, -32(%rbp)
-	movq 8(%rcx), %rdi
-	movq %rdi, -24(%rbp)
-	movq 16(%rcx), %r12
+	movq %rsp, %rsi
+	movq %rsi, -16(%rbp)
+	movq %rsi, %rax
+	movq 8(%rcx), %rsi
+	movq 16(%rcx), %r13
 	movq 24(%rcx), %r15
-	movq 32(%rcx), %r13
-	movq %r13, -16(%rbp)
+	movq 32(%rcx), %r8
+	movq %r8, -32(%rbp)
 	movq 40(%rcx), %rdi
 	movq %rdi, -8(%rbp)
 	movq 48(%rcx), %rcx
 	subq $16, %rsp
 	movq %rsp, %rdi
-	cmpq $0, %r12
-	jz Lbb31
+	cmpq $0, %r13
+	jz Lbb29
 	subq $32, %rsp
 	callq tools_docgen_extractor_span_line
+	movq %rsi, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
+	movq %rcx, %rsi
 	movq %r14, %rcx
 	callq tools_docgen_extractor_find_doc
 	movq %r15, %r9
-	movq %r13, %r8
-	movq %r12, %rdx
-	movq %rax, %r13
-	movq -32(%rbp), %r12
+	movq %r13, %rdx
+	movq %rsi, %rcx
+	movq -16(%rbp), %r15
+	movq %rcx, %rsi
 	movq -8(%rbp), %rcx
-	movq %rcx, %rax
-	movq -24(%rbp), %rcx
+	movq -32(%rbp), %r8
+	movq %rax, -24(%rbp)
 	subq $-32, %rsp
 	subq $16, %rsp
-	movq %rsp, %r15
+	movq %rsp, %r13
 	cmpq $1, %r9
-	jz Lbb27
-	movq %rax, %rcx
+	jz Lbb26
 	subq $32, %rsp
 	leaq donna_nil(%rip), %r8
-	movq %rdx, %r12
+	movq %rdx, %r15
 	movq %r14, %rdx
 	callq tools_docgen_extractor_extract_ctors
-	movq %r12, %rdx
+	movq %r15, %rdx
 	movq %rsi, %rcx
 	movq %rax, %r9
-	movq -32(%rbp), %rsi
-	movq -16(%rbp), %r8
-	movq %rcx, %r12
-	movq -24(%rbp), %rcx
+	movq -16(%rbp), %rsi
+	movq -24(%rbp), %rax
+	movq -32(%rbp), %r8
 	subq $-32, %rsp
-	movq %r9, (%r15)
-	jmp Lbb30
-Lbb27:
-	xchgq %r12, %rsi
-	leaq donna_nil(%rip), %rax
-	movq %rax, (%r15)
-	leaq donna_nil(%rip), %rax
-	movq %rax, %r9
-Lbb30:
+	movq %r9, (%r13)
+	jmp Lbb28
+Lbb26:
+	movq %rsi, %rcx
+	movq %r15, %rsi
+	leaq donna_nil(%rip), %r9
+	movq %r9, (%r13)
+	leaq donna_nil(%rip), %r9
+Lbb28:
 	subq $48, %rsp
-	movq %rsp, %rax
-	movq %r13, 32(%rax)
+	movq %rsp, %r10
+	movq %rax, 32(%r10)
 	callq tools_docgen_extractor_DocType
 	movq %r12, %rcx
 	movq %rax, %r12
@@ -645,25 +645,25 @@ Lbb30:
 	callq tools_docgen_extractor_extract_types
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb33
-Lbb31:
-	movq %rsi, %rcx
+	jmp Lbb31
+Lbb29:
 	movq %rax, %rsi
+	movq %r12, %rcx
 	movq %r14, %rdx
 	subq $32, %rsp
 	movq %rbx, %r8
 	callq tools_docgen_extractor_extract_types
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb33:
+Lbb31:
 	movq %rax, (%rsi)
-	jmp Lbb36
-Lbb34:
+	jmp Lbb34
+Lbb32:
 	movq %rbx, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb36:
+Lbb34:
 	movq %rbp, %rsp
 	subq $96, %rsp
 	popq %rdi
@@ -695,7 +695,7 @@ tools_docgen_extractor_extract_ctors:
 	movq %rdx, %r13
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb39
+	jz Lbb37
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rbx
 	subq $16, %rsp
@@ -745,13 +745,13 @@ tools_docgen_extractor_extract_ctors:
 	callq tools_docgen_extractor_extract_ctors
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb41
-Lbb39:
+	jmp Lbb39
+Lbb37:
 	movq %rdi, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb41:
+Lbb39:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %rdi
@@ -784,14 +784,14 @@ tools_docgen_extractor_extract_regular_fns:
 	movq %rcx, %rbx
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb52
+	jz Lbb50
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rdi
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb46
+	jz Lbb44
 	movq %rdi, %rcx
 	subq $32, %rsp
 	movq %rbx, %r8
@@ -800,8 +800,8 @@ tools_docgen_extractor_extract_regular_fns:
 	callq tools_docgen_extractor_extract_regular_fns
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb54
-Lbb46:
+	jmp Lbb52
+Lbb44:
 	movq %rdi, %r12
 	movq %rdx, %r14
 	movq 8(%rcx), %r13
@@ -813,7 +813,7 @@ Lbb46:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $0, %rax
-	jz Lbb49
+	jz Lbb47
 	subq $32, %rsp
 	callq tools_docgen_extractor_span_line
 	movq %r13, %rcx
@@ -862,8 +862,8 @@ Lbb46:
 	callq tools_docgen_extractor_extract_regular_fns
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb51
-Lbb49:
+	jmp Lbb49
+Lbb47:
 	movq %r12, %rcx
 	movq %r14, %rdx
 	subq $32, %rsp
@@ -871,15 +871,15 @@ Lbb49:
 	callq tools_docgen_extractor_extract_regular_fns
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb51:
+Lbb49:
 	movq %rax, (%rsi)
-	jmp Lbb54
-Lbb52:
+	jmp Lbb52
+Lbb50:
 	movq %rbx, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb54:
+Lbb52:
 	movq %rbp, %rsp
 	subq $80, %rsp
 	popq %rdi
@@ -913,14 +913,14 @@ tools_docgen_extractor_extract_external_fns:
 	movq %rcx, %rbx
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb64
+	jz Lbb62
 	movq 8(%rax), %rcx
 	movq 16(%rax), %r12
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb62
+	jz Lbb60
 	movq 8(%rcx), %r13
 	movq 16(%rcx), %rax
 	movq 24(%rcx), %r15
@@ -930,7 +930,7 @@ tools_docgen_extractor_extract_external_fns:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $0, %rax
-	jz Lbb59
+	jz Lbb57
 	subq $32, %rsp
 	callq tools_docgen_extractor_span_line
 	movq %r13, %rcx
@@ -986,8 +986,8 @@ tools_docgen_extractor_extract_external_fns:
 	callq tools_docgen_extractor_extract_external_fns
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb61
-Lbb59:
+	jmp Lbb59
+Lbb57:
 	movq %r12, %rcx
 	movq %r14, %rdx
 	subq $32, %rsp
@@ -995,10 +995,10 @@ Lbb59:
 	callq tools_docgen_extractor_extract_external_fns
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb61:
+Lbb59:
 	movq %rax, (%rsi)
-	jmp Lbb66
-Lbb62:
+	jmp Lbb64
+Lbb60:
 	movq %r12, %rcx
 	movq %rbx, %rdi
 	movq %r14, %rdx
@@ -1007,13 +1007,13 @@ Lbb62:
 	callq tools_docgen_extractor_extract_external_fns
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb66
-Lbb64:
+	jmp Lbb64
+Lbb62:
 	movq %rbx, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb66:
+Lbb64:
 	movq %rbp, %rsp
 	subq $80, %rsp
 	popq %rdi
@@ -1047,11 +1047,12 @@ tools_docgen_extractor_extract_consts:
 	movq %rcx, %rbx
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb78
+	jz Lbb76
 	movq 8(%rax), %rcx
 	movq 16(%rax), %r12
 	subq $16, %rsp
 	movq %rsp, %rsi
+	movq %rsi, -16(%rbp)
 	movq 8(%rcx), %r14
 	movq 16(%rcx), %rax
 	movq 24(%rcx), %r13
@@ -1059,7 +1060,7 @@ tools_docgen_extractor_extract_consts:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $0, %rax
-	jz Lbb75
+	jz Lbb73
 	subq $32, %rsp
 	callq tools_docgen_extractor_span_line
 	movq %r14, %rcx
@@ -1071,34 +1072,35 @@ tools_docgen_extractor_extract_consts:
 	callq tools_docgen_extractor_find_doc
 	movq %r15, %rdx
 	movq %r14, %rcx
-	movq %rax, %r9
+	movq %rax, %r15
 	movq %r13, %rax
-	movq %r9, -16(%rbp)
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %r13
-	movq %rdx, %r15
+	movq %rdx, %r14
 	movq (%rax), %rdx
 	cmpq $0, %rdx
-	jz Lbb71
-	movq %rcx, %r14
+	jz Lbb69
+	movq %rcx, %rsi
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq tools_fmt_formatter_format_type_ann
-	movq %r15, %rdx
-	movq %r14, %rcx
+	movq %r15, %r9
+	movq %r14, %rdx
+	movq %rsi, %rcx
 	movq %rax, %r8
-	movq -16(%rbp), %r9
+	movq -16(%rbp), %rsi
 	subq $-32, %rsp
 	movq %r8, (%r13)
-	jmp Lbb74
-Lbb71:
-	movq %r15, %rdx
+	jmp Lbb72
+Lbb69:
+	movq %r15, %r9
+	movq %r14, %rdx
 	leaq str322(%rip), %rax
 	movq %rax, (%r13)
 	leaq str322(%rip), %rax
 	movq %rax, %r8
-Lbb74:
+Lbb72:
 	subq $32, %rsp
 	movq %rdx, %r14
 	movl $1, %edx
@@ -1121,8 +1123,8 @@ Lbb74:
 	callq tools_docgen_extractor_extract_consts
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb77
-Lbb75:
+	jmp Lbb75
+Lbb73:
 	movq %r12, %rcx
 	movq %r15, %rdx
 	subq $32, %rsp
@@ -1130,15 +1132,15 @@ Lbb75:
 	callq tools_docgen_extractor_extract_consts
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb77:
+Lbb75:
 	movq %rax, (%rsi)
-	jmp Lbb80
-Lbb78:
+	jmp Lbb78
+Lbb76:
 	movq %rbx, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb80:
+Lbb78:
 	movq %rbp, %rsp
 	subq $80, %rsp
 	popq %rdi
@@ -1188,7 +1190,7 @@ tools_docgen_extractor_render_fn_sig:
 	movq %rsp, %rbx
 	movq (%r9), %rax
 	cmpq $0, %rax
-	jz Lbb84
+	jz Lbb82
 	movq %rcx, %rsi
 	movq 8(%r9), %rcx
 	subq $32, %rsp
@@ -1205,15 +1207,15 @@ tools_docgen_extractor_render_fn_sig:
 	movq %rax, %rsi
 	subq $-32, %rsp
 	movq %rsi, (%rbx)
-	jmp Lbb87
-Lbb84:
+	jmp Lbb85
+Lbb82:
 	movq %rbx, %rsi
 	movq %r12, %rdx
 	leaq str352(%rip), %rax
 	movq %rax, (%rsi)
 	leaq str352(%rip), %rax
 	movq %rax, %rsi
-Lbb87:
+Lbb85:
 	subq $32, %rsp
 	movq %rdx, %rbx
 	leaq str359(%rip), %rdx
@@ -1271,7 +1273,7 @@ tools_docgen_extractor_render_params:
 	movq %rdx, %rsi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb99
+	jz Lbb97
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	subq $16, %rsp
@@ -1283,12 +1285,12 @@ tools_docgen_extractor_render_params:
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpl $0, %r8d
-	jnz Lbb93
+	jnz Lbb91
 	movq $0, (%rdx)
 	movq %rcx, %rdi
 	movl $0, %ecx
-	jmp Lbb94
-Lbb93:
+	jmp Lbb92
+Lbb91:
 	movq 16(%rax), %rdi
 	movq (%rdi), %rdi
 	cmpq $0, %rdi
@@ -1297,9 +1299,9 @@ Lbb93:
 	movzbq %cl, %rcx
 	andq %r8, %rcx
 	movq %rcx, (%rdx)
-Lbb94:
+Lbb92:
 	cmpl $0, %ecx
-	jnz Lbb96
+	jnz Lbb94
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rax
 	movq 8(%rax), %r12
@@ -1320,12 +1322,12 @@ Lbb94:
 	movq %rax, %rdi
 	subq $-32, %rsp
 	movq %rdi, (%rbx)
-	jmp Lbb98
-Lbb96:
+	jmp Lbb96
+Lbb94:
 	movq %rdi, %rcx
 	movq 8(%rax), %rdi
 	movq %rdi, (%rbx)
-Lbb98:
+Lbb96:
 	subq $32, %rsp
 	movq %rcx, %rbx
 	movl $24, %ecx
@@ -1339,13 +1341,13 @@ Lbb98:
 	subq $32, %rsp
 	callq tools_docgen_extractor_render_params
 	subq $-32, %rsp
-	jmp Lbb101
-Lbb99:
+	jmp Lbb99
+Lbb97:
 	movq %rsi, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb101:
+Lbb99:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -1384,13 +1386,13 @@ tools_docgen_extractor_render_fields:
 	setz %al
 	movzbq %al, %rax
 	testq $1, %rax
-	jnz Lbb112
+	jnz Lbb110
 	movq (%rdx), %rax
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
 	testq $1, %rax
-	jnz Lbb110
+	jnz Lbb108
 	movq 8(%rdi), %rcx
 	movq 16(%rdi), %rdi
 	movq 8(%rdx), %rbx
@@ -1404,7 +1406,7 @@ tools_docgen_extractor_render_fields:
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz Lbb107
+	jz Lbb105
 	subq $32, %rsp
 	movq %rdx, %r12
 	leaq str467(%rip), %rdx
@@ -1424,8 +1426,8 @@ tools_docgen_extractor_render_fields:
 	movq %rbx, (%r13)
 	movq %rdi, %rcx
 	movq %rbx, %rdi
-	jmp Lbb109
-Lbb107:
+	jmp Lbb107
+Lbb105:
 	movq %rdx, %r12
 	movq %rbx, %rcx
 	movq %r13, %rbx
@@ -1435,7 +1437,7 @@ Lbb107:
 	movq %rax, %rdi
 	subq $-32, %rsp
 	movq %rdi, (%rbx)
-Lbb109:
+Lbb107:
 	subq $32, %rsp
 	movq %rcx, %rbx
 	movl $24, %ecx
@@ -1450,19 +1452,19 @@ Lbb109:
 	subq $32, %rsp
 	callq tools_docgen_extractor_render_fields
 	subq $-32, %rsp
-	jmp Lbb114
+	jmp Lbb112
+Lbb108:
+	movq %rsi, %rcx
+	subq $32, %rsp
+	callq donna_list_reverse
+	subq $-32, %rsp
+	jmp Lbb112
 Lbb110:
 	movq %rsi, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-	jmp Lbb114
 Lbb112:
-	movq %rsi, %rcx
-	subq $32, %rsp
-	callq donna_list_reverse
-	subq $-32, %rsp
-Lbb114:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -1520,7 +1522,7 @@ tools_docgen_extractor_collect_blocks:
 	movq %r13, %r12
 	subq $1, %r12
 	cmpl $0, %edx
-	jnz Lbb126
+	jnz Lbb124
 	movq 8(%rax), %rdi
 	movq %r12, %r15
 	movq 16(%rax), %r12
@@ -1539,12 +1541,12 @@ tools_docgen_extractor_collect_blocks:
 	movq %rdx, %r13
 	addq $1, %r13
 	cmpl $0, %eax
-	jnz Lbb124
+	jnz Lbb122
 	subq $16, %rsp
 	movq %rsp, %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb121
+	jz Lbb119
 	subq $32, %rsp
 	callq donna_list_reverse
 	movq %r13, %rdx
@@ -1582,8 +1584,8 @@ tools_docgen_extractor_collect_blocks:
 	callq tools_docgen_extractor_collect_blocks
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb123
-Lbb121:
+	jmp Lbb121
+Lbb119:
 	movq %r13, %rdx
 	movq %r12, %rcx
 	subq $32, %rsp
@@ -1594,10 +1596,10 @@ Lbb121:
 	callq tools_docgen_extractor_collect_blocks
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb123:
+Lbb121:
 	movq %rax, (%rsi)
-	jmp Lbb131
-Lbb124:
+	jmp Lbb129
+Lbb122:
 	movq %r13, %r14
 	xchgq %rdi, %rcx
 	xchgq %rbx, %rdi
@@ -1622,14 +1624,14 @@ Lbb124:
 	callq tools_docgen_extractor_collect_blocks
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb131
-Lbb126:
+	jmp Lbb129
+Lbb124:
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb129
+	jz Lbb127
 	subq $32, %rsp
 	callq donna_list_reverse
 	movq %rax, %rcx
@@ -1662,14 +1664,14 @@ Lbb126:
 	callq donna_list_reverse
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb131
-Lbb129:
+	jmp Lbb129
+Lbb127:
 	movq %rdi, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-Lbb131:
+Lbb129:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %rdi
@@ -1702,7 +1704,7 @@ tools_docgen_extractor_is_doc_line:
 	movq %rsi, %rcx
 	subq $-32, %rsp
 	cmpq $0, %rax
-	jz Lbb142
+	jz Lbb140
 	subq $32, %rsp
 	movq %rcx, %rsi
 	callq donna_string_length
@@ -1714,7 +1716,7 @@ tools_docgen_extractor_is_doc_line:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $0, %rax
-	jz Lbb140
+	jz Lbb138
 	subq $32, %rsp
 	movl $3, %edx
 	callq donna_string_char_str
@@ -1727,23 +1729,23 @@ tools_docgen_extractor_is_doc_line:
 	callq strcmp
 	subq $-32, %rsp
 	cmpq $0, %rax
-	jz Lbb137
+	jz Lbb135
 	movq $1, (%rdi)
 	movl $1, %eax
-	jmp Lbb139
-Lbb137:
+	jmp Lbb137
+Lbb135:
 	movq $0, (%rdi)
 	movl $0, %eax
-Lbb139:
+Lbb137:
 	movq %rax, (%rsi)
-	jmp Lbb143
-Lbb140:
+	jmp Lbb141
+Lbb138:
 	movq $1, (%rsi)
 	movl $1, %eax
-	jmp Lbb143
-Lbb142:
+	jmp Lbb141
+Lbb140:
 	movl $0, %eax
-Lbb143:
+Lbb141:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -1782,10 +1784,10 @@ tools_docgen_extractor_strip_doc_prefix:
 	callq donna_string_starts_with
 	subq $-32, %rsp
 	cmpq $1, %rax
-	jz Lbb146
+	jz Lbb144
 	movq %rsi, %rax
-	jmp Lbb147
-Lbb146:
+	jmp Lbb145
+Lbb144:
 	subq $32, %rsp
 	movq %rsi, %rcx
 	callq donna_string_length
@@ -1799,7 +1801,7 @@ Lbb146:
 	movq %rax, %rcx
 	callq donna_string_slice
 	subq $-32, %rsp
-Lbb147:
+Lbb145:
 	popq %rsi
 	leave
 	ret
@@ -1815,7 +1817,7 @@ tools_docgen_extractor_find_doc:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb152
+	jz Lbb150
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	movq (%rax), %rdi
@@ -1828,18 +1830,18 @@ tools_docgen_extractor_find_doc:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rdi
-	jz Lbb151
+	jz Lbb149
 	subq $32, %rsp
 	callq tools_docgen_extractor_find_doc
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb153
-Lbb151:
+	jmp Lbb151
+Lbb149:
 	movq %rax, (%rsi)
-	jmp Lbb153
-Lbb152:
+	jmp Lbb151
+Lbb150:
 	leaq str591(%rip), %rax
-Lbb153:
+Lbb151:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi

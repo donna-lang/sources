@@ -282,10 +282,10 @@ errors_reporter_render:
 	str	x25, [x29, 104]
 	str	x26, [x29, 96]
 	str	x27, [x29, 88]
-	mov	x25, x5
+	mov	x26, x5
 	mov	x21, x4
 	mov	x24, x2
-	str	x1, [x29, 56]
+	mov	x23, x1
 	mov	x20, x0
 	mov	x0, x3
 	mov	x19, x0
@@ -296,11 +296,11 @@ errors_reporter_render:
 	mov	x19, x0
 	bl	utilities_location_span_start
 	bl	utilities_location_pos_col
-	mov	x27, x0
+	str	x0, [x29, 72]
 	mov	x0, x19
 	mov	x19, x0
 	bl	utilities_location_span_length
-	str	x0, [x29, 64]
+	str	x0, [x29, 56]
 	mov	x0, x19
 	mov	x19, x0
 	mov	x0, x22
@@ -317,35 +317,35 @@ errors_reporter_render:
 	mov	x19, x17
 	adrp	x1, str39
 	add	x1, x1, #:lo12:str39
-	mov	x23, x0
+	mov	x25, x0
 	mov	x0, x19
 	bl	__rt_str_concat
 	bl	utilities_colors_dim
 	str	x0, [x29, 48]
-	mov	x0, x23
+	mov	x0, x25
 	adrp	x1, str42
 	add	x1, x1, #:lo12:str42
-	mov	x23, x0
+	mov	x25, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	mov	x17, x0
-	mov	x0, x23
-	mov	x23, x17
+	str	x0, [x29, 64]
+	mov	x0, x25
+	ldr	x27, [x29, 72]
 	bl	utilities_location_short_label
 	bl	utilities_colors_dim
 	mov	x1, x0
-	mov	x0, x23
-	ldr	x23, [x29, 64]
+	mov	x0, x21
+	mov	x21, x0
+	ldr	x0, [x29, 64]
 	bl	__rt_str_concat
-	mov	x1, x23
 	str	x0, [x29, 40]
 	mov	x0, x21
-	ldr	x23, [x29, 56]
+	ldr	x1, [x29, 56]
 	mov	x21, x1
 	mov	x1, x22
 	bl	errors_reporter_get_line
 	mov	x1, x21
-	str	x0, [x29, 16]
+	str	x0, [x29, 24]
 	ldr	x21, [x29, 48]
 	adrp	x0, str48
 	add	x0, x0, #:lo12:str48
@@ -354,23 +354,23 @@ errors_reporter_render:
 	str	x0, [x29, 32]
 	ldr	x23, [x29, 40]
 	mov	x0, #1
-	mov	x26, x1
+	mov	x25, x1
 	sub	x1, x27, x0
 	adrp	x0, str50
 	add	x0, x0, #:lo12:str50
 	bl	donna_string_repeat
-	mov	x1, x26
-	str	x0, [x29, 24]
+	mov	x1, x25
+	str	x0, [x29, 16]
 	ldr	x0, [x29, 32]
-	mov	x26, x1
+	mov	x25, x1
 	adrp	x1, str53
 	add	x1, x1, #:lo12:str53
 	bl	__rt_str_concat
-	mov	x1, x26
-	ldr	x26, [x29, 24]
+	mov	x1, x25
+	ldr	x25, [x29, 24]
 	bl	__rt_str_concat
-	mov	x5, x25
-	ldr	x25, [x29, 16]
+	mov	x5, x26
+	ldr	x26, [x29, 16]
 	blr	x5
 	mov	x1, x0
 	mov	x0, x26

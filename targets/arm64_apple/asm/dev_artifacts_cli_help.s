@@ -1222,7 +1222,6 @@ _cli_help_commands_block:
 	str	x25, [x29, 56]
 	str	x26, [x29, 48]
 	str	x27, [x29, 40]
-	str	x28, [x29, 32]
 	adrp	x1, _str102@page
 	add	x1, x1, _str102@pageoff
 	adrp	x0, _str101@page
@@ -1234,13 +1233,13 @@ _cli_help_commands_block:
 	adrp	x0, _str104@page
 	add	x0, x0, _str104@pageoff
 	bl	_cli_help_command_row
-	str	x0, [x29, 16]
+	mov	x22, x0
 	adrp	x1, _str108@page
 	add	x1, x1, _str108@pageoff
 	adrp	x0, _str107@page
 	add	x0, x0, _str107@pageoff
 	bl	_cli_help_command_row
-	str	x0, [x29, 24]
+	mov	x23, x0
 	adrp	x1, _str111@page
 	add	x1, x1, _str111@pageoff
 	adrp	x0, _str110@page
@@ -1270,13 +1269,13 @@ _cli_help_commands_block:
 	adrp	x0, _str122@page
 	add	x0, x0, _str122@pageoff
 	bl	_cli_help_command_row
-	mov	x28, x0
+	str	x0, [x29, 16]
 	adrp	x1, _str126@page
 	add	x1, x1, _str126@pageoff
 	adrp	x0, _str125@page
 	add	x0, x0, _str125@pageoff
 	bl	_cli_help_command_row
-	mov	x22, x0
+	str	x0, [x29, 24]
 	adrp	x1, _str129@page
 	add	x1, x1, _str129@pageoff
 	adrp	x0, _str128@page
@@ -1299,24 +1298,24 @@ _cli_help_commands_block:
 	mov	x0, #24
 	bl	_malloc
 	mov	x21, x0
-	ldr	x23, [x29, 24]
-	mov	x0, #1
-	str	x0, [x21]
-	mov	x0, #8
-	add	x0, x21, x0
-	str	x22, [x0]
+	ldr	x0, [x29, 24]
+	mov	x1, #1
+	str	x1, [x21]
+	mov	x1, #8
+	add	x1, x21, x1
+	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x21, x0
 	str	x19, [x0]
 	mov	x0, #24
 	bl	_malloc
 	mov	x19, x0
-	ldr	x22, [x29, 16]
-	mov	x0, #1
-	str	x0, [x19]
-	mov	x0, #8
-	add	x0, x19, x0
-	str	x28, [x0]
+	ldr	x0, [x29, 16]
+	mov	x1, #1
+	str	x1, [x19]
+	mov	x1, #8
+	add	x1, x19, x1
+	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x19, x0
 	str	x21, [x0]
@@ -1408,7 +1407,6 @@ _cli_help_commands_block:
 	ldr	x25, [x29, 56]
 	ldr	x26, [x29, 48]
 	ldr	x27, [x29, 40]
-	ldr	x28, [x29, 32]
 	ldp	x29, x30, [sp], 112
 	ret
 /* end function cli_help_commands_block */

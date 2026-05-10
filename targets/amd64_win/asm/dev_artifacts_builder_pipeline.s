@@ -869,101 +869,100 @@ builder_pipeline_compile_loop:
 	movq 56(%rbp), %rdi
 	movq 48(%rbp), %r12
 	movq %r9, %r15
-	movq %r8, -8(%rbp)
-	movq %rdx, %r14
+	movq %r8, %r14
+	movq %rdx, %r13
 	movq %rcx, %rax
 	movq %rdi, %rcx
-	movq %r15, -32(%rbp)
 	movq %rcx, %rdi
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz Lbb55
 	movq 8(%rax), %rcx
+	movq %rcx, -16(%rbp)
 	movq 16(%rax), %rax
 	movq %rax, -48(%rbp)
 	subq $32, %rsp
-	movq %rcx, %rbx
 	callq donna_files_basename
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_files_drop_extension
-	movq %rbx, %rcx
-	movq %rax, %r13
+	movq %rdi, %rcx
+	movq %rax, %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rcx, %rbx
-	movq %r14, %rcx
+	movq %rcx, %rdi
+	movq %r13, %rcx
 	callq donna_string_is_empty
-	movq %r14, %rdx
-	movq %rbx, %rcx
-	movq %rax, %r8
-	movq -8(%rbp), %r14
+	movq %r13, %rdx
+	movq %rdi, %rcx
 	subq $-32, %rsp
+	movq %rbx, %rdi
 	subq $16, %rsp
-	movq %rsp, %rax
-	movq %rax, -16(%rbp)
-	cmpq $1, %r8
+	movq %rsp, %rbx
+	movq %rbx, -8(%rbp)
+	cmpq $1, %rax
 	jz Lbb43
 	subq $32, %rsp
-	movq %rdx, %r14
+	movq %rdx, %r13
 	leaq str179(%rip), %rdx
 	movq %rcx, %rbx
-	movq %r14, %rcx
+	movq %r13, %rcx
 	callq __rt_str_concat
-	movq %r14, %rdx
+	movq %r13, %rdx
 	movq %rax, %rcx
-	movq %r13, %rax
-	movq -8(%rbp), %r14
+	movq %rdi, %rax
+	movq -8(%rbp), %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %r13
 	movq %rax, %rdx
 	callq __rt_str_concat
-	movq %r15, %r9
 	movq %r13, %rdx
 	movq %rbx, %rcx
-	movq %rax, %r15
-	movq -16(%rbp), %rax
+	movq %rax, %rbx
 	subq $-32, %rsp
-	movq %r15, (%rax)
+	movq %rbx, (%rdi)
 	jmp Lbb45
 Lbb43:
-	movq %r15, %r9
-	movq %r13, %r15
-	movq %r15, (%rax)
+	xchgq %rbx, %rdi
+	movq %rbx, (%rdi)
 Lbb45:
 	subq $32, %rsp
 	movq %rdx, %r13
 	movq %r12, %rdx
-	movq %rcx, %rbx
-	movq %r9, %rcx
+	movq %rcx, %rdi
+	movq %r15, %rcx
 	callq donna_list_append
 	movq %r14, %r8
 	movq %r13, %rdx
-	movq %rbx, %rcx
+	movq %rdi, %rcx
 	movq %rax, %r9
+	movq %rcx, %rdi
+	movq -16(%rbp), %rcx
 	subq $-32, %rsp
 	subq $48, %rsp
 	movq %rsp, %rax
 	movq %rsi, 32(%rax)
-	movq %r8, %r13
-	movq %rdx, %rbx
-	movq %r15, %rdx
-	callq builder_pipeline_compile_module
-	movq %r13, %r8
+	movq %r8, %r14
+	movq %rdx, %r13
 	movq %rbx, %rdx
+	callq builder_pipeline_compile_module
+	movq %r15, %r9
+	movq %r14, %r8
+	movq %r13, %rdx
 	movq %rdi, %rcx
 	subq $-48, %rsp
 	subq $16, %rsp
 	movq %rsp, %rdi
-	movq (%rax), %r9
-	cmpq $1, %r9
-	setz %r9b
-	movzbq %r9b, %r9
-	cmpl $0, %r9d
+	movq (%rax), %r10
+	cmpq $1, %r10
+	setz %r10b
+	movzbq %r10b, %r10
+	cmpl $0, %r10d
 	jnz Lbb53
 	movq 8(%rax), %rax
+	movq %r9, %r15
 	movq (%rax), %r9
 	movq %r9, -24(%rbp)
 	movq %r8, %r14
@@ -976,13 +975,13 @@ Lbb45:
 	cmpq $1, %rdx
 	jz Lbb49
 	movq %rsi, (%rax)
-	movq %rsi, %rbx
+	movq %rsi, -32(%rbp)
 	movq %rdi, %rsi
 	jmp Lbb52
 Lbb49:
 	movq %rdi, %rsi
 	movq $1, (%rax)
-	movl $1, %ebx
+	movq $1, -32(%rbp)
 Lbb52:
 	subq $32, %rsp
 	movq %rcx, %rdi
@@ -992,15 +991,15 @@ Lbb52:
 	movq %rax, %rdi
 	movq -24(%rbp), %rax
 	subq $-32, %rsp
-	movq %r15, (%rdi)
+	movq %rbx, (%rdi)
 	movq %rax, 8(%rdi)
 	subq $32, %rsp
-	movq %rcx, %r15
+	movq %rcx, %rbx
 	movl $24, %ecx
 	callq malloc
-	movq %r15, %rcx
+	movq %rbx, %rcx
 	xchgq %rax, %rdi
-	movq -32(%rbp), %r15
+	movq -32(%rbp), %rbx
 	subq $-32, %rsp
 	movq $1, (%rdi)
 	movq %rax, 8(%rdi)
@@ -2825,19 +2824,19 @@ builder_pipeline_split_ready:
 	jz Lbb217
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
-	movq (%rax), %r15
-	movq 8(%rax), %rsi
-	movq %rsi, -16(%rbp)
+	movq (%rax), %rsi
+	movq 8(%rax), %r15
 	movq 16(%rax), %r13
 	subq $32, %rsp
 	movq %rdx, %r14
-	movq %rcx, %rsi
+	movq %rcx, %r12
 	movq %r13, %rcx
 	callq builder_pipeline_all_compiled
-	movq %rsi, %rcx
+	movq %r12, %rcx
 	subq $-32, %rsp
 	subq $16, %rsp
-	movq %rsp, %rsi
+	movq %rsp, %r12
+	movq %r12, -16(%rbp)
 	cmpq $1, %rax
 	jz Lbb216
 	subq $32, %rsp
@@ -2846,10 +2845,11 @@ builder_pipeline_split_ready:
 	callq malloc
 	movq %r12, %rcx
 	movq %rax, %r12
-	movq -16(%rbp), %rax
+	movq %rsi, %rax
+	movq -16(%rbp), %rsi
 	subq $-32, %rsp
-	movq %r15, (%r12)
-	movq %rax, 8(%r12)
+	movq %rax, (%r12)
+	movq %r15, 8(%r12)
 	movq %r13, 16(%r12)
 	subq $32, %rsp
 	movq %rcx, %r13
@@ -2876,10 +2876,11 @@ Lbb216:
 	callq malloc
 	movq %r12, %rcx
 	movq %rax, %r12
-	movq -16(%rbp), %rax
+	movq %rsi, %rax
+	movq -16(%rbp), %rsi
 	subq $-32, %rsp
-	movq %r15, (%r12)
-	movq %rax, 8(%r12)
+	movq %rax, (%r12)
+	movq %r15, 8(%r12)
 	movq %r13, 16(%r12)
 	subq $32, %rsp
 	movq %rcx, %r13

@@ -144,24 +144,24 @@ compiler_typesystem_typed_ast_TypedFunction:
 	pushq %r14
 	pushq %r15
 	movq 16(%rbp), %rax
-	movq %rax, -16(%rbp)
-	movq %r9, %rbx
-	movq %r8, %r12
-	movq %rcx, %r13
-	movq %rdx, %r14
-	movq %rsi, %r15
-	movq %rdi, -8(%rbp)
+	movq %rax, -8(%rbp)
+	movq %r9, -16(%rbp)
+	movq %r8, %rbx
+	movq %rcx, %r12
+	movq %rdx, %r13
+	movq %rsi, %r14
+	movq %rdi, %r15
 	movl $64, %edi
 	callq malloc
-	movq -16(%rbp), %rcx
-	movq -8(%rbp), %rdx
+	movq -8(%rbp), %rcx
+	movq -16(%rbp), %rdx
 	movq $0, (%rax)
-	movq %rdx, 8(%rax)
-	movq %r15, 16(%rax)
-	movq %r14, 24(%rax)
-	movq %r13, 32(%rax)
-	movq %r12, 40(%rax)
-	movq %rbx, 48(%rax)
+	movq %r15, 8(%rax)
+	movq %r14, 16(%rax)
+	movq %r13, 24(%rax)
+	movq %r12, 32(%rax)
+	movq %rbx, 40(%rax)
+	movq %rdx, 48(%rax)
 	movq %rcx, 56(%rax)
 	popq %r15
 	popq %r14
