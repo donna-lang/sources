@@ -671,210 +671,280 @@ _str1311:
 
 .data
 .balign 8
-_str1362:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1369:
-	.ascii "."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1422:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1451:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1458:
+_str1328:
 	.ascii "0"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1465:
+_str1331:
+	.ascii "o"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1351:
+	.ascii "0o"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1403:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1410:
+	.ascii "."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1438:
+	.ascii "e"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1444:
+	.ascii "E"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1467:
+	.ascii "+"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1470:
+	.ascii "-"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1521:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1553:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1582:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1589:
+	.ascii "0"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1596:
 	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1475:
+_str1615:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1635:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1486:
+_str1646:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1509:
+_str1669:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1535:
+_str1695:
 	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1542:
-	.ascii "1"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1605:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1651:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1672:
-	.ascii "as"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1677:
-	.ascii "case"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1682:
-	.ascii "const"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1687:
-	.ascii "echo"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1692:
-	.ascii "external"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1697:
-	.ascii "fn"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str1702:
-	.ascii "if"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1707:
-	.ascii "import"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1712:
-	.ascii "let"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1717:
-	.ascii "opaque"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1722:
-	.ascii "panic"
+	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str1727:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1794:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1840:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1861:
+	.ascii "as"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1866:
+	.ascii "case"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1871:
+	.ascii "const"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1876:
+	.ascii "echo"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1881:
+	.ascii "external"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1886:
+	.ascii "fn"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1891:
+	.ascii "if"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1896:
+	.ascii "import"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1901:
+	.ascii "let"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1906:
+	.ascii "opaque"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1911:
+	.ascii "panic"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1916:
 	.ascii "pub"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1732:
+_str1921:
 	.ascii "todo"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1737:
+_str1926:
 	.ascii "type"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1742:
+_str1931:
 	.ascii "True"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1748:
+_str1937:
 	.ascii "False"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1800:
+_str1989:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -6782,63 +6852,70 @@ L355:
 .balign 4
 _compiler_lexer_lexer_lex_number:
 	hint	#34
-	stp	x29, x30, [sp, -272]!
+	stp	x29, x30, [sp, -336]!
 	mov	x29, sp
-	str	x19, [x29, 264]
-	str	x20, [x29, 256]
-	str	x21, [x29, 248]
-	str	x22, [x29, 240]
-	str	x23, [x29, 232]
-	str	x24, [x29, 224]
-	str	x25, [x29, 216]
-	str	x26, [x29, 208]
-	str	x27, [x29, 200]
-	ldr	x20, [x29, 272]
-	str	x20, [x29, 80]
-	str	x7, [x29, 72]
-	mov	x25, x6
-	mov	x24, x5
-	mov	x23, x4
+	str	x19, [x29, 328]
+	str	x20, [x29, 320]
+	str	x21, [x29, 312]
+	str	x22, [x29, 304]
+	str	x23, [x29, 296]
+	str	x24, [x29, 288]
+	str	x25, [x29, 280]
+	str	x26, [x29, 272]
+	str	x27, [x29, 264]
+	str	x28, [x29, 256]
+	ldr	x20, [x29, 336]
+	str	x20, [x29, 72]
+	mov	x21, x7
+	mov	x26, x6
+	mov	x25, x5
+	mov	x24, x4
 	mov	x27, x3
 	mov	x19, x1
-	mov	x20, x0
+	str	x27, [x29, 56]
 	mov	x3, x19
 	mov	x22, x2
 	mov	x2, x27
 	mov	x1, x22
-	mov	x0, x23
+	mov	x20, x0
+	mov	x0, x24
 	bl	_compiler_lexer_lexer_span
-	str	x0, [x29, 56]
-	mov	x1, x19
+	str	x0, [x29, 80]
 	mov	x0, x20
+	mov	x1, x19
+	mov	x20, x0
 	bl	_donna_string_char_str
+	str	x0, [x29, 232]
+	mov	x0, x20
 	mov	x1, #1
 	add	x1, x19, x1
-	mov	x21, x0
-	mov	x0, x20
+	mov	x20, x0
 	bl	_compiler_lexer_lexer_safe_char_str
-	str	x0, [x29, 176]
-	mov	x0, x21
+	str	x0, [x29, 224]
+	mov	x0, x20
+	mov	x20, x0
+	ldr	x0, [x29, 232]
 	adrp	x1, _str1248@page
 	add	x1, x1, _str1248@pageoff
-	mov	x21, x0
 	bl	_strcmp
 	mov	x1, x0
-	mov	x0, x21
-	mov	x21, x0
-	ldr	x0, [x29, 176]
+	mov	x0, x20
+	mov	x20, x0
+	ldr	x0, [x29, 224]
 	cmp	x1, #0
 	cset	x1, eq
-	str	x1, [x29, 184]
+	str	x1, [x29, 248]
 	adrp	x1, _str1251@page
 	add	x1, x1, _str1251@pageoff
 	bl	_strcmp
 	mov	x2, x22
 	mov	x3, x0
-	mov	x0, x21
-	ldr	x1, [x29, 184]
+	mov	x0, x20
+	ldr	x1, [x29, 248]
+	mov	x20, x0
+	ldr	x0, [x29, 232]
 	cmp	x3, #0
-	mov	x22, x2
+	mov	x23, x2
 	cset	x2, eq
 	and	x2, x1, x2
 	mov	x1, #2
@@ -6847,115 +6924,161 @@ _compiler_lexer_lexer_lex_number:
 	add	x3, x27, x3
 	str	x3, [x29, 16]
 	cmp	x2, #1
-	beq	L369
-	mov	x21, x1
+	beq	L377
+	mov	x22, x1
 	adrp	x1, _str1288@page
 	add	x1, x1, _str1288@pageoff
 	bl	_strcmp
-	mov	x1, x21
-	mov	x2, x0
+	mov	x2, x23
+	mov	x1, x22
+	mov	x3, x0
 	mov	x0, x20
 	mov	x20, x0
-	ldr	x0, [x29, 176]
-	cmp	x2, #0
-	cset	x3, eq
-	str	x3, [x29, 168]
-	mov	x21, x1
+	ldr	x0, [x29, 224]
+	cmp	x3, #0
+	mov	x23, x2
+	cset	x2, eq
+	str	x2, [x29, 240]
+	mov	x22, x1
 	adrp	x1, _str1291@page
 	add	x1, x1, _str1291@pageoff
 	bl	_strcmp
-	mov	x5, x24
-	mov	x4, x23
-	mov	x2, x22
-	mov	x1, x21
-	mov	x6, x0
-	mov	x0, x20
-	ldr	x3, [x29, 168]
-	ldr	x21, [x29, 72]
-	cmp	x6, #0
-	mov	x24, x5
-	cset	x5, eq
-	and	x3, x3, x5
-	mov	x23, x4
-	mov	x4, #16
-	sub	sp, sp, x4
-	mov	x26, sp
-	str	x26, [x29, 88]
-	cmp	x3, #1
-	beq	L363
-	mov	x22, x2
-	mov	x2, #0
-	mov	x1, x19
-	mov	x20, x0
-	bl	_compiler_lexer_lexer_scan_decimal
-	mov	x4, x23
-	mov	x2, x22
+	mov	x2, x23
+	mov	x1, x22
 	mov	x3, x0
 	mov	x0, x20
-	ldr	x20, [x29, 80]
-	ldr	x1, [x3]
-	str	x1, [x29, 136]
-	mov	x23, x4
+	mov	x23, x2
+	ldr	x2, [x29, 240]
+	mov	x20, x0
+	ldr	x0, [x29, 232]
+	cmp	x3, #0
+	cset	x3, eq
+	and	x2, x2, x3
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x28, sp
+	str	x28, [x29, 88]
+	cmp	x2, #1
+	beq	L371
+	mov	x22, x1
+	adrp	x1, _str1328@page
+	add	x1, x1, _str1328@pageoff
+	bl	_strcmp
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x20
+	mov	x20, x0
+	ldr	x0, [x29, 224]
+	cmp	x2, #0
+	cset	x3, eq
+	str	x3, [x29, 216]
+	mov	x22, x1
+	adrp	x1, _str1331@page
+	add	x1, x1, _str1331@pageoff
+	bl	_strcmp
+	mov	x5, x25
+	mov	x4, x24
+	mov	x2, x23
+	mov	x1, x22
+	mov	x6, x0
+	mov	x0, x20
+	ldr	x3, [x29, 216]
+	ldr	x20, [x29, 72]
+	cmp	x6, #0
+	mov	x25, x5
+	cset	x5, eq
+	and	x3, x3, x5
+	mov	x24, x4
+	mov	x4, #16
+	sub	sp, sp, x4
+	mov	x22, sp
+	str	x22, [x29, 136]
+	cmp	x3, #1
+	beq	L364
+	mov	x23, x2
+	mov	x2, #0
+	mov	x1, x19
+	mov	x22, x0
+	bl	_compiler_lexer_lexer_scan_decimal
+	mov	x4, x24
+	mov	x2, x23
+	mov	x3, x0
+	mov	x0, x22
+	ldr	x1, [x29, 80]
+	ldr	x8, [x3]
+	str	x8, [x29, 184]
+	mov	x24, x4
 	mov	x4, #8
 	add	x3, x3, x4
 	ldr	x3, [x3]
-	str	x3, [x29, 160]
-	sub	x3, x1, x19
-	str	x3, [x29, 144]
-	mov	x22, x2
+	str	x3, [x29, 208]
+	sub	x3, x8, x19
+	str	x3, [x29, 192]
+	mov	x23, x2
 	mov	x2, x3
+	mov	x22, x1
 	mov	x1, x19
 	mov	x19, x0
 	bl	_donna_string_slice
 	bl	_compiler_lexer_lexer_strip_underscores
-	mov	x2, x22
-	ldr	x1, [x29, 160]
-	mov	x22, x2
+	mov	x2, x23
+	mov	x1, x22
+	mov	x22, x1
+	ldr	x1, [x29, 208]
+	mov	x23, x2
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x8, sp
-	str	x8, [x29, 152]
+	str	x8, [x29, 200]
 	cmp	x1, #1
-	beq	L361
+	beq	L362
 	bl	_compiler_lexer_token_TokInt
+	mov	x1, x22
 	mov	x7, x0
-	ldr	x8, [x29, 152]
-	ldr	x26, [x29, 88]
-	ldr	x3, [x29, 144]
-	ldr	x1, [x29, 136]
-	mov	x0, x1
-	ldr	x1, [x29, 56]
-	str	x7, [x8]
-	mov	x6, x25
-	mov	x5, x24
-	mov	x4, x23
-	mov	x2, x22
+	mov	x0, x19
+	ldr	x8, [x29, 200]
+	mov	x19, x0
+	ldr	x0, [x29, 136]
+	ldr	x28, [x29, 88]
+	ldr	x3, [x29, 192]
 	mov	x22, x1
-	mov	x1, x0
+	ldr	x1, [x29, 184]
+	ldr	x27, [x29, 56]
+	str	x7, [x8]
+	mov	x6, x26
+	mov	x5, x25
+	mov	x4, x24
+	mov	x2, x23
+	mov	x23, x20
+	mov	x20, x0
 	mov	x0, x19
-	mov	x19, x26
-	b	L362
-L361:
+	mov	x19, x28
+	b	L363
+L362:
 	bl	_compiler_lexer_token_TokFloat
-	mov	x6, x25
-	mov	x5, x24
-	mov	x4, x23
-	mov	x2, x22
+	mov	x6, x26
+	mov	x5, x25
+	mov	x4, x24
+	mov	x2, x23
+	mov	x1, x22
 	mov	x7, x0
 	mov	x0, x19
-	ldr	x8, [x29, 152]
+	ldr	x8, [x29, 200]
+	mov	x23, x20
+	ldr	x20, [x29, 136]
 	ldr	x19, [x29, 88]
-	ldr	x3, [x29, 144]
-	ldr	x1, [x29, 136]
-	ldr	x22, [x29, 56]
+	ldr	x3, [x29, 192]
+	mov	x22, x1
+	ldr	x1, [x29, 184]
+	ldr	x27, [x29, 56]
 	str	x7, [x8]
-L362:
+L363:
 	add	x3, x27, x3
 	mov	x8, #32
 	sub	sp, sp, x8
 	mov	x8, #16
 	add	x8, sp, x8
-	str	x20, [x8]
+	str	x23, [x8]
 	mov	x8, #8
 	add	x8, sp, x8
 	str	x21, [x8]
@@ -6964,30 +7087,155 @@ L362:
 	str	x22, [x8]
 	mov	x26, x6
 	mov	x25, x5
-	mov	x23, x4
-	mov	x22, x2
+	mov	x24, x4
+	mov	x23, x2
 	bl	_compiler_lexer_lexer_push_at
 	mov	x1, #32
 	add	sp, sp, x1
-	str	x0, [x19]
-	b	L374
-L363:
-	mov	x26, x25
-	mov	x25, x24
-	mov	x22, x2
-	mov	x21, x1
+	str	x0, [x20]
+	b	L370
+L364:
+	mov	x23, x2
+	mov	x22, x1
 	mov	x20, x0
-	bl	_compiler_lexer_lexer_scan_binary_digits
-	mov	x4, x23
-	mov	x2, x22
-	mov	x1, x21
+	bl	_compiler_lexer_lexer_scan_octal_digits
+	mov	x4, x24
+	mov	x2, x23
+	mov	x1, x22
 	mov	x8, x0
 	mov	x0, x20
-	ldr	x22, [x29, 56]
-	ldr	x20, [x29, 80]
-	ldr	x21, [x29, 72]
-	str	x8, [x29, 112]
+	ldr	x22, [x29, 80]
+	ldr	x20, [x29, 72]
+	str	x8, [x29, 160]
 	cmp	x1, x8
+	cset	x3, eq
+	mov	x24, x4
+	mov	x4, #16
+	sub	sp, sp, x4
+	mov	x23, sp
+	str	x23, [x29, 144]
+	cmp	x3, #1
+	beq	L367
+	mov	x23, x2
+	sub	x2, x8, x19
+	str	x2, [x29, 176]
+	mov	x3, #2
+	sub	x2, x2, x3
+	mov	x19, x0
+	bl	_donna_string_slice
+	mov	x1, x22
+	mov	x22, x1
+	ldr	x1, [x29, 176]
+	ldr	x27, [x29, 56]
+	add	x3, x27, x1
+	str	x3, [x29, 168]
+	bl	_compiler_lexer_lexer_parse_octal_str
+	bl	_donna_int_to_string
+	bl	_compiler_lexer_token_TokInt
+	mov	x6, x26
+	mov	x5, x25
+	mov	x4, x24
+	mov	x2, x23
+	mov	x1, x22
+	mov	x7, x0
+	mov	x0, x19
+	mov	x23, x21
+	ldr	x21, [x29, 144]
+	mov	x24, x20
+	ldr	x20, [x29, 136]
+	ldr	x19, [x29, 88]
+	ldr	x3, [x29, 168]
+	mov	x22, x1
+	ldr	x1, [x29, 160]
+	mov	x8, #32
+	sub	sp, sp, x8
+	mov	x8, #16
+	add	x8, sp, x8
+	str	x24, [x8]
+	mov	x8, #8
+	add	x8, sp, x8
+	str	x23, [x8]
+	mov	x8, #0
+	add	x8, sp, x8
+	str	x22, [x8]
+	mov	x26, x6
+	mov	x25, x5
+	mov	x24, x4
+	mov	x23, x2
+	bl	_compiler_lexer_lexer_push_at
+	mov	x1, #32
+	add	sp, sp, x1
+	str	x0, [x21]
+	b	L369
+L367:
+	mov	x17, x1
+	mov	x1, x22
+	mov	x22, x17
+	mov	x23, x2
+	mov	x19, x0
+	adrp	x0, _str1351@page
+	add	x0, x0, _str1351@pageoff
+	bl	_errors_error_LexEmptyNumberLiteral
+	str	x0, [x29, 152]
+	mov	x0, x19
+	mov	x19, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x6, x26
+	mov	x5, x25
+	mov	x4, x24
+	mov	x2, x23
+	mov	x1, x22
+	mov	x7, x0
+	mov	x0, x19
+	mov	x23, x21
+	ldr	x21, [x29, 144]
+	mov	x22, x20
+	ldr	x20, [x29, 136]
+	ldr	x19, [x29, 88]
+	ldr	x8, [x29, 152]
+	ldr	x3, [x29, 16]
+	mov	x9, #1
+	str	x9, [x7]
+	mov	x9, #8
+	add	x9, x7, x9
+	str	x8, [x9]
+	mov	x8, #16
+	add	x8, x7, x8
+	str	x23, [x8]
+	mov	x8, #16
+	sub	sp, sp, x8
+	mov	x8, #0
+	add	x8, sp, x8
+	str	x22, [x8]
+	mov	x26, x6
+	mov	x25, x5
+	mov	x24, x4
+	mov	x23, x2
+	bl	_compiler_lexer_lexer_lex_loop
+	mov	x1, #16
+	add	sp, sp, x1
+	str	x0, [x21]
+L369:
+	str	x0, [x20]
+L370:
+	str	x0, [x19]
+	b	L382
+L371:
+	mov	x0, x20
+	mov	x22, x1
+	mov	x20, x0
+	bl	_compiler_lexer_lexer_scan_binary_digits
+	mov	x4, x24
+	mov	x2, x23
+	mov	x1, x22
+	mov	x8, x0
+	mov	x0, x20
+	mov	x22, x21
+	ldr	x21, [x29, 80]
+	ldr	x20, [x29, 72]
+	str	x8, [x29, 112]
+	cmp	x8, x1
 	cset	x3, eq
 	mov	x24, x4
 	mov	x4, #16
@@ -6995,7 +7243,7 @@ L363:
 	mov	x23, sp
 	str	x23, [x29, 96]
 	cmp	x3, #1
-	beq	L366
+	beq	L374
 	mov	x23, x2
 	sub	x2, x8, x19
 	str	x2, [x29, 128]
@@ -7003,9 +7251,10 @@ L363:
 	sub	x2, x2, x3
 	mov	x19, x0
 	bl	_donna_string_slice
+	mov	x1, x21
+	mov	x21, x1
 	ldr	x1, [x29, 128]
-	mov	x22, x21
-	ldr	x21, [x29, 56]
+	ldr	x27, [x29, 56]
 	add	x3, x27, x1
 	str	x3, [x29, 120]
 	bl	_compiler_lexer_lexer_parse_binary_str
@@ -7043,13 +7292,13 @@ L363:
 	mov	x1, #32
 	add	sp, sp, x1
 	str	x0, [x20]
-	b	L368
-L366:
+	b	L376
+L374:
 	mov	x17, x1
-	mov	x1, x21
-	mov	x21, x17
-	mov	x17, x22
-	mov	x22, x1
+	mov	x1, x22
+	mov	x22, x17
+	mov	x17, x21
+	mov	x21, x1
 	mov	x1, x17
 	mov	x23, x2
 	mov	x19, x0
@@ -7065,14 +7314,14 @@ L366:
 	mov	x5, x25
 	mov	x4, x24
 	mov	x2, x23
-	mov	x1, x21
+	mov	x1, x22
 	mov	x7, x0
 	mov	x0, x19
-	mov	x21, x20
+	mov	x22, x20
 	ldr	x20, [x29, 96]
 	ldr	x19, [x29, 88]
-	ldr	x8, [x29, 104]
 	ldr	x3, [x29, 16]
+	ldr	x8, [x29, 104]
 	mov	x9, #1
 	str	x9, [x7]
 	mov	x9, #8
@@ -7080,38 +7329,35 @@ L366:
 	str	x8, [x9]
 	mov	x8, #16
 	add	x8, x7, x8
-	str	x22, [x8]
+	str	x21, [x8]
 	mov	x8, #16
 	sub	sp, sp, x8
 	mov	x8, #0
 	add	x8, sp, x8
-	str	x21, [x8]
+	str	x22, [x8]
 	mov	x26, x6
 	mov	x25, x5
-	mov	x23, x4
-	mov	x22, x2
+	mov	x24, x4
+	mov	x23, x2
 	bl	_compiler_lexer_lexer_lex_loop
 	mov	x1, #16
 	add	sp, sp, x1
 	str	x0, [x20]
-L368:
+L376:
 	str	x0, [x19]
-	b	L374
-L369:
-	mov	x26, x25
-	mov	x25, x24
+	b	L382
+L377:
 	mov	x0, x20
-	mov	x21, x1
+	mov	x22, x1
 	mov	x20, x0
 	bl	_compiler_lexer_lexer_scan_hex_digits
-	mov	x4, x23
-	mov	x2, x22
-	mov	x1, x21
+	mov	x4, x24
+	mov	x2, x23
+	mov	x1, x22
 	mov	x8, x0
 	mov	x0, x20
-	ldr	x22, [x29, 56]
 	ldr	x20, [x29, 80]
-	ldr	x21, [x29, 72]
+	ldr	x22, [x29, 72]
 	str	x8, [x29, 40]
 	cmp	x8, x1
 	cset	x3, eq
@@ -7121,18 +7367,18 @@ L369:
 	mov	x23, sp
 	str	x23, [x29, 24]
 	cmp	x3, #1
-	beq	L372
+	beq	L380
 	mov	x23, x2
 	sub	x2, x8, x19
 	str	x2, [x29, 64]
 	mov	x3, #2
 	sub	x2, x2, x3
-	mov	x22, x1
 	mov	x19, x0
 	bl	_donna_string_slice
+	mov	x1, x20
+	mov	x20, x1
 	ldr	x1, [x29, 64]
-	mov	x22, x20
-	ldr	x20, [x29, 56]
+	ldr	x27, [x29, 56]
 	add	x3, x27, x1
 	str	x3, [x29, 48]
 	bl	_compiler_lexer_lexer_parse_hex_str
@@ -7168,11 +7414,14 @@ L369:
 	mov	x1, #32
 	add	sp, sp, x1
 	str	x0, [x19]
-	b	L374
-L372:
+	b	L382
+L380:
 	mov	x17, x1
 	mov	x1, x22
 	mov	x22, x17
+	mov	x17, x20
+	mov	x20, x1
+	mov	x1, x17
 	mov	x23, x2
 	mov	x19, x0
 	adrp	x0, _str1271@page
@@ -7210,18 +7459,19 @@ L372:
 	mov	x1, #16
 	add	sp, sp, x1
 	str	x0, [x19]
-L374:
-	ldr	x19, [x29, 264]
-	ldr	x20, [x29, 256]
-	ldr	x21, [x29, 248]
-	ldr	x22, [x29, 240]
-	ldr	x23, [x29, 232]
-	ldr	x24, [x29, 224]
-	ldr	x25, [x29, 216]
-	ldr	x26, [x29, 208]
-	ldr	x27, [x29, 200]
+L382:
+	ldr	x19, [x29, 328]
+	ldr	x20, [x29, 320]
+	ldr	x21, [x29, 312]
+	ldr	x22, [x29, 304]
+	ldr	x23, [x29, 296]
+	ldr	x24, [x29, 288]
+	ldr	x25, [x29, 280]
+	ldr	x26, [x29, 272]
+	ldr	x27, [x29, 264]
+	ldr	x28, [x29, 256]
 	mov sp, x29
-	ldp	x29, x30, [sp], 272
+	ldp	x29, x30, [sp], 336
 	ret
 /* end function compiler_lexer_lexer_lex_number */
 
@@ -7248,39 +7498,59 @@ _compiler_lexer_lexer_scan_decimal:
 	mov	x20, x0
 	cset	x0, ge
 	cmp	x0, #1
-	beq	L394
+	beq	L408
 	mov	x19, x1
 	mov	x0, x20
 	bl	_donna_string_char_str
 	mov	x2, x21
 	mov	x1, x19
-	mov	x21, x2
+	mov	x22, x2
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	mov	x23, x1
-	adrp	x1, _str1362@page
-	add	x1, x1, _str1362@pageoff
-	mov	x22, x0
+	adrp	x1, _str1403@page
+	add	x1, x1, _str1403@pageoff
+	mov	x21, x0
 	bl	_strcmp
 	mov	x1, x23
 	mov	x2, x0
-	mov	x0, x22
-	mov	x22, x1
+	mov	x0, x21
+	mov	x21, x1
 	mov	x1, #1
-	add	x1, x22, x1
+	add	x1, x21, x1
 	cmp	x2, #0
-	beq	L392
+	beq	L406
 	mov	x24, x1
-	adrp	x1, _str1369@page
-	add	x1, x1, _str1369@pageoff
+	adrp	x1, _str1410@page
+	add	x1, x1, _str1410@pageoff
 	mov	x23, x0
 	bl	_strcmp
 	mov	x1, x24
 	mov	x2, x0
 	mov	x0, x23
 	cmp	x2, #0
-	beq	L383
+	beq	L397
+	mov	x24, x1
+	adrp	x1, _str1438@page
+	add	x1, x1, _str1438@pageoff
+	mov	x23, x0
+	bl	_strcmp
+	mov	x1, x24
+	mov	x2, x0
+	mov	x0, x23
+	cmp	x2, #0
+	beq	L395
+	mov	x24, x1
+	adrp	x1, _str1444@page
+	add	x1, x1, _str1444@pageoff
+	mov	x23, x0
+	bl	_strcmp
+	mov	x1, x24
+	mov	x2, x0
+	mov	x0, x23
+	cmp	x2, #0
+	beq	L393
 	mov	x23, x1
 	mov	x1, #0
 	bl	_donna_string_char_at
@@ -7292,32 +7562,49 @@ _compiler_lexer_lexer_scan_decimal:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	L380
+	beq	L390
 	mov	x0, #16
 	bl	_malloc
-	mov	x2, x21
-	str	x22, [x0]
+	mov	x2, x22
+	mov	x1, x21
+	str	x1, [x0]
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x2, [x1]
 	str	x0, [x20]
-	b	L382
-L380:
-	mov	x2, x21
+	b	L392
+L390:
+	mov	x2, x22
 	bl	_compiler_lexer_lexer_scan_decimal
 	str	x0, [x20]
-L382:
+L392:
 	str	x0, [x19]
-	b	L396
-L383:
-	mov	x2, x21
+	b	L410
+L393:
+	mov	x2, x22
+	mov	x1, x21
+	mov	x0, x20
+	bl	_compiler_lexer_lexer_scan_exponent
+	str	x0, [x19]
+	b	L410
+L395:
+	mov	x2, x22
+	mov	x1, x21
+	mov	x0, x20
+	mov	x22, x1
+	bl	_compiler_lexer_lexer_scan_exponent
+	str	x0, [x19]
+	b	L410
+L397:
+	mov	x2, x22
+	mov	x22, x21
 	mov	x0, x20
 	mov	x23, x2
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x23, #1
-	beq	L389
+	beq	L403
 	mov	x24, x1
 	mov	x21, x0
 	bl	_compiler_lexer_lexer_safe_char_at
@@ -7329,7 +7616,7 @@ L383:
 	sub	sp, sp, x3
 	mov	x21, sp
 	cmp	x2, #1
-	beq	L387
+	beq	L401
 	mov	x0, #16
 	bl	_malloc
 	mov	x2, x23
@@ -7339,15 +7626,15 @@ L383:
 	add	x1, x0, x1
 	str	x2, [x1]
 	str	x0, [x21]
-	b	L388
-L387:
+	b	L402
+L401:
 	mov	x2, #1
 	bl	_compiler_lexer_lexer_scan_decimal
 	str	x0, [x21]
-L388:
+L402:
 	str	x0, [x20]
-	b	L391
-L389:
+	b	L405
+L403:
 	mov	x21, x22
 	mov	x0, #16
 	bl	_malloc
@@ -7358,17 +7645,17 @@ L389:
 	mov	x1, #1
 	str	x1, [x2]
 	str	x0, [x20]
-L391:
+L405:
 	str	x0, [x19]
-	b	L396
-L392:
-	mov	x2, x21
+	b	L410
+L406:
+	mov	x2, x22
 	mov	x0, x20
 	mov	x20, x2
 	bl	_compiler_lexer_lexer_scan_decimal
 	str	x0, [x19]
-	b	L396
-L394:
+	b	L410
+L408:
 	mov	x20, x21
 	mov	x19, x1
 	mov	x0, #16
@@ -7379,7 +7666,7 @@ L394:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x2, [x1]
-L396:
+L410:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -7390,6 +7677,210 @@ L396:
 	ldp	x29, x30, [sp], 64
 	ret
 /* end function compiler_lexer_lexer_scan_decimal */
+
+.text
+.balign 4
+_compiler_lexer_lexer_scan_exponent:
+	hint	#34
+	stp	x29, x30, [sp, -64]!
+	mov	x29, sp
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	mov	x23, x2
+	mov	x20, x1
+	mov	x21, x0
+	mov	x0, #1
+	add	x1, x20, x0
+	mov	x19, x1
+	mov	x0, x21
+	bl	_compiler_lexer_lexer_safe_char_str
+	mov	x1, x19
+	mov	x22, x1
+	adrp	x1, _str1467@page
+	add	x1, x1, _str1467@pageoff
+	mov	x19, x0
+	bl	_strcmp
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x19
+	cmp	x2, #0
+	cset	x19, eq
+	mov	x22, x1
+	adrp	x1, _str1470@page
+	add	x1, x1, _str1470@pageoff
+	bl	_strcmp
+	mov	x2, x23
+	mov	x1, x22
+	mov	x3, x0
+	mov	x0, x21
+	cmp	x3, #0
+	mov	x21, x2
+	cset	x2, eq
+	orr	x2, x19, x2
+	mov	x3, #2
+	add	x22, x20, x3
+	cmp	x2, #1
+	beq	L415
+	mov	x19, x0
+	bl	_compiler_lexer_lexer_safe_char_at
+	bl	_compiler_lexer_lexer_is_digit_code
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x19
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	cmp	x2, #1
+	beq	L414
+	mov	x0, #16
+	bl	_malloc
+	str	x20, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
+	str	x0, [x19]
+	b	L420
+L414:
+	bl	_compiler_lexer_lexer_scan_exponent_digits
+	str	x0, [x19]
+	b	L420
+L415:
+	mov	x1, x22
+	mov	x19, x0
+	bl	_compiler_lexer_lexer_safe_char_at
+	bl	_compiler_lexer_lexer_is_digit_code
+	mov	x2, x21
+	mov	x1, x0
+	mov	x0, x19
+	mov	x21, x2
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x1, #1
+	beq	L418
+	mov	x0, #16
+	bl	_malloc
+	mov	x2, x21
+	mov	x1, x20
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x2, [x1]
+	str	x0, [x19]
+	b	L420
+L418:
+	mov	x1, x20
+	mov	x2, #3
+	add	x1, x1, x2
+	bl	_compiler_lexer_lexer_scan_exponent_digits
+	str	x0, [x19]
+L420:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 64
+	ret
+/* end function compiler_lexer_lexer_scan_exponent */
+
+.text
+.balign 4
+_compiler_lexer_lexer_scan_exponent_digits:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	str	x22, [x29, 16]
+	mov	x20, x1
+	mov	x19, x0
+	bl	_donna_string_length
+	mov	x1, x20
+	mov	x2, x0
+	mov	x0, x19
+	cmp	x1, x2
+	mov	x20, x0
+	cset	x0, ge
+	cmp	x0, #1
+	beq	L429
+	mov	x19, x1
+	mov	x0, x20
+	bl	_donna_string_char_str
+	mov	x1, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	mov	x22, x1
+	adrp	x1, _str1521@page
+	add	x1, x1, _str1521@pageoff
+	mov	x21, x0
+	bl	_strcmp
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x21
+	mov	x21, x1
+	mov	x1, #1
+	add	x1, x21, x1
+	cmp	x2, #0
+	beq	L427
+	mov	x22, x1
+	mov	x1, #0
+	bl	_donna_string_char_at
+	bl	_compiler_lexer_lexer_is_digit_code
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x20
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x20, sp
+	cmp	x2, #1
+	beq	L425
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, x21
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	mov	x1, #1
+	str	x1, [x2]
+	str	x0, [x20]
+	b	L426
+L425:
+	bl	_compiler_lexer_lexer_scan_exponent_digits
+	str	x0, [x20]
+L426:
+	str	x0, [x19]
+	b	L431
+L427:
+	mov	x0, x20
+	bl	_compiler_lexer_lexer_scan_exponent_digits
+	str	x0, [x19]
+	b	L431
+L429:
+	mov	x19, x1
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, x19
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	mov	x1, #1
+	str	x1, [x2]
+L431:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldr	x22, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function compiler_lexer_lexer_scan_exponent_digits */
 
 .text
 .balign 4
@@ -7410,15 +7901,15 @@ _compiler_lexer_lexer_scan_hex_digits:
 	mov	x21, x0
 	cset	x0, ge
 	cmp	x0, #1
-	beq	L406
+	beq	L441
 	mov	x1, x20
 	mov	x0, x21
 	bl	_donna_string_char_str
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
-	adrp	x1, _str1422@page
-	add	x1, x1, _str1422@pageoff
+	adrp	x1, _str1553@page
+	add	x1, x1, _str1553@pageoff
 	mov	x22, x0
 	bl	_strcmp
 	mov	x2, x0
@@ -7426,7 +7917,7 @@ _compiler_lexer_lexer_scan_hex_digits:
 	mov	x1, #1
 	add	x1, x20, x1
 	cmp	x2, #0
-	beq	L404
+	beq	L439
 	mov	x22, x1
 	mov	x1, #0
 	bl	_donna_string_char_at
@@ -7438,24 +7929,24 @@ _compiler_lexer_lexer_scan_hex_digits:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	L401
+	beq	L436
 	str	x0, [x20]
-	b	L403
-L401:
+	b	L438
+L436:
 	mov	x0, x21
 	bl	_compiler_lexer_lexer_scan_hex_digits
 	str	x0, [x20]
-L403:
+L438:
 	str	x0, [x19]
-	b	L407
-L404:
+	b	L442
+L439:
 	mov	x0, x21
 	bl	_compiler_lexer_lexer_scan_hex_digits
 	str	x0, [x19]
-	b	L407
-L406:
+	b	L442
+L441:
 	mov	x0, x20
-L407:
+L442:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -7485,15 +7976,15 @@ _compiler_lexer_lexer_scan_binary_digits:
 	mov	x20, x0
 	cset	x0, ge
 	cmp	x0, #1
-	beq	L419
+	beq	L454
 	mov	x1, x21
 	mov	x0, x20
 	bl	_donna_string_char_str
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
-	adrp	x1, _str1451@page
-	add	x1, x1, _str1451@pageoff
+	adrp	x1, _str1582@page
+	add	x1, x1, _str1582@pageoff
 	mov	x22, x0
 	bl	_strcmp
 	mov	x2, x0
@@ -7501,46 +7992,46 @@ _compiler_lexer_lexer_scan_binary_digits:
 	mov	x1, #1
 	add	x1, x21, x1
 	cmp	x2, #0
-	beq	L417
+	beq	L452
 	mov	x23, x1
-	adrp	x1, _str1458@page
-	add	x1, x1, _str1458@pageoff
+	adrp	x1, _str1589@page
+	add	x1, x1, _str1589@pageoff
 	mov	x22, x0
 	bl	_strcmp
 	mov	x1, x23
 	mov	x2, x0
 	mov	x0, x22
 	cmp	x2, #0
-	beq	L415
+	beq	L450
 	mov	x22, x1
-	adrp	x1, _str1465@page
-	add	x1, x1, _str1465@pageoff
+	adrp	x1, _str1596@page
+	add	x1, x1, _str1596@pageoff
 	bl	_strcmp
 	mov	x1, x22
 	mov	x2, x0
 	mov	x0, x21
 	cmp	x2, #0
-	beq	L413
+	beq	L448
 	str	x0, [x19]
-	b	L420
-L413:
+	b	L455
+L448:
 	mov	x0, x20
 	bl	_compiler_lexer_lexer_scan_binary_digits
 	str	x0, [x19]
-	b	L420
-L415:
+	b	L455
+L450:
 	mov	x0, x20
 	bl	_compiler_lexer_lexer_scan_binary_digits
 	str	x0, [x19]
-	b	L420
-L417:
+	b	L455
+L452:
 	mov	x0, x20
 	bl	_compiler_lexer_lexer_scan_binary_digits
 	str	x0, [x19]
-	b	L420
-L419:
+	b	L455
+L454:
 	mov	x0, x21
-L420:
+L455:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -7553,6 +8044,80 @@ L420:
 
 .text
 .balign 4
+_compiler_lexer_lexer_scan_octal_digits:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	str	x22, [x29, 16]
+	mov	x20, x1
+	mov	x19, x0
+	bl	_donna_string_length
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x20, x1
+	mov	x21, x0
+	cset	x0, ge
+	cmp	x0, #1
+	beq	L465
+	mov	x1, x20
+	mov	x0, x21
+	bl	_donna_string_char_str
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	adrp	x1, _str1615@page
+	add	x1, x1, _str1615@pageoff
+	mov	x22, x0
+	bl	_strcmp
+	mov	x2, x0
+	mov	x0, x22
+	mov	x1, #1
+	add	x1, x20, x1
+	cmp	x2, #0
+	beq	L463
+	mov	x22, x1
+	mov	x1, #0
+	bl	_donna_string_char_at
+	bl	_compiler_lexer_lexer_is_octal_digit_code
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x20
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x20, sp
+	cmp	x2, #1
+	beq	L460
+	str	x0, [x20]
+	b	L462
+L460:
+	mov	x0, x21
+	bl	_compiler_lexer_lexer_scan_octal_digits
+	str	x0, [x20]
+L462:
+	str	x0, [x19]
+	b	L466
+L463:
+	mov	x0, x21
+	bl	_compiler_lexer_lexer_scan_octal_digits
+	str	x0, [x19]
+	b	L466
+L465:
+	mov	x0, x20
+L466:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldr	x22, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function compiler_lexer_lexer_scan_octal_digits */
+
+.text
+.balign 4
 _compiler_lexer_lexer_strip_underscores:
 	hint	#34
 	stp	x29, x30, [sp, -32]!
@@ -7562,8 +8127,8 @@ _compiler_lexer_lexer_strip_underscores:
 	bl	_donna_string_length
 	mov	x2, x0
 	mov	x0, x19
-	adrp	x3, _str1475@page
-	add	x3, x3, _str1475@pageoff
+	adrp	x3, _str1635@page
+	add	x3, x3, _str1635@pageoff
 	mov	x1, #0
 	bl	_compiler_lexer_lexer_strip_underscores_acc
 	ldr	x19, [x29, 24]
@@ -7590,7 +8155,7 @@ _compiler_lexer_lexer_strip_underscores_acc:
 	cmp	x21, x22
 	cset	x1, ge
 	cmp	x1, #1
-	beq	L428
+	beq	L474
 	mov	x1, x21
 	mov	x19, x0
 	mov	x0, x20
@@ -7603,8 +8168,8 @@ _compiler_lexer_lexer_strip_underscores_acc:
 	sub	sp, sp, x2
 	mov	x19, sp
 	mov	x24, x1
-	adrp	x1, _str1486@page
-	add	x1, x1, _str1486@pageoff
+	adrp	x1, _str1646@page
+	add	x1, x1, _str1646@pageoff
 	mov	x23, x0
 	mov	x0, x24
 	bl	_strcmp
@@ -7614,7 +8179,7 @@ _compiler_lexer_lexer_strip_underscores_acc:
 	mov	x3, #1
 	add	x21, x21, x3
 	cmp	x2, #0
-	beq	L426
+	beq	L472
 	bl	___rt_str_concat
 	mov	x2, x22
 	mov	x1, x21
@@ -7622,8 +8187,8 @@ _compiler_lexer_lexer_strip_underscores_acc:
 	mov	x0, x20
 	bl	_compiler_lexer_lexer_strip_underscores_acc
 	str	x0, [x19]
-	b	L428
-L426:
+	b	L474
+L472:
 	mov	x1, x21
 	mov	x2, x22
 	mov	x17, x0
@@ -7632,7 +8197,7 @@ L426:
 	mov	x3, x20
 	bl	_compiler_lexer_lexer_strip_underscores_acc
 	str	x0, [x19]
-L428:
+L474:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -7679,7 +8244,7 @@ _compiler_lexer_lexer_parse_hex_acc:
 	mov	x22, x2
 	cset	x2, ge
 	cmp	x2, #1
-	beq	L436
+	beq	L482
 	mov	x19, x1
 	mov	x21, x0
 	bl	_donna_string_char_str
@@ -7690,8 +8255,8 @@ _compiler_lexer_lexer_parse_hex_acc:
 	sub	sp, sp, x2
 	mov	x19, sp
 	mov	x22, x1
-	adrp	x1, _str1509@page
-	add	x1, x1, _str1509@pageoff
+	adrp	x1, _str1669@page
+	add	x1, x1, _str1669@pageoff
 	bl	_strcmp
 	mov	x2, x23
 	mov	x1, x22
@@ -7700,7 +8265,7 @@ _compiler_lexer_lexer_parse_hex_acc:
 	mov	x4, #1
 	add	x22, x1, x4
 	cmp	x3, #0
-	beq	L434
+	beq	L480
 	mov	x23, x2
 	mov	x2, #16
 	mul	x20, x20, x2
@@ -7714,16 +8279,16 @@ _compiler_lexer_lexer_parse_hex_acc:
 	add	x3, x20, x3
 	bl	_compiler_lexer_lexer_parse_hex_acc
 	str	x0, [x19]
-	b	L437
-L434:
+	b	L483
+L480:
 	mov	x1, x22
 	mov	x3, x20
 	bl	_compiler_lexer_lexer_parse_hex_acc
 	str	x0, [x19]
-	b	L437
-L436:
+	b	L483
+L482:
 	mov	x0, x20
-L437:
+L483:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -7772,7 +8337,7 @@ _compiler_lexer_lexer_parse_binary_acc:
 	mov	x20, x0
 	cset	x0, ge
 	cmp	x0, #1
-	beq	L447
+	beq	L493
 	mov	x19, x1
 	mov	x0, x21
 	bl	_donna_string_char_str
@@ -7783,8 +8348,8 @@ _compiler_lexer_lexer_parse_binary_acc:
 	sub	sp, sp, x2
 	mov	x19, sp
 	mov	x24, x1
-	adrp	x1, _str1535@page
-	add	x1, x1, _str1535@pageoff
+	adrp	x1, _str1695@page
+	add	x1, x1, _str1695@pageoff
 	mov	x22, x0
 	bl	_strcmp
 	mov	x1, x24
@@ -7793,10 +8358,10 @@ _compiler_lexer_lexer_parse_binary_acc:
 	mov	x3, #1
 	add	x1, x1, x3
 	cmp	x2, #0
-	beq	L445
+	beq	L491
 	mov	x22, x1
-	adrp	x1, _str1542@page
-	add	x1, x1, _str1542@pageoff
+	adrp	x1, _str1702@page
+	add	x1, x1, _str1702@pageoff
 	bl	_strcmp
 	mov	x2, x23
 	mov	x1, x22
@@ -7805,26 +8370,26 @@ _compiler_lexer_lexer_parse_binary_acc:
 	mov	x3, #2
 	mul	x3, x20, x3
 	cmp	x4, #0
-	beq	L444
+	beq	L490
 	bl	_compiler_lexer_lexer_parse_binary_acc
 	str	x0, [x19]
-	b	L448
-L444:
+	b	L494
+L490:
 	mov	x4, #1
 	add	x3, x3, x4
 	bl	_compiler_lexer_lexer_parse_binary_acc
 	str	x0, [x19]
-	b	L448
-L445:
+	b	L494
+L491:
 	mov	x2, x23
 	mov	x0, x21
 	mov	x3, x20
 	bl	_compiler_lexer_lexer_parse_binary_acc
 	str	x0, [x19]
-	b	L448
-L447:
+	b	L494
+L493:
 	mov	x0, x20
-L448:
+L494:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -7835,6 +8400,97 @@ L448:
 	ldp	x29, x30, [sp], 64
 	ret
 /* end function compiler_lexer_lexer_parse_binary_acc */
+
+.text
+.balign 4
+_compiler_lexer_lexer_parse_octal_str:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	bl	_donna_string_length
+	mov	x2, x0
+	mov	x0, x19
+	mov	x3, #0
+	mov	x1, #0
+	bl	_compiler_lexer_lexer_parse_octal_acc
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function compiler_lexer_lexer_parse_octal_str */
+
+.text
+.balign 4
+_compiler_lexer_lexer_parse_octal_acc:
+	hint	#34
+	stp	x29, x30, [sp, -64]!
+	mov	x29, sp
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	mov	x20, x3
+	cmp	x1, x2
+	mov	x22, x2
+	cset	x2, ge
+	cmp	x2, #1
+	beq	L502
+	mov	x19, x1
+	mov	x21, x0
+	bl	_donna_string_char_str
+	mov	x2, x22
+	mov	x1, x19
+	mov	x23, x2
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	mov	x22, x1
+	adrp	x1, _str1727@page
+	add	x1, x1, _str1727@pageoff
+	bl	_strcmp
+	mov	x2, x23
+	mov	x1, x22
+	mov	x3, x0
+	mov	x0, x21
+	mov	x4, #1
+	add	x22, x1, x4
+	cmp	x3, #0
+	beq	L500
+	mov	x23, x2
+	mov	x2, #8
+	mul	x20, x20, x2
+	mov	x21, x0
+	bl	_donna_string_char_at
+	mov	x2, x23
+	mov	x1, x22
+	mov	x3, x0
+	mov	x0, x21
+	mov	x4, #48
+	sub	x3, x3, x4
+	add	x3, x20, x3
+	bl	_compiler_lexer_lexer_parse_octal_acc
+	str	x0, [x19]
+	b	L503
+L500:
+	mov	x1, x22
+	mov	x3, x20
+	bl	_compiler_lexer_lexer_parse_octal_acc
+	str	x0, [x19]
+	b	L503
+L502:
+	mov	x0, x20
+L503:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 64
+	ret
+/* end function compiler_lexer_lexer_parse_octal_acc */
 
 .text
 .balign 4
@@ -7853,7 +8509,7 @@ _compiler_lexer_lexer_all_hex_digits:
 	cmp	x1, x2
 	cset	x2, ge
 	cmp	x2, #1
-	beq	L454
+	beq	L509
 	mov	x20, x1
 	mov	x19, x0
 	bl	_donna_string_char_at
@@ -7865,26 +8521,42 @@ _compiler_lexer_lexer_all_hex_digits:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #0
-	beq	L452
+	beq	L507
 	mov	x2, #1
 	add	x1, x1, x2
 	bl	_compiler_lexer_lexer_all_hex_digits
 	str	x0, [x19]
-	b	L455
-L452:
+	b	L510
+L507:
 	mov	x0, #0
 	str	x0, [x19]
 	mov	x0, #0
-	b	L455
-L454:
+	b	L510
+L509:
 	mov	x0, #1
-L455:
+L510:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
 	ret
 /* end function compiler_lexer_lexer_all_hex_digits */
+
+.text
+.balign 4
+_compiler_lexer_lexer_is_octal_digit_code:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	mov	x1, x0
+	cmp	x1, #48
+	cset	x0, ge
+	cmp	x1, #55
+	cset	x1, le
+	and	x0, x0, x1
+	ldp	x29, x30, [sp], 16
+	ret
+/* end function compiler_lexer_lexer_is_octal_digit_code */
 
 .text
 .balign 4
@@ -7898,7 +8570,7 @@ _compiler_lexer_lexer_hex_val:
 	cset	x2, le
 	and	x1, x1, x2
 	cmp	x1, #1
-	beq	L464
+	beq	L521
 	cmp	x0, #65
 	cset	x1, ge
 	cmp	x0, #70
@@ -7908,7 +8580,7 @@ _compiler_lexer_lexer_hex_val:
 	sub	sp, sp, x1
 	mov	x1, sp
 	cmp	x2, #1
-	beq	L463
+	beq	L520
 	cmp	x0, #97
 	cset	x2, ge
 	cmp	x0, #102
@@ -7918,27 +8590,27 @@ _compiler_lexer_lexer_hex_val:
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x3, #1
-	beq	L461
+	beq	L518
 	mov	x0, #0
 	str	x0, [x2]
 	mov	x0, #0
-	b	L462
-L461:
+	b	L519
+L518:
 	mov	x3, #87
 	sub	x0, x0, x3
 	str	x0, [x2]
-L462:
+L519:
 	str	x0, [x1]
-	b	L465
-L463:
+	b	L522
+L520:
 	mov	x2, #55
 	sub	x0, x0, x2
 	str	x0, [x1]
-	b	L465
-L464:
+	b	L522
+L521:
 	mov	x1, #48
 	sub	x0, x0, x1
-L465:
+L522:
 	mov sp, x29
 	ldp	x29, x30, [sp], 16
 	ret
@@ -7970,15 +8642,15 @@ _compiler_lexer_lexer_lex_ident:
 	mov	x1, x22
 	mov	x19, x0
 	bl	_donna_string_char_str
-	adrp	x1, _str1605@page
-	add	x1, x1, _str1605@pageoff
+	adrp	x1, _str1794@page
+	add	x1, x1, _str1794@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
 	cset	x1, eq
 	cmp	x1, #1
-	beq	L468
+	beq	L525
 	mov	x1, x22
 	mov	x19, x0
 	bl	_compiler_lexer_lexer_scan_ident
@@ -8054,8 +8726,8 @@ _compiler_lexer_lexer_lex_ident:
 	bl	_compiler_lexer_lexer_push_at
 	mov	x1, #32
 	add	sp, sp, x1
-	b	L470
-L468:
+	b	L527
+L525:
 	mov	x26, x21
 	mov	x21, x20
 	mov	x1, #1
@@ -8129,7 +8801,7 @@ L468:
 	bl	_compiler_lexer_lexer_push_at
 	mov	x1, #32
 	add	sp, sp, x1
-L470:
+L527:
 	ldr	x19, [x29, 152]
 	ldr	x20, [x29, 144]
 	ldr	x21, [x29, 136]
@@ -8161,15 +8833,15 @@ _compiler_lexer_lexer_scan_ident:
 	mov	x21, x0
 	cset	x0, ge
 	cmp	x0, #1
-	beq	L480
+	beq	L537
 	mov	x1, x20
 	mov	x0, x21
 	bl	_donna_string_char_str
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
-	adrp	x1, _str1651@page
-	add	x1, x1, _str1651@pageoff
+	adrp	x1, _str1840@page
+	add	x1, x1, _str1840@pageoff
 	mov	x22, x0
 	bl	_strcmp
 	mov	x2, x0
@@ -8177,7 +8849,7 @@ _compiler_lexer_lexer_scan_ident:
 	mov	x1, #1
 	add	x1, x20, x1
 	cmp	x2, #0
-	beq	L478
+	beq	L535
 	mov	x22, x1
 	mov	x1, #0
 	bl	_donna_string_char_at
@@ -8189,24 +8861,24 @@ _compiler_lexer_lexer_scan_ident:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	L475
+	beq	L532
 	str	x0, [x20]
-	b	L477
-L475:
+	b	L534
+L532:
 	mov	x0, x21
 	bl	_compiler_lexer_lexer_scan_ident
 	str	x0, [x20]
-L477:
+L534:
 	str	x0, [x19]
-	b	L481
-L478:
+	b	L538
+L535:
 	mov	x0, x21
 	bl	_compiler_lexer_lexer_scan_ident
 	str	x0, [x19]
-	b	L481
-L480:
+	b	L538
+L537:
 	mov	x0, x20
-L481:
+L538:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -8223,134 +8895,134 @@ _compiler_lexer_lexer_resolve_keyword:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, _str1672@page
-	add	x1, x1, _str1672@pageoff
+	adrp	x1, _str1861@page
+	add	x1, x1, _str1861@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L516
-	adrp	x1, _str1677@page
-	add	x1, x1, _str1677@pageoff
+	beq	L573
+	adrp	x1, _str1866@page
+	add	x1, x1, _str1866@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L515
-	adrp	x1, _str1682@page
-	add	x1, x1, _str1682@pageoff
+	beq	L572
+	adrp	x1, _str1871@page
+	add	x1, x1, _str1871@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L514
-	adrp	x1, _str1687@page
-	add	x1, x1, _str1687@pageoff
+	beq	L571
+	adrp	x1, _str1876@page
+	add	x1, x1, _str1876@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L513
-	adrp	x1, _str1692@page
-	add	x1, x1, _str1692@pageoff
+	beq	L570
+	adrp	x1, _str1881@page
+	add	x1, x1, _str1881@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L512
-	adrp	x1, _str1697@page
-	add	x1, x1, _str1697@pageoff
+	beq	L569
+	adrp	x1, _str1886@page
+	add	x1, x1, _str1886@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L511
-	adrp	x1, _str1702@page
-	add	x1, x1, _str1702@pageoff
+	beq	L568
+	adrp	x1, _str1891@page
+	add	x1, x1, _str1891@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L510
-	adrp	x1, _str1707@page
-	add	x1, x1, _str1707@pageoff
+	beq	L567
+	adrp	x1, _str1896@page
+	add	x1, x1, _str1896@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L509
-	adrp	x1, _str1712@page
-	add	x1, x1, _str1712@pageoff
+	beq	L566
+	adrp	x1, _str1901@page
+	add	x1, x1, _str1901@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L508
-	adrp	x1, _str1717@page
-	add	x1, x1, _str1717@pageoff
+	beq	L565
+	adrp	x1, _str1906@page
+	add	x1, x1, _str1906@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L507
-	adrp	x1, _str1722@page
-	add	x1, x1, _str1722@pageoff
+	beq	L564
+	adrp	x1, _str1911@page
+	add	x1, x1, _str1911@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L506
-	adrp	x1, _str1727@page
-	add	x1, x1, _str1727@pageoff
+	beq	L563
+	adrp	x1, _str1916@page
+	add	x1, x1, _str1916@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L505
-	adrp	x1, _str1732@page
-	add	x1, x1, _str1732@pageoff
+	beq	L562
+	adrp	x1, _str1921@page
+	add	x1, x1, _str1921@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L504
-	adrp	x1, _str1737@page
-	add	x1, x1, _str1737@pageoff
+	beq	L561
+	adrp	x1, _str1926@page
+	add	x1, x1, _str1926@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L503
-	adrp	x1, _str1742@page
-	add	x1, x1, _str1742@pageoff
+	beq	L560
+	adrp	x1, _str1931@page
+	add	x1, x1, _str1931@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L502
-	adrp	x1, _str1748@page
-	add	x1, x1, _str1748@pageoff
+	beq	L559
+	adrp	x1, _str1937@page
+	add	x1, x1, _str1937@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L501
+	beq	L558
 	mov	x1, #0
 	mov	x19, x0
 	bl	_donna_string_char_at
@@ -8361,78 +9033,78 @@ _compiler_lexer_lexer_resolve_keyword:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L500
+	beq	L557
 	bl	_compiler_lexer_token_TokName
 	str	x0, [x19]
-	b	L517
-L500:
+	b	L574
+L557:
 	bl	_compiler_lexer_token_TokUpperName
 	str	x0, [x19]
-	b	L517
-L501:
+	b	L574
+L558:
 	mov	x0, #0
 	bl	_compiler_lexer_token_TokBool
-	b	L517
-L502:
+	b	L574
+L559:
 	mov	x0, #1
 	bl	_compiler_lexer_token_TokBool
-	b	L517
-L503:
+	b	L574
+L560:
 	adrp	x0, _compiler_lexer_token_TokType@page
 	add	x0, x0, _compiler_lexer_token_TokType@pageoff
-	b	L517
-L504:
+	b	L574
+L561:
 	adrp	x0, _compiler_lexer_token_TokTodo@page
 	add	x0, x0, _compiler_lexer_token_TokTodo@pageoff
-	b	L517
-L505:
+	b	L574
+L562:
 	adrp	x0, _compiler_lexer_token_TokPub@page
 	add	x0, x0, _compiler_lexer_token_TokPub@pageoff
-	b	L517
-L506:
+	b	L574
+L563:
 	adrp	x0, _compiler_lexer_token_TokPanic@page
 	add	x0, x0, _compiler_lexer_token_TokPanic@pageoff
-	b	L517
-L507:
+	b	L574
+L564:
 	adrp	x0, _compiler_lexer_token_TokOpaque@page
 	add	x0, x0, _compiler_lexer_token_TokOpaque@pageoff
-	b	L517
-L508:
+	b	L574
+L565:
 	adrp	x0, _compiler_lexer_token_TokLet@page
 	add	x0, x0, _compiler_lexer_token_TokLet@pageoff
-	b	L517
-L509:
+	b	L574
+L566:
 	adrp	x0, _compiler_lexer_token_TokImport@page
 	add	x0, x0, _compiler_lexer_token_TokImport@pageoff
-	b	L517
-L510:
+	b	L574
+L567:
 	adrp	x0, _compiler_lexer_token_TokIf@page
 	add	x0, x0, _compiler_lexer_token_TokIf@pageoff
-	b	L517
-L511:
+	b	L574
+L568:
 	adrp	x0, _compiler_lexer_token_TokFn@page
 	add	x0, x0, _compiler_lexer_token_TokFn@pageoff
-	b	L517
-L512:
+	b	L574
+L569:
 	adrp	x0, _compiler_lexer_token_TokExternal@page
 	add	x0, x0, _compiler_lexer_token_TokExternal@pageoff
-	b	L517
-L513:
+	b	L574
+L570:
 	adrp	x0, _compiler_lexer_token_TokEcho@page
 	add	x0, x0, _compiler_lexer_token_TokEcho@pageoff
-	b	L517
-L514:
+	b	L574
+L571:
 	adrp	x0, _compiler_lexer_token_TokConst@page
 	add	x0, x0, _compiler_lexer_token_TokConst@pageoff
-	b	L517
-L515:
+	b	L574
+L572:
 	adrp	x0, _compiler_lexer_token_TokCase@page
 	add	x0, x0, _compiler_lexer_token_TokCase@pageoff
-	b	L517
-L516:
+	b	L574
+L573:
 	adrp	x0, _compiler_lexer_token_TokAs@page
 	add	x0, x0, _compiler_lexer_token_TokAs@pageoff
-L517:
+L574:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -8581,13 +9253,13 @@ _compiler_lexer_lexer_safe_char_str:
 	cmp	x1, x2
 	cset	x2, ge
 	cmp	x2, #1
-	beq	L532
+	beq	L589
 	bl	_donna_string_char_str
-	b	L533
-L532:
-	adrp	x0, _str1800@page
-	add	x0, x0, _str1800@pageoff
-L533:
+	b	L590
+L589:
+	adrp	x0, _str1989@page
+	add	x0, x0, _str1989@pageoff
+L590:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -8611,12 +9283,12 @@ _compiler_lexer_lexer_safe_char_at:
 	cmp	x1, x2
 	cset	x2, ge
 	cmp	x2, #1
-	beq	L536
+	beq	L593
 	bl	_donna_string_char_at
-	b	L537
-L536:
+	b	L594
+L593:
 	mov	x0, #0
-L537:
+L594:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -9031,14 +9703,14 @@ _compiler_lexer_lexer_list_head:
 	mov	x29, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L552
+	beq	L609
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	L553
-L552:
+	b	L610
+L609:
 	mov	x0, x1
-L553:
+L610:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function compiler_lexer_lexer_list_head */

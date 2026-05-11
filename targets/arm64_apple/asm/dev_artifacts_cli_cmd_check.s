@@ -14,28 +14,7 @@ _str12:
 
 .data
 .balign 8
-_str19:
-	.ascii ".donna"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str28:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str30:
-	.ascii ": entry point not found: "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str45:
+_str27:
 	.ascii "donna.toml"
 	.byte 0
 /* end data */
@@ -48,191 +27,163 @@ _donna_nil:
 
 .data
 .balign 8
-_str57:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str59:
-	.ascii ": "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str65:
+_str42:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str75:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str77:
-	.ascii ": "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str84:
+_str56:
 	.ascii "check ok"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str86:
+_str58:
 	.ascii "  no errors"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str102:
+_str74:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str106:
+_str78:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str108:
+_str80:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str148:
+_str120:
 	.ascii "lex"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str161:
+_str133:
 	.ascii "parse"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str190:
+_str162:
 	.ascii "check ok"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str192:
+_str164:
 	.ascii "  no errors or warnings"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str197:
+_str169:
 	.ascii "warning"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str199:
+_str171:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str202:
+_str174:
 	.ascii " warning(s)"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str178:
+	.byte 10
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str180:
+	.byte 10
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str195:
+	.ascii "error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str197:
+	.ascii ": found "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str200:
+	.ascii " error(s)"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str204:
+	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str206:
-	.byte 10
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str208:
-	.byte 10
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str223:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str225:
 	.ascii ": found "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str228:
-	.ascii " error(s)"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str232:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str234:
-	.ascii ": found "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str237:
+_str209:
 	.ascii " error(s), "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str241:
+_str213:
 	.ascii " warning(s)"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str246:
+_str218:
 	.byte 10
 	.byte 10
 	.byte 0
@@ -240,7 +191,7 @@ _str246:
 
 .data
 .balign 8
-_str248:
+_str220:
 	.byte 10
 	.byte 10
 	.byte 0
@@ -248,35 +199,35 @@ _str248:
 
 .data
 .balign 8
-_str253:
+_str225:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str255:
+_str227:
 	.ascii ": found "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str258:
+_str230:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str261:
+_str233:
 	.ascii " error(s)"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str265:
+_str237:
 	.byte 10
 	.byte 10
 	.byte 0
@@ -284,7 +235,7 @@ _str265:
 
 .data
 .balign 8
-_str267:
+_str239:
 	.byte 10
 	.byte 10
 	.byte 0
@@ -292,14 +243,14 @@ _str267:
 
 .data
 .balign 8
-_str310:
+_str282:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str323:
+_str295:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -309,71 +260,24 @@ _str323:
 .globl _cli_cmd_check_run
 _cli_cmd_check_run:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
+	str	x19, [x29, 24]
 	bl	_cli_cmd_check_first_positional
 	mov	x19, x0
 	bl	_builder_scanner_scan
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	L5
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x21, [x0]
-	mov	x0, x21
-	bl	_builder_scanner_project_name
-	mov	x20, x0
-	mov	x0, x21
-	bl	_builder_scanner_project_src_dir
-	mov	x1, x21
-	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	mov	x21, x1
-	adrp	x1, _str19@page
-	add	x1, x1, _str19@pageoff
-	bl	___rt_str_concat
 	mov	x1, x0
-	mov	x0, x20
-	bl	_donna_files_join
-	mov	x20, x0
 	mov	x0, x19
-	mov	x19, x0
-	mov	x0, x20
-	bl	_donna_files_exists
-	mov	x1, x21
-	mov	x2, x0
-	mov	x0, x19
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	cmp	x2, #0
-	beq	L3
+	ldr	x2, [x1]
+	cmp	x2, #1
+	beq	L2
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x1, [x1]
 	bl	_cli_cmd_check_check_project
-	str	x0, [x19]
-	b	L6
-L3:
-	mov	x0, x20
-	mov	x20, x0
-	adrp	x0, _str28@page
-	add	x0, x0, _str28@pageoff
-	bl	_utilities_colors_red
-	adrp	x1, _str30@page
-	add	x1, x1, _str30@pageoff
-	bl	___rt_str_concat
-	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	bl	_utilities_colors_dim
-	mov	x1, x0
-	mov	x0, x20
-	bl	___rt_str_concat
-	str	x0, [x19]
-	b	L6
-L5:
+	b	L4
+L2:
+	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x19, [x0]
@@ -387,12 +291,9 @@ L5:
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
-L6:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	mov sp, x29
-	ldp	x29, x30, [sp], 48
+L4:
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
 	ret
 /* end function cli_cmd_check_run */
 
@@ -441,8 +342,8 @@ _cli_cmd_check_check_project:
 	mov	x1, x23
 	mov	x0, x19
 	mov	x23, x1
-	adrp	x1, _str45@page
-	add	x1, x1, _str45@pageoff
+	adrp	x1, _str27@page
+	add	x1, x1, _str27@pageoff
 	mov	x19, x0
 	mov	x0, x23
 	bl	_donna_files_join
@@ -459,7 +360,7 @@ _cli_cmd_check_check_project:
 	mov	x0, x19
 	ldr	x3, [x1]
 	cmp	x3, #1
-	beq	L11
+	beq	L9
 	mov	x19, x2
 	mov	x2, #8
 	add	x1, x1, x2
@@ -468,62 +369,42 @@ _cli_cmd_check_check_project:
 	mov	x3, x21
 	mov	x2, x19
 	mov	x4, #0
-	adrp	x1, _str65@page
-	add	x1, x1, _str65@pageoff
+	adrp	x1, _str42@page
+	add	x1, x1, _str42@pageoff
 	bl	_builder_pipeline_compile_dir
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L10
+	beq	L8
 	bl	_donna_time_now_us
 	sub	x0, x0, x20
 	bl	_utilities_logger_check_ok
-	adrp	x0, _str84@page
-	add	x0, x0, _str84@pageoff
+	adrp	x0, _str56@page
+	add	x0, x0, _str56@pageoff
 	bl	_utilities_colors_green
 	mov	x20, x0
-	adrp	x0, _str86@page
-	add	x0, x0, _str86@pageoff
+	adrp	x0, _str58@page
+	add	x0, x0, _str58@pageoff
 	bl	_utilities_colors_dim
 	mov	x1, x0
 	mov	x0, x20
 	bl	___rt_str_concat
 	str	x0, [x19]
-	b	L13
-L10:
+	b	L11
+L8:
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x20, [x0]
-	adrp	x0, _str75@page
-	add	x0, x0, _str75@pageoff
-	bl	_utilities_colors_red
-	mov	x1, x20
-	mov	x20, x1
-	adrp	x1, _str77@page
-	add	x1, x1, _str77@pageoff
-	bl	___rt_str_concat
-	mov	x1, x20
-	bl	___rt_str_concat
+	ldr	x0, [x0]
 	str	x0, [x19]
-	b	L13
-L11:
+	b	L11
+L9:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x19, [x0]
-	adrp	x0, _str57@page
-	add	x0, x0, _str57@pageoff
-	bl	_utilities_colors_red
-	mov	x1, x19
-	mov	x19, x1
-	adrp	x1, _str59@page
-	add	x1, x1, _str59@pageoff
-	bl	___rt_str_concat
-	mov	x1, x19
-	bl	___rt_str_concat
-L13:
+	ldr	x0, [x0]
+L11:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -551,7 +432,7 @@ _cli_cmd_check_compile_deps:
 	mov	x19, x2
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L19
+	beq	L17
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x22, [x2]
@@ -559,8 +440,8 @@ _cli_cmd_check_compile_deps:
 	add	x0, x0, x2
 	ldr	x20, [x0]
 	mov	x21, x1
-	adrp	x1, _str102@page
-	add	x1, x1, _str102@pageoff
+	adrp	x1, _str74@page
+	add	x1, x1, _str74@pageoff
 	mov	x0, x21
 	bl	_donna_files_join
 	mov	x23, x0
@@ -571,16 +452,16 @@ _cli_cmd_check_compile_deps:
 	bl	_donna_files_join
 	mov	x1, x21
 	mov	x23, x1
-	adrp	x1, _str106@page
-	add	x1, x1, _str106@pageoff
+	adrp	x1, _str78@page
+	add	x1, x1, _str78@pageoff
 	mov	x21, x0
 	bl	_donna_files_join
 	mov	x1, x23
 	mov	x23, x0
 	mov	x0, x21
 	mov	x21, x1
-	adrp	x1, _str108@page
-	add	x1, x1, _str108@pageoff
+	adrp	x1, _str80@page
+	add	x1, x1, _str80@pageoff
 	mov	x24, x0
 	mov	x0, x21
 	bl	_donna_files_join
@@ -611,7 +492,7 @@ _cli_cmd_check_compile_deps:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	L17
+	beq	L15
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -622,19 +503,19 @@ _cli_cmd_check_compile_deps:
 	mov	x0, x20
 	bl	_cli_cmd_check_compile_deps
 	str	x0, [x19]
-	b	L21
-L17:
+	b	L19
+L15:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_donna_result_Error
 	str	x0, [x19]
-	b	L21
-L19:
+	b	L19
+L17:
 	mov	x0, x19
 	bl	_donna_result_Ok
-L21:
+L19:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -672,7 +553,7 @@ _cli_cmd_check_check_file:
 	mov	x1, x19
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	L31
+	beq	L29
 	mov	x19, x1
 	mov	x1, #8
 	add	x0, x0, x1
@@ -684,7 +565,7 @@ _cli_cmd_check_check_file:
 	mov	x19, sp
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	L29
+	beq	L27
 	mov	x21, x1
 	mov	x1, #8
 	add	x0, x0, x1
@@ -703,7 +584,7 @@ _cli_cmd_check_check_file:
 	mov	x21, x1
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L26
+	beq	L24
 	bl	_donna_time_now_us
 	sub	x0, x0, x23
 	bl	_utilities_logger_check_ok
@@ -711,8 +592,8 @@ _cli_cmd_check_check_file:
 	mov	x0, x21
 	bl	_cli_cmd_check_render_check_ok
 	str	x0, [x20]
-	b	L28
-L26:
+	b	L26
+L24:
 	mov	x1, x21
 	mov	x21, x22
 	mov	x2, #8
@@ -721,28 +602,28 @@ L26:
 	mov	x2, x21
 	bl	_cli_cmd_check_render_errors_and_warnings
 	str	x0, [x20]
-L28:
+L26:
 	str	x0, [x19]
-	b	L33
+	b	L31
+L27:
+	mov	x1, x22
+	mov	x2, #8
+	add	x0, x0, x2
+	ldr	x0, [x0]
+	adrp	x2, _str133@page
+	add	x2, x2, _str133@pageoff
+	bl	_cli_cmd_check_render_phase_errors
+	str	x0, [x19]
+	b	L31
 L29:
 	mov	x1, x22
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
-	adrp	x2, _str161@page
-	add	x2, x2, _str161@pageoff
+	adrp	x2, _str120@page
+	add	x2, x2, _str120@pageoff
 	bl	_cli_cmd_check_render_phase_errors
-	str	x0, [x19]
-	b	L33
 L31:
-	mov	x1, x22
-	mov	x2, #8
-	add	x0, x0, x2
-	ldr	x0, [x0]
-	adrp	x2, _str148@page
-	add	x2, x2, _str148@pageoff
-	bl	_cli_cmd_check_render_phase_errors
-L33:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -768,7 +649,7 @@ _cli_cmd_check_render_check_ok:
 	mov	x2, x0
 	mov	x0, x19
 	cmp	x2, #1
-	beq	L36
+	beq	L34
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
 	mov	x19, x0
@@ -778,8 +659,8 @@ _cli_cmd_check_render_check_ok:
 	mov	x19, x17
 	bl	_donna_list_length
 	mov	x20, x0
-	adrp	x0, _str197@page
-	add	x0, x0, _str197@pageoff
+	adrp	x0, _str169@page
+	add	x0, x0, _str169@pageoff
 	bl	_utilities_colors_yellow
 	mov	x17, x0
 	mov	x0, x20
@@ -788,11 +669,11 @@ _cli_cmd_check_render_check_ok:
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, _str199@page
-	add	x0, x0, _str199@pageoff
+	adrp	x0, _str171@page
+	add	x0, x0, _str171@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str202@page
-	add	x1, x1, _str202@pageoff
+	adrp	x1, _str174@page
+	add	x1, x1, _str174@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_bold
 	mov	x1, x0
@@ -801,29 +682,29 @@ _cli_cmd_check_render_check_ok:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x1
-	adrp	x1, _str206@page
-	add	x1, x1, _str206@pageoff
+	adrp	x1, _str178@page
+	add	x1, x1, _str178@pageoff
 	bl	_donna_string_join
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str208@page
-	add	x1, x1, _str208@pageoff
+	adrp	x1, _str180@page
+	add	x1, x1, _str180@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
-	b	L37
-L36:
-	adrp	x0, _str190@page
-	add	x0, x0, _str190@pageoff
+	b	L35
+L34:
+	adrp	x0, _str162@page
+	add	x0, x0, _str162@pageoff
 	bl	_utilities_colors_green
 	mov	x19, x0
-	adrp	x0, _str192@page
-	add	x0, x0, _str192@pageoff
+	adrp	x0, _str164@page
+	add	x0, x0, _str164@pageoff
 	bl	_utilities_colors_dim
 	mov	x1, x0
 	mov	x0, x19
 	bl	___rt_str_concat
-L37:
+L35:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -869,10 +750,10 @@ _cli_cmd_check_render_errors_and_warnings:
 	cmp	x21, #0
 	cset	x1, eq
 	cmp	x1, #1
-	beq	L41
+	beq	L39
 	mov	x20, x0
-	adrp	x0, _str232@page
-	add	x0, x0, _str232@pageoff
+	adrp	x0, _str204@page
+	add	x0, x0, _str204@pageoff
 	bl	_utilities_colors_error_header
 	mov	x17, x0
 	mov	x0, x20
@@ -881,11 +762,11 @@ _cli_cmd_check_render_errors_and_warnings:
 	mov	x1, x0
 	mov	x0, x21
 	mov	x21, x0
-	adrp	x0, _str234@page
-	add	x0, x0, _str234@pageoff
+	adrp	x0, _str206@page
+	add	x0, x0, _str206@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str237@page
-	add	x1, x1, _str237@pageoff
+	adrp	x1, _str209@page
+	add	x1, x1, _str209@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x21
@@ -894,8 +775,8 @@ _cli_cmd_check_render_errors_and_warnings:
 	mov	x1, x0
 	mov	x0, x21
 	bl	___rt_str_concat
-	adrp	x1, _str241@page
-	add	x1, x1, _str241@pageoff
+	adrp	x1, _str213@page
+	add	x1, x1, _str213@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_bold
 	mov	x1, x0
@@ -903,11 +784,11 @@ _cli_cmd_check_render_errors_and_warnings:
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x0, x19
-	b	L42
-L41:
+	b	L40
+L39:
 	mov	x20, x0
-	adrp	x0, _str223@page
-	add	x0, x0, _str223@pageoff
+	adrp	x0, _str195@page
+	add	x0, x0, _str195@pageoff
 	bl	_utilities_colors_error_header
 	mov	x17, x0
 	mov	x0, x20
@@ -916,11 +797,11 @@ L41:
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, _str225@page
-	add	x0, x0, _str225@pageoff
+	adrp	x0, _str197@page
+	add	x0, x0, _str197@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str228@page
-	add	x1, x1, _str228@pageoff
+	adrp	x1, _str200@page
+	add	x1, x1, _str200@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_bold
 	mov	x1, x0
@@ -928,15 +809,15 @@ L41:
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x0, x19
-L42:
+L40:
 	mov	x19, x1
-	adrp	x1, _str246@page
-	add	x1, x1, _str246@pageoff
+	adrp	x1, _str218@page
+	add	x1, x1, _str218@pageoff
 	bl	_donna_string_join
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str248@page
-	add	x1, x1, _str248@pageoff
+	adrp	x1, _str220@page
+	add	x1, x1, _str220@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -966,8 +847,8 @@ _cli_cmd_check_render_phase_errors:
 	mov	x19, x17
 	bl	_donna_list_length
 	mov	x20, x0
-	adrp	x0, _str253@page
-	add	x0, x0, _str253@pageoff
+	adrp	x0, _str225@page
+	add	x0, x0, _str225@pageoff
 	bl	_utilities_colors_error_header
 	mov	x17, x0
 	mov	x0, x20
@@ -976,18 +857,18 @@ _cli_cmd_check_render_phase_errors:
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, _str255@page
-	add	x0, x0, _str255@pageoff
+	adrp	x0, _str227@page
+	add	x0, x0, _str227@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, _str258@page
-	add	x1, x1, _str258@pageoff
+	adrp	x1, _str230@page
+	add	x1, x1, _str230@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	bl	___rt_str_concat
-	adrp	x1, _str261@page
-	add	x1, x1, _str261@pageoff
+	adrp	x1, _str233@page
+	add	x1, x1, _str233@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_bold
 	mov	x1, x0
@@ -996,13 +877,13 @@ _cli_cmd_check_render_phase_errors:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x1
-	adrp	x1, _str265@page
-	add	x1, x1, _str265@pageoff
+	adrp	x1, _str237@page
+	add	x1, x1, _str237@pageoff
 	bl	_donna_string_join
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str267@page
-	add	x1, x1, _str267@pageoff
+	adrp	x1, _str239@page
+	add	x1, x1, _str239@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -1029,7 +910,7 @@ _cli_cmd_check_render_errors:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	L48
+	beq	L46
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -1056,11 +937,11 @@ _cli_cmd_check_render_errors:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	_cli_cmd_check_render_errors
-	b	L50
-L48:
+	b	L48
+L46:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L50:
+L48:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1085,7 +966,7 @@ _cli_cmd_check_render_warnings:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	L53
+	beq	L51
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -1112,11 +993,11 @@ _cli_cmd_check_render_warnings:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	_cli_cmd_check_render_warnings
-	b	L55
-L53:
+	b	L53
+L51:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L55:
+L53:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1135,24 +1016,24 @@ _cli_cmd_check_first_positional:
 	str	x20, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L64
+	beq	L62
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L60
+	beq	L58
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x1, #0
-	b	L61
-L60:
+	b	L59
+L58:
 	mov	x20, x0
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, _str323@page
-	add	x1, x1, _str323@pageoff
+	adrp	x1, _str295@page
+	add	x1, x1, _str295@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -1161,26 +1042,26 @@ L60:
 	mov	x2, #1
 	and	x1, x1, x2
 	str	x1, [x19]
-L61:
+L59:
 	cmp	w1, #0
-	bne	L63
+	bne	L61
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_cli_cmd_check_first_positional
-	b	L65
+	b	L63
+L61:
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	b	L63
+L62:
+	adrp	x0, _str282@page
+	add	x0, x0, _str282@pageoff
 L63:
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	b	L65
-L64:
-	adrp	x0, _str310@page
-	add	x0, x0, _str310@pageoff
-L65:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29

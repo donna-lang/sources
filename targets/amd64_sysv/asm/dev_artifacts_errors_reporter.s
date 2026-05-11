@@ -59,28 +59,28 @@ str42:
 
 .data
 .balign 8
-str48:
+str49:
 	.ascii "^"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str50:
+str51:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str53:
+str54:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str59:
+str60:
 	.ascii " "
 	.byte 226
 	.byte 148
@@ -90,31 +90,44 @@ str59:
 
 .data
 .balign 8
-str62:
+str63:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str65:
+str66:
 	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str74:
-	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str75:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str76:
 	.byte 10
 	.byte 10
-	.ascii "hint: "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str77:
+	.ascii "hint:"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str80:
+	.ascii " "
 	.byte 0
 /* end data */
 
@@ -126,7 +139,7 @@ donna_nil:
 
 .data
 .balign 8
-str84:
+str90:
 	.ascii " "
 	.byte 226
 	.byte 148
@@ -136,21 +149,21 @@ str84:
 
 .data
 .balign 8
-str96:
+str102:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str99:
+str105:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str108:
+str114:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -310,19 +323,21 @@ errors_reporter_render:
 	movq %rbx, %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	callq utilities_colors_dim
+	callq utilities_colors_light_blue
 	movq %r15, %rdi
 	movq %rax, -72(%rbp)
 	leaq str42(%rip), %rsi
 	movq %rdi, %r15
 	movq %rbx, %rdi
 	callq __rt_str_concat
+	movq %rax, %rdi
+	callq utilities_colors_light_blue
 	movq %r15, %rdi
 	movq %rax, -24(%rbp)
 	movq -16(%rbp), %r15
 	callq utilities_location_short_label
 	movq %rax, %rdi
-	callq utilities_colors_dim
+	callq utilities_colors_light_blue
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r13
@@ -342,7 +357,7 @@ errors_reporter_render:
 	movq %rsi, %r15
 	movq -40(%rbp), %rsi
 	movq %rdi, %r13
-	leaq str48(%rip), %rdi
+	leaq str49(%rip), %rdi
 	callq donna_string_repeat
 	movq %r15, %rsi
 	movq %r13, %rdi
@@ -352,7 +367,7 @@ errors_reporter_render:
 	movq %rax, %rsi
 	subq $1, %rsi
 	movq %rdi, %r13
-	leaq str50(%rip), %rdi
+	leaq str51(%rip), %rdi
 	callq donna_string_repeat
 	movq %r15, %rsi
 	movq %r13, %rdi
@@ -360,7 +375,7 @@ errors_reporter_render:
 	movq %rdi, %r15
 	movq -56(%rbp), %rdi
 	movq %rsi, %r13
-	leaq str53(%rip), %rsi
+	leaq str54(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
@@ -380,12 +395,12 @@ errors_reporter_render:
 	movq -88(%rbp), %r15
 	callq donna_int_to_string
 	movq %rax, %rdi
-	leaq str59(%rip), %rsi
+	leaq str60(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	callq utilities_colors_dim
+	callq utilities_colors_light_blue
 	movq %rax, %rdi
-	leaq str62(%rip), %rsi
+	leaq str63(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	movq -96(%rbp), %rsi
@@ -394,7 +409,7 @@ errors_reporter_render:
 	movq %rax, -112(%rbp)
 	movq -104(%rbp), %rsi
 	movq %rsi, %r13
-	leaq str65(%rip), %rsi
+	leaq str66(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
@@ -404,19 +419,31 @@ errors_reporter_render:
 	movq %rdi, %r13
 	movq %r14, %rdi
 	callq donna_string_is_empty
-	movq %r14, %rsi
 	movq %r13, %rdi
 	cmpq $1, %rax
 	jz .Lbb7
 	movq %rdi, %r13
-	leaq str75(%rip), %rdi
+	leaq str77(%rip), %rdi
+	callq utilities_colors_orange
+	movq %r13, %rdi
+	movq %rax, %rsi
+	movq %rdi, %r13
+	leaq str76(%rip), %rdi
+	callq __rt_str_concat
+	movq %r14, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r14
+	leaq str80(%rip), %rsi
+	callq __rt_str_concat
+	movq %r14, %rsi
+	movq %rax, %rdi
 	callq __rt_str_concat
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq %rsi, %r14
 	jmp .Lbb9
 .Lbb7:
-	leaq str74(%rip), %rax
+	leaq str75(%rip), %rax
 	movq %rax, %r14
 .Lbb9:
 	movq %rdi, %r13
@@ -439,10 +466,10 @@ errors_reporter_render:
 	movq %rax, 8(%rbx)
 	movq %r13, 16(%rbx)
 	movq %rsi, %r13
-	leaq str84(%rip), %rsi
+	leaq str90(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	callq utilities_colors_dim
+	callq utilities_colors_light_blue
 	movq %rax, %r14
 	movl $24, %edi
 	callq malloc
@@ -464,7 +491,7 @@ errors_reporter_render:
 	movq %r12, 8(%rdi)
 	movq %rbx, 16(%rdi)
 	movq %rsi, %rbx
-	leaq str96(%rip), %rsi
+	leaq str102(%rip), %rsi
 	callq donna_string_join
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -489,7 +516,7 @@ errors_reporter_get_line:
 	subq $8, %rsp
 	pushq %rbx
 	movq %rsi, %rbx
-	leaq str99(%rip), %rsi
+	leaq str105(%rip), %rsi
 	callq donna_string_split
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -530,7 +557,7 @@ errors_reporter_nth_line:
 	movq %rax, (%rbx)
 	jmp .Lbb18
 .Lbb17:
-	leaq str108(%rip), %rax
+	leaq str114(%rip), %rax
 .Lbb18:
 	movq %rbp, %rsp
 	subq $16, %rsp

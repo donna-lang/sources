@@ -59,28 +59,28 @@ str42:
 
 .data
 .balign 8
-str48:
+str49:
 	.ascii "^"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str50:
+str51:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str53:
+str54:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str59:
+str60:
 	.ascii " "
 	.byte 226
 	.byte 148
@@ -90,31 +90,44 @@ str59:
 
 .data
 .balign 8
-str62:
+str63:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str65:
+str66:
 	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str74:
-	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str75:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str76:
 	.byte 10
 	.byte 10
-	.ascii "hint: "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str77:
+	.ascii "hint:"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str80:
+	.ascii " "
 	.byte 0
 /* end data */
 
@@ -126,7 +139,7 @@ donna_nil:
 
 .data
 .balign 8
-str84:
+str90:
 	.ascii " "
 	.byte 226
 	.byte 148
@@ -136,21 +149,21 @@ str84:
 
 .data
 .balign 8
-str96:
+str102:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str99:
+str105:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str108:
+str114:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -320,7 +333,7 @@ errors_reporter_render:
 	mov	x25, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	bl	utilities_colors_dim
+	bl	utilities_colors_light_blue
 	str	x0, [x29, 48]
 	mov	x0, x25
 	adrp	x1, str42
@@ -328,11 +341,12 @@ errors_reporter_render:
 	mov	x25, x0
 	mov	x0, x19
 	bl	__rt_str_concat
+	bl	utilities_colors_light_blue
 	str	x0, [x29, 64]
 	mov	x0, x25
 	ldr	x27, [x29, 72]
 	bl	utilities_location_short_label
-	bl	utilities_colors_dim
+	bl	utilities_colors_light_blue
 	mov	x1, x0
 	mov	x0, x21
 	mov	x21, x0
@@ -347,8 +361,8 @@ errors_reporter_render:
 	mov	x1, x21
 	str	x0, [x29, 24]
 	ldr	x21, [x29, 48]
-	adrp	x0, str48
-	add	x0, x0, #:lo12:str48
+	adrp	x0, str49
+	add	x0, x0, #:lo12:str49
 	bl	donna_string_repeat
 	mov	x1, x23
 	str	x0, [x29, 32]
@@ -356,15 +370,15 @@ errors_reporter_render:
 	mov	x0, #1
 	mov	x25, x1
 	sub	x1, x27, x0
-	adrp	x0, str50
-	add	x0, x0, #:lo12:str50
+	adrp	x0, str51
+	add	x0, x0, #:lo12:str51
 	bl	donna_string_repeat
 	mov	x1, x25
 	str	x0, [x29, 16]
 	ldr	x0, [x29, 32]
 	mov	x25, x1
-	adrp	x1, str53
-	add	x1, x1, #:lo12:str53
+	adrp	x1, str54
+	add	x1, x1, #:lo12:str54
 	bl	__rt_str_concat
 	mov	x1, x25
 	ldr	x25, [x29, 24]
@@ -381,14 +395,14 @@ errors_reporter_render:
 	bl	donna_int_to_string
 	mov	x1, x25
 	mov	x25, x1
-	adrp	x1, str59
-	add	x1, x1, #:lo12:str59
+	adrp	x1, str60
+	add	x1, x1, #:lo12:str60
 	bl	__rt_str_concat
-	bl	utilities_colors_dim
+	bl	utilities_colors_light_blue
 	mov	x1, x25
 	mov	x25, x1
-	adrp	x1, str62
-	add	x1, x1, #:lo12:str62
+	adrp	x1, str63
+	add	x1, x1, #:lo12:str63
 	bl	__rt_str_concat
 	mov	x1, x25
 	bl	__rt_str_concat
@@ -396,8 +410,8 @@ errors_reporter_render:
 	mov	x22, x0
 	mov	x0, x21
 	mov	x21, x1
-	adrp	x1, str65
-	add	x1, x1, #:lo12:str65
+	adrp	x1, str66
+	add	x1, x1, #:lo12:str66
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
@@ -407,21 +421,33 @@ errors_reporter_render:
 	mov	x21, x0
 	mov	x0, x24
 	bl	donna_string_is_empty
-	mov	x1, x24
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x21
-	cmp	x2, #1
+	cmp	x1, #1
 	beq	.L6
 	mov	x21, x0
-	adrp	x0, str75
-	add	x0, x0, #:lo12:str75
+	adrp	x0, str77
+	add	x0, x0, #:lo12:str77
+	bl	utilities_colors_orange
+	mov	x1, x0
+	mov	x0, x21
+	mov	x21, x0
+	adrp	x0, str76
+	add	x0, x0, #:lo12:str76
+	bl	__rt_str_concat
+	mov	x1, x24
+	mov	x24, x1
+	adrp	x1, str80
+	add	x1, x1, #:lo12:str80
+	bl	__rt_str_concat
+	mov	x1, x24
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x0, x21
 	b	.L7
 .L6:
-	adrp	x1, str74
-	add	x1, x1, #:lo12:str74
+	adrp	x1, str75
+	add	x1, x1, #:lo12:str75
 .L7:
 	mov	x24, x1
 	mov	x21, x0
@@ -458,10 +484,10 @@ errors_reporter_render:
 	add	x2, x19, x2
 	str	x21, [x2]
 	mov	x21, x1
-	adrp	x1, str84
-	add	x1, x1, #:lo12:str84
+	adrp	x1, str90
+	add	x1, x1, #:lo12:str90
 	bl	__rt_str_concat
-	bl	utilities_colors_dim
+	bl	utilities_colors_light_blue
 	mov	x24, x0
 	mov	x0, #24
 	bl	malloc
@@ -497,8 +523,8 @@ errors_reporter_render:
 	add	x2, x0, x2
 	str	x19, [x2]
 	mov	x19, x1
-	adrp	x1, str96
-	add	x1, x1, #:lo12:str96
+	adrp	x1, str102
+	add	x1, x1, #:lo12:str102
 	bl	donna_string_join
 	mov	x1, x19
 	bl	__rt_str_concat
@@ -525,8 +551,8 @@ errors_reporter_get_line:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x1
-	adrp	x1, str99
-	add	x1, x1, #:lo12:str99
+	adrp	x1, str105
+	add	x1, x1, #:lo12:str105
 	bl	donna_string_split
 	mov	x1, x19
 	mov	x2, #1
@@ -572,8 +598,8 @@ errors_reporter_nth_line:
 	str	x0, [x19]
 	b	.L17
 .L16:
-	adrp	x0, str108
-	add	x0, x0, #:lo12:str108
+	adrp	x0, str114
+	add	x0, x0, #:lo12:str114
 .L17:
 	ldr	x19, [x29, 24]
 	mov sp, x29

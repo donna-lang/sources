@@ -1,6 +1,6 @@
 .data
 .balign 8
-_str16:
+_str17:
 	.byte 27
 	.ascii "["
 	.byte 0
@@ -8,7 +8,7 @@ _str16:
 
 .data
 .balign 8
-_str29:
+_str30:
 	.ascii "m"
 	.byte 0
 /* end data */
@@ -91,6 +91,15 @@ _utilities_colors_color_yellow:
 _utilities_colors_color_cyan:
 	.byte 27
 	.ascii "[36m"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+.globl _utilities_colors_color_light_blue
+_utilities_colors_color_light_blue:
+	.byte 27
+	.ascii "[38;5;111m"
 	.byte 0
 /* end data */
 
@@ -288,6 +297,21 @@ _utilities_colors_path:
 
 .text
 .balign 4
+.globl _utilities_colors_light_blue
+_utilities_colors_light_blue:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	mov	x1, x0
+	adrp	x0, _utilities_colors_color_light_blue@page
+	add	x0, x0, _utilities_colors_color_light_blue@pageoff
+	bl	_utilities_colors_paint
+	ldp	x29, x30, [sp], 16
+	ret
+/* end function utilities_colors_light_blue */
+
+.text
+.balign 4
 .globl _utilities_colors_magenta
 _utilities_colors_magenta:
 	hint	#34
@@ -337,15 +361,15 @@ _utilities_colors_strip_ansi:
 	str	x21, [x29, 40]
 	str	x22, [x29, 32]
 	str	x23, [x29, 24]
-	adrp	x1, _str16@page
-	add	x1, x1, _str16@pageoff
+	adrp	x1, _str17@page
+	add	x1, x1, _str17@pageoff
 	mov	x19, x0
 	bl	_donna_string_index_of
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
 	cmn	x19, #1
-	beq	L33
+	beq	L35
 	mov	x2, x19
 	mov	x1, #0
 	mov	x20, x0
@@ -364,8 +388,8 @@ _utilities_colors_strip_ansi:
 	mov	x3, #2
 	sub	x2, x2, x3
 	bl	_donna_string_slice
-	adrp	x1, _str29@page
-	add	x1, x1, _str29@pageoff
+	adrp	x1, _str30@page
+	add	x1, x1, _str30@pageoff
 	mov	x19, x0
 	bl	_donna_string_index_of
 	mov	x21, x0
@@ -376,7 +400,7 @@ _utilities_colors_strip_ansi:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L31
+	beq	L33
 	mov	x1, #1
 	add	x23, x21, x1
 	mov	x22, x0
@@ -393,11 +417,11 @@ _utilities_colors_strip_ansi:
 	mov	x0, x20
 	bl	___rt_str_concat
 	str	x0, [x19]
-	b	L33
-L31:
+	b	L35
+L33:
 	mov	x0, x20
 	str	x0, [x19]
-L33:
+L35:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]

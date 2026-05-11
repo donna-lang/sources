@@ -1,6 +1,6 @@
 .data
 .balign 8
-str16:
+str17:
 	.byte 27
 	.ascii "["
 	.byte 0
@@ -8,7 +8,7 @@ str16:
 
 .data
 .balign 8
-str29:
+str30:
 	.ascii "m"
 	.byte 0
 /* end data */
@@ -91,6 +91,15 @@ utilities_colors_color_yellow:
 utilities_colors_color_cyan:
 	.byte 27
 	.ascii "[36m"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+.globl utilities_colors_color_light_blue
+utilities_colors_color_light_blue:
+	.byte 27
+	.ascii "[38;5;111m"
 	.byte 0
 /* end data */
 
@@ -310,6 +319,23 @@ utilities_colors_path:
 
 .text
 .balign 16
+.globl utilities_colors_light_blue
+utilities_colors_light_blue:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	mov	x1, x0
+	adrp	x0, utilities_colors_color_light_blue
+	add	x0, x0, #:lo12:utilities_colors_color_light_blue
+	bl	utilities_colors_paint
+	ldp	x29, x30, [sp], 16
+	ret
+.type utilities_colors_light_blue, @function
+.size utilities_colors_light_blue, .-utilities_colors_light_blue
+/* end function utilities_colors_light_blue */
+
+.text
+.balign 16
 .globl utilities_colors_magenta
 utilities_colors_magenta:
 	hint	#34
@@ -365,15 +391,15 @@ utilities_colors_strip_ansi:
 	str	x21, [x29, 40]
 	str	x22, [x29, 32]
 	str	x23, [x29, 24]
-	adrp	x1, str16
-	add	x1, x1, #:lo12:str16
+	adrp	x1, str17
+	add	x1, x1, #:lo12:str17
 	mov	x19, x0
 	bl	donna_string_index_of
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
 	cmn	x19, #1
-	beq	.L33
+	beq	.L35
 	mov	x2, x19
 	mov	x1, #0
 	mov	x20, x0
@@ -392,8 +418,8 @@ utilities_colors_strip_ansi:
 	mov	x3, #2
 	sub	x2, x2, x3
 	bl	donna_string_slice
-	adrp	x1, str29
-	add	x1, x1, #:lo12:str29
+	adrp	x1, str30
+	add	x1, x1, #:lo12:str30
 	mov	x19, x0
 	bl	donna_string_index_of
 	mov	x21, x0
@@ -404,7 +430,7 @@ utilities_colors_strip_ansi:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L31
+	beq	.L33
 	mov	x1, #1
 	add	x23, x21, x1
 	mov	x22, x0
@@ -421,11 +447,11 @@ utilities_colors_strip_ansi:
 	mov	x0, x20
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L33
-.L31:
+	b	.L35
+.L33:
 	mov	x0, x20
 	str	x0, [x19]
-.L33:
+.L35:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]

@@ -354,6 +354,34 @@ str124:
 	.ascii "      - uses: actions/checkout@v4"
 	.byte 10
 	.byte 10
+	.ascii "      - name: Checkout Donna tools"
+	.byte 10
+	.ascii "        uses: actions/checkout@v4"
+	.byte 10
+	.ascii "        with:"
+	.byte 10
+	.ascii "          repository: donna-lang/donna"
+	.byte 10
+	.ascii "          path: .donna-tools/compiler"
+	.byte 10
+	.byte 10
+	.ascii "      - name: Install build tools and QBE"
+	.byte 10
+	.ascii "        shell: bash"
+	.byte 10
+	.ascii "        run: |"
+	.byte 10
+	.ascii "          set -euo pipefail"
+	.byte 10
+	.ascii "          sudo apt-get update"
+	.byte 10
+	.ascii "          sudo apt-get install -y build-essential git make"
+	.byte 10
+	.ascii "          make -C .donna-tools/compiler install-qbe"
+	.byte 10
+	.ascii "          qbe --version || true"
+	.byte 10
+	.byte 10
 	.ascii "      - name: Install Donna"
 	.byte 10
 	.ascii "        shell: bash"

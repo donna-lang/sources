@@ -671,210 +671,280 @@ _str1311:
 
 .data
 .balign 8
-_str1362:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1369:
-	.ascii "."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1422:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1451:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1458:
+_str1328:
 	.ascii "0"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1465:
+_str1331:
+	.ascii "o"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1351:
+	.ascii "0o"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1403:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1410:
+	.ascii "."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1438:
+	.ascii "e"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1444:
+	.ascii "E"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1467:
+	.ascii "+"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1470:
+	.ascii "-"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1521:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1553:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1582:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1589:
+	.ascii "0"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1596:
 	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1475:
+_str1615:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1635:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1486:
+_str1646:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1509:
+_str1669:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1535:
+_str1695:
 	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1542:
-	.ascii "1"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1605:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1651:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1672:
-	.ascii "as"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1677:
-	.ascii "case"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1682:
-	.ascii "const"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1687:
-	.ascii "echo"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1692:
-	.ascii "external"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1697:
-	.ascii "fn"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str1702:
-	.ascii "if"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1707:
-	.ascii "import"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1712:
-	.ascii "let"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1717:
-	.ascii "opaque"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1722:
-	.ascii "panic"
+	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str1727:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1794:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1840:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1861:
+	.ascii "as"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1866:
+	.ascii "case"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1871:
+	.ascii "const"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1876:
+	.ascii "echo"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1881:
+	.ascii "external"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1886:
+	.ascii "fn"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1891:
+	.ascii "if"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1896:
+	.ascii "import"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1901:
+	.ascii "let"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1906:
+	.ascii "opaque"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1911:
+	.ascii "panic"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1916:
 	.ascii "pub"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1732:
+_str1921:
 	.ascii "todo"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1737:
+_str1926:
 	.ascii "type"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1742:
+_str1931:
 	.ascii "True"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1748:
+_str1937:
 	.ascii "False"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1800:
+_str1989:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -5941,100 +6011,100 @@ _compiler_lexer_lexer_lex_number:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $216, %rsp
+	subq $280, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
 	movq 32(%rbp), %r11
-	movq %r11, -192(%rbp)
+	movq %r11, -256(%rbp)
 	movq 24(%rbp), %rax
-	movq %rax, -200(%rbp)
+	movq %rax, -264(%rbp)
 	movq 16(%rbp), %r12
-	movq %r12, -208(%rbp)
-	movq %r9, -120(%rbp)
-	movq %r8, %r15
-	movq %rcx, %rbx
-	movq %rsi, %r12
-	movq %rbx, -128(%rbp)
-	movq %r12, %rcx
-	movq %rdx, %r14
-	movq %rbx, %rdx
-	movq %r14, %rsi
+	movq %r12, -272(%rbp)
+	movq %r9, -184(%rbp)
+	movq %r8, %r14
+	movq %rcx, %r12
+	movq %rsi, %rbx
+	movq %r12, -200(%rbp)
+	movq %rbx, %rcx
+	movq %rdx, %r15
+	movq %r12, %rdx
+	movq %r15, %rsi
 	movq %rdi, %r13
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq _compiler_lexer_lexer_span
 	movq %r13, %rdi
-	movq %rax, -160(%rbp)
-	movq %r12, %rsi
+	movq %rax, -224(%rbp)
+	movq %rbx, %rsi
 	movq %rdi, %r13
 	callq _donna_string_char_str
 	movq %r13, %rdi
-	movq %rax, -16(%rbp)
-	movq %r12, %rsi
+	movq %rax, -24(%rbp)
+	movq %rbx, %rsi
 	addq $1, %rsi
 	movq %rdi, %r13
 	callq _compiler_lexer_lexer_safe_char_str
 	movq %r13, %rdi
-	movq %rax, -24(%rbp)
+	movq %rax, -32(%rbp)
 	movq %rdi, %r13
-	movq -16(%rbp), %rdi
+	movq -24(%rbp), %rdi
 	leaq _str1248(%rip), %rsi
 	callq _strcmp
 	movq %r13, %rdi
 	movq %rdi, %r13
-	movq -24(%rbp), %rdi
+	movq -32(%rbp), %rdi
 	cmpq $0, %rax
 	setz %cl
 	movzbq %cl, %rcx
 	movq %rcx, -8(%rbp)
 	leaq _str1251(%rip), %rsi
 	callq _strcmp
-	movq %r14, %rdx
+	movq %r15, %rdx
 	movq %r13, %rdi
 	movq %rax, %rsi
-	movq %rbx, %rax
+	movq %r12, %rax
 	movq -8(%rbp), %rcx
-	movq %rdi, %rbx
-	movq -16(%rbp), %rdi
+	movq %rdi, %r12
+	movq -24(%rbp), %rdi
 	cmpq $0, %rsi
-	movq %rdx, %r14
+	movq %rdx, %r15
 	setz %dl
 	movzbq %dl, %rdx
 	andq %rdx, %rcx
 	cmpq $1, %rcx
-	movq %rax, %r13
+	movq %rax, %rdx
 	setz %al
 	movzbq %al, %rax
-	movq %r12, %rsi
+	movq %rbx, %rsi
 	addq $2, %rsi
-	movq %r13, %rcx
+	movq %rdx, %rcx
 	addq $2, %rcx
-	movq %rcx, -184(%rbp)
+	movq %rcx, -248(%rbp)
 	cmpl $0, %eax
-	jnz Lbb364
+	jnz Lbb372
 	movq %rsi, %r13
 	leaq _str1288(%rip), %rsi
 	callq _strcmp
 	movq %r13, %rsi
-	movq %rbx, %rdi
-	movq %rdi, %rbx
-	movq -24(%rbp), %rdi
+	movq %r12, %rdi
+	movq %rdi, %r12
+	movq -32(%rbp), %rdi
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
-	movq %rax, -32(%rbp)
+	movq %rax, -16(%rbp)
 	movq %rsi, %r13
 	leaq _str1291(%rip), %rsi
 	callq _strcmp
-	movq %r15, %r8
-	movq %r14, %rdx
+	movq %r14, %r8
 	movq %r13, %rsi
-	movq %rbx, %rdi
+	movq %r12, %rdi
 	movq %rax, %rcx
-	movq -32(%rbp), %rax
-	movq -128(%rbp), %rbx
+	movq -16(%rbp), %rax
+	movq %rdi, %r12
+	movq -24(%rbp), %rdi
 	cmpq $0, %rcx
 	setz %cl
 	movzbq %cl, %rcx
@@ -6042,143 +6112,279 @@ _compiler_lexer_lexer_lex_number:
 	movq %r8, %r14
 	subq $16, %rsp
 	movq %rsp, %r8
-	movq %r8, -112(%rbp)
+	movq %r8, -176(%rbp)
 	cmpq $1, %rax
-	jz Lbb358
-	movq %rdx, %r15
-	movl $0, %edx
-	movq %r12, %rsi
-	movq %rdi, %r13
-	callq _compiler_lexer_lexer_scan_decimal
-	movq %r15, %rdx
-	movq %r13, %rdi
-	movq -120(%rbp), %r15
-	movq (%rax), %rsi
-	movq %rsi, -64(%rbp)
-	movq 8(%rax), %rax
-	movq %rax, -40(%rbp)
-	movq %rsi, %rcx
-	subq %r12, %rcx
-	movq %rcx, -56(%rbp)
-	movq %rdx, %r13
-	movq %rcx, %rdx
-	movq %r12, %rsi
+	jz Lbb366
+	movq %rsi, %r13
+	leaq _str1328(%rip), %rsi
+	callq _strcmp
+	movq %r13, %rsi
+	movq %r12, %rdi
 	movq %rdi, %r12
-	callq _donna_string_slice
-	movq %rax, %rdi
-	callq _compiler_lexer_lexer_strip_underscores
-	movq %r15, %r9
-	movq %rax, %rdi
-	movq %rbx, %rax
-	movq %rax, %rbx
+	movq -32(%rbp), %rdi
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	movq %rax, -40(%rbp)
+	movq %rsi, %r13
+	leaq _str1331(%rip), %rsi
+	callq _strcmp
+	movq %r15, %rdx
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq %rax, %rcx
 	movq -40(%rbp), %rax
+	movq -184(%rbp), %r9
+	cmpq $0, %rcx
+	setz %cl
+	movzbq %cl, %rcx
+	andq %rcx, %rax
 	movq %r9, %r15
 	subq $16, %rsp
 	movq %rsp, %r9
-	movq %r9, -48(%rbp)
+	movq %r9, -128(%rbp)
 	cmpq $1, %rax
-	jz Lbb356
+	jz Lbb359
+	movq %rdx, %r13
+	movl $0, %edx
+	movq %rbx, %rsi
+	movq %rdi, %r12
+	callq _compiler_lexer_lexer_scan_decimal
+	movq %r13, %rdx
+	movq %r12, %rdi
+	movq -272(%rbp), %r12
+	movq (%rax), %rsi
+	movq %rsi, -72(%rbp)
+	movq 8(%rax), %rax
+	movq %rax, -48(%rbp)
+	movq %rsi, %rcx
+	subq %rbx, %rcx
+	movq %rcx, -64(%rbp)
+	movq %rdx, %r13
+	movq %rcx, %rdx
+	movq %rbx, %rsi
+	movq %rdi, %rbx
+	callq _donna_string_slice
+	movq %rax, %rdi
+	callq _compiler_lexer_lexer_strip_underscores
+	movq %rax, %rdi
+	movq -48(%rbp), %rax
+	subq $16, %rsp
+	movq %rsp, %rcx
+	movq %rcx, -56(%rbp)
+	cmpq $1, %rax
+	jz Lbb357
 	callq _compiler_lexer_token_TokInt
 	movq %r15, %r9
 	movq %r14, %r8
 	movq %r13, %rdx
 	movq %rax, %r10
-	movq %rbx, %rax
-	movq %r9, %r15
-	movq -48(%rbp), %r9
+	movq -56(%rbp), %r15
 	movq %r8, %r14
-	movq -112(%rbp), %r8
-	movq -56(%rbp), %rcx
-	movq -64(%rbp), %rsi
+	movq -176(%rbp), %r8
+	movq -64(%rbp), %rcx
+	movq -72(%rbp), %rsi
 	movq %rsi, %rdi
-	movq -160(%rbp), %rsi
-	movq -192(%rbp), %r11
-	movq %rax, %rbx
-	movq -200(%rbp), %rax
+	movq -224(%rbp), %rsi
+	movq -256(%rbp), %r11
+	movq -264(%rbp), %rax
 	movq %rdx, %r13
-	movq -208(%rbp), %rdx
-	movq %r10, (%r9)
-	movq %r15, %r9
-	movq %r11, %r15
-	movq %rsi, %r11
-	movq %rdi, %rsi
-	movq %r12, %rdi
-	movq %rdx, %r12
-	movq %r13, %rdx
-	movq %rbx, %r13
-	movq %r8, %rbx
-	movq %r14, %r8
-	jmp Lbb357
-Lbb356:
+	movq -200(%rbp), %rdx
+	movq %r10, (%r15)
+	movq %r9, %r15
+	movq -128(%rbp), %r9
+	xchgq %r8, %rbx
+	xchgq %r14, %r8
+	xchgq %rdx, %r14
+	xchgq %r13, %rdx
+	xchgq %r12, %r13
+	xchgq %r9, %r12
+	xchgq %r15, %r9
+	xchgq %r11, %r15
+	xchgq %rsi, %r11
+	xchgq %rdi, %rsi
+	jmp Lbb358
+Lbb357:
 	callq _compiler_lexer_token_TokFloat
 	movq %r15, %r9
 	movq %r14, %r8
 	movq %r13, %rdx
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %r10
-	movq %rbx, %rax
-	movq -48(%rbp), %r14
-	movq -112(%rbp), %rbx
-	movq -56(%rbp), %rcx
-	movq -64(%rbp), %rsi
-	movq -160(%rbp), %r11
-	movq -192(%rbp), %r15
-	movq %rax, %r13
-	movq -200(%rbp), %rax
-	movq -208(%rbp), %r12
-	movq %r10, (%r14)
-Lbb357:
-	addq %r13, %rcx
-	movq %rax, %r13
+	movq -56(%rbp), %r13
+	movq -176(%rbp), %rbx
+	movq -64(%rbp), %rcx
+	movq -72(%rbp), %rsi
+	movq -224(%rbp), %r11
+	movq -256(%rbp), %r15
+	movq -264(%rbp), %rax
+	movq -200(%rbp), %r14
+	movq %r10, (%r13)
+	movq %r12, %r13
+	movq -128(%rbp), %r12
+Lbb358:
+	addq %r14, %rcx
+	movq %rax, %r14
 	subq $48, %rsp
 	movq %rsp, %rax
 	movq %r15, 32(%rax)
-	movq %r13, 24(%rax)
+	movq %r14, 24(%rax)
 	movq %r11, 16(%rax)
 	movq %r10, 8(%rax)
-	movq %r12, 0(%rax)
+	movq %r13, 0(%rax)
 	movq %r9, %r15
 	movq %r8, %r14
 	movq %rdx, %r15
 	callq _compiler_lexer_lexer_push_at
 	subq $-48, %rsp
-	movq %rax, (%rbx)
-	jmp Lbb369
-Lbb358:
+	movq %rax, (%r12)
+	jmp Lbb365
+Lbb359:
 	movq %rdx, %r15
-	movq %r12, %rbx
 	movq %rsi, %r13
 	movq %rdi, %r12
-	callq _compiler_lexer_lexer_scan_binary_digits
+	callq _compiler_lexer_lexer_scan_octal_digits
 	movq %r15, %rdx
 	movq %r13, %rsi
 	movq %r12, %rdi
-	movq -160(%rbp), %r11
-	movq -120(%rbp), %r15
-	movq -128(%rbp), %r12
-	movq %rax, -88(%rbp)
+	movq -224(%rbp), %r11
+	movq -272(%rbp), %r12
+	movq -184(%rbp), %r15
+	movq %rax, -96(%rbp)
 	cmpq %rax, %rsi
 	setz %cl
 	movzbq %cl, %rcx
 	subq $16, %rsp
 	movq %rsp, %r13
-	movq %r13, -104(%rbp)
+	movq %r13, -120(%rbp)
 	cmpq $1, %rcx
-	jz Lbb361
+	jz Lbb362
 	movq %rax, %rcx
 	subq %rbx, %rcx
-	movq %rcx, -72(%rbp)
+	movq %rcx, -80(%rbp)
 	movq %rdx, %r13
 	movq %rcx, %rdx
 	subq $2, %rdx
 	movq %rdi, %rbx
 	callq _donna_string_slice
 	movq %rax, %rdi
-	movq %r12, %rax
-	movq -72(%rbp), %rcx
-	movq -208(%rbp), %r12
+	movq -80(%rbp), %rcx
+	movq -200(%rbp), %rax
 	addq %rax, %rcx
-	movq %rcx, -80(%rbp)
+	movq %rcx, -88(%rbp)
+	callq _compiler_lexer_lexer_parse_octal_str
+	movq %rax, %rdi
+	callq _donna_int_to_string
+	movq %rax, %rdi
+	callq _compiler_lexer_token_TokInt
+	movq %r15, %r9
+	movq %r14, %r8
+	movq %r13, %rdx
+	movq %rbx, %rdi
+	movq %rax, -104(%rbp)
+	movq -120(%rbp), %r13
+	movq %r12, %r14
+	movq -128(%rbp), %r12
+	movq -176(%rbp), %rbx
+	movq -88(%rbp), %rcx
+	movq -96(%rbp), %rsi
+	movq -224(%rbp), %r11
+	movq -256(%rbp), %r10
+	movq -264(%rbp), %rax
+	movq %rax, %r15
+	subq $48, %rsp
+	movq %rsp, %rax
+	movq %r10, 32(%rax)
+	movq -104(%rbp), %r10
+	movq %r15, 24(%rax)
+	movq %r11, 16(%rax)
+	movq %r10, 8(%rax)
+	movq %r14, 0(%rax)
+	movq %r9, %r15
+	movq %r8, %r14
+	callq _compiler_lexer_lexer_push_at
+	subq $-48, %rsp
+	movq %rax, (%r13)
+	jmp Lbb364
+Lbb362:
+	movq %rsi, %r12
+	movq %r11, %rsi
+	movq %rdx, %r13
+	movq %rsi, %r11
+	movq %rdi, %rbx
+	leaq _str1351(%rip), %rdi
+	callq _errors_error_LexEmptyNumberLiteral
+	movq %rbx, %rdi
+	movq %rax, -112(%rbp)
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq _malloc
+	movq %r15, %r9
+	movq %r14, %r8
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq %rax, %r10
+	movq -120(%rbp), %r13
+	movq -128(%rbp), %r12
+	movq -176(%rbp), %rbx
+	movq -112(%rbp), %r11
+	movq -248(%rbp), %rcx
+	movq -256(%rbp), %r15
+	movq -264(%rbp), %rax
+	movq -272(%rbp), %r14
+	movq $1, (%r10)
+	movq %r11, 8(%r10)
+	movq %rax, 16(%r10)
+	subq $32, %rsp
+	movq %rsp, %rax
+	movq %r15, 16(%rax)
+	movq %r10, 8(%rax)
+	movq %r14, 0(%rax)
+	movq %r9, %r15
+	movq %r8, %r14
+	movq %rdx, %r15
+	callq _compiler_lexer_lexer_lex_loop
+	subq $-32, %rsp
+	movq %rax, (%r13)
+Lbb364:
+	movq %rax, (%r12)
+Lbb365:
+	movq %rax, (%rbx)
+	jmp Lbb377
+Lbb366:
+	movq %r12, %rdi
+	movq %rsi, %r13
+	movq %rdi, %r12
+	callq _compiler_lexer_lexer_scan_binary_digits
+	movq %r15, %rdx
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq -224(%rbp), %r11
+	movq -272(%rbp), %r12
+	movq -184(%rbp), %r15
+	movq %rax, -152(%rbp)
+	cmpq %rsi, %rax
+	setz %cl
+	movzbq %cl, %rcx
+	subq $16, %rsp
+	movq %rsp, %r13
+	movq %r13, -168(%rbp)
+	cmpq $1, %rcx
+	jz Lbb369
+	movq %rax, %rcx
+	subq %rbx, %rcx
+	movq %rcx, -136(%rbp)
+	movq %rdx, %r13
+	movq %rcx, %rdx
+	subq $2, %rdx
+	movq %rdi, %rbx
+	callq _donna_string_slice
+	movq %rax, %rdi
+	movq -136(%rbp), %rcx
+	movq -200(%rbp), %rax
+	addq %rax, %rcx
+	movq %rcx, -144(%rbp)
 	callq _compiler_lexer_lexer_parse_binary_str
 	movq %rax, %rdi
 	callq _donna_int_to_string
@@ -6190,13 +6396,13 @@ Lbb358:
 	movq %rbx, %rdi
 	movq %rax, %r10
 	movq %r12, %r13
-	movq -104(%rbp), %r12
-	movq -112(%rbp), %rbx
-	movq -80(%rbp), %rcx
-	movq -88(%rbp), %rsi
-	movq -160(%rbp), %r11
-	movq -192(%rbp), %r15
-	movq -200(%rbp), %rax
+	movq -168(%rbp), %r12
+	movq -176(%rbp), %rbx
+	movq -144(%rbp), %rcx
+	movq -152(%rbp), %rsi
+	movq -224(%rbp), %r11
+	movq -256(%rbp), %r15
+	movq -264(%rbp), %rax
 	movq %rax, %r14
 	subq $48, %rsp
 	movq %rsp, %rax
@@ -6211,8 +6417,8 @@ Lbb358:
 	callq _compiler_lexer_lexer_push_at
 	subq $-48, %rsp
 	movq %rax, (%r12)
-	jmp Lbb363
-Lbb361:
+	jmp Lbb371
+Lbb369:
 	movq %rsi, %r12
 	movq %r11, %rsi
 	movq %rdx, %r13
@@ -6221,7 +6427,7 @@ Lbb361:
 	leaq _str1311(%rip), %rdi
 	callq _errors_error_LexEmptyNumberLiteral
 	movq %rbx, %rdi
-	movq %rax, -96(%rbp)
+	movq %rax, -160(%rbp)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
@@ -6231,13 +6437,13 @@ Lbb361:
 	movq %r12, %rsi
 	movq %rbx, %rdi
 	movq %rax, %r10
-	movq -104(%rbp), %r12
-	movq -112(%rbp), %rbx
-	movq -96(%rbp), %r11
-	movq -184(%rbp), %rcx
-	movq -192(%rbp), %r14
-	movq -200(%rbp), %rax
-	movq -208(%rbp), %r13
+	movq -168(%rbp), %r12
+	movq -176(%rbp), %rbx
+	movq -248(%rbp), %rcx
+	movq -160(%rbp), %r11
+	movq -256(%rbp), %r14
+	movq -264(%rbp), %rax
+	movq -272(%rbp), %r13
 	movq $1, (%r10)
 	movq %r11, 8(%r10)
 	movq %rax, 16(%r10)
@@ -6252,45 +6458,42 @@ Lbb361:
 	callq _compiler_lexer_lexer_lex_loop
 	subq $-32, %rsp
 	movq %rax, (%r12)
-Lbb363:
+Lbb371:
 	movq %rax, (%rbx)
-	jmp Lbb369
-Lbb364:
-	xchgq %r15, %r14
-	movq %rbx, %rdi
-	movq %r12, %rbx
+	jmp Lbb377
+Lbb372:
+	movq %r12, %rdi
 	movq %rsi, %r13
 	movq %rdi, %r12
 	callq _compiler_lexer_lexer_scan_hex_digits
 	movq %r15, %rdx
 	movq %r13, %rsi
 	movq %r12, %rdi
-	movq -160(%rbp), %r11
-	movq -120(%rbp), %r15
-	movq -128(%rbp), %r12
-	movq %rax, -152(%rbp)
+	movq -224(%rbp), %r11
+	movq -272(%rbp), %r12
+	movq -184(%rbp), %r15
+	movq %rax, -216(%rbp)
 	cmpq %rsi, %rax
 	setz %cl
 	movzbq %cl, %rcx
 	subq $16, %rsp
 	movq %rsp, %r13
-	movq %r13, -176(%rbp)
+	movq %r13, -240(%rbp)
 	cmpq $1, %rcx
-	jz Lbb367
+	jz Lbb375
 	movq %rax, %rcx
 	subq %rbx, %rcx
-	movq %rcx, -136(%rbp)
+	movq %rcx, -192(%rbp)
 	movq %rdx, %r13
 	movq %rcx, %rdx
 	subq $2, %rdx
 	movq %rdi, %rbx
 	callq _donna_string_slice
 	movq %rax, %rdi
-	movq %r12, %rax
-	movq -136(%rbp), %rcx
-	movq -208(%rbp), %r12
+	movq -192(%rbp), %rcx
+	movq -200(%rbp), %rax
 	addq %rax, %rcx
-	movq %rcx, -144(%rbp)
+	movq %rcx, -208(%rbp)
 	callq _compiler_lexer_lexer_parse_hex_str
 	movq %rax, %rdi
 	callq _donna_int_to_string
@@ -6301,12 +6504,12 @@ Lbb364:
 	movq %r13, %rdx
 	movq %rbx, %rdi
 	movq %rax, %r10
-	movq -176(%rbp), %rbx
-	movq -144(%rbp), %rcx
-	movq -152(%rbp), %rsi
-	movq -160(%rbp), %r11
-	movq -192(%rbp), %r14
-	movq -200(%rbp), %rax
+	movq -240(%rbp), %rbx
+	movq -208(%rbp), %rcx
+	movq -216(%rbp), %rsi
+	movq -224(%rbp), %r11
+	movq -256(%rbp), %r14
+	movq -264(%rbp), %rax
 	movq %rax, %r13
 	subq $48, %rsp
 	movq %rsp, %rax
@@ -6321,8 +6524,8 @@ Lbb364:
 	callq _compiler_lexer_lexer_push_at
 	subq $-48, %rsp
 	movq %rax, (%rbx)
-	jmp Lbb369
-Lbb367:
+	jmp Lbb377
+Lbb375:
 	movq %rsi, %r12
 	movq %r11, %rsi
 	movq %rdx, %r13
@@ -6330,7 +6533,7 @@ Lbb367:
 	leaq _str1271(%rip), %rdi
 	callq _errors_error_LexEmptyNumberLiteral
 	movq %rbx, %rdi
-	movq %rax, -168(%rbp)
+	movq %rax, -232(%rbp)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
@@ -6340,12 +6543,12 @@ Lbb367:
 	movq %r12, %rsi
 	movq %rbx, %rdi
 	movq %rax, %r10
-	movq -176(%rbp), %rbx
-	movq -184(%rbp), %rcx
-	movq -168(%rbp), %r13
-	movq -192(%rbp), %r11
-	movq -200(%rbp), %rax
-	movq -208(%rbp), %r12
+	movq -240(%rbp), %rbx
+	movq -248(%rbp), %rcx
+	movq -232(%rbp), %r13
+	movq -256(%rbp), %r11
+	movq -264(%rbp), %rax
+	movq -272(%rbp), %r12
 	movq $1, (%r10)
 	movq %r13, 8(%r10)
 	movq %rax, 16(%r10)
@@ -6357,9 +6560,9 @@ Lbb367:
 	callq _compiler_lexer_lexer_lex_loop
 	subq $-32, %rsp
 	movq %rax, (%rbx)
-Lbb369:
+Lbb377:
 	movq %rbp, %rsp
-	subq $256, %rsp
+	subq $320, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -6381,7 +6584,7 @@ _compiler_lexer_lexer_scan_decimal:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rdx, %r13
+	movq %rdx, %r14
 	movq %rsi, %rbx
 	movq %rdi, %r12
 	callq _donna_string_length
@@ -6390,7 +6593,7 @@ _compiler_lexer_lexer_scan_decimal:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb389
+	jz Lbb403
 	movq %rsi, %rbx
 	movq %r12, %rdi
 	callq _donna_string_char_str
@@ -6398,29 +6601,47 @@ _compiler_lexer_lexer_scan_decimal:
 	movq %rax, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rbx, -8(%rbp)
 	movq %rsi, %r15
-	leaq _str1362(%rip), %rsi
-	movq %rdi, %r14
+	leaq _str1403(%rip), %rsi
+	movq %rdi, %r13
 	callq _strcmp
 	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %r13, %rdi
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
-	movq %rsi, %r14
-	addq $1, %rsi
+	movq %rsi, %r13
+	addq $1, %r13
+	movq %r13, -8(%rbp)
 	cmpl $0, %eax
-	jnz Lbb387
+	jnz Lbb401
 	movq %rsi, %r15
-	leaq _str1369(%rip), %rsi
-	movq %rdi, %rbx
+	leaq _str1410(%rip), %rsi
+	movq %rdi, %r13
 	callq _strcmp
 	movq %r15, %rsi
-	movq %rbx, %rdi
-	movq -8(%rbp), %rbx
+	movq %r13, %rdi
+	movq -8(%rbp), %r13
 	cmpq $0, %rax
-	jz Lbb378
+	jz Lbb392
+	movq %rsi, %r15
+	leaq _str1438(%rip), %rsi
+	movq %rdi, %r13
+	callq _strcmp
+	movq %r15, %rsi
+	movq %r13, %rdi
+	cmpq $0, %rax
+	jz Lbb390
+	movq %rsi, %r15
+	leaq _str1444(%rip), %rsi
+	movq %rdi, %r13
+	callq _strcmp
+	movq %r15, %rsi
+	movq %r13, %rdi
+	movq %rsi, %r13
+	movq -8(%rbp), %rsi
+	cmpq $0, %rax
+	jz Lbb388
 	movq %rsi, %r15
 	movl $0, %esi
 	callq _donna_string_char_at
@@ -6431,30 +6652,47 @@ _compiler_lexer_lexer_scan_decimal:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rax
-	jz Lbb375
+	jz Lbb385
 	movl $16, %edi
 	callq _malloc
-	movq %r13, %rdx
-	movq %r14, (%rax)
+	movq %r14, %rdx
+	movq %r13, %rsi
+	movq %rsi, (%rax)
 	movq %rdx, 8(%rax)
 	movq %rax, (%r12)
-	jmp Lbb377
-Lbb375:
-	movq %r13, %rdx
-	movq %rdx, %r15
+	jmp Lbb387
+Lbb385:
+	movq %r14, %rdx
 	callq _compiler_lexer_lexer_scan_decimal
 	movq %rax, (%r12)
-Lbb377:
+Lbb387:
 	movq %rax, (%rbx)
-	jmp Lbb391
-Lbb378:
-	movq %r13, %r15
+	jmp Lbb405
+Lbb388:
+	movq %r14, %rdx
+	movq %r13, %rsi
+	movq %r12, %rdi
+	callq _compiler_lexer_lexer_scan_exponent
+	movq %rax, (%rbx)
+	jmp Lbb405
+Lbb390:
+	movq %r14, %rdx
+	movq %r12, %rdi
+	movq %rdx, %r15
+	movq %rsi, %r14
+	callq _compiler_lexer_lexer_scan_exponent
+	movq %rax, (%rbx)
+	jmp Lbb405
+Lbb392:
+	movq %r14, %r15
+	movq %rsi, %r14
+	movq %r13, %rsi
 	movq %r12, %rdi
 	subq $16, %rsp
 	movq %rsp, %r12
 	movq %r12, -16(%rbp)
 	cmpq $1, %r15
-	jz Lbb384
+	jz Lbb398
 	movq %rsi, %r13
 	movq %rdi, %r12
 	callq _compiler_lexer_lexer_safe_char_at
@@ -6466,7 +6704,7 @@ Lbb378:
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz Lbb382
+	jz Lbb396
 	movl $16, %edi
 	callq _malloc
 	movq %r15, %rdx
@@ -6474,15 +6712,15 @@ Lbb378:
 	movq %rsi, (%rax)
 	movq %rdx, 8(%rax)
 	movq %rax, (%r13)
-	jmp Lbb383
-Lbb382:
+	jmp Lbb397
+Lbb396:
 	movl $1, %edx
 	callq _compiler_lexer_lexer_scan_decimal
 	movq %rax, (%r13)
-Lbb383:
+Lbb397:
 	movq %rax, (%r12)
-	jmp Lbb386
-Lbb384:
+	jmp Lbb400
+Lbb398:
 	movq %r14, %r13
 	movl $16, %edi
 	callq _malloc
@@ -6490,18 +6728,19 @@ Lbb384:
 	movq %rsi, (%rax)
 	movq $1, 8(%rax)
 	movq %rax, (%r12)
-Lbb386:
+Lbb400:
 	movq %rax, (%rbx)
-	jmp Lbb391
-Lbb387:
-	movq %r13, %rdx
+	jmp Lbb405
+Lbb401:
+	movq %r13, %rsi
+	movq %r14, %rdx
 	movq %r12, %rdi
 	movq %rdx, %r12
 	callq _compiler_lexer_lexer_scan_decimal
 	movq %rax, (%rbx)
-	jmp Lbb391
-Lbb389:
-	movq %r13, %r12
+	jmp Lbb405
+Lbb403:
+	movq %r14, %r12
 	movq %rsi, %rbx
 	movl $16, %edi
 	callq _malloc
@@ -6509,7 +6748,7 @@ Lbb389:
 	movq %rbx, %rsi
 	movq %rsi, (%rax)
 	movq %rdx, 8(%rax)
-Lbb391:
+Lbb405:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -6520,6 +6759,195 @@ Lbb391:
 	leave
 	ret
 /* end function compiler_lexer_lexer_scan_decimal */
+
+.text
+.balign 16
+_compiler_lexer_lexer_scan_exponent:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %r14
+	pushq %r15
+	movq %rdx, %r13
+	movq %rsi, %r12
+	movq %rdi, %r14
+	movq %r12, %rsi
+	addq $1, %rsi
+	movq %rsi, %rbx
+	movq %r14, %rdi
+	callq _compiler_lexer_lexer_safe_char_str
+	movq %rbx, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r15
+	leaq _str1467(%rip), %rsi
+	movq %rdi, %rbx
+	callq _strcmp
+	movq %r15, %rsi
+	movq %rbx, %rdi
+	cmpq $0, %rax
+	setz %bl
+	movzbq %bl, %rbx
+	movq %rsi, %r15
+	leaq _str1470(%rip), %rsi
+	callq _strcmp
+	movq %r15, %rsi
+	movq %r14, %rdi
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	orq %rbx, %rax
+	cmpq $1, %rax
+	setz %al
+	movzbq %al, %rax
+	movq %r12, %r14
+	addq $2, %r14
+	cmpl $0, %eax
+	jnz Lbb410
+	movq %rdi, %rbx
+	callq _compiler_lexer_lexer_safe_char_at
+	movq %rax, %rdi
+	callq _compiler_lexer_lexer_is_digit_code
+	movq %r14, %rsi
+	movq %rbx, %rdi
+	subq $16, %rsp
+	movq %rsp, %rbx
+	cmpq $1, %rax
+	jz Lbb409
+	movl $16, %edi
+	callq _malloc
+	movq %r12, (%rax)
+	movq %r13, 8(%rax)
+	movq %rax, (%rbx)
+	jmp Lbb415
+Lbb409:
+	callq _compiler_lexer_lexer_scan_exponent_digits
+	movq %rax, (%rbx)
+	jmp Lbb415
+Lbb410:
+	movq %r14, %rsi
+	movq %rdi, %rbx
+	callq _compiler_lexer_lexer_safe_char_at
+	movq %rax, %rdi
+	callq _compiler_lexer_lexer_is_digit_code
+	movq %rbx, %rdi
+	subq $16, %rsp
+	movq %rsp, %rbx
+	cmpq $1, %rax
+	jz Lbb413
+	movl $16, %edi
+	callq _malloc
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rsi, (%rax)
+	movq %rdx, 8(%rax)
+	movq %rax, (%rbx)
+	jmp Lbb415
+Lbb413:
+	movq %r12, %rsi
+	addq $3, %rsi
+	callq _compiler_lexer_lexer_scan_exponent_digits
+	movq %rax, (%rbx)
+Lbb415:
+	movq %rbp, %rsp
+	subq $48, %rsp
+	popq %r15
+	popq %r14
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+/* end function compiler_lexer_lexer_scan_exponent */
+
+.text
+.balign 16
+_compiler_lexer_lexer_scan_exponent_digits:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %r14
+	movq %rsi, %rbx
+	movq %rdi, %r12
+	callq _donna_string_length
+	movq %rbx, %rsi
+	cmpq %rax, %rsi
+	setge %al
+	movzbq %al, %rax
+	cmpq $1, %rax
+	jz Lbb424
+	movq %rsi, %rbx
+	movq %r12, %rdi
+	callq _donna_string_char_str
+	movq %rbx, %rsi
+	movq %rax, %rdi
+	subq $16, %rsp
+	movq %rsp, %rbx
+	movq %rsi, %r14
+	leaq _str1521(%rip), %rsi
+	movq %rdi, %r13
+	callq _strcmp
+	movq %r14, %rsi
+	movq %r13, %rdi
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	movq %rsi, %r13
+	addq $1, %rsi
+	cmpl $0, %eax
+	jnz Lbb422
+	movq %rsi, %r14
+	movl $0, %esi
+	callq _donna_string_char_at
+	movq %rax, %rdi
+	callq _compiler_lexer_lexer_is_digit_code
+	movq %r14, %rsi
+	movq %r12, %rdi
+	subq $16, %rsp
+	movq %rsp, %r12
+	cmpq $1, %rax
+	jz Lbb420
+	movl $16, %edi
+	callq _malloc
+	movq %r13, %rsi
+	movq %rsi, (%rax)
+	movq $1, 8(%rax)
+	movq %rax, (%r12)
+	jmp Lbb421
+Lbb420:
+	callq _compiler_lexer_lexer_scan_exponent_digits
+	movq %rax, (%r12)
+Lbb421:
+	movq %rax, (%rbx)
+	jmp Lbb426
+Lbb422:
+	movq %r12, %rdi
+	callq _compiler_lexer_lexer_scan_exponent_digits
+	movq %rax, (%rbx)
+	jmp Lbb426
+Lbb424:
+	movq %rsi, %rbx
+	movl $16, %edi
+	callq _malloc
+	movq %rbx, %rsi
+	movq %rsi, (%rax)
+	movq $1, 8(%rax)
+Lbb426:
+	movq %rbp, %rsp
+	subq $32, %rsp
+	popq %r14
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+/* end function compiler_lexer_lexer_scan_exponent_digits */
 
 .text
 .balign 16
@@ -6541,14 +6969,14 @@ _compiler_lexer_lexer_scan_hex_digits:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb400
+	jz Lbb435
 	movq %r12, %rsi
 	movq %r13, %rdi
 	callq _donna_string_char_str
 	movq %rax, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	leaq _str1422(%rip), %rsi
+	leaq _str1553(%rip), %rsi
 	movq %rdi, %r14
 	callq _strcmp
 	movq %r14, %rdi
@@ -6561,7 +6989,7 @@ _compiler_lexer_lexer_scan_hex_digits:
 	movq %r12, %rsi
 	addq $1, %rsi
 	cmpl $0, %eax
-	jnz Lbb398
+	jnz Lbb433
 	movq %rsi, %r14
 	movl $0, %esi
 	callq _donna_string_char_at
@@ -6574,23 +7002,23 @@ _compiler_lexer_lexer_scan_hex_digits:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rcx
-	jz Lbb396
+	jz Lbb431
 	movq %rax, (%r12)
-	jmp Lbb397
-Lbb396:
+	jmp Lbb432
+Lbb431:
 	callq _compiler_lexer_lexer_scan_hex_digits
 	movq %rax, (%r12)
-Lbb397:
+Lbb432:
 	movq %rax, (%rbx)
-	jmp Lbb401
-Lbb398:
+	jmp Lbb436
+Lbb433:
 	movq %r13, %rdi
 	callq _compiler_lexer_lexer_scan_hex_digits
 	movq %rax, (%rbx)
-	jmp Lbb401
-Lbb400:
+	jmp Lbb436
+Lbb435:
 	movq %r12, %rax
-Lbb401:
+Lbb436:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14
@@ -6623,14 +7051,14 @@ _compiler_lexer_lexer_scan_binary_digits:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb412
+	jz Lbb447
 	movq %r12, %rsi
 	movq %r13, %rdi
 	callq _donna_string_char_str
 	movq %rax, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	leaq _str1451(%rip), %rsi
+	leaq _str1582(%rip), %rsi
 	movq %rdi, %r14
 	callq _strcmp
 	movq %r14, %rdi
@@ -6643,43 +7071,43 @@ _compiler_lexer_lexer_scan_binary_digits:
 	movq %r12, %rsi
 	addq $1, %rsi
 	cmpl $0, %eax
-	jnz Lbb410
+	jnz Lbb445
 	movq %rsi, %r15
-	leaq _str1458(%rip), %rsi
+	leaq _str1589(%rip), %rsi
 	movq %rdi, %r14
 	callq _strcmp
 	movq %r15, %rsi
 	movq %r14, %rdi
 	cmpq $0, %rax
-	jz Lbb408
+	jz Lbb443
 	movq %rsi, %r14
-	leaq _str1465(%rip), %rsi
+	leaq _str1596(%rip), %rsi
 	callq _strcmp
 	movq %r14, %rsi
 	movq %r13, %rdi
 	movq %rax, %rcx
 	movq %r12, %rax
 	cmpq $0, %rcx
-	jz Lbb407
+	jz Lbb442
 	movq %rax, (%rbx)
-	jmp Lbb413
-Lbb407:
+	jmp Lbb448
+Lbb442:
 	callq _compiler_lexer_lexer_scan_binary_digits
 	movq %rax, (%rbx)
-	jmp Lbb413
-Lbb408:
+	jmp Lbb448
+Lbb443:
 	movq %r13, %rdi
 	callq _compiler_lexer_lexer_scan_binary_digits
 	movq %rax, (%rbx)
-	jmp Lbb413
-Lbb410:
+	jmp Lbb448
+Lbb445:
 	movq %r13, %rdi
 	callq _compiler_lexer_lexer_scan_binary_digits
 	movq %rax, (%rbx)
-	jmp Lbb413
-Lbb412:
+	jmp Lbb448
+Lbb447:
 	movq %r12, %rax
-Lbb413:
+Lbb448:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -6693,6 +7121,86 @@ Lbb413:
 
 .text
 .balign 16
+_compiler_lexer_lexer_scan_octal_digits:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %r14
+	movq %rsi, %rbx
+	movq %rdi, %r13
+	callq _donna_string_length
+	movq %rax, %rcx
+	movq %rbx, %rax
+	cmpq %rcx, %rax
+	movq %rax, %r12
+	setge %al
+	movzbq %al, %rax
+	cmpq $1, %rax
+	jz Lbb457
+	movq %r12, %rsi
+	movq %r13, %rdi
+	callq _donna_string_char_str
+	movq %rax, %rdi
+	subq $16, %rsp
+	movq %rsp, %rbx
+	leaq _str1615(%rip), %rsi
+	movq %rdi, %r14
+	callq _strcmp
+	movq %r14, %rdi
+	movq %rax, %rcx
+	movq %r12, %rax
+	cmpq $0, %rcx
+	movq %rax, %r12
+	setz %al
+	movzbq %al, %rax
+	movq %r12, %rsi
+	addq $1, %rsi
+	cmpl $0, %eax
+	jnz Lbb455
+	movq %rsi, %r14
+	movl $0, %esi
+	callq _donna_string_char_at
+	movq %rax, %rdi
+	callq _compiler_lexer_lexer_is_octal_digit_code
+	movq %r14, %rsi
+	movq %r13, %rdi
+	movq %rax, %rcx
+	movq %r12, %rax
+	subq $16, %rsp
+	movq %rsp, %r12
+	cmpq $1, %rcx
+	jz Lbb453
+	movq %rax, (%r12)
+	jmp Lbb454
+Lbb453:
+	callq _compiler_lexer_lexer_scan_octal_digits
+	movq %rax, (%r12)
+Lbb454:
+	movq %rax, (%rbx)
+	jmp Lbb458
+Lbb455:
+	movq %r13, %rdi
+	callq _compiler_lexer_lexer_scan_octal_digits
+	movq %rax, (%rbx)
+	jmp Lbb458
+Lbb457:
+	movq %r12, %rax
+Lbb458:
+	movq %rbp, %rsp
+	subq $32, %rsp
+	popq %r14
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+/* end function compiler_lexer_lexer_scan_octal_digits */
+
+.text
+.balign 16
 _compiler_lexer_lexer_strip_underscores:
 	endbr64
 	pushq %rbp
@@ -6703,7 +7211,7 @@ _compiler_lexer_lexer_strip_underscores:
 	callq _donna_string_length
 	movq %rbx, %rdi
 	movq %rax, %rdx
-	leaq _str1475(%rip), %rcx
+	leaq _str1635(%rip), %rcx
 	movl $0, %esi
 	callq _compiler_lexer_lexer_strip_underscores_acc
 	popq %rbx
@@ -6731,7 +7239,7 @@ _compiler_lexer_lexer_strip_underscores_acc:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb421
+	jz Lbb466
 	movq %r12, %rsi
 	movq %rdi, %r13
 	callq _donna_string_char_str
@@ -6741,7 +7249,7 @@ _compiler_lexer_lexer_strip_underscores_acc:
 	movq %rsp, %r13
 	movq %r13, -16(%rbp)
 	movq %rsi, %r15
-	leaq _str1486(%rip), %rsi
+	leaq _str1646(%rip), %rsi
 	movq %rdi, %r13
 	movq %r15, %rdi
 	callq _strcmp
@@ -6756,7 +7264,7 @@ _compiler_lexer_lexer_strip_underscores_acc:
 	movq %r12, %r13
 	addq $1, %r13
 	cmpl $0, %ecx
-	jnz Lbb419
+	jnz Lbb464
 	movq %rdi, %r12
 	movq %rax, %rdi
 	callq ___rt_str_concat
@@ -6766,17 +7274,17 @@ _compiler_lexer_lexer_strip_underscores_acc:
 	movq %rax, %rcx
 	callq _compiler_lexer_lexer_strip_underscores_acc
 	movq %rax, (%rbx)
-	jmp Lbb422
-Lbb419:
+	jmp Lbb467
+Lbb464:
 	movq %r13, %rsi
 	movq %r14, %rdx
 	movq %rax, %rcx
 	callq _compiler_lexer_lexer_strip_underscores_acc
 	movq %rax, (%rbx)
-	jmp Lbb422
-Lbb421:
+	jmp Lbb467
+Lbb466:
 	movq %rbx, %rax
-Lbb422:
+Lbb467:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -6827,7 +7335,7 @@ _compiler_lexer_lexer_parse_hex_acc:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb430
+	jz Lbb475
 	movq %rsi, %rbx
 	movq %rdi, %r13
 	callq _donna_string_char_str
@@ -6836,7 +7344,7 @@ _compiler_lexer_lexer_parse_hex_acc:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq %rsi, %r14
-	leaq _str1509(%rip), %rsi
+	leaq _str1669(%rip), %rsi
 	callq _strcmp
 	movq %r14, %rsi
 	movq %r13, %rdi
@@ -6848,7 +7356,7 @@ _compiler_lexer_lexer_parse_hex_acc:
 	movq %rsi, %r14
 	addq $1, %r14
 	cmpl $0, %ecx
-	jnz Lbb428
+	jnz Lbb473
 	imulq $16, %rax, %r12
 	movq %rdi, %r13
 	callq _donna_string_char_at
@@ -6861,17 +7369,17 @@ _compiler_lexer_lexer_parse_hex_acc:
 	addq %rax, %rcx
 	callq _compiler_lexer_lexer_parse_hex_acc
 	movq %rax, (%rbx)
-	jmp Lbb431
-Lbb428:
+	jmp Lbb476
+Lbb473:
 	movq %r14, %rsi
 	movq %r15, %rdx
 	movq %rax, %rcx
 	callq _compiler_lexer_lexer_parse_hex_acc
 	movq %rax, (%rbx)
-	jmp Lbb431
-Lbb430:
+	jmp Lbb476
+Lbb475:
 	movq %r12, %rax
-Lbb431:
+Lbb476:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -6922,7 +7430,7 @@ _compiler_lexer_lexer_parse_binary_acc:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb441
+	jz Lbb486
 	movq %rsi, %rbx
 	movq %rdi, %r13
 	callq _donna_string_char_str
@@ -6932,7 +7440,7 @@ _compiler_lexer_lexer_parse_binary_acc:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq %rsi, %r14
-	leaq _str1535(%rip), %rsi
+	leaq _str1695(%rip), %rsi
 	callq _strcmp
 	movq %r14, %rsi
 	movq %r13, %rdi
@@ -6946,9 +7454,9 @@ _compiler_lexer_lexer_parse_binary_acc:
 	movzbq %al, %rax
 	addq $1, %rsi
 	cmpl $0, %eax
-	jnz Lbb439
+	jnz Lbb484
 	movq %rsi, %r14
-	leaq _str1542(%rip), %rsi
+	leaq _str1702(%rip), %rsi
 	callq _strcmp
 	movq %r15, %rdx
 	movq %r14, %rsi
@@ -6960,28 +7468,28 @@ _compiler_lexer_lexer_parse_binary_acc:
 	movzbq %cl, %rcx
 	imulq $2, %rax, %rax
 	cmpl $0, %ecx
-	jnz Lbb438
+	jnz Lbb483
 	movq %rax, %rcx
 	callq _compiler_lexer_lexer_parse_binary_acc
 	movq %rax, (%rbx)
-	jmp Lbb442
-Lbb438:
+	jmp Lbb487
+Lbb483:
 	movq %rax, %rcx
 	addq $1, %rcx
 	callq _compiler_lexer_lexer_parse_binary_acc
 	movq %rax, (%rbx)
-	jmp Lbb442
-Lbb439:
+	jmp Lbb487
+Lbb484:
 	movq %r12, %rax
 	movq %r15, %rdx
 	movq %r13, %rdi
 	movq %rax, %rcx
 	callq _compiler_lexer_lexer_parse_binary_acc
 	movq %rax, (%rbx)
-	jmp Lbb442
-Lbb441:
+	jmp Lbb487
+Lbb486:
 	movq %r12, %rax
-Lbb442:
+Lbb487:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -6992,6 +7500,100 @@ Lbb442:
 	leave
 	ret
 /* end function compiler_lexer_lexer_parse_binary_acc */
+
+.text
+.balign 16
+_compiler_lexer_lexer_parse_octal_str:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	movq %rdi, %rbx
+	callq _donna_string_length
+	movq %rbx, %rdi
+	movq %rax, %rdx
+	movl $0, %ecx
+	movl $0, %esi
+	callq _compiler_lexer_lexer_parse_octal_acc
+	popq %rbx
+	leave
+	ret
+/* end function compiler_lexer_lexer_parse_octal_str */
+
+.text
+.balign 16
+_compiler_lexer_lexer_parse_octal_acc:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %r14
+	pushq %r15
+	movq %rcx, %rax
+	movq %rdx, %r15
+	cmpq %r15, %rsi
+	movq %rax, %r12
+	setge %al
+	movzbq %al, %rax
+	cmpq $1, %rax
+	jz Lbb495
+	movq %rsi, %rbx
+	movq %rdi, %r13
+	callq _donna_string_char_str
+	movq %rbx, %rsi
+	movq %rax, %rdi
+	subq $16, %rsp
+	movq %rsp, %rbx
+	movq %rsi, %r14
+	leaq _str1727(%rip), %rsi
+	callq _strcmp
+	movq %r14, %rsi
+	movq %r13, %rdi
+	movq %rax, %rcx
+	movq %r12, %rax
+	cmpq $0, %rcx
+	setz %cl
+	movzbq %cl, %rcx
+	movq %rsi, %r14
+	addq $1, %r14
+	cmpl $0, %ecx
+	jnz Lbb493
+	imulq $8, %rax, %r12
+	movq %rdi, %r13
+	callq _donna_string_char_at
+	movq %r15, %rdx
+	movq %r14, %rsi
+	movq %r13, %rdi
+	subq $48, %rax
+	movq %r12, %rcx
+	addq %rax, %rcx
+	callq _compiler_lexer_lexer_parse_octal_acc
+	movq %rax, (%rbx)
+	jmp Lbb496
+Lbb493:
+	movq %r14, %rsi
+	movq %r15, %rdx
+	movq %rax, %rcx
+	callq _compiler_lexer_lexer_parse_octal_acc
+	movq %rax, (%rbx)
+	jmp Lbb496
+Lbb495:
+	movq %r12, %rax
+Lbb496:
+	movq %rbp, %rsp
+	subq $48, %rsp
+	popq %r15
+	popq %r14
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+/* end function compiler_lexer_lexer_parse_octal_acc */
 
 .text
 .balign 16
@@ -7010,7 +7612,7 @@ _compiler_lexer_lexer_all_hex_digits:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb448
+	jz Lbb502
 	movq %rsi, %r12
 	movq %rdi, %rbx
 	callq _donna_string_char_at
@@ -7021,18 +7623,18 @@ _compiler_lexer_lexer_all_hex_digits:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $0, %rax
-	jz Lbb446
+	jz Lbb500
 	addq $1, %rsi
 	callq _compiler_lexer_lexer_all_hex_digits
 	movq %rax, (%rbx)
-	jmp Lbb449
-Lbb446:
+	jmp Lbb503
+Lbb500:
 	movq $0, (%rbx)
 	movl $0, %eax
-	jmp Lbb449
-Lbb448:
+	jmp Lbb503
+Lbb502:
 	movl $1, %eax
-Lbb449:
+Lbb503:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %r12
@@ -7040,6 +7642,20 @@ Lbb449:
 	leave
 	ret
 /* end function compiler_lexer_lexer_all_hex_digits */
+
+.text
+.balign 16
+_compiler_lexer_lexer_is_octal_digit_code:
+	endbr64
+	cmpq $48, %rdi
+	setge %al
+	movzbq %al, %rax
+	cmpq $55, %rdi
+	setle %cl
+	movzbq %cl, %rcx
+	andq %rcx, %rax
+	ret
+/* end function compiler_lexer_lexer_is_octal_digit_code */
 
 .text
 .balign 16
@@ -7055,7 +7671,7 @@ _compiler_lexer_lexer_hex_val:
 	movzbq %cl, %rcx
 	andq %rcx, %rax
 	cmpq $1, %rax
-	jz Lbb458
+	jz Lbb514
 	cmpq $65, %rdi
 	setge %al
 	movzbq %al, %rax
@@ -7066,7 +7682,7 @@ _compiler_lexer_lexer_hex_val:
 	subq $16, %rsp
 	movq %rsp, %rcx
 	cmpq $1, %rax
-	jz Lbb457
+	jz Lbb513
 	cmpq $97, %rdi
 	setge %al
 	movzbq %al, %rax
@@ -7077,26 +7693,26 @@ _compiler_lexer_lexer_hex_val:
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
-	jz Lbb455
+	jz Lbb511
 	movq $0, (%rdx)
 	movl $0, %eax
-	jmp Lbb456
-Lbb455:
+	jmp Lbb512
+Lbb511:
 	movq %rdi, %rax
 	subq $87, %rax
 	movq %rax, (%rdx)
-Lbb456:
+Lbb512:
 	movq %rax, (%rcx)
-	jmp Lbb459
-Lbb457:
+	jmp Lbb515
+Lbb513:
 	movq %rdi, %rax
 	subq $55, %rax
 	movq %rax, (%rcx)
-	jmp Lbb459
-Lbb458:
+	jmp Lbb515
+Lbb514:
 	movq %rdi, %rax
 	subq $48, %rax
-Lbb459:
+Lbb515:
 	movq %rbp, %rsp
 	subq $0, %rsp
 	leave
@@ -7130,14 +7746,14 @@ _compiler_lexer_lexer_lex_ident:
 	movq %rdi, %rbx
 	callq _donna_string_char_str
 	movq %rax, %rdi
-	leaq _str1605(%rip), %rsi
+	leaq _str1794(%rip), %rsi
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb462
+	jz Lbb518
 	movq %r14, %rsi
 	movq %rdi, %rbx
 	callq _compiler_lexer_lexer_scan_ident
@@ -7202,8 +7818,8 @@ _compiler_lexer_lexer_lex_ident:
 	movq %rdx, %r13
 	callq _compiler_lexer_lexer_push_at
 	subq $-48, %rsp
-	jmp Lbb463
-Lbb462:
+	jmp Lbb519
+Lbb518:
 	movq %r14, %rsi
 	addq $1, %rsi
 	movq %rsi, -56(%rbp)
@@ -7269,7 +7885,7 @@ Lbb462:
 	movq %rax, 0(%r10)
 	callq _compiler_lexer_lexer_push_at
 	subq $-48, %rsp
-Lbb463:
+Lbb519:
 	popq %r15
 	popq %r14
 	popq %r13
@@ -7299,14 +7915,14 @@ _compiler_lexer_lexer_scan_ident:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb472
+	jz Lbb528
 	movq %r12, %rsi
 	movq %r13, %rdi
 	callq _donna_string_char_str
 	movq %rax, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	leaq _str1651(%rip), %rsi
+	leaq _str1840(%rip), %rsi
 	movq %rdi, %r14
 	callq _strcmp
 	movq %r14, %rdi
@@ -7319,7 +7935,7 @@ _compiler_lexer_lexer_scan_ident:
 	movq %r12, %rsi
 	addq $1, %rsi
 	cmpl $0, %eax
-	jnz Lbb470
+	jnz Lbb526
 	movq %rsi, %r14
 	movl $0, %esi
 	callq _donna_string_char_at
@@ -7332,23 +7948,23 @@ _compiler_lexer_lexer_scan_ident:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rcx
-	jz Lbb468
+	jz Lbb524
 	movq %rax, (%r12)
-	jmp Lbb469
-Lbb468:
+	jmp Lbb525
+Lbb524:
 	callq _compiler_lexer_lexer_scan_ident
 	movq %rax, (%r12)
-Lbb469:
+Lbb525:
 	movq %rax, (%rbx)
-	jmp Lbb473
-Lbb470:
+	jmp Lbb529
+Lbb526:
 	movq %r13, %rdi
 	callq _compiler_lexer_lexer_scan_ident
 	movq %rax, (%rbx)
-	jmp Lbb473
-Lbb472:
+	jmp Lbb529
+Lbb528:
 	movq %r12, %rax
-Lbb473:
+Lbb529:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14
@@ -7367,102 +7983,102 @@ _compiler_lexer_lexer_resolve_keyword:
 	movq %rsp, %rbp
 	subq $8, %rsp
 	pushq %rbx
-	leaq _str1672(%rip), %rsi
+	leaq _str1861(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb508
-	leaq _str1677(%rip), %rsi
+	jz Lbb564
+	leaq _str1866(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb507
-	leaq _str1682(%rip), %rsi
+	jz Lbb563
+	leaq _str1871(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb506
-	leaq _str1687(%rip), %rsi
+	jz Lbb562
+	leaq _str1876(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb505
-	leaq _str1692(%rip), %rsi
+	jz Lbb561
+	leaq _str1881(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb504
-	leaq _str1697(%rip), %rsi
+	jz Lbb560
+	leaq _str1886(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb503
-	leaq _str1702(%rip), %rsi
+	jz Lbb559
+	leaq _str1891(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb502
-	leaq _str1707(%rip), %rsi
+	jz Lbb558
+	leaq _str1896(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb501
-	leaq _str1712(%rip), %rsi
+	jz Lbb557
+	leaq _str1901(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb500
-	leaq _str1717(%rip), %rsi
+	jz Lbb556
+	leaq _str1906(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb499
-	leaq _str1722(%rip), %rsi
+	jz Lbb555
+	leaq _str1911(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb498
-	leaq _str1727(%rip), %rsi
+	jz Lbb554
+	leaq _str1916(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb497
-	leaq _str1732(%rip), %rsi
+	jz Lbb553
+	leaq _str1921(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb496
-	leaq _str1737(%rip), %rsi
+	jz Lbb552
+	leaq _str1926(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb495
-	leaq _str1742(%rip), %rsi
+	jz Lbb551
+	leaq _str1931(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb494
-	leaq _str1748(%rip), %rsi
+	jz Lbb550
+	leaq _str1937(%rip), %rsi
 	movq %rdi, %rbx
 	callq _strcmp
 	movq %rbx, %rdi
 	cmpq $0, %rax
-	jz Lbb493
+	jz Lbb549
 	movl $0, %esi
 	movq %rdi, %rbx
 	callq _donna_string_char_at
@@ -7472,64 +8088,64 @@ _compiler_lexer_lexer_resolve_keyword:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb492
+	jz Lbb548
 	callq _compiler_lexer_token_TokName
 	movq %rax, (%rbx)
-	jmp Lbb509
-Lbb492:
+	jmp Lbb565
+Lbb548:
 	callq _compiler_lexer_token_TokUpperName
 	movq %rax, (%rbx)
-	jmp Lbb509
-Lbb493:
+	jmp Lbb565
+Lbb549:
 	movl $0, %edi
 	callq _compiler_lexer_token_TokBool
-	jmp Lbb509
-Lbb494:
+	jmp Lbb565
+Lbb550:
 	movl $1, %edi
 	callq _compiler_lexer_token_TokBool
-	jmp Lbb509
-Lbb495:
+	jmp Lbb565
+Lbb551:
 	leaq _compiler_lexer_token_TokType(%rip), %rax
-	jmp Lbb509
-Lbb496:
+	jmp Lbb565
+Lbb552:
 	leaq _compiler_lexer_token_TokTodo(%rip), %rax
-	jmp Lbb509
-Lbb497:
+	jmp Lbb565
+Lbb553:
 	leaq _compiler_lexer_token_TokPub(%rip), %rax
-	jmp Lbb509
-Lbb498:
+	jmp Lbb565
+Lbb554:
 	leaq _compiler_lexer_token_TokPanic(%rip), %rax
-	jmp Lbb509
-Lbb499:
+	jmp Lbb565
+Lbb555:
 	leaq _compiler_lexer_token_TokOpaque(%rip), %rax
-	jmp Lbb509
-Lbb500:
+	jmp Lbb565
+Lbb556:
 	leaq _compiler_lexer_token_TokLet(%rip), %rax
-	jmp Lbb509
-Lbb501:
+	jmp Lbb565
+Lbb557:
 	leaq _compiler_lexer_token_TokImport(%rip), %rax
-	jmp Lbb509
-Lbb502:
+	jmp Lbb565
+Lbb558:
 	leaq _compiler_lexer_token_TokIf(%rip), %rax
-	jmp Lbb509
-Lbb503:
+	jmp Lbb565
+Lbb559:
 	leaq _compiler_lexer_token_TokFn(%rip), %rax
-	jmp Lbb509
-Lbb504:
+	jmp Lbb565
+Lbb560:
 	leaq _compiler_lexer_token_TokExternal(%rip), %rax
-	jmp Lbb509
-Lbb505:
+	jmp Lbb565
+Lbb561:
 	leaq _compiler_lexer_token_TokEcho(%rip), %rax
-	jmp Lbb509
-Lbb506:
+	jmp Lbb565
+Lbb562:
 	leaq _compiler_lexer_token_TokConst(%rip), %rax
-	jmp Lbb509
-Lbb507:
+	jmp Lbb565
+Lbb563:
 	leaq _compiler_lexer_token_TokCase(%rip), %rax
-	jmp Lbb509
-Lbb508:
+	jmp Lbb565
+Lbb564:
 	leaq _compiler_lexer_token_TokAs(%rip), %rax
-Lbb509:
+Lbb565:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rbx
@@ -7678,12 +8294,12 @@ _compiler_lexer_lexer_safe_char_str:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb524
+	jz Lbb580
 	callq _donna_string_char_str
-	jmp Lbb525
-Lbb524:
-	leaq _str1800(%rip), %rax
-Lbb525:
+	jmp Lbb581
+Lbb580:
+	leaq _str1989(%rip), %rax
+Lbb581:
 	popq %r12
 	popq %rbx
 	leave
@@ -7707,12 +8323,12 @@ _compiler_lexer_lexer_safe_char_at:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb528
+	jz Lbb584
 	callq _donna_string_char_at
-	jmp Lbb529
-Lbb528:
+	jmp Lbb585
+Lbb584:
 	movl $0, %eax
-Lbb529:
+Lbb585:
 	popq %r12
 	popq %rbx
 	leave
@@ -8073,9 +8689,9 @@ _compiler_lexer_lexer_list_head:
 	movq %rsi, %rax
 	movq (%rdi), %rcx
 	cmpq $0, %rcx
-	jz Lbb544
+	jz Lbb600
 	movq 8(%rdi), %rax
-Lbb544:
+Lbb600:
 	ret
 /* end function compiler_lexer_lexer_list_head */
 

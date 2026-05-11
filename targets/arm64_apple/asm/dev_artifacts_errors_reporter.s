@@ -59,28 +59,28 @@ _str42:
 
 .data
 .balign 8
-_str48:
+_str49:
 	.ascii "^"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str50:
+_str51:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str53:
+_str54:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str59:
+_str60:
 	.ascii " "
 	.byte 226
 	.byte 148
@@ -90,31 +90,44 @@ _str59:
 
 .data
 .balign 8
-_str62:
+_str63:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str65:
+_str66:
 	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str74:
-	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str75:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str76:
 	.byte 10
 	.byte 10
-	.ascii "hint: "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str77:
+	.ascii "hint:"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str80:
+	.ascii " "
 	.byte 0
 /* end data */
 
@@ -126,7 +139,7 @@ _donna_nil:
 
 .data
 .balign 8
-_str84:
+_str90:
 	.ascii " "
 	.byte 226
 	.byte 148
@@ -136,21 +149,21 @@ _str84:
 
 .data
 .balign 8
-_str96:
+_str102:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str99:
+_str105:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str108:
+_str114:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -316,7 +329,7 @@ _errors_reporter_render:
 	mov	x25, x0
 	mov	x0, x19
 	bl	___rt_str_concat
-	bl	_utilities_colors_dim
+	bl	_utilities_colors_light_blue
 	str	x0, [x29, 48]
 	mov	x0, x25
 	adrp	x1, _str42@page
@@ -324,11 +337,12 @@ _errors_reporter_render:
 	mov	x25, x0
 	mov	x0, x19
 	bl	___rt_str_concat
+	bl	_utilities_colors_light_blue
 	str	x0, [x29, 64]
 	mov	x0, x25
 	ldr	x27, [x29, 72]
 	bl	_utilities_location_short_label
-	bl	_utilities_colors_dim
+	bl	_utilities_colors_light_blue
 	mov	x1, x0
 	mov	x0, x21
 	mov	x21, x0
@@ -343,8 +357,8 @@ _errors_reporter_render:
 	mov	x1, x21
 	str	x0, [x29, 24]
 	ldr	x21, [x29, 48]
-	adrp	x0, _str48@page
-	add	x0, x0, _str48@pageoff
+	adrp	x0, _str49@page
+	add	x0, x0, _str49@pageoff
 	bl	_donna_string_repeat
 	mov	x1, x23
 	str	x0, [x29, 32]
@@ -352,15 +366,15 @@ _errors_reporter_render:
 	mov	x0, #1
 	mov	x25, x1
 	sub	x1, x27, x0
-	adrp	x0, _str50@page
-	add	x0, x0, _str50@pageoff
+	adrp	x0, _str51@page
+	add	x0, x0, _str51@pageoff
 	bl	_donna_string_repeat
 	mov	x1, x25
 	str	x0, [x29, 16]
 	ldr	x0, [x29, 32]
 	mov	x25, x1
-	adrp	x1, _str53@page
-	add	x1, x1, _str53@pageoff
+	adrp	x1, _str54@page
+	add	x1, x1, _str54@pageoff
 	bl	___rt_str_concat
 	mov	x1, x25
 	ldr	x25, [x29, 24]
@@ -377,14 +391,14 @@ _errors_reporter_render:
 	bl	_donna_int_to_string
 	mov	x1, x25
 	mov	x25, x1
-	adrp	x1, _str59@page
-	add	x1, x1, _str59@pageoff
+	adrp	x1, _str60@page
+	add	x1, x1, _str60@pageoff
 	bl	___rt_str_concat
-	bl	_utilities_colors_dim
+	bl	_utilities_colors_light_blue
 	mov	x1, x25
 	mov	x25, x1
-	adrp	x1, _str62@page
-	add	x1, x1, _str62@pageoff
+	adrp	x1, _str63@page
+	add	x1, x1, _str63@pageoff
 	bl	___rt_str_concat
 	mov	x1, x25
 	bl	___rt_str_concat
@@ -392,8 +406,8 @@ _errors_reporter_render:
 	mov	x22, x0
 	mov	x0, x21
 	mov	x21, x1
-	adrp	x1, _str65@page
-	add	x1, x1, _str65@pageoff
+	adrp	x1, _str66@page
+	add	x1, x1, _str66@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	bl	___rt_str_concat
@@ -403,21 +417,33 @@ _errors_reporter_render:
 	mov	x21, x0
 	mov	x0, x24
 	bl	_donna_string_is_empty
-	mov	x1, x24
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x21
-	cmp	x2, #1
+	cmp	x1, #1
 	beq	L6
 	mov	x21, x0
-	adrp	x0, _str75@page
-	add	x0, x0, _str75@pageoff
+	adrp	x0, _str77@page
+	add	x0, x0, _str77@pageoff
+	bl	_utilities_colors_orange
+	mov	x1, x0
+	mov	x0, x21
+	mov	x21, x0
+	adrp	x0, _str76@page
+	add	x0, x0, _str76@pageoff
+	bl	___rt_str_concat
+	mov	x1, x24
+	mov	x24, x1
+	adrp	x1, _str80@page
+	add	x1, x1, _str80@pageoff
+	bl	___rt_str_concat
+	mov	x1, x24
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x0, x21
 	b	L7
 L6:
-	adrp	x1, _str74@page
-	add	x1, x1, _str74@pageoff
+	adrp	x1, _str75@page
+	add	x1, x1, _str75@pageoff
 L7:
 	mov	x24, x1
 	mov	x21, x0
@@ -454,10 +480,10 @@ L7:
 	add	x2, x19, x2
 	str	x21, [x2]
 	mov	x21, x1
-	adrp	x1, _str84@page
-	add	x1, x1, _str84@pageoff
+	adrp	x1, _str90@page
+	add	x1, x1, _str90@pageoff
 	bl	___rt_str_concat
-	bl	_utilities_colors_dim
+	bl	_utilities_colors_light_blue
 	mov	x24, x0
 	mov	x0, #24
 	bl	_malloc
@@ -493,8 +519,8 @@ L7:
 	add	x2, x0, x2
 	str	x19, [x2]
 	mov	x19, x1
-	adrp	x1, _str96@page
-	add	x1, x1, _str96@pageoff
+	adrp	x1, _str102@page
+	add	x1, x1, _str102@pageoff
 	bl	_donna_string_join
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -519,8 +545,8 @@ _errors_reporter_get_line:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x1
-	adrp	x1, _str99@page
-	add	x1, x1, _str99@pageoff
+	adrp	x1, _str105@page
+	add	x1, x1, _str105@pageoff
 	bl	_donna_string_split
 	mov	x1, x19
 	mov	x2, #1
@@ -564,8 +590,8 @@ L15:
 	str	x0, [x19]
 	b	L17
 L16:
-	adrp	x0, _str108@page
-	add	x0, x0, _str108@pageoff
+	adrp	x0, _str114@page
+	add	x0, x0, _str114@pageoff
 L17:
 	ldr	x19, [x29, 24]
 	mov sp, x29
