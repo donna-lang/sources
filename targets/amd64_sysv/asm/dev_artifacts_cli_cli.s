@@ -245,7 +245,7 @@ str230:
 
 .data
 .balign 8
-str242:
+str243:
 	.ascii "error"
 	.byte 0
 /* end data */
@@ -259,14 +259,28 @@ str250:
 
 .data
 .balign 8
-str254:
+str257:
+	.ascii "parse error:"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str264:
+	.ascii "lex error:"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str269:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str256:
+str271:
 	.ascii ": "
 	.byte 0
 /* end data */
@@ -279,49 +293,49 @@ donna_nil:
 
 .data
 .balign 8
-str277:
+str292:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str308:
+str323:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str321:
+str336:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str350:
+str365:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str363:
+str378:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str392:
+str407:
 	.ascii "h"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str394:
+str409:
 	.ascii "help"
 	.byte 0
 /* end data */
@@ -858,28 +872,52 @@ cli_cli_is_failure_text:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
 	pushq %rbx
-	movq %rdi, %rbx
-	leaq str242(%rip), %rdi
-	callq utilities_colors_red
-	movq %rbx, %rdi
-	movq %rax, %rsi
+	pushq %r12
+	callq utilities_colors_strip
+	movq %rax, %rdi
+	leaq str243(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_starts_with
 	movq %rbx, %rdi
 	cmpq $1, %rax
-	jz .Lbb85
+	jz .Lbb92
+	leaq str250(%rip), %rsi
 	movq %rdi, %rbx
-	leaq str250(%rip), %rdi
-	callq utilities_colors_red
-	movq %rbx, %rdi
-	movq %rax, %rsi
 	callq donna_string_starts_with
-	jmp .Lbb86
-.Lbb85:
+	movq %rbx, %rdi
+	subq $16, %rsp
+	movq %rsp, %rbx
+	cmpq $1, %rax
+	jz .Lbb90
+	leaq str257(%rip), %rsi
+	movq %rdi, %r12
+	callq donna_string_starts_with
+	movq %r12, %rdi
+	subq $16, %rsp
+	movq %rsp, %r12
+	cmpq $1, %rax
+	jz .Lbb87
+	leaq str264(%rip), %rsi
+	callq donna_string_starts_with
+	movq %rax, (%r12)
+	jmp .Lbb89
+.Lbb87:
+	movq $1, (%r12)
 	movl $1, %eax
-.Lbb86:
+.Lbb89:
+	movq %rax, (%rbx)
+	jmp .Lbb93
+.Lbb90:
+	movq $1, (%rbx)
+	movl $1, %eax
+	jmp .Lbb93
+.Lbb92:
+	movl $1, %eax
+.Lbb93:
+	movq %rbp, %rsp
+	subq $16, %rsp
+	popq %r12
 	popq %rbx
 	leave
 	ret
@@ -896,12 +934,12 @@ cli_cli_fail:
 	subq $8, %rsp
 	pushq %rbx
 	movq %rdi, %rbx
-	leaq str254(%rip), %rdi
+	leaq str269(%rip), %rdi
 	callq utilities_colors_red
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq str256(%rip), %rsi
+	leaq str271(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -923,22 +961,22 @@ cli_cli_drop_command:
 	pushq %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb97
+	jz .Lbb104
 	cmpq $1, %rax
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpl $0, %eax
-	jnz .Lbb93
+	jnz .Lbb100
 	movq $0, (%rbx)
 	movl $0, %eax
-	jmp .Lbb94
-.Lbb93:
+	jmp .Lbb101
+.Lbb100:
 	movq 8(%rdi), %rax
 	movq %rdi, %r12
 	movq (%rax), %rdi
-	leaq str277(%rip), %rsi
+	leaq str292(%rip), %rsi
 	callq strcmp
 	movq %r12, %rdi
 	cmpq $0, %rax
@@ -946,9 +984,9 @@ cli_cli_drop_command:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rbx)
-.Lbb94:
+.Lbb101:
 	cmpl $0, %eax
-	jnz .Lbb96
+	jnz .Lbb103
 	movq 8(%rdi), %r12
 	movq 16(%rdi), %rdi
 	callq cli_cli_drop_command
@@ -958,13 +996,13 @@ cli_cli_drop_command:
 	movq $1, (%rax)
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
-	jmp .Lbb98
-.Lbb96:
+	jmp .Lbb105
+.Lbb103:
 	movq 16(%rdi), %rax
-	jmp .Lbb98
-.Lbb97:
+	jmp .Lbb105
+.Lbb104:
 	leaq donna_nil(%rip), %rax
-.Lbb98:
+.Lbb105:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %r12
@@ -985,22 +1023,22 @@ cli_cli_first_positional:
 	pushq %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb107
+	jz .Lbb114
 	cmpq $1, %rax
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpl $0, %eax
-	jnz .Lbb103
+	jnz .Lbb110
 	movq $0, (%rbx)
 	movl $0, %eax
-	jmp .Lbb104
-.Lbb103:
+	jmp .Lbb111
+.Lbb110:
 	movq 8(%rdi), %rax
 	movq %rdi, %r12
 	movq (%rax), %rdi
-	leaq str321(%rip), %rsi
+	leaq str336(%rip), %rsi
 	callq strcmp
 	movq %r12, %rdi
 	cmpq $0, %rax
@@ -1008,19 +1046,19 @@ cli_cli_first_positional:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rbx)
-.Lbb104:
+.Lbb111:
 	cmpl $0, %eax
-	jnz .Lbb106
+	jnz .Lbb113
 	movq 16(%rdi), %rdi
 	callq cli_cli_first_positional
-	jmp .Lbb108
-.Lbb106:
+	jmp .Lbb115
+.Lbb113:
 	movq 8(%rdi), %rax
 	movq 8(%rax), %rax
-	jmp .Lbb108
-.Lbb107:
-	leaq str308(%rip), %rax
-.Lbb108:
+	jmp .Lbb115
+.Lbb114:
+	leaq str323(%rip), %rax
+.Lbb115:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %r12
@@ -1057,23 +1095,23 @@ cli_cli_second_positional_loop:
 	pushq %r13
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb121
+	jz .Lbb128
 	cmpq $1, %rax
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpl $0, %eax
-	jnz .Lbb115
+	jnz .Lbb122
 	movq $0, (%rbx)
 	movl $0, %eax
-	jmp .Lbb116
-.Lbb115:
+	jmp .Lbb123
+.Lbb122:
 	movq 8(%rdi), %rax
 	movq %rdi, %r12
 	movq (%rax), %rdi
 	movq %rsi, %r13
-	leaq str363(%rip), %rsi
+	leaq str378(%rip), %rsi
 	callq strcmp
 	movq %r13, %rsi
 	movq %r12, %rdi
@@ -1082,30 +1120,30 @@ cli_cli_second_positional_loop:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rbx)
-.Lbb116:
+.Lbb123:
 	cmpl $0, %eax
-	jnz .Lbb118
+	jnz .Lbb125
 	movq 16(%rdi), %rdi
 	callq cli_cli_second_positional_loop
-	jmp .Lbb122
-.Lbb118:
+	jmp .Lbb129
+.Lbb125:
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq 8(%rax), %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rsi
-	jz .Lbb120
+	jz .Lbb127
 	movl $1, %esi
 	callq cli_cli_second_positional_loop
 	movq %rax, (%rbx)
-	jmp .Lbb122
-.Lbb120:
+	jmp .Lbb129
+.Lbb127:
 	movq %rax, (%rbx)
-	jmp .Lbb122
-.Lbb121:
-	leaq str350(%rip), %rax
-.Lbb122:
+	jmp .Lbb129
+.Lbb128:
+	leaq str365(%rip), %rax
+.Lbb129:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r13
@@ -1125,12 +1163,12 @@ cli_cli_has_help_flag:
 	movq %rsp, %rbp
 	subq $8, %rsp
 	pushq %rbx
-	leaq str392(%rip), %rsi
+	leaq str407(%rip), %rsi
 	movq %rdi, %rbx
 	callq cli_cli_has_flag
 	movq %rbx, %rdi
 	movq %rax, %rbx
-	leaq str394(%rip), %rsi
+	leaq str409(%rip), %rsi
 	callq cli_cli_has_flag
 	orq %rbx, %rax
 	popq %rbx
@@ -1150,7 +1188,7 @@ cli_cli_has_flag:
 	pushq %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb130
+	jz .Lbb137
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq %rdi, %rbx
@@ -1162,17 +1200,17 @@ cli_cli_has_flag:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz .Lbb128
+	jz .Lbb135
 	callq cli_cli_has_flag
 	movq %rax, (%rbx)
-	jmp .Lbb131
-.Lbb128:
+	jmp .Lbb138
+.Lbb135:
 	movq $1, (%rbx)
 	movl $1, %eax
-	jmp .Lbb131
-.Lbb130:
+	jmp .Lbb138
+.Lbb137:
 	movl $0, %eax
-.Lbb131:
+.Lbb138:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %r12

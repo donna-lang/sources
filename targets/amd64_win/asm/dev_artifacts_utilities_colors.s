@@ -1,6 +1,6 @@
 .data
 .balign 8
-str16:
+str17:
 	.byte 27
 	.ascii "["
 	.byte 0
@@ -8,7 +8,7 @@ str16:
 
 .data
 .balign 8
-str29:
+str30:
 	.ascii "m"
 	.byte 0
 /* end data */
@@ -91,6 +91,15 @@ utilities_colors_color_yellow:
 utilities_colors_color_cyan:
 	.byte 27
 	.ascii "[36m"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+.globl utilities_colors_color_light_blue
+utilities_colors_color_light_blue:
+	.byte 27
+	.ascii "[38;5;111m"
 	.byte 0
 /* end data */
 
@@ -302,6 +311,22 @@ utilities_colors_path:
 
 .text
 .balign 16
+.globl utilities_colors_light_blue
+utilities_colors_light_blue:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	movq %rcx, %rdx
+	subq $32, %rsp
+	leaq utilities_colors_color_light_blue(%rip), %rcx
+	callq utilities_colors_paint
+	subq $-32, %rsp
+	leave
+	ret
+/* end function utilities_colors_light_blue */
+
+.text
+.balign 16
 .globl utilities_colors_magenta
 utilities_colors_magenta:
 	endbr64
@@ -362,13 +387,13 @@ utilities_colors_strip_ansi:
 	pushq %rdi
 	movq %rcx, %rbx
 	subq $32, %rsp
-	leaq str16(%rip), %rdx
+	leaq str17(%rip), %rdx
 	movq %rbx, %rcx
 	callq donna_string_index_of
 	movq %rax, %rdi
 	subq $-32, %rsp
 	cmpq $-1, %rdi
-	jz Lbb33
+	jz Lbb35
 	subq $32, %rsp
 	movq %rdi, %r8
 	movl $0, %edx
@@ -394,7 +419,7 @@ utilities_colors_strip_ansi:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str29(%rip), %rdx
+	leaq str30(%rip), %rdx
 	movq %rcx, %rdi
 	callq donna_string_index_of
 	movq %rdi, %rcx
@@ -408,7 +433,7 @@ utilities_colors_strip_ansi:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb31
+	jz Lbb33
 	movq %rbx, %r13
 	addq $1, %r13
 	subq $32, %rsp
@@ -434,14 +459,14 @@ utilities_colors_strip_ansi:
 	callq __rt_str_concat
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb34
-Lbb31:
+	jmp Lbb36
+Lbb33:
 	movq %rdi, %rax
 	movq %rax, (%rsi)
-	jmp Lbb34
-Lbb33:
+	jmp Lbb36
+Lbb35:
 	movq %rbx, %rax
-Lbb34:
+Lbb36:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi

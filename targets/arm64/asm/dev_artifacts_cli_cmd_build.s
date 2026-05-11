@@ -34,56 +34,56 @@ donna_nil:
 
 .data
 .balign 8
-str57:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str59:
-	.ascii ": "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str74:
+str69:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str84:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str86:
-	.ascii ": "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str107:
+str97:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str135:
+str125:
 	.ascii "-o"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str143:
+str133:
+	.ascii " >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str142:
+	.ascii "build failed"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str144:
+	.ascii ": linker failed"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str147:
+	.ascii "command -v codesign >/dev/null 2>&1 && codesign --force -s - "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str149:
 	.ascii " >/dev/null 2>&1"
 	.byte 0
 /* end data */
@@ -91,55 +91,27 @@ str143:
 .data
 .balign 8
 str152:
-	.ascii "build failed"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str154:
-	.ascii ": linker failed"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str157:
-	.ascii "command -v codesign >/dev/null 2>&1 && codesign --force -s - "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str159:
-	.ascii " >/dev/null 2>&1"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str162:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str172:
+str162:
 	.ascii "  hint: install QBE and make sure qbe is in PATH"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str174:
+str164:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str176:
+str166:
 	.ascii ": qbe not found"
 	.byte 10
 	.byte 0
@@ -147,21 +119,21 @@ str176:
 
 .data
 .balign 8
-str179:
+str169:
 	.ascii "  hint: install clang/gcc or Zig, or set DONNA_CC"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str181:
+str171:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str183:
+str173:
 	.ascii ": C compiler not found"
 	.byte 10
 	.byte 0
@@ -169,63 +141,63 @@ str183:
 
 .data
 .balign 8
-str202:
+str192:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str206:
+str196:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str208:
+str198:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str318:
+str308:
 	.ascii "main"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str328:
+str318:
 	.ascii "uname | grep -q '^Darwin$' >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str336:
+str326:
 	.ascii "-Wl,-stack_size,0x2000000"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str340:
+str330:
 	.ascii "-lm"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str351:
+str341:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str364:
+str354:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -438,8 +410,8 @@ cli_cmd_build_build_project:
 	mov	x4, x24
 	mov	x3, x22
 	mov	x2, x20
-	adrp	x1, str74
-	add	x1, x1, #:lo12:str74
+	adrp	x1, str69
+	add	x1, x1, #:lo12:str69
 	bl	builder_pipeline_compile_dir
 	mov	x1, x0
 	mov	x0, x19
@@ -525,8 +497,8 @@ cli_cmd_build_build_project:
 	str	x2, [x1]
 	mov	x2, #8
 	add	x3, x1, x2
-	adrp	x2, str135
-	add	x2, x2, #:lo12:str135
+	adrp	x2, str125
+	add	x2, x2, #:lo12:str125
 	str	x2, [x3]
 	mov	x2, #16
 	add	x2, x1, x2
@@ -541,8 +513,8 @@ cli_cmd_build_build_project:
 	bl	builder_pipeline_c_command
 	mov	x1, x23
 	mov	x23, x1
-	adrp	x1, str143
-	add	x1, x1, #:lo12:str143
+	adrp	x1, str133
+	add	x1, x1, #:lo12:str133
 	bl	__rt_str_concat
 	bl	donna_shell_run
 	mov	x1, x23
@@ -553,28 +525,28 @@ cli_cmd_build_build_project:
 	mov	x23, sp
 	cmp	x0, #0
 	beq	.L19
-	adrp	x0, str157
-	add	x0, x0, #:lo12:str157
+	adrp	x0, str147
+	add	x0, x0, #:lo12:str147
 	bl	__rt_str_concat
-	adrp	x1, str159
-	add	x1, x1, #:lo12:str159
+	adrp	x1, str149
+	add	x1, x1, #:lo12:str149
 	bl	__rt_str_concat
 	bl	donna_shell_run
 	bl	donna_time_now_us
 	sub	x1, x0, x24
-	adrp	x0, str162
-	add	x0, x0, #:lo12:str162
+	adrp	x0, str152
+	add	x0, x0, #:lo12:str152
 	bl	utilities_logger_ok
 	mov	x0, #1
 	bl	cli_cmd_build_BuildOk
 	str	x0, [x23]
 	b	.L20
 .L19:
-	adrp	x0, str152
-	add	x0, x0, #:lo12:str152
+	adrp	x0, str142
+	add	x0, x0, #:lo12:str142
 	bl	utilities_colors_red
-	adrp	x1, str154
-	add	x1, x1, #:lo12:str154
+	adrp	x1, str144
+	add	x1, x1, #:lo12:str144
 	bl	__rt_str_concat
 	bl	cli_cmd_build_BuildFailed
 	str	x0, [x23]
@@ -605,8 +577,8 @@ cli_cmd_build_build_project:
 	bl	donna_files_delete
 	bl	donna_time_now_us
 	sub	x1, x0, x21
-	adrp	x0, str107
-	add	x0, x0, #:lo12:str107
+	adrp	x0, str97
+	add	x0, x0, #:lo12:str97
 	bl	utilities_logger_ok
 	mov	x0, #0
 	bl	cli_cmd_build_BuildOk
@@ -618,34 +590,14 @@ cli_cmd_build_build_project:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x20, [x0]
-	adrp	x0, str84
-	add	x0, x0, #:lo12:str84
-	bl	utilities_colors_red
-	mov	x1, x20
-	mov	x20, x1
-	adrp	x1, str86
-	add	x1, x1, #:lo12:str86
-	bl	__rt_str_concat
-	mov	x1, x20
-	bl	__rt_str_concat
+	ldr	x0, [x0]
 	bl	cli_cmd_build_BuildFailed
 	str	x0, [x19]
 	b	.L31
 .L30:
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x19, [x0]
-	adrp	x0, str57
-	add	x0, x0, #:lo12:str57
-	bl	utilities_colors_red
-	mov	x1, x19
-	mov	x19, x1
-	adrp	x1, str59
-	add	x1, x1, #:lo12:str59
-	bl	__rt_str_concat
-	mov	x1, x19
-	bl	__rt_str_concat
+	ldr	x0, [x0]
 	bl	cli_cmd_build_BuildFailed
 .L31:
 	ldr	x19, [x29, 104]
@@ -671,17 +623,17 @@ cli_cmd_build_qbe_missing_error:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x0, str172
-	add	x0, x0, #:lo12:str172
+	adrp	x0, str162
+	add	x0, x0, #:lo12:str162
 	bl	utilities_colors_dim
 	mov	x19, x0
-	adrp	x0, str174
-	add	x0, x0, #:lo12:str174
+	adrp	x0, str164
+	add	x0, x0, #:lo12:str164
 	bl	utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str176
-	add	x1, x1, #:lo12:str176
+	adrp	x1, str166
+	add	x1, x1, #:lo12:str166
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
@@ -699,17 +651,17 @@ cli_cmd_build_c_compiler_missing_error:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x0, str179
-	add	x0, x0, #:lo12:str179
+	adrp	x0, str169
+	add	x0, x0, #:lo12:str169
 	bl	utilities_colors_dim
 	mov	x19, x0
-	adrp	x0, str181
-	add	x0, x0, #:lo12:str181
+	adrp	x0, str171
+	add	x0, x0, #:lo12:str171
 	bl	utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str183
-	add	x1, x1, #:lo12:str183
+	adrp	x1, str173
+	add	x1, x1, #:lo12:str173
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
@@ -748,8 +700,8 @@ cli_cmd_build_compile_deps:
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x20, [x0]
-	adrp	x1, str202
-	add	x1, x1, #:lo12:str202
+	adrp	x1, str192
+	add	x1, x1, #:lo12:str192
 	mov	x0, x21
 	bl	donna_files_join
 	mov	x22, x0
@@ -758,15 +710,15 @@ cli_cmd_build_compile_deps:
 	mov	x1, x0
 	mov	x0, x22
 	bl	donna_files_join
-	adrp	x1, str206
-	add	x1, x1, #:lo12:str206
+	adrp	x1, str196
+	add	x1, x1, #:lo12:str196
 	mov	x22, x0
 	bl	donna_files_join
 	mov	x1, x0
 	mov	x0, x22
 	mov	x22, x1
-	adrp	x1, str208
-	add	x1, x1, #:lo12:str208
+	adrp	x1, str198
+	add	x1, x1, #:lo12:str198
 	mov	x23, x0
 	mov	x0, x21
 	bl	donna_files_join
@@ -1032,8 +984,8 @@ cli_cmd_build_bindings_have_main:
 	add	x1, x1, x2
 	ldr	x19, [x1]
 	ldr	x0, [x0]
-	adrp	x1, str318
-	add	x1, x1, #:lo12:str318
+	adrp	x1, str308
+	add	x1, x1, #:lo12:str308
 	bl	donna_string_equal
 	mov	x1, x0
 	mov	x0, x19
@@ -1067,8 +1019,8 @@ cli_cmd_build_linker_flags:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x0, str328
-	add	x0, x0, #:lo12:str328
+	adrp	x0, str318
+	add	x0, x0, #:lo12:str318
 	bl	donna_shell_run
 	cmp	x0, #0
 	cset	x0, eq
@@ -1080,8 +1032,8 @@ cli_cmd_build_linker_flags:
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, str340
-	add	x1, x1, #:lo12:str340
+	adrp	x1, str330
+	add	x1, x1, #:lo12:str330
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x0, x1
@@ -1096,8 +1048,8 @@ cli_cmd_build_linker_flags:
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, str336
-	add	x1, x1, #:lo12:str336
+	adrp	x1, str326
+	add	x1, x1, #:lo12:str326
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x0, x1
@@ -1137,8 +1089,8 @@ cli_cmd_build_first_positional:
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, str364
-	add	x1, x1, #:lo12:str364
+	adrp	x1, str354
+	add	x1, x1, #:lo12:str354
 	bl	strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -1164,8 +1116,8 @@ cli_cmd_build_first_positional:
 	ldr	x0, [x0]
 	b	.L80
 .L79:
-	adrp	x0, str351
-	add	x0, x0, #:lo12:str351
+	adrp	x0, str341
+	add	x0, x0, #:lo12:str341
 .L80:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]

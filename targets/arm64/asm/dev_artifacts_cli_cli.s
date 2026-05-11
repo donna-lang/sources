@@ -245,7 +245,7 @@ str230:
 
 .data
 .balign 8
-str242:
+str243:
 	.ascii "error"
 	.byte 0
 /* end data */
@@ -259,14 +259,28 @@ str250:
 
 .data
 .balign 8
-str254:
+str257:
+	.ascii "parse error:"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str264:
+	.ascii "lex error:"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str269:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str256:
+str271:
 	.ascii ": "
 	.byte 0
 /* end data */
@@ -279,49 +293,49 @@ donna_nil:
 
 .data
 .balign 8
-str277:
+str292:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str308:
+str323:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str321:
+str336:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str350:
+str365:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str363:
+str378:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str392:
+str407:
 	.ascii "h"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str394:
+str409:
 	.ascii "help"
 	.byte 0
 /* end data */
@@ -922,30 +936,61 @@ cli_cli_is_failure_text:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	mov	x19, x0
-	adrp	x0, str242
-	add	x0, x0, #:lo12:str242
-	bl	utilities_colors_red
-	mov	x1, x0
-	mov	x0, x19
+	str	x20, [x29, 16]
+	bl	utilities_colors_strip
+	adrp	x1, str243
+	add	x1, x1, #:lo12:str243
 	mov	x19, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #1
-	beq	.L88
+	beq	.L95
+	adrp	x1, str250
+	add	x1, x1, #:lo12:str250
 	mov	x19, x0
-	adrp	x0, str250
-	add	x0, x0, #:lo12:str250
-	bl	utilities_colors_red
+	bl	donna_string_starts_with
 	mov	x1, x0
 	mov	x0, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x1, #1
+	beq	.L93
+	adrp	x1, str257
+	add	x1, x1, #:lo12:str257
+	mov	x20, x0
 	bl	donna_string_starts_with
-	b	.L89
-.L88:
+	mov	x1, x0
+	mov	x0, x20
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x20, sp
+	cmp	x1, #1
+	beq	.L90
+	adrp	x1, str264
+	add	x1, x1, #:lo12:str264
+	bl	donna_string_starts_with
+	str	x0, [x20]
+	b	.L92
+.L90:
 	mov	x0, #1
-.L89:
+	str	x0, [x20]
+	mov	x0, #1
+.L92:
+	str	x0, [x19]
+	b	.L96
+.L93:
+	mov	x0, #1
+	str	x0, [x19]
+	mov	x0, #1
+	b	.L96
+.L95:
+	mov	x0, #1
+.L96:
 	ldr	x19, [x29, 24]
+	ldr	x20, [x29, 16]
+	mov sp, x29
 	ldp	x29, x30, [sp], 32
 	ret
 .type cli_cli_is_failure_text, @function
@@ -960,13 +1005,13 @@ cli_cli_fail:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, str254
-	add	x0, x0, #:lo12:str254
+	adrp	x0, str269
+	add	x0, x0, #:lo12:str269
 	bl	utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str256
-	add	x1, x1, #:lo12:str256
+	adrp	x1, str271
+	add	x1, x1, #:lo12:str271
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
@@ -987,24 +1032,24 @@ cli_cli_drop_command:
 	str	x20, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L100
+	beq	.L107
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L96
+	beq	.L103
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x1, #0
-	b	.L97
-.L96:
+	b	.L104
+.L103:
 	mov	x20, x0
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, str277
-	add	x1, x1, #:lo12:str277
+	adrp	x1, str292
+	add	x1, x1, #:lo12:str292
 	bl	strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -1013,9 +1058,9 @@ cli_cli_drop_command:
 	mov	x2, #1
 	and	x1, x1, x2
 	str	x1, [x19]
-.L97:
+.L104:
 	cmp	w1, #0
-	bne	.L99
+	bne	.L106
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x20, [x1]
@@ -1034,16 +1079,16 @@ cli_cli_drop_command:
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x19, [x1]
-	b	.L101
-.L99:
+	b	.L108
+.L106:
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L101
-.L100:
+	b	.L108
+.L107:
 	adrp	x0, donna_nil
 	add	x0, x0, #:lo12:donna_nil
-.L101:
+.L108:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -1063,24 +1108,24 @@ cli_cli_first_positional:
 	str	x20, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L110
+	beq	.L117
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L106
+	beq	.L113
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x1, #0
-	b	.L107
-.L106:
+	b	.L114
+.L113:
 	mov	x20, x0
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, str321
-	add	x1, x1, #:lo12:str321
+	adrp	x1, str336
+	add	x1, x1, #:lo12:str336
 	bl	strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -1089,26 +1134,26 @@ cli_cli_first_positional:
 	mov	x2, #1
 	and	x1, x1, x2
 	str	x1, [x19]
-.L107:
+.L114:
 	cmp	w1, #0
-	bne	.L109
+	bne	.L116
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	cli_cli_first_positional
-	b	.L111
-.L109:
+	b	.L118
+.L116:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L111
-.L110:
-	adrp	x0, str308
-	add	x0, x0, #:lo12:str308
-.L111:
+	b	.L118
+.L117:
+	adrp	x0, str323
+	add	x0, x0, #:lo12:str323
+.L118:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -1144,24 +1189,24 @@ cli_cli_second_positional_loop:
 	mov	x19, x0
 	ldr	x0, [x19]
 	cmp	x0, #0
-	beq	.L125
+	beq	.L132
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x0, #1
-	beq	.L118
+	beq	.L125
 	mov	x0, #0
 	str	x0, [x20]
 	mov	x0, #0
-	b	.L119
-.L118:
+	b	.L126
+.L125:
 	mov	x0, #8
 	add	x0, x19, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
 	mov	x21, x1
-	adrp	x1, str363
-	add	x1, x1, #:lo12:str363
+	adrp	x1, str378
+	add	x1, x1, #:lo12:str378
 	bl	strcmp
 	mov	x1, x21
 	cmp	x0, #0
@@ -1169,15 +1214,15 @@ cli_cli_second_positional_loop:
 	mov	x2, #1
 	and	x0, x0, x2
 	str	x0, [x20]
-.L119:
+.L126:
 	cmp	w0, #0
-	bne	.L121
+	bne	.L128
 	mov	x0, #16
 	add	x0, x19, x0
 	ldr	x0, [x0]
 	bl	cli_cli_second_positional_loop
-	b	.L126
-.L121:
+	b	.L133
+.L128:
 	mov	x0, #8
 	add	x0, x19, x0
 	ldr	x0, [x0]
@@ -1191,19 +1236,19 @@ cli_cli_second_positional_loop:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L124
+	beq	.L131
 	mov	x0, x2
 	mov	x1, #1
 	bl	cli_cli_second_positional_loop
 	str	x0, [x19]
-	b	.L126
-.L124:
+	b	.L133
+.L131:
 	str	x0, [x19]
-	b	.L126
-.L125:
-	adrp	x0, str350
-	add	x0, x0, #:lo12:str350
-.L126:
+	b	.L133
+.L132:
+	adrp	x0, str365
+	add	x0, x0, #:lo12:str365
+.L133:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1221,15 +1266,15 @@ cli_cli_has_help_flag:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, str392
-	add	x1, x1, #:lo12:str392
+	adrp	x1, str407
+	add	x1, x1, #:lo12:str407
 	mov	x19, x0
 	bl	cli_cli_has_flag
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, str394
-	add	x1, x1, #:lo12:str394
+	adrp	x1, str409
+	add	x1, x1, #:lo12:str409
 	bl	cli_cli_has_flag
 	orr	x0, x19, x0
 	ldr	x19, [x29, 24]
@@ -1250,7 +1295,7 @@ cli_cli_has_flag:
 	mov	x2, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L134
+	beq	.L141
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -1267,18 +1312,18 @@ cli_cli_has_flag:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L132
+	beq	.L139
 	bl	cli_cli_has_flag
 	str	x0, [x19]
-	b	.L135
-.L132:
+	b	.L142
+.L139:
 	mov	x0, #1
 	str	x0, [x19]
 	mov	x0, #1
-	b	.L135
-.L134:
+	b	.L142
+.L141:
 	mov	x0, #0
-.L135:
+.L142:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29

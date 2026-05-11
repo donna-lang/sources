@@ -445,14 +445,14 @@ str203:
 .data
 .balign 8
 str204:
-	.ascii "Delete build artifacts"
+	.ascii "Delete generated files"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str205:
-	.ascii "donna clean [DIR]"
+	.ascii "donna clean [DIR] [--docs] [--lock] [--all]"
 	.byte 0
 /* end data */
 
@@ -473,412 +473,454 @@ str207:
 .data
 .balign 8
 str214:
-	.ascii "DIR"
+	.ascii "--all"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str215:
-	.ascii "Clean another project directory"
+	.ascii "Delete build/, docs/, and donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str222:
+	.ascii "--lock"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str223:
-	.ascii "docs"
+	.ascii "Also delete donna.lock"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str224:
-	.ascii "Generate HTML documentation"
+str230:
+	.ascii "--docs"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str225:
-	.ascii "donna docs [DIR]"
+str231:
+	.ascii "Also delete generated docs/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str226:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str227:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str234:
+str238:
 	.ascii "DIR"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str235:
-	.ascii "Generate docs for another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str243:
-	.ascii "format"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str244:
-	.ascii "Format Donna source files"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str245:
-	.ascii "donna format [DIR|FILE]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str246:
-	.ascii "-h, --help"
+str239:
+	.ascii "Clean another project directory"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str247:
+	.ascii "docs"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str248:
+	.ascii "Generate HTML documentation"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str249:
+	.ascii "donna docs [DIR]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str250:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str251:
 	.ascii "Show this help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str254:
-	.ascii "FILE"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str255:
-	.ascii "Format one .donna file"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str262:
+str258:
 	.ascii "DIR"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str263:
-	.ascii "Format all .donna files in a project directory"
+str259:
+	.ascii "Generate docs for another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str267:
+	.ascii "format"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str268:
+	.ascii "Format Donna source files"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str269:
+	.ascii "donna format [DIR|FILE]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str270:
+	.ascii "-h, --help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str271:
-	.ascii "new"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str272:
-	.ascii "Create a new Donna project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str273:
-	.ascii "donna new <NAME>"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str274:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str275:
 	.ascii "Show this help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str282:
-	.ascii "NAME"
+str278:
+	.ascii "FILE"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str283:
-	.ascii "Directory and package name for the new project"
+str279:
+	.ascii "Format one .donna file"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str291:
-	.ascii "run"
+str286:
+	.ascii "DIR"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str292:
-	.ascii "Build and run an application project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str293:
-	.ascii "donna run [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str294:
-	.ascii "-h, --help"
+str287:
+	.ascii "Format all .donna files in a project directory"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str295:
+	.ascii "new"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str296:
+	.ascii "Create a new Donna project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str297:
+	.ascii "donna new <NAME>"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str298:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str299:
 	.ascii "Show this help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str302:
-	.ascii "DIR"
+str306:
+	.ascii "NAME"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str303:
-	.ascii "Run another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str311:
-	.ascii "test"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str312:
-	.ascii "Run the project tests"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str313:
-	.ascii "donna test [DIR] [FILTER] | donna test --only FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str314:
-	.ascii "-h, --help"
+str307:
+	.ascii "Directory and package name for the new project"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str315:
+	.ascii "run"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str316:
+	.ascii "Build and run an application project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str317:
+	.ascii "donna run [DIR]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str318:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str319:
 	.ascii "Show this help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str322:
+str326:
 	.ascii "DIR"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str323:
-	.ascii "Run tests in another project directory"
+str327:
+	.ascii "Run another project directory"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str330:
-	.ascii "FILTER"
+str335:
+	.ascii "test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str331:
-	.ascii "Run matching tests in the current project"
+str336:
+	.ascii "Run the project tests"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str337:
+	.ascii "donna test [DIR] [FILTER] | donna test --only FILTER"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str338:
-	.ascii "--only FILTER"
+	.ascii "-h, --help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str339:
-	.ascii "Run tests whose module or function name contains FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str347:
-	.ascii "version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str348:
-	.ascii "Print the compiler version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str349:
-	.ascii "donna version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str350:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str351:
 	.ascii "Show this help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str358:
-	.ascii "-V, --version"
+str346:
+	.ascii "DIR"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str359:
-	.ascii "Print version from the top-level command"
+str347:
+	.ascii "Run tests in another project directory"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str367:
-	.ascii "-h, --help"
+str354:
+	.ascii "FILTER"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str368:
-	.ascii "Print help"
+str355:
+	.ascii "Run matching tests in the current project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str362:
+	.ascii "--only FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str363:
+	.ascii "Run tests whose module or function name contains FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str371:
+	.ascii "version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str372:
+	.ascii "Print the compiler version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str373:
-	.ascii "-V, --version"
+	.ascii "donna version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str374:
-	.ascii "Print version"
+	.ascii "-h, --help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str385:
-	.byte 10
+str375:
+	.ascii "Show this help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str387:
-	.ascii "  "
+str382:
+	.ascii "-V, --version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str383:
+	.ascii "Print version from the top-level command"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str391:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str392:
+	.ascii "Print help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str397:
+	.ascii "-V, --version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str398:
+	.ascii "Print version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str409:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str411:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str414:
+str422:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str438:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str417:
+str441:
 	.ascii "  "
 	.byte 0
 /* end data */
@@ -1562,20 +1604,45 @@ cli_help_check_help:
 .globl cli_help_clean_help
 cli_help_clean_help:
 	hint	#34
-	stp	x29, x30, [sp, -32]!
+	stp	x29, x30, [sp, -48]!
 	mov	x29, sp
-	str	x19, [x29, 24]
-	str	x20, [x29, 16]
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
 	mov	x0, #16
 	bl	malloc
-	mov	x20, x0
+	mov	x19, x0
 	adrp	x0, str206
 	add	x0, x0, #:lo12:str206
-	str	x0, [x20]
+	str	x0, [x19]
 	mov	x0, #8
-	add	x1, x20, x0
+	add	x1, x19, x0
 	adrp	x0, str207
 	add	x0, x0, #:lo12:str207
+	str	x0, [x1]
+	mov	x0, #24
+	bl	malloc
+	mov	x20, x0
+	mov	x0, #1
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x19, [x0]
+	mov	x0, #16
+	add	x1, x20, x0
+	adrp	x0, donna_nil
+	add	x0, x0, #:lo12:donna_nil
+	str	x0, [x1]
+	mov	x0, #16
+	bl	malloc
+	mov	x21, x0
+	adrp	x0, str214
+	add	x0, x0, #:lo12:str214
+	str	x0, [x21]
+	mov	x0, #8
+	add	x1, x21, x0
+	adrp	x0, str215
+	add	x0, x0, #:lo12:str215
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1584,22 +1651,64 @@ cli_help_clean_help:
 	str	x0, [x19]
 	mov	x0, #8
 	add	x0, x19, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x0, x19, x0
 	str	x20, [x0]
 	mov	x0, #16
-	add	x1, x19, x0
-	adrp	x0, donna_nil
-	add	x0, x0, #:lo12:donna_nil
+	bl	malloc
+	mov	x21, x0
+	adrp	x0, str222
+	add	x0, x0, #:lo12:str222
+	str	x0, [x21]
+	mov	x0, #8
+	add	x1, x21, x0
+	adrp	x0, str223
+	add	x0, x0, #:lo12:str223
 	str	x0, [x1]
+	mov	x0, #24
+	bl	malloc
+	mov	x20, x0
+	mov	x0, #1
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x19, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x21, x0
+	adrp	x0, str230
+	add	x0, x0, #:lo12:str230
+	str	x0, [x21]
+	mov	x0, #8
+	add	x1, x21, x0
+	adrp	x0, str231
+	add	x0, x0, #:lo12:str231
+	str	x0, [x1]
+	mov	x0, #24
+	bl	malloc
+	mov	x19, x0
+	mov	x0, #1
+	str	x0, [x19]
+	mov	x0, #8
+	add	x0, x19, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x20, [x0]
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str214
-	add	x0, x0, #:lo12:str214
+	adrp	x0, str238
+	add	x0, x0, #:lo12:str238
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str215
-	add	x0, x0, #:lo12:str215
+	adrp	x0, str239
+	add	x0, x0, #:lo12:str239
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1619,9 +1728,10 @@ cli_help_clean_help:
 	adrp	x0, str203
 	add	x0, x0, #:lo12:str203
 	bl	cli_help_command_help
-	ldr	x19, [x29, 24]
-	ldr	x20, [x29, 16]
-	ldp	x29, x30, [sp], 32
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
 	ret
 .type cli_help_clean_help, @function
 .size cli_help_clean_help, .-cli_help_clean_help
@@ -1639,13 +1749,13 @@ cli_help_docs_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str226
-	add	x0, x0, #:lo12:str226
+	adrp	x0, str250
+	add	x0, x0, #:lo12:str250
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str227
-	add	x0, x0, #:lo12:str227
+	adrp	x0, str251
+	add	x0, x0, #:lo12:str251
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1663,13 +1773,13 @@ cli_help_docs_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str234
-	add	x0, x0, #:lo12:str234
+	adrp	x0, str258
+	add	x0, x0, #:lo12:str258
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str235
-	add	x0, x0, #:lo12:str235
+	adrp	x0, str259
+	add	x0, x0, #:lo12:str259
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1682,12 +1792,12 @@ cli_help_docs_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, str225
-	add	x2, x2, #:lo12:str225
-	adrp	x1, str224
-	add	x1, x1, #:lo12:str224
-	adrp	x0, str223
-	add	x0, x0, #:lo12:str223
+	adrp	x2, str249
+	add	x2, x2, #:lo12:str249
+	adrp	x1, str248
+	add	x1, x1, #:lo12:str248
+	adrp	x0, str247
+	add	x0, x0, #:lo12:str247
 	bl	cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1710,13 +1820,13 @@ cli_help_format_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x19, x0
-	adrp	x0, str246
-	add	x0, x0, #:lo12:str246
+	adrp	x0, str270
+	add	x0, x0, #:lo12:str270
 	str	x0, [x19]
 	mov	x0, #8
 	add	x1, x19, x0
-	adrp	x0, str247
-	add	x0, x0, #:lo12:str247
+	adrp	x0, str271
+	add	x0, x0, #:lo12:str271
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1734,13 +1844,13 @@ cli_help_format_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x21, x0
-	adrp	x0, str254
-	add	x0, x0, #:lo12:str254
+	adrp	x0, str278
+	add	x0, x0, #:lo12:str278
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, str255
-	add	x0, x0, #:lo12:str255
+	adrp	x0, str279
+	add	x0, x0, #:lo12:str279
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1756,13 +1866,13 @@ cli_help_format_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str262
-	add	x0, x0, #:lo12:str262
+	adrp	x0, str286
+	add	x0, x0, #:lo12:str286
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str263
-	add	x0, x0, #:lo12:str263
+	adrp	x0, str287
+	add	x0, x0, #:lo12:str287
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1775,12 +1885,12 @@ cli_help_format_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, str245
-	add	x2, x2, #:lo12:str245
-	adrp	x1, str244
-	add	x1, x1, #:lo12:str244
-	adrp	x0, str243
-	add	x0, x0, #:lo12:str243
+	adrp	x2, str269
+	add	x2, x2, #:lo12:str269
+	adrp	x1, str268
+	add	x1, x1, #:lo12:str268
+	adrp	x0, str267
+	add	x0, x0, #:lo12:str267
 	bl	cli_help_command_help
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -1803,13 +1913,13 @@ cli_help_new_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str274
-	add	x0, x0, #:lo12:str274
+	adrp	x0, str298
+	add	x0, x0, #:lo12:str298
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str275
-	add	x0, x0, #:lo12:str275
+	adrp	x0, str299
+	add	x0, x0, #:lo12:str299
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1827,13 +1937,13 @@ cli_help_new_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str282
-	add	x0, x0, #:lo12:str282
+	adrp	x0, str306
+	add	x0, x0, #:lo12:str306
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str283
-	add	x0, x0, #:lo12:str283
+	adrp	x0, str307
+	add	x0, x0, #:lo12:str307
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1846,12 +1956,12 @@ cli_help_new_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, str273
-	add	x2, x2, #:lo12:str273
-	adrp	x1, str272
-	add	x1, x1, #:lo12:str272
-	adrp	x0, str271
-	add	x0, x0, #:lo12:str271
+	adrp	x2, str297
+	add	x2, x2, #:lo12:str297
+	adrp	x1, str296
+	add	x1, x1, #:lo12:str296
+	adrp	x0, str295
+	add	x0, x0, #:lo12:str295
 	bl	cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1873,13 +1983,13 @@ cli_help_run_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str294
-	add	x0, x0, #:lo12:str294
+	adrp	x0, str318
+	add	x0, x0, #:lo12:str318
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str295
-	add	x0, x0, #:lo12:str295
+	adrp	x0, str319
+	add	x0, x0, #:lo12:str319
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1897,13 +2007,13 @@ cli_help_run_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str302
-	add	x0, x0, #:lo12:str302
+	adrp	x0, str326
+	add	x0, x0, #:lo12:str326
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str303
-	add	x0, x0, #:lo12:str303
+	adrp	x0, str327
+	add	x0, x0, #:lo12:str327
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1916,12 +2026,12 @@ cli_help_run_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, str293
-	add	x2, x2, #:lo12:str293
-	adrp	x1, str292
-	add	x1, x1, #:lo12:str292
-	adrp	x0, str291
-	add	x0, x0, #:lo12:str291
+	adrp	x2, str317
+	add	x2, x2, #:lo12:str317
+	adrp	x1, str316
+	add	x1, x1, #:lo12:str316
+	adrp	x0, str315
+	add	x0, x0, #:lo12:str315
 	bl	cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1944,13 +2054,13 @@ cli_help_test_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str314
-	add	x0, x0, #:lo12:str314
+	adrp	x0, str338
+	add	x0, x0, #:lo12:str338
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str315
-	add	x0, x0, #:lo12:str315
+	adrp	x0, str339
+	add	x0, x0, #:lo12:str339
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1968,13 +2078,13 @@ cli_help_test_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x21, x0
-	adrp	x0, str322
-	add	x0, x0, #:lo12:str322
+	adrp	x0, str346
+	add	x0, x0, #:lo12:str346
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, str323
-	add	x0, x0, #:lo12:str323
+	adrp	x0, str347
+	add	x0, x0, #:lo12:str347
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -1990,13 +2100,13 @@ cli_help_test_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x21, x0
-	adrp	x0, str330
-	add	x0, x0, #:lo12:str330
+	adrp	x0, str354
+	add	x0, x0, #:lo12:str354
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, str331
-	add	x0, x0, #:lo12:str331
+	adrp	x0, str355
+	add	x0, x0, #:lo12:str355
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -2012,13 +2122,13 @@ cli_help_test_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str338
-	add	x0, x0, #:lo12:str338
+	adrp	x0, str362
+	add	x0, x0, #:lo12:str362
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str339
-	add	x0, x0, #:lo12:str339
+	adrp	x0, str363
+	add	x0, x0, #:lo12:str363
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -2031,12 +2141,12 @@ cli_help_test_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, str313
-	add	x2, x2, #:lo12:str313
-	adrp	x1, str312
-	add	x1, x1, #:lo12:str312
-	adrp	x0, str311
-	add	x0, x0, #:lo12:str311
+	adrp	x2, str337
+	add	x2, x2, #:lo12:str337
+	adrp	x1, str336
+	add	x1, x1, #:lo12:str336
+	adrp	x0, str335
+	add	x0, x0, #:lo12:str335
 	bl	cli_help_command_help
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -2059,13 +2169,13 @@ cli_help_version_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str350
-	add	x0, x0, #:lo12:str350
+	adrp	x0, str374
+	add	x0, x0, #:lo12:str374
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str351
-	add	x0, x0, #:lo12:str351
+	adrp	x0, str375
+	add	x0, x0, #:lo12:str375
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -2083,13 +2193,13 @@ cli_help_version_help:
 	mov	x0, #16
 	bl	malloc
 	mov	x20, x0
-	adrp	x0, str358
-	add	x0, x0, #:lo12:str358
+	adrp	x0, str382
+	add	x0, x0, #:lo12:str382
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str359
-	add	x0, x0, #:lo12:str359
+	adrp	x0, str383
+	add	x0, x0, #:lo12:str383
 	str	x0, [x1]
 	mov	x0, #24
 	bl	malloc
@@ -2102,12 +2212,12 @@ cli_help_version_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, str349
-	add	x2, x2, #:lo12:str349
-	adrp	x1, str348
-	add	x1, x1, #:lo12:str348
-	adrp	x0, str347
-	add	x0, x0, #:lo12:str347
+	adrp	x2, str373
+	add	x2, x2, #:lo12:str373
+	adrp	x1, str372
+	add	x1, x1, #:lo12:str372
+	adrp	x0, str371
+	add	x0, x0, #:lo12:str371
 	bl	cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -2128,25 +2238,25 @@ cli_help_options_block:
 	str	x21, [x29, 24]
 	mov	x0, #16
 	bl	malloc
-	adrp	x1, str367
-	add	x1, x1, #:lo12:str367
+	adrp	x1, str391
+	add	x1, x1, #:lo12:str391
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, str368
-	add	x1, x1, #:lo12:str368
+	adrp	x1, str392
+	add	x1, x1, #:lo12:str392
 	str	x1, [x2]
 	bl	cli_help_option_row
 	mov	x20, x0
 	mov	x0, #16
 	bl	malloc
-	adrp	x1, str373
-	add	x1, x1, #:lo12:str373
+	adrp	x1, str397
+	add	x1, x1, #:lo12:str397
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, str374
-	add	x1, x1, #:lo12:str374
+	adrp	x1, str398
+	add	x1, x1, #:lo12:str398
 	str	x1, [x2]
 	bl	cli_help_option_row
 	mov	x21, x0
@@ -2173,8 +2283,8 @@ cli_help_options_block:
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x19, [x1]
-	adrp	x1, str385
-	add	x1, x1, #:lo12:str385
+	adrp	x1, str409
+	add	x1, x1, #:lo12:str409
 	bl	donna_string_join
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -2196,8 +2306,8 @@ cli_help_command_row:
 	bl	utilities_colors_path
 	bl	cli_help_pad_right
 	mov	x1, x0
-	adrp	x0, str387
-	add	x0, x0, #:lo12:str387
+	adrp	x0, str411
+	add	x0, x0, #:lo12:str411
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
@@ -2223,8 +2333,8 @@ cli_help_option_row:
 	bl	utilities_colors_path
 	bl	cli_help_pad_right
 	mov	x1, x0
-	adrp	x0, str398
-	add	x0, x0, #:lo12:str398
+	adrp	x0, str422
+	add	x0, x0, #:lo12:str422
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
@@ -2266,14 +2376,14 @@ cli_help_pad_right:
 	cset	x2, gt
 	cmp	x2, #1
 	beq	.L37
-	adrp	x1, str417
-	add	x1, x1, #:lo12:str417
+	adrp	x1, str441
+	add	x1, x1, #:lo12:str441
 	bl	__rt_str_concat
 	b	.L38
 .L37:
 	mov	x19, x0
-	adrp	x0, str414
-	add	x0, x0, #:lo12:str414
+	adrp	x0, str438
+	add	x0, x0, #:lo12:str438
 	bl	donna_string_repeat
 	mov	x1, x0
 	mov	x0, x19
