@@ -27,203 +27,210 @@ str1182:
 
 .data
 .balign 8
-str2141:
+str2143:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2190:
+str2281:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str2383:
 	.ascii "Int"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2221:
+str2414:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2252:
+str2445:
 	.ascii "String"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2283:
+str2476:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2314:
+str2507:
 	.ascii "Nil"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2345:
+str2538:
 	.ascii "List"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2432:
+str2625:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2735:
+str2928:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2740:
+str2933:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2762:
+str2955:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2767:
+str2960:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2789:
+str2982:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2794:
+str2987:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2816:
+str3009:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2821:
+str3014:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2843:
+str3036:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2848:
+str3041:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2870:
+str3063:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2875:
+str3068:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2897:
+str3090:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2902:
+str3095:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2924:
+str3117:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2929:
+str3122:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2951:
+str3144:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2956:
+str3149:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2978:
+str3171:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2983:
+str3176:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str3077:
+str3270:
 	.ascii "/"
 	.byte 0
 /* end data */
@@ -3144,6 +3151,13 @@ Lbb261:
 	movq (%rax), %rdi
 	movq 8(%rax), %rbx
 	subq $32, %rsp
+	movq %rcx, %r12
+	movq %rdi, %rcx
+	callq compiler_typesystem_types_typed_expr_type
+	movq %r12, %rcx
+	movq %rax, %r8
+	subq $-32, %rsp
+	subq $32, %rsp
 	movq %rbx, %rdx
 	callq compiler_typesystem_checker_infer_clauses
 	movq %rdi, %rcx
@@ -3952,14 +3966,18 @@ compiler_typesystem_checker_infer_clauses:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
 	movq (%rcx), %rax
 	cmpq $0, %rax
 	jz Lbb341
-	subq $32, %rsp
-	leaq compiler_typesystem_types_TNil(%rip), %r9
-	leaq donna_nil(%rip), %r8
+	subq $48, %rsp
+	movq %rsp, %rsi
+	leaq compiler_typesystem_types_TNil(%rip), %rax
+	movq %rax, 32(%rsi)
+	leaq donna_nil(%rip), %r9
 	callq compiler_typesystem_checker_infer_clauses_loop
-	subq $-32, %rsp
+	subq $-48, %rsp
 	jmp Lbb342
 Lbb341:
 	subq $32, %rsp
@@ -3975,6 +3993,7 @@ Lbb341:
 	callq donna_result_Ok
 	subq $-32, %rsp
 Lbb342:
+	popq %rsi
 	leave
 	ret
 /* end function compiler_typesystem_checker_infer_clauses */
@@ -3985,7 +4004,7 @@ compiler_typesystem_checker_infer_clauses_loop:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $24, %rsp
+	subq $40, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -3993,135 +4012,143 @@ compiler_typesystem_checker_infer_clauses_loop:
 	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq %r9, %rdi
-	movq %r8, %r12
-	movq %rdx, %r14
+	movq 48(%rbp), %rsi
+	movq %r9, %r13
+	movq %rdx, %r12
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb353
+	jz Lbb351
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rsi
+	movq %rsi, -16(%rbp)
 	subq $16, %rsp
-	movq %rsp, %r13
-	movq %r13, -16(%rbp)
+	movq %rsp, %rsi
+	movq %rsi, -24(%rbp)
 	movq 8(%rax), %rbx
 	movq 16(%rax), %rcx
 	movq 24(%rax), %rdi
 	subq $32, %rsp
-	movq %r14, %rdx
-	movq %rcx, %r15
+	movq %r8, %r15
+	movq %r12, %r8
+	movq %r15, %rdx
+	movq %rcx, %r14
 	movq %rbx, %rcx
-	callq compiler_typesystem_checker_bind_pattern
-	movq %r15, %rcx
+	callq compiler_typesystem_checker_bind_pattern_typed
+	movq %r14, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdx, %r15
+	movq %rdx, %r14
 	callq compiler_typesystem_checker_infer_guard
-	movq %r15, %rdx
+	movq %r15, %r8
+	movq %r14, %rdx
 	movq %rdi, %rcx
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %rdi
-	movq (%rax), %r8
-	cmpq $1, %r8
+	movq (%rax), %r9
+	cmpq $1, %r9
+	movq %r8, %r14
 	setz %r8b
 	movzbq %r8b, %r8
 	cmpl $0, %r8d
-	jnz Lbb350
+	jnz Lbb349
 	movq 8(%rax), %rax
 	movq %rax, -8(%rbp)
 	subq $32, %rsp
 	callq compiler_typesystem_checker_infer_expr
-	movq %r14, %rdx
+	movq %r14, %r8
+	movq %r12, %rdx
 	movq %rbx, %rcx
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %rbx
+	movq %r8, %r15
 	movq (%rax), %r8
 	cmpq $1, %r8
-	movq %rdx, %r14
+	movq %rdx, %r12
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
 	jnz Lbb347
 	movq 8(%rax), %rax
-	movq (%rax), %r15
+	movq (%rax), %r14
 	subq $32, %rsp
-	movq %rcx, %r13
-	movq %r15, %rcx
+	movq %rcx, %rsi
+	movq %r14, %rcx
 	callq compiler_typesystem_types_typed_expr_type
-	movq %r15, %r8
-	movq %r14, %rdx
-	movq %r13, %rcx
-	movq %rax, %r9
+	movq %r14, %r8
+	movq %r12, %rdx
+	movq %rsi, %rcx
+	movq %rax, %r12
 	movq %rdx, %r14
 	movq -8(%rbp), %rdx
+	movq -16(%rbp), %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %r9, %r15
+	movq %r12, %r9
 	callq compiler_typesystem_types_TypedClause
 	movq %rsi, %rcx
-	movq %rax, %r13
+	movq %rax, -32(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
 	movl $24, %ecx
 	callq malloc
-	movq %r15, %r9
+	movq %r15, %r8
 	movq %r14, %rdx
 	movq %rsi, %rcx
-	movq %rax, %r8
-	movq -16(%rbp), %rsi
+	movq %rax, %r9
+	movq -24(%rbp), %rsi
+	movq -32(%rbp), %rax
 	subq $-32, %rsp
-	movq $1, (%r8)
-	movq %r13, 8(%r8)
-	movq %r12, 16(%r8)
-	subq $32, %rsp
+	movq $1, (%r9)
+	movq %rax, 8(%r9)
+	movq %r13, 16(%r9)
+	subq $48, %rsp
+	movq %rsp, %rax
+	movq %r12, 32(%rax)
 	callq compiler_typesystem_checker_infer_clauses_loop
-	subq $-32, %rsp
+	subq $-48, %rsp
 	movq %rax, (%rbx)
-	jmp Lbb349
+	jmp Lbb348
 Lbb347:
-	movq %r13, %rsi
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rbx)
-Lbb349:
+Lbb348:
 	movq %rax, (%rdi)
-	jmp Lbb352
-Lbb350:
-	movq %r13, %rsi
+	jmp Lbb350
+Lbb349:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb352:
+Lbb350:
 	movq %rax, (%rsi)
-	jmp Lbb355
-Lbb353:
-	movq %r12, %rcx
+	jmp Lbb353
+Lbb351:
+	movq %r13, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
-	movq %rax, %rsi
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
 	movl $16, %ecx
 	callq malloc
-	movq %rdi, %r9
 	movq %rax, %rcx
 	subq $-32, %rsp
-	movq %rsi, (%rcx)
-	movq %r9, 8(%rcx)
+	movq %rdi, (%rcx)
+	movq %rsi, 8(%rcx)
 	subq $32, %rsp
 	callq donna_result_Ok
 	subq $-32, %rsp
-Lbb355:
+Lbb353:
 	movq %rbp, %rsp
-	subq $80, %rsp
+	subq $96, %rsp
 	popq %rdi
 	popq %rsi
 	popq %r15
@@ -4143,7 +4170,7 @@ compiler_typesystem_checker_infer_guard:
 	pushq %rsi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb360
+	jz Lbb358
 	movq 8(%rcx), %rcx
 	subq $32, %rsp
 	callq compiler_typesystem_checker_infer_expr
@@ -4155,7 +4182,7 @@ compiler_typesystem_checker_infer_guard:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb359
+	jnz Lbb357
 	movq 8(%rax), %rax
 	movq (%rax), %rcx
 	subq $32, %rsp
@@ -4166,20 +4193,20 @@ compiler_typesystem_checker_infer_guard:
 	callq donna_result_Ok
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb361
-Lbb359:
+	jmp Lbb359
+Lbb357:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb361
-Lbb360:
+	jmp Lbb359
+Lbb358:
 	subq $32, %rsp
 	leaq donna_option_None(%rip), %rcx
 	callq donna_result_Ok
 	subq $-32, %rsp
-Lbb361:
+Lbb359:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rsi
@@ -4204,7 +4231,7 @@ compiler_typesystem_checker_check_stmts:
 	movq %rcx, %rdi
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb366
+	jz Lbb364
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rsi
 	subq $32, %rsp
@@ -4218,7 +4245,7 @@ compiler_typesystem_checker_check_stmts:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb365
+	jnz Lbb363
 	movq 8(%rax), %rax
 	movq (%rax), %rbx
 	movq 8(%rax), %r14
@@ -4239,15 +4266,15 @@ compiler_typesystem_checker_check_stmts:
 	callq compiler_typesystem_checker_check_stmts
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb368
-Lbb365:
+	jmp Lbb366
+Lbb363:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb368
-Lbb366:
+	jmp Lbb366
+Lbb364:
 	movq %rdi, %rcx
 	movq %r9, %rdi
 	subq $32, %rsp
@@ -4265,7 +4292,7 @@ Lbb366:
 	subq $32, %rsp
 	callq donna_result_Ok
 	subq $-32, %rsp
-Lbb368:
+Lbb366:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -4296,9 +4323,9 @@ compiler_typesystem_checker_check_stmt:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb378
+	jnz Lbb376
 	cmpq $1, %rax
-	jz Lbb374
+	jz Lbb372
 	movq 8(%rcx), %rcx
 	subq $32, %rsp
 	movq %rsi, %rdx
@@ -4312,7 +4339,7 @@ compiler_typesystem_checker_check_stmt:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb373
+	jnz Lbb371
 	movq 8(%rax), %rax
 	movq (%rax), %rbx
 	subq $32, %rsp
@@ -4343,15 +4370,15 @@ compiler_typesystem_checker_check_stmt:
 	callq donna_result_Ok
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb385
-Lbb373:
+	jmp Lbb383
+Lbb371:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb385
-Lbb374:
+	jmp Lbb383
+Lbb372:
 	movq %rsi, %rdi
 	movq 8(%rcx), %rsi
 	movq 16(%rcx), %rcx
@@ -4367,14 +4394,20 @@ Lbb374:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb377
+	jnz Lbb375
 	movq 8(%rax), %rax
-	movq (%rax), %rdx
+	movq (%rax), %rbx
 	subq $32, %rsp
-	movq %rdx, %rbx
-	movq %rdi, %rdx
+	movq %rcx, %r12
+	movq %rbx, %rcx
+	callq compiler_typesystem_types_typed_expr_type
+	movq %r12, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rdi, %r8
 	movq %rcx, %rdi
-	callq compiler_typesystem_checker_bind_pattern
+	callq compiler_typesystem_checker_bind_pattern_typed
 	movq %rbx, %rdx
 	movq %rdi, %rcx
 	movq %rax, %rdi
@@ -4396,15 +4429,15 @@ Lbb374:
 	callq donna_result_Ok
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb385
-Lbb377:
+	jmp Lbb383
+Lbb375:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb385
-Lbb378:
+	jmp Lbb383
+Lbb376:
 	movq 8(%rcx), %rdi
 	movq 16(%rcx), %r14
 	movq 24(%rcx), %rcx
@@ -4420,14 +4453,14 @@ Lbb378:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb384
+	jnz Lbb382
 	movq 8(%rax), %rax
 	movq (%rax), %r13
 	subq $16, %rsp
 	movq %rsp, %r12
 	movq (%r14), %rax
 	cmpq $0, %rax
-	jz Lbb382
+	jz Lbb380
 	movq %rcx, %rbx
 	movq 8(%r14), %rcx
 	subq $32, %rsp
@@ -4437,8 +4470,8 @@ Lbb378:
 	subq $-32, %rsp
 	movq %rbx, (%r12)
 	movq %r13, %r8
-	jmp Lbb383
-Lbb382:
+	jmp Lbb381
+Lbb380:
 	subq $32, %rsp
 	movq %rcx, %rbx
 	movq %r13, %rcx
@@ -4448,7 +4481,7 @@ Lbb382:
 	movq %rax, %rbx
 	subq $-32, %rsp
 	movq %rbx, (%r12)
-Lbb383:
+Lbb381:
 	subq $32, %rsp
 	movq %r8, %r12
 	movq %rbx, %r8
@@ -4475,14 +4508,14 @@ Lbb383:
 	callq donna_result_Ok
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb385
-Lbb384:
+	jmp Lbb383
+Lbb382:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-Lbb385:
+Lbb383:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -4514,30 +4547,30 @@ compiler_typesystem_checker_bind_pattern:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb414
+	jnz Lbb412
 	cmpq $0, %rax
-	jz Lbb413
-	cmpq $1, %rax
-	jz Lbb412
-	cmpq $3, %rax
 	jz Lbb411
-	cmpq $4, %rax
+	cmpq $1, %rax
 	jz Lbb410
-	cmpq $5, %rax
+	cmpq $3, %rax
 	jz Lbb409
-	cmpq $6, %rax
+	cmpq $4, %rax
 	jz Lbb408
-	cmpq $7, %rax
+	cmpq $5, %rax
 	jz Lbb407
+	cmpq $6, %rax
+	jz Lbb406
+	cmpq $7, %rax
+	jz Lbb405
 	cmpq $8, %rax
-	jz Lbb396
+	jz Lbb394
 	movq 24(%rcx), %rcx
 	subq $32, %rsp
 	movq %rsi, %rdx
 	callq compiler_typesystem_checker_bind_pattern_list
 	subq $-32, %rsp
-	jmp Lbb415
-Lbb396:
+	jmp Lbb413
+Lbb394:
 	movq %rcx, %rax
 	movq 8(%rcx), %rcx
 	movq 16(%rax), %rbx
@@ -4550,21 +4583,21 @@ Lbb396:
 	movq %rax, %rdi
 	movq (%rbx), %rax
 	cmpq $0, %rax
-	jz Lbb405
+	jz Lbb403
 	cmpq $1, %rax
 	setz %r13b
 	movzbq %r13b, %r13
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpl $0, %r13d
-	jnz Lbb400
+	jnz Lbb398
 	movq $0, (%r12)
 	movl $0, %eax
-	jmp Lbb401
-Lbb400:
+	jmp Lbb399
+Lbb398:
 	movq 8(%rbx), %rcx
 	subq $32, %rsp
-	leaq str2141(%rip), %rdx
+	leaq str2143(%rip), %rdx
 	callq strcmp
 	movq %rax, %rcx
 	movq %rdi, %rax
@@ -4575,9 +4608,9 @@ Lbb400:
 	movzbq %al, %rax
 	andq %r13, %rax
 	movq %rax, (%r12)
-Lbb401:
+Lbb399:
 	cmpl $0, %eax
-	jnz Lbb403
+	jnz Lbb401
 	movq 8(%rbx), %rbx
 	subq $32, %rsp
 	movq %rdi, %rcx
@@ -4599,41 +4632,41 @@ Lbb401:
 	callq compiler_typesystem_env_env_bind
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb415
+	jmp Lbb413
+Lbb401:
+	movq %rdi, %rax
+	movq %rax, (%rsi)
+	jmp Lbb413
 Lbb403:
 	movq %rdi, %rax
 	movq %rax, (%rsi)
-	jmp Lbb415
+	jmp Lbb413
 Lbb405:
-	movq %rdi, %rax
-	movq %rax, (%rsi)
-	jmp Lbb415
-Lbb407:
 	movq 8(%rcx), %rcx
 	subq $32, %rsp
 	movq %rsi, %rdx
 	callq compiler_typesystem_checker_bind_pattern_list
 	subq $-32, %rsp
-	jmp Lbb415
+	jmp Lbb413
+Lbb406:
+	movq %rsi, %rax
+	jmp Lbb413
+Lbb407:
+	movq %rsi, %rax
+	jmp Lbb413
 Lbb408:
 	movq %rsi, %rax
-	jmp Lbb415
+	jmp Lbb413
 Lbb409:
 	movq %rsi, %rax
-	jmp Lbb415
+	jmp Lbb413
 Lbb410:
 	movq %rsi, %rax
-	jmp Lbb415
+	jmp Lbb413
 Lbb411:
 	movq %rsi, %rax
-	jmp Lbb415
+	jmp Lbb413
 Lbb412:
-	movq %rsi, %rax
-	jmp Lbb415
-Lbb413:
-	movq %rsi, %rax
-	jmp Lbb415
-Lbb414:
 	movq 8(%rcx), %rdi
 	subq $32, %rsp
 	movq %rsi, %rcx
@@ -4650,7 +4683,7 @@ Lbb414:
 	movq %rax, %rcx
 	callq compiler_typesystem_env_env_bind
 	subq $-32, %rsp
-Lbb415:
+Lbb413:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -4664,6 +4697,296 @@ Lbb415:
 
 .text
 .balign 16
+compiler_typesystem_checker_bind_pattern_typed:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %r14
+	pushq %rsi
+	pushq %rdi
+	movq %r8, %rax
+	movq %rdx, %r8
+	movq (%rcx), %rdx
+	cmpq $2, %rdx
+	setz %sil
+	movzbq %sil, %rsi
+	cmpl $0, %esi
+	jnz Lbb445
+	cmpq $0, %rdx
+	jz Lbb446
+	cmpq $1, %rdx
+	jz Lbb446
+	cmpq $3, %rdx
+	jz Lbb446
+	cmpq $4, %rdx
+	jz Lbb446
+	cmpq $5, %rdx
+	jz Lbb446
+	cmpq $6, %rdx
+	jz Lbb446
+	cmpq $7, %rdx
+	setz %sil
+	movzbq %sil, %rsi
+	cmpl $0, %esi
+	jnz Lbb442
+	cmpq $8, %rdx
+	movq %rax, %rsi
+	setz %al
+	movzbq %al, %rax
+	cmpl $0, %eax
+	jnz Lbb426
+	movq 16(%rcx), %rdx
+	movq 24(%rcx), %rcx
+	subq $32, %rsp
+	movq %rcx, %rdi
+	movq %rsi, %rcx
+	callq compiler_typesystem_env_env_lookup_ctor
+	movq %rdi, %rcx
+	movq %rax, %rdx
+	movq %rsi, %rax
+	subq $-32, %rsp
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rdx), %rdi
+	cmpq $0, %rdi
+	jz Lbb425
+	movq 8(%rdx), %rdx
+	movq 8(%rdx), %rdx
+	subq $32, %rsp
+	movq %rax, %r8
+	callq compiler_typesystem_checker_bind_pattern_typed_list
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb446
+Lbb425:
+	subq $32, %rsp
+	movq %rax, %rdx
+	callq compiler_typesystem_checker_bind_pattern_list
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb446
+Lbb426:
+	movq %rsi, %rax
+	movq %rcx, %rdx
+	movq 8(%rcx), %rcx
+	movq 16(%rdx), %rbx
+	subq $16, %rsp
+	movq %rsp, %rdi
+	movq %rax, %rsi
+	movq (%r8), %rax
+	cmpq $5, %rax
+	jz Lbb429
+	subq $32, %rsp
+	movq %rcx, %r12
+	movq %rsi, %rcx
+	callq compiler_typesystem_env_env_next_var
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq compiler_typesystem_types_TTypeVar
+	movq %r12, %rcx
+	xchgq %rax, %rsi
+	subq $-32, %rsp
+	movq %rsi, (%rdi)
+	jmp Lbb431
+Lbb429:
+	movq %rsi, %rax
+	movq 8(%r8), %rsi
+	movq %rsi, (%rdi)
+Lbb431:
+	subq $32, %rsp
+	movq %rax, %r8
+	movq %rsi, %rdx
+	callq compiler_typesystem_checker_bind_pattern_typed_repeated
+	movq %rsi, %rcx
+	subq $-32, %rsp
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq %rax, %rdi
+	movq (%rbx), %rax
+	cmpq $0, %rax
+	jz Lbb440
+	cmpq $1, %rax
+	setz %r13b
+	movzbq %r13b, %r13
+	subq $16, %rsp
+	movq %rsp, %r12
+	cmpl $0, %r13d
+	jnz Lbb435
+	movq $0, (%r12)
+	movl $0, %eax
+	jmp Lbb436
+Lbb435:
+	movq %rcx, %r14
+	movq 8(%rbx), %rcx
+	subq $32, %rsp
+	leaq str2281(%rip), %rdx
+	callq strcmp
+	movq %r14, %rcx
+	movq %rax, %rdx
+	movq %rdi, %rax
+	subq $-32, %rsp
+	cmpq $0, %rdx
+	movq %rax, %rdi
+	setz %al
+	movzbq %al, %rax
+	andq %r13, %rax
+	movq %rax, (%r12)
+Lbb436:
+	cmpl $0, %eax
+	jnz Lbb438
+	movq 8(%rbx), %rbx
+	subq $32, %rsp
+	callq compiler_typesystem_types_TListType
+	movq %rbx, %rdx
+	movq %rax, %r8
+	movq %rdi, %rax
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rax, %rcx
+	callq compiler_typesystem_env_env_bind
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb446
+Lbb438:
+	movq %rdi, %rax
+	movq %rax, (%rsi)
+	jmp Lbb446
+Lbb440:
+	movq %rdi, %rax
+	movq %rax, (%rsi)
+	jmp Lbb446
+Lbb442:
+	movq 8(%rcx), %rcx
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%r8), %rdx
+	cmpq $6, %rdx
+	jz Lbb444
+	subq $32, %rsp
+	movq %rax, %rdx
+	callq compiler_typesystem_checker_bind_pattern_list
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb446
+Lbb444:
+	movq 8(%r8), %rdx
+	subq $32, %rsp
+	movq %rax, %r8
+	callq compiler_typesystem_checker_bind_pattern_typed_list
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb446
+Lbb445:
+	movq 8(%rcx), %rdx
+	subq $32, %rsp
+	movq %rax, %rcx
+	callq compiler_typesystem_env_env_bind
+	subq $-32, %rsp
+Lbb446:
+	movq %rbp, %rsp
+	subq $48, %rsp
+	popq %rdi
+	popq %rsi
+	popq %r14
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+/* end function compiler_typesystem_checker_bind_pattern_typed */
+
+.text
+.balign 16
+compiler_typesystem_checker_bind_pattern_typed_list:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	pushq %rsi
+	pushq %rdi
+	movq %r8, %rax
+	movq %rdx, %r8
+	movq (%rcx), %rdx
+	cmpq $0, %rdx
+	jz Lbb452
+	movq 8(%rcx), %r9
+	movq 16(%rcx), %rdi
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%r8), %rdx
+	cmpq $0, %rdx
+	jz Lbb451
+	movq %r9, %rcx
+	movq 8(%r8), %rdx
+	movq 16(%r8), %rbx
+	subq $32, %rsp
+	movq %rax, %r8
+	callq compiler_typesystem_checker_bind_pattern_typed
+	movq %rbx, %rdx
+	movq %rdi, %rcx
+	movq %rax, %r8
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq compiler_typesystem_checker_bind_pattern_typed_list
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb452
+Lbb451:
+	subq $32, %rsp
+	movq %rax, %rdx
+	callq compiler_typesystem_checker_bind_pattern_list
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+Lbb452:
+	movq %rbp, %rsp
+	subq $32, %rsp
+	popq %rdi
+	popq %rsi
+	popq %rbx
+	leave
+	ret
+/* end function compiler_typesystem_checker_bind_pattern_typed_list */
+
+.text
+.balign 16
+compiler_typesystem_checker_bind_pattern_typed_repeated:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	pushq %rsi
+	pushq %rdi
+	movq %r8, %rax
+	movq %rcx, %rsi
+	movq (%rsi), %rcx
+	cmpq $0, %rcx
+	jz Lbb455
+	movq 8(%rsi), %rcx
+	movq 16(%rsi), %rsi
+	subq $32, %rsp
+	movq %rax, %r8
+	movq %rdx, %rdi
+	callq compiler_typesystem_checker_bind_pattern_typed
+	movq %rdi, %rdx
+	movq %rsi, %rcx
+	movq %rax, %r8
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq compiler_typesystem_checker_bind_pattern_typed_repeated
+	subq $-32, %rsp
+Lbb455:
+	popq %rdi
+	popq %rsi
+	leave
+	ret
+/* end function compiler_typesystem_checker_bind_pattern_typed_repeated */
+
+.text
+.balign 16
 compiler_typesystem_checker_bind_pattern_list:
 	endbr64
 	pushq %rbp
@@ -4674,7 +4997,7 @@ compiler_typesystem_checker_bind_pattern_list:
 	movq %rcx, %rdx
 	movq (%rdx), %rcx
 	cmpq $0, %rcx
-	jz Lbb418
+	jz Lbb458
 	movq 8(%rdx), %rcx
 	movq 16(%rdx), %rsi
 	subq $32, %rsp
@@ -4686,7 +5009,7 @@ compiler_typesystem_checker_bind_pattern_list:
 	subq $32, %rsp
 	callq compiler_typesystem_checker_bind_pattern_list
 	subq $-32, %rsp
-Lbb418:
+Lbb458:
 	popq %rsi
 	leave
 	ret
@@ -4708,14 +5031,14 @@ compiler_typesystem_checker_annotation_to_type:
 	setz %sil
 	movzbq %sil, %rsi
 	cmpl $0, %esi
-	jnz Lbb421
+	jnz Lbb461
 	movl $0, %esi
-	jmp Lbb422
-Lbb421:
+	jmp Lbb462
+Lbb461:
 	movq %rcx, %rdi
 	movq 8(%rcx), %rcx
 	subq $32, %rsp
-	leaq str2190(%rip), %rdx
+	leaq str2383(%rip), %rdx
 	callq strcmp
 	movq %rdi, %rcx
 	subq $-32, %rsp
@@ -4723,197 +5046,197 @@ Lbb421:
 	setz %al
 	movzbq %al, %rax
 	andq %rax, %rsi
-Lbb422:
-	subq $16, %rsp
-	movq %rsp, %rdx
-	cmpl $0, %esi
-	jnz Lbb425
-	movq $0, (%rdx)
-	movl $0, %eax
-	jmp Lbb426
-Lbb425:
-	movq 16(%rcx), %rax
-	movq (%rax), %rax
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rsi, %rax
-	movq %rax, (%rdx)
-Lbb426:
-	cmpl $0, %eax
-	jnz Lbb489
-	movq (%rcx), %rax
-	cmpq $0, %rax
-	setz %sil
-	movzbq %sil, %rsi
-	subq $16, %rsp
-	movq %rsp, %rdi
-	cmpl $0, %esi
-	jnz Lbb430
-	movq $0, (%rdi)
-	movl $0, %esi
-	jmp Lbb431
-Lbb430:
-	movq %rcx, %rbx
-	movq 8(%rcx), %rcx
-	subq $32, %rsp
-	leaq str2221(%rip), %rdx
-	callq strcmp
-	movq %rbx, %rcx
-	subq $-32, %rsp
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rax, %rsi
-	movq %rsi, (%rdi)
-Lbb431:
-	subq $16, %rsp
-	movq %rsp, %rdx
-	cmpl $0, %esi
-	jnz Lbb434
-	movq $0, (%rdx)
-	movl $0, %eax
-	jmp Lbb435
-Lbb434:
-	movq 16(%rcx), %rax
-	movq (%rax), %rax
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rsi, %rax
-	movq %rax, (%rdx)
-Lbb435:
-	cmpl $0, %eax
-	jnz Lbb488
-	movq (%rcx), %rax
-	cmpq $0, %rax
-	setz %sil
-	movzbq %sil, %rsi
-	subq $16, %rsp
-	movq %rsp, %rdi
-	cmpl $0, %esi
-	jnz Lbb439
-	movq $0, (%rdi)
-	movl $0, %esi
-	jmp Lbb440
-Lbb439:
-	movq %rcx, %rbx
-	movq 8(%rcx), %rcx
-	subq $32, %rsp
-	leaq str2252(%rip), %rdx
-	callq strcmp
-	movq %rbx, %rcx
-	subq $-32, %rsp
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rax, %rsi
-	movq %rsi, (%rdi)
-Lbb440:
-	subq $16, %rsp
-	movq %rsp, %rdx
-	cmpl $0, %esi
-	jnz Lbb443
-	movq $0, (%rdx)
-	movl $0, %eax
-	jmp Lbb444
-Lbb443:
-	movq 16(%rcx), %rax
-	movq (%rax), %rax
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rsi, %rax
-	movq %rax, (%rdx)
-Lbb444:
-	cmpl $0, %eax
-	jnz Lbb487
-	movq (%rcx), %rax
-	cmpq $0, %rax
-	setz %sil
-	movzbq %sil, %rsi
-	subq $16, %rsp
-	movq %rsp, %rdi
-	cmpl $0, %esi
-	jnz Lbb448
-	movq $0, (%rdi)
-	movl $0, %esi
-	jmp Lbb449
-Lbb448:
-	movq %rcx, %rbx
-	movq 8(%rcx), %rcx
-	subq $32, %rsp
-	leaq str2283(%rip), %rdx
-	callq strcmp
-	movq %rbx, %rcx
-	subq $-32, %rsp
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rax, %rsi
-	movq %rsi, (%rdi)
-Lbb449:
-	subq $16, %rsp
-	movq %rsp, %rdx
-	cmpl $0, %esi
-	jnz Lbb452
-	movq $0, (%rdx)
-	movl $0, %eax
-	jmp Lbb453
-Lbb452:
-	movq 16(%rcx), %rax
-	movq (%rax), %rax
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rsi, %rax
-	movq %rax, (%rdx)
-Lbb453:
-	cmpl $0, %eax
-	jnz Lbb486
-	movq (%rcx), %rax
-	cmpq $0, %rax
-	setz %sil
-	movzbq %sil, %rsi
-	subq $16, %rsp
-	movq %rsp, %rdi
-	cmpl $0, %esi
-	jnz Lbb457
-	movq $0, (%rdi)
-	movl $0, %esi
-	jmp Lbb458
-Lbb457:
-	movq %rcx, %rbx
-	movq 8(%rcx), %rcx
-	subq $32, %rsp
-	leaq str2314(%rip), %rdx
-	callq strcmp
-	movq %rbx, %rcx
-	subq $-32, %rsp
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rax, %rsi
-	movq %rsi, (%rdi)
-Lbb458:
-	subq $16, %rsp
-	movq %rsp, %rdx
-	cmpl $0, %esi
-	jnz Lbb461
-	movq $0, (%rdx)
-	movl $0, %eax
-	jmp Lbb462
-Lbb461:
-	movq 16(%rcx), %rax
-	movq (%rax), %rax
-	cmpq $0, %rax
-	setz %al
-	movzbq %al, %rax
-	andq %rsi, %rax
-	movq %rax, (%rdx)
 Lbb462:
+	subq $16, %rsp
+	movq %rsp, %rdx
+	cmpl $0, %esi
+	jnz Lbb465
+	movq $0, (%rdx)
+	movl $0, %eax
+	jmp Lbb466
+Lbb465:
+	movq 16(%rcx), %rax
+	movq (%rax), %rax
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rsi, %rax
+	movq %rax, (%rdx)
+Lbb466:
 	cmpl $0, %eax
-	jnz Lbb485
+	jnz Lbb529
+	movq (%rcx), %rax
+	cmpq $0, %rax
+	setz %sil
+	movzbq %sil, %rsi
+	subq $16, %rsp
+	movq %rsp, %rdi
+	cmpl $0, %esi
+	jnz Lbb470
+	movq $0, (%rdi)
+	movl $0, %esi
+	jmp Lbb471
+Lbb470:
+	movq %rcx, %rbx
+	movq 8(%rcx), %rcx
+	subq $32, %rsp
+	leaq str2414(%rip), %rdx
+	callq strcmp
+	movq %rbx, %rcx
+	subq $-32, %rsp
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rax, %rsi
+	movq %rsi, (%rdi)
+Lbb471:
+	subq $16, %rsp
+	movq %rsp, %rdx
+	cmpl $0, %esi
+	jnz Lbb474
+	movq $0, (%rdx)
+	movl $0, %eax
+	jmp Lbb475
+Lbb474:
+	movq 16(%rcx), %rax
+	movq (%rax), %rax
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rsi, %rax
+	movq %rax, (%rdx)
+Lbb475:
+	cmpl $0, %eax
+	jnz Lbb528
+	movq (%rcx), %rax
+	cmpq $0, %rax
+	setz %sil
+	movzbq %sil, %rsi
+	subq $16, %rsp
+	movq %rsp, %rdi
+	cmpl $0, %esi
+	jnz Lbb479
+	movq $0, (%rdi)
+	movl $0, %esi
+	jmp Lbb480
+Lbb479:
+	movq %rcx, %rbx
+	movq 8(%rcx), %rcx
+	subq $32, %rsp
+	leaq str2445(%rip), %rdx
+	callq strcmp
+	movq %rbx, %rcx
+	subq $-32, %rsp
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rax, %rsi
+	movq %rsi, (%rdi)
+Lbb480:
+	subq $16, %rsp
+	movq %rsp, %rdx
+	cmpl $0, %esi
+	jnz Lbb483
+	movq $0, (%rdx)
+	movl $0, %eax
+	jmp Lbb484
+Lbb483:
+	movq 16(%rcx), %rax
+	movq (%rax), %rax
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rsi, %rax
+	movq %rax, (%rdx)
+Lbb484:
+	cmpl $0, %eax
+	jnz Lbb527
+	movq (%rcx), %rax
+	cmpq $0, %rax
+	setz %sil
+	movzbq %sil, %rsi
+	subq $16, %rsp
+	movq %rsp, %rdi
+	cmpl $0, %esi
+	jnz Lbb488
+	movq $0, (%rdi)
+	movl $0, %esi
+	jmp Lbb489
+Lbb488:
+	movq %rcx, %rbx
+	movq 8(%rcx), %rcx
+	subq $32, %rsp
+	leaq str2476(%rip), %rdx
+	callq strcmp
+	movq %rbx, %rcx
+	subq $-32, %rsp
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rax, %rsi
+	movq %rsi, (%rdi)
+Lbb489:
+	subq $16, %rsp
+	movq %rsp, %rdx
+	cmpl $0, %esi
+	jnz Lbb492
+	movq $0, (%rdx)
+	movl $0, %eax
+	jmp Lbb493
+Lbb492:
+	movq 16(%rcx), %rax
+	movq (%rax), %rax
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rsi, %rax
+	movq %rax, (%rdx)
+Lbb493:
+	cmpl $0, %eax
+	jnz Lbb526
+	movq (%rcx), %rax
+	cmpq $0, %rax
+	setz %sil
+	movzbq %sil, %rsi
+	subq $16, %rsp
+	movq %rsp, %rdi
+	cmpl $0, %esi
+	jnz Lbb497
+	movq $0, (%rdi)
+	movl $0, %esi
+	jmp Lbb498
+Lbb497:
+	movq %rcx, %rbx
+	movq 8(%rcx), %rcx
+	subq $32, %rsp
+	leaq str2507(%rip), %rdx
+	callq strcmp
+	movq %rbx, %rcx
+	subq $-32, %rsp
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rax, %rsi
+	movq %rsi, (%rdi)
+Lbb498:
+	subq $16, %rsp
+	movq %rsp, %rdx
+	cmpl $0, %esi
+	jnz Lbb501
+	movq $0, (%rdx)
+	movl $0, %eax
+	jmp Lbb502
+Lbb501:
+	movq 16(%rcx), %rax
+	movq (%rax), %rax
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	andq %rsi, %rax
+	movq %rax, (%rdx)
+Lbb502:
+	cmpl $0, %eax
+	jnz Lbb525
 	movq (%rcx), %rax
 	cmpq $0, %rax
 	setz %dil
@@ -4921,15 +5244,15 @@ Lbb462:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpl $0, %edi
-	jnz Lbb466
+	jnz Lbb506
 	movq $0, (%rsi)
 	movl $0, %eax
-	jmp Lbb467
-Lbb466:
+	jmp Lbb507
+Lbb506:
 	movq %rcx, %rbx
 	movq 8(%rcx), %rcx
 	subq $32, %rsp
-	leaq str2345(%rip), %rdx
+	leaq str2538(%rip), %rdx
 	callq strcmp
 	movq %rbx, %rcx
 	subq $-32, %rsp
@@ -4938,15 +5261,15 @@ Lbb466:
 	movzbq %al, %rax
 	andq %rdi, %rax
 	movq %rax, (%rsi)
-Lbb467:
+Lbb507:
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpl $0, %eax
-	jnz Lbb470
+	jnz Lbb510
 	movq $0, (%rdx)
 	movl $0, %eax
-	jmp Lbb475
-Lbb470:
+	jmp Lbb515
+Lbb510:
 	movq 16(%rcx), %rsi
 	movq (%rsi), %rdi
 	cmpq $1, %rdi
@@ -4955,11 +5278,11 @@ Lbb470:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpl $0, %r8d
-	jnz Lbb473
+	jnz Lbb513
 	movq $0, (%rdi)
 	movl $0, %esi
-	jmp Lbb474
-Lbb473:
+	jmp Lbb514
+Lbb513:
 	movq 16(%rsi), %rsi
 	movq (%rsi), %rsi
 	cmpq $0, %rsi
@@ -4967,17 +5290,17 @@ Lbb473:
 	movzbq %sil, %rsi
 	andq $1, %rsi
 	movq %rsi, (%rdi)
-Lbb474:
+Lbb514:
 	andq %rsi, %rax
 	movq %rax, (%rdx)
-Lbb475:
+Lbb515:
 	cmpl $0, %eax
-	jnz Lbb484
+	jnz Lbb524
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb480
+	jz Lbb520
 	cmpq $1, %rax
-	jz Lbb479
+	jz Lbb519
 	movq %rcx, %rsi
 	movq 8(%rcx), %rcx
 	movq 16(%rsi), %rsi
@@ -4995,8 +5318,8 @@ Lbb475:
 	subq $32, %rsp
 	callq compiler_typesystem_types_TFnType
 	subq $-32, %rsp
-	jmp Lbb490
-Lbb479:
+	jmp Lbb530
+Lbb519:
 	movq 8(%rcx), %rcx
 	subq $32, %rsp
 	leaq compiler_typesystem_checker_annotation_to_type(%rip), %rdx
@@ -5006,8 +5329,8 @@ Lbb479:
 	subq $32, %rsp
 	callq compiler_typesystem_types_TTupleType
 	subq $-32, %rsp
-	jmp Lbb490
-Lbb480:
+	jmp Lbb530
+Lbb520:
 	movq %rcx, %rsi
 	movq 8(%rcx), %rcx
 	movq 16(%rsi), %rsi
@@ -5025,7 +5348,7 @@ Lbb480:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb482
+	jz Lbb522
 	subq $32, %rsp
 	leaq compiler_typesystem_checker_annotation_to_type(%rip), %rdx
 	callq donna_list_map
@@ -5036,8 +5359,8 @@ Lbb480:
 	callq compiler_typesystem_types_TNamedType
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb490
-Lbb482:
+	jmp Lbb530
+Lbb522:
 	movq %rdi, %rcx
 	subq $32, %rsp
 	movl $0, %edx
@@ -5048,8 +5371,8 @@ Lbb482:
 	callq compiler_typesystem_types_TTypeVar
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb490
-Lbb484:
+	jmp Lbb530
+Lbb524:
 	movq 16(%rcx), %rax
 	movq 8(%rax), %rcx
 	subq $32, %rsp
@@ -5059,22 +5382,22 @@ Lbb484:
 	subq $32, %rsp
 	callq compiler_typesystem_types_TListType
 	subq $-32, %rsp
-	jmp Lbb490
-Lbb485:
+	jmp Lbb530
+Lbb525:
 	leaq compiler_typesystem_types_TNil(%rip), %rax
-	jmp Lbb490
-Lbb486:
+	jmp Lbb530
+Lbb526:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb490
-Lbb487:
+	jmp Lbb530
+Lbb527:
 	leaq compiler_typesystem_types_TString(%rip), %rax
-	jmp Lbb490
-Lbb488:
+	jmp Lbb530
+Lbb528:
 	leaq compiler_typesystem_types_TFloat(%rip), %rax
-	jmp Lbb490
-Lbb489:
+	jmp Lbb530
+Lbb529:
 	leaq compiler_typesystem_types_TInt(%rip), %rax
-Lbb490:
+Lbb530:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -5117,7 +5440,7 @@ compiler_typesystem_checker_unqualify:
 	movq %rcx, %rdx
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str2432(%rip), %rdx
+	leaq str2625(%rip), %rdx
 	movq %rsi, %rcx
 	callq donna_string_split
 	movq %rsi, %rdx
@@ -5142,18 +5465,18 @@ compiler_typesystem_checker_last_segment:
 	movq %rdx, %rax
 	movq (%rcx), %rdx
 	cmpq $0, %rdx
-	jz Lbb503
+	jz Lbb543
 	cmpq $1, %rdx
 	setz %dl
 	movzbq %dl, %rdx
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpl $0, %edx
-	jnz Lbb499
+	jnz Lbb539
 	movq $0, (%rsi)
 	movl $0, %edx
-	jmp Lbb500
-Lbb499:
+	jmp Lbb540
+Lbb539:
 	movq 16(%rcx), %rdx
 	movq (%rdx), %rdx
 	cmpq $0, %rdx
@@ -5161,18 +5484,18 @@ Lbb499:
 	movzbq %dl, %rdx
 	andq $1, %rdx
 	movq %rdx, (%rsi)
-Lbb500:
+Lbb540:
 	cmpl $0, %edx
-	jnz Lbb502
+	jnz Lbb542
 	movq 16(%rcx), %rcx
 	subq $32, %rsp
 	movq %rax, %rdx
 	callq compiler_typesystem_checker_last_segment
 	subq $-32, %rsp
-	jmp Lbb503
-Lbb502:
+	jmp Lbb543
+Lbb542:
 	movq 8(%rcx), %rax
-Lbb503:
+Lbb543:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rsi
@@ -5195,14 +5518,14 @@ compiler_typesystem_checker_collect_all_bindings:
 	movq %rcx, %rdx
 	movq (%rdx), %rcx
 	cmpq $0, %rcx
-	jz Lbb508
+	jz Lbb548
 	movq 8(%rdx), %rcx
 	movq 16(%rdx), %rdi
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%r8), %rdx
 	cmpq $0, %rdx
-	jz Lbb507
+	jz Lbb547
 	movq 8(%r8), %rdx
 	movq 16(%r8), %rbx
 	subq $32, %rsp
@@ -5216,10 +5539,10 @@ compiler_typesystem_checker_collect_all_bindings:
 	callq compiler_typesystem_checker_collect_all_bindings
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb508
-Lbb507:
+	jmp Lbb548
+Lbb547:
 	movq %rax, (%rsi)
-Lbb508:
+Lbb548:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -5245,21 +5568,21 @@ compiler_typesystem_checker_collect_bindings:
 	setz %dil
 	movzbq %dil, %rdi
 	cmpl $0, %edi
-	jnz Lbb531
+	jnz Lbb571
 	cmpq $5, %rsi
 	setz %dil
 	movzbq %dil, %rdi
 	cmpl $0, %edi
-	jnz Lbb527
+	jnz Lbb567
 	cmpq $6, %rsi
-	jz Lbb524
+	jz Lbb564
 	cmpq $7, %rsi
 	setz %dil
 	movzbq %dil, %rdi
 	cmpl $0, %edi
-	jnz Lbb521
+	jnz Lbb561
 	cmpq $8, %rsi
-	jnz Lbb536
+	jnz Lbb576
 	movq %rcx, %rsi
 	movq 8(%rcx), %rcx
 	movq 16(%rsi), %rbx
@@ -5268,11 +5591,11 @@ compiler_typesystem_checker_collect_bindings:
 	movq %rax, %rdi
 	movq (%rdx), %rax
 	cmpq $8, %rax
-	jz Lbb517
+	jz Lbb557
 	movq %rdi, (%rsi)
 	movq %rdi, %rax
-	jmp Lbb536
-Lbb517:
+	jmp Lbb576
+Lbb557:
 	movq %rdx, %r12
 	movq 8(%rdx), %rdx
 	movq 16(%r12), %r12
@@ -5286,19 +5609,19 @@ Lbb517:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %r8
-	jz Lbb519
+	jz Lbb559
 	movq %rax, (%rdi)
-	jmp Lbb520
-Lbb519:
+	jmp Lbb560
+Lbb559:
 	subq $32, %rsp
 	movq %rax, %r8
 	callq compiler_typesystem_checker_collect_bindings_list
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb520:
+Lbb560:
 	movq %rax, (%rsi)
-	jmp Lbb536
-Lbb521:
+	jmp Lbb576
+Lbb561:
 	movq %rcx, %rsi
 	movq 8(%rcx), %rcx
 	movq 16(%rsi), %rdi
@@ -5306,10 +5629,10 @@ Lbb521:
 	movq %rsp, %rsi
 	movq (%rdx), %r8
 	cmpq $7, %r8
-	jz Lbb523
+	jz Lbb563
 	movq %rax, (%rsi)
-	jmp Lbb536
-Lbb523:
+	jmp Lbb576
+Lbb563:
 	movq %rdx, %rbx
 	movq 8(%rdx), %rdx
 	movq 16(%rbx), %rbx
@@ -5324,44 +5647,44 @@ Lbb523:
 	callq compiler_typesystem_checker_collect_bindings
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb536
-Lbb524:
+	jmp Lbb576
+Lbb564:
 	movq 8(%rcx), %rcx
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%rdx), %rdi
 	cmpq $6, %rdi
-	jz Lbb526
+	jz Lbb566
 	movq %rax, (%rsi)
-	jmp Lbb536
-Lbb526:
+	jmp Lbb576
+Lbb566:
 	movq 8(%rdx), %rdx
 	subq $32, %rsp
 	movq %rax, %r8
 	callq compiler_typesystem_checker_collect_bindings_list
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb536
-Lbb527:
+	jmp Lbb576
+Lbb567:
 	movq 8(%rcx), %rcx
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq %rax, %rdi
 	movq (%rdx), %rax
 	cmpq $5, %rax
-	jz Lbb530
+	jz Lbb570
 	movq %rdi, (%rsi)
 	movq %rdi, %rax
-	jmp Lbb536
-Lbb530:
+	jmp Lbb576
+Lbb570:
 	movq 8(%rdx), %rdx
 	subq $32, %rsp
 	movq %rdi, %r8
 	callq compiler_typesystem_checker_collect_bindings
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb536
-Lbb531:
+	jmp Lbb576
+Lbb571:
 	movq %rax, %rdi
 	movq 8(%rcx), %r12
 	subq $32, %rsp
@@ -5374,7 +5697,7 @@ Lbb531:
 	movq %rsp, %rsi
 	movq (%rax), %rax
 	cmpq $1, %rax
-	jz Lbb534
+	jz Lbb574
 	subq $32, %rsp
 	movl $16, %ecx
 	callq malloc
@@ -5391,11 +5714,11 @@ Lbb531:
 	movq %rbx, 8(%rax)
 	movq %rdi, 16(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb536
-Lbb534:
+	jmp Lbb576
+Lbb574:
 	movq %rdi, %rax
 	movq %rax, (%rsi)
-Lbb536:
+Lbb576:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -5421,14 +5744,14 @@ compiler_typesystem_checker_collect_bindings_list:
 	movq %rcx, %rdx
 	movq (%rdx), %rcx
 	cmpq $0, %rcx
-	jz Lbb541
+	jz Lbb581
 	movq 8(%rdx), %rcx
 	movq 16(%rdx), %rdi
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%r8), %rdx
 	cmpq $0, %rdx
-	jz Lbb540
+	jz Lbb580
 	movq 8(%r8), %rdx
 	movq 16(%r8), %rbx
 	subq $32, %rsp
@@ -5442,10 +5765,10 @@ compiler_typesystem_checker_collect_bindings_list:
 	callq compiler_typesystem_checker_collect_bindings_list
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb541
-Lbb540:
+	jmp Lbb581
+Lbb580:
 	movq %rax, (%rsi)
-Lbb541:
+Lbb581:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -5465,7 +5788,7 @@ compiler_typesystem_checker_lookup_int_binding:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb547
+	jz Lbb587
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	movq (%rax), %rsi
@@ -5476,22 +5799,22 @@ compiler_typesystem_checker_lookup_int_binding:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rdi
-	jz Lbb545
+	jz Lbb585
 	subq $32, %rsp
 	callq compiler_typesystem_checker_lookup_int_binding
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb548
-Lbb545:
+	jmp Lbb588
+Lbb585:
 	movq %rax, %rcx
 	subq $32, %rsp
 	callq donna_option_Some
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb548
-Lbb547:
+	jmp Lbb588
+Lbb587:
 	leaq donna_option_None(%rip), %rax
-Lbb548:
+Lbb588:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -5515,18 +5838,18 @@ compiler_typesystem_checker_apply_subst:
 	setz %sil
 	movzbq %sil, %rsi
 	cmpl $0, %esi
-	jnz Lbb559
+	jnz Lbb599
 	cmpq $5, %rdx
-	jz Lbb558
+	jz Lbb598
 	cmpq $6, %rdx
-	jz Lbb557
+	jz Lbb597
 	cmpq $7, %rdx
 	setz %sil
 	movzbq %sil, %rsi
 	cmpl $0, %esi
-	jnz Lbb555
+	jnz Lbb595
 	cmpq $8, %rdx
-	jnz Lbb564
+	jnz Lbb604
 	movq 8(%rax), %rsi
 	movq %rcx, %rdi
 	movq 16(%rax), %rcx
@@ -5539,8 +5862,8 @@ compiler_typesystem_checker_apply_subst:
 	subq $32, %rsp
 	callq compiler_typesystem_types_TNamedType
 	subq $-32, %rsp
-	jmp Lbb564
-Lbb555:
+	jmp Lbb604
+Lbb595:
 	movq %rcx, %rdi
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rsi
@@ -5559,8 +5882,8 @@ Lbb555:
 	subq $32, %rsp
 	callq compiler_typesystem_types_TFnType
 	subq $-32, %rsp
-	jmp Lbb564
-Lbb557:
+	jmp Lbb604
+Lbb597:
 	movq %rcx, %rsi
 	movq 8(%rax), %rcx
 	subq $32, %rsp
@@ -5571,8 +5894,8 @@ Lbb557:
 	subq $32, %rsp
 	callq compiler_typesystem_types_TTupleType
 	subq $-32, %rsp
-	jmp Lbb564
-Lbb558:
+	jmp Lbb604
+Lbb598:
 	movq %rcx, %rsi
 	movq 8(%rax), %rcx
 	subq $32, %rsp
@@ -5583,8 +5906,8 @@ Lbb558:
 	subq $32, %rsp
 	callq compiler_typesystem_types_TListType
 	subq $-32, %rsp
-	jmp Lbb564
-Lbb559:
+	jmp Lbb604
+Lbb599:
 	movq %rax, %rsi
 	movq 8(%rsi), %rdx
 	subq $32, %rsp
@@ -5596,14 +5919,14 @@ Lbb559:
 	movq %rsp, %rcx
 	movq (%rdx), %rsi
 	cmpq $1, %rsi
-	jz Lbb562
+	jz Lbb602
 	movq %rax, (%rcx)
-	jmp Lbb564
-Lbb562:
+	jmp Lbb604
+Lbb602:
 	movq %rdx, %rax
 	movq 8(%rax), %rax
 	movq %rax, (%rcx)
-Lbb564:
+Lbb604:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -5622,7 +5945,7 @@ compiler_typesystem_checker_apply_subst_list:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb567
+	jz Lbb607
 	movq 8(%rcx), %rsi
 	movq 16(%rcx), %rcx
 	subq $32, %rsp
@@ -5643,10 +5966,10 @@ compiler_typesystem_checker_apply_subst_list:
 	movq $1, (%rax)
 	movq %rdi, 8(%rax)
 	movq %rsi, 16(%rax)
-	jmp Lbb568
-Lbb567:
+	jmp Lbb608
+Lbb607:
 	leaq donna_nil(%rip), %rax
-Lbb568:
+Lbb608:
 	popq %rdi
 	popq %rsi
 	leave
@@ -5668,390 +5991,60 @@ compiler_typesystem_checker_check_binop_types:
 	xchgq %rdx, %rcx
 	movq (%rdx), %rdx
 	cmpq $5, %rdx
-	jz Lbb643
+	jz Lbb683
 	cmpq $6, %rdx
-	jz Lbb636
+	jz Lbb676
 	cmpq $7, %rdx
-	jz Lbb629
+	jz Lbb669
 	cmpq $8, %rdx
-	jz Lbb622
+	jz Lbb662
 	cmpq $15, %rdx
-	jz Lbb615
+	jz Lbb655
 	cmpq $16, %rdx
-	jz Lbb608
+	jz Lbb648
 	cmpq $17, %rdx
-	jz Lbb601
+	jz Lbb641
 	cmpq $18, %rdx
-	jz Lbb594
+	jz Lbb634
 	cmpq $19, %rdx
-	jz Lbb587
+	jz Lbb627
 	cmpq $20, %rdx
-	jz Lbb580
-	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
-	subq $-32, %rsp
-	jmp Lbb650
-Lbb580:
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq (%rcx), %rdx
-	cmpq $3, %rdx
-	jz Lbb582
-	subq $32, %rsp
-	callq compiler_typesystem_types_type_to_string
-	movq %rdi, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r8, %rbx
-	leaq str2983(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb582:
-	movq %rdi, %rbx
-	movq %rax, %rcx
-	subq $16, %rsp
-	movq %rsp, %rdi
-	movq (%rcx), %rax
-	cmpq $3, %rax
-	jz Lbb585
-	subq $32, %rsp
-	movq %rcx, %rax
-	callq compiler_typesystem_types_type_to_string
-	movq %rbx, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str2978(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-	jmp Lbb586
-Lbb585:
-	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-Lbb586:
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb587:
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq (%rcx), %rdx
-	cmpq $3, %rdx
-	jz Lbb589
-	subq $32, %rsp
-	callq compiler_typesystem_types_type_to_string
-	movq %rdi, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r8, %rbx
-	leaq str2956(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb589:
-	movq %rdi, %rbx
-	movq %rax, %rcx
-	subq $16, %rsp
-	movq %rsp, %rdi
-	movq (%rcx), %rax
-	cmpq $3, %rax
-	jz Lbb592
-	subq $32, %rsp
-	movq %rcx, %rax
-	callq compiler_typesystem_types_type_to_string
-	movq %rbx, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str2951(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-	jmp Lbb593
-Lbb592:
-	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-Lbb593:
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb594:
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq (%rcx), %rdx
-	cmpq $1, %rdx
-	jz Lbb596
-	subq $32, %rsp
-	callq compiler_typesystem_types_type_to_string
-	movq %rdi, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r8, %rbx
-	leaq str2929(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb596:
-	movq %rdi, %rbx
-	movq %rax, %rcx
-	subq $16, %rsp
-	movq %rsp, %rdi
-	movq (%rcx), %rax
-	cmpq $1, %rax
-	jz Lbb599
-	subq $32, %rsp
-	movq %rcx, %rax
-	callq compiler_typesystem_types_type_to_string
-	movq %rbx, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str2924(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-	jmp Lbb600
-Lbb599:
-	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-Lbb600:
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb601:
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq (%rcx), %rdx
-	cmpq $1, %rdx
-	jz Lbb603
-	subq $32, %rsp
-	callq compiler_typesystem_types_type_to_string
-	movq %rdi, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r8, %rbx
-	leaq str2902(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb603:
-	movq %rdi, %rbx
-	movq %rax, %rcx
-	subq $16, %rsp
-	movq %rsp, %rdi
-	movq (%rcx), %rax
-	cmpq $1, %rax
-	jz Lbb606
-	subq $32, %rsp
-	movq %rcx, %rax
-	callq compiler_typesystem_types_type_to_string
-	movq %rbx, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str2897(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-	jmp Lbb607
-Lbb606:
-	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-Lbb607:
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb608:
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq (%rcx), %rdx
-	cmpq $1, %rdx
-	jz Lbb610
-	subq $32, %rsp
-	callq compiler_typesystem_types_type_to_string
-	movq %rdi, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r8, %rbx
-	leaq str2875(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb610:
-	movq %rdi, %rbx
-	movq %rax, %rcx
-	subq $16, %rsp
-	movq %rsp, %rdi
-	movq (%rcx), %rax
-	cmpq $1, %rax
-	jz Lbb613
-	subq $32, %rsp
-	movq %rcx, %rax
-	callq compiler_typesystem_types_type_to_string
-	movq %rbx, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str2870(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-	jmp Lbb614
-Lbb613:
-	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-Lbb614:
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb615:
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq (%rcx), %rdx
-	cmpq $1, %rdx
-	jz Lbb617
-	subq $32, %rsp
-	callq compiler_typesystem_types_type_to_string
-	movq %rdi, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r8, %rbx
-	leaq str2848(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb617:
-	movq %rdi, %rbx
-	movq %rax, %rcx
-	subq $16, %rsp
-	movq %rsp, %rdi
-	movq (%rcx), %rax
-	cmpq $1, %rax
 	jz Lbb620
 	subq $32, %rsp
-	movq %rcx, %rax
-	callq compiler_typesystem_types_type_to_string
-	movq %rbx, %r8
-	movq %rax, %rdx
+	movl $1, %ecx
+	callq donna_result_Ok
 	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str2843(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-	jmp Lbb621
+	jmp Lbb690
 Lbb620:
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rcx), %rdx
+	cmpq $3, %rdx
+	jz Lbb622
 	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
+	callq compiler_typesystem_types_type_to_string
+	movq %rdi, %r8
+	movq %rax, %rdx
 	subq $-32, %rsp
-	movq %rax, (%rdi)
-Lbb621:
+	subq $32, %rsp
+	movq %r8, %rbx
+	leaq str3176(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb650
+	jmp Lbb690
 Lbb622:
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq (%rcx), %rdx
-	cmpq $1, %rdx
-	jz Lbb624
-	subq $32, %rsp
-	callq compiler_typesystem_types_type_to_string
-	movq %rdi, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r8, %rbx
-	leaq str2821(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb624:
 	movq %rdi, %rbx
 	movq %rax, %rcx
 	subq $16, %rsp
 	movq %rsp, %rdi
 	movq (%rcx), %rax
-	cmpq $1, %rax
-	jz Lbb627
+	cmpq $3, %rax
+	jz Lbb625
 	subq $32, %rsp
 	movq %rcx, %rax
 	callq compiler_typesystem_types_type_to_string
@@ -6059,7 +6052,7 @@ Lbb624:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str2816(%rip), %rcx
+	leaq str3171(%rip), %rcx
 	callq errors_error_TypeMismatch
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -6067,46 +6060,46 @@ Lbb624:
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb628
+	jmp Lbb626
+Lbb625:
+	subq $32, %rsp
+	movl $1, %ecx
+	callq donna_result_Ok
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb626:
+	movq %rax, (%rsi)
+	jmp Lbb690
 Lbb627:
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rcx), %rdx
+	cmpq $3, %rdx
+	jz Lbb629
 	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
+	callq compiler_typesystem_types_type_to_string
+	movq %rdi, %r8
+	movq %rax, %rdx
 	subq $-32, %rsp
-	movq %rax, (%rdi)
-Lbb628:
+	subq $32, %rsp
+	movq %r8, %rbx
+	leaq str3149(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb650
+	jmp Lbb690
 Lbb629:
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq (%rcx), %rdx
-	cmpq $1, %rdx
-	jz Lbb631
-	subq $32, %rsp
-	callq compiler_typesystem_types_type_to_string
-	movq %rdi, %r8
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r8, %rbx
-	leaq str2794(%rip), %rcx
-	callq errors_error_TypeMismatch
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_result_Error
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb631:
 	movq %rdi, %rbx
 	movq %rax, %rcx
 	subq $16, %rsp
 	movq %rsp, %rdi
 	movq (%rcx), %rax
-	cmpq $1, %rax
-	jz Lbb634
+	cmpq $3, %rax
+	jz Lbb632
 	subq $32, %rsp
 	movq %rcx, %rax
 	callq compiler_typesystem_types_type_to_string
@@ -6114,7 +6107,7 @@ Lbb631:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str2789(%rip), %rcx
+	leaq str3144(%rip), %rcx
 	callq errors_error_TypeMismatch
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -6122,22 +6115,22 @@ Lbb631:
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb635
+	jmp Lbb633
+Lbb632:
+	subq $32, %rsp
+	movl $1, %ecx
+	callq donna_result_Ok
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb633:
+	movq %rax, (%rsi)
+	jmp Lbb690
 Lbb634:
-	subq $32, %rsp
-	movl $1, %ecx
-	callq donna_result_Ok
-	subq $-32, %rsp
-	movq %rax, (%rdi)
-Lbb635:
-	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb636:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%rcx), %rdx
 	cmpq $1, %rdx
-	jz Lbb638
+	jz Lbb636
 	subq $32, %rsp
 	callq compiler_typesystem_types_type_to_string
 	movq %rdi, %r8
@@ -6145,7 +6138,7 @@ Lbb636:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %r8, %rbx
-	leaq str2767(%rip), %rcx
+	leaq str3122(%rip), %rcx
 	callq errors_error_TypeMismatch
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -6153,15 +6146,15 @@ Lbb636:
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb638:
+	jmp Lbb690
+Lbb636:
 	movq %rdi, %rbx
 	movq %rax, %rcx
 	subq $16, %rsp
 	movq %rsp, %rdi
 	movq (%rcx), %rax
 	cmpq $1, %rax
-	jz Lbb641
+	jz Lbb639
 	subq $32, %rsp
 	movq %rcx, %rax
 	callq compiler_typesystem_types_type_to_string
@@ -6169,7 +6162,7 @@ Lbb638:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str2762(%rip), %rcx
+	leaq str3117(%rip), %rcx
 	callq errors_error_TypeMismatch
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -6177,22 +6170,22 @@ Lbb638:
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb642
-Lbb641:
+	jmp Lbb640
+Lbb639:
 	subq $32, %rsp
 	movl $1, %ecx
 	callq donna_result_Ok
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb642:
+Lbb640:
 	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb643:
+	jmp Lbb690
+Lbb641:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%rcx), %rdx
 	cmpq $1, %rdx
-	jz Lbb645
+	jz Lbb643
 	subq $32, %rsp
 	callq compiler_typesystem_types_type_to_string
 	movq %rdi, %r8
@@ -6200,7 +6193,7 @@ Lbb643:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %r8, %rbx
-	leaq str2740(%rip), %rcx
+	leaq str3095(%rip), %rcx
 	callq errors_error_TypeMismatch
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -6208,22 +6201,23 @@ Lbb643:
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb650
-Lbb645:
+	jmp Lbb690
+Lbb643:
 	movq %rdi, %rbx
 	movq %rax, %rcx
 	subq $16, %rsp
 	movq %rsp, %rdi
 	movq (%rcx), %rax
 	cmpq $1, %rax
-	jz Lbb648
+	jz Lbb646
 	subq $32, %rsp
+	movq %rcx, %rax
 	callq compiler_typesystem_types_type_to_string
 	movq %rbx, %r8
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str2735(%rip), %rcx
+	leaq str3090(%rip), %rcx
 	callq errors_error_TypeMismatch
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -6231,16 +6225,345 @@ Lbb645:
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb649
-Lbb648:
+	jmp Lbb647
+Lbb646:
 	subq $32, %rsp
 	movl $1, %ecx
 	callq donna_result_Ok
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb649:
+Lbb647:
 	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb648:
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rcx), %rdx
+	cmpq $1, %rdx
+	jz Lbb650
+	subq $32, %rsp
+	callq compiler_typesystem_types_type_to_string
+	movq %rdi, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %r8, %rbx
+	leaq str3068(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb690
 Lbb650:
+	movq %rdi, %rbx
+	movq %rax, %rcx
+	subq $16, %rsp
+	movq %rsp, %rdi
+	movq (%rcx), %rax
+	cmpq $1, %rax
+	jz Lbb653
+	subq $32, %rsp
+	movq %rcx, %rax
+	callq compiler_typesystem_types_type_to_string
+	movq %rbx, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str3063(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+	jmp Lbb654
+Lbb653:
+	subq $32, %rsp
+	movl $1, %ecx
+	callq donna_result_Ok
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb654:
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb655:
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rcx), %rdx
+	cmpq $1, %rdx
+	jz Lbb657
+	subq $32, %rsp
+	callq compiler_typesystem_types_type_to_string
+	movq %rdi, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %r8, %rbx
+	leaq str3041(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb657:
+	movq %rdi, %rbx
+	movq %rax, %rcx
+	subq $16, %rsp
+	movq %rsp, %rdi
+	movq (%rcx), %rax
+	cmpq $1, %rax
+	jz Lbb660
+	subq $32, %rsp
+	movq %rcx, %rax
+	callq compiler_typesystem_types_type_to_string
+	movq %rbx, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str3036(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+	jmp Lbb661
+Lbb660:
+	subq $32, %rsp
+	movl $1, %ecx
+	callq donna_result_Ok
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb661:
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb662:
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rcx), %rdx
+	cmpq $1, %rdx
+	jz Lbb664
+	subq $32, %rsp
+	callq compiler_typesystem_types_type_to_string
+	movq %rdi, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %r8, %rbx
+	leaq str3014(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb664:
+	movq %rdi, %rbx
+	movq %rax, %rcx
+	subq $16, %rsp
+	movq %rsp, %rdi
+	movq (%rcx), %rax
+	cmpq $1, %rax
+	jz Lbb667
+	subq $32, %rsp
+	movq %rcx, %rax
+	callq compiler_typesystem_types_type_to_string
+	movq %rbx, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str3009(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+	jmp Lbb668
+Lbb667:
+	subq $32, %rsp
+	movl $1, %ecx
+	callq donna_result_Ok
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb668:
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb669:
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rcx), %rdx
+	cmpq $1, %rdx
+	jz Lbb671
+	subq $32, %rsp
+	callq compiler_typesystem_types_type_to_string
+	movq %rdi, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %r8, %rbx
+	leaq str2987(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb671:
+	movq %rdi, %rbx
+	movq %rax, %rcx
+	subq $16, %rsp
+	movq %rsp, %rdi
+	movq (%rcx), %rax
+	cmpq $1, %rax
+	jz Lbb674
+	subq $32, %rsp
+	movq %rcx, %rax
+	callq compiler_typesystem_types_type_to_string
+	movq %rbx, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str2982(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+	jmp Lbb675
+Lbb674:
+	subq $32, %rsp
+	movl $1, %ecx
+	callq donna_result_Ok
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb675:
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb676:
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rcx), %rdx
+	cmpq $1, %rdx
+	jz Lbb678
+	subq $32, %rsp
+	callq compiler_typesystem_types_type_to_string
+	movq %rdi, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %r8, %rbx
+	leaq str2960(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb678:
+	movq %rdi, %rbx
+	movq %rax, %rcx
+	subq $16, %rsp
+	movq %rsp, %rdi
+	movq (%rcx), %rax
+	cmpq $1, %rax
+	jz Lbb681
+	subq $32, %rsp
+	movq %rcx, %rax
+	callq compiler_typesystem_types_type_to_string
+	movq %rbx, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str2955(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+	jmp Lbb682
+Lbb681:
+	subq $32, %rsp
+	movl $1, %ecx
+	callq donna_result_Ok
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb682:
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb683:
+	subq $16, %rsp
+	movq %rsp, %rsi
+	movq (%rcx), %rdx
+	cmpq $1, %rdx
+	jz Lbb685
+	subq $32, %rsp
+	callq compiler_typesystem_types_type_to_string
+	movq %rdi, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %r8, %rbx
+	leaq str2933(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb690
+Lbb685:
+	movq %rdi, %rbx
+	movq %rax, %rcx
+	subq $16, %rsp
+	movq %rsp, %rdi
+	movq (%rcx), %rax
+	cmpq $1, %rax
+	jz Lbb688
+	subq $32, %rsp
+	callq compiler_typesystem_types_type_to_string
+	movq %rbx, %r8
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str2928(%rip), %rcx
+	callq errors_error_TypeMismatch
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_result_Error
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+	jmp Lbb689
+Lbb688:
+	subq $32, %rsp
+	movl $1, %ecx
+	callq donna_result_Ok
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb689:
+	movq %rax, (%rsi)
+Lbb690:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -6256,112 +6579,112 @@ compiler_typesystem_checker_binop_result_type:
 	endbr64
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb693
+	jz Lbb733
 	cmpq $1, %rax
-	jz Lbb692
+	jz Lbb732
 	cmpq $2, %rax
-	jz Lbb691
+	jz Lbb731
 	cmpq $3, %rax
-	jz Lbb690
+	jz Lbb730
 	cmpq $4, %rax
-	jz Lbb689
+	jz Lbb729
 	cmpq $5, %rax
-	jz Lbb688
+	jz Lbb728
 	cmpq $6, %rax
-	jz Lbb687
+	jz Lbb727
 	cmpq $7, %rax
-	jz Lbb686
+	jz Lbb726
 	cmpq $8, %rax
-	jz Lbb685
+	jz Lbb725
 	cmpq $9, %rax
-	jz Lbb684
+	jz Lbb724
 	cmpq $10, %rax
-	jz Lbb683
+	jz Lbb723
 	cmpq $11, %rax
-	jz Lbb682
+	jz Lbb722
 	cmpq $12, %rax
-	jz Lbb681
+	jz Lbb721
 	cmpq $13, %rax
-	jz Lbb680
+	jz Lbb720
 	cmpq $14, %rax
-	jz Lbb679
+	jz Lbb719
 	cmpq $15, %rax
-	jz Lbb678
+	jz Lbb718
 	cmpq $16, %rax
-	jz Lbb677
+	jz Lbb717
 	cmpq $17, %rax
-	jz Lbb676
+	jz Lbb716
 	cmpq $18, %rax
-	jz Lbb675
+	jz Lbb715
 	cmpq $19, %rax
-	jz Lbb674
+	jz Lbb714
 	cmpq $20, %rax
-	jz Lbb673
+	jz Lbb713
 	leaq compiler_typesystem_types_TString(%rip), %rax
-	jmp Lbb694
-Lbb673:
+	jmp Lbb734
+Lbb713:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb674:
+	jmp Lbb734
+Lbb714:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb675:
+	jmp Lbb734
+Lbb715:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb676:
+	jmp Lbb734
+Lbb716:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb677:
+	jmp Lbb734
+Lbb717:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb678:
+	jmp Lbb734
+Lbb718:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb679:
+	jmp Lbb734
+Lbb719:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb680:
+	jmp Lbb734
+Lbb720:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb681:
+	jmp Lbb734
+Lbb721:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb682:
+	jmp Lbb734
+Lbb722:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb683:
+	jmp Lbb734
+Lbb723:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb684:
+	jmp Lbb734
+Lbb724:
 	leaq compiler_typesystem_types_TBool(%rip), %rax
-	jmp Lbb694
-Lbb685:
+	jmp Lbb734
+Lbb725:
 	leaq compiler_typesystem_types_TFloat(%rip), %rax
-	jmp Lbb694
-Lbb686:
+	jmp Lbb734
+Lbb726:
 	leaq compiler_typesystem_types_TFloat(%rip), %rax
-	jmp Lbb694
-Lbb687:
+	jmp Lbb734
+Lbb727:
 	leaq compiler_typesystem_types_TFloat(%rip), %rax
-	jmp Lbb694
-Lbb688:
+	jmp Lbb734
+Lbb728:
 	leaq compiler_typesystem_types_TFloat(%rip), %rax
-	jmp Lbb694
-Lbb689:
+	jmp Lbb734
+Lbb729:
 	leaq compiler_typesystem_types_TInt(%rip), %rax
-	jmp Lbb694
-Lbb690:
+	jmp Lbb734
+Lbb730:
 	leaq compiler_typesystem_types_TInt(%rip), %rax
-	jmp Lbb694
-Lbb691:
+	jmp Lbb734
+Lbb731:
 	leaq compiler_typesystem_types_TInt(%rip), %rax
-	jmp Lbb694
-Lbb692:
+	jmp Lbb734
+Lbb732:
 	leaq compiler_typesystem_types_TInt(%rip), %rax
-	jmp Lbb694
-Lbb693:
+	jmp Lbb734
+Lbb733:
 	leaq compiler_typesystem_types_TInt(%rip), %rax
-Lbb694:
+Lbb734:
 	ret
 /* end function compiler_typesystem_checker_binop_result_type */
 
@@ -6376,7 +6699,7 @@ compiler_typesystem_checker_path_last_segment:
 	movq %rcx, %rdx
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str3077(%rip), %rdx
+	leaq str3270(%rip), %rdx
 	movq %rsi, %rcx
 	callq donna_string_split
 	movq %rax, %rcx
@@ -6406,7 +6729,7 @@ compiler_typesystem_checker_lookup_binding:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb702
+	jz Lbb742
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	movq %rcx, %rsi
@@ -6421,22 +6744,22 @@ compiler_typesystem_checker_lookup_binding:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb700
+	jz Lbb740
 	subq $32, %rsp
 	callq compiler_typesystem_checker_lookup_binding
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb703
-Lbb700:
+	jmp Lbb743
+Lbb740:
 	movq %rdi, %rcx
 	subq $32, %rsp
 	callq donna_option_Some
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb703
-Lbb702:
+	jmp Lbb743
+Lbb742:
 	leaq donna_option_None(%rip), %rax
-Lbb703:
+Lbb743:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -6460,7 +6783,7 @@ compiler_typesystem_checker_pub_fns_to_bindings:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb709
+	jz Lbb749
 	movq 8(%rcx), %rdx
 	movq 16(%rcx), %rcx
 	subq $16, %rsp
@@ -6471,13 +6794,13 @@ compiler_typesystem_checker_pub_fns_to_bindings:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %rax
-	jz Lbb707
+	jz Lbb747
 	subq $32, %rsp
 	callq compiler_typesystem_checker_pub_fns_to_bindings
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb708
-Lbb707:
+	jmp Lbb748
+Lbb747:
 	subq $32, %rsp
 	callq compiler_typesystem_checker_pub_fns_to_bindings
 	movq %rax, %rbx
@@ -6497,12 +6820,12 @@ Lbb707:
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
 	movq %rax, (%rdi)
-Lbb708:
+Lbb748:
 	movq %rax, (%rsi)
-	jmp Lbb710
-Lbb709:
+	jmp Lbb750
+Lbb749:
 	leaq donna_nil(%rip), %rax
-Lbb710:
+Lbb750:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -6529,7 +6852,7 @@ compiler_typesystem_checker_pub_consts_to_bindings:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb716
+	jz Lbb756
 	movq 8(%rcx), %rdx
 	movq 16(%rcx), %rcx
 	subq $16, %rsp
@@ -6540,13 +6863,13 @@ compiler_typesystem_checker_pub_consts_to_bindings:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %rax
-	jz Lbb714
+	jz Lbb754
 	subq $32, %rsp
 	callq compiler_typesystem_checker_pub_consts_to_bindings
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb715
-Lbb714:
+	jmp Lbb755
+Lbb754:
 	subq $32, %rsp
 	callq compiler_typesystem_checker_pub_consts_to_bindings
 	movq %rax, %rbx
@@ -6566,12 +6889,12 @@ Lbb714:
 	movq %r12, 8(%rax)
 	movq %rbx, 16(%rax)
 	movq %rax, (%rdi)
-Lbb715:
+Lbb755:
 	movq %rax, (%rsi)
-	jmp Lbb717
-Lbb716:
+	jmp Lbb757
+Lbb756:
 	leaq donna_nil(%rip), %rax
-Lbb717:
+Lbb757:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -6596,7 +6919,7 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb724
+	jz Lbb764
 	movq 8(%rcx), %rdx
 	movq 16(%rcx), %rbx
 	subq $16, %rsp
@@ -6607,7 +6930,7 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $0, %rax
-	jz Lbb721
+	jz Lbb761
 	subq $32, %rsp
 	leaq donna_nil(%rip), %rdx
 	callq compiler_typesystem_types_TNamedType
@@ -6628,19 +6951,19 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	callq donna_list_append
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb723
-Lbb721:
+	jmp Lbb763
+Lbb761:
 	movq %rbx, %rcx
 	subq $32, %rsp
 	callq compiler_typesystem_checker_pub_type_defs_to_ctor_bindings
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb723:
+Lbb763:
 	movq %rax, (%rsi)
-	jmp Lbb725
-Lbb724:
+	jmp Lbb765
+Lbb764:
 	leaq donna_nil(%rip), %rax
-Lbb725:
+Lbb765:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -6666,7 +6989,7 @@ compiler_typesystem_checker_ctors_to_bindings:
 	movq %rdx, %r13
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb734
+	jz Lbb774
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rdi
 	subq $16, %rsp
@@ -6682,7 +7005,7 @@ compiler_typesystem_checker_ctors_to_bindings:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb730
+	jz Lbb770
 	subq $32, %rsp
 	movq %rdx, %r13
 	callq compiler_typesystem_types_TFnType
@@ -6692,13 +7015,13 @@ compiler_typesystem_checker_ctors_to_bindings:
 	subq $-32, %rsp
 	movq %rdi, (%rbx)
 	movq %rdi, %rbx
-	jmp Lbb733
-Lbb730:
+	jmp Lbb773
+Lbb770:
 	movq %rdi, %rcx
 	movq %rbx, %rdi
 	movq %rdx, (%rdi)
 	movq %rdx, %rbx
-Lbb733:
+Lbb773:
 	subq $32, %rsp
 	callq compiler_typesystem_checker_ctors_to_bindings
 	movq %rax, %rdi
@@ -6719,10 +7042,10 @@ Lbb733:
 	movq %rbx, 8(%rax)
 	movq %rdi, 16(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb735
-Lbb734:
+	jmp Lbb775
+Lbb774:
 	leaq donna_nil(%rip), %rax
-Lbb735:
+Lbb775:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -6747,7 +7070,7 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	movq %rcx, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb742
+	jz Lbb782
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rbx
 	subq $16, %rsp
@@ -6758,7 +7081,7 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $0, %rax
-	jz Lbb739
+	jz Lbb779
 	subq $32, %rsp
 	callq compiler_typesystem_checker_ctors_to_info
 	movq %rbx, %rcx
@@ -6773,19 +7096,19 @@ compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	callq donna_list_append
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb741
-Lbb739:
+	jmp Lbb781
+Lbb779:
 	movq %rbx, %rcx
 	subq $32, %rsp
 	callq compiler_typesystem_checker_pub_type_defs_to_ctor_info
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb741:
+Lbb781:
 	movq %rax, (%rsi)
-	jmp Lbb743
-Lbb742:
+	jmp Lbb783
+Lbb782:
 	leaq donna_nil(%rip), %rax
-Lbb743:
+Lbb783:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -6809,7 +7132,7 @@ compiler_typesystem_checker_ctors_to_info:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb746
+	jz Lbb786
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	subq $16, %rsp
@@ -6846,10 +7169,10 @@ compiler_typesystem_checker_ctors_to_info:
 	movq %rbx, 8(%rax)
 	movq %rdi, 16(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb747
-Lbb746:
+	jmp Lbb787
+Lbb786:
 	leaq donna_nil(%rip), %rax
-Lbb747:
+Lbb787:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi

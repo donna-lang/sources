@@ -49,14 +49,14 @@ str60:
 
 .data
 .balign 8
-str70:
+str86:
 	.ascii "test_runner.donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str76:
+str94:
 	.ascii "donna.toml"
 	.byte 0
 /* end data */
@@ -69,105 +69,91 @@ donna_nil:
 
 .data
 .balign 8
-str106:
+str124:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str124:
+str142:
 	.ascii "scrubbed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str155:
+str173:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str158:
+str176:
 	.ascii "test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str177:
+str195:
 	.ascii "test_runner.ssa"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str180:
+str198:
 	.ascii "test_runner"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str222:
+str250:
 	.ascii "donna_test_runner"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str229:
+str257:
 	.ascii "-o"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str237:
+str265:
 	.ascii " >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str246:
+str274:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str248:
+str276:
 	.ascii ": linker failed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str250:
-	.ascii "command -v codesign >/dev/null 2>&1 && codesign --force -s - "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str252:
-	.ascii " >/dev/null 2>&1"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str255:
+str279:
 	.ascii "  Running tests..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str257:
+str281:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -175,35 +161,100 @@ str257:
 
 .data
 .balign 8
-str266:
+str290:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str267:
+str291:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str277:
-	.ascii "  hint: install QBE and make sure qbe is in PATH"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str279:
+str302:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str281:
+str304:
+	.ascii ": invalid test function name"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str306:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str315:
+	.ascii "  hint: public test functions must end with `_test`"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str322:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str326:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str330:
+	.ascii "error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str332:
+	.ascii ": no test functions found"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str334:
+	.ascii "  hint: add a public function named like `example_test` in test/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str337:
+	.ascii "  hint: install QBE and make sure qbe is in PATH"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str339:
+	.ascii "error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str341:
 	.ascii ": qbe not found"
 	.byte 10
 	.byte 0
@@ -211,21 +262,21 @@ str281:
 
 .data
 .balign 8
-str284:
+str344:
 	.ascii "  hint: install clang/gcc or Zig, or set DONNA_CC"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str286:
+str346:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str288:
+str348:
 	.ascii ": C compiler not found"
 	.byte 10
 	.byte 0
@@ -233,119 +284,154 @@ str288:
 
 .data
 .balign 8
-str292:
+str352:
 	.ascii "donna_stdlib"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str302:
+str362:
 	.ascii "self_alias_artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str305:
+str365:
 	.ascii "donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str347:
+str407:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str351:
+str411:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str353:
+str413:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str431:
+str491:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str447:
+str507:
 	.ascii "only"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str455:
+str515:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str480:
+str540:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str514:
+str574:
 	.ascii "uname | grep -q '^Darwin$' >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str522:
+str582:
 	.ascii "-Wl,-stack_size,0x2000000"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str526:
+str586:
 	.ascii "-lm"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str543:
+str591:
+	.ascii "uname | grep -q '^Darwin$' >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str599:
+	.ascii "command -v codesign >/dev/null 2>&1 && codesign --force -s - "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str601:
+	.ascii " >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str617:
+	.ascii "$main("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str619:
+	.ascii "$donna_program_main("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str627:
 	.ascii "export function w $main("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str544:
+str628:
 	.ascii "function w $__proj_main("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str546:
+str630:
 	.ascii "export function w $donna_program_main("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str547:
+str631:
 	.ascii "function w $__proj_main("
 	.byte 0
 /* end data */
@@ -452,7 +538,7 @@ cli_cmd_test_do_test:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
+	subq $24, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -460,25 +546,27 @@ cli_cmd_test_do_test:
 	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq %rdx, %r13
-	movq %r8, %rdx
-	movq %rcx, %rdi
-	subq $32, %rsp
 	movq %rdx, %rbx
+	movq %r8, %rdx
+	subq $32, %rsp
+	movq %rdx, %r13
 	leaq str41(%rip), %rdx
-	movq %rdi, %rcx
+	movq %rcx, %rsi
 	callq donna_files_join
-	movq %rax, %rcx
+	movq %rsi, %rcx
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
+	movq %rdi, %rcx
 	callq donna_files_is_dir
 	movq %rsi, %rcx
 	subq $-32, %rsp
 	cmpq $0, %rax
-	jz Lbb13
+	jz Lbb22
 	subq $32, %rsp
 	movq %rcx, %rsi
+	movq %rdi, %rcx
 	callq cli_cmd_test_find_donna_files
 	movq %rsi, %rcx
 	movq %rax, %r14
@@ -492,69 +580,125 @@ cli_cmd_test_do_test:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb12
+	jz Lbb20
 	subq $32, %rsp
+	movq %rcx, %rdi
 	movq %r14, %rcx
 	callq builder_tester_collect_test_modules
-	movq %rbx, %rdx
+	movq %rdi, %rcx
 	movq %rax, %r15
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %r15, %rcx
-	callq builder_tester_generate_filtered_runner
-	movq %rax, %r12
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %r13, %rcx
-	callq builder_scanner_project_build_dir
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rcx, %rbx
-	movq %r13, %rcx
-	callq builder_scanner_project_test_dir
-	movq %rbx, %rcx
-	movq %rax, %rbx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_files_mkdir
-	movq %rdi, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
 	movq %rcx, %rdi
-	movq %rbx, %rcx
-	callq donna_files_mkdir
-	movq %r12, %rdx
-	movq %rdi, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rdx, %r12
-	leaq str70(%rip), %rdx
-	movq %rcx, %rdi
-	movq %rbx, %rcx
-	callq donna_files_join
-	movq %r12, %rdx
+	movq %r14, %rcx
+	callq builder_tester_collect_invalid_public_test_functions
 	movq %rdi, %rcx
 	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %r12
 	movq %rdi, %rcx
+	callq donna_list_is_empty
+	movq %r12, %rcx
+	subq $-32, %rsp
+	subq $16, %rsp
+	movq %rsp, %r12
+	movq %r12, -16(%rbp)
+	cmpq $0, %rax
+	jz Lbb17
+	subq $32, %rsp
+	movq %rcx, %rdi
+	movq %r15, %rcx
+	callq builder_tester_count_total
+	movq %r13, %rdx
+	subq $-32, %rsp
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	subq $16, %rsp
+	movq %rsp, %r13
+	movq %r13, -8(%rbp)
+	cmpq $1, %rax
+	jz Lbb14
+	subq $32, %rsp
+	movq %r15, %rcx
+	callq builder_tester_generate_filtered_runner
+	movq %rax, %r12
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rbx, %rcx
+	callq builder_scanner_project_build_dir
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rcx, %r13
+	movq %rbx, %rcx
+	callq builder_scanner_project_test_dir
+	movq %r13, %rcx
+	movq %rax, %r13
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_files_mkdir
+	movq %rdi, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rcx, %rdi
+	movq %r13, %rcx
+	callq donna_files_mkdir
+	movq %r12, %rdx
+	movq %rdi, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rdx, %r12
+	leaq str86(%rip), %rdx
+	movq %rcx, %rdi
+	movq %r13, %rcx
+	callq donna_files_join
+	movq %r12, %rdx
+	movq %rdi, %rcx
+	movq %rax, %r12
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rcx, %rdi
+	movq %r12, %rcx
 	callq donna_files_write
 	movq %r15, %r9
 	movq %r14, %r8
-	movq %r13, %rdx
-	movq %r12, %rcx
+	movq %rbx, %rdx
+	movq %rdi, %rcx
+	movq -8(%rbp), %rbx
+	movq -16(%rbp), %rdi
 	subq $-32, %rsp
 	subq $48, %rsp
 	movq %rsp, %rax
-	movq %rbx, 40(%rax)
-	movq %rdi, 32(%rax)
+	movq %r13, 40(%rax)
+	movq %r12, 32(%rax)
 	callq cli_cmd_test_build_and_run
 	subq $-48, %rsp
+	movq %rax, (%rbx)
+	jmp Lbb16
+Lbb14:
+	movq %r13, %rbx
+	movq %r12, %rdi
+	subq $32, %rsp
+	callq cli_cmd_test_no_tests_error
+	subq $-32, %rsp
+	movq %rax, (%rbx)
+Lbb16:
+	movq %rax, (%rdi)
+	jmp Lbb19
+Lbb17:
+	movq %rdi, %rcx
+	movq %r12, %rdi
+	subq $32, %rsp
+	callq cli_cmd_test_invalid_test_names_error
+	subq $-32, %rsp
+	movq %rax, (%rdi)
+Lbb19:
 	movq %rax, (%rsi)
-	jmp Lbb15
-Lbb12:
+	jmp Lbb23
+Lbb20:
+	movq %rdi, %rcx
 	subq $32, %rsp
 	movq %rcx, %rdi
 	leaq str60(%rip), %rcx
@@ -571,9 +715,8 @@ Lbb12:
 	callq __rt_str_concat
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb15
-Lbb13:
-	movq %rdi, %rcx
+	jmp Lbb23
+Lbb22:
 	subq $32, %rsp
 	movq %rcx, %rsi
 	leaq str49(%rip), %rcx
@@ -589,9 +732,9 @@ Lbb13:
 	subq $32, %rsp
 	callq __rt_str_concat
 	subq $-32, %rsp
-Lbb15:
+Lbb23:
 	movq %rbp, %rsp
-	subq $64, %rsp
+	subq $80, %rsp
 	popq %rdi
 	popq %rsi
 	popq %r15
@@ -624,7 +767,7 @@ cli_cmd_test_build_and_run:
 	movq %rdx, %rsi
 	movq %rcx, %rbx
 	subq $32, %rsp
-	leaq str76(%rip), %rdx
+	leaq str94(%rip), %rdx
 	movq %rbx, %rcx
 	callq donna_files_join
 	movq %rax, %rcx
@@ -693,6 +836,7 @@ cli_cmd_test_build_and_run:
 	leaq donna_nil(%rip), %r8
 	movq %rdx, %rdi
 	callq cli_cmd_test_compile_deps
+	movq %rbx, %r8
 	movq %rdi, %rdx
 	movq %rsi, %rcx
 	subq $-48, %rsp
@@ -702,13 +846,14 @@ cli_cmd_test_build_and_run:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb43
+	jnz Lbb54
 	movq 8(%rax), %rax
 	movq (%rax), %r14
 	movq 8(%rax), %rsi
 	movq %rsi, -56(%rbp)
-	movq 16(%rax), %rsi
-	movq %rsi, -48(%rbp)
+	movq %r8, %rbx
+	movq 16(%rax), %r8
+	movq %r8, -120(%rbp)
 	movq 24(%rax), %rsi
 	subq $32, %rsp
 	movq %rcx, %rdi
@@ -722,7 +867,7 @@ cli_cmd_test_build_and_run:
 	movq %rsi, 32(%rax)
 	movq %r14, %r9
 	movq %rdx, %rdi
-	leaq str106(%rip), %rdx
+	leaq str124(%rip), %rdx
 	movq %rcx, %rsi
 	movq %rdi, %rcx
 	callq builder_pipeline_compile_dir
@@ -737,14 +882,14 @@ cli_cmd_test_build_and_run:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb42
+	jnz Lbb53
 	movq 8(%rax), %rax
 	movq (%rax), %rdi
 	movq %rdi, -40(%rbp)
 	movq 8(%rax), %rax
 	movq %rax, -8(%rbp)
 	subq $32, %rsp
-	leaq str124(%rip), %rdx
+	leaq str142(%rip), %rdx
 	movq %rcx, %rdi
 	movq %r15, %rcx
 	callq donna_files_join
@@ -766,7 +911,7 @@ cli_cmd_test_build_and_run:
 	callq cli_cmd_test_scrub_main_from_ssa
 	movq %r12, %rdx
 	movq %rdi, %rcx
-	movq %rax, -112(%rbp)
+	movq %rax, -48(%rbp)
 	movq -24(%rbp), %rdi
 	movq -32(%rbp), %r12
 	subq $-32, %rsp
@@ -808,20 +953,20 @@ cli_cmd_test_build_and_run:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb40
+	jnz Lbb51
 	movq 8(%rax), %rax
 	movq (%rax), %rdx
 	movq 8(%rax), %r8
 	movq %r8, -96(%rbp)
 	movq 16(%rax), %r13
-	movq %r13, -128(%rbp)
+	movq %r13, -112(%rbp)
 	subq $32, %rsp
 	callq donna_list_append
 	movq %rbx, %rcx
 	movq %rax, %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str155(%rip), %rdx
+	leaq str173(%rip), %rdx
 	movq %rcx, %r13
 	movq %r15, %rcx
 	callq donna_files_join
@@ -839,7 +984,7 @@ cli_cmd_test_build_and_run:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rbx, %r9
-	leaq str158(%rip), %rdx
+	leaq str176(%rip), %rdx
 	callq builder_pipeline_compile_file_list
 	movq %rbx, %rcx
 	subq $-32, %rsp
@@ -850,7 +995,7 @@ cli_cmd_test_build_and_run:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb38
+	jnz Lbb49
 	movq 8(%rax), %rax
 	movq (%rax), %rdx
 	movq 8(%rax), %rax
@@ -861,7 +1006,7 @@ cli_cmd_test_build_and_run:
 	movq %rax, -64(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str177(%rip), %rdx
+	leaq str195(%rip), %rdx
 	movq %rcx, %r12
 	movq %r15, %rcx
 	callq donna_files_join
@@ -877,7 +1022,7 @@ cli_cmd_test_build_and_run:
 	movq %rsp, %rax
 	movq $1, 32(%rax)
 	movq %r15, %r8
-	leaq str180(%rip), %rdx
+	leaq str198(%rip), %rdx
 	callq builder_pipeline_compile_module
 	movq %r12, %rcx
 	subq $-48, %rsp
@@ -888,22 +1033,22 @@ cli_cmd_test_build_and_run:
 	setz %dl
 	movzbq %dl, %rdx
 	cmpl $0, %edx
-	jnz Lbb36
+	jnz Lbb47
 	movq 8(%rax), %rax
 	movq 8(%rax), %rax
 	movq %rax, -88(%rbp)
 	subq $32, %rsp
 	callq donna_list_reverse
-	movq %r13, %rcx
+	movq %r14, %rcx
 	movq %rax, -80(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rcx, %r13
+	movq %rcx, %r14
 	movl $24, %ecx
 	callq malloc
-	movq %r13, %rcx
+	movq %r14, %rcx
 	movq %rax, %rdx
-	movq %rcx, %r13
+	movq %rcx, %r14
 	movq -80(%rbp), %rcx
 	movq -88(%rbp), %rax
 	subq $-32, %rsp
@@ -913,33 +1058,31 @@ cli_cmd_test_build_and_run:
 	movq %rax, 16(%rdx)
 	subq $32, %rsp
 	callq donna_list_append
-	movq %r13, %rcx
+	movq %r14, %rcx
 	movq %rax, %rdx
-	movq %rcx, %r13
+	movq %rcx, %r14
 	movq -96(%rbp), %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_list_append
-	movq %r13, %rcx
+	movq %r14, %rcx
 	movq %rax, %rdx
-	movq %rcx, %r13
+	movq %rcx, %r14
 	movq -104(%rbp), %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_list_append
-	movq %r13, %rcx
-	movq %rax, %rdx
-	movq %rcx, %r13
-	movq -112(%rbp), %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_list_append
-	movq %r13, %rcx
+	movq %r14, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_list_append
-	movq %rax, -120(%rbp)
+	movq %r13, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_list_append
+	movq %rax, %r14
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq builder_pipeline_qbe_available
@@ -947,30 +1090,37 @@ cli_cmd_test_build_and_run:
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $0, %rax
-	jz Lbb34
+	jz Lbb45
 	subq $32, %rsp
 	callq builder_pipeline_c_compiler_available
 	movq %r14, %rcx
-	movq %rax, %rdx
-	movq -120(%rbp), %rax
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %r14
-	movq %r14, -144(%rbp)
-	cmpq $0, %rdx
-	jz Lbb32
-	movq %rcx, %r14
-	movq %rax, %rcx
+	movq %r14, -136(%rbp)
+	cmpq $0, %rax
+	jz Lbb43
 	subq $32, %rsp
-	leaq donna_nil(%rip), %rdx
-	callq builder_pipeline_run_qbe_all
+	callq builder_pipeline_run_qbe_all_checked
 	movq %r15, %rcx
-	movq %rax, -160(%rbp)
-	movq -128(%rbp), %rdx
+	movq -112(%rbp), %rdx
+	movq -120(%rbp), %r8
 	subq $-32, %rsp
+	subq $16, %rsp
+	movq %rsp, %r15
+	movq %r15, -160(%rbp)
+	movq (%rax), %r9
+	cmpq $1, %r9
+	setz %r9b
+	movzbq %r9b, %r9
+	cmpl $0, %r9d
+	jnz Lbb41
+	movq %r8, %r14
+	movq 8(%rax), %rax
+	movq %rax, -152(%rbp)
 	subq $32, %rsp
 	movq %rdx, %r15
-	leaq str222(%rip), %rdx
+	leaq str250(%rip), %rdx
 	callq donna_files_join
 	movq %r15, %rdx
 	movq %r14, %rcx
@@ -978,12 +1128,12 @@ cli_cmd_test_build_and_run:
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_list_append
-	movq %rax, -152(%rbp)
+	movq %rax, -144(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq cli_cmd_test_linker_flags
 	movq %r14, %rcx
-	movq %rax, -136(%rbp)
+	movq %rax, -128(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %r14
@@ -1003,12 +1153,12 @@ cli_cmd_test_build_and_run:
 	movq %r15, %rcx
 	movq %rax, %rdx
 	movq %r14, %rax
-	movq -144(%rbp), %r14
+	movq -136(%rbp), %r14
 	movq %rcx, %r15
-	movq -136(%rbp), %rcx
+	movq -128(%rbp), %rcx
 	subq $-32, %rsp
 	movq $1, (%rdx)
-	leaq str229(%rip), %r8
+	leaq str257(%rip), %r8
 	movq %r8, 8(%rdx)
 	movq %rax, 16(%rdx)
 	subq $32, %rsp
@@ -1016,14 +1166,14 @@ cli_cmd_test_build_and_run:
 	movq %r15, %rcx
 	movq %rax, %rdx
 	movq %rcx, %r15
-	movq -152(%rbp), %rcx
+	movq -144(%rbp), %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_list_append
 	movq %r15, %rcx
 	movq %rax, %rdx
 	movq %rcx, %r15
-	movq -160(%rbp), %rcx
+	movq -152(%rbp), %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_list_append
@@ -1034,139 +1184,138 @@ cli_cmd_test_build_and_run:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str237(%rip), %rdx
+	leaq str265(%rip), %rdx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_shell_run
 	movq %r15, %rcx
+	movq -160(%rbp), %r15
 	subq $-32, %rsp
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
-	movq %rsp, %r15
-	movq %r15, -168(%rbp)
+	movq %rsp, %rdx
+	movq %rdx, -176(%rbp)
 	cmpq $0, %rax
-	jz Lbb30
+	jz Lbb39
 	subq $32, %rsp
-	movq %rcx, %rdx
 	movq %rcx, %r15
-	leaq str250(%rip), %rcx
-	callq __rt_str_concat
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str252(%rip), %rdx
-	callq __rt_str_concat
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_shell_run
+	callq cli_cmd_test_maybe_codesign
 	movq %r15, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %r15
-	leaq str255(%rip), %rcx
+	leaq str279(%rip), %rcx
 	callq utilities_colors_dim
 	movq %r15, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %r15
-	leaq str257(%rip), %rcx
+	leaq str281(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_shell_flush
 	movq %r15, %rcx
-	movq -168(%rbp), %r15
+	movq -160(%rbp), %r15
 	subq $-32, %rsp
 	subq $32, %rsp
 	leaq donna_nil(%rip), %rdx
 	callq donna_shell_exec
 	movq %rax, %rcx
+	movq -176(%rbp), %rax
 	subq $-32, %rsp
 	cmpq $0, %rcx
-	setz %dl
-	movzbq %dl, %rdx
+	setz %r8b
+	movzbq %r8b, %r8
 	subq $16, %rsp
-	movq %rsp, %rax
-	movq %rax, -176(%rbp)
-	cmpq $1, %rdx
-	jz Lbb27
+	movq %rsp, %rdx
+	movq %rdx, -168(%rbp)
+	cmpq $1, %r8
+	jz Lbb36
 	subq $32, %rsp
 	callq exit
+	movq -168(%rbp), %rdx
 	movq -176(%rbp), %rcx
 	subq $-32, %rsp
-	leaq str267(%rip), %rax
-	movq %rax, (%rcx)
-	leaq str267(%rip), %rax
-	jmp Lbb29
-Lbb27:
+	leaq str291(%rip), %rax
+	movq %rax, (%rdx)
+	leaq str291(%rip), %rax
+	jmp Lbb38
+Lbb36:
 	movq %rax, %rcx
-	leaq str266(%rip), %rax
+	leaq str290(%rip), %rax
+	movq %rax, (%rdx)
+	leaq str290(%rip), %rax
+Lbb38:
 	movq %rax, (%rcx)
-	leaq str266(%rip), %rax
-Lbb29:
-	movq %rax, (%r15)
-	jmp Lbb31
-Lbb30:
+	jmp Lbb40
+Lbb39:
 	subq $32, %rsp
-	leaq str246(%rip), %rcx
+	leaq str274(%rip), %rcx
 	callq utilities_colors_red
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str248(%rip), %rdx
+	leaq str276(%rip), %rdx
 	callq __rt_str_concat
+	movq -176(%rbp), %rcx
 	subq $-32, %rsp
+	movq %rax, (%rcx)
+Lbb40:
 	movq %rax, (%r15)
-Lbb31:
+	jmp Lbb42
+Lbb41:
+	movq 8(%rax), %rax
+	movq %rax, (%r15)
+Lbb42:
 	movq %rax, (%r14)
-	jmp Lbb33
-Lbb32:
+	jmp Lbb44
+Lbb43:
 	subq $32, %rsp
 	callq cli_cmd_test_c_compiler_missing_error
 	subq $-32, %rsp
 	movq %rax, (%r14)
-Lbb33:
+Lbb44:
 	movq %rax, (%r13)
-	jmp Lbb35
-Lbb34:
+	jmp Lbb46
+Lbb45:
 	subq $32, %rsp
 	callq cli_cmd_test_qbe_missing_error
 	subq $-32, %rsp
 	movq %rax, (%r13)
-Lbb35:
+Lbb46:
 	movq %rax, (%r12)
-	jmp Lbb37
-Lbb36:
+	jmp Lbb48
+Lbb47:
 	movq 8(%rax), %rax
 	movq %rax, (%r12)
-Lbb37:
+Lbb48:
 	movq %rax, (%rbx)
-	jmp Lbb39
-Lbb38:
+	jmp Lbb50
+Lbb49:
 	movq 8(%rax), %rax
 	movq %rax, (%rbx)
-Lbb39:
+Lbb50:
 	movq %rax, (%rdi)
-	jmp Lbb41
-Lbb40:
+	jmp Lbb52
+Lbb51:
 	movq 8(%rax), %rax
 	movq %rax, (%rdi)
-Lbb41:
+Lbb52:
 	movq %rax, (%rsi)
-	jmp Lbb44
-Lbb42:
+	jmp Lbb55
+Lbb53:
 	movq 8(%rax), %rax
 	movq %rax, (%rsi)
-	jmp Lbb44
-Lbb43:
+	jmp Lbb55
+Lbb54:
 	movq 8(%rax), %rax
-Lbb44:
+Lbb55:
 	movq %rbp, %rsp
 	subq $240, %rsp
 	popq %rdi
@@ -1182,6 +1331,131 @@ Lbb44:
 
 .text
 .balign 16
+cli_cmd_test_invalid_test_names_error:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
+	subq $32, %rsp
+	movq %rcx, %rsi
+	leaq str302(%rip), %rcx
+	callq utilities_colors_red
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str304(%rip), %rdx
+	callq __rt_str_concat
+	movq %rsi, %rcx
+	movq %rax, %rsi
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str306(%rip), %rdx
+	callq cli_cmd_test_invalid_test_lines
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	subq $-32, %rsp
+	popq %rsi
+	leave
+	ret
+/* end function cli_cmd_test_invalid_test_names_error */
+
+.text
+.balign 16
+cli_cmd_test_invalid_test_lines:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	pushq %rsi
+	pushq %rdi
+	movq %rcx, %rax
+	movq %rdx, %rcx
+	movq (%rax), %rdx
+	cmpq $0, %rdx
+	jz Lbb60
+	movq 8(%rax), %rdi
+	movq 16(%rax), %rsi
+	subq $32, %rsp
+	leaq str322(%rip), %rdx
+	callq __rt_str_concat
+	movq %rdi, %rcx
+	movq %rax, %rdi
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq utilities_colors_path
+	movq %rdi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str326(%rip), %rdx
+	callq __rt_str_concat
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq cli_cmd_test_invalid_test_lines
+	subq $-32, %rsp
+	jmp Lbb61
+Lbb60:
+	subq $32, %rsp
+	movq %rcx, %rsi
+	leaq str315(%rip), %rcx
+	callq utilities_colors_dim
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	subq $-32, %rsp
+Lbb61:
+	popq %rdi
+	popq %rsi
+	leave
+	ret
+/* end function cli_cmd_test_invalid_test_lines */
+
+.text
+.balign 16
+cli_cmd_test_no_tests_error:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
+	subq $32, %rsp
+	leaq str330(%rip), %rcx
+	callq utilities_colors_red
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str332(%rip), %rdx
+	callq __rt_str_concat
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rcx, %rsi
+	leaq str334(%rip), %rcx
+	callq utilities_colors_dim
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	subq $-32, %rsp
+	popq %rsi
+	leave
+	ret
+/* end function cli_cmd_test_no_tests_error */
+
+.text
+.balign 16
 cli_cmd_test_qbe_missing_error:
 	endbr64
 	pushq %rbp
@@ -1189,19 +1463,19 @@ cli_cmd_test_qbe_missing_error:
 	subq $8, %rsp
 	pushq %rsi
 	subq $32, %rsp
-	leaq str277(%rip), %rcx
+	leaq str337(%rip), %rcx
 	callq utilities_colors_dim
 	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str279(%rip), %rcx
+	leaq str339(%rip), %rcx
 	callq utilities_colors_red
 	movq %rsi, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str281(%rip), %rdx
+	leaq str341(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -1223,19 +1497,19 @@ cli_cmd_test_c_compiler_missing_error:
 	subq $8, %rsp
 	pushq %rsi
 	subq $32, %rsp
-	leaq str284(%rip), %rcx
+	leaq str344(%rip), %rcx
 	callq utilities_colors_dim
 	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str286(%rip), %rcx
+	leaq str346(%rip), %rcx
 	callq utilities_colors_red
 	movq %rsi, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str288(%rip), %rdx
+	leaq str348(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -1266,14 +1540,14 @@ cli_cmd_test_compile_self_alias:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str292(%rip), %rdx
+	leaq str352(%rip), %rdx
 	callq donna_string_equal
 	movq %rdi, %rcx
 	subq $-32, %rsp
 	cmpq $0, %rax
-	jz Lbb53
+	jz Lbb72
 	subq $32, %rsp
-	leaq str302(%rip), %rdx
+	leaq str362(%rip), %rdx
 	callq donna_files_join
 	movq %rsi, %rcx
 	movq %rax, %rdi
@@ -1289,14 +1563,14 @@ cli_cmd_test_compile_self_alias:
 	subq $48, %rsp
 	movq %rsp, %rax
 	movq $0, 32(%rax)
-	leaq str305(%rip), %rdx
+	leaq str365(%rip), %rdx
 	callq builder_pipeline_compile_dir
 	subq $-48, %rsp
 	subq $16, %rsp
 	movq %rsp, %rsi
 	movq (%rax), %rcx
 	cmpq $1, %rcx
-	jz Lbb52
+	jz Lbb71
 	movq 8(%rax), %rax
 	movq (%rax), %rbx
 	movq 8(%rax), %rdi
@@ -1307,8 +1581,8 @@ cli_cmd_test_compile_self_alias:
 	movq %rbx, (%rax)
 	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb54
-Lbb52:
+	jmp Lbb73
+Lbb71:
 	subq $32, %rsp
 	movl $16, %ecx
 	callq malloc
@@ -1318,8 +1592,8 @@ Lbb52:
 	leaq donna_nil(%rip), %rcx
 	movq %rcx, 8(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb54
-Lbb53:
+	jmp Lbb73
+Lbb72:
 	subq $32, %rsp
 	movl $16, %ecx
 	callq malloc
@@ -1328,7 +1602,7 @@ Lbb53:
 	movq %rcx, (%rax)
 	leaq donna_nil(%rip), %rcx
 	movq %rcx, 8(%rax)
-Lbb54:
+Lbb73:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -1359,12 +1633,12 @@ cli_cmd_test_compile_deps:
 	movq %rcx, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb66
+	jz Lbb85
 	movq 8(%rax), %r14
 	movq 16(%rax), %r13
 	movq %r13, -8(%rbp)
 	subq $32, %rsp
-	leaq str347(%rip), %rdx
+	leaq str407(%rip), %rdx
 	movq %rbx, %rcx
 	callq donna_files_join
 	movq %rax, %rcx
@@ -1381,7 +1655,7 @@ cli_cmd_test_compile_deps:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str351(%rip), %rdx
+	leaq str411(%rip), %rdx
 	movq %rcx, %r13
 	callq donna_files_join
 	movq %r13, %rcx
@@ -1389,7 +1663,7 @@ cli_cmd_test_compile_deps:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %r15
-	leaq str353(%rip), %rdx
+	leaq str413(%rip), %rdx
 	movq %rcx, %r13
 	movq %rbx, %rcx
 	callq donna_files_join
@@ -1441,7 +1715,7 @@ cli_cmd_test_compile_deps:
 	setz %r8b
 	movzbq %r8b, %r8
 	cmpl $0, %r8d
-	jnz Lbb65
+	jnz Lbb84
 	movq 8(%rax), %rax
 	movq (%rax), %r15
 	movq %r15, -24(%rbp)
@@ -1504,7 +1778,7 @@ cli_cmd_test_compile_deps:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz Lbb63
+	jnz Lbb82
 	movq 8(%rax), %rax
 	movq (%rax), %r14
 	movq 8(%rax), %r13
@@ -1513,13 +1787,13 @@ cli_cmd_test_compile_deps:
 	subq $16, %rsp
 	movq %rsp, %rax
 	cmpq $1, %r15
-	jz Lbb60
+	jz Lbb79
 	movq %rbx, (%rax)
-	jmp Lbb62
-Lbb60:
+	jmp Lbb81
+Lbb79:
 	movq $1, (%rax)
 	movl $1, %ebx
-Lbb62:
+Lbb81:
 	subq $32, %rsp
 	movl $32, %ecx
 	callq malloc
@@ -1533,24 +1807,24 @@ Lbb62:
 	callq donna_result_Ok
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb64
-Lbb63:
+	jmp Lbb83
+Lbb82:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-Lbb64:
+Lbb83:
 	movq %rax, (%rsi)
-	jmp Lbb68
-Lbb65:
+	jmp Lbb87
+Lbb84:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	callq donna_result_Error
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb68
-Lbb66:
+	jmp Lbb87
+Lbb85:
 	movq %r12, %rbx
 	subq $32, %rsp
 	movl $32, %ecx
@@ -1564,7 +1838,7 @@ Lbb66:
 	subq $32, %rsp
 	callq donna_result_Ok
 	subq $-32, %rsp
-Lbb68:
+Lbb87:
 	movq %rbp, %rsp
 	subq $112, %rsp
 	popq %rdi
@@ -1617,12 +1891,12 @@ cli_cmd_test_collect_donna:
 	movq %r8, %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb76
+	jz Lbb95
 	movq 8(%rcx), %rbx
 	movq 16(%rcx), %rcx
 	subq $32, %rsp
 	movq %rdx, %r12
-	leaq str431(%rip), %rdx
+	leaq str491(%rip), %rdx
 	movq %rcx, %rsi
 	movq %rbx, %rcx
 	callq donna_string_ends_with
@@ -1632,15 +1906,15 @@ cli_cmd_test_collect_donna:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb74
+	jz Lbb93
 	subq $32, %rsp
 	movq %rdi, %r8
 	movq %rdx, %r13
 	callq cli_cmd_test_collect_donna
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb78
-Lbb74:
+	jmp Lbb97
+Lbb93:
 	movq %rdx, %r13
 	movq %rbx, %rdx
 	subq $32, %rsp
@@ -1665,13 +1939,13 @@ Lbb74:
 	callq cli_cmd_test_collect_donna
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb78
-Lbb76:
+	jmp Lbb97
+Lbb95:
 	movq %rdi, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb78:
+Lbb97:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -1702,13 +1976,13 @@ cli_cmd_test_parse_test_args:
 	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str447(%rip), %rdx
+	leaq str507(%rip), %rdx
 	callq argparse_argparse_get
 	movq %rax, %rsi
 	subq $-32, %rsp
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb84
+	jz Lbb103
 	movq 8(%rdi), %rbx
 	movq 16(%rdi), %r13
 	subq $32, %rsp
@@ -1719,7 +1993,7 @@ cli_cmd_test_parse_test_args:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb82
+	jz Lbb101
 	subq $32, %rsp
 	movl $24, %ecx
 	callq malloc
@@ -1737,12 +2011,12 @@ cli_cmd_test_parse_test_args:
 	movl $16, %ecx
 	callq malloc
 	subq $-32, %rsp
-	leaq str480(%rip), %rcx
+	leaq str540(%rip), %rcx
 	movq %rcx, (%rax)
 	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb85
-Lbb82:
+	jmp Lbb104
+Lbb101:
 	movq %r13, %rdi
 	subq $32, %rsp
 	movl $24, %ecx
@@ -1764,8 +2038,8 @@ Lbb82:
 	movq %rbx, (%rax)
 	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb85
-Lbb84:
+	jmp Lbb104
+Lbb103:
 	subq $32, %rsp
 	movl $24, %ecx
 	callq malloc
@@ -1784,10 +2058,10 @@ Lbb84:
 	movl $16, %ecx
 	callq malloc
 	subq $-32, %rsp
-	leaq str455(%rip), %rcx
+	leaq str515(%rip), %rcx
 	movq %rcx, (%rax)
 	movq %rsi, 8(%rax)
-Lbb85:
+Lbb104:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -1812,7 +2086,7 @@ cli_cmd_test_filter_values:
 	movq %rdx, %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb90
+	jz Lbb109
 	movq 8(%rcx), %rbx
 	movq 16(%rcx), %rcx
 	subq $32, %rsp
@@ -1824,7 +2098,7 @@ cli_cmd_test_filter_values:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb89
+	jz Lbb108
 	subq $32, %rsp
 	movq %rcx, %r12
 	movl $24, %ecx
@@ -1839,20 +2113,20 @@ cli_cmd_test_filter_values:
 	callq cli_cmd_test_filter_values
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb92
-Lbb89:
+	jmp Lbb111
+Lbb108:
 	subq $32, %rsp
 	movq %rdi, %rdx
 	callq cli_cmd_test_filter_values
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb92
-Lbb90:
+	jmp Lbb111
+Lbb109:
 	movq %rdi, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb92:
+Lbb111:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -1870,38 +2144,79 @@ cli_cmd_test_linker_flags:
 	pushq %rbp
 	movq %rsp, %rbp
 	subq $32, %rsp
-	leaq str514(%rip), %rcx
+	leaq str574(%rip), %rcx
 	callq donna_shell_run
 	subq $-32, %rsp
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb95
+	jz Lbb114
 	subq $32, %rsp
 	movl $24, %ecx
 	callq malloc
 	subq $-32, %rsp
 	movq $1, (%rax)
-	leaq str526(%rip), %rcx
+	leaq str586(%rip), %rcx
 	movq %rcx, 8(%rax)
 	leaq donna_nil(%rip), %rcx
 	movq %rcx, 16(%rax)
-	jmp Lbb96
-Lbb95:
+	jmp Lbb115
+Lbb114:
 	subq $32, %rsp
 	movl $24, %ecx
 	callq malloc
 	subq $-32, %rsp
 	movq $1, (%rax)
-	leaq str522(%rip), %rcx
+	leaq str582(%rip), %rcx
 	movq %rcx, 8(%rax)
 	leaq donna_nil(%rip), %rcx
 	movq %rcx, 16(%rax)
-Lbb96:
+Lbb115:
 	leave
 	ret
 /* end function cli_cmd_test_linker_flags */
+
+.text
+.balign 16
+cli_cmd_test_maybe_codesign:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
+	movq %rcx, %rsi
+	subq $32, %rsp
+	leaq str591(%rip), %rcx
+	callq donna_shell_run
+	movq %rsi, %rdx
+	subq $-32, %rsp
+	cmpq $0, %rax
+	setz %al
+	movzbq %al, %rax
+	cmpq $0, %rax
+	jz Lbb118
+	subq $32, %rsp
+	leaq str599(%rip), %rcx
+	callq __rt_str_concat
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str601(%rip), %rdx
+	callq __rt_str_concat
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_shell_run
+	subq $-32, %rsp
+	jmp Lbb119
+Lbb118:
+	movl $0, %eax
+Lbb119:
+	popq %rsi
+	leave
+	ret
+/* end function cli_cmd_test_maybe_codesign */
 
 .text
 .balign 16
@@ -1911,6 +2226,8 @@ cli_cmd_test_scrub_main_from_ssa:
 	movq %rsp, %rbp
 	pushq %rbx
 	pushq %r12
+	pushq %r13
+	pushq %r14
 	pushq %rsi
 	pushq %rdi
 	movq %rdx, %r12
@@ -1919,27 +2236,63 @@ cli_cmd_test_scrub_main_from_ssa:
 	movq %rcx, %rsi
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb99
+	jz Lbb125
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rdi
 	subq $32, %rsp
 	movq %rcx, %rbx
 	callq donna_files_read
-	movq %rax, %rcx
+	movq %rbx, %rcx
+	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str544(%rip), %r8
-	leaq str543(%rip), %rdx
-	callq donna_string_replace
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str547(%rip), %r8
-	leaq str546(%rip), %rdx
-	callq donna_string_replace
+	movq %rdx, %r13
+	leaq str617(%rip), %rdx
+	movq %rcx, %rbx
+	movq %r13, %rcx
+	callq donna_string_contains
+	movq %r13, %rdx
 	movq %rbx, %rcx
 	movq %rax, %rbx
 	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rdx, %r14
+	leaq str619(%rip), %rdx
+	movq %rcx, %r13
+	movq %r14, %rcx
+	callq donna_string_contains
+	movq %r14, %rdx
+	movq %r13, %rcx
+	subq $-32, %rsp
+	orq %rbx, %rax
+	subq $16, %rsp
+	movq %rsp, %rbx
+	cmpq $0, %rax
+	jz Lbb123
+	subq $32, %rsp
+	leaq str628(%rip), %r8
+	movq %rdx, %r14
+	leaq str627(%rip), %rdx
+	movq %rcx, %r13
+	movq %r14, %rcx
+	callq donna_string_replace
+	movq %r12, %rdx
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str631(%rip), %r8
+	movq %rdx, %r12
+	leaq str630(%rip), %rdx
+	callq donna_string_replace
+	movq %r13, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	movq %rdx, (%rbx)
+	jmp Lbb124
+Lbb123:
+	movq %rdx, (%rbx)
+Lbb124:
+	movq %rdx, %rbx
 	subq $32, %rsp
 	callq donna_files_basename
 	movq %rdi, %rcx
@@ -1973,15 +2326,19 @@ cli_cmd_test_scrub_main_from_ssa:
 	subq $32, %rsp
 	callq cli_cmd_test_scrub_main_from_ssa
 	subq $-32, %rsp
-	jmp Lbb101
-Lbb99:
+	jmp Lbb127
+Lbb125:
 	movq %rsi, %rcx
 	subq $32, %rsp
 	callq donna_list_reverse
 	subq $-32, %rsp
-Lbb101:
+Lbb127:
+	movq %rbp, %rsp
+	subq $48, %rsp
 	popq %rdi
 	popq %rsi
+	popq %r14
+	popq %r13
 	popq %r12
 	popq %rbx
 	leave

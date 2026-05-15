@@ -146,252 +146,441 @@ str223:
 
 .data
 .balign 8
-str260:
+str262:
 	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str269:
+str271:
 	.ascii "tag"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str277:
+str279:
 	.ascii "branch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str285:
+str287:
 	.ascii "rev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str291:
+str293:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str295:
+str297:
 	.ascii "--sort=-v:refname"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str299:
+str301:
 	.ascii "--tags"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str303:
+str305:
 	.ascii "ls-remote"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str308:
+str310:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str317:
+str319:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str322:
+str324:
 	.byte 9
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str337:
+str339:
 	.ascii "^{}"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str345:
+str347:
 	.ascii "refs/tags/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str385:
+str387:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str392:
+str394:
 	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str396:
+str398:
 	.ascii "--depth"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str400:
+str402:
 	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str405:
+str407:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str415:
+str417:
 	.ascii "--branch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str419:
+str421:
 	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str423:
+str425:
 	.ascii "--depth"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str427:
+str429:
 	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str438:
+str440:
 	.ascii "rm -rf "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str441:
+str443:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str448:
+str450:
 	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str459:
+str461:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str463:
+str465:
 	.ascii "checkout"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str470:
+str472:
 	.ascii "-C"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str478:
-	.ascii "HOME"
+str487:
+	.ascii "rm -rf "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str480:
-	.ascii ".donna"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str482:
-	.ascii "packages"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str484:
+str491:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str485:
-	.ascii "HEAD"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str489:
-	.ascii "rev-parse"
+str492:
+	.ascii "origin"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str496:
+	.ascii "--prune"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str500:
+	.ascii "--force"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str504:
+	.ascii "--tags"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str508:
+	.ascii "fetch"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str515:
 	.ascii "-C"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str511:
+str526:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str527:
+	.ascii "--ff-only"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str531:
+	.ascii "pull"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str538:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str546:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str550:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str557:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str568:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str572:
+	.ascii "origin"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str576:
+	.ascii "fetch"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str583:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str588:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str592:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str599:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str605:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str606:
+	.ascii "remote.origin.url"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str610:
+	.ascii "--get"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str614:
+	.ascii "config"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str621:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str627:
+	.ascii "HOME"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str629:
+	.ascii ".donna"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str631:
+	.ascii "packages"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str633:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str634:
+	.ascii "HEAD"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str638:
+	.ascii "rev-parse"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str645:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str660:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -1039,6 +1228,18 @@ builder_dependencies_resolve_git_dep:
 	b	.L49
 .L43:
 	mov	x20, x0
+	mov	x0, x21
+	bl	builder_dependencies_pick_ref
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x20
+	mov	x22, x1
+	mov	x1, x21
+	mov	x20, x0
+	mov	x0, x22
+	bl	builder_dependencies_refresh_cached_dep
+	mov	x0, x20
+	mov	x20, x0
 	mov	x0, x22
 	bl	builder_dependencies_head_sha
 	mov	x1, x22
@@ -1333,8 +1534,8 @@ builder_dependencies_pick_ref:
 	str	x21, [x29, 24]
 	mov	x19, x0
 	mov	x0, x1
-	adrp	x1, str260
-	add	x1, x1, #:lo12:str260
+	adrp	x1, str262
+	add	x1, x1, #:lo12:str262
 	mov	x20, x0
 	bl	builder_dependencies_opt_string
 	mov	x21, x0
@@ -1347,8 +1548,8 @@ builder_dependencies_pick_ref:
 	mov	x0, x20
 	cmp	x2, #0
 	beq	.L59
-	adrp	x1, str269
-	add	x1, x1, #:lo12:str269
+	adrp	x1, str271
+	add	x1, x1, #:lo12:str271
 	mov	x19, x0
 	bl	builder_dependencies_opt_string
 	mov	x20, x0
@@ -1363,8 +1564,8 @@ builder_dependencies_pick_ref:
 	mov	x19, sp
 	cmp	x1, #0
 	beq	.L57
-	adrp	x1, str277
-	add	x1, x1, #:lo12:str277
+	adrp	x1, str279
+	add	x1, x1, #:lo12:str279
 	mov	x20, x0
 	bl	builder_dependencies_opt_string
 	mov	x21, x0
@@ -1379,8 +1580,8 @@ builder_dependencies_pick_ref:
 	mov	x20, sp
 	cmp	x1, #0
 	beq	.L54
-	adrp	x1, str285
-	add	x1, x1, #:lo12:str285
+	adrp	x1, str287
+	add	x1, x1, #:lo12:str287
 	bl	builder_dependencies_opt_string
 	str	x0, [x20]
 	b	.L56
@@ -1448,8 +1649,8 @@ builder_dependencies_resolve_version_range:
 	mov	x0, #8
 	mov	x19, x1
 	add	x1, x21, x0
-	adrp	x0, str295
-	add	x0, x0, #:lo12:str295
+	adrp	x0, str297
+	add	x0, x0, #:lo12:str297
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x21, x0
@@ -1463,8 +1664,8 @@ builder_dependencies_resolve_version_range:
 	mov	x0, #8
 	mov	x19, x1
 	add	x1, x20, x0
-	adrp	x0, str299
-	add	x0, x0, #:lo12:str299
+	adrp	x0, str301
+	add	x0, x0, #:lo12:str301
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x20, x0
@@ -1476,19 +1677,19 @@ builder_dependencies_resolve_version_range:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, str303
-	add	x0, x0, #:lo12:str303
+	adrp	x0, str305
+	add	x0, x0, #:lo12:str305
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x20, [x0]
-	adrp	x0, str291
-	add	x0, x0, #:lo12:str291
+	adrp	x0, str293
+	add	x0, x0, #:lo12:str293
 	bl	donna_shell_output
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str308
-	add	x1, x1, #:lo12:str308
+	adrp	x1, str310
+	add	x1, x1, #:lo12:str310
 	bl	donna_string_split
 	mov	x1, x19
 	bl	builder_dependencies_find_best_tag
@@ -1525,8 +1726,8 @@ builder_dependencies_find_best_tag:
 	add	x2, x2, x3
 	ldr	x23, [x2]
 	mov	x20, x1
-	adrp	x1, str322
-	add	x1, x1, #:lo12:str322
+	adrp	x1, str324
+	add	x1, x1, #:lo12:str324
 	mov	x19, x0
 	bl	donna_string_index_of
 	mov	x1, x20
@@ -1553,8 +1754,8 @@ builder_dependencies_find_best_tag:
 	bl	donna_string_slice
 	mov	x1, x20
 	mov	x21, x1
-	adrp	x1, str337
-	add	x1, x1, #:lo12:str337
+	adrp	x1, str339
+	add	x1, x1, #:lo12:str339
 	mov	x20, x0
 	bl	donna_string_ends_with
 	mov	x1, x21
@@ -1566,8 +1767,8 @@ builder_dependencies_find_best_tag:
 	cmp	x2, #1
 	beq	.L80
 	mov	x24, x1
-	adrp	x1, str345
-	add	x1, x1, #:lo12:str345
+	adrp	x1, str347
+	add	x1, x1, #:lo12:str347
 	mov	x21, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
@@ -1647,8 +1848,8 @@ builder_dependencies_find_best_tag:
 	str	x0, [x19]
 	b	.L86
 .L85:
-	adrp	x0, str317
-	add	x0, x0, #:lo12:str317
+	adrp	x0, str319
+	add	x0, x0, #:lo12:str319
 .L86:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
@@ -1752,8 +1953,8 @@ builder_dependencies_clone_at_ref:
 	mov	x3, #8
 	add	x3, x19, x3
 	mov	x22, x2
-	adrp	x2, str415
-	add	x2, x2, #:lo12:str415
+	adrp	x2, str417
+	add	x2, x2, #:lo12:str417
 	str	x2, [x3]
 	mov	x21, x1
 	mov	x1, #16
@@ -1771,8 +1972,8 @@ builder_dependencies_clone_at_ref:
 	mov	x3, #8
 	add	x3, x21, x3
 	mov	x22, x2
-	adrp	x2, str419
-	add	x2, x2, #:lo12:str419
+	adrp	x2, str421
+	add	x2, x2, #:lo12:str421
 	str	x2, [x3]
 	mov	x20, x1
 	mov	x1, #16
@@ -1791,8 +1992,8 @@ builder_dependencies_clone_at_ref:
 	mov	x3, #8
 	add	x3, x19, x3
 	mov	x22, x2
-	adrp	x2, str423
-	add	x2, x2, #:lo12:str423
+	adrp	x2, str425
+	add	x2, x2, #:lo12:str425
 	str	x2, [x3]
 	mov	x20, x1
 	mov	x1, #16
@@ -1808,16 +2009,16 @@ builder_dependencies_clone_at_ref:
 	str	x3, [x1]
 	mov	x3, #8
 	add	x4, x1, x3
-	adrp	x3, str427
-	add	x3, x3, #:lo12:str427
+	adrp	x3, str429
+	add	x3, x3, #:lo12:str429
 	str	x3, [x4]
 	mov	x22, x2
 	mov	x2, #16
 	add	x2, x1, x2
 	str	x19, [x2]
 	mov	x19, x0
-	adrp	x0, str405
-	add	x0, x0, #:lo12:str405
+	adrp	x0, str407
+	add	x0, x0, #:lo12:str407
 	bl	donna_shell_exec
 	mov	x1, x20
 	mov	x2, x0
@@ -1831,8 +2032,8 @@ builder_dependencies_clone_at_ref:
 	beq	.L93
 	mov	x21, x1
 	mov	x20, x0
-	adrp	x0, str438
-	add	x0, x0, #:lo12:str438
+	adrp	x0, str440
+	add	x0, x0, #:lo12:str440
 	bl	__rt_str_concat
 	bl	donna_shell_run
 	mov	x0, x20
@@ -1881,14 +2082,14 @@ builder_dependencies_clone_at_ref:
 	mov	x0, #8
 	mov	x21, x2
 	add	x2, x1, x0
-	adrp	x0, str448
-	add	x0, x0, #:lo12:str448
+	adrp	x0, str450
+	add	x0, x0, #:lo12:str450
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x22, [x0]
-	adrp	x0, str441
-	add	x0, x0, #:lo12:str441
+	adrp	x0, str443
+	add	x0, x0, #:lo12:str443
 	bl	donna_shell_exec
 	mov	x2, x21
 	mov	x1, x20
@@ -1926,8 +2127,8 @@ builder_dependencies_clone_at_ref:
 	mov	x0, #8
 	mov	x21, x1
 	add	x1, x22, x0
-	adrp	x0, str463
-	add	x0, x0, #:lo12:str463
+	adrp	x0, str465
+	add	x0, x0, #:lo12:str465
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x22, x0
@@ -1951,14 +2152,14 @@ builder_dependencies_clone_at_ref:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, str470
-	add	x0, x0, #:lo12:str470
+	adrp	x0, str472
+	add	x0, x0, #:lo12:str472
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x21, [x0]
-	adrp	x0, str459
-	add	x0, x0, #:lo12:str459
+	adrp	x0, str461
+	add	x0, x0, #:lo12:str461
 	bl	donna_shell_exec
 	str	x0, [x20]
 	b	.L92
@@ -2009,8 +2210,8 @@ builder_dependencies_clone_at_ref:
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, str392
-	add	x0, x0, #:lo12:str392
+	adrp	x0, str394
+	add	x0, x0, #:lo12:str394
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x20, x0
@@ -2022,8 +2223,8 @@ builder_dependencies_clone_at_ref:
 	str	x0, [x19]
 	mov	x0, #8
 	add	x1, x19, x0
-	adrp	x0, str396
-	add	x0, x0, #:lo12:str396
+	adrp	x0, str398
+	add	x0, x0, #:lo12:str398
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x19, x0
@@ -2035,14 +2236,14 @@ builder_dependencies_clone_at_ref:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, str400
-	add	x0, x0, #:lo12:str400
+	adrp	x0, str402
+	add	x0, x0, #:lo12:str402
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x19, [x0]
-	adrp	x0, str385
-	add	x0, x0, #:lo12:str385
+	adrp	x0, str387
+	add	x0, x0, #:lo12:str387
 	bl	donna_shell_exec
 .L96:
 	ldr	x19, [x29, 56]
@@ -2059,45 +2260,426 @@ builder_dependencies_clone_at_ref:
 
 .text
 .balign 16
-builder_dependencies_git_cache_dir:
+builder_dependencies_refresh_cached_dep:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -48]!
 	mov	x29, sp
-	adrp	x0, str478
-	add	x0, x0, #:lo12:str478
-	bl	donna_shell_getenv
-	adrp	x1, str480
-	add	x1, x1, #:lo12:str480
-	bl	donna_files_join
-	adrp	x1, str482
-	add	x1, x1, #:lo12:str482
-	bl	donna_files_join
-	ldp	x29, x30, [sp], 16
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	str	x22, [x29, 16]
+	mov	x20, x2
+	mov	x19, x0
+	mov	x0, x1
+	mov	x21, x0
+	mov	x0, x19
+	bl	builder_dependencies_origin_url
+	mov	x1, x19
+	mov	x19, x1
+	mov	x1, x21
+	bl	donna_string_equal
+	mov	x1, x0
+	mov	x0, x21
+	cmp	x1, #0
+	beq	.L102
+	mov	x0, #24
+	bl	malloc
+	mov	x2, x20
+	mov	x1, x19
+	mov	x22, x0
+	mov	x0, #1
+	str	x0, [x22]
+	mov	x0, #8
+	mov	x20, x2
+	add	x2, x22, x0
+	adrp	x0, str492
+	add	x0, x0, #:lo12:str492
+	str	x0, [x2]
+	mov	x0, #16
+	mov	x19, x1
+	add	x1, x22, x0
+	adrp	x0, donna_nil
+	add	x0, x0, #:lo12:donna_nil
+	str	x0, [x1]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x19
+	mov	x21, x0
+	mov	x0, #1
+	str	x0, [x21]
+	mov	x0, #8
+	mov	x19, x1
+	add	x1, x21, x0
+	adrp	x0, str496
+	add	x0, x0, #:lo12:str496
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x19
+	mov	x22, x0
+	mov	x0, #1
+	str	x0, [x22]
+	mov	x0, #8
+	mov	x19, x1
+	add	x1, x22, x0
+	adrp	x0, str500
+	add	x0, x0, #:lo12:str500
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x22, x0
+	str	x21, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x19
+	mov	x21, x0
+	mov	x0, #1
+	str	x0, [x21]
+	mov	x0, #8
+	mov	x19, x1
+	add	x1, x21, x0
+	adrp	x0, str504
+	add	x0, x0, #:lo12:str504
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x19
+	mov	x22, x0
+	mov	x0, #1
+	str	x0, [x22]
+	mov	x0, #8
+	mov	x19, x1
+	add	x1, x22, x0
+	adrp	x0, str508
+	add	x0, x0, #:lo12:str508
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x22, x0
+	str	x21, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x21, x0
+	mov	x0, #1
+	str	x0, [x21]
+	mov	x0, #8
+	add	x0, x21, x0
+	str	x19, [x0]
+	mov	x0, #16
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x2, x20
+	mov	x1, x0
+	mov	x0, #1
+	str	x0, [x1]
+	mov	x0, #8
+	mov	x20, x2
+	add	x2, x1, x0
+	adrp	x0, str515
+	add	x0, x0, #:lo12:str515
+	str	x0, [x2]
+	mov	x0, #16
+	add	x0, x1, x0
+	str	x21, [x0]
+	adrp	x0, str491
+	add	x0, x0, #:lo12:str491
+	bl	donna_shell_exec
+	mov	x0, x20
+	bl	donna_string_is_empty
+	mov	x2, x20
+	mov	x1, x19
+	mov	x21, x2
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x0, #1
+	beq	.L100
+	mov	x20, x1
+	mov	x1, x21
+	mov	x0, x20
+	bl	builder_dependencies_checkout_ref
+	str	x0, [x19]
+	b	.L104
+.L100:
+	mov	x20, x1
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x20
+	mov	x22, x0
+	mov	x0, #1
+	str	x0, [x22]
+	mov	x0, #8
+	add	x2, x22, x0
+	adrp	x0, str527
+	add	x0, x0, #:lo12:str527
+	str	x0, [x2]
+	mov	x0, #16
+	mov	x20, x1
+	add	x1, x22, x0
+	adrp	x0, donna_nil
+	add	x0, x0, #:lo12:donna_nil
+	str	x0, [x1]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x20
+	mov	x21, x0
+	mov	x0, #1
+	str	x0, [x21]
+	mov	x0, #8
+	mov	x20, x1
+	add	x1, x21, x0
+	adrp	x0, str531
+	add	x0, x0, #:lo12:str531
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x20
+	mov	x20, x0
+	mov	x0, #1
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x1, [x0]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x0
+	mov	x0, #1
+	str	x0, [x1]
+	mov	x0, #8
+	add	x2, x1, x0
+	adrp	x0, str538
+	add	x0, x0, #:lo12:str538
+	str	x0, [x2]
+	mov	x0, #16
+	add	x0, x1, x0
+	str	x20, [x0]
+	adrp	x0, str526
+	add	x0, x0, #:lo12:str526
+	bl	donna_shell_exec
+	str	x0, [x19]
+	b	.L104
+.L102:
+	mov	x21, x20
+	mov	x1, x19
+	mov	x20, x1
+	mov	x19, x0
+	adrp	x0, str487
+	add	x0, x0, #:lo12:str487
+	bl	__rt_str_concat
+	bl	donna_shell_run
+	mov	x2, x21
+	mov	x1, x20
+	mov	x0, x19
+	bl	builder_dependencies_clone_at_ref
+.L104:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldr	x22, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
 	ret
-.type builder_dependencies_git_cache_dir, @function
-.size builder_dependencies_git_cache_dir, .-builder_dependencies_git_cache_dir
-/* end function builder_dependencies_git_cache_dir */
+.type builder_dependencies_refresh_cached_dep, @function
+.size builder_dependencies_refresh_cached_dep, .-builder_dependencies_refresh_cached_dep
+/* end function builder_dependencies_refresh_cached_dep */
 
 .text
 .balign 16
-builder_dependencies_head_sha:
+builder_dependencies_checkout_ref:
 	hint	#34
-	stp	x29, x30, [sp, -32]!
+	stp	x29, x30, [sp, -48]!
 	mov	x29, sp
-	str	x19, [x29, 24]
-	str	x20, [x29, 16]
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x20, x1
 	mov	x19, x0
 	mov	x0, #24
 	bl	malloc
+	mov	x1, x20
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	mov	x1, #1
-	str	x1, [x19]
-	mov	x1, #8
-	add	x2, x19, x1
-	adrp	x1, str485
-	add	x1, x1, #:lo12:str485
+	mov	x2, #1
+	str	x2, [x19]
+	mov	x2, #8
+	add	x2, x19, x2
+	str	x1, [x2]
+	mov	x2, #16
+	add	x2, x19, x2
+	mov	x21, x1
+	adrp	x1, donna_nil
+	add	x1, x1, #:lo12:donna_nil
+	str	x1, [x2]
+	mov	x20, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x21
+	mov	x21, x0
+	mov	x0, x20
+	mov	x2, #1
+	str	x2, [x21]
+	mov	x2, #8
+	add	x3, x21, x2
+	adrp	x2, str550
+	add	x2, x2, #:lo12:str550
+	str	x2, [x3]
+	mov	x20, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x19, [x1]
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x20
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x2, #1
+	str	x2, [x19]
+	mov	x2, #8
+	add	x2, x19, x2
+	str	x0, [x2]
+	mov	x20, x1
+	mov	x1, #16
+	add	x1, x19, x1
+	str	x21, [x1]
+	mov	x21, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x0
+	mov	x0, x21
+	mov	x2, #1
+	str	x2, [x1]
+	mov	x2, #8
+	add	x3, x1, x2
+	adrp	x2, str557
+	add	x2, x2, #:lo12:str557
+	str	x2, [x3]
+	mov	x2, #16
+	add	x2, x1, x2
+	str	x19, [x2]
+	mov	x19, x0
+	adrp	x0, str546
+	add	x0, x0, #:lo12:str546
+	bl	donna_shell_exec
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	cset	x2, eq
+	cmp	x2, #1
+	beq	.L107
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x20
+	mov	x20, x0
+	mov	x0, x19
+	mov	x2, #1
+	str	x2, [x20]
+	mov	x2, #8
+	add	x2, x20, x2
+	str	x1, [x2]
+	mov	x2, #16
+	add	x2, x20, x2
+	mov	x21, x1
+	adrp	x1, donna_nil
+	add	x1, x1, #:lo12:donna_nil
+	str	x1, [x2]
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x21
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x2, #1
+	str	x2, [x19]
+	mov	x2, #8
+	add	x3, x19, x2
+	adrp	x2, str572
+	add	x2, x2, #:lo12:str572
+	str	x2, [x3]
+	mov	x21, x1
+	mov	x1, #16
+	add	x1, x19, x1
+	str	x20, [x1]
+	mov	x20, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x21
+	mov	x21, x0
+	mov	x0, x20
+	mov	x2, #1
+	str	x2, [x21]
+	mov	x2, #8
+	add	x3, x21, x2
+	adrp	x2, str576
+	add	x2, x2, #:lo12:str576
+	str	x2, [x3]
+	mov	x20, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x19, [x1]
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x20
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x2, #1
+	str	x2, [x19]
+	mov	x2, #8
+	add	x2, x19, x2
+	str	x0, [x2]
+	mov	x20, x1
+	mov	x1, #16
+	add	x1, x19, x1
+	str	x21, [x1]
+	mov	x21, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x0
+	mov	x0, x21
+	mov	x2, #1
+	str	x2, [x1]
+	mov	x2, #8
+	add	x3, x1, x2
+	adrp	x2, str583
+	add	x2, x2, #:lo12:str583
+	str	x2, [x3]
+	mov	x2, #16
+	add	x2, x1, x2
+	str	x19, [x2]
+	mov	x19, x0
+	adrp	x0, str568
+	add	x0, x0, #:lo12:str568
+	bl	donna_shell_exec
+	mov	x0, x19
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x20
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x2, #1
+	str	x2, [x19]
+	mov	x2, #8
+	add	x2, x19, x2
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x19, x1
@@ -2114,8 +2696,8 @@ builder_dependencies_head_sha:
 	str	x1, [x20]
 	mov	x1, #8
 	add	x2, x20, x1
-	adrp	x1, str489
-	add	x1, x1, #:lo12:str489
+	adrp	x1, str592
+	add	x1, x1, #:lo12:str592
 	str	x1, [x2]
 	mov	x1, #16
 	add	x1, x20, x1
@@ -2141,14 +2723,216 @@ builder_dependencies_head_sha:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, str496
-	add	x0, x0, #:lo12:str496
+	adrp	x0, str599
+	add	x0, x0, #:lo12:str599
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x19, [x0]
-	adrp	x0, str484
-	add	x0, x0, #:lo12:str484
+	adrp	x0, str588
+	add	x0, x0, #:lo12:str588
+	bl	donna_shell_exec
+	b	.L108
+.L107:
+	mov	x0, x1
+.L108:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
+	ret
+.type builder_dependencies_checkout_ref, @function
+.size builder_dependencies_checkout_ref, .-builder_dependencies_checkout_ref
+/* end function builder_dependencies_checkout_ref */
+
+.text
+.balign 16
+builder_dependencies_origin_url:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	str	x20, [x29, 16]
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x20, x0
+	mov	x0, x19
+	mov	x1, #1
+	str	x1, [x20]
+	mov	x1, #8
+	add	x2, x20, x1
+	adrp	x1, str606
+	add	x1, x1, #:lo12:str606
+	str	x1, [x2]
+	mov	x1, #16
+	add	x2, x20, x1
+	adrp	x1, donna_nil
+	add	x1, x1, #:lo12:donna_nil
+	str	x1, [x2]
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x1, #1
+	str	x1, [x19]
+	mov	x1, #8
+	add	x2, x19, x1
+	adrp	x1, str610
+	add	x1, x1, #:lo12:str610
+	str	x1, [x2]
+	mov	x1, #16
+	add	x1, x19, x1
+	str	x20, [x1]
+	mov	x20, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x1, #1
+	str	x1, [x20]
+	mov	x1, #8
+	add	x2, x20, x1
+	adrp	x1, str614
+	add	x1, x1, #:lo12:str614
+	str	x1, [x2]
+	mov	x1, #16
+	add	x1, x20, x1
+	str	x19, [x1]
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x1, #1
+	str	x1, [x19]
+	mov	x1, #8
+	add	x1, x19, x1
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x0
+	mov	x0, #1
+	str	x0, [x1]
+	mov	x0, #8
+	add	x2, x1, x0
+	adrp	x0, str621
+	add	x0, x0, #:lo12:str621
+	str	x0, [x2]
+	mov	x0, #16
+	add	x0, x1, x0
+	str	x19, [x0]
+	adrp	x0, str605
+	add	x0, x0, #:lo12:str605
+	bl	donna_shell_output
+	bl	donna_string_trim
+	ldr	x19, [x29, 24]
+	ldr	x20, [x29, 16]
+	ldp	x29, x30, [sp], 32
+	ret
+.type builder_dependencies_origin_url, @function
+.size builder_dependencies_origin_url, .-builder_dependencies_origin_url
+/* end function builder_dependencies_origin_url */
+
+.text
+.balign 16
+builder_dependencies_git_cache_dir:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	adrp	x0, str627
+	add	x0, x0, #:lo12:str627
+	bl	donna_shell_getenv
+	adrp	x1, str629
+	add	x1, x1, #:lo12:str629
+	bl	donna_files_join
+	adrp	x1, str631
+	add	x1, x1, #:lo12:str631
+	bl	donna_files_join
+	ldp	x29, x30, [sp], 16
+	ret
+.type builder_dependencies_git_cache_dir, @function
+.size builder_dependencies_git_cache_dir, .-builder_dependencies_git_cache_dir
+/* end function builder_dependencies_git_cache_dir */
+
+.text
+.balign 16
+builder_dependencies_head_sha:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	str	x20, [x29, 16]
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x1, #1
+	str	x1, [x19]
+	mov	x1, #8
+	add	x2, x19, x1
+	adrp	x1, str634
+	add	x1, x1, #:lo12:str634
+	str	x1, [x2]
+	mov	x1, #16
+	add	x2, x19, x1
+	adrp	x1, donna_nil
+	add	x1, x1, #:lo12:donna_nil
+	str	x1, [x2]
+	mov	x20, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x1, #1
+	str	x1, [x20]
+	mov	x1, #8
+	add	x2, x20, x1
+	adrp	x1, str638
+	add	x1, x1, #:lo12:str638
+	str	x1, [x2]
+	mov	x1, #16
+	add	x1, x20, x1
+	str	x19, [x1]
+	mov	x19, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x1, #1
+	str	x1, [x19]
+	mov	x1, #8
+	add	x1, x19, x1
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x0
+	mov	x0, #1
+	str	x0, [x1]
+	mov	x0, #8
+	add	x2, x1, x0
+	adrp	x0, str645
+	add	x0, x0, #:lo12:str645
+	str	x0, [x2]
+	mov	x0, #16
+	add	x0, x1, x0
+	str	x19, [x0]
+	adrp	x0, str633
+	add	x0, x0, #:lo12:str633
 	bl	donna_shell_output
 	bl	donna_string_trim
 	ldr	x19, [x29, 24]
@@ -2168,15 +2952,15 @@ builder_dependencies_opt_string:
 	bl	parsetoml_parsetoml_get_string
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L103
+	beq	.L117
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L104
-.L103:
-	adrp	x0, str511
-	add	x0, x0, #:lo12:str511
-.L104:
+	b	.L118
+.L117:
+	adrp	x0, str660
+	add	x0, x0, #:lo12:str660
+.L118:
 	ldp	x29, x30, [sp], 16
 	ret
 .type builder_dependencies_opt_string, @function

@@ -13,28 +13,63 @@ str24:
 
 .data
 .balign 8
-str38:
+str44:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str58:
 	.ascii "pub fn "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str49:
+str69:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str59:
+str79:
 	.ascii "_test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str99:
+str106:
+	.ascii "pub fn "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str117:
+	.ascii "("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str127:
+	.ascii "_test"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str135:
+	.ascii ":"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str170:
 	.ascii "// Auto-generated test runner "
 	.byte 226
 	.byte 128
@@ -46,7 +81,7 @@ str99:
 
 .data
 .balign 8
-str101:
+str172:
 	.byte 10
 	.ascii "@external("
 	.byte 34
@@ -65,7 +100,7 @@ str101:
 
 .data
 .balign 8
-str103:
+str174:
 	.byte 10
 	.ascii "fn digit_char(d: Int) -> String:"
 	.byte 10
@@ -74,7 +109,7 @@ str103:
 
 .data
 .balign 8
-str105:
+str176:
 	.ascii "  case d:"
 	.byte 10
 	.byte 0
@@ -82,7 +117,7 @@ str105:
 
 .data
 .balign 8
-str107:
+str178:
 	.ascii "    0 -> "
 	.byte 34
 	.ascii "0"
@@ -93,7 +128,7 @@ str107:
 
 .data
 .balign 8
-str109:
+str180:
 	.ascii "    1 -> "
 	.byte 34
 	.ascii "1"
@@ -104,7 +139,7 @@ str109:
 
 .data
 .balign 8
-str111:
+str182:
 	.ascii "    2 -> "
 	.byte 34
 	.ascii "2"
@@ -115,7 +150,7 @@ str111:
 
 .data
 .balign 8
-str113:
+str184:
 	.ascii "    3 -> "
 	.byte 34
 	.ascii "3"
@@ -126,7 +161,7 @@ str113:
 
 .data
 .balign 8
-str115:
+str186:
 	.ascii "    4 -> "
 	.byte 34
 	.ascii "4"
@@ -137,7 +172,7 @@ str115:
 
 .data
 .balign 8
-str117:
+str188:
 	.ascii "    5 -> "
 	.byte 34
 	.ascii "5"
@@ -148,7 +183,7 @@ str117:
 
 .data
 .balign 8
-str119:
+str190:
 	.ascii "    6 -> "
 	.byte 34
 	.ascii "6"
@@ -159,7 +194,7 @@ str119:
 
 .data
 .balign 8
-str121:
+str192:
 	.ascii "    7 -> "
 	.byte 34
 	.ascii "7"
@@ -170,7 +205,7 @@ str121:
 
 .data
 .balign 8
-str123:
+str194:
 	.ascii "    8 -> "
 	.byte 34
 	.ascii "8"
@@ -181,7 +216,7 @@ str123:
 
 .data
 .balign 8
-str125:
+str196:
 	.ascii "    _ -> "
 	.byte 34
 	.ascii "9"
@@ -192,7 +227,7 @@ str125:
 
 .data
 .balign 8
-str127:
+str198:
 	.byte 10
 	.ascii "fn pos_int_to_str(n: Int) -> String:"
 	.byte 10
@@ -201,7 +236,7 @@ str127:
 
 .data
 .balign 8
-str129:
+str200:
 	.ascii "  case n < 10:"
 	.byte 10
 	.byte 0
@@ -209,7 +244,7 @@ str129:
 
 .data
 .balign 8
-str131:
+str202:
 	.ascii "    True  -> digit_char(n)"
 	.byte 10
 	.byte 0
@@ -217,7 +252,7 @@ str131:
 
 .data
 .balign 8
-str133:
+str204:
 	.ascii "    False -> pos_int_to_str(n / 10) <> digit_char(n - n / 10 * 10)"
 	.byte 10
 	.byte 0
@@ -225,7 +260,7 @@ str133:
 
 .data
 .balign 8
-str135:
+str206:
 	.byte 10
 	.ascii "fn int_to_str(n: Int) -> String:"
 	.byte 10
@@ -234,7 +269,7 @@ str135:
 
 .data
 .balign 8
-str137:
+str208:
 	.ascii "  case n < 0:"
 	.byte 10
 	.byte 0
@@ -242,7 +277,7 @@ str137:
 
 .data
 .balign 8
-str139:
+str210:
 	.ascii "    True  -> "
 	.byte 34
 	.ascii "-"
@@ -254,7 +289,7 @@ str139:
 
 .data
 .balign 8
-str141:
+str212:
 	.ascii "    False -> pos_int_to_str(n)"
 	.byte 10
 	.byte 0
@@ -262,7 +297,7 @@ str141:
 
 .data
 .balign 8
-str143:
+str214:
 	.byte 10
 	.ascii "fn two_digits(n: Int) -> String:"
 	.byte 10
@@ -271,7 +306,7 @@ str143:
 
 .data
 .balign 8
-str145:
+str216:
 	.ascii "  digit_char(n / 10) <> digit_char(n - n / 10 * 10)"
 	.byte 10
 	.byte 0
@@ -279,7 +314,7 @@ str145:
 
 .data
 .balign 8
-str147:
+str218:
 	.byte 10
 	.ascii "fn format_us(us: Int) -> String:"
 	.byte 10
@@ -288,7 +323,7 @@ str147:
 
 .data
 .balign 8
-str149:
+str220:
 	.ascii "  case us <= 0:"
 	.byte 10
 	.byte 0
@@ -296,7 +331,7 @@ str149:
 
 .data
 .balign 8
-str151:
+str222:
 	.ascii "    True -> "
 	.byte 34
 	.ascii "<1us"
@@ -307,7 +342,7 @@ str151:
 
 .data
 .balign 8
-str153:
+str224:
 	.ascii "    False ->"
 	.byte 10
 	.byte 0
@@ -315,7 +350,7 @@ str153:
 
 .data
 .balign 8
-str155:
+str226:
 	.ascii "      case us < 1000:"
 	.byte 10
 	.byte 0
@@ -323,7 +358,7 @@ str155:
 
 .data
 .balign 8
-str157:
+str228:
 	.ascii "        True -> int_to_str(us) <> "
 	.byte 34
 	.ascii "us"
@@ -334,7 +369,7 @@ str157:
 
 .data
 .balign 8
-str159:
+str230:
 	.ascii "        False ->"
 	.byte 10
 	.byte 0
@@ -342,7 +377,7 @@ str159:
 
 .data
 .balign 8
-str161:
+str232:
 	.ascii "          case us < 1000000:"
 	.byte 10
 	.byte 0
@@ -350,7 +385,7 @@ str161:
 
 .data
 .balign 8
-str163:
+str234:
 	.ascii "            True ->"
 	.byte 10
 	.byte 0
@@ -358,7 +393,7 @@ str163:
 
 .data
 .balign 8
-str165:
+str236:
 	.ascii "              let ms = us / 1000"
 	.byte 10
 	.byte 0
@@ -366,7 +401,7 @@ str165:
 
 .data
 .balign 8
-str167:
+str238:
 	.ascii "              let frac = (us - ms * 1000) / 10"
 	.byte 10
 	.byte 0
@@ -374,7 +409,7 @@ str167:
 
 .data
 .balign 8
-str169:
+str240:
 	.ascii "              int_to_str(ms) <> "
 	.byte 34
 	.ascii "."
@@ -389,7 +424,7 @@ str169:
 
 .data
 .balign 8
-str171:
+str242:
 	.ascii "            False ->"
 	.byte 10
 	.byte 0
@@ -397,7 +432,7 @@ str171:
 
 .data
 .balign 8
-str173:
+str244:
 	.ascii "              let s = us / 1000000"
 	.byte 10
 	.byte 0
@@ -405,7 +440,7 @@ str173:
 
 .data
 .balign 8
-str175:
+str246:
 	.ascii "              let frac = (us - s * 1000000) / 10000"
 	.byte 10
 	.byte 0
@@ -413,7 +448,7 @@ str175:
 
 .data
 .balign 8
-str177:
+str248:
 	.ascii "              int_to_str(s) <> "
 	.byte 34
 	.ascii "."
@@ -428,7 +463,7 @@ str177:
 
 .data
 .balign 8
-str179:
+str250:
 	.byte 10
 	.ascii "fn reverse_strings(xs: List(String), acc: List(String)) -> List(String):"
 	.byte 10
@@ -437,7 +472,7 @@ str179:
 
 .data
 .balign 8
-str181:
+str252:
 	.ascii "  case xs:"
 	.byte 10
 	.byte 0
@@ -445,7 +480,7 @@ str181:
 
 .data
 .balign 8
-str183:
+str254:
 	.ascii "    [] -> acc"
 	.byte 10
 	.byte 0
@@ -453,7 +488,7 @@ str183:
 
 .data
 .balign 8
-str185:
+str256:
 	.ascii "    [x, ..rest] -> reverse_strings(rest, [x, ..acc])"
 	.byte 10
 	.byte 0
@@ -461,7 +496,7 @@ str185:
 
 .data
 .balign 8
-str187:
+str258:
 	.byte 10
 	.ascii "fn append_strings(xs: List(String), ys: List(String)) -> List(String):"
 	.byte 10
@@ -470,7 +505,7 @@ str187:
 
 .data
 .balign 8
-str189:
+str260:
 	.ascii "  case xs:"
 	.byte 10
 	.byte 0
@@ -478,7 +513,7 @@ str189:
 
 .data
 .balign 8
-str191:
+str262:
 	.ascii "    [] -> ys"
 	.byte 10
 	.byte 0
@@ -486,7 +521,7 @@ str191:
 
 .data
 .balign 8
-str193:
+str264:
 	.ascii "    [x, ..rest] -> [x, ..append_strings(rest, ys)]"
 	.byte 10
 	.byte 0
@@ -494,7 +529,7 @@ str193:
 
 .data
 .balign 8
-str195:
+str266:
 	.byte 10
 	.ascii "fn add_failure(failures: List(String), name: String, result: String) -> List(String):"
 	.byte 10
@@ -503,7 +538,7 @@ str195:
 
 .data
 .balign 8
-str197:
+str268:
 	.ascii "  case result == "
 	.byte 34
 	.byte 34
@@ -514,7 +549,7 @@ str197:
 
 .data
 .balign 8
-str199:
+str270:
 	.ascii "    True -> failures"
 	.byte 10
 	.byte 0
@@ -522,7 +557,7 @@ str199:
 
 .data
 .balign 8
-str201:
+str272:
 	.ascii "    False -> [name, ..failures]"
 	.byte 10
 	.byte 0
@@ -530,7 +565,7 @@ str201:
 
 .data
 .balign 8
-str203:
+str274:
 	.byte 10
 	.ascii "fn print_failure_names(names: List(String)) -> Nil:"
 	.byte 10
@@ -539,7 +574,7 @@ str203:
 
 .data
 .balign 8
-str205:
+str276:
 	.ascii "  case names:"
 	.byte 10
 	.byte 0
@@ -547,7 +582,7 @@ str205:
 
 .data
 .balign 8
-str207:
+str278:
 	.ascii "    [] -> Nil"
 	.byte 10
 	.byte 0
@@ -555,7 +590,7 @@ str207:
 
 .data
 .balign 8
-str209:
+str280:
 	.ascii "    [name, ..rest] ->"
 	.byte 10
 	.byte 0
@@ -563,7 +598,7 @@ str209:
 
 .data
 .balign 8
-str211:
+str282:
 	.ascii "      echo "
 	.byte 34
 	.ascii "  "
@@ -575,7 +610,7 @@ str211:
 
 .data
 .balign 8
-str213:
+str284:
 	.ascii "      print_failure_names(rest)"
 	.byte 10
 	.byte 0
@@ -583,7 +618,7 @@ str213:
 
 .data
 .balign 8
-str215:
+str286:
 	.byte 10
 	.ascii "fn print_failures(failures: List(String)) -> Nil:"
 	.byte 10
@@ -592,7 +627,7 @@ str215:
 
 .data
 .balign 8
-str217:
+str288:
 	.ascii "  case failures:"
 	.byte 10
 	.byte 0
@@ -600,7 +635,7 @@ str217:
 
 .data
 .balign 8
-str219:
+str290:
 	.ascii "    [] -> Nil"
 	.byte 10
 	.byte 0
@@ -608,7 +643,7 @@ str219:
 
 .data
 .balign 8
-str221:
+str292:
 	.ascii "    _ ->"
 	.byte 10
 	.byte 0
@@ -616,7 +651,7 @@ str221:
 
 .data
 .balign 8
-str223:
+str294:
 	.ascii "      echo "
 	.byte 34
 	.byte 34
@@ -626,7 +661,7 @@ str223:
 
 .data
 .balign 8
-str225:
+str296:
 	.ascii "      echo "
 	.byte 34
 	.byte 92
@@ -640,7 +675,7 @@ str225:
 
 .data
 .balign 8
-str227:
+str298:
 	.ascii "      print_failure_names(reverse_strings(failures, []))"
 	.byte 10
 	.byte 0
@@ -648,7 +683,7 @@ str227:
 
 .data
 .balign 8
-str229:
+str300:
 	.byte 10
 	.ascii "fn run_test(name: String, result: String, us: Int) -> Int:"
 	.byte 10
@@ -657,7 +692,7 @@ str229:
 
 .data
 .balign 8
-str231:
+str302:
 	.ascii "  let duration = format_us(us)"
 	.byte 10
 	.byte 0
@@ -665,7 +700,7 @@ str231:
 
 .data
 .balign 8
-str233:
+str304:
 	.ascii "  case result == "
 	.byte 34
 	.byte 34
@@ -676,7 +711,7 @@ str233:
 
 .data
 .balign 8
-str235:
+str306:
 	.ascii "    True  ->"
 	.byte 10
 	.byte 0
@@ -684,7 +719,7 @@ str235:
 
 .data
 .balign 8
-str237:
+str308:
 	.ascii "      echo "
 	.byte 34
 	.byte 92
@@ -706,7 +741,7 @@ str237:
 
 .data
 .balign 8
-str239:
+str310:
 	.ascii "      0"
 	.byte 10
 	.byte 0
@@ -714,7 +749,7 @@ str239:
 
 .data
 .balign 8
-str241:
+str312:
 	.ascii "    False ->"
 	.byte 10
 	.byte 0
@@ -722,7 +757,7 @@ str241:
 
 .data
 .balign 8
-str243:
+str314:
 	.ascii "      echo "
 	.byte 34
 	.byte 92
@@ -744,7 +779,7 @@ str243:
 
 .data
 .balign 8
-str245:
+str316:
 	.ascii "      echo result"
 	.byte 10
 	.byte 0
@@ -752,7 +787,7 @@ str245:
 
 .data
 .balign 8
-str247:
+str318:
 	.ascii "      1"
 	.byte 10
 	.byte 0
@@ -760,7 +795,7 @@ str247:
 
 .data
 .balign 8
-str249:
+str320:
 	.byte 10
 	.ascii "fn run_case(s: Int, failures: List(String), name: String, test_fn: fn() -> String) -> #(Int, List(String)):"
 	.byte 10
@@ -769,7 +804,7 @@ str249:
 
 .data
 .balign 8
-str251:
+str322:
 	.ascii "  let t = ffi_now_us()"
 	.byte 10
 	.byte 0
@@ -777,7 +812,7 @@ str251:
 
 .data
 .balign 8
-str253:
+str324:
 	.ascii "  let r = test_fn()"
 	.byte 10
 	.byte 0
@@ -785,7 +820,7 @@ str253:
 
 .data
 .balign 8
-str255:
+str326:
 	.ascii "  let us = ffi_now_us() - t"
 	.byte 10
 	.byte 0
@@ -793,7 +828,7 @@ str255:
 
 .data
 .balign 8
-str257:
+str328:
 	.ascii "  let failures2 = add_failure(failures, name, r)"
 	.byte 10
 	.byte 0
@@ -801,7 +836,7 @@ str257:
 
 .data
 .balign 8
-str259:
+str330:
 	.ascii "  #(s + run_test(name, r, us), failures2)"
 	.byte 10
 	.byte 0
@@ -809,7 +844,7 @@ str259:
 
 .data
 .balign 8
-str262:
+str333:
 	.byte 10
 	.ascii "pub fn main() -> Int:"
 	.byte 10
@@ -818,7 +853,7 @@ str262:
 
 .data
 .balign 8
-str264:
+str335:
 	.ascii "  let t0 = ffi_now_us()"
 	.byte 10
 	.byte 0
@@ -826,7 +861,7 @@ str264:
 
 .data
 .balign 8
-str266:
+str337:
 	.ascii "  let s = 0"
 	.byte 10
 	.byte 0
@@ -834,7 +869,7 @@ str266:
 
 .data
 .balign 8
-str268:
+str339:
 	.ascii "  let failures = []"
 	.byte 10
 	.byte 0
@@ -842,14 +877,14 @@ str268:
 
 .data
 .balign 8
-str271:
+str342:
 	.ascii "  let passed = "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str275:
+str346:
 	.ascii " - s"
 	.byte 10
 	.byte 0
@@ -857,7 +892,7 @@ str275:
 
 .data
 .balign 8
-str277:
+str348:
 	.ascii "  let elapsed = ffi_now_us() - t0"
 	.byte 10
 	.byte 0
@@ -865,7 +900,7 @@ str277:
 
 .data
 .balign 8
-str279:
+str350:
 	.ascii "  let ts = format_us(elapsed)"
 	.byte 10
 	.byte 0
@@ -873,7 +908,7 @@ str279:
 
 .data
 .balign 8
-str281:
+str352:
 	.ascii "  case s == 0:"
 	.byte 10
 	.byte 0
@@ -881,7 +916,7 @@ str281:
 
 .data
 .balign 8
-str283:
+str354:
 	.ascii "    True  -> echo "
 	.byte 34
 	.byte 92
@@ -900,7 +935,7 @@ str283:
 
 .data
 .balign 8
-str285:
+str356:
 	.ascii "    False ->"
 	.byte 10
 	.byte 0
@@ -908,7 +943,7 @@ str285:
 
 .data
 .balign 8
-str287:
+str358:
 	.ascii "      print_failures(failures)"
 	.byte 10
 	.byte 0
@@ -916,7 +951,7 @@ str287:
 
 .data
 .balign 8
-str289:
+str360:
 	.ascii "      echo "
 	.byte 34
 	.byte 92
@@ -943,7 +978,7 @@ str289:
 
 .data
 .balign 8
-str291:
+str362:
 	.ascii "  s"
 	.byte 10
 	.byte 0
@@ -951,83 +986,8 @@ str291:
 
 .data
 .balign 8
-str357:
+str428:
 	.ascii "."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str427:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str436:
-	.ascii "import test/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str438:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str449:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str468:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str477:
-	.byte 10
-	.ascii "fn run_module_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str479:
-	.ascii "() -> #(Int, List(String)):"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str481:
-	.ascii "  let s = 0"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str483:
-	.ascii "  let failures = []"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str487:
-	.ascii "  #(s, failures)"
-	.byte 10
 	.byte 0
 /* end data */
 
@@ -1041,27 +1001,102 @@ str498:
 .data
 .balign 8
 str507:
-	.ascii "  let #(s_"
+	.ascii "import test/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str509:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str520:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str539:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str548:
+	.byte 10
+	.ascii "fn run_module_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str550:
+	.ascii "() -> #(Int, List(String)):"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str552:
+	.ascii "  let s = 0"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str554:
+	.ascii "  let failures = []"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str558:
+	.ascii "  #(s, failures)"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str569:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str578:
+	.ascii "  let #(s_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str580:
 	.ascii ", failures_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str512:
+str583:
 	.ascii ") = run_module_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str515:
+str586:
 	.ascii "()"
 	.byte 10
 	.byte 0
@@ -1069,28 +1104,28 @@ str515:
 
 .data
 .balign 8
-str517:
+str588:
 	.ascii "  let s = s + s_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str520:
+str591:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str522:
+str593:
 	.ascii "  let failures = append_strings(failures_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str525:
+str596:
 	.ascii ", failures)"
 	.byte 10
 	.byte 0
@@ -1098,21 +1133,21 @@ str525:
 
 .data
 .balign 8
-str536:
+str607:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str541:
+str612:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str544:
+str615:
 	.ascii "  let #(s, failures) = run_case(s, failures, "
 	.byte 34
 	.byte 0
@@ -1120,7 +1155,7 @@ str544:
 
 .data
 .balign 8
-str546:
+str617:
 	.byte 34
 	.ascii ", fn() -> "
 	.byte 0
@@ -1128,14 +1163,14 @@ str546:
 
 .data
 .balign 8
-str549:
+str620:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str552:
+str623:
 	.ascii "())"
 	.byte 10
 	.byte 0
@@ -1249,6 +1284,89 @@ builder_tester_find_test_fns:
 
 .text
 .balign 16
+.globl builder_tester_collect_invalid_public_test_functions
+builder_tester_collect_invalid_public_test_functions:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	adrp	x1, donna_nil
+	add	x1, x1, #:lo12:donna_nil
+	bl	builder_tester_collect_invalid_public_test_functions_loop
+	ldp	x29, x30, [sp], 16
+	ret
+.type builder_tester_collect_invalid_public_test_functions, @function
+.size builder_tester_collect_invalid_public_test_functions, .-builder_tester_collect_invalid_public_test_functions
+/* end function builder_tester_collect_invalid_public_test_functions */
+
+.text
+.balign 16
+builder_tester_collect_invalid_public_test_functions_loop:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x17, x1
+	mov	x1, x0
+	mov	x0, x17
+	ldr	x2, [x1]
+	cmp	x2, #0
+	beq	.L13
+	mov	x2, #8
+	add	x2, x1, x2
+	ldr	x21, [x2]
+	mov	x2, #16
+	add	x1, x1, x2
+	ldr	x19, [x1]
+	mov	x20, x0
+	mov	x0, x21
+	bl	donna_files_read
+	mov	x1, x21
+	bl	builder_tester_find_invalid_public_test_fns
+	mov	x1, x20
+	bl	donna_list_append
+	mov	x1, x0
+	mov	x0, x19
+	bl	builder_tester_collect_invalid_public_test_functions_loop
+	b	.L14
+.L13:
+	bl	donna_list_reverse
+.L14:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
+	ret
+.type builder_tester_collect_invalid_public_test_functions_loop, @function
+.size builder_tester_collect_invalid_public_test_functions_loop, .-builder_tester_collect_invalid_public_test_functions_loop
+/* end function builder_tester_collect_invalid_public_test_functions_loop */
+
+.text
+.balign 16
+.globl builder_tester_find_invalid_public_test_fns
+builder_tester_find_invalid_public_test_fns:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x1
+	adrp	x1, str44
+	add	x1, x1, #:lo12:str44
+	bl	donna_string_split
+	mov	x1, x19
+	adrp	x2, donna_nil
+	add	x2, x2, #:lo12:donna_nil
+	bl	builder_tester_collect_invalid_fns
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+.type builder_tester_find_invalid_public_test_fns, @function
+.size builder_tester_find_invalid_public_test_fns, .-builder_tester_find_invalid_public_test_fns
+/* end function builder_tester_find_invalid_public_test_fns */
+
+.text
+.balign 16
 builder_tester_collect_fns:
 	hint	#34
 	stp	x29, x30, [sp, -64]!
@@ -1265,15 +1383,15 @@ builder_tester_collect_fns:
 	mov	x22, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L21
+	beq	.L29
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x21, [x1]
-	adrp	x1, str38
-	add	x1, x1, #:lo12:str38
+	adrp	x1, str58
+	add	x1, x1, #:lo12:str58
 	mov	x19, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
@@ -1282,7 +1400,7 @@ builder_tester_collect_fns:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #0
-	beq	.L19
+	beq	.L27
 	mov	x20, x0
 	bl	donna_string_length
 	mov	x1, x0
@@ -1291,8 +1409,8 @@ builder_tester_collect_fns:
 	sub	x2, x1, x2
 	mov	x1, #7
 	bl	donna_string_slice
-	adrp	x1, str49
-	add	x1, x1, #:lo12:str49
+	adrp	x1, str69
+	add	x1, x1, #:lo12:str69
 	mov	x20, x0
 	bl	donna_string_index_of
 	mov	x2, x0
@@ -1303,13 +1421,13 @@ builder_tester_collect_fns:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x1, #0
-	beq	.L16
+	beq	.L24
 	mov	x1, #0
 	bl	donna_string_slice
 	mov	x23, x0
 	mov	x0, x21
-	adrp	x1, str59
-	add	x1, x1, #:lo12:str59
+	adrp	x1, str79
+	add	x1, x1, #:lo12:str79
 	mov	x21, x0
 	mov	x0, x23
 	bl	donna_string_ends_with
@@ -1319,12 +1437,12 @@ builder_tester_collect_fns:
 	sub	sp, sp, x2
 	mov	x21, sp
 	cmp	x1, #1
-	beq	.L14
+	beq	.L22
 	mov	x1, x22
 	bl	builder_tester_collect_fns
 	str	x0, [x21]
-	b	.L15
-.L14:
+	b	.L23
+.L22:
 	mov	x24, x0
 	mov	x0, #24
 	bl	malloc
@@ -1340,29 +1458,29 @@ builder_tester_collect_fns:
 	str	x22, [x2]
 	bl	builder_tester_collect_fns
 	str	x0, [x21]
-.L15:
+.L23:
 	str	x0, [x20]
-	b	.L18
-.L16:
+	b	.L26
+.L24:
 	mov	x0, x21
 	mov	x21, x22
 	mov	x1, x21
 	bl	builder_tester_collect_fns
 	str	x0, [x20]
-.L18:
+.L26:
 	str	x0, [x19]
-	b	.L23
-.L19:
+	b	.L31
+.L27:
 	mov	x0, x21
 	mov	x20, x22
 	mov	x1, x20
 	bl	builder_tester_collect_fns
 	str	x0, [x19]
-	b	.L23
-.L21:
+	b	.L31
+.L29:
 	mov	x0, x22
 	bl	donna_list_reverse
-.L23:
+.L31:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1378,6 +1496,161 @@ builder_tester_collect_fns:
 
 .text
 .balign 16
+builder_tester_collect_invalid_fns:
+	hint	#34
+	stp	x29, x30, [sp, -80]!
+	mov	x29, sp
+	str	x19, [x29, 72]
+	str	x20, [x29, 64]
+	str	x21, [x29, 56]
+	str	x22, [x29, 48]
+	str	x23, [x29, 40]
+	str	x24, [x29, 32]
+	str	x25, [x29, 24]
+	mov	x17, x2
+	mov	x2, x0
+	mov	x0, x17
+	mov	x22, x0
+	ldr	x0, [x2]
+	cmp	x0, #0
+	beq	.L45
+	mov	x0, #8
+	add	x0, x2, x0
+	ldr	x0, [x0]
+	mov	x3, #16
+	add	x2, x2, x3
+	ldr	x21, [x2]
+	mov	x23, x1
+	adrp	x1, str106
+	add	x1, x1, #:lo12:str106
+	mov	x19, x0
+	bl	donna_string_starts_with
+	mov	x1, x0
+	mov	x0, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x1, #0
+	beq	.L43
+	mov	x20, x0
+	bl	donna_string_length
+	mov	x1, x23
+	mov	x2, x0
+	mov	x0, x20
+	mov	x3, #7
+	sub	x2, x2, x3
+	mov	x20, x1
+	mov	x1, #7
+	bl	donna_string_slice
+	mov	x1, x20
+	mov	x23, x1
+	adrp	x1, str117
+	add	x1, x1, #:lo12:str117
+	mov	x20, x0
+	bl	donna_string_index_of
+	mov	x1, x23
+	mov	x2, x0
+	mov	x0, x20
+	cmp	x2, #0
+	mov	x25, x1
+	cset	x1, ge
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x20, sp
+	cmp	x1, #0
+	beq	.L40
+	mov	x1, #0
+	bl	donna_string_slice
+	mov	x1, x0
+	mov	x0, x21
+	mov	x23, x1
+	adrp	x1, str127
+	add	x1, x1, #:lo12:str127
+	mov	x21, x0
+	mov	x0, x23
+	bl	donna_string_ends_with
+	mov	x1, x23
+	mov	x2, x0
+	mov	x0, x21
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x21, sp
+	cmp	x2, #1
+	beq	.L37
+	mov	x24, x1
+	adrp	x1, str135
+	add	x1, x1, #:lo12:str135
+	mov	x23, x0
+	mov	x0, x25
+	bl	__rt_str_concat
+	mov	x1, x24
+	bl	__rt_str_concat
+	mov	x17, x0
+	mov	x0, x23
+	mov	x23, x17
+	mov	x24, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x25
+	mov	x2, x0
+	mov	x0, x24
+	mov	x3, #1
+	str	x3, [x2]
+	mov	x3, #8
+	add	x3, x2, x3
+	str	x23, [x3]
+	mov	x3, #16
+	add	x3, x2, x3
+	str	x22, [x3]
+	bl	builder_tester_collect_invalid_fns
+	str	x0, [x21]
+	b	.L39
+.L37:
+	mov	x1, x25
+	mov	x2, x22
+	bl	builder_tester_collect_invalid_fns
+	str	x0, [x21]
+.L39:
+	str	x0, [x20]
+	b	.L42
+.L40:
+	mov	x0, x21
+	mov	x21, x22
+	mov	x1, x25
+	mov	x2, x21
+	bl	builder_tester_collect_invalid_fns
+	str	x0, [x20]
+.L42:
+	str	x0, [x19]
+	b	.L47
+.L43:
+	mov	x0, x21
+	mov	x20, x22
+	mov	x1, x23
+	mov	x2, x20
+	bl	builder_tester_collect_invalid_fns
+	str	x0, [x19]
+	b	.L47
+.L45:
+	mov	x0, x22
+	bl	donna_list_reverse
+.L47:
+	ldr	x19, [x29, 72]
+	ldr	x20, [x29, 64]
+	ldr	x21, [x29, 56]
+	ldr	x22, [x29, 48]
+	ldr	x23, [x29, 40]
+	ldr	x24, [x29, 32]
+	ldr	x25, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 80
+	ret
+.type builder_tester_collect_invalid_fns, @function
+.size builder_tester_collect_invalid_fns, .-builder_tester_collect_invalid_fns
+/* end function builder_tester_collect_invalid_fns */
+
+.text
+.balign 16
 .globl builder_tester_count_total
 builder_tester_count_total:
 	hint	#34
@@ -1387,7 +1660,7 @@ builder_tester_count_total:
 	mov	x1, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L26
+	beq	.L50
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -1403,10 +1676,10 @@ builder_tester_count_total:
 	mov	x19, x17
 	bl	builder_tester_count_total
 	add	x0, x19, x0
-	b	.L27
-.L26:
+	b	.L51
+.L50:
 	mov	x0, #0
-.L27:
+.L51:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -1464,435 +1737,435 @@ builder_tester_generate_filtered_runner:
 	mov	x20, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str99
-	add	x0, x0, #:lo12:str99
+	adrp	x0, str170
+	add	x0, x0, #:lo12:str170
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str101
-	add	x1, x1, #:lo12:str101
+	adrp	x1, str172
+	add	x1, x1, #:lo12:str172
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str103
-	add	x1, x1, #:lo12:str103
+	adrp	x1, str174
+	add	x1, x1, #:lo12:str174
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str105
-	add	x1, x1, #:lo12:str105
+	adrp	x1, str176
+	add	x1, x1, #:lo12:str176
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str107
-	add	x1, x1, #:lo12:str107
+	adrp	x1, str178
+	add	x1, x1, #:lo12:str178
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str109
-	add	x1, x1, #:lo12:str109
+	adrp	x1, str180
+	add	x1, x1, #:lo12:str180
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str111
-	add	x1, x1, #:lo12:str111
+	adrp	x1, str182
+	add	x1, x1, #:lo12:str182
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str113
-	add	x1, x1, #:lo12:str113
+	adrp	x1, str184
+	add	x1, x1, #:lo12:str184
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str115
-	add	x1, x1, #:lo12:str115
+	adrp	x1, str186
+	add	x1, x1, #:lo12:str186
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str117
-	add	x1, x1, #:lo12:str117
+	adrp	x1, str188
+	add	x1, x1, #:lo12:str188
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str119
-	add	x1, x1, #:lo12:str119
+	adrp	x1, str190
+	add	x1, x1, #:lo12:str190
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str121
-	add	x1, x1, #:lo12:str121
+	adrp	x1, str192
+	add	x1, x1, #:lo12:str192
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str123
-	add	x1, x1, #:lo12:str123
+	adrp	x1, str194
+	add	x1, x1, #:lo12:str194
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str125
-	add	x1, x1, #:lo12:str125
+	adrp	x1, str196
+	add	x1, x1, #:lo12:str196
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str127
-	add	x1, x1, #:lo12:str127
+	adrp	x1, str198
+	add	x1, x1, #:lo12:str198
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str129
-	add	x1, x1, #:lo12:str129
+	adrp	x1, str200
+	add	x1, x1, #:lo12:str200
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str131
-	add	x1, x1, #:lo12:str131
+	adrp	x1, str202
+	add	x1, x1, #:lo12:str202
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str133
-	add	x1, x1, #:lo12:str133
+	adrp	x1, str204
+	add	x1, x1, #:lo12:str204
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str135
-	add	x1, x1, #:lo12:str135
+	adrp	x1, str206
+	add	x1, x1, #:lo12:str206
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str137
-	add	x1, x1, #:lo12:str137
+	adrp	x1, str208
+	add	x1, x1, #:lo12:str208
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str139
-	add	x1, x1, #:lo12:str139
+	adrp	x1, str210
+	add	x1, x1, #:lo12:str210
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str141
-	add	x1, x1, #:lo12:str141
+	adrp	x1, str212
+	add	x1, x1, #:lo12:str212
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str143
-	add	x1, x1, #:lo12:str143
+	adrp	x1, str214
+	add	x1, x1, #:lo12:str214
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str145
-	add	x1, x1, #:lo12:str145
+	adrp	x1, str216
+	add	x1, x1, #:lo12:str216
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str147
-	add	x1, x1, #:lo12:str147
+	adrp	x1, str218
+	add	x1, x1, #:lo12:str218
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str149
-	add	x1, x1, #:lo12:str149
+	adrp	x1, str220
+	add	x1, x1, #:lo12:str220
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str151
-	add	x1, x1, #:lo12:str151
+	adrp	x1, str222
+	add	x1, x1, #:lo12:str222
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str153
-	add	x1, x1, #:lo12:str153
+	adrp	x1, str224
+	add	x1, x1, #:lo12:str224
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str155
-	add	x1, x1, #:lo12:str155
+	adrp	x1, str226
+	add	x1, x1, #:lo12:str226
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str157
-	add	x1, x1, #:lo12:str157
+	adrp	x1, str228
+	add	x1, x1, #:lo12:str228
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str159
-	add	x1, x1, #:lo12:str159
+	adrp	x1, str230
+	add	x1, x1, #:lo12:str230
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str161
-	add	x1, x1, #:lo12:str161
+	adrp	x1, str232
+	add	x1, x1, #:lo12:str232
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str163
-	add	x1, x1, #:lo12:str163
+	adrp	x1, str234
+	add	x1, x1, #:lo12:str234
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str165
-	add	x1, x1, #:lo12:str165
+	adrp	x1, str236
+	add	x1, x1, #:lo12:str236
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str167
-	add	x1, x1, #:lo12:str167
+	adrp	x1, str238
+	add	x1, x1, #:lo12:str238
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str169
-	add	x1, x1, #:lo12:str169
+	adrp	x1, str240
+	add	x1, x1, #:lo12:str240
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str171
-	add	x1, x1, #:lo12:str171
+	adrp	x1, str242
+	add	x1, x1, #:lo12:str242
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str173
-	add	x1, x1, #:lo12:str173
+	adrp	x1, str244
+	add	x1, x1, #:lo12:str244
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str175
-	add	x1, x1, #:lo12:str175
+	adrp	x1, str246
+	add	x1, x1, #:lo12:str246
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str177
-	add	x1, x1, #:lo12:str177
+	adrp	x1, str248
+	add	x1, x1, #:lo12:str248
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str179
-	add	x1, x1, #:lo12:str179
+	adrp	x1, str250
+	add	x1, x1, #:lo12:str250
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str181
-	add	x1, x1, #:lo12:str181
+	adrp	x1, str252
+	add	x1, x1, #:lo12:str252
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str183
-	add	x1, x1, #:lo12:str183
+	adrp	x1, str254
+	add	x1, x1, #:lo12:str254
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str185
-	add	x1, x1, #:lo12:str185
+	adrp	x1, str256
+	add	x1, x1, #:lo12:str256
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str187
-	add	x1, x1, #:lo12:str187
+	adrp	x1, str258
+	add	x1, x1, #:lo12:str258
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str189
-	add	x1, x1, #:lo12:str189
+	adrp	x1, str260
+	add	x1, x1, #:lo12:str260
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str191
-	add	x1, x1, #:lo12:str191
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str193
-	add	x1, x1, #:lo12:str193
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str195
-	add	x1, x1, #:lo12:str195
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str197
-	add	x1, x1, #:lo12:str197
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str199
-	add	x1, x1, #:lo12:str199
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str201
-	add	x1, x1, #:lo12:str201
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str203
-	add	x1, x1, #:lo12:str203
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str205
-	add	x1, x1, #:lo12:str205
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str207
-	add	x1, x1, #:lo12:str207
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str209
-	add	x1, x1, #:lo12:str209
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str211
-	add	x1, x1, #:lo12:str211
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str213
-	add	x1, x1, #:lo12:str213
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str215
-	add	x1, x1, #:lo12:str215
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str217
-	add	x1, x1, #:lo12:str217
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str219
-	add	x1, x1, #:lo12:str219
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str221
-	add	x1, x1, #:lo12:str221
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str223
-	add	x1, x1, #:lo12:str223
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str225
-	add	x1, x1, #:lo12:str225
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str227
-	add	x1, x1, #:lo12:str227
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str229
-	add	x1, x1, #:lo12:str229
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str231
-	add	x1, x1, #:lo12:str231
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str233
-	add	x1, x1, #:lo12:str233
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str235
-	add	x1, x1, #:lo12:str235
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str237
-	add	x1, x1, #:lo12:str237
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str239
-	add	x1, x1, #:lo12:str239
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str241
-	add	x1, x1, #:lo12:str241
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str243
-	add	x1, x1, #:lo12:str243
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str245
-	add	x1, x1, #:lo12:str245
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str247
-	add	x1, x1, #:lo12:str247
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str249
-	add	x1, x1, #:lo12:str249
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str251
-	add	x1, x1, #:lo12:str251
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str253
-	add	x1, x1, #:lo12:str253
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str255
-	add	x1, x1, #:lo12:str255
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str257
-	add	x1, x1, #:lo12:str257
-	bl	__rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	adrp	x1, str259
-	add	x1, x1, #:lo12:str259
-	bl	__rt_str_concat
-	mov	x1, x21
-	bl	__rt_str_concat
-	mov	x1, x20
-	mov	x20, x1
 	adrp	x1, str262
 	add	x1, x1, #:lo12:str262
 	bl	__rt_str_concat
-	mov	x1, x20
-	mov	x20, x1
+	mov	x1, x21
+	mov	x21, x1
 	adrp	x1, str264
 	add	x1, x1, #:lo12:str264
 	bl	__rt_str_concat
-	mov	x1, x20
-	mov	x20, x1
+	mov	x1, x21
+	mov	x21, x1
 	adrp	x1, str266
 	add	x1, x1, #:lo12:str266
 	bl	__rt_str_concat
-	mov	x1, x20
-	mov	x20, x1
+	mov	x1, x21
+	mov	x21, x1
 	adrp	x1, str268
 	add	x1, x1, #:lo12:str268
 	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str270
+	add	x1, x1, #:lo12:str270
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str272
+	add	x1, x1, #:lo12:str272
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str274
+	add	x1, x1, #:lo12:str274
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str276
+	add	x1, x1, #:lo12:str276
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str278
+	add	x1, x1, #:lo12:str278
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str280
+	add	x1, x1, #:lo12:str280
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str282
+	add	x1, x1, #:lo12:str282
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str284
+	add	x1, x1, #:lo12:str284
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str286
+	add	x1, x1, #:lo12:str286
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str288
+	add	x1, x1, #:lo12:str288
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str290
+	add	x1, x1, #:lo12:str290
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str292
+	add	x1, x1, #:lo12:str292
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str294
+	add	x1, x1, #:lo12:str294
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str296
+	add	x1, x1, #:lo12:str296
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str298
+	add	x1, x1, #:lo12:str298
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str300
+	add	x1, x1, #:lo12:str300
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str302
+	add	x1, x1, #:lo12:str302
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str304
+	add	x1, x1, #:lo12:str304
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str306
+	add	x1, x1, #:lo12:str306
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str308
+	add	x1, x1, #:lo12:str308
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str310
+	add	x1, x1, #:lo12:str310
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str312
+	add	x1, x1, #:lo12:str312
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str314
+	add	x1, x1, #:lo12:str314
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str316
+	add	x1, x1, #:lo12:str316
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str318
+	add	x1, x1, #:lo12:str318
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str320
+	add	x1, x1, #:lo12:str320
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str322
+	add	x1, x1, #:lo12:str322
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str324
+	add	x1, x1, #:lo12:str324
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str326
+	add	x1, x1, #:lo12:str326
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str328
+	add	x1, x1, #:lo12:str328
+	bl	__rt_str_concat
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str330
+	add	x1, x1, #:lo12:str330
+	bl	__rt_str_concat
+	mov	x1, x21
+	bl	__rt_str_concat
+	mov	x1, x20
+	mov	x20, x1
+	adrp	x1, str333
+	add	x1, x1, #:lo12:str333
+	bl	__rt_str_concat
+	mov	x1, x20
+	mov	x20, x1
+	adrp	x1, str335
+	add	x1, x1, #:lo12:str335
+	bl	__rt_str_concat
+	mov	x1, x20
+	mov	x20, x1
+	adrp	x1, str337
+	add	x1, x1, #:lo12:str337
+	bl	__rt_str_concat
+	mov	x1, x20
+	mov	x20, x1
+	adrp	x1, str339
+	add	x1, x1, #:lo12:str339
+	bl	__rt_str_concat
 	mov	x1, x20
 	bl	__rt_str_concat
-	adrp	x1, str271
-	add	x1, x1, #:lo12:str271
+	adrp	x1, str342
+	add	x1, x1, #:lo12:str342
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -1901,32 +2174,32 @@ builder_tester_generate_filtered_runner:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	adrp	x1, str275
-	add	x1, x1, #:lo12:str275
+	adrp	x1, str346
+	add	x1, x1, #:lo12:str346
 	bl	__rt_str_concat
-	adrp	x1, str277
-	add	x1, x1, #:lo12:str277
+	adrp	x1, str348
+	add	x1, x1, #:lo12:str348
 	bl	__rt_str_concat
-	adrp	x1, str279
-	add	x1, x1, #:lo12:str279
+	adrp	x1, str350
+	add	x1, x1, #:lo12:str350
 	bl	__rt_str_concat
-	adrp	x1, str281
-	add	x1, x1, #:lo12:str281
+	adrp	x1, str352
+	add	x1, x1, #:lo12:str352
 	bl	__rt_str_concat
-	adrp	x1, str283
-	add	x1, x1, #:lo12:str283
+	adrp	x1, str354
+	add	x1, x1, #:lo12:str354
 	bl	__rt_str_concat
-	adrp	x1, str285
-	add	x1, x1, #:lo12:str285
+	adrp	x1, str356
+	add	x1, x1, #:lo12:str356
 	bl	__rt_str_concat
-	adrp	x1, str287
-	add	x1, x1, #:lo12:str287
+	adrp	x1, str358
+	add	x1, x1, #:lo12:str358
 	bl	__rt_str_concat
-	adrp	x1, str289
-	add	x1, x1, #:lo12:str289
+	adrp	x1, str360
+	add	x1, x1, #:lo12:str360
 	bl	__rt_str_concat
-	adrp	x1, str291
-	add	x1, x1, #:lo12:str291
+	adrp	x1, str362
+	add	x1, x1, #:lo12:str362
 	bl	__rt_str_concat
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -1945,11 +2218,11 @@ builder_tester_filter_test_modules:
 	mov	x29, sp
 	ldr	x2, [x1]
 	cmp	x2, #0
-	beq	.L34
+	beq	.L58
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	builder_tester_filter_modules_loop
-.L34:
+.L58:
 	ldp	x29, x30, [sp], 16
 	ret
 .type builder_tester_filter_test_modules, @function
@@ -1971,7 +2244,7 @@ builder_tester_filter_modules_loop:
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L40
+	beq	.L64
 	mov	x24, x1
 	mov	x1, #8
 	add	x1, x0, x1
@@ -2000,7 +2273,7 @@ builder_tester_filter_modules_loop:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L38
+	beq	.L62
 	mov	x21, x0
 	mov	x0, #16
 	bl	malloc
@@ -2029,17 +2302,17 @@ builder_tester_filter_modules_loop:
 	str	x20, [x3]
 	bl	builder_tester_filter_modules_loop
 	str	x0, [x19]
-	b	.L42
-.L38:
+	b	.L66
+.L62:
 	mov	x1, x24
 	mov	x2, x20
 	bl	builder_tester_filter_modules_loop
 	str	x0, [x19]
-	b	.L42
-.L40:
+	b	.L66
+.L64:
 	mov	x0, x20
 	bl	donna_list_reverse
-.L42:
+.L66:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2068,7 +2341,7 @@ builder_tester_filter_fns:
 	mov	x20, x3
 	ldr	x3, [x1]
 	cmp	x3, #0
-	beq	.L48
+	beq	.L72
 	mov	x3, #8
 	add	x3, x1, x3
 	ldr	x21, [x3]
@@ -2088,14 +2361,14 @@ builder_tester_filter_fns:
 	sub	sp, sp, x4
 	mov	x19, sp
 	cmp	x3, #1
-	beq	.L46
+	beq	.L70
 	mov	x3, x20
 	mov	x24, x2
 	mov	x23, x1
 	bl	builder_tester_filter_fns
 	str	x0, [x19]
-	b	.L50
-.L46:
+	b	.L74
+.L70:
 	mov	x23, x1
 	mov	x24, x2
 	mov	x22, x0
@@ -2115,11 +2388,11 @@ builder_tester_filter_fns:
 	str	x20, [x4]
 	bl	builder_tester_filter_fns
 	str	x0, [x19]
-	b	.L50
-.L48:
+	b	.L74
+.L72:
 	mov	x0, x20
 	bl	donna_list_reverse
-.L50:
+.L74:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2146,8 +2419,8 @@ builder_tester_matches_filters:
 	str	x23, [x29, 24]
 	mov	x21, x2
 	mov	x20, x1
-	adrp	x1, str357
-	add	x1, x1, #:lo12:str357
+	adrp	x1, str428
+	add	x1, x1, #:lo12:str428
 	mov	x19, x0
 	bl	__rt_str_concat
 	mov	x1, x20
@@ -2158,7 +2431,7 @@ builder_tester_matches_filters:
 	mov	x22, x1
 	ldr	x1, [x2]
 	cmp	x1, #0
-	beq	.L64
+	beq	.L88
 	mov	x1, #8
 	add	x1, x2, x1
 	ldr	x1, [x1]
@@ -2174,7 +2447,7 @@ builder_tester_matches_filters:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L62
+	beq	.L86
 	mov	x21, x1
 	mov	x20, x0
 	mov	x0, x22
@@ -2186,7 +2459,7 @@ builder_tester_matches_filters:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	.L59
+	beq	.L83
 	mov	x21, x0
 	bl	builder_tester_contains_text
 	mov	x2, x23
@@ -2197,32 +2470,32 @@ builder_tester_matches_filters:
 	sub	sp, sp, x4
 	mov	x21, sp
 	cmp	x3, #1
-	beq	.L56
+	beq	.L80
 	bl	builder_tester_matches_filters
 	str	x0, [x21]
-	b	.L58
-.L56:
+	b	.L82
+.L80:
 	mov	x0, #1
 	str	x0, [x21]
 	mov	x0, #1
-.L58:
+.L82:
 	str	x0, [x20]
-	b	.L61
-.L59:
+	b	.L85
+.L83:
 	mov	x0, #1
 	str	x0, [x20]
 	mov	x0, #1
-.L61:
+.L85:
 	str	x0, [x19]
-	b	.L65
-.L62:
+	b	.L89
+.L86:
 	mov	x0, #1
 	str	x0, [x19]
 	mov	x0, #1
-	b	.L65
-.L64:
+	b	.L89
+.L88:
 	mov	x0, #0
-.L65:
+.L89:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2255,7 +2528,7 @@ builder_tester_contains_text:
 	mov	x20, x1
 	cset	x1, eq
 	cmp	x1, #1
-	beq	.L68
+	beq	.L92
 	mov	x19, x0
 	bl	donna_string_length
 	mov	x3, x21
@@ -2264,10 +2537,10 @@ builder_tester_contains_text:
 	mov	x0, x19
 	mov	x4, #0
 	bl	builder_tester_contains_text_from
-	b	.L69
-.L68:
+	b	.L93
+.L92:
 	mov	x0, #0
-.L69:
+.L93:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2294,7 +2567,7 @@ builder_tester_contains_text_from:
 	mov	x22, x3
 	cset	x3, gt
 	cmp	x3, #1
-	beq	.L75
+	beq	.L99
 	mov	x21, x2
 	mov	x2, x22
 	mov	x20, x1
@@ -2314,20 +2587,20 @@ builder_tester_contains_text_from:
 	sub	sp, sp, x6
 	mov	x19, sp
 	cmp	x5, #1
-	beq	.L73
+	beq	.L97
 	mov	x5, #1
 	add	x4, x4, x5
 	bl	builder_tester_contains_text_from
 	str	x0, [x19]
-	b	.L76
-.L73:
+	b	.L100
+.L97:
 	mov	x0, #1
 	str	x0, [x19]
 	mov	x0, #1
-	b	.L76
-.L75:
+	b	.L100
+.L99:
 	mov	x0, #0
-.L76:
+.L100:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2349,7 +2622,7 @@ builder_tester_gen_imports:
 	str	x19, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L79
+	beq	.L103
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -2358,11 +2631,11 @@ builder_tester_gen_imports:
 	ldr	x0, [x0]
 	ldr	x1, [x1]
 	mov	x19, x0
-	adrp	x0, str436
-	add	x0, x0, #:lo12:str436
+	adrp	x0, str507
+	add	x0, x0, #:lo12:str507
 	bl	__rt_str_concat
-	adrp	x1, str438
-	add	x1, x1, #:lo12:str438
+	adrp	x1, str509
+	add	x1, x1, #:lo12:str509
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -2371,11 +2644,11 @@ builder_tester_gen_imports:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L80
-.L79:
-	adrp	x0, str427
-	add	x0, x0, #:lo12:str427
-.L80:
+	b	.L104
+.L103:
+	adrp	x0, str498
+	add	x0, x0, #:lo12:str498
+.L104:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -2392,7 +2665,7 @@ builder_tester_gen_call_lines:
 	str	x19, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L83
+	beq	.L107
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -2412,11 +2685,11 @@ builder_tester_gen_call_lines:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L84
-.L83:
-	adrp	x0, str449
-	add	x0, x0, #:lo12:str449
-.L84:
+	b	.L108
+.L107:
+	adrp	x0, str520
+	add	x0, x0, #:lo12:str520
+.L108:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -2435,7 +2708,7 @@ builder_tester_gen_module_runners:
 	str	x21, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L87
+	beq	.L111
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -2449,23 +2722,23 @@ builder_tester_gen_module_runners:
 	mov	x21, x1
 	mov	x1, x0
 	mov	x20, x0
-	adrp	x0, str477
-	add	x0, x0, #:lo12:str477
+	adrp	x0, str548
+	add	x0, x0, #:lo12:str548
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str479
-	add	x1, x1, #:lo12:str479
+	adrp	x1, str550
+	add	x1, x1, #:lo12:str550
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str481
-	add	x1, x1, #:lo12:str481
+	adrp	x1, str552
+	add	x1, x1, #:lo12:str552
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str483
-	add	x1, x1, #:lo12:str483
+	adrp	x1, str554
+	add	x1, x1, #:lo12:str554
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x17, x0
@@ -2475,8 +2748,8 @@ builder_tester_gen_module_runners:
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str487
-	add	x1, x1, #:lo12:str487
+	adrp	x1, str558
+	add	x1, x1, #:lo12:str558
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -2485,11 +2758,11 @@ builder_tester_gen_module_runners:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L88
-.L87:
-	adrp	x0, str468
-	add	x0, x0, #:lo12:str468
-.L88:
+	b	.L112
+.L111:
+	adrp	x0, str539
+	add	x0, x0, #:lo12:str539
+.L112:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2509,7 +2782,7 @@ builder_tester_gen_main_module_calls:
 	str	x20, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L91
+	beq	.L115
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -2519,52 +2792,52 @@ builder_tester_gen_main_module_calls:
 	ldr	x1, [x1]
 	mov	x20, x1
 	mov	x19, x0
-	adrp	x0, str507
-	add	x0, x0, #:lo12:str507
+	adrp	x0, str578
+	add	x0, x0, #:lo12:str578
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str509
-	add	x1, x1, #:lo12:str509
-	bl	__rt_str_concat
-	mov	x1, x20
-	mov	x20, x1
-	bl	__rt_str_concat
-	mov	x1, x20
-	mov	x20, x1
-	adrp	x1, str512
-	add	x1, x1, #:lo12:str512
+	adrp	x1, str580
+	add	x1, x1, #:lo12:str580
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str515
-	add	x1, x1, #:lo12:str515
-	bl	__rt_str_concat
-	mov	x1, x20
-	mov	x20, x1
-	adrp	x1, str517
-	add	x1, x1, #:lo12:str517
+	adrp	x1, str583
+	add	x1, x1, #:lo12:str583
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str520
-	add	x1, x1, #:lo12:str520
+	adrp	x1, str586
+	add	x1, x1, #:lo12:str586
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str522
-	add	x1, x1, #:lo12:str522
+	adrp	x1, str588
+	add	x1, x1, #:lo12:str588
+	bl	__rt_str_concat
+	mov	x1, x20
+	mov	x20, x1
+	bl	__rt_str_concat
+	mov	x1, x20
+	mov	x20, x1
+	adrp	x1, str591
+	add	x1, x1, #:lo12:str591
+	bl	__rt_str_concat
+	mov	x1, x20
+	mov	x20, x1
+	adrp	x1, str593
+	add	x1, x1, #:lo12:str593
 	bl	__rt_str_concat
 	mov	x1, x20
 	bl	__rt_str_concat
-	adrp	x1, str525
-	add	x1, x1, #:lo12:str525
+	adrp	x1, str596
+	add	x1, x1, #:lo12:str596
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -2573,11 +2846,11 @@ builder_tester_gen_main_module_calls:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L92
-.L91:
-	adrp	x0, str498
-	add	x0, x0, #:lo12:str498
-.L92:
+	b	.L116
+.L115:
+	adrp	x0, str569
+	add	x0, x0, #:lo12:str569
+.L116:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -2598,7 +2871,7 @@ builder_tester_gen_mod_calls:
 	mov	x2, x1
 	ldr	x1, [x2]
 	cmp	x1, #0
-	beq	.L95
+	beq	.L119
 	mov	x1, #8
 	add	x1, x2, x1
 	ldr	x1, [x1]
@@ -2606,8 +2879,8 @@ builder_tester_gen_mod_calls:
 	add	x2, x2, x3
 	ldr	x20, [x2]
 	mov	x21, x1
-	adrp	x1, str541
-	add	x1, x1, #:lo12:str541
+	adrp	x1, str612
+	add	x1, x1, #:lo12:str612
 	mov	x19, x0
 	bl	__rt_str_concat
 	mov	x1, x21
@@ -2616,13 +2889,13 @@ builder_tester_gen_mod_calls:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str544
-	add	x0, x0, #:lo12:str544
+	adrp	x0, str615
+	add	x0, x0, #:lo12:str615
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str546
-	add	x1, x1, #:lo12:str546
+	adrp	x1, str617
+	add	x1, x1, #:lo12:str617
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
@@ -2630,15 +2903,15 @@ builder_tester_gen_mod_calls:
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str549
-	add	x1, x1, #:lo12:str549
+	adrp	x1, str620
+	add	x1, x1, #:lo12:str620
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str552
-	add	x1, x1, #:lo12:str552
+	adrp	x1, str623
+	add	x1, x1, #:lo12:str623
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x17, x0
@@ -2648,11 +2921,11 @@ builder_tester_gen_mod_calls:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L96
-.L95:
-	adrp	x0, str536
-	add	x0, x0, #:lo12:str536
-.L96:
+	b	.L120
+.L119:
+	adrp	x0, str607
+	add	x0, x0, #:lo12:str607
+.L120:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
