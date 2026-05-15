@@ -354,18 +354,18 @@ str124:
 	.ascii "      - uses: actions/checkout@v4"
 	.byte 10
 	.byte 10
-	.ascii "      - name: Checkout Donna tools"
+	.ascii "      - name: Cache QBE"
 	.byte 10
-	.ascii "        uses: actions/checkout@v4"
+	.ascii "        uses: actions/cache@v4"
 	.byte 10
 	.ascii "        with:"
 	.byte 10
-	.ascii "          repository: donna-lang/donna"
+	.ascii "          path: ~/.local/bin/qbe"
 	.byte 10
-	.ascii "          path: .donna-tools/compiler"
+	.ascii "          key: qbe-${{ runner.os }}-2026-05-13"
 	.byte 10
 	.byte 10
-	.ascii "      - name: Install build tools and QBE"
+	.ascii "      - name: Install QBE"
 	.byte 10
 	.ascii "        shell: bash"
 	.byte 10
@@ -373,11 +373,72 @@ str124:
 	.byte 10
 	.ascii "          set -euo pipefail"
 	.byte 10
+	.ascii "          mkdir -p "
+	.byte 34
+	.ascii "$HOME/.local/bin"
+	.byte 34
+	.byte 10
+	.ascii "          export PATH="
+	.byte 34
+	.ascii "$HOME/.local/bin:$PATH"
+	.byte 34
+	.byte 10
+	.ascii "          echo "
+	.byte 34
+	.ascii "$HOME/.local/bin"
+	.byte 34
+	.ascii " >> "
+	.byte 34
+	.ascii "$GITHUB_PATH"
+	.byte 34
+	.byte 10
+	.ascii "          if command -v qbe >/dev/null 2>&1; then"
+	.byte 10
+	.ascii "            qbe --version || true"
+	.byte 10
+	.ascii "            exit 0"
+	.byte 10
+	.ascii "          fi"
+	.byte 10
 	.ascii "          sudo apt-get update"
 	.byte 10
-	.ascii "          sudo apt-get install -y build-essential git make"
+	.ascii "          if apt-cache show qbe >/dev/null 2>&1; then"
 	.byte 10
-	.ascii "          make -C .donna-tools/compiler install-qbe"
+	.ascii "            sudo apt-get install -y qbe"
+	.byte 10
+	.ascii "          elif [ -x "
+	.byte 34
+	.ascii "$HOME/.local/bin/qbe"
+	.byte 34
+	.ascii " ]; then"
+	.byte 10
+	.ascii "            true"
+	.byte 10
+	.ascii "          else"
+	.byte 10
+	.ascii "            sudo apt-get install -y build-essential git make"
+	.byte 10
+	.ascii "            git clone git://c9x.me/qbe.git "
+	.byte 34
+	.ascii "$RUNNER_TEMP/qbe"
+	.byte 34
+	.byte 10
+	.ascii "            make -C "
+	.byte 34
+	.ascii "$RUNNER_TEMP/qbe"
+	.byte 34
+	.byte 10
+	.ascii "            make -C "
+	.byte 34
+	.ascii "$RUNNER_TEMP/qbe"
+	.byte 34
+	.ascii " PREFIX="
+	.byte 34
+	.ascii "$HOME/.local"
+	.byte 34
+	.ascii " install"
+	.byte 10
+	.ascii "          fi"
 	.byte 10
 	.ascii "          qbe --version || true"
 	.byte 10

@@ -27,203 +27,210 @@ _str1182:
 
 .data
 .balign 8
-_str2141:
+_str2143:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2190:
+_str2281:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str2383:
 	.ascii "Int"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2221:
+_str2414:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2252:
+_str2445:
 	.ascii "String"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2283:
+_str2476:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2314:
+_str2507:
 	.ascii "Nil"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2345:
+_str2538:
 	.ascii "List"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2432:
+_str2625:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2735:
+_str2928:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2740:
+_str2933:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2762:
+_str2955:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2767:
+_str2960:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2789:
+_str2982:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2794:
+_str2987:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2816:
+_str3009:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2821:
+_str3014:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2843:
+_str3036:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2848:
+_str3041:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2870:
+_str3063:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2875:
+_str3068:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2897:
+_str3090:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2902:
+_str3095:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2924:
+_str3117:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2929:
+_str3122:
 	.ascii "Float"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2951:
+_str3144:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2956:
+_str3149:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2978:
+_str3171:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str2983:
+_str3176:
 	.ascii "Bool"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str3077:
+_str3270:
 	.ascii "/"
 	.byte 0
 /* end data */
@@ -3148,6 +3155,11 @@ L268:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x21, [x1]
+	mov	x22, x0
+	mov	x0, x20
+	bl	_compiler_typesystem_types_typed_expr_type
+	mov	x2, x0
+	mov	x0, x22
 	mov	x1, x21
 	bl	_compiler_typesystem_checker_infer_clauses
 	mov	x1, x0
@@ -3952,13 +3964,13 @@ _compiler_typesystem_checker_infer_clauses:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	ldr	x2, [x0]
-	cmp	x2, #0
+	ldr	x3, [x0]
+	cmp	x3, #0
 	beq	L354
-	adrp	x3, _compiler_typesystem_types_TNil@page
-	add	x3, x3, _compiler_typesystem_types_TNil@pageoff
-	adrp	x2, _donna_nil@page
-	add	x2, x2, _donna_nil@pageoff
+	adrp	x4, _compiler_typesystem_types_TNil@page
+	add	x4, x4, _compiler_typesystem_types_TNil@pageoff
+	adrp	x3, _donna_nil@page
+	add	x3, x3, _donna_nil@pageoff
 	bl	_compiler_typesystem_checker_infer_clauses_loop
 	b	L355
 L354:
@@ -3992,40 +4004,42 @@ _compiler_typesystem_checker_infer_clauses_loop:
 	str	x24, [x29, 48]
 	str	x25, [x29, 40]
 	str	x26, [x29, 32]
-	mov	x20, x3
-	mov	x22, x2
-	mov	x25, x1
+	mov	x20, x4
+	mov	x22, x3
+	mov	x24, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
 	beq	L366
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
-	mov	x2, #16
-	add	x0, x0, x2
-	ldr	x23, [x0]
+	mov	x3, #16
+	add	x0, x0, x3
+	ldr	x19, [x0]
 	mov	x0, #16
 	sub	sp, sp, x0
-	mov	x19, sp
-	str	x19, [x29, 16]
+	mov	x23, sp
+	str	x23, [x29, 16]
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x21, [x0]
 	mov	x0, #16
 	add	x0, x1, x0
 	ldr	x0, [x0]
-	mov	x2, #24
-	add	x1, x1, x2
+	mov	x3, #24
+	add	x1, x1, x3
 	ldr	x20, [x1]
+	mov	x25, x2
+	mov	x2, x24
 	mov	x1, x25
-	mov	x24, x0
+	mov	x26, x0
 	mov	x0, x21
-	bl	_compiler_typesystem_checker_bind_pattern
+	bl	_compiler_typesystem_checker_bind_pattern_typed
 	mov	x1, x0
-	mov	x0, x24
-	mov	x24, x1
+	mov	x0, x26
+	mov	x26, x1
 	bl	_compiler_typesystem_checker_infer_guard
-	mov	x1, x24
+	mov	x1, x26
 	mov	x2, x0
 	mov	x0, x20
 	mov	x3, #16
@@ -4036,13 +4050,16 @@ _compiler_typesystem_checker_infer_clauses_loop:
 	beq	L363
 	mov	x3, #8
 	add	x2, x2, x3
-	ldr	x24, [x2]
+	ldr	x4, [x2]
+	str	x4, [x29, 24]
 	bl	_compiler_typesystem_checker_infer_expr
+	mov	x2, x25
 	mov	x1, x0
 	mov	x0, x21
-	mov	x2, #16
-	sub	sp, sp, x2
+	mov	x3, #16
+	sub	sp, sp, x3
 	mov	x21, sp
+	mov	x25, x2
 	ldr	x2, [x1]
 	cmp	x2, #1
 	beq	L360
@@ -4050,39 +4067,42 @@ _compiler_typesystem_checker_infer_clauses_loop:
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	ldr	x26, [x1]
-	mov	x19, x0
+	mov	x23, x0
 	mov	x0, x26
 	bl	_compiler_typesystem_types_typed_expr_type
 	mov	x2, x26
 	mov	x1, x24
+	mov	x26, x0
+	mov	x0, x23
+	mov	x24, x1
+	ldr	x1, [x29, 24]
+	mov	x3, x26
+	bl	_compiler_typesystem_types_TypedClause
+	mov	x23, x0
+	mov	x0, x19
+	mov	x19, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x4, x26
+	mov	x2, x25
+	mov	x1, x24
 	mov	x3, x0
 	mov	x0, x19
 	ldr	x19, [x29, 16]
-	mov	x26, x3
-	bl	_compiler_typesystem_types_TypedClause
-	mov	x17, x0
-	mov	x0, x23
-	mov	x23, x17
-	mov	x24, x0
-	mov	x0, #24
-	bl	_malloc
-	mov	x3, x26
-	mov	x1, x25
-	mov	x2, x0
-	mov	x0, x24
-	mov	x4, #1
-	str	x4, [x2]
-	mov	x4, #8
-	add	x4, x2, x4
-	str	x23, [x4]
-	mov	x4, #16
-	add	x4, x2, x4
-	str	x22, [x4]
+	mov	x5, #1
+	str	x5, [x3]
+	mov	x5, #8
+	add	x5, x3, x5
+	str	x23, [x5]
+	mov	x5, #16
+	add	x5, x3, x5
+	str	x22, [x5]
 	bl	_compiler_typesystem_checker_infer_clauses_loop
 	str	x0, [x21]
 	b	L362
 L360:
 	mov	x0, x1
+	mov	x19, x23
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -4093,6 +4113,7 @@ L362:
 	b	L365
 L363:
 	mov	x0, x2
+	mov	x19, x23
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -4107,11 +4128,11 @@ L366:
 	mov	x19, x0
 	mov	x0, #16
 	bl	_malloc
-	mov	x3, x20
+	mov	x4, x20
 	str	x19, [x0]
 	mov	x1, #8
 	add	x1, x0, x1
-	str	x3, [x1]
+	str	x4, [x1]
 	bl	_donna_result_Ok
 L368:
 	ldr	x19, [x29, 88]
@@ -4356,11 +4377,15 @@ L389:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
-	ldr	x1, [x1]
-	mov	x21, x1
-	mov	x1, x20
+	ldr	x21, [x1]
+	mov	x22, x0
+	mov	x0, x21
+	bl	_compiler_typesystem_types_typed_expr_type
+	mov	x1, x0
+	mov	x0, x22
+	mov	x2, x20
 	mov	x20, x0
-	bl	_compiler_typesystem_checker_bind_pattern
+	bl	_compiler_typesystem_checker_bind_pattern_typed
 	mov	x1, x21
 	mov	x17, x0
 	mov	x0, x20
@@ -4554,8 +4579,8 @@ L417:
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
-	adrp	x1, _str2141@page
-	add	x1, x1, _str2141@pageoff
+	adrp	x1, _str2143@page
+	add	x1, x1, _str2143@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x23
@@ -4617,6 +4642,312 @@ L424:
 
 .text
 .balign 4
+_compiler_typesystem_checker_bind_pattern_typed:
+	hint	#34
+	stp	x29, x30, [sp, -64]!
+	mov	x29, sp
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
+	mov	x17, x2
+	mov	x2, x0
+	mov	x0, x17
+	mov	x17, x1
+	mov	x1, x2
+	mov	x2, x17
+	mov	x20, x0
+	ldr	x0, [x1]
+	cmp	x0, #2
+	beq	L462
+	cmp	x0, #0
+	beq	L461
+	cmp	x0, #1
+	beq	L460
+	cmp	x0, #3
+	beq	L459
+	cmp	x0, #4
+	beq	L458
+	cmp	x0, #5
+	beq	L457
+	cmp	x0, #6
+	beq	L456
+	cmp	x0, #7
+	beq	L452
+	cmp	x0, #8
+	beq	L437
+	mov	x0, x1
+	mov	x1, #16
+	add	x1, x0, x1
+	ldr	x1, [x1]
+	mov	x2, #24
+	add	x0, x0, x2
+	ldr	x0, [x0]
+	mov	x19, x0
+	mov	x0, x20
+	bl	_compiler_typesystem_env_env_lookup_ctor
+	mov	x1, x0
+	mov	x0, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	ldr	x2, [x1]
+	cmp	x2, #0
+	beq	L436
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x1, [x1]
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x1, [x1]
+	mov	x2, x20
+	bl	_compiler_typesystem_checker_bind_pattern_typed_list
+	str	x0, [x19]
+	b	L464
+L436:
+	mov	x1, x20
+	bl	_compiler_typesystem_checker_bind_pattern_list
+	str	x0, [x19]
+	b	L464
+L437:
+	mov	x0, x20
+	mov	x20, x0
+	mov	x0, #8
+	add	x0, x1, x0
+	ldr	x0, [x0]
+	mov	x3, #16
+	add	x1, x1, x3
+	ldr	x21, [x1]
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x22, sp
+	ldr	x1, [x2]
+	cmp	x1, #5
+	beq	L440
+	mov	x19, x0
+	mov	x0, x20
+	bl	_compiler_typesystem_env_env_next_var
+	bl	_compiler_typesystem_types_TTypeVar
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	str	x19, [x22]
+	b	L441
+L440:
+	mov	x1, #8
+	add	x1, x2, x1
+	ldr	x19, [x1]
+	str	x19, [x22]
+L441:
+	mov	x2, x20
+	mov	x1, x19
+	bl	_compiler_typesystem_checker_bind_pattern_typed_repeated
+	mov	x20, x0
+	mov	x0, x19
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	ldr	x1, [x21]
+	cmp	x1, #0
+	beq	L450
+	cmp	x1, #1
+	cset	x23, eq
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x22, sp
+	cmp	w23, #0
+	bne	L445
+	mov	x1, #0
+	str	x1, [x22]
+	mov	x1, #0
+	b	L446
+L445:
+	mov	x24, x0
+	mov	x0, #8
+	add	x0, x21, x0
+	ldr	x0, [x0]
+	adrp	x1, _str2281@page
+	add	x1, x1, _str2281@pageoff
+	bl	_strcmp
+	mov	x1, x0
+	mov	x0, x24
+	cmp	x1, #0
+	cset	x1, eq
+	and	x1, x1, x23
+	str	x1, [x22]
+L446:
+	cmp	w1, #0
+	bne	L448
+	mov	x1, #8
+	add	x1, x21, x1
+	ldr	x21, [x1]
+	bl	_compiler_typesystem_types_TListType
+	mov	x1, x21
+	mov	x2, x0
+	mov	x0, x20
+	bl	_compiler_typesystem_env_env_bind
+	str	x0, [x19]
+	b	L464
+L448:
+	mov	x0, x20
+	str	x0, [x19]
+	b	L464
+L450:
+	mov	x0, x20
+	str	x0, [x19]
+	b	L464
+L452:
+	mov	x0, x20
+	mov	x20, x0
+	mov	x0, #8
+	add	x0, x1, x0
+	ldr	x0, [x0]
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	ldr	x1, [x2]
+	cmp	x1, #6
+	beq	L455
+	mov	x1, x20
+	bl	_compiler_typesystem_checker_bind_pattern_list
+	str	x0, [x19]
+	b	L464
+L455:
+	mov	x1, #8
+	add	x1, x2, x1
+	ldr	x1, [x1]
+	mov	x2, x20
+	bl	_compiler_typesystem_checker_bind_pattern_typed_list
+	str	x0, [x19]
+	b	L464
+L456:
+	mov	x0, x20
+	b	L464
+L457:
+	mov	x0, x20
+	b	L464
+L458:
+	mov	x0, x20
+	b	L464
+L459:
+	mov	x0, x20
+	b	L464
+L460:
+	mov	x0, x20
+	b	L464
+L461:
+	mov	x0, x20
+	b	L464
+L462:
+	mov	x0, x20
+	mov	x3, #8
+	add	x1, x1, x3
+	ldr	x1, [x1]
+	bl	_compiler_typesystem_env_env_bind
+L464:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 64
+	ret
+/* end function compiler_typesystem_checker_bind_pattern_typed */
+
+.text
+.balign 4
+_compiler_typesystem_checker_bind_pattern_typed_list:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x3, x1
+	ldr	x1, [x0]
+	cmp	x1, #0
+	beq	L471
+	mov	x1, #8
+	add	x1, x0, x1
+	ldr	x4, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	ldr	x20, [x1]
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	ldr	x1, [x3]
+	cmp	x1, #0
+	beq	L469
+	mov	x0, x4
+	mov	x1, #8
+	add	x1, x3, x1
+	ldr	x1, [x1]
+	mov	x4, #16
+	add	x3, x3, x4
+	ldr	x21, [x3]
+	bl	_compiler_typesystem_checker_bind_pattern_typed
+	mov	x1, x21
+	mov	x2, x0
+	mov	x0, x20
+	bl	_compiler_typesystem_checker_bind_pattern_typed_list
+	str	x0, [x19]
+	b	L472
+L469:
+	mov	x1, x2
+	bl	_compiler_typesystem_checker_bind_pattern_list
+	str	x0, [x19]
+	b	L472
+L471:
+	mov	x0, x2
+L472:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function compiler_typesystem_checker_bind_pattern_typed_list */
+
+.text
+.balign 4
+_compiler_typesystem_checker_bind_pattern_typed_repeated:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	str	x20, [x29, 16]
+	mov	x3, x0
+	mov	x0, x2
+	ldr	x2, [x3]
+	cmp	x2, #0
+	beq	L475
+	mov	x2, x0
+	mov	x0, #8
+	add	x0, x3, x0
+	ldr	x0, [x0]
+	mov	x4, #16
+	add	x3, x3, x4
+	ldr	x19, [x3]
+	mov	x20, x1
+	bl	_compiler_typesystem_checker_bind_pattern_typed
+	mov	x1, x20
+	mov	x2, x0
+	mov	x0, x19
+	bl	_compiler_typesystem_checker_bind_pattern_typed_repeated
+L475:
+	ldr	x19, [x29, 24]
+	ldr	x20, [x29, 16]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function compiler_typesystem_checker_bind_pattern_typed_repeated */
+
+.text
+.balign 4
 _compiler_typesystem_checker_bind_pattern_list:
 	hint	#34
 	stp	x29, x30, [sp, -32]!
@@ -4626,7 +4957,7 @@ _compiler_typesystem_checker_bind_pattern_list:
 	mov	x0, x1
 	ldr	x1, [x2]
 	cmp	x1, #0
-	beq	L427
+	beq	L478
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -4638,7 +4969,7 @@ _compiler_typesystem_checker_bind_pattern_list:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_compiler_typesystem_checker_bind_pattern_list
-L427:
+L478:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -4658,33 +4989,33 @@ _compiler_typesystem_checker_annotation_to_type:
 	cmp	x1, #0
 	cset	x19, eq
 	cmp	w19, #0
-	bne	L430
+	bne	L481
 	mov	x3, #0
-	b	L431
-L430:
+	b	L482
+L481:
 	mov	x20, x0
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
-	adrp	x1, _str2190@page
-	add	x1, x1, _str2190@pageoff
+	adrp	x1, _str2383@page
+	add	x1, x1, _str2383@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x20
 	cmp	x1, #0
 	cset	x1, eq
 	and	x3, x19, x1
-L431:
+L482:
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x2, sp
 	cmp	w3, #0
-	bne	L434
+	bne	L485
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	L435
-L434:
+	b	L486
+L485:
 	mov	x1, #16
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -4693,9 +5024,9 @@ L434:
 	cset	x1, eq
 	and	x1, x1, x3
 	str	x1, [x2]
-L435:
+L486:
 	cmp	w1, #0
-	bne	L498
+	bne	L549
 	ldr	x1, [x0]
 	cmp	x1, #0
 	cset	x20, eq
@@ -4703,18 +5034,18 @@ L435:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	w20, #0
-	bne	L439
+	bne	L490
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x3, #0
-	b	L440
-L439:
+	b	L491
+L490:
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x21, x0
 	ldr	x0, [x0]
-	adrp	x1, _str2221@page
-	add	x1, x1, _str2221@pageoff
+	adrp	x1, _str2414@page
+	add	x1, x1, _str2414@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x21
@@ -4722,172 +5053,28 @@ L439:
 	cset	x1, eq
 	and	x3, x1, x20
 	str	x3, [x19]
-L440:
+L491:
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x2, sp
 	cmp	w3, #0
-	bne	L443
-	mov	x1, #0
-	str	x1, [x2]
-	mov	x1, #0
-	b	L444
-L443:
-	mov	x1, #16
-	add	x1, x0, x1
-	ldr	x1, [x1]
-	ldr	x1, [x1]
-	cmp	x1, #0
-	cset	x1, eq
-	and	x1, x1, x3
-	str	x1, [x2]
-L444:
-	cmp	w1, #0
-	bne	L497
-	ldr	x1, [x0]
-	cmp	x1, #0
-	cset	x20, eq
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x19, sp
-	cmp	w20, #0
-	bne	L448
-	mov	x1, #0
-	str	x1, [x19]
-	mov	x3, #0
-	b	L449
-L448:
-	mov	x21, x0
-	mov	x0, #8
-	add	x0, x21, x0
-	ldr	x0, [x0]
-	adrp	x1, _str2252@page
-	add	x1, x1, _str2252@pageoff
-	bl	_strcmp
-	mov	x1, x0
-	mov	x0, x21
-	cmp	x1, #0
-	cset	x1, eq
-	and	x3, x1, x20
-	str	x3, [x19]
-L449:
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x2, sp
-	cmp	w3, #0
-	bne	L452
-	mov	x1, #0
-	str	x1, [x2]
-	mov	x1, #0
-	b	L453
-L452:
-	mov	x1, #16
-	add	x1, x0, x1
-	ldr	x1, [x1]
-	ldr	x1, [x1]
-	cmp	x1, #0
-	cset	x1, eq
-	and	x1, x1, x3
-	str	x1, [x2]
-L453:
-	cmp	w1, #0
-	bne	L496
-	ldr	x1, [x0]
-	cmp	x1, #0
-	cset	x20, eq
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x19, sp
-	cmp	w20, #0
-	bne	L457
-	mov	x1, #0
-	str	x1, [x19]
-	mov	x3, #0
-	b	L458
-L457:
-	mov	x21, x0
-	mov	x0, #8
-	add	x0, x21, x0
-	ldr	x0, [x0]
-	adrp	x1, _str2283@page
-	add	x1, x1, _str2283@pageoff
-	bl	_strcmp
-	mov	x1, x0
-	mov	x0, x21
-	cmp	x1, #0
-	cset	x1, eq
-	and	x3, x1, x20
-	str	x3, [x19]
-L458:
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x2, sp
-	cmp	w3, #0
-	bne	L461
-	mov	x1, #0
-	str	x1, [x2]
-	mov	x1, #0
-	b	L462
-L461:
-	mov	x1, #16
-	add	x1, x0, x1
-	ldr	x1, [x1]
-	ldr	x1, [x1]
-	cmp	x1, #0
-	cset	x1, eq
-	and	x1, x1, x3
-	str	x1, [x2]
-L462:
-	cmp	w1, #0
-	bne	L495
-	ldr	x1, [x0]
-	cmp	x1, #0
-	cset	x20, eq
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x19, sp
-	cmp	w20, #0
-	bne	L466
-	mov	x1, #0
-	str	x1, [x19]
-	mov	x3, #0
-	b	L467
-L466:
-	mov	x21, x0
-	mov	x0, #8
-	add	x0, x21, x0
-	ldr	x0, [x0]
-	adrp	x1, _str2314@page
-	add	x1, x1, _str2314@pageoff
-	bl	_strcmp
-	mov	x1, x0
-	mov	x0, x21
-	cmp	x1, #0
-	cset	x1, eq
-	and	x3, x1, x20
-	str	x3, [x19]
-L467:
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x2, sp
-	cmp	w3, #0
-	bne	L470
-	mov	x1, #0
-	str	x1, [x2]
-	mov	x1, #0
-	b	L471
-L470:
-	mov	x1, #16
-	add	x1, x0, x1
-	ldr	x1, [x1]
-	ldr	x1, [x1]
-	cmp	x1, #0
-	cset	x1, eq
-	and	x1, x1, x3
-	str	x1, [x2]
-L471:
-	cmp	w1, #0
 	bne	L494
+	mov	x1, #0
+	str	x1, [x2]
+	mov	x1, #0
+	b	L495
+L494:
+	mov	x1, #16
+	add	x1, x0, x1
+	ldr	x1, [x1]
+	ldr	x1, [x1]
+	cmp	x1, #0
+	cset	x1, eq
+	and	x1, x1, x3
+	str	x1, [x2]
+L495:
+	cmp	w1, #0
+	bne	L548
 	ldr	x1, [x0]
 	cmp	x1, #0
 	cset	x20, eq
@@ -4895,18 +5082,162 @@ L471:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	w20, #0
-	bne	L475
+	bne	L499
 	mov	x1, #0
 	str	x1, [x19]
-	mov	x1, #0
-	b	L476
-L475:
+	mov	x3, #0
+	b	L500
+L499:
 	mov	x21, x0
 	mov	x0, #8
 	add	x0, x21, x0
 	ldr	x0, [x0]
-	adrp	x1, _str2345@page
-	add	x1, x1, _str2345@pageoff
+	adrp	x1, _str2445@page
+	add	x1, x1, _str2445@pageoff
+	bl	_strcmp
+	mov	x1, x0
+	mov	x0, x21
+	cmp	x1, #0
+	cset	x1, eq
+	and	x3, x1, x20
+	str	x3, [x19]
+L500:
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x2, sp
+	cmp	w3, #0
+	bne	L503
+	mov	x1, #0
+	str	x1, [x2]
+	mov	x1, #0
+	b	L504
+L503:
+	mov	x1, #16
+	add	x1, x0, x1
+	ldr	x1, [x1]
+	ldr	x1, [x1]
+	cmp	x1, #0
+	cset	x1, eq
+	and	x1, x1, x3
+	str	x1, [x2]
+L504:
+	cmp	w1, #0
+	bne	L547
+	ldr	x1, [x0]
+	cmp	x1, #0
+	cset	x20, eq
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	cmp	w20, #0
+	bne	L508
+	mov	x1, #0
+	str	x1, [x19]
+	mov	x3, #0
+	b	L509
+L508:
+	mov	x21, x0
+	mov	x0, #8
+	add	x0, x21, x0
+	ldr	x0, [x0]
+	adrp	x1, _str2476@page
+	add	x1, x1, _str2476@pageoff
+	bl	_strcmp
+	mov	x1, x0
+	mov	x0, x21
+	cmp	x1, #0
+	cset	x1, eq
+	and	x3, x1, x20
+	str	x3, [x19]
+L509:
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x2, sp
+	cmp	w3, #0
+	bne	L512
+	mov	x1, #0
+	str	x1, [x2]
+	mov	x1, #0
+	b	L513
+L512:
+	mov	x1, #16
+	add	x1, x0, x1
+	ldr	x1, [x1]
+	ldr	x1, [x1]
+	cmp	x1, #0
+	cset	x1, eq
+	and	x1, x1, x3
+	str	x1, [x2]
+L513:
+	cmp	w1, #0
+	bne	L546
+	ldr	x1, [x0]
+	cmp	x1, #0
+	cset	x20, eq
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	cmp	w20, #0
+	bne	L517
+	mov	x1, #0
+	str	x1, [x19]
+	mov	x3, #0
+	b	L518
+L517:
+	mov	x21, x0
+	mov	x0, #8
+	add	x0, x21, x0
+	ldr	x0, [x0]
+	adrp	x1, _str2507@page
+	add	x1, x1, _str2507@pageoff
+	bl	_strcmp
+	mov	x1, x0
+	mov	x0, x21
+	cmp	x1, #0
+	cset	x1, eq
+	and	x3, x1, x20
+	str	x3, [x19]
+L518:
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x2, sp
+	cmp	w3, #0
+	bne	L521
+	mov	x1, #0
+	str	x1, [x2]
+	mov	x1, #0
+	b	L522
+L521:
+	mov	x1, #16
+	add	x1, x0, x1
+	ldr	x1, [x1]
+	ldr	x1, [x1]
+	cmp	x1, #0
+	cset	x1, eq
+	and	x1, x1, x3
+	str	x1, [x2]
+L522:
+	cmp	w1, #0
+	bne	L545
+	ldr	x1, [x0]
+	cmp	x1, #0
+	cset	x20, eq
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	cmp	w20, #0
+	bne	L526
+	mov	x1, #0
+	str	x1, [x19]
+	mov	x1, #0
+	b	L527
+L526:
+	mov	x21, x0
+	mov	x0, #8
+	add	x0, x21, x0
+	ldr	x0, [x0]
+	adrp	x1, _str2538@page
+	add	x1, x1, _str2538@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x21
@@ -4914,17 +5245,17 @@ L475:
 	cset	x1, eq
 	and	x1, x1, x20
 	str	x1, [x19]
-L476:
+L527:
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	w1, #0
-	bne	L479
+	bne	L530
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	L484
-L479:
+	b	L535
+L530:
 	mov	x3, #16
 	add	x3, x0, x3
 	ldr	x3, [x3]
@@ -4933,12 +5264,12 @@ L479:
 	sub	sp, sp, x4
 	mov	x4, sp
 	cmp	x5, #1
-	beq	L482
+	beq	L533
 	mov	x3, #0
 	str	x3, [x4]
 	mov	x3, #0
-	b	L483
-L482:
+	b	L534
+L533:
 	mov	x5, #16
 	add	x3, x3, x5
 	ldr	x3, [x3]
@@ -4948,17 +5279,17 @@ L482:
 	mov	x5, #1
 	and	x3, x3, x5
 	str	x3, [x4]
-L483:
+L534:
 	and	x1, x1, x3
 	str	x1, [x2]
-L484:
+L535:
 	cmp	w1, #0
-	bne	L493
+	bne	L544
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L489
+	beq	L540
 	cmp	x1, #1
-	beq	L488
+	beq	L539
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x19, x0
@@ -4976,8 +5307,8 @@ L484:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_compiler_typesystem_types_TFnType
-	b	L499
-L488:
+	b	L550
+L539:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -4985,8 +5316,8 @@ L488:
 	add	x1, x1, _compiler_typesystem_checker_annotation_to_type@pageoff
 	bl	_donna_list_map
 	bl	_compiler_typesystem_types_TTupleType
-	b	L499
-L489:
+	b	L550
+L540:
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x19, x0
@@ -5006,7 +5337,7 @@ L489:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L491
+	beq	L542
 	adrp	x1, _compiler_typesystem_checker_annotation_to_type@page
 	add	x1, x1, _compiler_typesystem_checker_annotation_to_type@pageoff
 	bl	_donna_list_map
@@ -5014,15 +5345,15 @@ L489:
 	mov	x0, x20
 	bl	_compiler_typesystem_types_TNamedType
 	str	x0, [x19]
-	b	L499
-L491:
+	b	L550
+L542:
 	mov	x0, x20
 	mov	x1, #0
 	bl	_donna_string_char_at
 	bl	_compiler_typesystem_types_TTypeVar
 	str	x0, [x19]
-	b	L499
-L493:
+	b	L550
+L544:
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -5031,27 +5362,27 @@ L493:
 	ldr	x0, [x0]
 	bl	_compiler_typesystem_checker_annotation_to_type
 	bl	_compiler_typesystem_types_TListType
-	b	L499
-L494:
+	b	L550
+L545:
 	adrp	x0, _compiler_typesystem_types_TNil@page
 	add	x0, x0, _compiler_typesystem_types_TNil@pageoff
-	b	L499
-L495:
+	b	L550
+L546:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L499
-L496:
+	b	L550
+L547:
 	adrp	x0, _compiler_typesystem_types_TString@page
 	add	x0, x0, _compiler_typesystem_types_TString@pageoff
-	b	L499
-L497:
+	b	L550
+L548:
 	adrp	x0, _compiler_typesystem_types_TFloat@page
 	add	x0, x0, _compiler_typesystem_types_TFloat@pageoff
-	b	L499
-L498:
+	b	L550
+L549:
 	adrp	x0, _compiler_typesystem_types_TInt@page
 	add	x0, x0, _compiler_typesystem_types_TInt@pageoff
-L499:
+L550:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5087,8 +5418,8 @@ _compiler_typesystem_checker_unqualify:
 	str	x19, [x29, 24]
 	mov	x1, x0
 	mov	x19, x1
-	adrp	x1, _str2432@page
-	add	x1, x1, _str2432@pageoff
+	adrp	x1, _str2625@page
+	add	x1, x1, _str2625@pageoff
 	mov	x0, x19
 	bl	_donna_string_split
 	mov	x1, x19
@@ -5106,17 +5437,17 @@ _compiler_typesystem_checker_last_segment:
 	mov	x29, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L512
+	beq	L563
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x3, sp
 	cmp	x2, #1
-	beq	L508
+	beq	L559
 	mov	x2, #0
 	str	x2, [x3]
 	mov	x2, #0
-	b	L509
-L508:
+	b	L560
+L559:
 	mov	x2, #16
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -5126,22 +5457,22 @@ L508:
 	mov	x4, #1
 	and	x2, x2, x4
 	str	x2, [x3]
-L509:
+L560:
 	cmp	w2, #0
-	bne	L511
+	bne	L562
 	mov	x2, #16
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	bl	_compiler_typesystem_checker_last_segment
-	b	L513
-L511:
+	b	L564
+L562:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	L513
-L512:
+	b	L564
+L563:
 	mov	x0, x1
-L513:
+L564:
 	mov sp, x29
 	ldp	x29, x30, [sp], 16
 	ret
@@ -5162,7 +5493,7 @@ _compiler_typesystem_checker_collect_all_bindings:
 	mov	x2, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L519
+	beq	L570
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -5174,7 +5505,7 @@ _compiler_typesystem_checker_collect_all_bindings:
 	mov	x19, sp
 	ldr	x1, [x3]
 	cmp	x1, #0
-	beq	L517
+	beq	L568
 	mov	x1, #8
 	add	x1, x3, x1
 	ldr	x1, [x1]
@@ -5187,14 +5518,14 @@ _compiler_typesystem_checker_collect_all_bindings:
 	mov	x0, x20
 	bl	_compiler_typesystem_checker_collect_all_bindings
 	str	x0, [x19]
-	b	L520
-L517:
+	b	L571
+L568:
 	mov	x0, x2
 	str	x0, [x19]
-	b	L520
-L519:
+	b	L571
+L570:
 	mov	x0, x2
-L520:
+L571:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5219,18 +5550,18 @@ _compiler_typesystem_checker_collect_bindings:
 	mov	x22, x0
 	ldr	x0, [x2]
 	cmp	x0, #9
-	beq	L549
+	beq	L600
 	cmp	x0, #5
-	beq	L544
+	beq	L595
 	cmp	x0, #6
-	beq	L539
+	beq	L590
 	cmp	x0, #7
-	beq	L535
+	beq	L586
 	cmp	x0, #8
-	beq	L527
+	beq	L578
 	mov	x0, x22
-	b	L553
-L527:
+	b	L604
+L578:
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -5242,11 +5573,11 @@ L527:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #8
-	beq	L530
+	beq	L581
 	str	x22, [x19]
 	mov	x0, x22
-	b	L553
-L530:
+	b	L604
+L581:
 	mov	x21, x1
 	mov	x1, #8
 	add	x1, x21, x1
@@ -5262,18 +5593,18 @@ L530:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	L533
+	beq	L584
 	str	x22, [x20]
 	mov	x0, x22
-	b	L534
-L533:
+	b	L585
+L584:
 	mov	x2, x22
 	bl	_compiler_typesystem_checker_collect_bindings_list
 	str	x0, [x20]
-L534:
+L585:
 	str	x0, [x19]
-	b	L553
-L535:
+	b	L604
+L586:
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -5285,11 +5616,11 @@ L535:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #7
-	beq	L538
+	beq	L589
 	str	x22, [x19]
 	mov	x0, x22
-	b	L553
-L538:
+	b	L604
+L589:
 	mov	x21, x1
 	mov	x1, #8
 	add	x1, x21, x1
@@ -5304,8 +5635,8 @@ L538:
 	mov	x0, x20
 	bl	_compiler_typesystem_checker_collect_bindings
 	str	x0, [x19]
-	b	L553
-L539:
+	b	L604
+L590:
 	mov	x0, x22
 	mov	x20, x0
 	mov	x0, #8
@@ -5316,19 +5647,19 @@ L539:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #6
-	beq	L543
+	beq	L594
 	str	x20, [x19]
 	mov	x0, x20
-	b	L553
-L543:
+	b	L604
+L594:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x2, x20
 	bl	_compiler_typesystem_checker_collect_bindings_list
 	str	x0, [x19]
-	b	L553
-L544:
+	b	L604
+L595:
 	mov	x0, x22
 	mov	x20, x0
 	mov	x0, #8
@@ -5339,19 +5670,19 @@ L544:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #5
-	beq	L548
+	beq	L599
 	str	x20, [x19]
 	mov	x0, x20
-	b	L553
-L548:
+	b	L604
+L599:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x2, x20
 	bl	_compiler_typesystem_checker_collect_bindings
 	str	x0, [x19]
-	b	L553
-L549:
+	b	L604
+L600:
 	mov	x0, x22
 	mov	x3, #8
 	add	x2, x2, x3
@@ -5367,7 +5698,7 @@ L549:
 	mov	x19, sp
 	ldr	x1, [x1]
 	cmp	x1, #1
-	beq	L552
+	beq	L603
 	mov	x21, x0
 	mov	x0, #16
 	bl	_malloc
@@ -5391,10 +5722,10 @@ L549:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L553
-L552:
+	b	L604
+L603:
 	str	x0, [x19]
-L553:
+L604:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5419,7 +5750,7 @@ _compiler_typesystem_checker_collect_bindings_list:
 	mov	x2, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L559
+	beq	L610
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -5431,7 +5762,7 @@ _compiler_typesystem_checker_collect_bindings_list:
 	mov	x19, sp
 	ldr	x1, [x3]
 	cmp	x1, #0
-	beq	L557
+	beq	L608
 	mov	x1, #8
 	add	x1, x3, x1
 	ldr	x1, [x1]
@@ -5444,14 +5775,14 @@ _compiler_typesystem_checker_collect_bindings_list:
 	mov	x0, x20
 	bl	_compiler_typesystem_checker_collect_bindings_list
 	str	x0, [x19]
-	b	L560
-L557:
+	b	L611
+L608:
 	mov	x0, x2
 	str	x0, [x19]
-	b	L560
-L559:
+	b	L611
+L610:
 	mov	x0, x2
-L560:
+L611:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5469,7 +5800,7 @@ _compiler_typesystem_checker_lookup_int_binding:
 	str	x19, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L566
+	beq	L617
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -5486,19 +5817,19 @@ _compiler_typesystem_checker_lookup_int_binding:
 	sub	sp, sp, x4
 	mov	x19, sp
 	cmp	x3, #1
-	beq	L564
+	beq	L615
 	bl	_compiler_typesystem_checker_lookup_int_binding
 	str	x0, [x19]
-	b	L567
-L564:
+	b	L618
+L615:
 	mov	x0, x2
 	bl	_donna_option_Some
 	str	x0, [x19]
-	b	L567
-L566:
+	b	L618
+L617:
 	adrp	x0, _donna_option_None@page
 	add	x0, x0, _donna_option_None@pageoff
-L567:
+L618:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -5516,15 +5847,15 @@ _compiler_typesystem_checker_apply_subst:
 	mov	x20, x1
 	ldr	x1, [x0]
 	cmp	x1, #9
-	beq	L579
+	beq	L630
 	cmp	x1, #5
-	beq	L577
+	beq	L628
 	cmp	x1, #6
-	beq	L575
+	beq	L626
 	cmp	x1, #7
-	beq	L574
+	beq	L625
 	cmp	x1, #8
-	bne	L584
+	bne	L635
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x19, [x1]
@@ -5536,8 +5867,8 @@ _compiler_typesystem_checker_apply_subst:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_compiler_typesystem_types_TNamedType
-	b	L584
-L574:
+	b	L635
+L625:
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x19, x0
@@ -5555,8 +5886,8 @@ L574:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_compiler_typesystem_types_TFnType
-	b	L584
-L575:
+	b	L635
+L626:
 	mov	x19, x20
 	mov	x1, #8
 	add	x0, x0, x1
@@ -5564,8 +5895,8 @@ L575:
 	mov	x1, x19
 	bl	_compiler_typesystem_checker_apply_subst_list
 	bl	_compiler_typesystem_types_TTupleType
-	b	L584
-L577:
+	b	L635
+L628:
 	mov	x19, x20
 	mov	x1, #8
 	add	x0, x0, x1
@@ -5573,8 +5904,8 @@ L577:
 	mov	x1, x19
 	bl	_compiler_typesystem_checker_apply_subst
 	bl	_compiler_typesystem_types_TListType
-	b	L584
-L579:
+	b	L635
+L630:
 	mov	x19, x0
 	mov	x0, x20
 	mov	x1, #8
@@ -5588,16 +5919,16 @@ L579:
 	mov	x1, sp
 	ldr	x3, [x2]
 	cmp	x3, #1
-	beq	L582
+	beq	L633
 	str	x0, [x1]
-	b	L584
-L582:
+	b	L635
+L633:
 	mov	x0, x2
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	str	x0, [x1]
-L584:
+L635:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -5615,7 +5946,7 @@ _compiler_typesystem_checker_apply_subst_list:
 	str	x20, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L587
+	beq	L638
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x19, [x2]
@@ -5640,11 +5971,11 @@ _compiler_typesystem_checker_apply_subst_list:
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x19, [x1]
-	b	L588
-L587:
+	b	L639
+L638:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L588:
+L639:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -5671,443 +6002,135 @@ _compiler_typesystem_checker_check_binop_types:
 	mov	x2, x17
 	ldr	x3, [x3]
 	cmp	x3, #5
-	beq	L663
+	beq	L714
 	cmp	x3, #6
-	beq	L656
+	beq	L707
 	cmp	x3, #7
-	beq	L649
+	beq	L700
 	cmp	x3, #8
-	beq	L642
+	beq	L693
 	cmp	x3, #15
-	beq	L635
+	beq	L686
 	cmp	x3, #16
-	beq	L628
+	beq	L679
 	cmp	x3, #17
-	beq	L621
+	beq	L672
 	cmp	x3, #18
-	beq	L614
-	cmp	x3, #19
-	beq	L607
-	cmp	x3, #20
-	beq	L600
-	mov	x0, #1
-	bl	_donna_result_Ok
-	b	L670
-L600:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #3
-	beq	L602
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2983@page
-	add	x0, x0, _str2983@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L602:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #3
-	beq	L605
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2978@page
-	add	x0, x0, _str2978@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L606
-L605:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L606:
-	str	x0, [x19]
-	b	L670
-L607:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #3
-	beq	L609
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2956@page
-	add	x0, x0, _str2956@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L609:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #3
-	beq	L612
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2951@page
-	add	x0, x0, _str2951@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L613
-L612:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L613:
-	str	x0, [x19]
-	b	L670
-L614:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
-	beq	L616
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2929@page
-	add	x0, x0, _str2929@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L616:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	L619
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2924@page
-	add	x0, x0, _str2924@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L620
-L619:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L620:
-	str	x0, [x19]
-	b	L670
-L621:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
-	beq	L623
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2902@page
-	add	x0, x0, _str2902@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L623:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	L626
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2897@page
-	add	x0, x0, _str2897@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L627
-L626:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L627:
-	str	x0, [x19]
-	b	L670
-L628:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
-	beq	L630
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2875@page
-	add	x0, x0, _str2875@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L630:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	L633
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2870@page
-	add	x0, x0, _str2870@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L634
-L633:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L634:
-	str	x0, [x19]
-	b	L670
-L635:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
-	beq	L637
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2848@page
-	add	x0, x0, _str2848@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L637:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	L640
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2843@page
-	add	x0, x0, _str2843@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L641
-L640:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L641:
-	str	x0, [x19]
-	b	L670
-L642:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
-	beq	L644
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2821@page
-	add	x0, x0, _str2821@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L644:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	L647
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2816@page
-	add	x0, x0, _str2816@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L648
-L647:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L648:
-	str	x0, [x19]
-	b	L670
-L649:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
-	beq	L651
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2794@page
-	add	x0, x0, _str2794@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L651:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	L654
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2789@page
-	add	x0, x0, _str2789@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L655
-L654:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L655:
-	str	x0, [x19]
-	b	L670
-L656:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
-	beq	L658
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x20
-	mov	x1, x0
-	mov	x21, x2
-	adrp	x0, _str2767@page
-	add	x0, x0, _str2767@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x19]
-	b	L670
-L658:
-	mov	x21, x20
-	mov	x0, x1
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x20, sp
-	ldr	x1, [x0]
-	cmp	x1, #1
-	beq	L661
-	mov	x1, x0
-	bl	_compiler_typesystem_types_type_to_string
-	mov	x2, x21
-	mov	x1, x0
-	adrp	x0, _str2762@page
-	add	x0, x0, _str2762@pageoff
-	bl	_errors_error_TypeMismatch
-	bl	_donna_result_Error
-	str	x0, [x20]
-	b	L662
-L661:
-	mov	x0, #1
-	bl	_donna_result_Ok
-	str	x0, [x20]
-L662:
-	str	x0, [x19]
-	b	L670
-L663:
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x20, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
 	beq	L665
+	cmp	x3, #19
+	beq	L658
+	cmp	x3, #20
+	beq	L651
+	mov	x0, #1
+	bl	_donna_result_Ok
+	b	L721
+L651:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #3
+	beq	L653
 	bl	_compiler_typesystem_types_type_to_string
 	mov	x2, x20
 	mov	x1, x0
 	mov	x21, x2
-	adrp	x0, _str2740@page
-	add	x0, x0, _str2740@pageoff
+	adrp	x0, _str3176@page
+	add	x0, x0, _str3176@pageoff
 	bl	_errors_error_TypeMismatch
 	bl	_donna_result_Error
 	str	x0, [x19]
-	b	L670
+	b	L721
+L653:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #3
+	beq	L656
+	mov	x1, x0
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str3171@page
+	add	x0, x0, _str3171@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L657
+L656:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L657:
+	str	x0, [x19]
+	b	L721
+L658:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #3
+	beq	L660
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str3149@page
+	add	x0, x0, _str3149@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L660:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #3
+	beq	L663
+	mov	x1, x0
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str3144@page
+	add	x0, x0, _str3144@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L664
+L663:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L664:
+	str	x0, [x19]
+	b	L721
 L665:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L667
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str3122@page
+	add	x0, x0, _str3122@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L667:
 	mov	x21, x20
 	mov	x0, x1
 	mov	x1, #16
@@ -6115,23 +6138,331 @@ L665:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L668
+	beq	L670
+	mov	x1, x0
 	bl	_compiler_typesystem_types_type_to_string
 	mov	x2, x21
 	mov	x1, x0
-	adrp	x0, _str2735@page
-	add	x0, x0, _str2735@pageoff
+	adrp	x0, _str3117@page
+	add	x0, x0, _str3117@pageoff
 	bl	_errors_error_TypeMismatch
 	bl	_donna_result_Error
 	str	x0, [x20]
-	b	L669
-L668:
+	b	L671
+L670:
 	mov	x0, #1
 	bl	_donna_result_Ok
 	str	x0, [x20]
-L669:
+L671:
 	str	x0, [x19]
-L670:
+	b	L721
+L672:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L674
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str3095@page
+	add	x0, x0, _str3095@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L674:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	L677
+	mov	x1, x0
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str3090@page
+	add	x0, x0, _str3090@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L678
+L677:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L678:
+	str	x0, [x19]
+	b	L721
+L679:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L681
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str3068@page
+	add	x0, x0, _str3068@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L681:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	L684
+	mov	x1, x0
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str3063@page
+	add	x0, x0, _str3063@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L685
+L684:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L685:
+	str	x0, [x19]
+	b	L721
+L686:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L688
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str3041@page
+	add	x0, x0, _str3041@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L688:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	L691
+	mov	x1, x0
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str3036@page
+	add	x0, x0, _str3036@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L692
+L691:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L692:
+	str	x0, [x19]
+	b	L721
+L693:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L695
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str3014@page
+	add	x0, x0, _str3014@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L695:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	L698
+	mov	x1, x0
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str3009@page
+	add	x0, x0, _str3009@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L699
+L698:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L699:
+	str	x0, [x19]
+	b	L721
+L700:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L702
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str2987@page
+	add	x0, x0, _str2987@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L702:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	L705
+	mov	x1, x0
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str2982@page
+	add	x0, x0, _str2982@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L706
+L705:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L706:
+	str	x0, [x19]
+	b	L721
+L707:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L709
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str2960@page
+	add	x0, x0, _str2960@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L709:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	L712
+	mov	x1, x0
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str2955@page
+	add	x0, x0, _str2955@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L713
+L712:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L713:
+	str	x0, [x19]
+	b	L721
+L714:
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L716
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x20
+	mov	x1, x0
+	mov	x21, x2
+	adrp	x0, _str2933@page
+	add	x0, x0, _str2933@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x19]
+	b	L721
+L716:
+	mov	x21, x20
+	mov	x0, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	L719
+	bl	_compiler_typesystem_types_type_to_string
+	mov	x2, x21
+	mov	x1, x0
+	adrp	x0, _str2928@page
+	add	x0, x0, _str2928@pageoff
+	bl	_errors_error_TypeMismatch
+	bl	_donna_result_Error
+	str	x0, [x20]
+	b	L720
+L719:
+	mov	x0, #1
+	bl	_donna_result_Ok
+	str	x0, [x20]
+L720:
+	str	x0, [x19]
+L721:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -6148,134 +6479,134 @@ _compiler_typesystem_checker_binop_result_type:
 	mov	x29, sp
 	ldr	x0, [x0]
 	cmp	x0, #0
-	beq	L713
+	beq	L764
 	cmp	x0, #1
-	beq	L712
+	beq	L763
 	cmp	x0, #2
-	beq	L711
+	beq	L762
 	cmp	x0, #3
-	beq	L710
+	beq	L761
 	cmp	x0, #4
-	beq	L709
+	beq	L760
 	cmp	x0, #5
-	beq	L708
+	beq	L759
 	cmp	x0, #6
-	beq	L707
+	beq	L758
 	cmp	x0, #7
-	beq	L706
+	beq	L757
 	cmp	x0, #8
-	beq	L705
+	beq	L756
 	cmp	x0, #9
-	beq	L704
+	beq	L755
 	cmp	x0, #10
-	beq	L703
+	beq	L754
 	cmp	x0, #11
-	beq	L702
+	beq	L753
 	cmp	x0, #12
-	beq	L701
+	beq	L752
 	cmp	x0, #13
-	beq	L700
+	beq	L751
 	cmp	x0, #14
-	beq	L699
+	beq	L750
 	cmp	x0, #15
-	beq	L698
+	beq	L749
 	cmp	x0, #16
-	beq	L697
+	beq	L748
 	cmp	x0, #17
-	beq	L696
+	beq	L747
 	cmp	x0, #18
-	beq	L695
+	beq	L746
 	cmp	x0, #19
-	beq	L694
+	beq	L745
 	cmp	x0, #20
-	beq	L693
+	beq	L744
 	adrp	x0, _compiler_typesystem_types_TString@page
 	add	x0, x0, _compiler_typesystem_types_TString@pageoff
-	b	L714
-L693:
+	b	L765
+L744:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L694:
+	b	L765
+L745:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L695:
+	b	L765
+L746:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L696:
+	b	L765
+L747:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L697:
+	b	L765
+L748:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L698:
+	b	L765
+L749:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L699:
+	b	L765
+L750:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L700:
+	b	L765
+L751:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L701:
+	b	L765
+L752:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L702:
+	b	L765
+L753:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L703:
+	b	L765
+L754:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L704:
+	b	L765
+L755:
 	adrp	x0, _compiler_typesystem_types_TBool@page
 	add	x0, x0, _compiler_typesystem_types_TBool@pageoff
-	b	L714
-L705:
+	b	L765
+L756:
 	adrp	x0, _compiler_typesystem_types_TFloat@page
 	add	x0, x0, _compiler_typesystem_types_TFloat@pageoff
-	b	L714
-L706:
+	b	L765
+L757:
 	adrp	x0, _compiler_typesystem_types_TFloat@page
 	add	x0, x0, _compiler_typesystem_types_TFloat@pageoff
-	b	L714
-L707:
+	b	L765
+L758:
 	adrp	x0, _compiler_typesystem_types_TFloat@page
 	add	x0, x0, _compiler_typesystem_types_TFloat@pageoff
-	b	L714
-L708:
+	b	L765
+L759:
 	adrp	x0, _compiler_typesystem_types_TFloat@page
 	add	x0, x0, _compiler_typesystem_types_TFloat@pageoff
-	b	L714
-L709:
+	b	L765
+L760:
 	adrp	x0, _compiler_typesystem_types_TInt@page
 	add	x0, x0, _compiler_typesystem_types_TInt@pageoff
-	b	L714
-L710:
+	b	L765
+L761:
 	adrp	x0, _compiler_typesystem_types_TInt@page
 	add	x0, x0, _compiler_typesystem_types_TInt@pageoff
-	b	L714
-L711:
+	b	L765
+L762:
 	adrp	x0, _compiler_typesystem_types_TInt@page
 	add	x0, x0, _compiler_typesystem_types_TInt@pageoff
-	b	L714
-L712:
+	b	L765
+L763:
 	adrp	x0, _compiler_typesystem_types_TInt@page
 	add	x0, x0, _compiler_typesystem_types_TInt@pageoff
-	b	L714
-L713:
+	b	L765
+L764:
 	adrp	x0, _compiler_typesystem_types_TInt@page
 	add	x0, x0, _compiler_typesystem_types_TInt@pageoff
-L714:
+L765:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function compiler_typesystem_checker_binop_result_type */
@@ -6289,8 +6620,8 @@ _compiler_typesystem_checker_path_last_segment:
 	str	x19, [x29, 24]
 	mov	x1, x0
 	mov	x19, x1
-	adrp	x1, _str3077@page
-	add	x1, x1, _str3077@pageoff
+	adrp	x1, _str3270@page
+	add	x1, x1, _str3270@pageoff
 	mov	x0, x19
 	bl	_donna_string_split
 	bl	_donna_list_reverse
@@ -6312,7 +6643,7 @@ _compiler_typesystem_checker_lookup_binding:
 	str	x21, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L722
+	beq	L773
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -6333,19 +6664,19 @@ _compiler_typesystem_checker_lookup_binding:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	L720
+	beq	L771
 	bl	_compiler_typesystem_checker_lookup_binding
 	str	x0, [x19]
-	b	L723
-L720:
+	b	L774
+L771:
 	mov	x0, x20
 	bl	_donna_option_Some
 	str	x0, [x19]
-	b	L723
-L722:
+	b	L774
+L773:
 	adrp	x0, _donna_option_None@page
 	add	x0, x0, _donna_option_None@pageoff
-L723:
+L774:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -6368,7 +6699,7 @@ _compiler_typesystem_checker_pub_fns_to_bindings:
 	str	x24, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L729
+	beq	L780
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x2, [x1]
@@ -6391,11 +6722,11 @@ _compiler_typesystem_checker_pub_fns_to_bindings:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #1
-	beq	L727
+	beq	L778
 	bl	_compiler_typesystem_checker_pub_fns_to_bindings
 	str	x0, [x20]
-	b	L728
-L727:
+	b	L779
+L778:
 	bl	_compiler_typesystem_checker_pub_fns_to_bindings
 	mov	x21, x0
 	mov	x0, #16
@@ -6416,13 +6747,13 @@ L727:
 	add	x1, x0, x1
 	str	x21, [x1]
 	str	x0, [x20]
-L728:
+L779:
 	str	x0, [x19]
-	b	L730
-L729:
+	b	L781
+L780:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L730:
+L781:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -6448,7 +6779,7 @@ _compiler_typesystem_checker_pub_consts_to_bindings:
 	str	x24, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L736
+	beq	L787
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x2, [x1]
@@ -6471,11 +6802,11 @@ _compiler_typesystem_checker_pub_consts_to_bindings:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #1
-	beq	L734
+	beq	L785
 	bl	_compiler_typesystem_checker_pub_consts_to_bindings
 	str	x0, [x20]
-	b	L735
-L734:
+	b	L786
+L785:
 	bl	_compiler_typesystem_checker_pub_consts_to_bindings
 	mov	x21, x0
 	mov	x0, #16
@@ -6496,13 +6827,13 @@ L734:
 	add	x1, x0, x1
 	str	x21, [x1]
 	str	x0, [x20]
-L735:
+L786:
 	str	x0, [x19]
-	b	L737
-L736:
+	b	L788
+L787:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L737:
+L788:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -6526,7 +6857,7 @@ _compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	str	x22, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L744
+	beq	L795
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x2, [x1]
@@ -6549,7 +6880,7 @@ _compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #0
-	beq	L741
+	beq	L792
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	bl	_compiler_typesystem_types_TNamedType
@@ -6564,18 +6895,18 @@ _compiler_typesystem_checker_pub_type_defs_to_ctor_bindings:
 	mov	x0, x21
 	bl	_donna_list_append
 	str	x0, [x20]
-	b	L743
-L741:
+	b	L794
+L792:
 	mov	x0, x21
 	bl	_compiler_typesystem_checker_pub_type_defs_to_ctor_bindings
 	str	x0, [x20]
-L743:
+L794:
 	str	x0, [x19]
-	b	L745
-L744:
+	b	L796
+L795:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L745:
+L796:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -6599,7 +6930,7 @@ _compiler_typesystem_checker_ctors_to_bindings:
 	mov	x2, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	L754
+	beq	L805
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -6625,7 +6956,7 @@ _compiler_typesystem_checker_ctors_to_bindings:
 	sub	sp, sp, x3
 	mov	x21, sp
 	cmp	x2, #1
-	beq	L750
+	beq	L801
 	mov	x23, x1
 	bl	_compiler_typesystem_types_TFnType
 	mov	x1, x23
@@ -6634,13 +6965,13 @@ _compiler_typesystem_checker_ctors_to_bindings:
 	mov	x20, x17
 	str	x20, [x21]
 	mov	x21, x20
-	b	L753
-L750:
+	b	L804
+L801:
 	mov	x0, x20
 	mov	x20, x21
 	str	x1, [x20]
 	mov	x21, x1
-L753:
+L804:
 	bl	_compiler_typesystem_checker_ctors_to_bindings
 	mov	x20, x0
 	mov	x0, #16
@@ -6662,11 +6993,11 @@ L753:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L755
-L754:
+	b	L806
+L805:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L755:
+L806:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -6689,7 +7020,7 @@ _compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	mov	x1, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L762
+	beq	L813
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -6712,7 +7043,7 @@ _compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #0
-	beq	L759
+	beq	L810
 	bl	_compiler_typesystem_checker_ctors_to_info
 	mov	x17, x0
 	mov	x0, x21
@@ -6722,18 +7053,18 @@ _compiler_typesystem_checker_pub_type_defs_to_ctor_info:
 	mov	x0, x21
 	bl	_donna_list_append
 	str	x0, [x20]
-	b	L761
-L759:
+	b	L812
+L810:
 	mov	x0, x21
 	bl	_compiler_typesystem_checker_pub_type_defs_to_ctor_info
 	str	x0, [x20]
-L761:
+L812:
 	str	x0, [x19]
-	b	L763
-L762:
+	b	L814
+L813:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L763:
+L814:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -6756,7 +7087,7 @@ _compiler_typesystem_checker_ctors_to_info:
 	str	x24, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L766
+	beq	L817
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -6807,11 +7138,11 @@ _compiler_typesystem_checker_ctors_to_info:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L767
-L766:
+	b	L818
+L817:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L767:
+L818:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]

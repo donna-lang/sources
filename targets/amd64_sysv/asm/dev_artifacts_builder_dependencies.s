@@ -146,252 +146,441 @@ str223:
 
 .data
 .balign 8
-str260:
+str262:
 	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str269:
+str271:
 	.ascii "tag"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str277:
+str279:
 	.ascii "branch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str285:
+str287:
 	.ascii "rev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str291:
+str293:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str295:
+str297:
 	.ascii "--sort=-v:refname"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str299:
+str301:
 	.ascii "--tags"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str303:
+str305:
 	.ascii "ls-remote"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str308:
+str310:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str317:
+str319:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str322:
+str324:
 	.byte 9
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str337:
+str339:
 	.ascii "^{}"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str345:
+str347:
 	.ascii "refs/tags/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str385:
+str387:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str392:
+str394:
 	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str396:
+str398:
 	.ascii "--depth"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str400:
+str402:
 	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str405:
+str407:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str415:
+str417:
 	.ascii "--branch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str419:
+str421:
 	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str423:
+str425:
 	.ascii "--depth"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str427:
+str429:
 	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str438:
+str440:
 	.ascii "rm -rf "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str441:
+str443:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str448:
+str450:
 	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str459:
+str461:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str463:
+str465:
 	.ascii "checkout"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str470:
+str472:
 	.ascii "-C"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str478:
-	.ascii "HOME"
+str487:
+	.ascii "rm -rf "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str480:
-	.ascii ".donna"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str482:
-	.ascii "packages"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str484:
+str491:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str485:
-	.ascii "HEAD"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str489:
-	.ascii "rev-parse"
+str492:
+	.ascii "origin"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str496:
+	.ascii "--prune"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str500:
+	.ascii "--force"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str504:
+	.ascii "--tags"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str508:
+	.ascii "fetch"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str515:
 	.ascii "-C"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str511:
+str526:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str527:
+	.ascii "--ff-only"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str531:
+	.ascii "pull"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str538:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str546:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str550:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str557:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str568:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str572:
+	.ascii "origin"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str576:
+	.ascii "fetch"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str583:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str588:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str592:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str599:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str605:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str606:
+	.ascii "remote.origin.url"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str610:
+	.ascii "--get"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str614:
+	.ascii "config"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str621:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str627:
+	.ascii "HOME"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str629:
+	.ascii ".donna"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str631:
+	.ascii "packages"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str633:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str634:
+	.ascii "HEAD"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str638:
+	.ascii "rev-parse"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str645:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str660:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -979,6 +1168,18 @@ builder_dependencies_resolve_git_dep:
 	jmp .Lbb48
 .Lbb43:
 	movq %rdi, %r12
+	movq %r13, %rdi
+	callq builder_dependencies_pick_ref
+	movq %r14, %rsi
+	movq %r12, %rdi
+	movq %rax, %rdx
+	movq %rsi, %r14
+	movq %r13, %rsi
+	movq %rdi, %r12
+	movq %r14, %rdi
+	callq builder_dependencies_refresh_cached_dep
+	movq %r12, %rdi
+	movq %rdi, %r12
 	movq %r14, %rdi
 	callq builder_dependencies_head_sha
 	movq %r14, %rsi
@@ -1177,7 +1378,7 @@ builder_dependencies_pick_ref:
 	pushq %r13
 	movq %rdi, %rbx
 	movq %rsi, %rdi
-	leaq str260(%rip), %rsi
+	leaq str262(%rip), %rsi
 	movq %rdi, %r12
 	callq builder_dependencies_opt_string
 	movq %r12, %rdi
@@ -1189,7 +1390,7 @@ builder_dependencies_pick_ref:
 	movq %r12, %rdi
 	cmpq $0, %rax
 	jz .Lbb56
-	leaq str269(%rip), %rsi
+	leaq str271(%rip), %rsi
 	movq %rdi, %rbx
 	callq builder_dependencies_opt_string
 	movq %rbx, %rdi
@@ -1204,7 +1405,7 @@ builder_dependencies_pick_ref:
 	movq %rsp, %rbx
 	cmpq $0, %rcx
 	jz .Lbb55
-	leaq str277(%rip), %rsi
+	leaq str279(%rip), %rsi
 	movq %rdi, %r12
 	callq builder_dependencies_opt_string
 	movq %r12, %rdi
@@ -1219,7 +1420,7 @@ builder_dependencies_pick_ref:
 	movq %rsp, %r12
 	cmpq $0, %rcx
 	jz .Lbb53
-	leaq str285(%rip), %rsi
+	leaq str287(%rip), %rsi
 	callq builder_dependencies_opt_string
 	movq %rax, (%r12)
 	jmp .Lbb54
@@ -1274,29 +1475,29 @@ builder_dependencies_resolve_version_range:
 	callq malloc
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq str295(%rip), %rax
+	leaq str297(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %r12, 16(%r13)
 	movl $24, %edi
 	callq malloc
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq str299(%rip), %rax
+	leaq str301(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %r13, 16(%r12)
 	movl $24, %edi
 	callq malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq str303(%rip), %rax
+	leaq str305(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %r12, 16(%rsi)
-	leaq str291(%rip), %rdi
+	leaq str293(%rip), %rdi
 	callq donna_shell_output
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq str308(%rip), %rsi
+	leaq str310(%rip), %rsi
 	callq donna_string_split
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -1329,7 +1530,7 @@ builder_dependencies_find_best_tag:
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r13
 	movq %rsi, %r12
-	leaq str322(%rip), %rsi
+	leaq str324(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_index_of
 	movq %r12, %rsi
@@ -1359,7 +1560,7 @@ builder_dependencies_find_best_tag:
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r14
-	leaq str337(%rip), %rsi
+	leaq str339(%rip), %rsi
 	movq %rdi, %r12
 	callq donna_string_ends_with
 	movq %r14, %rsi
@@ -1369,7 +1570,7 @@ builder_dependencies_find_best_tag:
 	cmpq $1, %rax
 	jz .Lbb76
 	movq %rsi, %r15
-	leaq str345(%rip), %rsi
+	leaq str347(%rip), %rsi
 	movq %rdi, %r14
 	callq donna_string_starts_with
 	movq %r14, %rdi
@@ -1452,7 +1653,7 @@ builder_dependencies_find_best_tag:
 	movq %rax, (%rbx)
 	jmp .Lbb82
 .Lbb81:
-	leaq str317(%rip), %rax
+	leaq str319(%rip), %rax
 .Lbb82:
 	movq %rbp, %rsp
 	subq $80, %rsp
@@ -1518,7 +1719,7 @@ builder_dependencies_clone_at_ref:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq str415(%rip), %rax
+	leaq str417(%rip), %rax
 	movq %rax, 8(%rbx)
 	movq %r13, 16(%rbx)
 	movq %rdi, %r13
@@ -1527,7 +1728,7 @@ builder_dependencies_clone_at_ref:
 	movq %r13, %rdi
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq str419(%rip), %rax
+	leaq str421(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %rbx, 16(%r13)
 	movq %rdi, %rbx
@@ -1536,7 +1737,7 @@ builder_dependencies_clone_at_ref:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq str423(%rip), %rax
+	leaq str425(%rip), %rax
 	movq %rax, 8(%rbx)
 	movq %r13, 16(%rbx)
 	movq %rdi, %r13
@@ -1545,11 +1746,11 @@ builder_dependencies_clone_at_ref:
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq str427(%rip), %rax
+	leaq str429(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
 	movq %rdi, %rbx
-	leaq str405(%rip), %rdi
+	leaq str407(%rip), %rdi
 	callq donna_shell_exec
 	movq %r12, %rsi
 	movq %rbx, %rdi
@@ -1562,7 +1763,7 @@ builder_dependencies_clone_at_ref:
 	jz .Lbb89
 	movq %rsi, %r13
 	movq %rdi, %r12
-	leaq str438(%rip), %rdi
+	leaq str440(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq donna_shell_run
@@ -1588,10 +1789,10 @@ builder_dependencies_clone_at_ref:
 	callq malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq str448(%rip), %rax
+	leaq str450(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %r12, 16(%rsi)
-	leaq str441(%rip), %rdi
+	leaq str443(%rip), %rdi
 	callq donna_shell_exec
 	cmpq $0, %rax
 	setz %cl
@@ -1612,7 +1813,7 @@ builder_dependencies_clone_at_ref:
 	callq malloc
 	movq %rax, %r14
 	movq $1, (%r14)
-	leaq str463(%rip), %rax
+	leaq str465(%rip), %rax
 	movq %rax, 8(%r14)
 	movq %r15, 16(%r14)
 	movl $24, %edi
@@ -1626,10 +1827,10 @@ builder_dependencies_clone_at_ref:
 	callq malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq str470(%rip), %rax
+	leaq str472(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %r13, 16(%rsi)
-	leaq str459(%rip), %rdi
+	leaq str461(%rip), %rdi
 	callq donna_shell_exec
 	movq %rax, (%r12)
 	jmp .Lbb88
@@ -1664,24 +1865,24 @@ builder_dependencies_clone_at_ref:
 	callq malloc
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq str392(%rip), %rax
+	leaq str394(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %rbx, 16(%r12)
 	movl $24, %edi
 	callq malloc
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq str396(%rip), %rax
+	leaq str398(%rip), %rax
 	movq %rax, 8(%rbx)
 	movq %r12, 16(%rbx)
 	movl $24, %edi
 	callq malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq str400(%rip), %rax
+	leaq str402(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
-	leaq str385(%rip), %rdi
+	leaq str387(%rip), %rdi
 	callq donna_shell_exec
 .Lbb91:
 	movq %rbp, %rsp
@@ -1699,17 +1900,377 @@ builder_dependencies_clone_at_ref:
 
 .text
 .balign 16
+builder_dependencies_refresh_cached_dep:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %r14
+	movq %rdx, %r13
+	movq %rdi, %rbx
+	movq %rsi, %rdi
+	movq %rdi, %r12
+	movq %rbx, %rdi
+	callq builder_dependencies_origin_url
+	movq %rbx, %rsi
+	movq %rax, %rdi
+	movq %rsi, %rbx
+	movq %r12, %rsi
+	callq donna_string_equal
+	movq %r12, %rdi
+	cmpq $0, %rax
+	jz .Lbb97
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r14
+	movq $1, (%r14)
+	leaq str492(%rip), %rax
+	movq %rax, 8(%r14)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%r14)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $1, (%r12)
+	leaq str496(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %r14, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r14
+	movq $1, (%r14)
+	leaq str500(%rip), %rax
+	movq %rax, 8(%r14)
+	movq %r12, 16(%r14)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $1, (%r12)
+	leaq str504(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %r14, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r14
+	movq $1, (%r14)
+	leaq str508(%rip), %rax
+	movq %rax, 8(%r14)
+	movq %r12, 16(%r14)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $1, (%r12)
+	movq %rbx, 8(%r12)
+	movq %r14, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rsi
+	movq $1, (%rsi)
+	leaq str515(%rip), %rax
+	movq %rax, 8(%rsi)
+	movq %r12, 16(%rsi)
+	leaq str491(%rip), %rdi
+	callq donna_shell_exec
+	movq %r13, %rdi
+	callq donna_string_is_empty
+	movq %rbx, %rsi
+	subq $16, %rsp
+	movq %rsp, %rbx
+	cmpq $1, %rax
+	jz .Lbb95
+	movq %rsi, %r12
+	movq %r13, %rsi
+	movq %r12, %rdi
+	callq builder_dependencies_checkout_ref
+	movq %rax, (%rbx)
+	jmp .Lbb99
+.Lbb95:
+	movq %rsi, %r12
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r14
+	movq $1, (%r14)
+	leaq str527(%rip), %rax
+	movq %rax, 8(%r14)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%r14)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r13
+	movq $1, (%r13)
+	leaq str531(%rip), %rax
+	movq %rax, 8(%r13)
+	movq %r14, 16(%r13)
+	movl $24, %edi
+	callq malloc
+	movq %r12, %rsi
+	movq %rax, %r12
+	movq $1, (%r12)
+	movq %rsi, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rsi
+	movq $1, (%rsi)
+	leaq str538(%rip), %rax
+	movq %rax, 8(%rsi)
+	movq %r12, 16(%rsi)
+	leaq str526(%rip), %rdi
+	callq donna_shell_exec
+	movq %rax, (%rbx)
+	jmp .Lbb99
+.Lbb97:
+	movq %rbx, %rsi
+	movq %rsi, %r12
+	movq %rdi, %rbx
+	leaq str487(%rip), %rdi
+	callq __rt_str_concat
+	movq %rax, %rdi
+	callq donna_shell_run
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	callq builder_dependencies_clone_at_ref
+.Lbb99:
+	movq %rbp, %rsp
+	subq $32, %rsp
+	popq %r14
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+.type builder_dependencies_refresh_cached_dep, @function
+.size builder_dependencies_refresh_cached_dep, .-builder_dependencies_refresh_cached_dep
+/* end function builder_dependencies_refresh_cached_dep */
+
+.text
+.balign 16
+builder_dependencies_checkout_ref:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	movq %rsi, %r12
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %r12, 8(%rbx)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%rbx)
+	movq %rdi, %r13
+	movl $24, %edi
+	callq malloc
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq $1, (%r13)
+	leaq str550(%rip), %rax
+	movq %rax, 8(%r13)
+	movq %rbx, 16(%r13)
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %rdi, 8(%rbx)
+	movq %r13, 16(%rbx)
+	movq %rdi, %r13
+	movl $24, %edi
+	callq malloc
+	movq %r13, %rdi
+	movq %rax, %rsi
+	movq $1, (%rsi)
+	leaq str557(%rip), %rax
+	movq %rax, 8(%rsi)
+	movq %rbx, 16(%rsi)
+	movq %rdi, %rbx
+	leaq str546(%rip), %rdi
+	callq donna_shell_exec
+	movq %rbx, %rdi
+	cmpq $0, %rax
+	setz %cl
+	movzbq %cl, %rcx
+	cmpq $1, %rcx
+	jz .Lbb102
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %r13
+	movq $1, (%r13)
+	movq %r12, 8(%r13)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%r13)
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	leaq str572(%rip), %rax
+	movq %rax, 8(%rbx)
+	movq %r13, 16(%rbx)
+	movq %rdi, %r13
+	movl $24, %edi
+	callq malloc
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq $1, (%r13)
+	leaq str576(%rip), %rax
+	movq %rax, 8(%r13)
+	movq %rbx, 16(%r13)
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %rdi, 8(%rbx)
+	movq %r13, 16(%rbx)
+	movq %rdi, %r13
+	movl $24, %edi
+	callq malloc
+	movq %r13, %rdi
+	movq %rax, %rsi
+	movq $1, (%rsi)
+	leaq str583(%rip), %rax
+	movq %rax, 8(%rsi)
+	movq %rbx, 16(%rsi)
+	movq %rdi, %rbx
+	leaq str568(%rip), %rdi
+	callq donna_shell_exec
+	movq %rbx, %rdi
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %rsi, 8(%rbx)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%rbx)
+	movq %rdi, %r12
+	movl $24, %edi
+	callq malloc
+	movq %r12, %rdi
+	movq %rax, %r12
+	movq $1, (%r12)
+	leaq str592(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %rbx, 16(%r12)
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %rdi, 8(%rbx)
+	movq %r12, 16(%rbx)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rsi
+	movq $1, (%rsi)
+	leaq str599(%rip), %rax
+	movq %rax, 8(%rsi)
+	movq %rbx, 16(%rsi)
+	leaq str588(%rip), %rdi
+	callq donna_shell_exec
+.Lbb102:
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+.type builder_dependencies_checkout_ref, @function
+.size builder_dependencies_checkout_ref, .-builder_dependencies_checkout_ref
+/* end function builder_dependencies_checkout_ref */
+
+.text
+.balign 16
+builder_dependencies_origin_url:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	pushq %rbx
+	pushq %r12
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %r12
+	movq $1, (%r12)
+	leaq str606(%rip), %rax
+	movq %rax, 8(%r12)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%r12)
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	leaq str610(%rip), %rax
+	movq %rax, 8(%rbx)
+	movq %r12, 16(%rbx)
+	movq %rdi, %r12
+	movl $24, %edi
+	callq malloc
+	movq %r12, %rdi
+	movq %rax, %r12
+	movq $1, (%r12)
+	leaq str614(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %rbx, 16(%r12)
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %rdi, 8(%rbx)
+	movq %r12, 16(%rbx)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rsi
+	movq $1, (%rsi)
+	leaq str621(%rip), %rax
+	movq %rax, 8(%rsi)
+	movq %rbx, 16(%rsi)
+	leaq str605(%rip), %rdi
+	callq donna_shell_output
+	movq %rax, %rdi
+	callq donna_string_trim
+	popq %r12
+	popq %rbx
+	leave
+	ret
+.type builder_dependencies_origin_url, @function
+.size builder_dependencies_origin_url, .-builder_dependencies_origin_url
+/* end function builder_dependencies_origin_url */
+
+.text
+.balign 16
 builder_dependencies_git_cache_dir:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq str478(%rip), %rdi
+	leaq str627(%rip), %rdi
 	callq donna_shell_getenv
 	movq %rax, %rdi
-	leaq str480(%rip), %rsi
+	leaq str629(%rip), %rsi
 	callq donna_files_join
 	movq %rax, %rdi
-	leaq str482(%rip), %rsi
+	leaq str631(%rip), %rsi
 	callq donna_files_join
 	leave
 	ret
@@ -1731,7 +2292,7 @@ builder_dependencies_head_sha:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq str485(%rip), %rax
+	leaq str634(%rip), %rax
 	movq %rax, 8(%rbx)
 	leaq donna_nil(%rip), %rax
 	movq %rax, 16(%rbx)
@@ -1741,7 +2302,7 @@ builder_dependencies_head_sha:
 	movq %r12, %rdi
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq str489(%rip), %rax
+	leaq str638(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %rbx, 16(%r12)
 	movq %rdi, %rbx
@@ -1756,10 +2317,10 @@ builder_dependencies_head_sha:
 	callq malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq str496(%rip), %rax
+	leaq str645(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
-	leaq str484(%rip), %rdi
+	leaq str633(%rip), %rdi
 	callq donna_shell_output
 	movq %rax, %rdi
 	callq donna_string_trim
@@ -1780,12 +2341,12 @@ builder_dependencies_opt_string:
 	callq parsetoml_parsetoml_get_string
 	movq (%rax), %rcx
 	cmpq $1, %rcx
-	jz .Lbb98
+	jz .Lbb111
 	movq 8(%rax), %rax
-	jmp .Lbb99
-.Lbb98:
-	leaq str511(%rip), %rax
-.Lbb99:
+	jmp .Lbb112
+.Lbb111:
+	leaq str660(%rip), %rax
+.Lbb112:
 	leave
 	ret
 .type builder_dependencies_opt_string, @function

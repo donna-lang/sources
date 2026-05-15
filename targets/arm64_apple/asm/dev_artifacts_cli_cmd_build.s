@@ -48,70 +48,56 @@ _str97:
 
 .data
 .balign 8
-_str125:
+_str136:
 	.ascii "-o"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str133:
+_str144:
 	.ascii " >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str142:
+_str153:
 	.ascii "build failed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str144:
+_str155:
 	.ascii ": linker failed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str147:
-	.ascii "command -v codesign >/dev/null 2>&1 && codesign --force -s - "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str149:
-	.ascii " >/dev/null 2>&1"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str152:
+_str159:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str162:
+_str170:
 	.ascii "  hint: install QBE and make sure qbe is in PATH"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str164:
+_str172:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str166:
+_str174:
 	.ascii ": qbe not found"
 	.byte 10
 	.byte 0
@@ -119,21 +105,21 @@ _str166:
 
 .data
 .balign 8
-_str169:
+_str177:
 	.ascii "  hint: install clang/gcc or Zig, or set DONNA_CC"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str171:
+_str179:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str173:
+_str181:
 	.ascii ": C compiler not found"
 	.byte 10
 	.byte 0
@@ -141,63 +127,84 @@ _str173:
 
 .data
 .balign 8
-_str192:
+_str200:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str196:
+_str204:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str198:
+_str206:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str308:
+_str316:
 	.ascii "main"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str318:
+_str326:
 	.ascii "uname | grep -q '^Darwin$' >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str326:
+_str334:
 	.ascii "-Wl,-stack_size,0x2000000"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str330:
+_str338:
 	.ascii "-lm"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str341:
+_str343:
+	.ascii "uname | grep -q '^Darwin$' >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str351:
+	.ascii "command -v codesign >/dev/null 2>&1 && codesign --force -s - "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str353:
+	.ascii " >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str363:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str354:
+_str376:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -309,43 +316,43 @@ L11:
 .globl _cli_cmd_build_build_project
 _cli_cmd_build_build_project:
 	hint	#34
-	stp	x29, x30, [sp, -112]!
+	stp	x29, x30, [sp, -128]!
 	mov	x29, sp
-	str	x19, [x29, 104]
-	str	x20, [x29, 96]
-	str	x21, [x29, 88]
-	str	x22, [x29, 80]
-	str	x23, [x29, 72]
-	str	x24, [x29, 64]
-	str	x25, [x29, 56]
-	str	x26, [x29, 48]
-	str	x27, [x29, 40]
-	mov	x26, x1
+	str	x19, [x29, 120]
+	str	x20, [x29, 112]
+	str	x21, [x29, 104]
+	str	x22, [x29, 96]
+	str	x23, [x29, 88]
+	str	x24, [x29, 80]
+	str	x25, [x29, 72]
+	str	x26, [x29, 64]
+	str	x27, [x29, 56]
+	mov	x23, x1
 	mov	x19, x0
 	bl	_donna_time_now_us
 	mov	x21, x0
-	mov	x0, x26
+	mov	x0, x23
 	bl	_builder_scanner_project_build_dir
 	mov	x20, x0
-	mov	x0, x26
+	mov	x0, x23
 	bl	_builder_scanner_project_bin_dir
-	mov	x25, x0
-	mov	x0, x26
+	mov	x24, x0
+	mov	x0, x23
 	bl	_builder_scanner_project_dev_dir
 	mov	x22, x0
-	mov	x0, x26
+	mov	x0, x23
 	bl	_builder_scanner_project_dev_artifacts_dir
 	mov	x17, x0
 	mov	x0, x22
 	mov	x22, x17
-	mov	x23, x0
+	mov	x25, x0
 	mov	x0, x20
 	bl	_donna_files_mkdir
-	mov	x0, x23
-	mov	x23, x0
 	mov	x0, x25
+	mov	x25, x0
+	mov	x0, x24
 	bl	_donna_files_mkdir
-	mov	x0, x23
+	mov	x0, x25
 	bl	_donna_files_mkdir
 	mov	x0, x19
 	mov	x19, x0
@@ -382,7 +389,7 @@ _cli_cmd_build_build_project:
 	mov	x2, x19
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L30
+	beq	L34
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
@@ -393,15 +400,16 @@ _cli_cmd_build_build_project:
 	mov	x22, x3
 	mov	x3, #16
 	add	x3, x1, x3
-	ldr	x23, [x3]
+	ldr	x26, [x3]
+	str	x26, [x29, 24]
 	mov	x20, x2
 	mov	x2, #24
 	add	x1, x1, x2
-	ldr	x24, [x1]
+	ldr	x25, [x1]
 	mov	x19, x0
-	mov	x0, x26
+	mov	x0, x23
 	bl	_builder_scanner_project_src_dir
-	mov	x4, x24
+	mov	x4, x25
 	mov	x3, x22
 	mov	x2, x20
 	adrp	x1, _str69@page
@@ -414,7 +422,7 @@ _cli_cmd_build_build_project:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	L28
+	beq	L32
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
@@ -431,16 +439,16 @@ _cli_cmd_build_build_project:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #0
-	beq	L25
+	beq	L29
 	bl	_donna_list_append
 	mov	x22, x0
 	bl	_builder_pipeline_qbe_available
 	mov	x1, #16
-	mov	x24, x21
+	mov	x25, x21
 	sub	sp, sp, x1
 	mov	x21, sp
 	cmp	x0, #0
-	beq	L23
+	beq	L27
 	bl	_builder_pipeline_c_compiler_available
 	mov	x1, x0
 	mov	x0, x22
@@ -448,51 +456,51 @@ _cli_cmd_build_build_project:
 	sub	sp, sp, x2
 	mov	x22, sp
 	cmp	x1, #0
-	beq	L21
-	adrp	x1, _donna_nil@page
-	add	x1, x1, _donna_nil@pageoff
-	bl	_builder_pipeline_run_qbe_all
-	str	x0, [x29, 16]
-	mov	x0, x26
+	beq	L25
+	bl	_builder_pipeline_run_qbe_all_checked
+	mov	x1, x0
+	mov	x0, x23
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x23, sp
+	ldr	x2, [x1]
+	cmp	x2, #1
+	beq	L22
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x26, [x1]
+	str	x26, [x29, 16]
 	bl	_builder_scanner_project_name
 	mov	x1, x0
-	mov	x0, x25
+	mov	x0, x24
 	bl	_donna_files_join
-	mov	x25, x0
+	mov	x24, x0
 	bl	_cli_cmd_build_linker_flags
-	str	x0, [x29, 24]
-	mov	x0, x23
-	mov	x23, x0
+	str	x0, [x29, 32]
 	mov	x0, #24
 	bl	_malloc
-	mov	x1, x25
 	mov	x27, x0
-	mov	x0, x23
-	mov	x2, #1
-	str	x2, [x27]
-	mov	x2, #8
-	add	x2, x27, x2
-	str	x1, [x2]
-	mov	x2, #16
-	add	x2, x27, x2
-	mov	x23, x1
-	adrp	x1, _donna_nil@page
-	add	x1, x1, _donna_nil@pageoff
-	str	x1, [x2]
-	mov	x25, x0
+	mov	x0, #1
+	str	x0, [x27]
+	mov	x0, #8
+	add	x0, x27, x0
+	str	x24, [x0]
+	mov	x0, #16
+	add	x1, x27, x0
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, x0
-	mov	x0, x25
-	mov	x26, x0
-	ldr	x0, [x29, 24]
-	ldr	x25, [x29, 16]
+	ldr	x0, [x29, 32]
+	ldr	x26, [x29, 24]
 	mov	x2, #1
 	str	x2, [x1]
 	mov	x2, #8
 	add	x3, x1, x2
-	adrp	x2, _str125@page
-	add	x2, x2, _str125@pageoff
+	adrp	x2, _str136@page
+	add	x2, x2, _str136@pageoff
 	str	x2, [x3]
 	mov	x2, #16
 	add	x2, x1, x2
@@ -500,70 +508,74 @@ _cli_cmd_build_build_project:
 	bl	_donna_list_append
 	mov	x1, x0
 	mov	x0, x26
+	ldr	x26, [x29, 16]
 	bl	_donna_list_append
 	mov	x1, x0
-	mov	x0, x25
+	mov	x0, x26
 	bl	_donna_list_append
 	bl	_builder_pipeline_c_command
-	mov	x1, x23
-	mov	x23, x1
-	adrp	x1, _str133@page
-	add	x1, x1, _str133@pageoff
-	bl	___rt_str_concat
-	bl	_donna_shell_run
-	mov	x1, x23
-	cmp	x0, #0
-	cset	x0, eq
-	mov	x2, #16
-	sub	sp, sp, x2
-	mov	x23, sp
-	cmp	x0, #0
-	beq	L19
-	adrp	x0, _str147@page
-	add	x0, x0, _str147@pageoff
-	bl	___rt_str_concat
-	adrp	x1, _str149@page
-	add	x1, x1, _str149@pageoff
-	bl	___rt_str_concat
-	bl	_donna_shell_run
-	bl	_donna_time_now_us
-	sub	x1, x0, x24
-	adrp	x0, _str152@page
-	add	x0, x0, _str152@pageoff
-	bl	_utilities_logger_ok
-	mov	x0, #1
-	bl	_cli_cmd_build_BuildOk
-	str	x0, [x23]
-	b	L20
-L19:
-	adrp	x0, _str142@page
-	add	x0, x0, _str142@pageoff
-	bl	_utilities_colors_red
 	adrp	x1, _str144@page
 	add	x1, x1, _str144@pageoff
 	bl	___rt_str_concat
+	bl	_donna_shell_run
+	mov	x1, x0
+	mov	x0, x24
+	cmp	x1, #0
+	cset	x1, eq
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x24, sp
+	cmp	x1, #0
+	beq	L20
+	bl	_cli_cmd_build_maybe_codesign
+	bl	_donna_time_now_us
+	sub	x1, x0, x25
+	adrp	x0, _str159@page
+	add	x0, x0, _str159@pageoff
+	bl	_utilities_logger_ok
+	mov	x0, #1
+	bl	_cli_cmd_build_BuildOk
+	str	x0, [x24]
+	b	L21
+L20:
+	adrp	x0, _str153@page
+	add	x0, x0, _str153@pageoff
+	bl	_utilities_colors_red
+	adrp	x1, _str155@page
+	add	x1, x1, _str155@pageoff
+	bl	___rt_str_concat
+	bl	_cli_cmd_build_BuildFailed
+	str	x0, [x24]
+L21:
+	str	x0, [x23]
+	b	L24
+L22:
+	mov	x0, x1
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
 	bl	_cli_cmd_build_BuildFailed
 	str	x0, [x23]
-L20:
+L24:
 	str	x0, [x22]
-	b	L22
-L21:
+	b	L26
+L25:
 	bl	_cli_cmd_build_c_compiler_missing_error
 	bl	_cli_cmd_build_BuildFailed
 	str	x0, [x22]
-L22:
+L26:
 	str	x0, [x21]
-	b	L24
-L23:
+	b	L28
+L27:
 	bl	_cli_cmd_build_qbe_missing_error
 	bl	_cli_cmd_build_BuildFailed
 	str	x0, [x21]
-L24:
+L28:
 	str	x0, [x20]
-	b	L27
-L25:
-	mov	x22, x25
-	mov	x0, x26
+	b	L31
+L29:
+	mov	x22, x24
+	mov	x0, x23
 	bl	_builder_scanner_project_name
 	mov	x1, x0
 	mov	x0, x22
@@ -577,34 +589,34 @@ L25:
 	mov	x0, #0
 	bl	_cli_cmd_build_BuildOk
 	str	x0, [x20]
-L27:
+L31:
 	str	x0, [x19]
-	b	L31
-L28:
+	b	L35
+L32:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_cli_cmd_build_BuildFailed
 	str	x0, [x19]
-	b	L31
-L30:
+	b	L35
+L34:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_cli_cmd_build_BuildFailed
-L31:
-	ldr	x19, [x29, 104]
-	ldr	x20, [x29, 96]
-	ldr	x21, [x29, 88]
-	ldr	x22, [x29, 80]
-	ldr	x23, [x29, 72]
-	ldr	x24, [x29, 64]
-	ldr	x25, [x29, 56]
-	ldr	x26, [x29, 48]
-	ldr	x27, [x29, 40]
+L35:
+	ldr	x19, [x29, 120]
+	ldr	x20, [x29, 112]
+	ldr	x21, [x29, 104]
+	ldr	x22, [x29, 96]
+	ldr	x23, [x29, 88]
+	ldr	x24, [x29, 80]
+	ldr	x25, [x29, 72]
+	ldr	x26, [x29, 64]
+	ldr	x27, [x29, 56]
 	mov sp, x29
-	ldp	x29, x30, [sp], 112
+	ldp	x29, x30, [sp], 128
 	ret
 /* end function cli_cmd_build_build_project */
 
@@ -615,17 +627,17 @@ _cli_cmd_build_qbe_missing_error:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x0, _str162@page
-	add	x0, x0, _str162@pageoff
+	adrp	x0, _str170@page
+	add	x0, x0, _str170@pageoff
 	bl	_utilities_colors_dim
 	mov	x19, x0
-	adrp	x0, _str164@page
-	add	x0, x0, _str164@pageoff
+	adrp	x0, _str172@page
+	add	x0, x0, _str172@pageoff
 	bl	_utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str166@page
-	add	x1, x1, _str166@pageoff
+	adrp	x1, _str174@page
+	add	x1, x1, _str174@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -641,17 +653,17 @@ _cli_cmd_build_c_compiler_missing_error:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x0, _str169@page
-	add	x0, x0, _str169@pageoff
+	adrp	x0, _str177@page
+	add	x0, x0, _str177@pageoff
 	bl	_utilities_colors_dim
 	mov	x19, x0
-	adrp	x0, _str171@page
-	add	x0, x0, _str171@pageoff
+	adrp	x0, _str179@page
+	add	x0, x0, _str179@pageoff
 	bl	_utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str173@page
-	add	x1, x1, _str173@pageoff
+	adrp	x1, _str181@page
+	add	x1, x1, _str181@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -681,15 +693,15 @@ _cli_cmd_build_compile_deps:
 	mov	x21, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L48
+	beq	L52
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x19, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x20, [x0]
-	adrp	x1, _str192@page
-	add	x1, x1, _str192@pageoff
+	adrp	x1, _str200@page
+	add	x1, x1, _str200@pageoff
 	mov	x0, x21
 	bl	_donna_files_join
 	mov	x22, x0
@@ -698,15 +710,15 @@ _cli_cmd_build_compile_deps:
 	mov	x1, x0
 	mov	x0, x22
 	bl	_donna_files_join
-	adrp	x1, _str196@page
-	add	x1, x1, _str196@pageoff
+	adrp	x1, _str204@page
+	add	x1, x1, _str204@pageoff
 	mov	x22, x0
 	bl	_donna_files_join
 	mov	x1, x0
 	mov	x0, x22
 	mov	x22, x1
-	adrp	x1, _str198@page
-	add	x1, x1, _str198@pageoff
+	adrp	x1, _str206@page
+	add	x1, x1, _str206@pageoff
 	mov	x23, x0
 	mov	x0, x21
 	bl	_donna_files_join
@@ -742,7 +754,7 @@ _cli_cmd_build_compile_deps:
 	mov	x19, sp
 	ldr	x5, [x1]
 	cmp	x5, #1
-	beq	L46
+	beq	L50
 	mov	x24, x4
 	mov	x4, #8
 	add	x1, x1, x4
@@ -795,7 +807,7 @@ _cli_cmd_build_compile_deps:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L44
+	beq	L48
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -813,14 +825,14 @@ _cli_cmd_build_compile_deps:
 	sub	sp, sp, x0
 	mov	x1, sp
 	cmp	x25, #1
-	beq	L41
+	beq	L45
 	str	x21, [x1]
-	b	L43
-L41:
+	b	L47
+L45:
 	mov	x0, #1
 	str	x0, [x1]
 	mov	x21, #1
-L43:
+L47:
 	mov	x0, #32
 	bl	_malloc
 	str	x24, [x0]
@@ -835,25 +847,25 @@ L43:
 	str	x21, [x1]
 	bl	_donna_result_Ok
 	str	x0, [x20]
-	b	L45
-L44:
+	b	L49
+L48:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_donna_result_Error
 	str	x0, [x20]
-L45:
+L49:
 	str	x0, [x19]
-	b	L50
-L46:
+	b	L54
+L50:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_donna_result_Error
 	str	x0, [x19]
-	b	L50
-L48:
+	b	L54
+L52:
 	mov	x21, x26
 	mov	x20, x25
 	mov	x19, x24
@@ -874,7 +886,7 @@ L48:
 	mov	x1, #0
 	str	x1, [x2]
 	bl	_donna_result_Ok
-L50:
+L54:
 	ldr	x19, [x29, 104]
 	ldr	x20, [x29, 96]
 	ldr	x21, [x29, 88]
@@ -899,7 +911,7 @@ _cli_cmd_build_has_public_main:
 	mov	x1, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L56
+	beq	L60
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -916,18 +928,18 @@ _cli_cmd_build_has_public_main:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L54
+	beq	L58
 	bl	_cli_cmd_build_has_public_main
 	str	x0, [x19]
-	b	L57
-L54:
+	b	L61
+L58:
 	mov	x0, #1
 	str	x0, [x19]
 	mov	x0, #1
-	b	L57
-L56:
+	b	L61
+L60:
 	mov	x0, #0
-L57:
+L61:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -958,7 +970,7 @@ _cli_cmd_build_bindings_have_main:
 	mov	x1, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L65
+	beq	L69
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -966,8 +978,8 @@ _cli_cmd_build_bindings_have_main:
 	add	x1, x1, x2
 	ldr	x19, [x1]
 	ldr	x0, [x0]
-	adrp	x1, _str308@page
-	add	x1, x1, _str308@pageoff
+	adrp	x1, _str316@page
+	add	x1, x1, _str316@pageoff
 	bl	_donna_string_equal
 	mov	x1, x0
 	mov	x0, x19
@@ -975,18 +987,18 @@ _cli_cmd_build_bindings_have_main:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L63
+	beq	L67
 	bl	_cli_cmd_build_bindings_have_main
 	str	x0, [x19]
-	b	L66
-L63:
+	b	L70
+L67:
 	mov	x0, #1
 	str	x0, [x19]
 	mov	x0, #1
-	b	L66
-L65:
+	b	L70
+L69:
 	mov	x0, #0
-L66:
+L70:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -999,47 +1011,79 @@ _cli_cmd_build_linker_flags:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x0, _str318@page
-	add	x0, x0, _str318@pageoff
+	adrp	x0, _str326@page
+	add	x0, x0, _str326@pageoff
 	bl	_donna_shell_run
 	cmp	x0, #0
 	cset	x0, eq
 	cmp	x0, #1
-	beq	L69
+	beq	L73
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, _str330@page
-	add	x1, x1, _str330@pageoff
+	adrp	x1, _str338@page
+	add	x1, x1, _str338@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x0, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-	b	L70
-L69:
+	b	L74
+L73:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, _str326@page
-	add	x1, x1, _str326@pageoff
+	adrp	x1, _str334@page
+	add	x1, x1, _str334@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x0, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-L70:
+L74:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function cli_cmd_build_linker_flags */
+
+.text
+.balign 4
+_cli_cmd_build_maybe_codesign:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, _str343@page
+	add	x0, x0, _str343@pageoff
+	bl	_donna_shell_run
+	mov	x1, x19
+	cmp	x0, #0
+	cset	x0, eq
+	cmp	x0, #0
+	beq	L77
+	adrp	x0, _str351@page
+	add	x0, x0, _str351@pageoff
+	bl	___rt_str_concat
+	adrp	x1, _str353@page
+	add	x1, x1, _str353@pageoff
+	bl	___rt_str_concat
+	bl	_donna_shell_run
+	b	L78
+L77:
+	mov	x0, #0
+L78:
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function cli_cmd_build_maybe_codesign */
 
 .text
 .balign 4
@@ -1051,24 +1095,24 @@ _cli_cmd_build_first_positional:
 	str	x20, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L79
+	beq	L87
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L75
+	beq	L83
 	mov	x1, #0
 	str	x1, [x19]
 	mov	x1, #0
-	b	L76
-L75:
+	b	L84
+L83:
 	mov	x20, x0
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, _str354@page
-	add	x1, x1, _str354@pageoff
+	adrp	x1, _str376@page
+	add	x1, x1, _str376@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -1077,26 +1121,26 @@ L75:
 	mov	x2, #1
 	and	x1, x1, x2
 	str	x1, [x19]
-L76:
+L84:
 	cmp	w1, #0
-	bne	L78
+	bne	L86
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_cli_cmd_build_first_positional
-	b	L80
-L78:
+	b	L88
+L86:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	L80
-L79:
-	adrp	x0, _str341@page
-	add	x0, x0, _str341@pageoff
-L80:
+	b	L88
+L87:
+	adrp	x0, _str363@page
+	add	x0, x0, _str363@pageoff
+L88:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29

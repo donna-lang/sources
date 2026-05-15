@@ -49,14 +49,14 @@ _str60:
 
 .data
 .balign 8
-_str70:
+_str86:
 	.ascii "test_runner.donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str76:
+_str94:
 	.ascii "donna.toml"
 	.byte 0
 /* end data */
@@ -69,105 +69,91 @@ _donna_nil:
 
 .data
 .balign 8
-_str106:
+_str124:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str124:
+_str142:
 	.ascii "scrubbed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str155:
+_str173:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str158:
+_str176:
 	.ascii "test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str177:
+_str195:
 	.ascii "test_runner.ssa"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str180:
+_str198:
 	.ascii "test_runner"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str222:
+_str250:
 	.ascii "donna_test_runner"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str229:
+_str257:
 	.ascii "-o"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str237:
+_str265:
 	.ascii " >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str246:
+_str274:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str248:
+_str276:
 	.ascii ": linker failed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str250:
-	.ascii "command -v codesign >/dev/null 2>&1 && codesign --force -s - "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str252:
-	.ascii " >/dev/null 2>&1"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str255:
+_str279:
 	.ascii "  Running tests..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str257:
+_str281:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -175,35 +161,100 @@ _str257:
 
 .data
 .balign 8
-_str266:
+_str290:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str267:
+_str291:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str277:
-	.ascii "  hint: install QBE and make sure qbe is in PATH"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str279:
+_str302:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str281:
+_str304:
+	.ascii ": invalid test function name"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str306:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str315:
+	.ascii "  hint: public test functions must end with `_test`"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str322:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str326:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str330:
+	.ascii "error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str332:
+	.ascii ": no test functions found"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str334:
+	.ascii "  hint: add a public function named like `example_test` in test/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str337:
+	.ascii "  hint: install QBE and make sure qbe is in PATH"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str339:
+	.ascii "error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str341:
 	.ascii ": qbe not found"
 	.byte 10
 	.byte 0
@@ -211,21 +262,21 @@ _str281:
 
 .data
 .balign 8
-_str284:
+_str344:
 	.ascii "  hint: install clang/gcc or Zig, or set DONNA_CC"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str286:
+_str346:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str288:
+_str348:
 	.ascii ": C compiler not found"
 	.byte 10
 	.byte 0
@@ -233,119 +284,154 @@ _str288:
 
 .data
 .balign 8
-_str292:
+_str352:
 	.ascii "donna_stdlib"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str302:
+_str362:
 	.ascii "self_alias_artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str305:
+_str365:
 	.ascii "donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str347:
+_str407:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str351:
+_str411:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str353:
+_str413:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str431:
+_str491:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str447:
+_str507:
 	.ascii "only"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str455:
+_str515:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str480:
+_str540:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str514:
+_str574:
 	.ascii "uname | grep -q '^Darwin$' >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str522:
+_str582:
 	.ascii "-Wl,-stack_size,0x2000000"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str526:
+_str586:
 	.ascii "-lm"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str543:
+_str591:
+	.ascii "uname | grep -q '^Darwin$' >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str599:
+	.ascii "command -v codesign >/dev/null 2>&1 && codesign --force -s - "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str601:
+	.ascii " >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str617:
+	.ascii "$main("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str619:
+	.ascii "$donna_program_main("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str627:
 	.ascii "export function w $main("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str544:
+_str628:
 	.ascii "function w $__proj_main("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str546:
+_str630:
 	.ascii "export function w $donna_program_main("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str547:
+_str631:
 	.ascii "function w $__proj_main("
 	.byte 0
 /* end data */
@@ -440,89 +526,144 @@ L9:
 .balign 4
 _cli_cmd_test_do_test:
 	hint	#34
-	stp	x29, x30, [sp, -80]!
+	stp	x29, x30, [sp, -96]!
 	mov	x29, sp
-	str	x19, [x29, 72]
-	str	x20, [x29, 64]
-	str	x21, [x29, 56]
-	str	x22, [x29, 48]
-	str	x23, [x29, 40]
-	str	x24, [x29, 32]
-	str	x25, [x29, 24]
-	mov	x21, x1
+	str	x19, [x29, 88]
+	str	x20, [x29, 80]
+	str	x21, [x29, 72]
+	str	x22, [x29, 64]
+	str	x23, [x29, 56]
+	str	x24, [x29, 48]
+	str	x25, [x29, 40]
+	str	x26, [x29, 32]
+	mov	x22, x1
 	mov	x1, x2
-	mov	x20, x0
 	mov	x23, x1
 	adrp	x1, _str41@page
 	add	x1, x1, _str41@pageoff
-	mov	x0, x20
-	bl	_donna_files_join
 	mov	x19, x0
+	bl	_donna_files_join
+	mov	x20, x0
+	mov	x0, x19
+	mov	x19, x0
+	mov	x0, x20
 	bl	_donna_files_is_dir
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L14
+	beq	L23
 	mov	x19, x0
+	mov	x0, x20
 	bl	_cli_cmd_test_find_donna_files
-	mov	x22, x0
+	mov	x21, x0
 	mov	x0, x19
 	mov	x19, x0
-	mov	x0, x22
+	mov	x0, x21
 	bl	_donna_list_is_empty
-	mov	x2, x22
+	mov	x2, x21
 	mov	x1, x0
 	mov	x0, x19
-	mov	x22, x2
+	mov	x25, x2
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L13
-	mov	x0, x22
+	beq	L21
+	mov	x20, x0
+	mov	x0, x25
 	bl	_builder_tester_collect_test_modules
-	mov	x1, x23
-	mov	x23, x0
-	mov	x0, x23
-	bl	_builder_tester_generate_filtered_runner
 	mov	x24, x0
+	mov	x0, x20
+	mov	x20, x0
+	mov	x0, x25
+	bl	_builder_tester_collect_invalid_public_test_functions
+	mov	x21, x0
+	mov	x0, x20
+	mov	x20, x0
 	mov	x0, x21
-	bl	_builder_scanner_project_build_dir
+	bl	_donna_list_is_empty
+	mov	x2, x25
+	mov	x1, x0
+	mov	x0, x20
+	mov	x25, x2
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x20, sp
+	cmp	x1, #0
+	beq	L18
+	mov	x21, x0
+	mov	x0, x24
+	bl	_builder_tester_count_total
+	mov	x2, x25
+	mov	x1, x23
+	mov	x3, x0
+	mov	x0, x21
+	cmp	x3, #0
+	mov	x21, x0
+	cset	x0, eq
+	mov	x23, x2
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x25, sp
+	str	x25, [x29, 16]
+	cmp	x0, #1
+	beq	L15
+	mov	x0, x24
+	bl	_builder_tester_generate_filtered_runner
 	mov	x25, x0
-	mov	x0, x21
+	mov	x0, x22
+	bl	_builder_scanner_project_build_dir
+	mov	x26, x0
+	mov	x0, x22
 	bl	_builder_scanner_project_test_dir
 	mov	x17, x0
-	mov	x0, x25
-	mov	x25, x17
+	mov	x0, x26
+	mov	x26, x17
 	bl	_donna_files_mkdir
-	mov	x0, x20
-	mov	x20, x0
-	mov	x0, x25
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, x26
 	bl	_donna_files_mkdir
-	mov	x1, x24
-	mov	x0, x20
-	mov	x24, x1
-	adrp	x1, _str70@page
-	add	x1, x1, _str70@pageoff
-	mov	x20, x0
-	mov	x0, x25
+	mov	x1, x25
+	mov	x0, x21
+	mov	x25, x1
+	adrp	x1, _str86@page
+	add	x1, x1, _str86@pageoff
+	mov	x21, x0
+	mov	x0, x26
 	bl	_donna_files_join
-	mov	x1, x24
-	mov	x24, x0
-	mov	x0, x20
-	mov	x20, x0
-	mov	x0, x24
+	mov	x1, x25
+	mov	x25, x0
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, x25
 	bl	_donna_files_write
-	mov	x5, x25
-	mov	x4, x24
-	mov	x3, x23
-	mov	x2, x22
-	mov	x1, x21
-	mov	x0, x20
+	mov	x5, x26
+	mov	x4, x25
+	mov	x3, x24
+	mov	x2, x23
+	mov	x1, x22
+	mov	x0, x21
+	ldr	x21, [x29, 16]
 	bl	_cli_cmd_test_build_and_run
+	str	x0, [x21]
+	b	L17
+L15:
+	mov	x21, x25
+	bl	_cli_cmd_test_no_tests_error
+	str	x0, [x21]
+L17:
+	str	x0, [x20]
+	b	L20
+L18:
+	mov	x0, x21
+	bl	_cli_cmd_test_invalid_test_names_error
+	str	x0, [x20]
+L20:
 	str	x0, [x19]
-	b	L16
-L13:
+	b	L24
+L21:
+	mov	x0, x20
 	mov	x20, x0
 	adrp	x0, _str60@page
 	add	x0, x0, _str60@pageoff
@@ -535,9 +676,8 @@ L13:
 	mov	x0, x20
 	bl	___rt_str_concat
 	str	x0, [x19]
-	b	L16
-L14:
-	mov	x0, x20
+	b	L24
+L23:
 	mov	x19, x0
 	adrp	x0, _str49@page
 	add	x0, x0, _str49@pageoff
@@ -549,16 +689,17 @@ L14:
 	mov	x1, x0
 	mov	x0, x19
 	bl	___rt_str_concat
-L16:
-	ldr	x19, [x29, 72]
-	ldr	x20, [x29, 64]
-	ldr	x21, [x29, 56]
-	ldr	x22, [x29, 48]
-	ldr	x23, [x29, 40]
-	ldr	x24, [x29, 32]
-	ldr	x25, [x29, 24]
+L24:
+	ldr	x19, [x29, 88]
+	ldr	x20, [x29, 80]
+	ldr	x21, [x29, 72]
+	ldr	x22, [x29, 64]
+	ldr	x23, [x29, 56]
+	ldr	x24, [x29, 48]
+	ldr	x25, [x29, 40]
+	ldr	x26, [x29, 32]
 	mov sp, x29
-	ldp	x29, x30, [sp], 80
+	ldp	x29, x30, [sp], 96
 	ret
 /* end function cli_cmd_test_do_test */
 
@@ -566,24 +707,24 @@ L16:
 .balign 4
 _cli_cmd_test_build_and_run:
 	hint	#34
-	stp	x29, x30, [sp, -240]!
+	stp	x29, x30, [sp, -256]!
 	mov	x29, sp
-	str	x19, [x29, 232]
-	str	x20, [x29, 224]
-	str	x21, [x29, 216]
-	str	x22, [x29, 208]
-	str	x23, [x29, 200]
-	str	x24, [x29, 192]
-	str	x25, [x29, 184]
-	str	x26, [x29, 176]
-	str	x27, [x29, 168]
-	mov	x26, x5
-	str	x4, [x29, 136]
+	str	x19, [x29, 248]
+	str	x20, [x29, 240]
+	str	x21, [x29, 232]
+	str	x22, [x29, 224]
+	str	x23, [x29, 216]
+	str	x24, [x29, 208]
+	str	x25, [x29, 200]
+	str	x26, [x29, 192]
+	str	x27, [x29, 184]
+	mov	x25, x5
+	str	x4, [x29, 160]
 	mov	x21, x2
 	mov	x19, x1
 	mov	x22, x0
-	adrp	x1, _str76@page
-	add	x1, x1, _str76@pageoff
+	adrp	x1, _str94@page
+	add	x1, x1, _str94@pageoff
 	mov	x0, x22
 	bl	_donna_files_join
 	mov	x20, x0
@@ -618,7 +759,7 @@ _cli_cmd_test_build_and_run:
 	mov	x1, x22
 	bl	_builder_dependencies_resolve_dev_deps
 	mov	x1, x24
-	str	x0, [x29, 120]
+	str	x0, [x29, 144]
 	mov	x0, x22
 	mov	x22, x1
 	mov	x1, x23
@@ -639,19 +780,19 @@ _cli_cmd_test_build_and_run:
 	mov	x0, x19
 	ldr	x3, [x1]
 	cmp	x3, #1
-	beq	L48
+	beq	L61
 	mov	x3, #8
 	add	x1, x1, x3
 	ldr	x1, [x1]
-	ldr	x25, [x1]
+	ldr	x26, [x1]
 	mov	x3, #8
 	add	x3, x1, x3
 	ldr	x23, [x3]
-	str	x23, [x29, 128]
+	str	x23, [x29, 152]
 	mov	x3, #16
 	add	x3, x1, x3
 	ldr	x19, [x3]
-	str	x19, [x29, 96]
+	str	x19, [x29, 120]
 	mov	x20, x2
 	mov	x2, #24
 	add	x1, x1, x2
@@ -662,10 +803,10 @@ _cli_cmd_test_build_and_run:
 	mov	x2, x20
 	mov	x1, x0
 	mov	x0, x19
-	mov	x3, x25
+	mov	x3, x26
 	mov	x23, x1
-	adrp	x1, _str106@page
-	add	x1, x1, _str106@pageoff
+	adrp	x1, _str124@page
+	add	x1, x1, _str124@pageoff
 	mov	x19, x0
 	mov	x0, x23
 	bl	_builder_pipeline_compile_dir
@@ -676,20 +817,20 @@ _cli_cmd_test_build_and_run:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	L46
+	beq	L59
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	ldr	x2, [x1]
-	str	x2, [x29, 112]
+	str	x2, [x29, 136]
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x3, [x1]
-	str	x3, [x29, 144]
-	adrp	x1, _str124@page
-	add	x1, x1, _str124@pageoff
+	str	x3, [x29, 168]
+	adrp	x1, _str142@page
+	add	x1, x1, _str142@pageoff
 	mov	x20, x0
-	mov	x0, x26
+	mov	x0, x25
 	bl	_donna_files_join
 	mov	x22, x0
 	mov	x0, x20
@@ -699,31 +840,31 @@ _cli_cmd_test_build_and_run:
 	mov	x1, x22
 	mov	x0, x20
 	mov	x20, x0
-	ldr	x0, [x29, 144]
-	ldr	x22, [x29, 136]
+	ldr	x0, [x29, 168]
+	ldr	x22, [x29, 160]
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
 	bl	_cli_cmd_test_scrub_main_from_ssa
 	mov	x1, x23
-	str	x0, [x29, 104]
+	str	x0, [x29, 128]
 	mov	x0, x20
-	ldr	x23, [x29, 128]
-	ldr	x20, [x29, 120]
-	mov	x3, x25
-	mov	x2, x26
+	ldr	x23, [x29, 152]
+	ldr	x20, [x29, 144]
+	mov	x3, x26
+	mov	x2, x25
 	bl	_cli_cmd_test_compile_self_alias
 	mov	x1, x24
 	mov	x2, x0
-	ldr	x0, [x29, 112]
+	ldr	x0, [x29, 136]
 	mov	x24, x1
 	ldr	x1, [x2]
 	mov	x3, #8
 	add	x2, x2, x3
 	ldr	x2, [x2]
-	str	x2, [x29, 48]
+	str	x2, [x29, 72]
 	bl	_donna_list_append
 	mov	x1, x0
-	mov	x0, x25
+	mov	x0, x26
 	bl	_donna_list_append
 	mov	x1, x24
 	mov	x17, x0
@@ -742,7 +883,7 @@ _cli_cmd_test_build_and_run:
 	mov	x20, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	L43
+	beq	L56
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x2, [x1]
@@ -750,32 +891,32 @@ _cli_cmd_test_build_and_run:
 	mov	x3, #8
 	add	x3, x2, x3
 	ldr	x3, [x3]
-	str	x3, [x29, 56]
+	str	x3, [x29, 80]
 	mov	x3, #16
 	add	x2, x2, x3
 	ldr	x24, [x2]
-	str	x24, [x29, 40]
+	str	x24, [x29, 64]
 	bl	_donna_list_append
 	mov	x17, x0
 	mov	x0, x21
 	mov	x21, x17
-	adrp	x1, _str155@page
-	add	x1, x1, _str155@pageoff
-	mov	x24, x0
-	mov	x0, x26
-	bl	_donna_files_join
-	mov	x25, x0
-	mov	x0, x24
+	adrp	x1, _str173@page
+	add	x1, x1, _str173@pageoff
 	mov	x24, x0
 	mov	x0, x25
-	bl	_donna_files_mkdir
-	mov	x2, x25
+	bl	_donna_files_join
+	mov	x26, x0
 	mov	x0, x24
-	ldr	x24, [x29, 104]
-	ldr	x25, [x29, 96]
+	mov	x24, x0
+	mov	x0, x26
+	bl	_donna_files_mkdir
+	mov	x2, x26
+	mov	x0, x24
+	ldr	x24, [x29, 128]
+	ldr	x26, [x29, 120]
 	mov	x3, x21
-	adrp	x1, _str158@page
-	add	x1, x1, _str158@pageoff
+	adrp	x1, _str176@page
+	add	x1, x1, _str176@pageoff
 	bl	_builder_pipeline_compile_file_list
 	mov	x1, x0
 	mov	x0, x21
@@ -784,7 +925,7 @@ _cli_cmd_test_build_and_run:
 	mov	x21, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	L40
+	beq	L53
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x2, [x1]
@@ -792,23 +933,23 @@ _cli_cmd_test_build_and_run:
 	mov	x3, #8
 	add	x2, x2, x3
 	ldr	x27, [x2]
-	str	x27, [x29, 80]
+	str	x27, [x29, 104]
 	bl	_donna_list_append
-	str	x0, [x29, 88]
+	str	x0, [x29, 112]
 	mov	x0, x22
-	adrp	x1, _str177@page
-	add	x1, x1, _str177@pageoff
+	adrp	x1, _str195@page
+	add	x1, x1, _str195@pageoff
 	mov	x22, x0
-	mov	x0, x26
+	mov	x0, x25
 	bl	_donna_files_join
 	bl	_donna_files_delete
 	mov	x0, x22
-	ldr	x3, [x29, 88]
-	ldr	x22, [x29, 80]
+	ldr	x3, [x29, 112]
+	ldr	x22, [x29, 104]
 	mov	x4, #1
-	mov	x2, x26
-	adrp	x1, _str180@page
-	add	x1, x1, _str180@pageoff
+	mov	x2, x25
+	adrp	x1, _str198@page
+	add	x1, x1, _str198@pageoff
 	bl	_builder_pipeline_compile_module
 	mov	x1, x0
 	mov	x0, x22
@@ -817,16 +958,16 @@ _cli_cmd_test_build_and_run:
 	mov	x22, sp
 	ldr	x2, [x1]
 	cmp	x2, #1
-	beq	L37
+	beq	L50
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x2, [x1]
-	str	x2, [x29, 64]
+	str	x2, [x29, 88]
 	bl	_donna_list_reverse
-	str	x0, [x29, 72]
+	str	x0, [x29, 96]
 	mov	x0, x24
 	mov	x24, x0
 	mov	x0, #24
@@ -834,8 +975,8 @@ _cli_cmd_test_build_and_run:
 	mov	x1, x0
 	mov	x0, x24
 	mov	x24, x0
-	ldr	x0, [x29, 72]
-	ldr	x2, [x29, 64]
+	ldr	x0, [x29, 96]
+	ldr	x2, [x29, 88]
 	mov	x3, #1
 	str	x3, [x1]
 	mov	x3, #8
@@ -850,12 +991,12 @@ _cli_cmd_test_build_and_run:
 	mov	x1, x0
 	mov	x0, x24
 	mov	x24, x0
-	ldr	x0, [x29, 56]
+	ldr	x0, [x29, 80]
 	bl	_donna_list_append
 	mov	x1, x0
 	mov	x0, x24
 	mov	x24, x0
-	ldr	x0, [x29, 48]
+	ldr	x0, [x29, 72]
 	bl	_donna_list_append
 	mov	x1, x0
 	mov	x0, x24
@@ -869,7 +1010,7 @@ _cli_cmd_test_build_and_run:
 	sub	sp, sp, x1
 	mov	x23, sp
 	cmp	x0, #0
-	beq	L35
+	beq	L48
 	bl	_builder_pipeline_c_compiler_available
 	mov	x1, x0
 	mov	x0, x24
@@ -877,49 +1018,65 @@ _cli_cmd_test_build_and_run:
 	sub	sp, sp, x2
 	mov	x24, sp
 	cmp	x1, #0
-	beq	L33
-	adrp	x1, _donna_nil@page
-	add	x1, x1, _donna_nil@pageoff
-	bl	_builder_pipeline_run_qbe_all
-	str	x0, [x29, 24]
-	mov	x0, x26
-	ldr	x1, [x29, 40]
+	beq	L46
+	bl	_builder_pipeline_run_qbe_all_checked
+	mov	x2, x0
+	mov	x0, x25
+	ldr	x1, [x29, 64]
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x25, sp
+	str	x25, [x29, 48]
+	ldr	x3, [x2]
+	cmp	x3, #1
+	beq	L43
+	mov	x25, x26
+	mov	x3, #8
+	add	x2, x2, x3
+	ldr	x2, [x2]
+	str	x2, [x29, 32]
 	mov	x26, x1
-	adrp	x1, _str222@page
-	add	x1, x1, _str222@pageoff
+	adrp	x1, _str250@page
+	add	x1, x1, _str250@pageoff
 	bl	_donna_files_join
 	mov	x1, x26
 	mov	x17, x0
 	mov	x0, x25
 	mov	x25, x17
 	bl	_donna_list_append
-	str	x0, [x29, 16]
+	str	x0, [x29, 40]
 	bl	_cli_cmd_test_linker_flags
-	str	x0, [x29, 32]
+	str	x0, [x29, 56]
+	mov	x0, x25
+	mov	x25, x0
 	mov	x0, #24
 	bl	_malloc
 	mov	x27, x0
-	mov	x0, #1
-	str	x0, [x27]
-	mov	x0, #8
-	add	x0, x27, x0
-	str	x25, [x0]
-	mov	x0, #16
-	add	x1, x27, x0
-	adrp	x0, _donna_nil@page
-	add	x0, x0, _donna_nil@pageoff
+	mov	x0, x25
+	mov	x1, #1
+	str	x1, [x27]
+	mov	x1, #8
+	add	x1, x27, x1
 	str	x0, [x1]
+	mov	x1, #16
+	add	x2, x27, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
+	mov	x25, x0
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, x0
-	ldr	x0, [x29, 32]
-	ldr	x26, [x29, 24]
+	mov	x0, x25
+	ldr	x25, [x29, 48]
+	mov	x26, x0
+	ldr	x0, [x29, 56]
 	mov	x2, #1
 	str	x2, [x1]
 	mov	x2, #8
 	add	x3, x1, x2
-	adrp	x2, _str229@page
-	add	x2, x2, _str229@pageoff
+	adrp	x2, _str257@page
+	add	x2, x2, _str257@pageoff
 	str	x2, [x3]
 	mov	x2, #16
 	add	x2, x1, x2
@@ -928,38 +1085,34 @@ _cli_cmd_test_build_and_run:
 	mov	x1, x0
 	mov	x0, x26
 	mov	x26, x0
-	ldr	x0, [x29, 16]
+	ldr	x0, [x29, 40]
 	bl	_donna_list_append
 	mov	x1, x0
 	mov	x0, x26
+	mov	x26, x0
+	ldr	x0, [x29, 32]
 	bl	_donna_list_append
 	bl	_builder_pipeline_c_command
-	adrp	x1, _str237@page
-	add	x1, x1, _str237@pageoff
+	adrp	x1, _str265@page
+	add	x1, x1, _str265@pageoff
 	bl	___rt_str_concat
 	bl	_donna_shell_run
 	mov	x1, x0
-	mov	x0, x25
+	mov	x0, x26
 	cmp	x1, #0
 	cset	x1, eq
 	mov	x2, #16
 	sub	sp, sp, x2
-	mov	x25, sp
+	mov	x26, sp
+	str	x26, [x29, 24]
 	cmp	x1, #0
-	beq	L31
-	mov	x1, x0
+	beq	L41
 	mov	x26, x0
-	adrp	x0, _str250@page
-	add	x0, x0, _str250@pageoff
-	bl	___rt_str_concat
-	adrp	x1, _str252@page
-	add	x1, x1, _str252@pageoff
-	bl	___rt_str_concat
-	bl	_donna_shell_run
+	bl	_cli_cmd_test_maybe_codesign
 	mov	x0, x26
 	mov	x26, x0
-	adrp	x0, _str255@page
-	add	x0, x0, _str255@pageoff
+	adrp	x0, _str279@page
+	add	x0, x0, _str279@pageoff
 	bl	_utilities_colors_dim
 	mov	x1, x0
 	mov	x0, x26
@@ -969,8 +1122,8 @@ _cli_cmd_test_build_and_run:
 	add	x2, sp, x2
 	str	x1, [x2]
 	mov	x26, x0
-	adrp	x0, _str257@page
-	add	x0, x0, _str257@pageoff
+	adrp	x0, _str281@page
+	add	x0, x0, _str281@pageoff
 	bl	_printf
 	mov	x0, x26
 	mov	x26, x0
@@ -978,108 +1131,225 @@ _cli_cmd_test_build_and_run:
 	add	sp, sp, x0
 	bl	_donna_shell_flush
 	mov	x0, x26
+	ldr	x26, [x29, 24]
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	bl	_donna_shell_exec
 	cmp	x0, #0
-	cset	x1, eq
-	mov	x2, #16
-	sub	sp, sp, x2
-	mov	x26, sp
-	cmp	x1, #1
-	beq	L28
+	cset	x2, eq
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x1, sp
+	str	x1, [x29, 16]
+	cmp	x2, #1
+	beq	L38
 	bl	_exit
-	adrp	x0, _str267@page
-	add	x0, x0, _str267@pageoff
-	str	x0, [x26]
-	adrp	x0, _str267@page
-	add	x0, x0, _str267@pageoff
-	b	L30
-L28:
-	adrp	x0, _str266@page
-	add	x0, x0, _str266@pageoff
-	str	x0, [x26]
-	adrp	x0, _str266@page
-	add	x0, x0, _str266@pageoff
-L30:
-	str	x0, [x25]
-	b	L32
-L31:
-	adrp	x0, _str246@page
-	add	x0, x0, _str246@pageoff
-	bl	_utilities_colors_red
-	adrp	x1, _str248@page
-	add	x1, x1, _str248@pageoff
-	bl	___rt_str_concat
-	str	x0, [x25]
-L32:
-	str	x0, [x24]
-	b	L34
-L33:
-	bl	_cli_cmd_test_c_compiler_missing_error
-	str	x0, [x24]
-L34:
-	str	x0, [x23]
-	b	L36
-L35:
-	bl	_cli_cmd_test_qbe_missing_error
-	str	x0, [x23]
-L36:
-	str	x0, [x22]
-	b	L39
-L37:
-	mov	x0, x1
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	str	x0, [x22]
-L39:
-	str	x0, [x21]
-	b	L42
+	ldr	x1, [x29, 16]
+	adrp	x0, _str291@page
+	add	x0, x0, _str291@pageoff
+	str	x0, [x1]
+	adrp	x0, _str291@page
+	add	x0, x0, _str291@pageoff
+	b	L40
+L38:
+	adrp	x0, _str290@page
+	add	x0, x0, _str290@pageoff
+	str	x0, [x1]
+	adrp	x0, _str290@page
+	add	x0, x0, _str290@pageoff
 L40:
-	mov	x0, x1
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	str	x0, [x21]
+	str	x0, [x26]
+	b	L42
+L41:
+	adrp	x0, _str274@page
+	add	x0, x0, _str274@pageoff
+	bl	_utilities_colors_red
+	adrp	x1, _str276@page
+	add	x1, x1, _str276@pageoff
+	bl	___rt_str_concat
+	str	x0, [x26]
 L42:
-	str	x0, [x20]
+	str	x0, [x25]
 	b	L45
 L43:
+	mov	x0, x2
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	str	x0, [x25]
+L45:
+	str	x0, [x24]
+	b	L47
+L46:
+	bl	_cli_cmd_test_c_compiler_missing_error
+	str	x0, [x24]
+L47:
+	str	x0, [x23]
+	b	L49
+L48:
+	bl	_cli_cmd_test_qbe_missing_error
+	str	x0, [x23]
+L49:
+	str	x0, [x22]
+	b	L52
+L50:
+	mov	x0, x1
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	str	x0, [x22]
+L52:
+	str	x0, [x21]
+	b	L55
+L53:
+	mov	x0, x1
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	str	x0, [x21]
+L55:
+	str	x0, [x20]
+	b	L58
+L56:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	str	x0, [x20]
-L45:
+L58:
 	str	x0, [x19]
-	b	L50
-L46:
+	b	L63
+L59:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	str	x0, [x19]
-	b	L50
-L48:
+	b	L63
+L61:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-L50:
-	ldr	x19, [x29, 232]
-	ldr	x20, [x29, 224]
-	ldr	x21, [x29, 216]
-	ldr	x22, [x29, 208]
-	ldr	x23, [x29, 200]
-	ldr	x24, [x29, 192]
-	ldr	x25, [x29, 184]
-	ldr	x26, [x29, 176]
-	ldr	x27, [x29, 168]
+L63:
+	ldr	x19, [x29, 248]
+	ldr	x20, [x29, 240]
+	ldr	x21, [x29, 232]
+	ldr	x22, [x29, 224]
+	ldr	x23, [x29, 216]
+	ldr	x24, [x29, 208]
+	ldr	x25, [x29, 200]
+	ldr	x26, [x29, 192]
+	ldr	x27, [x29, 184]
 	mov sp, x29
-	ldp	x29, x30, [sp], 240
+	ldp	x29, x30, [sp], 256
 	ret
 /* end function cli_cmd_test_build_and_run */
+
+.text
+.balign 4
+_cli_cmd_test_invalid_test_names_error:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, _str302@page
+	add	x0, x0, _str302@pageoff
+	bl	_utilities_colors_red
+	adrp	x1, _str304@page
+	add	x1, x1, _str304@pageoff
+	bl	___rt_str_concat
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	adrp	x1, _str306@page
+	add	x1, x1, _str306@pageoff
+	bl	_cli_cmd_test_invalid_test_lines
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function cli_cmd_test_invalid_test_names_error */
+
+.text
+.balign 4
+_cli_cmd_test_invalid_test_lines:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	str	x20, [x29, 16]
+	mov	x17, x1
+	mov	x1, x0
+	mov	x0, x17
+	ldr	x2, [x1]
+	cmp	x2, #0
+	beq	L68
+	mov	x2, #8
+	add	x2, x1, x2
+	ldr	x20, [x2]
+	mov	x2, #16
+	add	x1, x1, x2
+	ldr	x19, [x1]
+	adrp	x1, _str322@page
+	add	x1, x1, _str322@pageoff
+	bl	___rt_str_concat
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	bl	_utilities_colors_path
+	mov	x1, x0
+	mov	x0, x20
+	bl	___rt_str_concat
+	adrp	x1, _str326@page
+	add	x1, x1, _str326@pageoff
+	bl	___rt_str_concat
+	mov	x1, x0
+	mov	x0, x19
+	bl	_cli_cmd_test_invalid_test_lines
+	b	L69
+L68:
+	mov	x19, x0
+	adrp	x0, _str315@page
+	add	x0, x0, _str315@pageoff
+	bl	_utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+L69:
+	ldr	x19, [x29, 24]
+	ldr	x20, [x29, 16]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function cli_cmd_test_invalid_test_lines */
+
+.text
+.balign 4
+_cli_cmd_test_no_tests_error:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	adrp	x0, _str330@page
+	add	x0, x0, _str330@pageoff
+	bl	_utilities_colors_red
+	adrp	x1, _str332@page
+	add	x1, x1, _str332@pageoff
+	bl	___rt_str_concat
+	mov	x19, x0
+	adrp	x0, _str334@page
+	add	x0, x0, _str334@pageoff
+	bl	_utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function cli_cmd_test_no_tests_error */
 
 .text
 .balign 4
@@ -1088,17 +1358,17 @@ _cli_cmd_test_qbe_missing_error:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x0, _str277@page
-	add	x0, x0, _str277@pageoff
+	adrp	x0, _str337@page
+	add	x0, x0, _str337@pageoff
 	bl	_utilities_colors_dim
 	mov	x19, x0
-	adrp	x0, _str279@page
-	add	x0, x0, _str279@pageoff
+	adrp	x0, _str339@page
+	add	x0, x0, _str339@pageoff
 	bl	_utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str281@page
-	add	x1, x1, _str281@pageoff
+	adrp	x1, _str341@page
+	add	x1, x1, _str341@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -1114,17 +1384,17 @@ _cli_cmd_test_c_compiler_missing_error:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x0, _str284@page
-	add	x0, x0, _str284@pageoff
+	adrp	x0, _str344@page
+	add	x0, x0, _str344@pageoff
 	bl	_utilities_colors_dim
 	mov	x19, x0
-	adrp	x0, _str286@page
-	add	x0, x0, _str286@pageoff
+	adrp	x0, _str346@page
+	add	x0, x0, _str346@pageoff
 	bl	_utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str288@page
-	add	x1, x1, _str288@pageoff
+	adrp	x1, _str348@page
+	add	x1, x1, _str348@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -1146,15 +1416,15 @@ _cli_cmd_test_compile_self_alias:
 	mov	x20, x2
 	mov	x19, x1
 	bl	_builder_scanner_project_name
-	adrp	x1, _str292@page
-	add	x1, x1, _str292@pageoff
+	adrp	x1, _str352@page
+	add	x1, x1, _str352@pageoff
 	bl	_donna_string_equal
 	mov	x1, x0
 	mov	x0, x20
 	cmp	x1, #0
-	beq	L59
-	adrp	x1, _str302@page
-	add	x1, x1, _str302@pageoff
+	beq	L80
+	adrp	x1, _str362@page
+	add	x1, x1, _str362@pageoff
 	bl	_donna_files_join
 	mov	x20, x0
 	mov	x0, x19
@@ -1165,15 +1435,15 @@ _cli_cmd_test_compile_self_alias:
 	mov	x2, x20
 	mov	x0, x19
 	mov	x4, #0
-	adrp	x1, _str305@page
-	add	x1, x1, _str305@pageoff
+	adrp	x1, _str365@page
+	add	x1, x1, _str365@pageoff
 	bl	_builder_pipeline_compile_dir
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L58
+	beq	L79
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -1188,8 +1458,8 @@ _cli_cmd_test_compile_self_alias:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L60
-L58:
+	b	L81
+L79:
 	mov	x0, #16
 	bl	_malloc
 	adrp	x1, _donna_nil@page
@@ -1201,8 +1471,8 @@ L58:
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
 	str	x0, [x19]
-	b	L60
-L59:
+	b	L81
+L80:
 	mov	x0, #16
 	bl	_malloc
 	adrp	x1, _donna_nil@page
@@ -1213,7 +1483,7 @@ L59:
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-L60:
+L81:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1243,15 +1513,15 @@ _cli_cmd_test_compile_deps:
 	mov	x21, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L73
+	beq	L94
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x19, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x20, [x0]
-	adrp	x1, _str347@page
-	add	x1, x1, _str347@pageoff
+	adrp	x1, _str407@page
+	add	x1, x1, _str407@pageoff
 	mov	x0, x21
 	bl	_donna_files_join
 	mov	x22, x0
@@ -1260,15 +1530,15 @@ _cli_cmd_test_compile_deps:
 	mov	x1, x0
 	mov	x0, x22
 	bl	_donna_files_join
-	adrp	x1, _str351@page
-	add	x1, x1, _str351@pageoff
+	adrp	x1, _str411@page
+	add	x1, x1, _str411@pageoff
 	mov	x22, x0
 	bl	_donna_files_join
 	mov	x1, x0
 	mov	x0, x22
 	mov	x22, x1
-	adrp	x1, _str353@page
-	add	x1, x1, _str353@pageoff
+	adrp	x1, _str413@page
+	add	x1, x1, _str413@pageoff
 	mov	x23, x0
 	mov	x0, x21
 	bl	_donna_files_join
@@ -1304,7 +1574,7 @@ _cli_cmd_test_compile_deps:
 	mov	x19, sp
 	ldr	x5, [x1]
 	cmp	x5, #1
-	beq	L71
+	beq	L92
 	mov	x24, x4
 	mov	x4, #8
 	add	x1, x1, x4
@@ -1357,7 +1627,7 @@ _cli_cmd_test_compile_deps:
 	mov	x20, sp
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L69
+	beq	L90
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -1375,14 +1645,14 @@ _cli_cmd_test_compile_deps:
 	sub	sp, sp, x0
 	mov	x1, sp
 	cmp	x25, #1
-	beq	L66
+	beq	L87
 	str	x21, [x1]
-	b	L68
-L66:
+	b	L89
+L87:
 	mov	x0, #1
 	str	x0, [x1]
 	mov	x21, #1
-L68:
+L89:
 	mov	x0, #32
 	bl	_malloc
 	str	x24, [x0]
@@ -1397,25 +1667,25 @@ L68:
 	str	x21, [x1]
 	bl	_donna_result_Ok
 	str	x0, [x20]
-	b	L70
-L69:
+	b	L91
+L90:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_donna_result_Error
 	str	x0, [x20]
-L70:
+L91:
 	str	x0, [x19]
-	b	L75
-L71:
+	b	L96
+L92:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_donna_result_Error
 	str	x0, [x19]
-	b	L75
-L73:
+	b	L96
+L94:
 	mov	x21, x26
 	mov	x20, x25
 	mov	x19, x24
@@ -1436,7 +1706,7 @@ L73:
 	mov	x1, #0
 	str	x1, [x2]
 	bl	_donna_result_Ok
-L75:
+L96:
 	ldr	x19, [x29, 104]
 	ldr	x20, [x29, 96]
 	ldr	x21, [x29, 88]
@@ -1484,7 +1754,7 @@ _cli_cmd_test_collect_donna:
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L83
+	beq	L104
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x21, [x2]
@@ -1492,8 +1762,8 @@ _cli_cmd_test_collect_donna:
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	mov	x22, x1
-	adrp	x1, _str431@page
-	add	x1, x1, _str431@pageoff
+	adrp	x1, _str491@page
+	add	x1, x1, _str491@pageoff
 	mov	x19, x0
 	mov	x0, x21
 	bl	_donna_string_ends_with
@@ -1504,13 +1774,13 @@ _cli_cmd_test_collect_donna:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	L81
+	beq	L102
 	mov	x2, x20
 	mov	x23, x1
 	bl	_cli_cmd_test_collect_donna
 	str	x0, [x19]
-	b	L85
-L81:
+	b	L106
+L102:
 	mov	x23, x1
 	mov	x1, x21
 	mov	x21, x0
@@ -1535,11 +1805,11 @@ L81:
 	str	x20, [x3]
 	bl	_cli_cmd_test_collect_donna
 	str	x0, [x19]
-	b	L85
-L83:
+	b	L106
+L104:
 	mov	x0, x20
 	bl	_donna_list_reverse
-L85:
+L106:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1565,13 +1835,13 @@ _cli_cmd_test_parse_test_args:
 	bl	_argparse_argparse_positional
 	mov	x20, x0
 	mov	x0, x19
-	adrp	x1, _str447@page
-	add	x1, x1, _str447@pageoff
+	adrp	x1, _str507@page
+	add	x1, x1, _str507@pageoff
 	bl	_argparse_argparse_get
 	mov	x19, x0
 	ldr	x0, [x20]
 	cmp	x0, #0
-	beq	L91
+	beq	L112
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x21, [x0]
@@ -1585,7 +1855,7 @@ _cli_cmd_test_parse_test_args:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	x0, #1
-	beq	L89
+	beq	L110
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
@@ -1602,15 +1872,15 @@ _cli_cmd_test_parse_test_args:
 	mov	x20, x0
 	mov	x0, #16
 	bl	_malloc
-	adrp	x1, _str480@page
-	add	x1, x1, _str480@pageoff
+	adrp	x1, _str540@page
+	add	x1, x1, _str540@pageoff
 	str	x1, [x0]
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L92
-L89:
+	b	L113
+L110:
 	mov	x20, x23
 	mov	x0, #24
 	bl	_malloc
@@ -1633,8 +1903,8 @@ L89:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L92
-L91:
+	b	L113
+L112:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
@@ -1653,13 +1923,13 @@ L91:
 	mov	x19, x0
 	mov	x0, #16
 	bl	_malloc
-	adrp	x1, _str455@page
-	add	x1, x1, _str455@pageoff
+	adrp	x1, _str515@page
+	add	x1, x1, _str515@pageoff
 	str	x1, [x0]
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x19, [x1]
-L92:
+L113:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1683,7 +1953,7 @@ _cli_cmd_test_filter_values:
 	mov	x20, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L97
+	beq	L118
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x21, [x1]
@@ -1699,7 +1969,7 @@ _cli_cmd_test_filter_values:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L96
+	beq	L117
 	mov	x22, x0
 	mov	x0, #24
 	bl	_malloc
@@ -1715,16 +1985,16 @@ _cli_cmd_test_filter_values:
 	str	x20, [x2]
 	bl	_cli_cmd_test_filter_values
 	str	x0, [x19]
-	b	L99
-L96:
+	b	L120
+L117:
 	mov	x1, x20
 	bl	_cli_cmd_test_filter_values
 	str	x0, [x19]
-	b	L99
-L97:
+	b	L120
+L118:
 	mov	x0, x20
 	bl	_donna_list_reverse
-L99:
+L120:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1740,65 +2010,99 @@ _cli_cmd_test_linker_flags:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x0, _str514@page
-	add	x0, x0, _str514@pageoff
+	adrp	x0, _str574@page
+	add	x0, x0, _str574@pageoff
 	bl	_donna_shell_run
 	cmp	x0, #0
 	cset	x0, eq
 	cmp	x0, #1
-	beq	L102
+	beq	L123
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, _str526@page
-	add	x1, x1, _str526@pageoff
+	adrp	x1, _str586@page
+	add	x1, x1, _str586@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x0, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-	b	L103
-L102:
+	b	L124
+L123:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, _str522@page
-	add	x1, x1, _str522@pageoff
+	adrp	x1, _str582@page
+	add	x1, x1, _str582@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x0, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-L103:
+L124:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function cli_cmd_test_linker_flags */
 
 .text
 .balign 4
+_cli_cmd_test_maybe_codesign:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, _str591@page
+	add	x0, x0, _str591@pageoff
+	bl	_donna_shell_run
+	mov	x1, x19
+	cmp	x0, #0
+	cset	x0, eq
+	cmp	x0, #0
+	beq	L127
+	adrp	x0, _str599@page
+	add	x0, x0, _str599@pageoff
+	bl	___rt_str_concat
+	adrp	x1, _str601@page
+	add	x1, x1, _str601@pageoff
+	bl	___rt_str_concat
+	bl	_donna_shell_run
+	b	L128
+L127:
+	mov	x0, #0
+L128:
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function cli_cmd_test_maybe_codesign */
+
+.text
+.balign 4
 _cli_cmd_test_scrub_main_from_ssa:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
 	mov	x22, x1
 	mov	x1, x0
 	mov	x0, x2
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L106
+	beq	L134
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -1807,19 +2111,56 @@ _cli_cmd_test_scrub_main_from_ssa:
 	ldr	x20, [x1]
 	mov	x21, x0
 	bl	_donna_files_read
-	adrp	x2, _str544@page
-	add	x2, x2, _str544@pageoff
-	adrp	x1, _str543@page
-	add	x1, x1, _str543@pageoff
-	bl	_donna_string_replace
-	adrp	x2, _str547@page
-	add	x2, x2, _str547@pageoff
-	adrp	x1, _str546@page
-	add	x1, x1, _str546@pageoff
-	bl	_donna_string_replace
+	mov	x1, x0
+	mov	x0, x21
+	mov	x23, x1
+	adrp	x1, _str617@page
+	add	x1, x1, _str617@pageoff
+	mov	x21, x0
+	mov	x0, x23
+	bl	_donna_string_contains
+	mov	x1, x23
 	mov	x17, x0
 	mov	x0, x21
 	mov	x21, x17
+	mov	x24, x1
+	adrp	x1, _str619@page
+	add	x1, x1, _str619@pageoff
+	mov	x23, x0
+	mov	x0, x24
+	bl	_donna_string_contains
+	mov	x1, x24
+	mov	x2, x0
+	mov	x0, x23
+	orr	x2, x21, x2
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x21, sp
+	cmp	x2, #0
+	beq	L132
+	adrp	x2, _str628@page
+	add	x2, x2, _str628@pageoff
+	mov	x24, x1
+	adrp	x1, _str627@page
+	add	x1, x1, _str627@pageoff
+	mov	x23, x0
+	mov	x0, x24
+	bl	_donna_string_replace
+	mov	x1, x22
+	adrp	x2, _str631@page
+	add	x2, x2, _str631@pageoff
+	mov	x22, x1
+	adrp	x1, _str630@page
+	add	x1, x1, _str630@pageoff
+	bl	_donna_string_replace
+	mov	x1, x0
+	mov	x0, x23
+	str	x1, [x21]
+	b	L133
+L132:
+	str	x1, [x21]
+L133:
+	mov	x21, x1
 	bl	_donna_files_basename
 	mov	x1, x0
 	mov	x0, x20
@@ -1849,16 +2190,19 @@ _cli_cmd_test_scrub_main_from_ssa:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	_cli_cmd_test_scrub_main_from_ssa
-	b	L108
-L106:
+	b	L136
+L134:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L108:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
-	ldp	x29, x30, [sp], 48
+L136:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 64
 	ret
 /* end function cli_cmd_test_scrub_main_from_ssa */
 

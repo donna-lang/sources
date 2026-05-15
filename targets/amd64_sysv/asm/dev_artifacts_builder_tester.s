@@ -13,28 +13,63 @@ str24:
 
 .data
 .balign 8
-str38:
+str44:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str58:
 	.ascii "pub fn "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str49:
+str69:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str59:
+str79:
 	.ascii "_test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str99:
+str106:
+	.ascii "pub fn "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str117:
+	.ascii "("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str127:
+	.ascii "_test"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str135:
+	.ascii ":"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str170:
 	.ascii "// Auto-generated test runner "
 	.byte 226
 	.byte 128
@@ -46,7 +81,7 @@ str99:
 
 .data
 .balign 8
-str101:
+str172:
 	.byte 10
 	.ascii "@external("
 	.byte 34
@@ -65,7 +100,7 @@ str101:
 
 .data
 .balign 8
-str103:
+str174:
 	.byte 10
 	.ascii "fn digit_char(d: Int) -> String:"
 	.byte 10
@@ -74,7 +109,7 @@ str103:
 
 .data
 .balign 8
-str105:
+str176:
 	.ascii "  case d:"
 	.byte 10
 	.byte 0
@@ -82,7 +117,7 @@ str105:
 
 .data
 .balign 8
-str107:
+str178:
 	.ascii "    0 -> "
 	.byte 34
 	.ascii "0"
@@ -93,7 +128,7 @@ str107:
 
 .data
 .balign 8
-str109:
+str180:
 	.ascii "    1 -> "
 	.byte 34
 	.ascii "1"
@@ -104,7 +139,7 @@ str109:
 
 .data
 .balign 8
-str111:
+str182:
 	.ascii "    2 -> "
 	.byte 34
 	.ascii "2"
@@ -115,7 +150,7 @@ str111:
 
 .data
 .balign 8
-str113:
+str184:
 	.ascii "    3 -> "
 	.byte 34
 	.ascii "3"
@@ -126,7 +161,7 @@ str113:
 
 .data
 .balign 8
-str115:
+str186:
 	.ascii "    4 -> "
 	.byte 34
 	.ascii "4"
@@ -137,7 +172,7 @@ str115:
 
 .data
 .balign 8
-str117:
+str188:
 	.ascii "    5 -> "
 	.byte 34
 	.ascii "5"
@@ -148,7 +183,7 @@ str117:
 
 .data
 .balign 8
-str119:
+str190:
 	.ascii "    6 -> "
 	.byte 34
 	.ascii "6"
@@ -159,7 +194,7 @@ str119:
 
 .data
 .balign 8
-str121:
+str192:
 	.ascii "    7 -> "
 	.byte 34
 	.ascii "7"
@@ -170,7 +205,7 @@ str121:
 
 .data
 .balign 8
-str123:
+str194:
 	.ascii "    8 -> "
 	.byte 34
 	.ascii "8"
@@ -181,7 +216,7 @@ str123:
 
 .data
 .balign 8
-str125:
+str196:
 	.ascii "    _ -> "
 	.byte 34
 	.ascii "9"
@@ -192,7 +227,7 @@ str125:
 
 .data
 .balign 8
-str127:
+str198:
 	.byte 10
 	.ascii "fn pos_int_to_str(n: Int) -> String:"
 	.byte 10
@@ -201,7 +236,7 @@ str127:
 
 .data
 .balign 8
-str129:
+str200:
 	.ascii "  case n < 10:"
 	.byte 10
 	.byte 0
@@ -209,7 +244,7 @@ str129:
 
 .data
 .balign 8
-str131:
+str202:
 	.ascii "    True  -> digit_char(n)"
 	.byte 10
 	.byte 0
@@ -217,7 +252,7 @@ str131:
 
 .data
 .balign 8
-str133:
+str204:
 	.ascii "    False -> pos_int_to_str(n / 10) <> digit_char(n - n / 10 * 10)"
 	.byte 10
 	.byte 0
@@ -225,7 +260,7 @@ str133:
 
 .data
 .balign 8
-str135:
+str206:
 	.byte 10
 	.ascii "fn int_to_str(n: Int) -> String:"
 	.byte 10
@@ -234,7 +269,7 @@ str135:
 
 .data
 .balign 8
-str137:
+str208:
 	.ascii "  case n < 0:"
 	.byte 10
 	.byte 0
@@ -242,7 +277,7 @@ str137:
 
 .data
 .balign 8
-str139:
+str210:
 	.ascii "    True  -> "
 	.byte 34
 	.ascii "-"
@@ -254,7 +289,7 @@ str139:
 
 .data
 .balign 8
-str141:
+str212:
 	.ascii "    False -> pos_int_to_str(n)"
 	.byte 10
 	.byte 0
@@ -262,7 +297,7 @@ str141:
 
 .data
 .balign 8
-str143:
+str214:
 	.byte 10
 	.ascii "fn two_digits(n: Int) -> String:"
 	.byte 10
@@ -271,7 +306,7 @@ str143:
 
 .data
 .balign 8
-str145:
+str216:
 	.ascii "  digit_char(n / 10) <> digit_char(n - n / 10 * 10)"
 	.byte 10
 	.byte 0
@@ -279,7 +314,7 @@ str145:
 
 .data
 .balign 8
-str147:
+str218:
 	.byte 10
 	.ascii "fn format_us(us: Int) -> String:"
 	.byte 10
@@ -288,7 +323,7 @@ str147:
 
 .data
 .balign 8
-str149:
+str220:
 	.ascii "  case us <= 0:"
 	.byte 10
 	.byte 0
@@ -296,7 +331,7 @@ str149:
 
 .data
 .balign 8
-str151:
+str222:
 	.ascii "    True -> "
 	.byte 34
 	.ascii "<1us"
@@ -307,7 +342,7 @@ str151:
 
 .data
 .balign 8
-str153:
+str224:
 	.ascii "    False ->"
 	.byte 10
 	.byte 0
@@ -315,7 +350,7 @@ str153:
 
 .data
 .balign 8
-str155:
+str226:
 	.ascii "      case us < 1000:"
 	.byte 10
 	.byte 0
@@ -323,7 +358,7 @@ str155:
 
 .data
 .balign 8
-str157:
+str228:
 	.ascii "        True -> int_to_str(us) <> "
 	.byte 34
 	.ascii "us"
@@ -334,7 +369,7 @@ str157:
 
 .data
 .balign 8
-str159:
+str230:
 	.ascii "        False ->"
 	.byte 10
 	.byte 0
@@ -342,7 +377,7 @@ str159:
 
 .data
 .balign 8
-str161:
+str232:
 	.ascii "          case us < 1000000:"
 	.byte 10
 	.byte 0
@@ -350,7 +385,7 @@ str161:
 
 .data
 .balign 8
-str163:
+str234:
 	.ascii "            True ->"
 	.byte 10
 	.byte 0
@@ -358,7 +393,7 @@ str163:
 
 .data
 .balign 8
-str165:
+str236:
 	.ascii "              let ms = us / 1000"
 	.byte 10
 	.byte 0
@@ -366,7 +401,7 @@ str165:
 
 .data
 .balign 8
-str167:
+str238:
 	.ascii "              let frac = (us - ms * 1000) / 10"
 	.byte 10
 	.byte 0
@@ -374,7 +409,7 @@ str167:
 
 .data
 .balign 8
-str169:
+str240:
 	.ascii "              int_to_str(ms) <> "
 	.byte 34
 	.ascii "."
@@ -389,7 +424,7 @@ str169:
 
 .data
 .balign 8
-str171:
+str242:
 	.ascii "            False ->"
 	.byte 10
 	.byte 0
@@ -397,7 +432,7 @@ str171:
 
 .data
 .balign 8
-str173:
+str244:
 	.ascii "              let s = us / 1000000"
 	.byte 10
 	.byte 0
@@ -405,7 +440,7 @@ str173:
 
 .data
 .balign 8
-str175:
+str246:
 	.ascii "              let frac = (us - s * 1000000) / 10000"
 	.byte 10
 	.byte 0
@@ -413,7 +448,7 @@ str175:
 
 .data
 .balign 8
-str177:
+str248:
 	.ascii "              int_to_str(s) <> "
 	.byte 34
 	.ascii "."
@@ -428,7 +463,7 @@ str177:
 
 .data
 .balign 8
-str179:
+str250:
 	.byte 10
 	.ascii "fn reverse_strings(xs: List(String), acc: List(String)) -> List(String):"
 	.byte 10
@@ -437,7 +472,7 @@ str179:
 
 .data
 .balign 8
-str181:
+str252:
 	.ascii "  case xs:"
 	.byte 10
 	.byte 0
@@ -445,7 +480,7 @@ str181:
 
 .data
 .balign 8
-str183:
+str254:
 	.ascii "    [] -> acc"
 	.byte 10
 	.byte 0
@@ -453,7 +488,7 @@ str183:
 
 .data
 .balign 8
-str185:
+str256:
 	.ascii "    [x, ..rest] -> reverse_strings(rest, [x, ..acc])"
 	.byte 10
 	.byte 0
@@ -461,7 +496,7 @@ str185:
 
 .data
 .balign 8
-str187:
+str258:
 	.byte 10
 	.ascii "fn append_strings(xs: List(String), ys: List(String)) -> List(String):"
 	.byte 10
@@ -470,7 +505,7 @@ str187:
 
 .data
 .balign 8
-str189:
+str260:
 	.ascii "  case xs:"
 	.byte 10
 	.byte 0
@@ -478,7 +513,7 @@ str189:
 
 .data
 .balign 8
-str191:
+str262:
 	.ascii "    [] -> ys"
 	.byte 10
 	.byte 0
@@ -486,7 +521,7 @@ str191:
 
 .data
 .balign 8
-str193:
+str264:
 	.ascii "    [x, ..rest] -> [x, ..append_strings(rest, ys)]"
 	.byte 10
 	.byte 0
@@ -494,7 +529,7 @@ str193:
 
 .data
 .balign 8
-str195:
+str266:
 	.byte 10
 	.ascii "fn add_failure(failures: List(String), name: String, result: String) -> List(String):"
 	.byte 10
@@ -503,7 +538,7 @@ str195:
 
 .data
 .balign 8
-str197:
+str268:
 	.ascii "  case result == "
 	.byte 34
 	.byte 34
@@ -514,7 +549,7 @@ str197:
 
 .data
 .balign 8
-str199:
+str270:
 	.ascii "    True -> failures"
 	.byte 10
 	.byte 0
@@ -522,7 +557,7 @@ str199:
 
 .data
 .balign 8
-str201:
+str272:
 	.ascii "    False -> [name, ..failures]"
 	.byte 10
 	.byte 0
@@ -530,7 +565,7 @@ str201:
 
 .data
 .balign 8
-str203:
+str274:
 	.byte 10
 	.ascii "fn print_failure_names(names: List(String)) -> Nil:"
 	.byte 10
@@ -539,7 +574,7 @@ str203:
 
 .data
 .balign 8
-str205:
+str276:
 	.ascii "  case names:"
 	.byte 10
 	.byte 0
@@ -547,7 +582,7 @@ str205:
 
 .data
 .balign 8
-str207:
+str278:
 	.ascii "    [] -> Nil"
 	.byte 10
 	.byte 0
@@ -555,7 +590,7 @@ str207:
 
 .data
 .balign 8
-str209:
+str280:
 	.ascii "    [name, ..rest] ->"
 	.byte 10
 	.byte 0
@@ -563,7 +598,7 @@ str209:
 
 .data
 .balign 8
-str211:
+str282:
 	.ascii "      echo "
 	.byte 34
 	.ascii "  "
@@ -575,7 +610,7 @@ str211:
 
 .data
 .balign 8
-str213:
+str284:
 	.ascii "      print_failure_names(rest)"
 	.byte 10
 	.byte 0
@@ -583,7 +618,7 @@ str213:
 
 .data
 .balign 8
-str215:
+str286:
 	.byte 10
 	.ascii "fn print_failures(failures: List(String)) -> Nil:"
 	.byte 10
@@ -592,7 +627,7 @@ str215:
 
 .data
 .balign 8
-str217:
+str288:
 	.ascii "  case failures:"
 	.byte 10
 	.byte 0
@@ -600,7 +635,7 @@ str217:
 
 .data
 .balign 8
-str219:
+str290:
 	.ascii "    [] -> Nil"
 	.byte 10
 	.byte 0
@@ -608,7 +643,7 @@ str219:
 
 .data
 .balign 8
-str221:
+str292:
 	.ascii "    _ ->"
 	.byte 10
 	.byte 0
@@ -616,7 +651,7 @@ str221:
 
 .data
 .balign 8
-str223:
+str294:
 	.ascii "      echo "
 	.byte 34
 	.byte 34
@@ -626,7 +661,7 @@ str223:
 
 .data
 .balign 8
-str225:
+str296:
 	.ascii "      echo "
 	.byte 34
 	.byte 92
@@ -640,7 +675,7 @@ str225:
 
 .data
 .balign 8
-str227:
+str298:
 	.ascii "      print_failure_names(reverse_strings(failures, []))"
 	.byte 10
 	.byte 0
@@ -648,7 +683,7 @@ str227:
 
 .data
 .balign 8
-str229:
+str300:
 	.byte 10
 	.ascii "fn run_test(name: String, result: String, us: Int) -> Int:"
 	.byte 10
@@ -657,7 +692,7 @@ str229:
 
 .data
 .balign 8
-str231:
+str302:
 	.ascii "  let duration = format_us(us)"
 	.byte 10
 	.byte 0
@@ -665,7 +700,7 @@ str231:
 
 .data
 .balign 8
-str233:
+str304:
 	.ascii "  case result == "
 	.byte 34
 	.byte 34
@@ -676,7 +711,7 @@ str233:
 
 .data
 .balign 8
-str235:
+str306:
 	.ascii "    True  ->"
 	.byte 10
 	.byte 0
@@ -684,7 +719,7 @@ str235:
 
 .data
 .balign 8
-str237:
+str308:
 	.ascii "      echo "
 	.byte 34
 	.byte 92
@@ -706,7 +741,7 @@ str237:
 
 .data
 .balign 8
-str239:
+str310:
 	.ascii "      0"
 	.byte 10
 	.byte 0
@@ -714,7 +749,7 @@ str239:
 
 .data
 .balign 8
-str241:
+str312:
 	.ascii "    False ->"
 	.byte 10
 	.byte 0
@@ -722,7 +757,7 @@ str241:
 
 .data
 .balign 8
-str243:
+str314:
 	.ascii "      echo "
 	.byte 34
 	.byte 92
@@ -744,7 +779,7 @@ str243:
 
 .data
 .balign 8
-str245:
+str316:
 	.ascii "      echo result"
 	.byte 10
 	.byte 0
@@ -752,7 +787,7 @@ str245:
 
 .data
 .balign 8
-str247:
+str318:
 	.ascii "      1"
 	.byte 10
 	.byte 0
@@ -760,7 +795,7 @@ str247:
 
 .data
 .balign 8
-str249:
+str320:
 	.byte 10
 	.ascii "fn run_case(s: Int, failures: List(String), name: String, test_fn: fn() -> String) -> #(Int, List(String)):"
 	.byte 10
@@ -769,7 +804,7 @@ str249:
 
 .data
 .balign 8
-str251:
+str322:
 	.ascii "  let t = ffi_now_us()"
 	.byte 10
 	.byte 0
@@ -777,7 +812,7 @@ str251:
 
 .data
 .balign 8
-str253:
+str324:
 	.ascii "  let r = test_fn()"
 	.byte 10
 	.byte 0
@@ -785,7 +820,7 @@ str253:
 
 .data
 .balign 8
-str255:
+str326:
 	.ascii "  let us = ffi_now_us() - t"
 	.byte 10
 	.byte 0
@@ -793,7 +828,7 @@ str255:
 
 .data
 .balign 8
-str257:
+str328:
 	.ascii "  let failures2 = add_failure(failures, name, r)"
 	.byte 10
 	.byte 0
@@ -801,7 +836,7 @@ str257:
 
 .data
 .balign 8
-str259:
+str330:
 	.ascii "  #(s + run_test(name, r, us), failures2)"
 	.byte 10
 	.byte 0
@@ -809,7 +844,7 @@ str259:
 
 .data
 .balign 8
-str262:
+str333:
 	.byte 10
 	.ascii "pub fn main() -> Int:"
 	.byte 10
@@ -818,7 +853,7 @@ str262:
 
 .data
 .balign 8
-str264:
+str335:
 	.ascii "  let t0 = ffi_now_us()"
 	.byte 10
 	.byte 0
@@ -826,7 +861,7 @@ str264:
 
 .data
 .balign 8
-str266:
+str337:
 	.ascii "  let s = 0"
 	.byte 10
 	.byte 0
@@ -834,7 +869,7 @@ str266:
 
 .data
 .balign 8
-str268:
+str339:
 	.ascii "  let failures = []"
 	.byte 10
 	.byte 0
@@ -842,14 +877,14 @@ str268:
 
 .data
 .balign 8
-str271:
+str342:
 	.ascii "  let passed = "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str275:
+str346:
 	.ascii " - s"
 	.byte 10
 	.byte 0
@@ -857,7 +892,7 @@ str275:
 
 .data
 .balign 8
-str277:
+str348:
 	.ascii "  let elapsed = ffi_now_us() - t0"
 	.byte 10
 	.byte 0
@@ -865,7 +900,7 @@ str277:
 
 .data
 .balign 8
-str279:
+str350:
 	.ascii "  let ts = format_us(elapsed)"
 	.byte 10
 	.byte 0
@@ -873,7 +908,7 @@ str279:
 
 .data
 .balign 8
-str281:
+str352:
 	.ascii "  case s == 0:"
 	.byte 10
 	.byte 0
@@ -881,7 +916,7 @@ str281:
 
 .data
 .balign 8
-str283:
+str354:
 	.ascii "    True  -> echo "
 	.byte 34
 	.byte 92
@@ -900,7 +935,7 @@ str283:
 
 .data
 .balign 8
-str285:
+str356:
 	.ascii "    False ->"
 	.byte 10
 	.byte 0
@@ -908,7 +943,7 @@ str285:
 
 .data
 .balign 8
-str287:
+str358:
 	.ascii "      print_failures(failures)"
 	.byte 10
 	.byte 0
@@ -916,7 +951,7 @@ str287:
 
 .data
 .balign 8
-str289:
+str360:
 	.ascii "      echo "
 	.byte 34
 	.byte 92
@@ -943,7 +978,7 @@ str289:
 
 .data
 .balign 8
-str291:
+str362:
 	.ascii "  s"
 	.byte 10
 	.byte 0
@@ -951,83 +986,8 @@ str291:
 
 .data
 .balign 8
-str357:
+str428:
 	.ascii "."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str427:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str436:
-	.ascii "import test/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str438:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str449:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str468:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str477:
-	.byte 10
-	.ascii "fn run_module_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str479:
-	.ascii "() -> #(Int, List(String)):"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str481:
-	.ascii "  let s = 0"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str483:
-	.ascii "  let failures = []"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str487:
-	.ascii "  #(s, failures)"
-	.byte 10
 	.byte 0
 /* end data */
 
@@ -1041,27 +1001,102 @@ str498:
 .data
 .balign 8
 str507:
-	.ascii "  let #(s_"
+	.ascii "import test/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str509:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str520:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str539:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str548:
+	.byte 10
+	.ascii "fn run_module_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str550:
+	.ascii "() -> #(Int, List(String)):"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str552:
+	.ascii "  let s = 0"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str554:
+	.ascii "  let failures = []"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str558:
+	.ascii "  #(s, failures)"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str569:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str578:
+	.ascii "  let #(s_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str580:
 	.ascii ", failures_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str512:
+str583:
 	.ascii ") = run_module_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str515:
+str586:
 	.ascii "()"
 	.byte 10
 	.byte 0
@@ -1069,28 +1104,28 @@ str515:
 
 .data
 .balign 8
-str517:
+str588:
 	.ascii "  let s = s + s_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str520:
+str591:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str522:
+str593:
 	.ascii "  let failures = append_strings(failures_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str525:
+str596:
 	.ascii ", failures)"
 	.byte 10
 	.byte 0
@@ -1098,21 +1133,21 @@ str525:
 
 .data
 .balign 8
-str536:
+str607:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str541:
+str612:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str544:
+str615:
 	.ascii "  let #(s, failures) = run_case(s, failures, "
 	.byte 34
 	.byte 0
@@ -1120,7 +1155,7 @@ str544:
 
 .data
 .balign 8
-str546:
+str617:
 	.byte 34
 	.ascii ", fn() -> "
 	.byte 0
@@ -1128,14 +1163,14 @@ str546:
 
 .data
 .balign 8
-str549:
+str620:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str552:
+str623:
 	.ascii "())"
 	.byte 10
 	.byte 0
@@ -1235,6 +1270,86 @@ builder_tester_find_test_fns:
 
 .text
 .balign 16
+.globl builder_tester_collect_invalid_public_test_functions
+builder_tester_collect_invalid_public_test_functions:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	leaq donna_nil(%rip), %rsi
+	callq builder_tester_collect_invalid_public_test_functions_loop
+	leave
+	ret
+.type builder_tester_collect_invalid_public_test_functions, @function
+.size builder_tester_collect_invalid_public_test_functions, .-builder_tester_collect_invalid_public_test_functions
+/* end function builder_tester_collect_invalid_public_test_functions */
+
+.text
+.balign 16
+builder_tester_collect_invalid_public_test_functions_loop:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	movq %rdi, %rax
+	movq %rsi, %rdi
+	movq (%rax), %rcx
+	cmpq $0, %rcx
+	jz .Lbb13
+	movq 8(%rax), %r13
+	movq 16(%rax), %rbx
+	movq %rdi, %r12
+	movq %r13, %rdi
+	callq donna_files_read
+	movq %r13, %rsi
+	movq %rax, %rdi
+	callq builder_tester_find_invalid_public_test_fns
+	movq %rax, %rdi
+	movq %r12, %rsi
+	callq donna_list_append
+	movq %rbx, %rdi
+	movq %rax, %rsi
+	callq builder_tester_collect_invalid_public_test_functions_loop
+	jmp .Lbb14
+.Lbb13:
+	callq donna_list_reverse
+.Lbb14:
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+.type builder_tester_collect_invalid_public_test_functions_loop, @function
+.size builder_tester_collect_invalid_public_test_functions_loop, .-builder_tester_collect_invalid_public_test_functions_loop
+/* end function builder_tester_collect_invalid_public_test_functions_loop */
+
+.text
+.balign 16
+.globl builder_tester_find_invalid_public_test_fns
+builder_tester_find_invalid_public_test_fns:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	movq %rsi, %rbx
+	leaq str44(%rip), %rsi
+	callq donna_string_split
+	movq %rbx, %rsi
+	movq %rax, %rdi
+	leaq donna_nil(%rip), %rdx
+	callq builder_tester_collect_invalid_fns
+	popq %rbx
+	leave
+	ret
+.type builder_tester_find_invalid_public_test_fns, @function
+.size builder_tester_find_invalid_public_test_fns, .-builder_tester_find_invalid_public_test_fns
+/* end function builder_tester_find_invalid_public_test_fns */
+
+.text
+.balign 16
 builder_tester_collect_fns:
 	endbr64
 	pushq %rbp
@@ -1249,17 +1364,17 @@ builder_tester_collect_fns:
 	movq %rdi, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz .Lbb21
+	jz .Lbb29
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r13
-	leaq str38(%rip), %rsi
+	leaq str58(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_starts_with
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $0, %rax
-	jz .Lbb19
+	jz .Lbb27
 	movq %rdi, %r12
 	callq donna_string_length
 	movq %r12, %rdi
@@ -1268,7 +1383,7 @@ builder_tester_collect_fns:
 	movl $7, %esi
 	callq donna_string_slice
 	movq %rax, %rdi
-	leaq str49(%rip), %rsi
+	leaq str69(%rip), %rsi
 	movq %rdi, %r12
 	callq donna_string_index_of
 	movq %r12, %rdi
@@ -1279,12 +1394,12 @@ builder_tester_collect_fns:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $0, %rax
-	jz .Lbb16
+	jz .Lbb24
 	movl $0, %esi
 	callq donna_string_slice
 	movq %r13, %rdi
 	movq %rax, %r15
-	leaq str59(%rip), %rsi
+	leaq str79(%rip), %rsi
 	movq %rdi, %r13
 	movq %r15, %rdi
 	callq donna_string_ends_with
@@ -1293,12 +1408,12 @@ builder_tester_collect_fns:
 	movq %rsp, %r13
 	movq %r13, -16(%rbp)
 	cmpq $1, %rax
-	jz .Lbb14
+	jz .Lbb22
 	movq %r14, %rsi
 	callq builder_tester_collect_fns
 	movq %rax, (%r13)
-	jmp .Lbb15
-.Lbb14:
+	jmp .Lbb23
+.Lbb22:
 	movq %rdi, %r13
 	movl $24, %edi
 	callq malloc
@@ -1310,29 +1425,29 @@ builder_tester_collect_fns:
 	movq %r14, 16(%rsi)
 	callq builder_tester_collect_fns
 	movq %rax, (%r13)
-.Lbb15:
+.Lbb23:
 	movq %rax, (%r12)
-	jmp .Lbb18
-.Lbb16:
+	jmp .Lbb26
+.Lbb24:
 	movq %r13, %rdi
 	movq %r14, %r13
 	movq %r13, %rsi
 	callq builder_tester_collect_fns
 	movq %rax, (%r12)
-.Lbb18:
+.Lbb26:
 	movq %rax, (%rbx)
-	jmp .Lbb23
-.Lbb19:
+	jmp .Lbb31
+.Lbb27:
 	movq %r13, %rdi
 	movq %r14, %r12
 	movq %r12, %rsi
 	callq builder_tester_collect_fns
 	movq %rax, (%rbx)
-	jmp .Lbb23
-.Lbb21:
+	jmp .Lbb31
+.Lbb29:
 	movq %r14, %rdi
 	callq donna_list_reverse
-.Lbb23:
+.Lbb31:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -1348,6 +1463,145 @@ builder_tester_collect_fns:
 
 .text
 .balign 16
+builder_tester_collect_invalid_fns:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $40, %rsp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %r14
+	pushq %r15
+	movq %rdx, %r14
+	movq %rdi, %rax
+	movq (%rax), %rcx
+	cmpq $0, %rcx
+	jz .Lbb45
+	movq 8(%rax), %rdi
+	movq 16(%rax), %r12
+	movq %rsi, %r15
+	leaq str106(%rip), %rsi
+	movq %rdi, %rbx
+	callq donna_string_starts_with
+	movq %rbx, %rdi
+	subq $16, %rsp
+	movq %rsp, %rbx
+	cmpq $0, %rax
+	jz .Lbb43
+	movq %rdi, %r13
+	callq donna_string_length
+	movq %r15, %rsi
+	movq %r13, %rdi
+	movq %rax, %rdx
+	subq $7, %rdx
+	movq %rsi, %r13
+	movl $7, %esi
+	callq donna_string_slice
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r15
+	leaq str117(%rip), %rsi
+	movq %rdi, %r13
+	callq donna_string_index_of
+	movq %r13, %rdi
+	movq %rax, %rdx
+	cmpq $0, %rdx
+	setge %al
+	movzbq %al, %rax
+	subq $16, %rsp
+	movq %rsp, %r13
+	movq %r13, -16(%rbp)
+	cmpq $0, %rax
+	jz .Lbb40
+	movl $0, %esi
+	callq donna_string_slice
+	movq %r12, %rdi
+	movq %rax, %rsi
+	movq %rsi, %r13
+	leaq str127(%rip), %rsi
+	movq %rdi, %r12
+	movq %r13, %rdi
+	callq donna_string_ends_with
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq -16(%rbp), %r12
+	subq $16, %rsp
+	movq %rsp, %r13
+	movq %r13, -32(%rbp)
+	cmpq $1, %rax
+	jz .Lbb37
+	movq %rsi, %r12
+	leaq str135(%rip), %rsi
+	movq %rdi, %r13
+	movq %r15, %rdi
+	callq __rt_str_concat
+	movq %r12, %rsi
+	movq %rax, %rdi
+	movq -16(%rbp), %r12
+	callq __rt_str_concat
+	movq %r13, %rdi
+	movq %rax, -24(%rbp)
+	movq %rdi, %r13
+	movl $24, %edi
+	callq malloc
+	movq %r15, %rsi
+	movq %r13, %rdi
+	movq %rax, %rdx
+	movq -32(%rbp), %r13
+	movq -24(%rbp), %rax
+	movq $1, (%rdx)
+	movq %rax, 8(%rdx)
+	movq %r14, 16(%rdx)
+	callq builder_tester_collect_invalid_fns
+	movq %rax, (%r13)
+	jmp .Lbb39
+.Lbb37:
+	movq %r15, %rsi
+	movq %r14, %rdx
+	callq builder_tester_collect_invalid_fns
+	movq %rax, (%r13)
+.Lbb39:
+	movq %rax, (%r12)
+	jmp .Lbb42
+.Lbb40:
+	movq %r12, %rdi
+	movq %r13, %r12
+	movq %r14, %r13
+	movq %r15, %rsi
+	movq %r13, %rdx
+	callq builder_tester_collect_invalid_fns
+	movq %rax, (%r12)
+.Lbb42:
+	movq %rax, (%rbx)
+	jmp .Lbb47
+.Lbb43:
+	movq %r12, %rdi
+	movq %r14, %r12
+	movq %r15, %rsi
+	movq %r12, %rdx
+	callq builder_tester_collect_invalid_fns
+	movq %rax, (%rbx)
+	jmp .Lbb47
+.Lbb45:
+	movq %r14, %rdi
+	callq donna_list_reverse
+.Lbb47:
+	movq %rbp, %rsp
+	subq $80, %rsp
+	popq %r15
+	popq %r14
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+.type builder_tester_collect_invalid_fns, @function
+.size builder_tester_collect_invalid_fns, .-builder_tester_collect_invalid_fns
+/* end function builder_tester_collect_invalid_fns */
+
+.text
+.balign 16
 .globl builder_tester_count_total
 builder_tester_count_total:
 	endbr64
@@ -1357,7 +1611,7 @@ builder_tester_count_total:
 	pushq %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb26
+	jz .Lbb50
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq %rdi, %rbx
@@ -1367,10 +1621,10 @@ builder_tester_count_total:
 	movq %rax, %rbx
 	callq builder_tester_count_total
 	addq %rbx, %rax
-	jmp .Lbb27
-.Lbb26:
+	jmp .Lbb51
+.Lbb50:
 	movl $0, %eax
-.Lbb27:
+.Lbb51:
 	popq %rbx
 	leave
 	ret
@@ -1425,436 +1679,436 @@ builder_tester_generate_filtered_runner:
 	movq %rbx, %rdi
 	movq %rax, %r12
 	movq %rdi, %rbx
-	leaq str99(%rip), %rdi
+	leaq str170(%rip), %rdi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str101(%rip), %rsi
+	leaq str172(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str103(%rip), %rsi
+	leaq str174(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str105(%rip), %rsi
+	leaq str176(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str107(%rip), %rsi
+	leaq str178(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str109(%rip), %rsi
+	leaq str180(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str111(%rip), %rsi
+	leaq str182(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str113(%rip), %rsi
+	leaq str184(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str115(%rip), %rsi
+	leaq str186(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str117(%rip), %rsi
+	leaq str188(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str119(%rip), %rsi
+	leaq str190(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str121(%rip), %rsi
+	leaq str192(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str123(%rip), %rsi
+	leaq str194(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str125(%rip), %rsi
+	leaq str196(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str127(%rip), %rsi
+	leaq str198(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str129(%rip), %rsi
+	leaq str200(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str131(%rip), %rsi
+	leaq str202(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str133(%rip), %rsi
+	leaq str204(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str135(%rip), %rsi
+	leaq str206(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str137(%rip), %rsi
+	leaq str208(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str139(%rip), %rsi
+	leaq str210(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str141(%rip), %rsi
+	leaq str212(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str143(%rip), %rsi
+	leaq str214(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str145(%rip), %rsi
+	leaq str216(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str147(%rip), %rsi
+	leaq str218(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str149(%rip), %rsi
+	leaq str220(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str151(%rip), %rsi
+	leaq str222(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str153(%rip), %rsi
+	leaq str224(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str155(%rip), %rsi
+	leaq str226(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str157(%rip), %rsi
+	leaq str228(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str159(%rip), %rsi
+	leaq str230(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str161(%rip), %rsi
+	leaq str232(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str163(%rip), %rsi
+	leaq str234(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str165(%rip), %rsi
+	leaq str236(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str167(%rip), %rsi
+	leaq str238(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str169(%rip), %rsi
+	leaq str240(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str171(%rip), %rsi
+	leaq str242(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str173(%rip), %rsi
+	leaq str244(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str175(%rip), %rsi
+	leaq str246(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str177(%rip), %rsi
+	leaq str248(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str179(%rip), %rsi
+	leaq str250(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str181(%rip), %rsi
+	leaq str252(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str183(%rip), %rsi
+	leaq str254(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str185(%rip), %rsi
+	leaq str256(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str187(%rip), %rsi
+	leaq str258(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str189(%rip), %rsi
+	leaq str260(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str191(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str193(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str195(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str197(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str199(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str201(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str203(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str205(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str207(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str209(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str211(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str213(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str215(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str217(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str219(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str221(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str223(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str225(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str227(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str229(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str231(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str233(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str235(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str237(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str239(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str241(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str243(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str245(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str247(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str249(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str251(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str253(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str255(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str257(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str259(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rsi
-	movq %rax, %rdi
-	callq __rt_str_concat
-	movq %r12, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r12
 	leaq str262(%rip), %rsi
 	callq __rt_str_concat
-	movq %r12, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r12
+	movq %rsi, %r13
 	leaq str264(%rip), %rsi
 	callq __rt_str_concat
-	movq %r12, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r12
+	movq %rsi, %r13
 	leaq str266(%rip), %rsi
 	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str268(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str270(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str272(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str274(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str276(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str278(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str280(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str282(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str284(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str286(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str288(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str290(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str292(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str294(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str296(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str298(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str300(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str302(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str304(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str306(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str308(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str310(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str312(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str314(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str316(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str318(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str320(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str322(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str324(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str326(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str328(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r13
+	leaq str330(%rip), %rsi
+	callq __rt_str_concat
+	movq %r13, %rsi
+	movq %rax, %rdi
+	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r12
-	leaq str268(%rip), %rsi
+	leaq str333(%rip), %rsi
+	callq __rt_str_concat
+	movq %r12, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r12
+	leaq str335(%rip), %rsi
+	callq __rt_str_concat
+	movq %r12, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r12
+	leaq str337(%rip), %rsi
+	callq __rt_str_concat
+	movq %r12, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r12
+	leaq str339(%rip), %rsi
 	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rax, %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str271(%rip), %rsi
+	leaq str342(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -1863,31 +2117,31 @@ builder_tester_generate_filtered_runner:
 	movq %rax, %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str275(%rip), %rsi
+	leaq str346(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str277(%rip), %rsi
+	leaq str348(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str279(%rip), %rsi
+	leaq str350(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str281(%rip), %rsi
+	leaq str352(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str283(%rip), %rsi
+	leaq str354(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str285(%rip), %rsi
+	leaq str356(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str287(%rip), %rsi
+	leaq str358(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str289(%rip), %rsi
+	leaq str360(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str291(%rip), %rsi
+	leaq str362(%rip), %rsi
 	callq __rt_str_concat
 	popq %r13
 	popq %r12
@@ -1907,11 +2161,11 @@ builder_tester_filter_test_modules:
 	movq %rdi, %rax
 	movq (%rsi), %rcx
 	cmpq $0, %rcx
-	jz .Lbb34
+	jz .Lbb58
 	leaq donna_nil(%rip), %rdx
 	movq %rax, %rdi
 	callq builder_tester_filter_modules_loop
-.Lbb34:
+.Lbb58:
 	leave
 	ret
 .type builder_tester_filter_test_modules, @function
@@ -1933,7 +2187,7 @@ builder_tester_filter_modules_loop:
 	movq %rdx, %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb40
+	jz .Lbb64
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq (%rax), %rbx
@@ -1954,7 +2208,7 @@ builder_tester_filter_modules_loop:
 	movq %rsp, %r13
 	movq %r13, -16(%rbp)
 	cmpq $1, %rax
-	jz .Lbb38
+	jz .Lbb62
 	movq %rdi, %r13
 	movl $16, %edi
 	callq malloc
@@ -1975,18 +2229,18 @@ builder_tester_filter_modules_loop:
 	movq %r12, 16(%rdx)
 	callq builder_tester_filter_modules_loop
 	movq %rax, (%rbx)
-	jmp .Lbb42
-.Lbb38:
+	jmp .Lbb66
+.Lbb62:
 	movq %r13, %rbx
 	movq %r15, %rsi
 	movq %r12, %rdx
 	callq builder_tester_filter_modules_loop
 	movq %rax, (%rbx)
-	jmp .Lbb42
-.Lbb40:
+	jmp .Lbb66
+.Lbb64:
 	movq %r12, %rdi
 	callq donna_list_reverse
-.Lbb42:
+.Lbb66:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -2015,7 +2269,7 @@ builder_tester_filter_fns:
 	movq %rcx, %r12
 	movq (%rsi), %rax
 	cmpq $0, %rax
-	jz .Lbb48
+	jz .Lbb72
 	movq 8(%rsi), %r13
 	movq 16(%rsi), %rsi
 	movq %rdx, %r15
@@ -2030,14 +2284,14 @@ builder_tester_filter_fns:
 	movq %rsp, %rbx
 	movq %rbx, -16(%rbp)
 	cmpq $1, %rax
-	jz .Lbb46
+	jz .Lbb70
 	movq %r12, %rcx
 	movq %rdx, %r15
 	movq %rsi, %r14
 	callq builder_tester_filter_fns
 	movq %rax, (%rbx)
-	jmp .Lbb50
-.Lbb46:
+	jmp .Lbb74
+.Lbb70:
 	movq %rsi, %r14
 	movq %rdx, %r15
 	movq %rdi, %rbx
@@ -2053,11 +2307,11 @@ builder_tester_filter_fns:
 	movq %r12, 16(%rcx)
 	callq builder_tester_filter_fns
 	movq %rax, (%rbx)
-	jmp .Lbb50
-.Lbb48:
+	jmp .Lbb74
+.Lbb72:
 	movq %r12, %rdi
 	callq donna_list_reverse
-.Lbb50:
+.Lbb74:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -2085,7 +2339,7 @@ builder_tester_matches_filters:
 	pushq %r15
 	movq %rdx, %r12
 	movq %rsi, %r13
-	leaq str357(%rip), %rsi
+	leaq str428(%rip), %rsi
 	movq %rdi, %rbx
 	callq __rt_str_concat
 	movq %r13, %rsi
@@ -2096,7 +2350,7 @@ builder_tester_matches_filters:
 	movq %rax, %rdi
 	movq (%rdx), %rax
 	cmpq $0, %rax
-	jz .Lbb64
+	jz .Lbb88
 	movq 8(%rdx), %rsi
 	movq 16(%rdx), %r15
 	movq %rsi, %r12
@@ -2106,7 +2360,7 @@ builder_tester_matches_filters:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz .Lbb62
+	jz .Lbb86
 	movq %rsi, %r13
 	movq %rdi, %r12
 	movq %r14, %rdi
@@ -2116,7 +2370,7 @@ builder_tester_matches_filters:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rax
-	jz .Lbb59
+	jz .Lbb83
 	movq %rdi, %r13
 	callq builder_tester_contains_text
 	movq %r15, %rdx
@@ -2125,29 +2379,29 @@ builder_tester_matches_filters:
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz .Lbb56
+	jz .Lbb80
 	callq builder_tester_matches_filters
 	movq %rax, (%r13)
-	jmp .Lbb58
-.Lbb56:
+	jmp .Lbb82
+.Lbb80:
 	movq $1, (%r13)
 	movl $1, %eax
-.Lbb58:
+.Lbb82:
 	movq %rax, (%r12)
-	jmp .Lbb61
-.Lbb59:
+	jmp .Lbb85
+.Lbb83:
 	movq $1, (%r12)
 	movl $1, %eax
-.Lbb61:
+.Lbb85:
 	movq %rax, (%rbx)
-	jmp .Lbb65
-.Lbb62:
+	jmp .Lbb89
+.Lbb86:
 	movq $1, (%rbx)
 	movl $1, %eax
-	jmp .Lbb65
-.Lbb64:
+	jmp .Lbb89
+.Lbb88:
 	movl $0, %eax
-.Lbb65:
+.Lbb89:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -2181,7 +2435,7 @@ builder_tester_contains_text:
 	setz %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz .Lbb68
+	jz .Lbb92
 	movq %rdi, %rbx
 	callq donna_string_length
 	movq %r13, %rcx
@@ -2190,10 +2444,10 @@ builder_tester_contains_text:
 	movq %rax, %rdx
 	movl $0, %r8d
 	callq builder_tester_contains_text_from
-	jmp .Lbb69
-.Lbb68:
+	jmp .Lbb93
+.Lbb92:
 	movl $0, %eax
-.Lbb69:
+.Lbb93:
 	popq %r13
 	popq %r12
 	popq %rbx
@@ -2223,7 +2477,7 @@ builder_tester_contains_text_from:
 	setg %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz .Lbb75
+	jz .Lbb99
 	movq %rdx, %r13
 	movq %r14, %rdx
 	movq %rsi, %r12
@@ -2242,18 +2496,18 @@ builder_tester_contains_text_from:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz .Lbb73
+	jz .Lbb97
 	addq $1, %r8
 	callq builder_tester_contains_text_from
 	movq %rax, (%rbx)
-	jmp .Lbb76
-.Lbb73:
+	jmp .Lbb100
+.Lbb97:
 	movq $1, (%rbx)
 	movl $1, %eax
-	jmp .Lbb76
-.Lbb75:
+	jmp .Lbb100
+.Lbb99:
 	movl $0, %eax
-.Lbb76:
+.Lbb100:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -2277,15 +2531,15 @@ builder_tester_gen_imports:
 	pushq %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb79
+	jz .Lbb103
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq (%rax), %rsi
 	movq %rdi, %rbx
-	leaq str436(%rip), %rdi
+	leaq str507(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str438(%rip), %rsi
+	leaq str509(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -2293,10 +2547,10 @@ builder_tester_gen_imports:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq __rt_str_concat
-	jmp .Lbb80
-.Lbb79:
-	leaq str427(%rip), %rax
-.Lbb80:
+	jmp .Lbb104
+.Lbb103:
+	leaq str498(%rip), %rax
+.Lbb104:
 	popq %rbx
 	leave
 	ret
@@ -2314,7 +2568,7 @@ builder_tester_gen_call_lines:
 	pushq %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb83
+	jz .Lbb107
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq %rdi, %rbx
@@ -2327,10 +2581,10 @@ builder_tester_gen_call_lines:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq __rt_str_concat
-	jmp .Lbb84
-.Lbb83:
-	leaq str449(%rip), %rax
-.Lbb84:
+	jmp .Lbb108
+.Lbb107:
+	leaq str520(%rip), %rax
+.Lbb108:
 	popq %rbx
 	leave
 	ret
@@ -2350,7 +2604,7 @@ builder_tester_gen_module_runners:
 	pushq %r13
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb87
+	jz .Lbb111
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rbx
 	movq (%rax), %rdi
@@ -2358,22 +2612,22 @@ builder_tester_gen_module_runners:
 	movq %rsi, %r13
 	movq %rdi, %rsi
 	movq %rdi, %r12
-	leaq str477(%rip), %rdi
+	leaq str548(%rip), %rdi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str479(%rip), %rsi
+	leaq str550(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str481(%rip), %rsi
+	leaq str552(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str483(%rip), %rsi
+	leaq str554(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %r12, %rdi
@@ -2383,7 +2637,7 @@ builder_tester_gen_module_runners:
 	movq %rax, %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str487(%rip), %rsi
+	leaq str558(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -2391,10 +2645,10 @@ builder_tester_gen_module_runners:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq __rt_str_concat
-	jmp .Lbb88
-.Lbb87:
-	leaq str468(%rip), %rax
-.Lbb88:
+	jmp .Lbb112
+.Lbb111:
+	leaq str539(%rip), %rax
+.Lbb112:
 	popq %r13
 	popq %r12
 	popq %rbx
@@ -2414,27 +2668,18 @@ builder_tester_gen_main_module_calls:
 	pushq %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb91
+	jz .Lbb115
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
 	movq (%rax), %rsi
 	movq %rsi, %r12
 	movq %rdi, %rbx
-	leaq str507(%rip), %rdi
+	leaq str578(%rip), %rdi
 	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r12
-	leaq str509(%rip), %rsi
-	callq __rt_str_concat
-	movq %r12, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r12
-	callq __rt_str_concat
-	movq %r12, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r12
-	leaq str512(%rip), %rsi
+	leaq str580(%rip), %rsi
 	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rax, %rdi
@@ -2443,12 +2688,7 @@ builder_tester_gen_main_module_calls:
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r12
-	leaq str515(%rip), %rsi
-	callq __rt_str_concat
-	movq %r12, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r12
-	leaq str517(%rip), %rsi
+	leaq str583(%rip), %rsi
 	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rax, %rdi
@@ -2457,18 +2697,32 @@ builder_tester_gen_main_module_calls:
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r12
-	leaq str520(%rip), %rsi
+	leaq str586(%rip), %rsi
 	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r12
-	leaq str522(%rip), %rsi
+	leaq str588(%rip), %rsi
+	callq __rt_str_concat
+	movq %r12, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r12
+	callq __rt_str_concat
+	movq %r12, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r12
+	leaq str591(%rip), %rsi
+	callq __rt_str_concat
+	movq %r12, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r12
+	leaq str593(%rip), %rsi
 	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rax, %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str525(%rip), %rsi
+	leaq str596(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -2476,10 +2730,10 @@ builder_tester_gen_main_module_calls:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq __rt_str_concat
-	jmp .Lbb92
-.Lbb91:
-	leaq str498(%rip), %rax
-.Lbb92:
+	jmp .Lbb116
+.Lbb115:
+	leaq str569(%rip), %rax
+.Lbb116:
 	popq %r12
 	popq %rbx
 	leave
@@ -2501,11 +2755,11 @@ builder_tester_gen_mod_calls:
 	movq %rsi, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz .Lbb95
+	jz .Lbb119
 	movq 8(%rax), %rsi
 	movq 16(%rax), %r12
 	movq %rsi, %r13
-	leaq str541(%rip), %rsi
+	leaq str612(%rip), %rsi
 	movq %rdi, %rbx
 	callq __rt_str_concat
 	movq %r13, %rsi
@@ -2515,12 +2769,12 @@ builder_tester_gen_mod_calls:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	movq %rdi, %rbx
-	leaq str544(%rip), %rdi
+	leaq str615(%rip), %rdi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str546(%rip), %rsi
+	leaq str617(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
@@ -2530,7 +2784,7 @@ builder_tester_gen_mod_calls:
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str549(%rip), %rsi
+	leaq str620(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
@@ -2538,7 +2792,7 @@ builder_tester_gen_mod_calls:
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r12
-	leaq str552(%rip), %rsi
+	leaq str623(%rip), %rsi
 	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rbx, %rdi
@@ -2547,10 +2801,10 @@ builder_tester_gen_mod_calls:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq __rt_str_concat
-	jmp .Lbb96
-.Lbb95:
-	leaq str536(%rip), %rax
-.Lbb96:
+	jmp .Lbb120
+.Lbb119:
+	leaq str607(%rip), %rax
+.Lbb120:
 	popq %r13
 	popq %r12
 	popq %rbx
