@@ -28,448 +28,315 @@ _str27:
 
 .data
 .balign 8
-_str33:
-	.ascii "dev-dependencies"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str41:
-	.ascii "donna.lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str45:
-	.ascii "dependencies"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str52:
-	.ascii "donna.lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str56:
-	.ascii "dev-dependencies"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 _donna_nil:
 	.quad 0
 /* end data */
 
 .data
 .balign 8
-_str121:
+_str40:
+	.ascii "dev-dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str55:
+	.ascii "donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str59:
+	.ascii "dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str73:
+	.ascii "donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str77:
+	.ascii "dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str90:
+	.ascii "dev-dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str131:
+	.ascii "donna.toml"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str145:
+	.ascii "dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str226:
 	.ascii "path"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str139:
+_str246:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str166:
+_str273:
 	.ascii "mkdir -p "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str189:
+_str301:
 	.ascii "rm -rf "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str192:
+_str304:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str199:
+_str311:
 	.ascii "advice.detachedHead=false"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str203:
+_str315:
 	.ascii "-c"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str207:
-	.ascii "clone"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str212:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str216:
-	.ascii "checkout"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str223:
-	.ascii "-C"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str262:
-	.ascii "version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str271:
-	.ascii "tag"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str279:
-	.ascii "branch"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str287:
-	.ascii "rev"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str293:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str297:
-	.ascii "--sort=-v:refname"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str301:
-	.ascii "--tags"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str305:
-	.ascii "ls-remote"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str310:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 _str319:
-	.ascii ""
+	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str324:
-	.byte 9
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str339:
-	.ascii "^{}"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str347:
-	.ascii "refs/tags/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str387:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str394:
-	.ascii "1"
+_str328:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str335:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str389:
+	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str398:
-	.ascii "--depth"
+	.ascii "tag"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str402:
-	.ascii "clone"
+_str406:
+	.ascii "branch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str407:
+_str414:
+	.ascii "rev"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str420:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str417:
-	.ascii "--branch"
+_str424:
+	.ascii "--sort=-v:refname"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str421:
-	.ascii "1"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str425:
-	.ascii "--depth"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str429:
-	.ascii "clone"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str440:
-	.ascii "rm -rf "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str443:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str450:
-	.ascii "clone"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str461:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str465:
-	.ascii "checkout"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str472:
-	.ascii "-C"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str487:
-	.ascii "rm -rf "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str491:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str492:
-	.ascii "origin"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str496:
-	.ascii "--prune"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str500:
-	.ascii "--force"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str504:
+_str428:
 	.ascii "--tags"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str508:
-	.ascii "fetch"
+_str432:
+	.ascii "ls-remote"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str515:
-	.ascii "-C"
+_str437:
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str526:
+_str446:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str451:
+	.byte 9
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str466:
+	.ascii "^{}"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str474:
+	.ascii "refs/tags/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str514:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str527:
-	.ascii "--ff-only"
+_str521:
+	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str531:
-	.ascii "pull"
+_str525:
+	.ascii "--depth"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str538:
-	.ascii "-C"
+_str529:
+	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str546:
+_str534:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str550:
-	.ascii "checkout"
+_str544:
+	.ascii "--branch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str557:
-	.ascii "-C"
+_str548:
+	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str568:
+_str552:
+	.ascii "--depth"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str556:
+	.ascii "clone"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str567:
+	.ascii "rm -rf "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str570:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str572:
-	.ascii "origin"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str576:
-	.ascii "fetch"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str583:
-	.ascii "-C"
+_str577:
+	.ascii "clone"
 	.byte 0
 /* end data */
 
@@ -496,91 +363,245 @@ _str599:
 
 .data
 .balign 8
-_str605:
+_str614:
+	.ascii "rm -rf "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str618:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str606:
-	.ascii "remote.origin.url"
+_str619:
+	.ascii "origin"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str610:
-	.ascii "--get"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str614:
-	.ascii "config"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str621:
-	.ascii "-C"
+_str623:
+	.ascii "--prune"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str627:
-	.ascii "HOME"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str629:
-	.ascii ".donna"
+	.ascii "--force"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str631:
-	.ascii "packages"
+	.ascii "--tags"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str633:
-	.ascii "git"
+_str635:
+	.ascii "fetch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str634:
-	.ascii "HEAD"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str638:
-	.ascii "rev-parse"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str645:
+_str642:
 	.ascii "-C"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str660:
+_str653:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str654:
+	.ascii "--ff-only"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str658:
+	.ascii "pull"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str665:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str673:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str677:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str684:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str695:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str699:
+	.ascii "origin"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str703:
+	.ascii "fetch"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str710:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str715:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str719:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str726:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str732:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str733:
+	.ascii "remote.origin.url"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str737:
+	.ascii "--get"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str741:
+	.ascii "config"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str748:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str754:
+	.ascii "HOME"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str756:
+	.ascii ".donna"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str758:
+	.ascii "packages"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str760:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str761:
+	.ascii "HEAD"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str765:
+	.ascii "rev-parse"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str772:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str787:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -690,10 +711,28 @@ _builder_dependencies_resolve_all:
 	callq _builder_dependencies_parse_section
 	movq %r13, %rsi
 	movq %rbx, %rdi
+	movq %rdi, %rbx
+	movq (%rax), %rdi
+	movq %rsi, %r13
+	movq 8(%rax), %rsi
+	leaq _donna_nil(%rip), %rcx
+	leaq _donna_nil(%rip), %rdx
+	callq _builder_dependencies_expand_deps
+	movq %r13, %rsi
+	movq %rbx, %rdi
 	movq (%rax), %rbx
 	movq 8(%rax), %rcx
-	leaq _str33(%rip), %rdx
+	movq 16(%rax), %rdx
+	movq %rdx, %r13
+	leaq _str40(%rip), %rdx
 	callq _builder_dependencies_parse_section
+	movq %r13, %rdx
+	movq %r12, %rdi
+	movq %rdi, %r12
+	movq (%rax), %rdi
+	movq 8(%rax), %rsi
+	leaq _donna_nil(%rip), %rcx
+	callq _builder_dependencies_expand_deps
 	movq %r12, %rdi
 	movq (%rax), %rsi
 	movq %rsi, %r12
@@ -721,7 +760,7 @@ _builder_dependencies_resolve_deps:
 	pushq %r12
 	pushq %r13
 	movq %rsi, %r12
-	leaq _str41(%rip), %rsi
+	leaq _str55(%rip), %rsi
 	movq %rdi, %rbx
 	movq %r12, %rdi
 	callq _donna_files_join
@@ -736,8 +775,15 @@ _builder_dependencies_resolve_deps:
 	movq %r13, %rcx
 	movq %r12, %rsi
 	movq %rax, %rdi
-	leaq _str45(%rip), %rdx
+	leaq _str59(%rip), %rdx
 	callq _builder_dependencies_parse_section
+	movq %rbx, %rdi
+	movq %rdi, %rbx
+	movq (%rax), %rdi
+	movq 8(%rax), %rsi
+	leaq _donna_nil(%rip), %rcx
+	leaq _donna_nil(%rip), %rdx
+	callq _builder_dependencies_expand_deps
 	movq %rbx, %rdi
 	movq (%rax), %rbx
 	movq 8(%rax), %rsi
@@ -762,7 +808,7 @@ _builder_dependencies_resolve_dev_deps:
 	pushq %r12
 	pushq %r13
 	movq %rsi, %r12
-	leaq _str52(%rip), %rsi
+	leaq _str73(%rip), %rsi
 	movq %rdi, %rbx
 	movq %r12, %rdi
 	callq _donna_files_join
@@ -777,8 +823,33 @@ _builder_dependencies_resolve_dev_deps:
 	movq %r13, %rcx
 	movq %r12, %rsi
 	movq %rax, %rdi
-	leaq _str56(%rip), %rdx
+	leaq _str77(%rip), %rdx
+	movq %rsi, %r13
+	movq %rdi, %r12
 	callq _builder_dependencies_parse_section
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq %rdi, %r12
+	movq (%rax), %rdi
+	movq %rsi, %r13
+	movq 8(%rax), %rsi
+	leaq _donna_nil(%rip), %rcx
+	leaq _donna_nil(%rip), %rdx
+	callq _builder_dependencies_expand_deps
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq 8(%rax), %rcx
+	movq 16(%rax), %rdx
+	movq %rdx, %r12
+	leaq _str90(%rip), %rdx
+	callq _builder_dependencies_parse_section
+	movq %r12, %rdx
+	movq %rbx, %rdi
+	movq %rdi, %rbx
+	movq (%rax), %rdi
+	movq 8(%rax), %rsi
+	leaq _donna_nil(%rip), %rcx
+	callq _builder_dependencies_expand_deps
 	movq %rbx, %rdi
 	movq (%rax), %rbx
 	movq 8(%rax), %rsi
@@ -790,6 +861,188 @@ _builder_dependencies_resolve_dev_deps:
 	leave
 	ret
 /* end function builder_dependencies_resolve_dev_deps */
+
+.text
+.balign 16
+_builder_dependencies_expand_deps:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $72, %rsp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %r14
+	pushq %r15
+	movq %rcx, %rbx
+	movq %rdx, %r13
+	movq %rsi, %r15
+	movq (%rdi), %rax
+	cmpq $0, %rax
+	jz Lbb25
+	movq 8(%rdi), %r14
+	movq 16(%rdi), %rdi
+	movq %rdi, %r12
+	movq %r14, %rdi
+	callq _builder_dependencies_dep_name
+	movq %r15, %rsi
+	movq %r12, %rdi
+	movq %rax, -8(%rbp)
+	movq %rsi, %r15
+	movq %rax, %rsi
+	movq %rdi, %r12
+	movq %r13, %rdi
+	callq _donna_list_contains_str
+	movq %r12, %rdi
+	subq $16, %rsp
+	movq %rsp, %r12
+	movq %r12, -64(%rbp)
+	cmpq $1, %rax
+	jz Lbb23
+	movq %rdi, %r12
+	movl $24, %edi
+	callq _malloc
+	movq %r13, %rdx
+	movq %r12, %rdi
+	movq %rax, %r12
+	movq -8(%rbp), %rax
+	movq $1, (%r12)
+	movq %rax, 8(%r12)
+	movq %rdx, 16(%r12)
+	movq %rdi, %r13
+	movq %r14, %rdi
+	callq _builder_dependencies_dep_path
+	movq %r15, %rsi
+	movq %rax, %rdi
+	movq %rsi, %r15
+	leaq _str131(%rip), %rsi
+	callq _donna_files_join
+	movq %rax, %rdi
+	movq %rdi, -16(%rbp)
+	callq _donna_files_exists
+	movq %r13, %rdi
+	movq %rdi, %r13
+	movq -16(%rbp), %rdi
+	subq $16, %rsp
+	movq %rsp, %rcx
+	movq %rcx, -56(%rbp)
+	cmpq $0, %rax
+	jz Lbb20
+	callq _donna_files_read
+	movq %rbx, %rdi
+	movq %rax, -24(%rbp)
+	movq %rdi, %rbx
+	movq %r14, %rdi
+	callq _builder_dependencies_dep_path
+	movq %r12, %rdx
+	movq %rbx, %rdi
+	movq %rax, %rsi
+	movq -64(%rbp), %rbx
+	movq %rdi, %r12
+	movq -24(%rbp), %rdi
+	movq %r15, %rcx
+	movq %rdx, %r15
+	leaq _str145(%rip), %rdx
+	callq _builder_dependencies_parse_section
+	movq %r15, %rdx
+	movq %r12, %rdi
+	movq -56(%rbp), %r12
+	movq %rdi, %r15
+	movq (%rax), %rdi
+	movq 8(%rax), %rsi
+	leaq _donna_nil(%rip), %rcx
+	callq _builder_dependencies_expand_deps
+	movq %r15, %rdi
+	movq (%rax), %rcx
+	movq %rcx, -32(%rbp)
+	movq 8(%rax), %rsi
+	movq %rsi, -40(%rbp)
+	movq 16(%rax), %r15
+	movq %r15, -48(%rbp)
+	movq %rdi, %r15
+	movl $24, %edi
+	callq _malloc
+	movq %r15, %rdi
+	movq %rax, %r15
+	movq %r14, %rax
+	movq %rdi, %r14
+	movq -32(%rbp), %rdi
+	movq $1, (%r15)
+	movq %rax, 8(%r15)
+	leaq _donna_nil(%rip), %rax
+	movq %rax, 16(%r15)
+	callq _donna_list_reverse
+	movq %rax, %rdi
+	movq %r14, %rax
+	movq -40(%rbp), %rsi
+	movq %rsi, %r14
+	movq %rax, %rsi
+	callq _donna_list_append
+	movq %r15, %rdi
+	movq %rax, %rsi
+	movq -48(%rbp), %r15
+	callq _donna_list_append
+	movq %r15, %rdx
+	movq %r14, %rsi
+	movq %r13, %rdi
+	movq %rax, %rcx
+	callq _builder_dependencies_expand_deps
+	movq %rax, (%r12)
+	jmp Lbb22
+Lbb20:
+	movq %r13, %rdi
+	movq %rbx, %r13
+	xchgq %r12, %r15
+	movq %rdi, %rbx
+	movl $24, %edi
+	callq _malloc
+	movq %r15, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq %rax, %rcx
+	movq -56(%rbp), %r12
+	movq -64(%rbp), %rbx
+	movq $1, (%rcx)
+	movq %r14, 8(%rcx)
+	movq %r13, 16(%rcx)
+	callq _builder_dependencies_expand_deps
+	movq %rax, (%r12)
+Lbb22:
+	movq %rax, (%rbx)
+	jmp Lbb27
+Lbb23:
+	xchgq %r12, %rbx
+	movq %r13, %rdx
+	movq %r15, %rsi
+	movq %r12, %rcx
+	movq %rdx, %r13
+	movq %rsi, %r12
+	callq _builder_dependencies_expand_deps
+	movq %rax, (%rbx)
+	jmp Lbb27
+Lbb25:
+	movq %rbx, %rdi
+	movq %r15, %r12
+	callq _donna_list_reverse
+	movq %rax, %rbx
+	movl $24, %edi
+	callq _malloc
+	movq %r13, %rdx
+	movq %r12, %rsi
+	movq %rbx, (%rax)
+	movq %rsi, 8(%rax)
+	movq %rdx, 16(%rax)
+Lbb27:
+	movq %rbp, %rsp
+	subq $112, %rsp
+	popq %r15
+	popq %r14
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+/* end function builder_dependencies_expand_deps */
 
 .text
 .balign 16
@@ -810,7 +1063,7 @@ _builder_dependencies_parse_section:
 	callq _parsetoml_parsetoml_is_err
 	movq %r14, %rdi
 	cmpq $1, %rax
-	jz Lbb25
+	jz Lbb37
 	callq _parsetoml_parsetoml_unwrap_table
 	movq %r13, %rsi
 	movq %rax, %rdi
@@ -821,14 +1074,14 @@ _builder_dependencies_parse_section:
 	movq %rsp, %rbx
 	movq (%rax), %rdx
 	cmpq $1, %rdx
-	jz Lbb23
+	jz Lbb35
 	movq 8(%rax), %rax
 	subq $16, %rsp
 	movq %rsp, %r12
 	movq %rcx, %r13
 	movq (%rax), %rcx
 	cmpq $4, %rcx
-	jz Lbb20
+	jz Lbb32
 	movl $16, %edi
 	callq _malloc
 	movq %r13, %rcx
@@ -836,8 +1089,8 @@ _builder_dependencies_parse_section:
 	movq %rdx, (%rax)
 	movq %rcx, 8(%rax)
 	movq %rax, (%r12)
-	jmp Lbb22
-Lbb20:
+	jmp Lbb34
+Lbb32:
 	movq %r13, %rcx
 	movq 8(%rax), %rdi
 	movq %rcx, %r8
@@ -846,10 +1099,10 @@ Lbb20:
 	movq %r13, %rdx
 	callq _builder_dependencies_collect_deps
 	movq %rax, (%r12)
-Lbb22:
+Lbb34:
 	movq %rax, (%rbx)
-	jmp Lbb27
-Lbb23:
+	jmp Lbb39
+Lbb35:
 	movq %rcx, %r12
 	movl $16, %edi
 	callq _malloc
@@ -858,8 +1111,8 @@ Lbb23:
 	movq %rdx, (%rax)
 	movq %rcx, 8(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb27
-Lbb25:
+	jmp Lbb39
+Lbb37:
 	movq %r12, %rbx
 	movl $16, %edi
 	callq _malloc
@@ -867,7 +1120,7 @@ Lbb25:
 	leaq _donna_nil(%rip), %rdx
 	movq %rdx, (%rax)
 	movq %rcx, 8(%rax)
-Lbb27:
+Lbb39:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14
@@ -890,36 +1143,21 @@ _builder_dependencies_collect_deps:
 	pushq %r13
 	pushq %r14
 	pushq %r15
+	movq %r8, %r15
 	movq %rcx, %r13
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz Lbb37
+	jz Lbb49
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
-	movq %r8, %r15
-	movq (%rax), %r8
-	movq %r8, -48(%rbp)
+	movq %rdi, -64(%rbp)
+	movq (%rax), %rbx
+	movq %rbx, -8(%rbp)
 	movq %rdx, %r14
 	movq 8(%rax), %rdx
 	movq %rdx, -16(%rbp)
 	movq %rsi, %r12
-	leaq _str121(%rip), %rsi
-	movq %rdi, %rbx
-	movq %rdx, %rdi
-	callq _parsetoml_parsetoml_get_string
-	movq %r14, %rdx
-	movq %r12, %rsi
-	movq %rbx, %rdi
-	movq %rdx, %r14
-	movq -16(%rbp), %rdx
-	subq $16, %rsp
-	movq %rsp, %rcx
-	movq %rcx, -64(%rbp)
-	movq (%rax), %rcx
-	cmpq $0, %rcx
-	jz Lbb35
-	movq %rsi, %r12
-	leaq _str139(%rip), %rsi
+	leaq _str226(%rip), %rsi
 	movq %rdi, %rbx
 	movq %rdx, %rdi
 	callq _parsetoml_parsetoml_get_string
@@ -927,26 +1165,49 @@ _builder_dependencies_collect_deps:
 	movq %r14, %rdx
 	movq %r12, %rsi
 	movq %rbx, %rdi
-	movq -64(%rbp), %rcx
+	movq %rax, %rcx
+	movq %rdx, %r14
+	movq -16(%rbp), %rdx
+	movq -8(%rbp), %rbx
+	movq %rbx, %rax
+	subq $16, %rsp
+	movq %rsp, %rbx
+	movq %rbx, -56(%rbp)
+	movq %r8, %r15
+	movq (%rcx), %r8
+	cmpq $0, %r8
+	jz Lbb47
+	movq %rsi, %r12
+	leaq _str246(%rip), %rsi
+	movq %rdi, %rbx
+	movq %rdx, %rdi
+	callq _parsetoml_parsetoml_get_string
+	movq %r15, %r8
+	movq %r14, %rdx
+	movq %r12, %rsi
+	movq %rbx, %rdi
+	movq %rax, %rcx
+	movq -56(%rbp), %rbx
 	movq %rdx, %r15
 	movq -16(%rbp), %rdx
-	movq %rdi, %rbx
-	movq -48(%rbp), %rdi
+	movq -8(%rbp), %rax
 	subq $16, %rsp
 	movq %rsp, %r12
 	movq %r12, -40(%rbp)
 	movq %r8, %r14
-	movq (%rax), %r8
+	movq (%rcx), %r8
 	cmpq $1, %r8
-	jz Lbb32
+	jz Lbb44
 	movq %rsi, %r12
-	movq 8(%rax), %rsi
+	movq 8(%rcx), %rsi
 	movq %r15, %rcx
+	movq %rdi, %rbx
+	movq %rax, %rdi
 	callq _builder_dependencies_resolve_git_dep
 	movq %r14, %r8
 	movq %r12, %rsi
 	movq %rbx, %rdi
-	movq -64(%rbp), %rbx
+	movq -56(%rbp), %rbx
 	movq (%rax), %rcx
 	movq %rcx, -32(%rbp)
 	movq %rsi, %r14
@@ -971,10 +1232,8 @@ _builder_dependencies_collect_deps:
 	movq %r13, 16(%rcx)
 	callq _builder_dependencies_collect_deps
 	movq %rax, (%r12)
-	jmp Lbb34
-Lbb32:
-	movq %rbx, %rdi
-	movq %rcx, %rbx
+	jmp Lbb46
+Lbb44:
 	movq %r14, %r8
 	movq %r15, %rdx
 	movq %r8, %r15
@@ -982,42 +1241,49 @@ Lbb32:
 	movq %rdx, %r14
 	callq _builder_dependencies_collect_deps
 	movq %rax, (%r12)
-Lbb34:
+Lbb46:
 	movq %rax, (%rbx)
-	jmp Lbb39
-Lbb35:
-	movq %r13, %r12
-	movq %rsi, %r13
-	movq 8(%rax), %rsi
-	movq %rdi, %rbx
+	jmp Lbb51
+Lbb47:
+	movq %rax, %rbx
+	movq %rcx, %rax
 	movq %r13, %rdi
+	movq %rsi, %r12
+	movq 8(%rax), %rsi
+	movq %rdi, %r13
+	movq %r12, %rdi
 	callq _donna_files_join
-	movq %rbx, %rdi
-	movq %rax, %rsi
-	movq %rdi, %rbx
-	movq -48(%rbp), %rdi
-	callq _builder_dependencies_Dep
-	movq %rbx, %rdi
-	movq %rax, -56(%rbp)
+	movq %r13, %rdi
+	movq %rax, -48(%rbp)
+	movq %rdi, %r13
+	movl $24, %edi
+	callq _malloc
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq -48(%rbp), %rax
+	movq $0, (%r13)
+	movq %rbx, 8(%r13)
+	movq %rax, 16(%r13)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %r15, %r8
 	movq %r14, %rdx
-	movq %r13, %rsi
+	movq %r12, %rsi
 	movq %rbx, %rdi
 	movq %rax, %rcx
-	movq -64(%rbp), %rbx
-	movq -56(%rbp), %rax
+	movq -56(%rbp), %rbx
+	movq %rdi, %r12
+	movq -64(%rbp), %rdi
 	movq $1, (%rcx)
-	movq %rax, 8(%rcx)
+	movq %r13, 8(%rcx)
 	movq %r12, 16(%rcx)
 	movq %r8, %r12
 	callq _builder_dependencies_collect_deps
 	movq %rax, (%rbx)
-	jmp Lbb39
-Lbb37:
-	movq %r8, %r12
+	jmp Lbb51
+Lbb49:
+	movq %r15, %r12
 	movq %r13, %rdi
 	callq _donna_list_reverse
 	movq %rax, %rbx
@@ -1026,7 +1292,7 @@ Lbb37:
 	movq %r12, %r8
 	movq %rbx, (%rax)
 	movq %r8, 8(%rax)
-Lbb39:
+Lbb51:
 	movq %rbp, %rsp
 	subq $112, %rsp
 	popq %r15
@@ -1051,158 +1317,175 @@ _builder_dependencies_resolve_git_dep:
 	pushq %r14
 	pushq %r15
 	movq %rcx, %r12
-	movq %rdx, %r14
-	movq %rsi, %r13
+	movq %rdx, %r13
+	movq %rsi, %r14
 	movq %rdi, %rbx
 	callq _builder_dependencies_git_cache_dir
-	movq %r14, %rsi
+	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r15
 	movq %rdi, %rsi
-	movq %rdi, %r14
-	leaq _str166(%rip), %rdi
+	movq %rdi, %r13
+	leaq _str273(%rip), %rdi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _donna_shell_run
 	movq %r15, %rsi
-	movq %r14, %rdi
-	movq %rsi, %r14
+	movq %r13, %rdi
+	movq %rsi, %r13
 	movq %rbx, %rsi
 	callq _donna_files_join
-	movq %r14, %rsi
+	movq %r13, %rsi
 	movq %r12, %rdi
-	movq %rax, %r14
-	movq %rsi, %r12
+	movq %rax, %r12
+	movq %rsi, %r15
 	movq %rbx, %rsi
 	callq _builder_lock_find_rev
 	movq %rbx, %rdi
-	movq %rax, %r15
-	movq %rdi, %rbx
-	movq %r14, %rdi
+	movq %rax, %rbx
+	movq %rdi, %r13
+	movq %r12, %rdi
 	callq _builder_lock_read_cached_rev
-	movq %rbx, %rdi
+	movq %r13, %rdi
 	movq %rax, -8(%rbp)
-	movq %rdi, %rbx
-	movq %r15, %rdi
-	callq _donna_string_is_empty
-	movq %r15, %rdx
-	movq %r12, %rsi
+	movq %rdi, %r13
 	movq %rbx, %rdi
-	movq %rsi, %r12
+	callq _donna_string_is_empty
+	movq %r15, %rsi
+	movq %r13, %rdi
+	movq %rsi, %r13
 	movq -8(%rbp), %rsi
 	cmpq $0, %rax
-	jz Lbb44
+	jz Lbb56
 	movq %rdi, %rbx
-	movq %r14, %rdi
+	movq %r12, %rdi
 	callq _donna_files_is_dir
-	movq %r12, %rsi
+	movq %r13, %rsi
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb43
+	jz Lbb55
 	movq %rsi, %r15
-	movq %r13, %rsi
-	movq %rdi, %r12
+	movq %r14, %rsi
+	movq %rdi, %r13
 	callq _utilities_logger_fetch
 	callq _donna_shell_flush
 	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rdi, %r12
 	movq %r13, %rdi
+	movq %rdi, %r13
+	movq %r14, %rdi
 	callq _builder_dependencies_pick_ref
 	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %rdx
 	movq %rsi, %r14
-	movq %rdi, %r12
-	movq %r13, %rdi
+	movq %r12, %rsi
+	movq %rdi, %r13
+	movq %r14, %rdi
 	callq _builder_dependencies_clone_at_ref
+	movq %r13, %rdi
+	movq %rdi, %r13
 	movq %r12, %rdi
-	movq %rdi, %r12
-	movq %r14, %rdi
 	callq _builder_dependencies_head_sha
 	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %r14
 	movq %rsi, %r15
 	movq %r14, %rsi
-	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %rdi, %r13
+	movq %r12, %rdi
 	callq _builder_lock_write_cached_rev
+	movq %r13, %rdi
+	movq %rdi, %r13
+	movl $24, %edi
+	callq _malloc
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq $0, (%r13)
+	movq %rdi, 8(%r13)
+	movq %r12, 16(%r13)
+	movq %rdi, %r12
+	movl $32, %edi
+	callq _malloc
 	movq %r15, %rsi
 	movq %r12, %rdi
-	movq %rdi, %r12
-	callq _builder_dependencies_Dep
-	movq %r14, %rdx
-	movq %r13, %rsi
-	movq %r12, %rdi
-	movq %rax, %r13
-	callq _builder_lock_LockedDep
 	movq %rax, %r12
+	movq $0, (%r12)
+	movq %rdi, 8(%r12)
+	movq %rsi, 16(%r12)
+	movq %r14, 24(%r12)
 	movl $16, %edi
 	callq _malloc
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb48
-Lbb43:
-	movq %rdi, %r12
-	movq %r13, %rdi
+	jmp Lbb61
+Lbb55:
+	movq %rdi, %r13
+	movq %r14, %rdi
 	callq _builder_dependencies_pick_ref
 	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %rdx
 	movq %rsi, %r14
-	movq %r13, %rsi
-	movq %rdi, %r12
-	movq %r14, %rdi
-	callq _builder_dependencies_refresh_cached_dep
+	movq %rdi, %r13
 	movq %r12, %rdi
-	movq %rdi, %r12
-	movq %r14, %rdi
+	callq _builder_dependencies_refresh_cached_dep
+	movq %r13, %rdi
+	movq %rdi, %r13
+	movq %r12, %rdi
 	callq _builder_dependencies_head_sha
 	movq %r14, %rsi
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %r14
 	movq %rsi, %r15
 	movq %r14, %rsi
-	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %rdi, %r13
+	movq %r12, %rdi
 	callq _builder_lock_write_cached_rev
+	movq %r13, %rdi
+	movq %rdi, %r13
+	movl $24, %edi
+	callq _malloc
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq $0, (%r13)
+	movq %rdi, 8(%r13)
+	movq %r12, 16(%r13)
+	movq %rdi, %r12
+	movl $32, %edi
+	callq _malloc
 	movq %r15, %rsi
 	movq %r12, %rdi
-	movq %rsi, %r12
-	movq %rdi, %r12
-	callq _builder_dependencies_Dep
-	movq %r14, %rdx
-	movq %r13, %rsi
-	movq %r12, %rdi
-	movq %rax, %r13
-	callq _builder_lock_LockedDep
 	movq %rax, %r12
+	movq $0, (%r12)
+	movq %rdi, 8(%r12)
+	movq %rsi, 16(%r12)
+	movq %r14, 24(%r12)
 	movl $16, %edi
 	callq _malloc
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb48
-Lbb44:
-	movq %r14, %r12
-	movq %rdx, %r14
+	jmp Lbb61
+Lbb56:
+	movq %r14, %r13
+	movq %rbx, %r14
 	movq %rdi, %rbx
 	movq %r14, %rdi
 	callq _donna_string_equal
-	movq %r12, %rsi
+	movq %r13, %rsi
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq %rbx, -16(%rbp)
 	cmpq $1, %rax
-	jz Lbb47
+	jz Lbb59
 	movq %rsi, %r15
+	movq %r12, %rsi
 	movq %rdi, %rbx
-	leaq _str189(%rip), %rdi
+	leaq _str301(%rip), %rdi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _donna_shell_run
@@ -1211,76 +1494,76 @@ Lbb44:
 	movl $24, %edi
 	callq _malloc
 	movq %rbx, %rdi
-	movq %rax, %r12
-	movq $1, (%r12)
-	movq %r15, 8(%r12)
+	movq %rax, %r13
+	movq $1, (%r13)
+	movq %r12, 8(%r13)
 	leaq _donna_nil(%rip), %rax
-	movq %rax, 16(%r12)
+	movq %rax, 16(%r13)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	movq %r13, 8(%rbx)
-	movq %r12, 16(%rbx)
-	movq %rdi, %r12
+	movq %r15, 8(%rbx)
+	movq %r13, 16(%rbx)
+	movq %rdi, %r13
 	movl $24, %edi
 	callq _malloc
-	movq %r12, %rdi
-	movq %rax, %r12
-	movq $1, (%r12)
-	leaq _str199(%rip), %rax
-	movq %rax, 8(%r12)
-	movq %rbx, 16(%r12)
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq $1, (%r13)
+	leaq _str311(%rip), %rax
+	movq %rax, 8(%r13)
+	movq %rbx, 16(%r13)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq _str203(%rip), %rax
+	leaq _str315(%rip), %rax
 	movq %rax, 8(%rbx)
-	movq %r12, 16(%rbx)
-	movq %rdi, %r12
+	movq %r13, 16(%rbx)
+	movq %rdi, %r13
 	movl $24, %edi
 	callq _malloc
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str207(%rip), %rax
+	leaq _str319(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
 	movq %rdi, %rbx
-	leaq _str192(%rip), %rdi
+	leaq _str304(%rip), %rdi
 	callq _donna_shell_exec
 	movq %rbx, %rdi
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %rbx, %rdi
-	movq %rax, %r12
-	movq $1, (%r12)
-	movq %r14, 8(%r12)
+	movq %rax, %r13
+	movq $1, (%r13)
+	movq %r14, 8(%r13)
 	leaq _donna_nil(%rip), %rax
-	movq %rax, 16(%r12)
+	movq %rax, 16(%r13)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq _str216(%rip), %rax
+	leaq _str328(%rip), %rax
 	movq %rax, 8(%rbx)
-	movq %r12, 16(%rbx)
-	movq %rdi, %r12
+	movq %r13, 16(%rbx)
+	movq %rdi, %r13
 	movl $24, %edi
 	callq _malloc
-	movq %r12, %rdi
-	movq %rax, %r12
-	movq $1, (%r12)
-	movq %r15, 8(%r12)
-	movq %rbx, 16(%r12)
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq $1, (%r13)
+	movq %r12, 8(%r13)
+	movq %rbx, 16(%r13)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
@@ -1288,51 +1571,69 @@ Lbb44:
 	movq %rax, %rsi
 	movq -16(%rbp), %rbx
 	movq $1, (%rsi)
-	leaq _str223(%rip), %rax
+	leaq _str335(%rip), %rax
 	movq %rax, 8(%rsi)
-	movq %r12, 16(%rsi)
-	movq %rdi, %r12
-	leaq _str212(%rip), %rdi
+	movq %r13, 16(%rsi)
+	movq %rdi, %r13
+	leaq _str324(%rip), %rdi
 	callq _donna_shell_exec
 	movq %r15, %rsi
-	movq %r12, %rdi
+	movq %r13, %rdi
 	movq %rsi, %r15
 	movq %r14, %rsi
-	movq %rdi, %r12
-	movq %r15, %rdi
+	movq %rdi, %r13
+	movq %r12, %rdi
 	callq _builder_lock_write_cached_rev
+	movq %r13, %rdi
+	movq %rdi, %r13
+	movl $24, %edi
+	callq _malloc
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq $0, (%r13)
+	movq %rdi, 8(%r13)
+	movq %r12, 16(%r13)
+	movq %rdi, %r12
+	movl $32, %edi
+	callq _malloc
+	movq %r12, %rdi
+	movq %rax, %r12
+	movq $0, (%r12)
+	movq %rdi, 8(%r12)
+	movq %r15, 16(%r12)
+	movq %r14, 24(%r12)
+	movl $16, %edi
+	callq _malloc
+	movq %r13, (%rax)
+	movq %r12, 8(%rax)
+	movq %rax, (%rbx)
+	jmp Lbb61
+Lbb59:
+	movq %rsi, %r15
+	movq %rdi, %r13
+	movl $24, %edi
+	callq _malloc
+	movq %r13, %rdi
+	movq %rax, %r13
+	movq $0, (%r13)
+	movq %rdi, 8(%r13)
+	movq %r12, 16(%r13)
+	movq %rdi, %r12
+	movl $32, %edi
+	callq _malloc
 	movq %r15, %rsi
 	movq %r12, %rdi
-	movq %rdi, %r12
-	callq _builder_dependencies_Dep
-	movq %r14, %rdx
-	movq %r13, %rsi
-	movq %r12, %rdi
-	movq %rax, %r13
-	movq %rdx, %r14
-	callq _builder_lock_LockedDep
 	movq %rax, %r12
+	movq $0, (%r12)
+	movq %rdi, 8(%r12)
+	movq %rsi, 16(%r12)
+	movq %r14, 24(%r12)
 	movl $16, %edi
 	callq _malloc
 	movq %r13, (%rax)
 	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp Lbb48
-Lbb47:
-	movq %rdi, %r12
-	callq _builder_dependencies_Dep
-	movq %r14, %rdx
-	movq %r13, %rsi
-	movq %r12, %rdi
-	movq %rax, %r13
-	callq _builder_lock_LockedDep
-	movq %rax, %r12
-	movl $16, %edi
-	callq _malloc
-	movq %r13, (%rax)
-	movq %r12, 8(%rax)
-	movq %rax, (%rbx)
-Lbb48:
+Lbb61:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -1356,7 +1657,7 @@ _builder_dependencies_pick_ref:
 	pushq %r13
 	movq %rdi, %rbx
 	movq %rsi, %rdi
-	leaq _str262(%rip), %rsi
+	leaq _str389(%rip), %rsi
 	movq %rdi, %r12
 	callq _builder_dependencies_opt_string
 	movq %r12, %rdi
@@ -1367,8 +1668,8 @@ _builder_dependencies_pick_ref:
 	movq %r13, %rsi
 	movq %r12, %rdi
 	cmpq $0, %rax
-	jz Lbb56
-	leaq _str271(%rip), %rsi
+	jz Lbb69
+	leaq _str398(%rip), %rsi
 	movq %rdi, %rbx
 	callq _builder_dependencies_opt_string
 	movq %rbx, %rdi
@@ -1382,8 +1683,8 @@ _builder_dependencies_pick_ref:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $0, %rcx
-	jz Lbb55
-	leaq _str279(%rip), %rsi
+	jz Lbb68
+	leaq _str406(%rip), %rsi
 	movq %rdi, %r12
 	callq _builder_dependencies_opt_string
 	movq %r12, %rdi
@@ -1397,23 +1698,23 @@ _builder_dependencies_pick_ref:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $0, %rcx
-	jz Lbb53
-	leaq _str287(%rip), %rsi
+	jz Lbb66
+	leaq _str414(%rip), %rsi
 	callq _builder_dependencies_opt_string
 	movq %rax, (%r12)
-	jmp Lbb54
-Lbb53:
+	jmp Lbb67
+Lbb66:
 	movq %rax, (%r12)
-Lbb54:
+Lbb67:
 	movq %rax, (%rbx)
-	jmp Lbb58
-Lbb55:
+	jmp Lbb71
+Lbb68:
 	movq %rax, (%rbx)
-	jmp Lbb58
-Lbb56:
+	jmp Lbb71
+Lbb69:
 	movq %rbx, %rdi
 	callq _builder_dependencies_resolve_version_range
-Lbb58:
+Lbb71:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r13
@@ -1451,29 +1752,29 @@ _builder_dependencies_resolve_version_range:
 	callq _malloc
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq _str297(%rip), %rax
+	leaq _str424(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %r12, 16(%r13)
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq _str301(%rip), %rax
+	leaq _str428(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %r13, 16(%r12)
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str305(%rip), %rax
+	leaq _str432(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %r12, 16(%rsi)
-	leaq _str293(%rip), %rdi
+	leaq _str420(%rip), %rdi
 	callq _donna_shell_output
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq _str310(%rip), %rsi
+	leaq _str437(%rip), %rsi
 	callq _donna_string_split
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -1500,11 +1801,11 @@ _builder_dependencies_find_best_tag:
 	movq %rdi, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb81
+	jz Lbb94
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r13
 	movq %rsi, %r12
-	leaq _str324(%rip), %rsi
+	leaq _str451(%rip), %rsi
 	movq %rdi, %rbx
 	callq _donna_string_index_of
 	movq %r12, %rsi
@@ -1516,7 +1817,7 @@ _builder_dependencies_find_best_tag:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb79
+	jz Lbb92
 	movq %rsi, %r15
 	movq %r14, %rsi
 	addq $1, %rsi
@@ -1534,7 +1835,7 @@ _builder_dependencies_find_best_tag:
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r14
-	leaq _str339(%rip), %rsi
+	leaq _str466(%rip), %rsi
 	movq %rdi, %r12
 	callq _donna_string_ends_with
 	movq %r14, %rsi
@@ -1542,9 +1843,9 @@ _builder_dependencies_find_best_tag:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rax
-	jz Lbb76
+	jz Lbb89
 	movq %rsi, %r15
-	leaq _str347(%rip), %rsi
+	leaq _str474(%rip), %rsi
 	movq %rdi, %r14
 	callq _donna_string_starts_with
 	movq %r14, %rdi
@@ -1552,7 +1853,7 @@ _builder_dependencies_find_best_tag:
 	movq %rsp, %r14
 	movq %r14, -32(%rbp)
 	cmpq $0, %rax
-	jz Lbb73
+	jz Lbb86
 	movq %rdi, %r14
 	callq _donna_string_length
 	movq %r15, %rsi
@@ -1575,7 +1876,7 @@ _builder_dependencies_find_best_tag:
 	movq %r14, -24(%rbp)
 	movq (%rax), %rcx
 	cmpq $-1, %rcx
-	jz Lbb70
+	jz Lbb83
 	movq %rdi, %r14
 	movq 8(%rax), %rdi
 	movq %rsi, %r15
@@ -1589,46 +1890,46 @@ _builder_dependencies_find_best_tag:
 	subq $16, %rsp
 	movq %rsp, %r15
 	cmpq $0, %rcx
-	jz Lbb68
+	jz Lbb81
 	movq %rax, (%r15)
-	jmp Lbb69
-Lbb68:
+	jmp Lbb82
+Lbb81:
 	callq _builder_dependencies_find_best_tag
 	movq %rax, (%r15)
-Lbb69:
+Lbb82:
 	movq %rax, (%r14)
-	jmp Lbb72
-Lbb70:
+	jmp Lbb85
+Lbb83:
 	movq %r15, %r13
 	callq _builder_dependencies_find_best_tag
 	movq %rax, (%r14)
-Lbb72:
+Lbb85:
 	movq %rax, (%r13)
-	jmp Lbb75
-Lbb73:
+	jmp Lbb88
+Lbb86:
 	movq %r13, %rdi
 	movq %r14, %r13
 	movq %r15, %rsi
 	callq _builder_dependencies_find_best_tag
 	movq %rax, (%r13)
-Lbb75:
+Lbb88:
 	movq %rax, (%r12)
-	jmp Lbb78
-Lbb76:
+	jmp Lbb91
+Lbb89:
 	movq %r13, %rdi
 	callq _builder_dependencies_find_best_tag
 	movq %rax, (%r12)
-Lbb78:
+Lbb91:
 	movq %rax, (%rbx)
-	jmp Lbb82
-Lbb79:
+	jmp Lbb95
+Lbb92:
 	movq %r13, %rdi
 	callq _builder_dependencies_find_best_tag
 	movq %rax, (%rbx)
-	jmp Lbb82
-Lbb81:
-	leaq _str319(%rip), %rax
-Lbb82:
+	jmp Lbb95
+Lbb94:
+	leaq _str446(%rip), %rax
+Lbb95:
 	movq %rbp, %rsp
 	subq $80, %rsp
 	popq %r15
@@ -1659,7 +1960,7 @@ _builder_dependencies_clone_at_ref:
 	callq _donna_string_is_empty
 	movq %rbx, %rdi
 	cmpq $1, %rax
-	jz Lbb90
+	jz Lbb103
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
@@ -1691,7 +1992,7 @@ _builder_dependencies_clone_at_ref:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq _str417(%rip), %rax
+	leaq _str544(%rip), %rax
 	movq %rax, 8(%rbx)
 	movq %r13, 16(%rbx)
 	movq %rdi, %r13
@@ -1700,7 +2001,7 @@ _builder_dependencies_clone_at_ref:
 	movq %r13, %rdi
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq _str421(%rip), %rax
+	leaq _str548(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %rbx, 16(%r13)
 	movq %rdi, %rbx
@@ -1709,7 +2010,7 @@ _builder_dependencies_clone_at_ref:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq _str425(%rip), %rax
+	leaq _str552(%rip), %rax
 	movq %rax, 8(%rbx)
 	movq %r13, 16(%rbx)
 	movq %rdi, %r13
@@ -1718,11 +2019,11 @@ _builder_dependencies_clone_at_ref:
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str429(%rip), %rax
+	leaq _str556(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
 	movq %rdi, %rbx
-	leaq _str407(%rip), %rdi
+	leaq _str534(%rip), %rdi
 	callq _donna_shell_exec
 	movq %r12, %rsi
 	movq %rbx, %rdi
@@ -1732,10 +2033,10 @@ _builder_dependencies_clone_at_ref:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rcx
-	jz Lbb89
+	jz Lbb102
 	movq %rsi, %r13
 	movq %rdi, %r12
-	leaq _str440(%rip), %rdi
+	leaq _str567(%rip), %rdi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _donna_shell_run
@@ -1761,10 +2062,10 @@ _builder_dependencies_clone_at_ref:
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str450(%rip), %rax
+	leaq _str577(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %r12, 16(%rsi)
-	leaq _str443(%rip), %rdi
+	leaq _str570(%rip), %rdi
 	callq _donna_shell_exec
 	cmpq $0, %rax
 	setz %cl
@@ -1772,7 +2073,7 @@ _builder_dependencies_clone_at_ref:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $0, %rcx
-	jz Lbb87
+	jz Lbb100
 	movl $24, %edi
 	callq _malloc
 	movq %r14, %rdx
@@ -1785,7 +2086,7 @@ _builder_dependencies_clone_at_ref:
 	callq _malloc
 	movq %rax, %r14
 	movq $1, (%r14)
-	leaq _str465(%rip), %rax
+	leaq _str592(%rip), %rax
 	movq %rax, 8(%r14)
 	movq %r15, 16(%r14)
 	movl $24, %edi
@@ -1799,22 +2100,22 @@ _builder_dependencies_clone_at_ref:
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str472(%rip), %rax
+	leaq _str599(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %r13, 16(%rsi)
-	leaq _str461(%rip), %rdi
+	leaq _str588(%rip), %rdi
 	callq _donna_shell_exec
 	movq %rax, (%r12)
-	jmp Lbb88
-Lbb87:
+	jmp Lbb101
+Lbb100:
 	movq %rax, (%r12)
-Lbb88:
+Lbb101:
 	movq %rax, (%rbx)
-	jmp Lbb91
-Lbb89:
+	jmp Lbb104
+Lbb102:
 	movq %rax, (%rbx)
-	jmp Lbb91
-Lbb90:
+	jmp Lbb104
+Lbb103:
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
@@ -1837,26 +2138,26 @@ Lbb90:
 	callq _malloc
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq _str394(%rip), %rax
+	leaq _str521(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %rbx, 16(%r12)
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq _str398(%rip), %rax
+	leaq _str525(%rip), %rax
 	movq %rax, 8(%rbx)
 	movq %r12, 16(%rbx)
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str402(%rip), %rax
+	leaq _str529(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
-	leaq _str387(%rip), %rdi
+	leaq _str514(%rip), %rdi
 	callq _donna_shell_exec
-Lbb91:
+Lbb104:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -1891,12 +2192,12 @@ _builder_dependencies_refresh_cached_dep:
 	callq _donna_string_equal
 	movq %r12, %rdi
 	cmpq $0, %rax
-	jz Lbb97
+	jz Lbb110
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %r14
 	movq $1, (%r14)
-	leaq _str492(%rip), %rax
+	leaq _str619(%rip), %rax
 	movq %rax, 8(%r14)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r14)
@@ -1904,28 +2205,28 @@ _builder_dependencies_refresh_cached_dep:
 	callq _malloc
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq _str496(%rip), %rax
+	leaq _str623(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %r14, 16(%r12)
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %r14
 	movq $1, (%r14)
-	leaq _str500(%rip), %rax
+	leaq _str627(%rip), %rax
 	movq %rax, 8(%r14)
 	movq %r12, 16(%r14)
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq _str504(%rip), %rax
+	leaq _str631(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %r14, 16(%r12)
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %r14
 	movq $1, (%r14)
-	leaq _str508(%rip), %rax
+	leaq _str635(%rip), %rax
 	movq %rax, 8(%r14)
 	movq %r12, 16(%r14)
 	movl $24, %edi
@@ -1938,10 +2239,10 @@ _builder_dependencies_refresh_cached_dep:
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str515(%rip), %rax
+	leaq _str642(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %r12, 16(%rsi)
-	leaq _str491(%rip), %rdi
+	leaq _str618(%rip), %rdi
 	callq _donna_shell_exec
 	movq %r13, %rdi
 	callq _donna_string_is_empty
@@ -1949,20 +2250,20 @@ _builder_dependencies_refresh_cached_dep:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz Lbb95
+	jz Lbb108
 	movq %rsi, %r12
 	movq %r13, %rsi
 	movq %r12, %rdi
 	callq _builder_dependencies_checkout_ref
 	movq %rax, (%rbx)
-	jmp Lbb99
-Lbb95:
+	jmp Lbb112
+Lbb108:
 	movq %rsi, %r12
 	movl $24, %edi
 	callq _malloc
 	movq %rax, %r14
 	movq $1, (%r14)
-	leaq _str527(%rip), %rax
+	leaq _str654(%rip), %rax
 	movq %rax, 8(%r14)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r14)
@@ -1970,7 +2271,7 @@ Lbb95:
 	callq _malloc
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq _str531(%rip), %rax
+	leaq _str658(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %r14, 16(%r13)
 	movl $24, %edi
@@ -1984,18 +2285,18 @@ Lbb95:
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str538(%rip), %rax
+	leaq _str665(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %r12, 16(%rsi)
-	leaq _str526(%rip), %rdi
+	leaq _str653(%rip), %rdi
 	callq _donna_shell_exec
 	movq %rax, (%rbx)
-	jmp Lbb99
-Lbb97:
+	jmp Lbb112
+Lbb110:
 	movq %rbx, %rsi
 	movq %rsi, %r12
 	movq %rdi, %rbx
-	leaq _str487(%rip), %rdi
+	leaq _str614(%rip), %rdi
 	callq ___rt_str_concat
 	movq %rax, %rdi
 	callq _donna_shell_run
@@ -2003,7 +2304,7 @@ Lbb97:
 	movq %r12, %rsi
 	movq %rbx, %rdi
 	callq _builder_dependencies_clone_at_ref
-Lbb99:
+Lbb112:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14
@@ -2040,7 +2341,7 @@ _builder_dependencies_checkout_ref:
 	movq %r13, %rdi
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq _str550(%rip), %rax
+	leaq _str677(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %rbx, 16(%r13)
 	movq %rdi, %rbx
@@ -2057,18 +2358,18 @@ _builder_dependencies_checkout_ref:
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str557(%rip), %rax
+	leaq _str684(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
 	movq %rdi, %rbx
-	leaq _str546(%rip), %rdi
+	leaq _str673(%rip), %rdi
 	callq _donna_shell_exec
 	movq %rbx, %rdi
 	cmpq $0, %rax
 	setz %cl
 	movzbq %cl, %rcx
 	cmpq $1, %rcx
-	jz Lbb102
+	jz Lbb115
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq _malloc
@@ -2084,7 +2385,7 @@ _builder_dependencies_checkout_ref:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq _str572(%rip), %rax
+	leaq _str699(%rip), %rax
 	movq %rax, 8(%rbx)
 	movq %r13, 16(%rbx)
 	movq %rdi, %r13
@@ -2093,7 +2394,7 @@ _builder_dependencies_checkout_ref:
 	movq %r13, %rdi
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq _str576(%rip), %rax
+	leaq _str703(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %rbx, 16(%r13)
 	movq %rdi, %rbx
@@ -2110,11 +2411,11 @@ _builder_dependencies_checkout_ref:
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str583(%rip), %rax
+	leaq _str710(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
 	movq %rdi, %rbx
-	leaq _str568(%rip), %rdi
+	leaq _str695(%rip), %rdi
 	callq _donna_shell_exec
 	movq %rbx, %rdi
 	movq %rdi, %rbx
@@ -2133,7 +2434,7 @@ _builder_dependencies_checkout_ref:
 	movq %r12, %rdi
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq _str592(%rip), %rax
+	leaq _str719(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %rbx, 16(%r12)
 	movq %rdi, %rbx
@@ -2148,12 +2449,12 @@ _builder_dependencies_checkout_ref:
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str599(%rip), %rax
+	leaq _str726(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
-	leaq _str588(%rip), %rdi
+	leaq _str715(%rip), %rdi
 	callq _donna_shell_exec
-Lbb102:
+Lbb115:
 	popq %r13
 	popq %r12
 	popq %rbx
@@ -2175,7 +2476,7 @@ _builder_dependencies_origin_url:
 	movq %rbx, %rdi
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq _str606(%rip), %rax
+	leaq _str733(%rip), %rax
 	movq %rax, 8(%r12)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%r12)
@@ -2185,7 +2486,7 @@ _builder_dependencies_origin_url:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq _str610(%rip), %rax
+	leaq _str737(%rip), %rax
 	movq %rax, 8(%rbx)
 	movq %r12, 16(%rbx)
 	movq %rdi, %r12
@@ -2194,7 +2495,7 @@ _builder_dependencies_origin_url:
 	movq %r12, %rdi
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq _str614(%rip), %rax
+	leaq _str741(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %rbx, 16(%r12)
 	movq %rdi, %rbx
@@ -2209,10 +2510,10 @@ _builder_dependencies_origin_url:
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str621(%rip), %rax
+	leaq _str748(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
-	leaq _str605(%rip), %rdi
+	leaq _str732(%rip), %rdi
 	callq _donna_shell_output
 	movq %rax, %rdi
 	callq _donna_string_trim
@@ -2228,13 +2529,13 @@ _builder_dependencies_git_cache_dir:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq _str627(%rip), %rdi
+	leaq _str754(%rip), %rdi
 	callq _donna_shell_getenv
 	movq %rax, %rdi
-	leaq _str629(%rip), %rsi
+	leaq _str756(%rip), %rsi
 	callq _donna_files_join
 	movq %rax, %rdi
-	leaq _str631(%rip), %rsi
+	leaq _str758(%rip), %rsi
 	callq _donna_files_join
 	leave
 	ret
@@ -2254,7 +2555,7 @@ _builder_dependencies_head_sha:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq $1, (%rbx)
-	leaq _str634(%rip), %rax
+	leaq _str761(%rip), %rax
 	movq %rax, 8(%rbx)
 	leaq _donna_nil(%rip), %rax
 	movq %rax, 16(%rbx)
@@ -2264,7 +2565,7 @@ _builder_dependencies_head_sha:
 	movq %r12, %rdi
 	movq %rax, %r12
 	movq $1, (%r12)
-	leaq _str638(%rip), %rax
+	leaq _str765(%rip), %rax
 	movq %rax, 8(%r12)
 	movq %rbx, 16(%r12)
 	movq %rdi, %rbx
@@ -2279,10 +2580,10 @@ _builder_dependencies_head_sha:
 	callq _malloc
 	movq %rax, %rsi
 	movq $1, (%rsi)
-	leaq _str645(%rip), %rax
+	leaq _str772(%rip), %rax
 	movq %rax, 8(%rsi)
 	movq %rbx, 16(%rsi)
-	leaq _str633(%rip), %rdi
+	leaq _str760(%rip), %rdi
 	callq _donna_shell_output
 	movq %rax, %rdi
 	callq _donna_string_trim
@@ -2301,12 +2602,12 @@ _builder_dependencies_opt_string:
 	callq _parsetoml_parsetoml_get_string
 	movq (%rax), %rcx
 	cmpq $1, %rcx
-	jz Lbb111
+	jz Lbb124
 	movq 8(%rax), %rax
-	jmp Lbb112
-Lbb111:
-	leaq _str660(%rip), %rax
-Lbb112:
+	jmp Lbb125
+Lbb124:
+	leaq _str787(%rip), %rax
+Lbb125:
 	leave
 	ret
 /* end function builder_dependencies_opt_string */

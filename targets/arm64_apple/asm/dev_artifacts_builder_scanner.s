@@ -18,175 +18,134 @@ _str25:
 
 .data
 .balign 8
-_str35:
+_str36:
 	.ascii "invalid donna.toml: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str40:
+_str42:
 	.ascii "name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str48:
+_str50:
 	.ascii "donna.toml is missing required field `name`"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str51:
+_str54:
 	.ascii "src"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str53:
+_str56:
 	.ascii "build"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str88:
+_str95:
 	.ascii "bin"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str91:
+_str98:
 	.ascii "dev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str94:
+_str101:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str97:
+_str104:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str102:
+_str109:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str105:
+_str112:
 	.ascii "test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str261:
+_str268:
 	.ascii "donna.toml"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str283:
+_str290:
 	.ascii "name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str285:
+_str292:
 	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str287:
+_str294:
 	.ascii "description"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str289:
+_str296:
 	.ascii "authors"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str292:
+_str299:
 	.ascii "homepage"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str299:
+_str314:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str300:
+_str315:
 	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str301:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_donna_nil:
-	.quad 0
-/* end data */
-
-.data
-.balign 8
-_str302:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str303:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str304:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str306:
-	.ascii "licences"
 	.byte 0
 /* end data */
 
@@ -199,7 +158,41 @@ _str316:
 
 .data
 .balign 8
-_str325:
+_donna_nil:
+	.quad 0
+/* end data */
+
+.data
+.balign 8
+_str317:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str318:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str319:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str329:
+	.ascii "licences"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str339:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -213,175 +206,182 @@ _str348:
 
 .data
 .balign 8
-_str357:
-	.ascii "licence"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str360:
-	.ascii "repository"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str370:
-	.ascii "repository"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str374:
-	.ascii "type"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str376:
-	.ascii "user"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str378:
-	.ascii "repo"
+_str371:
+	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str380:
-	.ascii "github"
+	.ascii "licence"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str395:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str396:
-	.ascii "https://github.com/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str398:
-	.ascii "/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str402:
+_str383:
 	.ascii "repository"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str408:
+_str393:
+	.ascii "repository"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str397:
+	.ascii "type"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str399:
+	.ascii "user"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str401:
+	.ascii "repo"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str403:
+	.ascii "github"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str418:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str419:
 	.ascii "https://github.com/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str420:
+_str421:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str423:
+_str425:
+	.ascii "repository"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str431:
+	.ascii "https://github.com/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str443:
+	.ascii "/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str446:
 	.ascii "git@github.com:"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str435:
+_str458:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str484:
+_str507:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str490:
+_str514:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str501:
+_str525:
 	.ascii ".git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str512:
+_str536:
 	.ascii "links"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str555:
+_str579:
 	.ascii "title"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str565:
+_str589:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str567:
+_str591:
 	.ascii "href"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str577:
+_str601:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str598:
+_str622:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str628:
+_str653:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -538,12 +538,14 @@ _builder_scanner_ProjectMeta:
 .globl _builder_scanner_scan
 _builder_scanner_scan:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
 	mov	x21, x0
 	adrp	x1, _str17@page
 	add	x1, x1, _str17@pageoff
@@ -567,8 +569,8 @@ _builder_scanner_scan:
 	cmp	x1, #1
 	beq	L14
 	bl	_parsetoml_parsetoml_unwrap_table
-	adrp	x1, _str40@page
-	add	x1, x1, _str40@pageoff
+	adrp	x1, _str42@page
+	add	x1, x1, _str42@pageoff
 	bl	_parsetoml_parsetoml_get_string
 	mov	x20, x0
 	bl	_parsetoml_parsetoml_is_err
@@ -580,30 +582,51 @@ _builder_scanner_scan:
 	cmp	x1, #1
 	beq	L12
 	bl	_parsetoml_parsetoml_unwrap_string
-	mov	x17, x0
+	mov	x24, x0
 	mov	x0, x21
-	mov	x21, x17
-	adrp	x1, _str51@page
-	add	x1, x1, _str51@pageoff
+	adrp	x1, _str54@page
+	add	x1, x1, _str54@pageoff
+	mov	x21, x0
+	bl	_donna_files_join
+	mov	x23, x0
+	mov	x0, x21
+	adrp	x1, _str56@page
+	add	x1, x1, _str56@pageoff
+	bl	_donna_files_join
 	mov	x22, x0
-	bl	_donna_files_join
-	mov	x1, x0
-	mov	x0, x22
-	mov	x22, x1
-	adrp	x1, _str53@page
-	add	x1, x1, _str53@pageoff
-	bl	_donna_files_join
-	mov	x1, x22
-	mov	x2, x0
-	mov	x0, x21
-	bl	_builder_scanner_Project
-	bl	_builder_scanner_ScanOk
+	mov	x0, #32
+	bl	_malloc
+	mov	x21, x0
+	mov	x0, #0
+	str	x0, [x21]
+	mov	x0, #8
+	add	x0, x21, x0
+	str	x24, [x0]
+	mov	x0, #16
+	add	x0, x21, x0
+	str	x23, [x0]
+	mov	x0, #24
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
 	str	x0, [x20]
 	b	L13
 L12:
-	adrp	x0, _str48@page
-	add	x0, x0, _str48@pageoff
-	bl	_builder_scanner_ScanErr
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, _str50@page
+	add	x1, x1, _str50@pageoff
+	str	x1, [x2]
 	str	x0, [x20]
 L13:
 	str	x0, [x19]
@@ -611,23 +634,38 @@ L13:
 L14:
 	bl	_parsetoml_parsetoml_err_msg
 	mov	x1, x0
-	adrp	x0, _str35@page
-	add	x0, x0, _str35@pageoff
+	adrp	x0, _str36@page
+	add	x0, x0, _str36@pageoff
 	bl	___rt_str_concat
-	bl	_builder_scanner_ScanErr
+	mov	x20, x0
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L16
 L15:
-	adrp	x0, _str25@page
-	add	x0, x0, _str25@pageoff
-	bl	_builder_scanner_ScanErr
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, _str25@page
+	add	x1, x1, _str25@pageoff
+	str	x1, [x2]
 L16:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 /* end function builder_scanner_scan */
 
@@ -681,8 +719,8 @@ _builder_scanner_project_bin_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	_builder_scanner_project_build_dir
-	adrp	x1, _str88@page
-	add	x1, x1, _str88@pageoff
+	adrp	x1, _str95@page
+	add	x1, x1, _str95@pageoff
 	bl	_donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -696,8 +734,8 @@ _builder_scanner_project_dev_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	_builder_scanner_project_build_dir
-	adrp	x1, _str91@page
-	add	x1, x1, _str91@pageoff
+	adrp	x1, _str98@page
+	add	x1, x1, _str98@pageoff
 	bl	_donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -711,8 +749,8 @@ _builder_scanner_project_dev_artifacts_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	_builder_scanner_project_dev_dir
-	adrp	x1, _str94@page
-	add	x1, x1, _str94@pageoff
+	adrp	x1, _str101@page
+	add	x1, x1, _str101@pageoff
 	bl	_donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -726,8 +764,8 @@ _builder_scanner_project_packages_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	_builder_scanner_project_build_dir
-	adrp	x1, _str97@page
-	add	x1, x1, _str97@pageoff
+	adrp	x1, _str104@page
+	add	x1, x1, _str104@pageoff
 	bl	_donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -758,8 +796,8 @@ _builder_scanner_project_package_artifacts_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	_builder_scanner_project_package_dir
-	adrp	x1, _str102@page
-	add	x1, x1, _str102@pageoff
+	adrp	x1, _str109@page
+	add	x1, x1, _str109@pageoff
 	bl	_donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -773,8 +811,8 @@ _builder_scanner_project_test_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	_builder_scanner_project_build_dir
-	adrp	x1, _str105@page
-	add	x1, x1, _str105@pageoff
+	adrp	x1, _str112@page
+	add	x1, x1, _str112@pageoff
 	bl	_donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -910,18 +948,18 @@ _builder_scanner_meta_links:
 .globl _builder_scanner_scan_meta
 _builder_scanner_scan_meta:
 	hint	#34
-	stp	x29, x30, [sp, -80]!
+	stp	x29, x30, [sp, -96]!
 	mov	x29, sp
-	str	x19, [x29, 72]
-	str	x20, [x29, 64]
-	str	x21, [x29, 56]
-	str	x22, [x29, 48]
-	str	x23, [x29, 40]
-	str	x24, [x29, 32]
-	str	x25, [x29, 24]
-	str	x26, [x29, 16]
-	adrp	x1, _str261@page
-	add	x1, x1, _str261@pageoff
+	str	x19, [x29, 88]
+	str	x20, [x29, 80]
+	str	x21, [x29, 72]
+	str	x22, [x29, 64]
+	str	x23, [x29, 56]
+	str	x24, [x29, 48]
+	str	x25, [x29, 40]
+	str	x26, [x29, 32]
+	adrp	x1, _str268@page
+	add	x1, x1, _str268@pageoff
 	bl	_donna_files_join
 	mov	x19, x0
 	bl	_donna_files_exists
@@ -940,62 +978,76 @@ _builder_scanner_scan_meta:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, _str283@page
-	add	x1, x1, _str283@pageoff
+	adrp	x1, _str290@page
+	add	x1, x1, _str290@pageoff
 	mov	x20, x0
 	bl	_builder_scanner_opt_str
+	mov	x26, x0
+	mov	x0, x20
+	adrp	x1, _str292@page
+	add	x1, x1, _str292@pageoff
+	mov	x20, x0
+	bl	_builder_scanner_opt_str
+	mov	x25, x0
+	mov	x0, x20
+	adrp	x1, _str294@page
+	add	x1, x1, _str294@pageoff
+	mov	x20, x0
+	bl	_builder_scanner_opt_str
+	mov	x24, x0
+	mov	x0, x20
+	adrp	x1, _str296@page
+	add	x1, x1, _str296@pageoff
+	mov	x20, x0
+	bl	_builder_scanner_str_array
+	mov	x23, x0
+	mov	x0, x20
+	mov	x20, x0
+	bl	_builder_scanner_parse_licence
+	mov	x22, x0
+	mov	x0, x20
+	adrp	x1, _str299@page
+	add	x1, x1, _str299@pageoff
+	mov	x20, x0
+	bl	_builder_scanner_opt_str
+	mov	x21, x0
+	mov	x0, x20
+	mov	x20, x0
+	bl	_builder_scanner_parse_repository
 	mov	x17, x0
 	mov	x0, x20
 	mov	x20, x17
-	adrp	x1, _str285@page
-	add	x1, x1, _str285@pageoff
-	mov	x21, x0
-	bl	_builder_scanner_opt_str
-	mov	x1, x0
-	mov	x0, x21
-	mov	x22, x1
-	adrp	x1, _str287@page
-	add	x1, x1, _str287@pageoff
-	mov	x21, x0
-	bl	_builder_scanner_opt_str
-	mov	x1, x22
-	mov	x22, x0
-	mov	x0, x21
-	mov	x24, x1
-	adrp	x1, _str289@page
-	add	x1, x1, _str289@pageoff
-	mov	x21, x0
-	bl	_builder_scanner_str_array
-	mov	x23, x0
-	mov	x0, x21
-	mov	x21, x0
-	bl	_builder_scanner_parse_licence
-	mov	x1, x24
-	mov	x24, x0
-	mov	x0, x21
-	mov	x21, x1
-	adrp	x1, _str292@page
-	add	x1, x1, _str292@pageoff
-	mov	x25, x0
-	bl	_builder_scanner_opt_str
-	mov	x17, x0
-	mov	x0, x25
-	mov	x25, x17
-	mov	x26, x0
-	bl	_builder_scanner_parse_repository
-	mov	x17, x0
-	mov	x0, x26
-	mov	x26, x17
 	bl	_builder_scanner_parse_links
-	mov	x6, x26
-	mov	x5, x25
-	mov	x4, x24
-	mov	x3, x23
-	mov	x2, x22
-	mov	x1, x21
-	mov	x7, x0
-	mov	x0, x20
-	bl	_builder_scanner_ProjectMeta
+	str	x0, [x29, 16]
+	mov	x0, #72
+	bl	_malloc
+	ldr	x1, [x29, 16]
+	mov	x2, #0
+	str	x2, [x0]
+	mov	x2, #8
+	add	x2, x0, x2
+	str	x26, [x2]
+	mov	x2, #16
+	add	x2, x0, x2
+	str	x25, [x2]
+	mov	x2, #24
+	add	x2, x0, x2
+	str	x24, [x2]
+	mov	x2, #32
+	add	x2, x0, x2
+	str	x23, [x2]
+	mov	x2, #40
+	add	x2, x0, x2
+	str	x22, [x2]
+	mov	x2, #48
+	add	x2, x0, x2
+	str	x21, [x2]
+	mov	x2, #56
+	add	x2, x0, x2
+	str	x20, [x2]
+	mov	x2, #64
+	add	x2, x0, x2
+	str	x1, [x2]
 	str	x0, [x19]
 	b	L60
 L58:
@@ -1005,16 +1057,16 @@ L58:
 L59:
 	bl	_builder_scanner_empty_meta
 L60:
-	ldr	x19, [x29, 72]
-	ldr	x20, [x29, 64]
-	ldr	x21, [x29, 56]
-	ldr	x22, [x29, 48]
-	ldr	x23, [x29, 40]
-	ldr	x24, [x29, 32]
-	ldr	x25, [x29, 24]
-	ldr	x26, [x29, 16]
+	ldr	x19, [x29, 88]
+	ldr	x20, [x29, 80]
+	ldr	x21, [x29, 72]
+	ldr	x22, [x29, 64]
+	ldr	x23, [x29, 56]
+	ldr	x24, [x29, 48]
+	ldr	x25, [x29, 40]
+	ldr	x26, [x29, 32]
 	mov sp, x29
-	ldp	x29, x30, [sp], 80
+	ldp	x29, x30, [sp], 96
 	ret
 /* end function builder_scanner_scan_meta */
 
@@ -1024,23 +1076,50 @@ _builder_scanner_empty_meta:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x7, _donna_nil@page
-	add	x7, x7, _donna_nil@pageoff
-	adrp	x6, _str304@page
-	add	x6, x6, _str304@pageoff
-	adrp	x5, _str303@page
-	add	x5, x5, _str303@pageoff
-	adrp	x4, _str302@page
-	add	x4, x4, _str302@pageoff
-	adrp	x3, _donna_nil@page
-	add	x3, x3, _donna_nil@pageoff
-	adrp	x2, _str301@page
-	add	x2, x2, _str301@pageoff
-	adrp	x1, _str300@page
-	add	x1, x1, _str300@pageoff
-	adrp	x0, _str299@page
-	add	x0, x0, _str299@pageoff
-	bl	_builder_scanner_ProjectMeta
+	mov	x0, #72
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, _str314@page
+	add	x1, x1, _str314@pageoff
+	str	x1, [x2]
+	mov	x1, #16
+	add	x2, x0, x1
+	adrp	x1, _str315@page
+	add	x1, x1, _str315@pageoff
+	str	x1, [x2]
+	mov	x1, #24
+	add	x2, x0, x1
+	adrp	x1, _str316@page
+	add	x1, x1, _str316@pageoff
+	str	x1, [x2]
+	mov	x1, #32
+	add	x2, x0, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
+	mov	x1, #40
+	add	x2, x0, x1
+	adrp	x1, _str317@page
+	add	x1, x1, _str317@pageoff
+	str	x1, [x2]
+	mov	x1, #48
+	add	x2, x0, x1
+	adrp	x1, _str318@page
+	add	x1, x1, _str318@pageoff
+	str	x1, [x2]
+	mov	x1, #56
+	add	x2, x0, x1
+	adrp	x1, _str319@page
+	add	x1, x1, _str319@pageoff
+	str	x1, [x2]
+	mov	x1, #64
+	add	x2, x0, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function builder_scanner_empty_meta */
@@ -1053,8 +1132,8 @@ _builder_scanner_parse_licence:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	str	x20, [x29, 16]
-	adrp	x1, _str306@page
-	add	x1, x1, _str306@pageoff
+	adrp	x1, _str329@page
+	add	x1, x1, _str329@pageoff
 	mov	x19, x0
 	bl	_parsetoml_parsetoml_get_array
 	mov	x1, x0
@@ -1093,12 +1172,12 @@ L68:
 L69:
 	cmp	w3, #0
 	bne	L72
-	adrp	x2, _str348@page
-	add	x2, x2, _str348@pageoff
+	adrp	x2, _str371@page
+	add	x2, x2, _str371@pageoff
 	str	x2, [x1]
 	mov	x20, x0
-	adrp	x19, _str348@page
-	add	x19, x19, _str348@pageoff
+	adrp	x19, _str371@page
+	add	x19, x19, _str371@pageoff
 	b	L76
 L72:
 	mov	x3, #8
@@ -1112,18 +1191,18 @@ L72:
 	b	L76
 L74:
 	mov	x20, x0
-	adrp	x0, _str325@page
-	add	x0, x0, _str325@pageoff
+	adrp	x0, _str348@page
+	add	x0, x0, _str348@pageoff
 	str	x0, [x1]
-	adrp	x19, _str325@page
-	add	x19, x19, _str325@pageoff
+	adrp	x19, _str348@page
+	add	x19, x19, _str348@pageoff
 L76:
 	mov	x0, x19
 	b	L79
 L77:
 	mov	x20, x0
-	adrp	x0, _str316@page
-	add	x0, x0, _str316@pageoff
+	adrp	x0, _str339@page
+	add	x0, x0, _str339@pageoff
 L79:
 	mov	x19, x0
 	bl	_donna_string_is_empty
@@ -1135,8 +1214,8 @@ L79:
 	cmp	x1, #0
 	beq	L82
 	mov	x0, x20
-	adrp	x1, _str357@page
-	add	x1, x1, _str357@pageoff
+	adrp	x1, _str380@page
+	add	x1, x1, _str380@pageoff
 	bl	_builder_scanner_opt_str
 	str	x0, [x19]
 	b	L83
@@ -1160,8 +1239,8 @@ _builder_scanner_parse_repository:
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
 	str	x22, [x29, 16]
-	adrp	x1, _str360@page
-	add	x1, x1, _str360@pageoff
+	adrp	x1, _str383@page
+	add	x1, x1, _str383@pageoff
 	mov	x19, x0
 	bl	_parsetoml_parsetoml_get_table
 	ldr	x1, [x0]
@@ -1170,27 +1249,27 @@ _builder_scanner_parse_repository:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, _str374@page
-	add	x1, x1, _str374@pageoff
+	adrp	x1, _str397@page
+	add	x1, x1, _str397@pageoff
 	mov	x20, x0
 	bl	_builder_scanner_opt_str
 	mov	x17, x0
 	mov	x0, x20
 	mov	x20, x17
-	adrp	x1, _str376@page
-	add	x1, x1, _str376@pageoff
+	adrp	x1, _str399@page
+	add	x1, x1, _str399@pageoff
 	mov	x21, x0
 	bl	_builder_scanner_opt_str
 	mov	x22, x0
 	mov	x0, x21
-	adrp	x1, _str378@page
-	add	x1, x1, _str378@pageoff
+	adrp	x1, _str401@page
+	add	x1, x1, _str401@pageoff
 	bl	_builder_scanner_opt_str
 	mov	x1, x0
 	mov	x0, x20
 	mov	x21, x1
-	adrp	x1, _str380@page
-	add	x1, x1, _str380@pageoff
+	adrp	x1, _str403@page
+	add	x1, x1, _str403@pageoff
 	bl	_donna_string_equal
 	mov	x1, x0
 	mov	x0, x19
@@ -1199,8 +1278,8 @@ _builder_scanner_parse_repository:
 	mov	x19, sp
 	cmp	x1, #1
 	beq	L87
-	adrp	x1, _str402@page
-	add	x1, x1, _str402@pageoff
+	adrp	x1, _str425@page
+	add	x1, x1, _str425@pageoff
 	bl	_builder_scanner_opt_str
 	str	x0, [x19]
 	b	L94
@@ -1217,31 +1296,31 @@ L87:
 	mov	x20, sp
 	cmp	x0, #1
 	beq	L89
-	adrp	x0, _str396@page
-	add	x0, x0, _str396@pageoff
+	adrp	x0, _str419@page
+	add	x0, x0, _str419@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, _str398@page
-	add	x1, x1, _str398@pageoff
+	adrp	x1, _str421@page
+	add	x1, x1, _str421@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	bl	___rt_str_concat
 	str	x0, [x20]
 	b	L91
 L89:
-	adrp	x0, _str395@page
-	add	x0, x0, _str395@pageoff
+	adrp	x0, _str418@page
+	add	x0, x0, _str418@pageoff
 	str	x0, [x20]
-	adrp	x0, _str395@page
-	add	x0, x0, _str395@pageoff
+	adrp	x0, _str418@page
+	add	x0, x0, _str418@pageoff
 L91:
 	str	x0, [x19]
 	b	L94
 L92:
 	mov	x0, x19
-	adrp	x1, _str370@page
-	add	x1, x1, _str370@pageoff
+	adrp	x1, _str393@page
+	add	x1, x1, _str393@pageoff
 	bl	_builder_scanner_opt_str
 L94:
 	ldr	x19, [x29, 40]
@@ -1265,16 +1344,16 @@ _builder_scanner_github_owner_repo:
 	str	x22, [x29, 16]
 	bl	_builder_scanner_strip_trailing_slash
 	bl	_builder_scanner_strip_git_suffix
-	adrp	x1, _str408@page
-	add	x1, x1, _str408@pageoff
+	adrp	x1, _str431@page
+	add	x1, x1, _str431@pageoff
 	mov	x19, x0
 	bl	_donna_string_starts_with
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #1
 	beq	L100
-	adrp	x1, _str423@page
-	add	x1, x1, _str423@pageoff
+	adrp	x1, _str446@page
+	add	x1, x1, _str446@pageoff
 	mov	x19, x0
 	bl	_donna_string_starts_with
 	mov	x1, x0
@@ -1292,8 +1371,8 @@ _builder_scanner_github_owner_repo:
 	b	L101
 L99:
 	mov	x20, x0
-	adrp	x0, _str423@page
-	add	x0, x0, _str423@pageoff
+	adrp	x0, _str446@page
+	add	x0, x0, _str446@pageoff
 	bl	_donna_string_length
 	mov	x22, x0
 	mov	x0, x20
@@ -1303,24 +1382,24 @@ L99:
 	mov	x0, x20
 	mov	x20, x17
 	mov	x21, x0
-	adrp	x0, _str423@page
-	add	x0, x0, _str423@pageoff
+	adrp	x0, _str446@page
+	add	x0, x0, _str446@pageoff
 	bl	_donna_string_length
 	mov	x1, x22
 	mov	x2, x0
 	mov	x0, x21
 	sub	x2, x20, x2
 	bl	_donna_string_slice
-	adrp	x1, _str435@page
-	add	x1, x1, _str435@pageoff
+	adrp	x1, _str458@page
+	add	x1, x1, _str458@pageoff
 	bl	_donna_string_split
 	bl	_builder_scanner_owner_repo_from_parts
 	str	x0, [x19]
 	b	L101
 L100:
 	mov	x19, x0
-	adrp	x0, _str408@page
-	add	x0, x0, _str408@pageoff
+	adrp	x0, _str431@page
+	add	x0, x0, _str431@pageoff
 	bl	_donna_string_length
 	mov	x21, x0
 	mov	x0, x19
@@ -1330,16 +1409,16 @@ L100:
 	mov	x0, x19
 	mov	x19, x17
 	mov	x20, x0
-	adrp	x0, _str408@page
-	add	x0, x0, _str408@pageoff
+	adrp	x0, _str431@page
+	add	x0, x0, _str431@pageoff
 	bl	_donna_string_length
 	mov	x1, x21
 	mov	x2, x0
 	mov	x0, x20
 	sub	x2, x19, x2
 	bl	_donna_string_slice
-	adrp	x1, _str420@page
-	add	x1, x1, _str420@pageoff
+	adrp	x1, _str443@page
+	add	x1, x1, _str443@pageoff
 	bl	_donna_string_split
 	bl	_builder_scanner_owner_repo_from_parts
 L101:
@@ -1422,12 +1501,19 @@ L112:
 	cmp	x2, #1
 	beq	L114
 	mov	x20, x1
-	adrp	x1, _str484@page
-	add	x1, x1, _str484@pageoff
+	adrp	x1, _str507@page
+	add	x1, x1, _str507@pageoff
 	bl	___rt_str_concat
 	mov	x1, x20
 	bl	___rt_str_concat
-	bl	_donna_option_Some
+	mov	x20, x0
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L116
 L114:
@@ -1452,8 +1538,8 @@ _builder_scanner_strip_trailing_slash:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, _str490@page
-	add	x1, x1, _str490@pageoff
+	adrp	x1, _str514@page
+	add	x1, x1, _str514@pageoff
 	mov	x19, x0
 	bl	_donna_string_ends_with
 	mov	x1, x0
@@ -1481,8 +1567,8 @@ _builder_scanner_strip_git_suffix:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, _str501@page
-	add	x1, x1, _str501@pageoff
+	adrp	x1, _str525@page
+	add	x1, x1, _str525@pageoff
 	mov	x19, x0
 	bl	_donna_string_ends_with
 	mov	x1, x0
@@ -1509,8 +1595,8 @@ _builder_scanner_parse_links:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x1, _str512@page
-	add	x1, x1, _str512@pageoff
+	adrp	x1, _str536@page
+	add	x1, x1, _str536@pageoff
 	bl	_parsetoml_parsetoml_get_array
 	ldr	x1, [x0]
 	cmp	x1, #1
@@ -1586,8 +1672,8 @@ L134:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, _str555@page
-	add	x1, x1, _str555@pageoff
+	adrp	x1, _str579@page
+	add	x1, x1, _str579@pageoff
 	mov	x21, x0
 	bl	_builder_scanner_lookup_pair
 	mov	x2, x0
@@ -1598,11 +1684,11 @@ L134:
 	ldr	x3, [x2]
 	cmp	x3, #0
 	beq	L138
-	adrp	x2, _str565@page
-	add	x2, x2, _str565@pageoff
+	adrp	x2, _str589@page
+	add	x2, x2, _str589@pageoff
 	str	x2, [x1]
-	adrp	x22, _str565@page
-	add	x22, x22, _str565@pageoff
+	adrp	x22, _str589@page
+	add	x22, x22, _str589@pageoff
 	b	L139
 L138:
 	mov	x3, #8
@@ -1610,8 +1696,8 @@ L138:
 	ldr	x22, [x2]
 	str	x22, [x1]
 L139:
-	adrp	x1, _str567@page
-	add	x1, x1, _str567@pageoff
+	adrp	x1, _str591@page
+	add	x1, x1, _str591@pageoff
 	bl	_builder_scanner_lookup_pair
 	mov	x2, x0
 	mov	x0, x20
@@ -1621,11 +1707,11 @@ L139:
 	ldr	x3, [x2]
 	cmp	x3, #0
 	beq	L142
-	adrp	x2, _str577@page
-	add	x2, x2, _str577@pageoff
+	adrp	x2, _str601@page
+	add	x2, x2, _str601@pageoff
 	str	x2, [x1]
-	adrp	x21, _str577@page
-	add	x21, x21, _str577@pageoff
+	adrp	x21, _str601@page
+	add	x21, x21, _str601@pageoff
 	b	L143
 L142:
 	mov	x3, #8
@@ -1710,9 +1796,15 @@ L150:
 	str	x0, [x19]
 	b	L152
 L151:
-	adrp	x0, _str598@page
-	add	x0, x0, _str598@pageoff
-	bl	_parsetoml_parsetoml_TomlString
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, _str622@page
+	add	x1, x1, _str622@pageoff
+	str	x1, [x2]
 L152:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -1732,8 +1824,8 @@ _builder_scanner_opt_str:
 	ldr	x1, [x0]
 	cmp	x1, #0
 	beq	L155
-	adrp	x0, _str628@page
-	add	x0, x0, _str628@pageoff
+	adrp	x0, _str653@page
+	add	x0, x0, _str653@pageoff
 	b	L156
 L155:
 	mov	x1, #8

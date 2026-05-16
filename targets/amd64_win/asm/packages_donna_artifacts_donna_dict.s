@@ -66,63 +66,70 @@ donna_dict_insert:
 	pushq %rsi
 	pushq %rdi
 	movq %r9, %r14
-	movq %r8, %rbx
-	movq %rcx, %rax
-	movq %rdx, %rcx
-	movq %rcx, %rdi
-	movq (%rax), %rcx
-	cmpq $0, %rcx
+	movq %r8, %r13
+	movq (%rcx), %rax
+	cmpq $0, %rax
 	jz Lbb9
-	movq 8(%rax), %rcx
-	movq 16(%rax), %rdx
-	movq 24(%rax), %r13
+	movq 8(%rcx), %r12
+	movq 16(%rcx), %rbx
+	movq 24(%rcx), %rdi
 	subq $32, %rsp
-	movq %rdx, %r12
-	movq %rcx, %rdx
-	movq %rcx, %rsi
-	movq %rdi, %rcx
+	movq %rdx, %rsi
+	movq %r12, %rdx
+	movq %rsi, %rcx
 	callq *%r14
 	movq %r14, %r9
 	movq %r13, %r8
-	movq %r12, %rdx
-	movq %rsi, %rcx
+	movq %rsi, %rdx
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
 	jz Lbb7
 	subq $32, %rsp
-	movq %r8, %r12
-	movq %rbx, %r8
-	movq %rdx, %rbx
-	movq %rdi, %rdx
-	movq %rcx, %rdi
-	movq %r12, %rcx
-	callq donna_dict_insert
-	movq %rbx, %rdx
 	movq %rdi, %rcx
-	movq %rax, %r8
+	callq donna_dict_insert
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq donna_dict_Entry
+	movl $32, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	movq %rdi, 24(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb11
 Lbb7:
-	movq %rbx, %rdx
-	movq %rdi, %rcx
+	movq %r8, %r12
+	movq %rdx, %rbx
 	subq $32, %rsp
-	callq donna_dict_Entry
+	movl $32, %ecx
+	callq malloc
+	movq %r12, %r8
+	movq %rbx, %rdx
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdx, 8(%rax)
+	movq %r8, 16(%rax)
+	movq %rdi, 24(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb11
 Lbb9:
-	movq %rbx, %rdx
-	movq %rdi, %rcx
+	movq %r13, %rdi
+	movq %rdx, %rsi
 	subq $32, %rsp
-	leaq donna_dict_Empty(%rip), %r8
-	callq donna_dict_Entry
+	movl $32, %ecx
+	callq malloc
+	movq %rdi, %r8
+	movq %rsi, %rdx
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdx, 8(%rax)
+	movq %r8, 16(%rax)
+	leaq donna_dict_Empty(%rip), %rcx
+	movq %rcx, 24(%rax)
 Lbb11:
 	movq %rbp, %rsp
 	subq $48, %rsp
@@ -262,40 +269,39 @@ donna_dict_delete:
 	pushq %rsi
 	pushq %rdi
 	movq %r8, %r13
-	movq %rcx, %rax
-	movq (%rax), %rcx
-	cmpq $0, %rcx
+	movq (%rcx), %rax
+	cmpq $0, %rax
 	jz Lbb30
-	movq 8(%rax), %rcx
-	movq 16(%rax), %rbx
-	movq 24(%rax), %rsi
+	movq 8(%rcx), %r12
+	movq 16(%rcx), %rbx
+	movq 24(%rcx), %rsi
 	subq $32, %rsp
-	movq %rdx, %r12
-	movq %rcx, %rdx
-	movq %rcx, %rdi
-	movq %r12, %rcx
-	callq *%r13
-	movq %r13, %r8
+	movq %rdx, %rdi
 	movq %r12, %rdx
 	movq %rdi, %rcx
-	movq %rax, %rdi
+	callq *%r13
+	movq %r13, %r8
+	movq %rdi, %rdx
+	movq %rax, %rcx
 	movq %rsi, %rax
 	subq $-32, %rsp
 	subq $16, %rsp
 	movq %rsp, %rsi
-	cmpq $1, %rdi
+	cmpq $1, %rcx
 	jz Lbb29
 	subq $32, %rsp
-	movq %rcx, %rdi
 	movq %rax, %rcx
 	callq donna_dict_delete
-	movq %rbx, %rdx
-	movq %rdi, %rcx
-	movq %rax, %r8
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq donna_dict_Entry
+	movl $32, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	movq %rdi, 24(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb31
 Lbb29:
@@ -551,29 +557,32 @@ donna_dict_map_values:
 	pushq %rbx
 	pushq %rsi
 	pushq %rdi
-	movq %rdx, %rbx
+	movq %rdx, %rdi
 	movq %rcx, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz Lbb59
-	movq 8(%rax), %rsi
+	movq 8(%rax), %rbx
 	movq 16(%rax), %rcx
-	movq 24(%rax), %rdi
+	movq 24(%rax), %rsi
 	subq $32, %rsp
-	callq *%rbx
-	movq %rbx, %rdx
-	movq %rdi, %rcx
+	callq *%rdi
+	movq %rdi, %rdx
+	movq %rsi, %rcx
 	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq donna_dict_map_values
-	movq %rdi, %rdx
-	movq %rsi, %rcx
-	movq %rax, %r8
+	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq donna_dict_Entry
+	movl $32, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
+	movq %rdi, 16(%rax)
+	movq %rsi, 24(%rax)
 	jmp Lbb60
 Lbb59:
 	leaq donna_dict_Empty(%rip), %rax
@@ -599,16 +608,16 @@ donna_dict_filter:
 	movq (%rcx), %rax
 	cmpq $0, %rax
 	jz Lbb65
-	movq 8(%rcx), %rdi
+	movq 8(%rcx), %r12
 	movq 16(%rcx), %rbx
 	movq 24(%rcx), %rcx
 	subq $32, %rsp
-	movq %rdx, %r12
+	movq %rdx, %rdi
 	movq %rbx, %rdx
 	movq %rcx, %rsi
-	movq %rdi, %rcx
-	callq *%r12
-	movq %r12, %rdx
+	movq %r12, %rcx
+	callq *%rdi
+	movq %rdi, %rdx
 	movq %rsi, %rcx
 	subq $-32, %rsp
 	subq $16, %rsp
@@ -623,13 +632,16 @@ donna_dict_filter:
 Lbb64:
 	subq $32, %rsp
 	callq donna_dict_filter
-	movq %rbx, %rdx
-	movq %rdi, %rcx
-	movq %rax, %r8
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq donna_dict_Entry
+	movl $32, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	movq %rdi, 24(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb66
 Lbb65:
@@ -759,18 +771,18 @@ donna_dict_update:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz Lbb81
-	movq 8(%rax), %rcx
-	movq 16(%rax), %rdi
-	movq 24(%rax), %r12
+	movq 8(%rax), %r12
+	movq 16(%rax), %rcx
+	movq 24(%rax), %rbx
 	subq $32, %rsp
-	movq %rdx, %rbx
-	movq %rcx, %rdx
+	movq %rdx, %rdi
+	movq %r12, %rdx
 	movq %rcx, %rsi
-	movq %rbx, %rcx
+	movq %rdi, %rcx
 	callq *%r14
 	movq %r14, %r9
 	movq %r13, %r8
-	movq %rbx, %rdx
+	movq %rdi, %rdx
 	movq %rsi, %rcx
 	subq $-32, %rsp
 	subq $16, %rsp
@@ -778,31 +790,38 @@ donna_dict_update:
 	cmpq $1, %rax
 	jz Lbb79
 	subq $32, %rsp
-	movq %rcx, %rbx
-	movq %r12, %rcx
-	callq donna_dict_update
+	movq %rcx, %rdi
 	movq %rbx, %rcx
-	movq %rax, %r8
+	callq donna_dict_update
+	movq %rdi, %rcx
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdi, %rdx
-	movq %rcx, %rdi
-	callq donna_dict_Entry
+	movq %rcx, %rbx
+	movl $32, %ecx
+	callq malloc
+	movq %rbx, %rcx
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
+	movq %rcx, 16(%rax)
+	movq %rdi, 24(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb82
 Lbb79:
-	movq %r12, %rbx
-	xchgq %rdi, %rcx
+	movq %rbx, %rdi
 	subq $32, %rsp
 	callq *%r8
-	movq %rbx, %r8
-	movq %rdi, %rcx
-	movq %rax, %rdx
+	movq %rax, %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq donna_dict_Entry
+	movl $32, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	movq %rdi, 24(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb82
 Lbb81:

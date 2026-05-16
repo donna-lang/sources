@@ -10,11 +10,20 @@ ___rt_fmt_ld:
 .globl _donna_int_parse
 _donna_int_parse:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
+	str	x19, [x29, 24]
 	bl	_atoi
-	bl	_donna_option_Some
-	ldp	x29, x30, [sp], 16
+	mov	x19, x0
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
 	ret
 /* end function donna_int_parse */
 

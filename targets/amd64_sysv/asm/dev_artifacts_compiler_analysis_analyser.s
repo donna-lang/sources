@@ -83,7 +83,7 @@ compiler_analysis_analyser_check_unused_fns:
 	movq %rsi, %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb20
+	jz .Lbb21
 	movq 8(%rdi), %r12
 	movq 16(%rdi), %rdi
 	movq %rbx, %rsi
@@ -91,69 +91,80 @@ compiler_analysis_analyser_check_unused_fns:
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq (%r12), %rcx
-	cmpq $1, %rcx
+	movq %rax, %r14
+	movq (%r12), %rax
+	cmpq $1, %rax
 	jz .Lbb19
-	movq 8(%r12), %r14
-	movq %rax, %r15
+	movq 8(%r12), %rcx
 	movq 16(%r12), %rax
-	movq 48(%r12), %rsi
-	movq %rsi, -8(%rbp)
+	movq %rcx, %r15
+	movq 48(%r12), %rcx
+	movq %rcx, -8(%rbp)
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rax
 	jz .Lbb16
 	leaq str68(%rip), %rsi
 	movq %rdi, %r13
-	movq %r14, %rdi
+	movq %r15, %rdi
 	callq donna_string_equal
 	movq %r13, %rdi
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
 	jz .Lbb13
-	movq %r14, %rsi
+	movq %r15, %rsi
 	callq compiler_analysis_scope_contains_name
-	movq %r14, %rdi
-	movq -8(%rbp), %rsi
+	movq %r15, %rcx
+	movq %rcx, %r15
 	subq $16, %rsp
-	movq %rsp, %r14
+	movq %rsp, %rcx
+	movq %rcx, -16(%rbp)
 	cmpq $1, %rax
 	jz .Lbb10
-	callq errors_error_WarnUnusedFunction
-	movq %rax, -16(%rbp)
+	movl $24, %edi
+	callq malloc
+	movq %r15, %rcx
+	movq %rax, %r15
+	movq %r14, %rax
+	movq %rax, %r14
+	movq -8(%rbp), %rax
+	movq $2, (%r15)
+	movq %rcx, 8(%r15)
+	movq %rax, 16(%r15)
 	movl $24, %edi
 	callq malloc
 	movq -16(%rbp), %rcx
 	movq $1, (%rax)
-	movq %rcx, 8(%rax)
-	movq %r15, 16(%rax)
-	movq %rax, (%r14)
+	movq %r15, 8(%rax)
+	movq %r14, 16(%rax)
+	movq %rax, (%rcx)
 	jmp .Lbb12
 .Lbb10:
-	movq %r15, %rax
-	movq %rax, (%r14)
+	movq %r14, %rax
+	movq %rax, (%rcx)
 .Lbb12:
 	movq %rax, (%r13)
 	jmp .Lbb15
 .Lbb13:
-	movq %r15, %rax
+	movq %r14, %rax
 	movq %rax, (%r13)
 .Lbb15:
 	movq %rax, (%r12)
 	jmp .Lbb18
 .Lbb16:
-	movq %r15, %rax
+	movq %r14, %rax
 	movq %rax, (%r12)
 .Lbb18:
 	movq %rax, (%rbx)
-	jmp .Lbb21
+	jmp .Lbb22
 .Lbb19:
+	movq %r14, %rax
 	movq %rax, (%rbx)
-	jmp .Lbb21
-.Lbb20:
-	leaq donna_nil(%rip), %rax
+	jmp .Lbb22
 .Lbb21:
+	leaq donna_nil(%rip), %rax
+.Lbb22:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -197,13 +208,13 @@ compiler_analysis_analyser_fn_refs:
 	movq %rsp, %rbp
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb26
+	jz .Lbb27
 	leaq donna_nil(%rip), %rax
-	jmp .Lbb27
-.Lbb26:
+	jmp .Lbb28
+.Lbb27:
 	movq 40(%rdi), %rdi
 	callq compiler_analysis_scope_refs_in_expr
-.Lbb27:
+.Lbb28:
 	leave
 	ret
 .type compiler_analysis_analyser_fn_refs, @function
@@ -216,15 +227,17 @@ compiler_analysis_analyser_check_imports:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
+	pushq %r15
 	movq %rsi, %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb34
-	movq 8(%rdi), %r14
+	jz .Lbb35
+	movq 8(%rdi), %r12
 	movq 16(%rdi), %rdi
 	movq %rbx, %rsi
 	callq compiler_analysis_analyser_check_imports
@@ -232,37 +245,39 @@ compiler_analysis_analyser_check_imports:
 	movq %rax, %r13
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq 16(%r14), %r12
-	movq 24(%r14), %rsi
-	movq %rsi, %r14
-	movq %r12, %rsi
-	callq compiler_analysis_scope_contains_name
+	movq 16(%r12), %r14
+	movq 24(%r12), %r15
 	movq %r14, %rsi
-	movq %r12, %rdi
+	callq compiler_analysis_scope_contains_name
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rax
-	jz .Lbb31
-	callq errors_error_WarnUnusedImport
-	movq %rax, %r14
+	jz .Lbb32
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r14
+	movq $3, (%r14)
+	movq %rax, 8(%r14)
+	movq %r15, 16(%r14)
 	movl $24, %edi
 	callq malloc
 	movq $1, (%rax)
 	movq %r14, 8(%rax)
 	movq %r13, 16(%rax)
 	movq %rax, (%r12)
-	jmp .Lbb33
-.Lbb31:
+	jmp .Lbb34
+.Lbb32:
 	movq %r13, %rax
 	movq %rax, (%r12)
-.Lbb33:
-	movq %rax, (%rbx)
-	jmp .Lbb35
 .Lbb34:
-	leaq donna_nil(%rip), %rax
+	movq %rax, (%rbx)
+	jmp .Lbb36
 .Lbb35:
+	leaq donna_nil(%rip), %rax
+.Lbb36:
 	movq %rbp, %rsp
-	subq $32, %rsp
+	subq $48, %rsp
+	popq %r15
 	popq %r14
 	popq %r13
 	popq %r12
@@ -286,7 +301,7 @@ compiler_analysis_analyser_analyse_fn:
 	movq %rdi, %rax
 	movq (%rax), %rcx
 	cmpq $1, %rcx
-	jz .Lbb38
+	jz .Lbb39
 	movq 8(%rax), %rdi
 	movq 24(%rax), %r13
 	movq 40(%rax), %rbx
@@ -303,10 +318,10 @@ compiler_analysis_analyser_analyse_fn:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq donna_list_append
-	jmp .Lbb39
-.Lbb38:
-	leaq donna_nil(%rip), %rax
+	jmp .Lbb40
 .Lbb39:
+	leaq donna_nil(%rip), %rax
+.Lbb40:
 	popq %r13
 	popq %r12
 	popq %rbx
@@ -332,7 +347,7 @@ compiler_analysis_analyser_check_params:
 	movq %rdx, %rdi
 	movq (%rsi), %rax
 	cmpq $0, %rax
-	jz .Lbb50
+	jz .Lbb51
 	movq 8(%rsi), %r12
 	movq 16(%rsi), %rsi
 	movq %rdi, %rdx
@@ -340,58 +355,66 @@ compiler_analysis_analyser_check_params:
 	movq %r13, %rdi
 	callq compiler_analysis_analyser_check_params
 	movq %rbx, %rdi
-	movq %rax, %r14
 	subq $16, %rsp
-	movq %rsp, %rbx
-	movq %rbx, -16(%rbp)
-	movq 8(%r12), %rbx
-	movq 24(%r12), %r15
+	movq %rsp, %r14
+	movq %r14, -8(%rbp)
+	movq 8(%r12), %r15
+	movq %rax, %rbx
+	movq 24(%r12), %rax
+	movq %rax, -16(%rbp)
 	movq %rdi, %r12
-	movq %rbx, %rdi
+	movq %r15, %rdi
 	callq compiler_analysis_scope_is_discard
-	movq %r13, %rsi
 	movq %r12, %rdi
-	movq -16(%rbp), %r13
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rax
-	jz .Lbb47
-	movq %rsi, %r13
-	movq %rbx, %rsi
+	jz .Lbb48
+	movq %r15, %rsi
 	callq compiler_analysis_scope_contains_name
-	movq %r15, %rdx
-	movq %r13, %rsi
-	movq %rbx, %rdi
-	movq -16(%rbp), %rbx
+	movq %r13, %rdi
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz .Lbb44
-	callq errors_error_WarnUnusedParam
+	jz .Lbb45
+	movq %rdi, %r14
+	movl $32, %edi
+	callq malloc
+	movq %r15, %rcx
+	movq %r14, %rdi
 	movq %rax, %r15
+	movq %rbx, %rax
+	movq -8(%rbp), %rbx
+	movq %rax, %r14
+	movq -16(%rbp), %rax
+	movq $1, (%r15)
+	movq %rcx, 8(%r15)
+	movq %rdi, 16(%r15)
+	movq %rax, 24(%r15)
 	movl $24, %edi
 	callq malloc
 	movq $1, (%rax)
 	movq %r15, 8(%rax)
 	movq %r14, 16(%rax)
 	movq %rax, (%r13)
-	jmp .Lbb46
-.Lbb44:
-	movq %r14, %rax
+	jmp .Lbb47
+.Lbb45:
+	movq %rbx, %rax
+	movq %r14, %rbx
 	movq %rax, (%r13)
-.Lbb46:
-	movq %rax, (%r12)
-	jmp .Lbb49
 .Lbb47:
-	movq %r13, %rbx
-	movq %r14, %rax
 	movq %rax, (%r12)
-.Lbb49:
-	movq %rax, (%rbx)
-	jmp .Lbb51
+	jmp .Lbb50
+.Lbb48:
+	movq %rbx, %rax
+	movq %r14, %rbx
+	movq %rax, (%r12)
 .Lbb50:
-	leaq donna_nil(%rip), %rax
+	movq %rax, (%rbx)
+	jmp .Lbb52
 .Lbb51:
+	leaq donna_nil(%rip), %rax
+.Lbb52:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -411,65 +434,68 @@ compiler_analysis_analyser_analyse_expr:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
 	pushq %rbx
+	pushq %r12
 	movq (%rdi), %rax
 	cmpq $13, %rax
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb80
+	jnz .Lbb81
 	cmpq $12, %rax
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb79
+	jnz .Lbb80
 	cmpq $15, %rax
-	jz .Lbb78
+	jz .Lbb79
 	cmpq $9, %rax
-	jz .Lbb77
+	jz .Lbb78
 	cmpq $10, %rax
-	jz .Lbb76
+	jz .Lbb77
 	cmpq $14, %rax
-	jz .Lbb75
+	jz .Lbb76
 	cmpq $16, %rax
-	jz .Lbb74
+	jz .Lbb75
 	cmpq $17, %rax
-	jz .Lbb73
+	jz .Lbb74
 	cmpq $6, %rax
-	jz .Lbb72
+	jz .Lbb73
 	cmpq $7, %rax
-	jz .Lbb71
+	jz .Lbb72
 	cmpq $8, %rax
-	jz .Lbb70
+	jz .Lbb71
 	cmpq $11, %rax
-	jz .Lbb69
+	jz .Lbb70
 	cmpq $5, %rax
-	jz .Lbb68
+	jz .Lbb69
 	cmpq $18, %rax
-	jz .Lbb67
+	jz .Lbb68
 	leaq donna_nil(%rip), %rax
-	jmp .Lbb81
-.Lbb67:
-	movq 8(%rdi), %rdi
-	callq errors_error_WarnTodo
+	jmp .Lbb82
+.Lbb68:
+	movq 8(%rdi), %r12
+	movl $16, %edi
+	callq malloc
 	movq %rax, %rbx
+	movq $5, (%rbx)
+	movq %r12, 8(%rbx)
 	movl $24, %edi
 	callq malloc
 	movq $1, (%rax)
 	movq %rbx, 8(%rax)
 	leaq donna_nil(%rip), %rcx
 	movq %rcx, 16(%rax)
-	jmp .Lbb81
-.Lbb68:
+	jmp .Lbb82
+.Lbb69:
 	movq 8(%rdi), %rdi
 	callq compiler_analysis_analyser_analyse_expr
-	jmp .Lbb81
-.Lbb69:
+	jmp .Lbb82
+.Lbb70:
 	movq 16(%rdi), %rdi
 	callq compiler_analysis_analyser_analyse_expr
-	jmp .Lbb81
-.Lbb70:
+	jmp .Lbb82
+.Lbb71:
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
 	movq 16(%rax), %rbx
@@ -481,26 +507,26 @@ compiler_analysis_analyser_analyse_expr:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq donna_list_append
-	jmp .Lbb81
-.Lbb71:
-	movq 8(%rdi), %rdi
-	leaq compiler_analysis_analyser_analyse_expr(%rip), %rsi
-	callq donna_list_flat_map
-	jmp .Lbb81
+	jmp .Lbb82
 .Lbb72:
 	movq 8(%rdi), %rdi
 	leaq compiler_analysis_analyser_analyse_expr(%rip), %rsi
 	callq donna_list_flat_map
-	jmp .Lbb81
+	jmp .Lbb82
 .Lbb73:
 	movq 8(%rdi), %rdi
-	callq compiler_analysis_analyser_analyse_expr
-	jmp .Lbb81
+	leaq compiler_analysis_analyser_analyse_expr(%rip), %rsi
+	callq donna_list_flat_map
+	jmp .Lbb82
 .Lbb74:
 	movq 8(%rdi), %rdi
 	callq compiler_analysis_analyser_analyse_expr
-	jmp .Lbb81
+	jmp .Lbb82
 .Lbb75:
+	movq 8(%rdi), %rdi
+	callq compiler_analysis_analyser_analyse_expr
+	jmp .Lbb82
+.Lbb76:
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
 	movq 16(%rax), %rbx
@@ -511,8 +537,8 @@ compiler_analysis_analyser_analyse_expr:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq donna_list_append
-	jmp .Lbb81
-.Lbb76:
+	jmp .Lbb82
+.Lbb77:
 	movq %rdi, %rax
 	movq 16(%rdi), %rdi
 	movq 24(%rax), %rbx
@@ -523,8 +549,8 @@ compiler_analysis_analyser_analyse_expr:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq donna_list_append
-	jmp .Lbb81
-.Lbb77:
+	jmp .Lbb82
+.Lbb78:
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
 	movq 16(%rax), %rbx
@@ -536,12 +562,12 @@ compiler_analysis_analyser_analyse_expr:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq donna_list_append
-	jmp .Lbb81
-.Lbb78:
+	jmp .Lbb82
+.Lbb79:
 	movq 16(%rdi), %rdi
 	callq compiler_analysis_analyser_analyse_expr
-	jmp .Lbb81
-.Lbb79:
+	jmp .Lbb82
+.Lbb80:
 	movq %rdi, %rax
 	movq 8(%rdi), %rdi
 	movq 16(%rax), %rbx
@@ -553,11 +579,12 @@ compiler_analysis_analyser_analyse_expr:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq donna_list_append
-	jmp .Lbb81
-.Lbb80:
+	jmp .Lbb82
+.Lbb81:
 	movq 8(%rdi), %rdi
 	callq compiler_analysis_analyser_analyse_block
-.Lbb81:
+.Lbb82:
+	popq %r12
 	popq %rbx
 	leave
 	ret
@@ -577,17 +604,17 @@ compiler_analysis_analyser_analyse_clause:
 	movq 24(%rdi), %rdi
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz .Lbb84
+	jz .Lbb85
 	movq %rdi, %rbx
 	movq 8(%rax), %rdi
 	callq compiler_analysis_analyser_analyse_expr
 	movq %rbx, %rdi
 	movq %rax, %rbx
-	jmp .Lbb86
-.Lbb84:
+	jmp .Lbb87
+.Lbb85:
 	leaq donna_nil(%rip), %rax
 	movq %rax, %rbx
-.Lbb86:
+.Lbb87:
 	callq compiler_analysis_analyser_analyse_expr
 	movq %rbx, %rdi
 	movq %rax, %rsi
@@ -613,7 +640,7 @@ compiler_analysis_analyser_analyse_block:
 	pushq %r15
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb106
+	jz .Lbb107
 	movq 8(%rdi), %r15
 	movq 16(%rdi), %rdi
 	movq %rdi, %rbx
@@ -629,9 +656,9 @@ compiler_analysis_analyser_analyse_block:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb94
+	jnz .Lbb95
 	cmpq $1, %rax
-	jz .Lbb92
+	jz .Lbb93
 	movq 8(%r15), %rdi
 	callq compiler_analysis_analyser_analyse_expr
 	movq %r12, %rsi
@@ -639,8 +666,8 @@ compiler_analysis_analyser_analyse_block:
 	movq %rsi, %r13
 	callq donna_list_append
 	movq %rax, (%rbx)
-	jmp .Lbb107
-.Lbb92:
+	jmp .Lbb108
+.Lbb93:
 	movq %r12, %r13
 	movq 8(%r15), %rdi
 	movq %rdi, %r12
@@ -656,85 +683,88 @@ compiler_analysis_analyser_analyse_block:
 	callq compiler_analysis_analyser_check_unused_bindings
 	movq %r13, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r15
+	movq %rsi, %r13
 	callq donna_list_append
 	movq %r12, %rdi
 	movq %rax, %rsi
 	callq donna_list_append
 	movq %rax, (%rbx)
-	jmp .Lbb107
-.Lbb94:
+	jmp .Lbb108
+.Lbb95:
 	movq %r14, %rdi
+	movq %r12, %r13
 	movq %r15, %r14
-	movq %r12, %r15
-	movq 8(%r14), %r12
-	movq %rdi, %r13
+	movq 8(%r14), %r15
+	movq %rdi, %r12
 	movq 24(%r14), %rdi
-	movq 32(%r14), %r14
-	callq compiler_analysis_analyser_analyse_expr
-	movq %r13, %rdi
+	movq 32(%r14), %rax
 	movq %rax, -8(%rbp)
-	movq %rdi, %r13
+	callq compiler_analysis_analyser_analyse_expr
 	movq %r12, %rdi
+	movq %rax, %r14
+	movq %r14, -16(%rbp)
+	movq %rdi, %r12
+	movq %r15, %rdi
 	callq compiler_analysis_scope_is_discard
-	movq %r14, %rsi
-	movq %r13, %rdi
-	movq -8(%rbp), %r14
+	movq %r13, %rsi
+	movq %r12, %rdi
 	subq $16, %rsp
 	movq %rsp, %r13
 	cmpq $1, %rax
-	jz .Lbb102
-	movq %rsi, %r14
-	movq %r12, %rsi
+	jz .Lbb103
+	movq %rsi, %r12
+	movq %r15, %rsi
 	callq compiler_analysis_scope_contains_name
-	movq %r14, %rsi
-	movq %r12, %rdi
-	movq -8(%rbp), %r12
+	movq %r14, %rdi
 	subq $16, %rsp
 	movq %rsp, %r14
 	cmpq $1, %rax
-	jz .Lbb98
-	callq errors_error_WarnUnusedVariable
-	movq %r12, %rdi
-	movq %rax, -16(%rbp)
-	movq %rdi, %r12
+	jz .Lbb99
 	movl $24, %edi
 	callq malloc
-	movq %r15, %rsi
+	movq %r15, %rcx
+	movq %rax, %r15
+	movq -8(%rbp), %rax
+	movq $0, (%r15)
+	movq %rcx, 8(%r15)
+	movq %rax, 16(%r15)
+	movl $24, %edi
+	callq malloc
+	movq %r12, %rsi
 	movq %rax, %rdi
-	movq -16(%rbp), %rax
+	movq -16(%rbp), %r12
 	movq $1, (%rdi)
-	movq %rax, 8(%rdi)
+	movq %r15, 8(%rdi)
 	leaq donna_nil(%rip), %rax
 	movq %rax, 16(%rdi)
 	movq %rdi, (%r14)
-	jmp .Lbb101
-.Lbb98:
-	movq %r15, %rsi
+	jmp .Lbb102
+.Lbb99:
+	movq %r12, %rsi
+	movq %rdi, %r12
 	leaq donna_nil(%rip), %rax
 	movq %rax, (%r14)
 	leaq donna_nil(%rip), %rax
 	movq %rax, %rdi
-.Lbb101:
-	movq %rdi, (%r13)
-	jmp .Lbb105
 .Lbb102:
+	movq %rdi, (%r13)
+	jmp .Lbb106
+.Lbb103:
 	movq %r14, %r12
-	movq %r15, %rsi
 	leaq donna_nil(%rip), %rax
 	movq %rax, (%r13)
 	leaq donna_nil(%rip), %rax
 	movq %rax, %rdi
-.Lbb105:
+.Lbb106:
 	callq donna_list_append
 	movq %r12, %rdi
 	movq %rax, %rsi
 	callq donna_list_append
 	movq %rax, (%rbx)
-	jmp .Lbb107
-.Lbb106:
-	leaq donna_nil(%rip), %rax
+	jmp .Lbb108
 .Lbb107:
+	leaq donna_nil(%rip), %rax
+.Lbb108:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15
@@ -754,65 +784,67 @@ compiler_analysis_analyser_check_unused_bindings:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
+	pushq %r15
 	movq %rsi, %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
-	jz .Lbb117
+	jz .Lbb118
 	movq 8(%rdi), %rax
 	movq 16(%rdi), %rdi
-	movq (%rax), %r12
-	movq 8(%rax), %rsi
-	movq %rsi, %r14
+	movq (%rax), %r14
+	movq 8(%rax), %r15
 	movq %rbx, %rsi
 	callq compiler_analysis_analyser_check_unused_bindings
 	movq %rbx, %rdi
 	movq %rax, %r13
 	movq %rdi, %rbx
-	movq %r12, %rdi
+	movq %r14, %rdi
 	callq compiler_analysis_scope_is_discard
-	movq %r14, %rsi
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz .Lbb115
-	movq %rsi, %r14
-	movq %r12, %rsi
-	callq compiler_analysis_scope_contains_name
+	jz .Lbb116
 	movq %r14, %rsi
-	movq %r12, %rdi
+	callq compiler_analysis_scope_contains_name
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rax
-	jz .Lbb112
-	callq errors_error_WarnUnusedVariable
-	movq %rax, %r14
+	jz .Lbb113
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r14
+	movq $0, (%r14)
+	movq %rax, 8(%r14)
+	movq %r15, 16(%r14)
 	movl $24, %edi
 	callq malloc
 	movq $1, (%rax)
 	movq %r14, 8(%rax)
 	movq %r13, 16(%rax)
 	movq %rax, (%r12)
-	jmp .Lbb114
-.Lbb112:
+	jmp .Lbb115
+.Lbb113:
 	movq %r13, %rax
 	movq %rax, (%r12)
-.Lbb114:
-	movq %rax, (%rbx)
-	jmp .Lbb118
 .Lbb115:
+	movq %rax, (%rbx)
+	jmp .Lbb119
+.Lbb116:
 	movq %r13, %rax
 	movq %rax, (%rbx)
-	jmp .Lbb118
-.Lbb117:
-	leaq donna_nil(%rip), %rax
+	jmp .Lbb119
 .Lbb118:
+	leaq donna_nil(%rip), %rax
+.Lbb119:
 	movq %rbp, %rsp
-	subq $32, %rsp
+	subq $48, %rsp
+	popq %r15
 	popq %r14
 	popq %r13
 	popq %r12

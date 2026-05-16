@@ -13,140 +13,140 @@ donna_nil:
 
 .data
 .balign 8
-str74:
+str80:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str274:
+str298:
 	.ascii "@external "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str322:
+str350:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str340:
+str372:
 	.ascii "pub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str341:
+str373:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str344:
+str376:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str352:
+str384:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str355:
+str387:
 	.ascii " -> "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str359:
+str391:
 	.ascii "fn "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str362:
+str394:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str365:
+str397:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str409:
+str441:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str467:
+str499:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str477:
+str509:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str494:
+str526:
 	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str530:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str545:
-	.ascii "///"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str562:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str577:
+	.ascii "///"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str594:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str574:
+str606:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str591:
+str623:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -443,12 +443,25 @@ tools_docgen_extractor_empty_doc_module:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq donna_nil(%rip), %r9
-	leaq donna_nil(%rip), %r8
+	subq $8, %rsp
+	pushq %rbx
+	movq %rdi, %rbx
+	movl $56, %edi
+	callq malloc
+	movq %rbx, %rdi
+	movq $0, (%rax)
+	movq %rdi, 8(%rax)
+	leaq str60(%rip), %rcx
+	movq %rcx, 16(%rax)
 	leaq donna_nil(%rip), %rcx
-	leaq donna_nil(%rip), %rdx
-	leaq str60(%rip), %rsi
-	callq tools_docgen_extractor_DocModule
+	movq %rcx, 24(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 32(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 40(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 48(%rax)
+	popq %rbx
 	leave
 	ret
 .type tools_docgen_extractor_empty_doc_module, @function
@@ -461,59 +474,61 @@ tools_docgen_extractor_extract_from_ast:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $24, %rsp
+	subq $40, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rsi, %rbx
+	movq %rsi, %r15
 	movq %rdx, %rsi
 	movq %rdi, %rax
 	movq 8(%rax), %rdi
-	movq 24(%rax), %r14
-	movq 32(%rax), %r12
-	movq 40(%rax), %r13
-	movq %rsi, %r15
-	leaq str74(%rip), %rsi
-	callq donna_string_join
-	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, %r12
-	leaq donna_nil(%rip), %rdx
-	movq %rsi, %r15
-	callq tools_docgen_extractor_extract_types
-	movq %r15, %rsi
-	movq %r14, %rdi
-	movq %rax, -8(%rbp)
-	leaq donna_nil(%rip), %rdx
-	movq %rsi, %r15
-	movq %rdi, %r14
-	movq %r13, %rdi
-	callq tools_docgen_extractor_extract_regular_fns
-	movq %r15, %rsi
-	movq %r14, %rdi
-	movq %rax, -16(%rbp)
-	movq -8(%rbp), %rdx
-	movq %rdx, %r15
-	leaq donna_nil(%rip), %rdx
+	movq 24(%rax), %r12
+	movq 32(%rax), %r13
+	movq 40(%rax), %rbx
 	movq %rsi, %r14
-	callq tools_docgen_extractor_extract_consts
-	movq %r15, %rdx
+	leaq str80(%rip), %rsi
+	callq donna_string_join
 	movq %r14, %rsi
 	movq %r13, %rdi
-	movq %rax, %r15
-	movq -16(%rbp), %r14
-	movq %rdx, %r13
+	movq %rax, %r14
 	leaq donna_nil(%rip), %rdx
-	callq tools_docgen_extractor_extract_external_fns
-	movq %r15, %r8
-	movq %r14, %rcx
-	movq %r13, %rdx
+	movq %rsi, %r13
+	callq tools_docgen_extractor_extract_types
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq %rax, -16(%rbp)
+	leaq donna_nil(%rip), %rdx
+	movq %rsi, %r13
+	movq %rdi, %r12
+	movq %rbx, %rdi
+	callq tools_docgen_extractor_extract_regular_fns
+	movq %r13, %rsi
+	movq %r12, %rdi
+	movq %rax, -24(%rbp)
+	movq -16(%rbp), %r13
+	leaq donna_nil(%rip), %rdx
+	movq %rsi, %r12
+	callq tools_docgen_extractor_extract_consts
 	movq %r12, %rsi
 	movq %rbx, %rdi
-	movq %rax, %r9
-	callq tools_docgen_extractor_DocModule
+	movq %rax, %rbx
+	movq -24(%rbp), %r12
+	leaq donna_nil(%rip), %rdx
+	callq tools_docgen_extractor_extract_external_fns
+	movq %rax, -32(%rbp)
+	movl $56, %edi
+	callq malloc
+	movq %r15, %rsi
+	movq -32(%rbp), %rcx
+	movq $0, (%rax)
+	movq %rsi, 8(%rax)
+	movq %r14, 16(%rax)
+	movq %r13, 24(%rax)
+	movq %r12, 32(%rax)
+	movq %rbx, 40(%rax)
+	movq %rcx, 48(%rax)
 	popq %r15
 	popq %r14
 	popq %r13
@@ -538,72 +553,83 @@ tools_docgen_extractor_extract_types:
 	pushq %r14
 	pushq %r15
 	movq %rdx, %r13
-	movq %rsi, %r15
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz .Lbb34
 	movq 8(%rdi), %rcx
 	movq 16(%rdi), %rdi
 	subq $16, %rsp
-	movq %rsp, %rax
-	movq %rax, -64(%rbp)
-	movq 8(%rcx), %r9
-	movq %r9, -48(%rbp)
-	movq 16(%rcx), %r14
-	movq 24(%rcx), %r9
-	movq %r9, -24(%rbp)
+	movq %rsp, %rbx
+	movq %rbx, -64(%rbp)
+	movq %rsi, %r15
+	movq 8(%rcx), %rsi
+	movq %rsi, -48(%rbp)
+	movq %rbx, %rax
+	movq 16(%rcx), %rbx
+	movq 24(%rcx), %rdx
+	movq %rdx, -16(%rbp)
 	movq 32(%rcx), %rdx
 	movq %rdx, -40(%rbp)
 	movq 40(%rcx), %r8
-	movq %r8, -16(%rbp)
-	movq %rdi, %rbx
+	movq %r8, -8(%rbp)
+	movq %rdi, %r14
 	movq 48(%rcx), %rdi
 	subq $16, %rsp
 	movq %rsp, %r12
-	cmpq $0, %r14
+	cmpq $0, %rbx
 	jz .Lbb31
 	callq tools_docgen_extractor_span_line
+	movq %r14, %rdi
 	movq %rax, %rsi
+	movq %rdi, %r14
 	movq %r15, %rdi
 	callq tools_docgen_extractor_find_doc
-	movq %r14, %rsi
-	movq %rax, %r8
-	movq -16(%rbp), %rdi
-	movq -40(%rbp), %rdx
-	movq -24(%rbp), %r9
-	movq %rdi, %rcx
-	movq -48(%rbp), %rdi
-	movq %r8, -32(%rbp)
+	movq %r15, %rsi
+	movq %r14, %rdi
+	movq %rax, -32(%rbp)
+	movq %rdi, %r14
+	movq -8(%rbp), %rdi
+	movq -16(%rbp), %rcx
 	subq $16, %rsp
 	movq %rsp, %rax
-	movq %rax, -56(%rbp)
-	cmpq $1, %r9
+	movq %rax, -24(%rbp)
+	cmpq $1, %rcx
 	jz .Lbb27
-	movq %rcx, %rdi
 	leaq donna_nil(%rip), %rdx
-	movq %rsi, %r14
-	movq %r15, %rsi
+	movq %rsi, %r15
 	callq tools_docgen_extractor_extract_ctors
-	movq %r14, %rsi
-	movq %rbx, %rdi
+	movq %r14, %rdi
 	movq %rax, %rcx
-	movq -56(%rbp), %rax
-	movq -32(%rbp), %r8
-	movq -40(%rbp), %rdx
-	movq %rdi, %rbx
-	movq -48(%rbp), %rdi
+	movq -24(%rbp), %rax
 	movq %rcx, (%rax)
+	movq %rcx, -56(%rbp)
 	jmp .Lbb30
 .Lbb27:
 	movq %rax, %rcx
+	movq %r14, %rdi
+	movq %rsi, %r15
 	leaq donna_nil(%rip), %rax
 	movq %rax, (%rcx)
 	leaq donna_nil(%rip), %rax
-	movq %rax, %rcx
+	movq %rax, -56(%rbp)
 .Lbb30:
-	callq tools_docgen_extractor_DocType
-	movq %rbx, %rdi
+	movq %rdi, %r14
+	movl $48, %edi
+	callq malloc
+	movq %r15, %rsi
+	movq %r14, %rdi
 	movq %rax, %r14
+	movq -56(%rbp), %rcx
+	movq -32(%rbp), %rax
+	movq -40(%rbp), %rdx
+	movq %rsi, %r15
+	movq -48(%rbp), %rsi
+	movq $2, (%r14)
+	movq %rsi, 8(%r14)
+	movq %rbx, 16(%r14)
+	movq %rdx, 24(%r14)
+	movq %rcx, 32(%r14)
+	movq %rax, 40(%r14)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq malloc
@@ -618,8 +644,8 @@ tools_docgen_extractor_extract_types:
 	movq %rax, (%r12)
 	jmp .Lbb33
 .Lbb31:
-	movq %rbx, %rdi
 	movq %rax, %rbx
+	movq %r14, %rdi
 	movq %r15, %rsi
 	movq %r13, %rdx
 	callq tools_docgen_extractor_extract_types
@@ -650,26 +676,26 @@ tools_docgen_extractor_extract_ctors:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $24, %rsp
+	subq $40, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
 	pushq %r15
 	movq %rdx, %r12
-	movq %rsi, %r15
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz .Lbb39
 	movq 8(%rdi), %rax
-	movq 16(%rdi), %r13
+	movq 16(%rdi), %rbx
 	subq $16, %rsp
-	movq %rsp, %rbx
-	movq %rbx, -16(%rbp)
-	movq 8(%rax), %rbx
+	movq %rsp, %r13
+	movq %r13, -24(%rbp)
+	movq 8(%rax), %r13
 	movq 16(%rax), %rdi
+	movq %rsi, %r15
 	movq 24(%rax), %rsi
-	movq %rsi, -8(%rbp)
+	movq %rsi, -16(%rbp)
 	movq %rdi, %r14
 	movq 32(%rax), %rdi
 	callq tools_docgen_extractor_span_line
@@ -678,19 +704,27 @@ tools_docgen_extractor_extract_ctors:
 	movq %rdi, %r14
 	movq %r15, %rdi
 	callq tools_docgen_extractor_find_doc
+	movq %r15, %rsi
 	movq %r14, %rdi
-	movq %rax, %rsi
-	movq %rsi, %r14
-	movq -8(%rbp), %rsi
+	movq %rax, %r14
+	movq %rsi, %r15
+	movq -16(%rbp), %rsi
 	leaq donna_nil(%rip), %rdx
 	callq tools_docgen_extractor_render_fields
-	movq %r14, %rsi
 	movq %rbx, %rdi
-	movq %rax, %rdx
-	movq -16(%rbp), %rbx
-	callq tools_docgen_extractor_DocCtor
-	movq %r13, %rdi
+	movq %rax, -32(%rbp)
+	movq %rdi, %rbx
+	movl $32, %edi
+	callq malloc
+	movq %r13, %rcx
+	movq %rbx, %rdi
 	movq %rax, %r13
+	movq -24(%rbp), %rbx
+	movq -32(%rbp), %rax
+	movq $0, (%r13)
+	movq %rcx, 8(%r13)
+	movq %r14, 16(%r13)
+	movq %rax, 24(%r13)
 	movq %rdi, %r14
 	movl $24, %edi
 	callq malloc
@@ -708,7 +742,7 @@ tools_docgen_extractor_extract_ctors:
 	callq donna_list_reverse
 .Lbb41:
 	movq %rbp, %rsp
-	subq $64, %rsp
+	subq $80, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -745,60 +779,63 @@ tools_docgen_extractor_extract_regular_fns:
 	jz .Lbb45
 	movq %r13, %rdx
 	movq %rsi, %r15
-	movq %rdi, %r14
 	callq tools_docgen_extractor_extract_regular_fns
 	movq %rax, (%rbx)
 	jmp .Lbb53
 .Lbb45:
-	movq %rdi, %r14
 	movq %rsi, %r15
-	movq 8(%rax), %rdi
+	movq 8(%rax), %r12
 	movq 16(%rax), %rcx
 	movq 24(%rax), %rdx
 	movq %rdx, -24(%rbp)
 	movq 32(%rax), %rdx
 	movq %rdx, -16(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %r14
 	movq 48(%rax), %rdi
 	subq $16, %rsp
 	movq %rsp, %rax
-	movq %rax, -40(%rbp)
+	movq %rax, -48(%rbp)
 	cmpq $0, %rcx
 	jz .Lbb48
 	callq tools_docgen_extractor_span_line
-	movq %r12, %rdi
+	movq %r14, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %r14
 	movq %r15, %rdi
 	callq tools_docgen_extractor_find_doc
 	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, -32(%rbp)
+	movq %r14, %rdi
+	movq %rax, -40(%rbp)
 	movq -16(%rbp), %rcx
 	movq -24(%rbp), %rdx
 	movq %rsi, %r15
 	movl $1, %esi
-	movq %rdi, %r12
-	callq tools_docgen_extractor_render_fn_sig
-	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, %rdx
-	movq -40(%rbp), %r12
-	movq -32(%rbp), %rcx
-	movq %rsi, %r15
-	movl $1, %esi
-	callq tools_docgen_extractor_DocFn
-	movq %r14, %rdi
-	movq %rax, -48(%rbp)
 	movq %rdi, %r14
+	movq %r12, %rdi
+	callq tools_docgen_extractor_render_fn_sig
+	movq %r14, %rdi
+	movq %rax, -32(%rbp)
+	movq %rdi, %r14
+	movl $40, %edi
+	callq malloc
+	movq %r14, %rdi
+	movq %rax, %r14
+	movq -32(%rbp), %rcx
+	movq -40(%rbp), %rax
+	movq $0, (%r14)
+	movq %r12, 8(%r14)
+	movq $1, 16(%r14)
+	movq %rcx, 24(%r14)
+	movq %rax, 32(%r14)
+	movq %rdi, %r12
 	movl $24, %edi
 	callq malloc
 	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %r12, %rdi
 	movq %rax, %rdx
-	movq -48(%rbp), %rax
+	movq -48(%rbp), %r12
 	movq $1, (%rdx)
-	movq %rax, 8(%rdx)
+	movq %r14, 8(%rdx)
 	movq %r13, 16(%rdx)
 	callq tools_docgen_extractor_extract_regular_fns
 	movq %rax, (%r12)
@@ -848,64 +885,69 @@ tools_docgen_extractor_extract_external_fns:
 	cmpq $0, %rax
 	jz .Lbb63
 	movq 8(%rdi), %rax
-	movq 16(%rdi), %r14
+	movq 16(%rdi), %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz .Lbb61
-	movq 8(%rax), %rdi
+	movq 8(%rax), %r12
 	movq 16(%rax), %rcx
 	movq 24(%rax), %rdx
 	movq %rdx, -24(%rbp)
 	movq 32(%rax), %rdx
 	movq %rdx, -16(%rbp)
-	movq %rdi, %r12
+	movq %rdi, %r14
 	movq 56(%rax), %rdi
 	subq $16, %rsp
 	movq %rsp, %rax
-	movq %rax, -40(%rbp)
+	movq %rax, -48(%rbp)
 	cmpq $0, %rcx
 	jz .Lbb58
 	callq tools_docgen_extractor_span_line
-	movq %r12, %rdi
+	movq %r14, %rdi
 	movq %rax, %rsi
-	movq %rdi, %r12
+	movq %rdi, %r14
 	movq %r15, %rdi
 	callq tools_docgen_extractor_find_doc
 	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, -32(%rbp)
+	movq %r14, %rdi
+	movq %rax, -40(%rbp)
 	movq -16(%rbp), %rcx
 	movq -24(%rbp), %rdx
 	movq %rsi, %r15
 	movl $1, %esi
-	movq %rdi, %r12
-	callq tools_docgen_extractor_render_fn_sig
-	movq %r12, %rdi
-	movq %rax, %rsi
-	movq %rdi, %r12
-	leaq str274(%rip), %rdi
-	callq __rt_str_concat
-	movq %r15, %rsi
-	movq %r12, %rdi
-	movq %rax, %rdx
-	movq -40(%rbp), %r12
-	movq -32(%rbp), %rcx
-	movq %rsi, %r15
-	movl $1, %esi
-	callq tools_docgen_extractor_DocExternalFn
-	movq %r14, %rdi
-	movq %rax, -48(%rbp)
 	movq %rdi, %r14
+	movq %r12, %rdi
+	callq tools_docgen_extractor_render_fn_sig
+	movq %r14, %rdi
+	movq %rax, %rsi
+	movq %rdi, %r14
+	leaq str298(%rip), %rdi
+	callq __rt_str_concat
+	movq %r14, %rdi
+	movq %rax, -32(%rbp)
+	movq %rdi, %r14
+	movl $40, %edi
+	callq malloc
+	movq %r14, %rdi
+	movq %rax, %r14
+	movq -32(%rbp), %rcx
+	movq -40(%rbp), %rax
+	movq $1, (%r14)
+	movq %r12, 8(%r14)
+	movq $1, 16(%r14)
+	movq %rcx, 24(%r14)
+	movq %rax, 32(%r14)
+	movq %rdi, %r12
 	movl $24, %edi
 	callq malloc
 	movq %r15, %rsi
-	movq %r14, %rdi
+	movq %r12, %rdi
 	movq %rax, %rdx
-	movq -48(%rbp), %rax
+	movq -48(%rbp), %r12
 	movq $1, (%rdx)
-	movq %rax, 8(%rdx)
+	movq %r14, 8(%rdx)
 	movq %r13, 16(%rdx)
 	callq tools_docgen_extractor_extract_external_fns
 	movq %rax, (%r12)
@@ -921,7 +963,6 @@ tools_docgen_extractor_extract_external_fns:
 	movq %rax, (%rbx)
 	jmp .Lbb65
 .Lbb61:
-	movq %r14, %rdi
 	movq %r13, %r12
 	movq %r15, %rsi
 	movq %r12, %rdx
@@ -967,8 +1008,8 @@ tools_docgen_extractor_extract_consts:
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq %rbx, -32(%rbp)
-	movq 8(%rdx), %r8
-	movq %r8, -24(%rbp)
+	movq 8(%rdx), %rcx
+	movq %rcx, -24(%rbp)
 	movq 16(%rdx), %rcx
 	movq %rbx, %rax
 	movq 24(%rdx), %rbx
@@ -985,40 +1026,39 @@ tools_docgen_extractor_extract_consts:
 	movq %r15, %rdi
 	callq tools_docgen_extractor_find_doc
 	movq %r14, %rdi
-	movq %rax, %rcx
+	movq %rax, -16(%rbp)
 	movq %rbx, %rax
-	movq -24(%rbp), %r8
-	movq %rcx, -16(%rbp)
 	subq $16, %rsp
 	movq %rsp, %r14
-	movq (%rax), %rdx
-	cmpq $0, %rdx
+	movq (%rax), %rcx
+	cmpq $0, %rcx
 	jz .Lbb70
 	movq %rdi, %rbx
 	movq 8(%rax), %rdi
 	callq tools_fmt_formatter_format_type_ann
-	movq %r15, %rsi
 	movq %rbx, %rdi
-	movq %rax, %rdx
-	movq -16(%rbp), %rcx
-	movq %rdi, %rbx
-	movq -24(%rbp), %rdi
-	movq %rdx, (%r14)
+	movq %rax, %rbx
+	movq %rbx, (%r14)
 	jmp .Lbb73
 .Lbb70:
-	movq %rdi, %rbx
-	movq %r8, %rdi
-	movq %r15, %rsi
-	leaq str322(%rip), %rax
-	movq %rax, (%r14)
-	leaq str322(%rip), %rax
-	movq %rax, %rdx
+	movq %r14, %rbx
+	leaq str350(%rip), %rax
+	movq %rax, (%rbx)
+	leaq str350(%rip), %rax
+	movq %rax, %rbx
 .Lbb73:
-	movq %rsi, %r15
-	movl $1, %esi
-	callq tools_docgen_extractor_DocConst
-	movq %rbx, %rdi
+	movq %rdi, %r14
+	movl $40, %edi
+	callq malloc
+	movq %r14, %rdi
 	movq %rax, %r14
+	movq -16(%rbp), %rax
+	movq -24(%rbp), %rcx
+	movq $3, (%r14)
+	movq %rcx, 8(%r14)
+	movq $1, 16(%r14)
+	movq %rbx, 24(%r14)
+	movq %rax, 32(%r14)
 	movq %rdi, %rbx
 	movl $24, %edi
 	callq malloc
@@ -1073,14 +1113,14 @@ tools_docgen_extractor_render_fn_sig:
 	movq %rdx, %rdi
 	cmpq $1, %rsi
 	movq %rcx, %r12
-	leaq str341(%rip), %rcx
-	leaq str340(%rip), %rax
+	leaq str373(%rip), %rcx
+	leaq str372(%rip), %rax
 	mov %rax, %rbx
 	cmovnz %rcx, %rbx
 	leaq donna_nil(%rip), %rsi
 	callq tools_docgen_extractor_render_params
 	movq %rax, %rdi
-	leaq str344(%rip), %rsi
+	leaq str376(%rip), %rsi
 	callq donna_string_join
 	movq %r12, %rcx
 	movq %rbx, %rdi
@@ -1096,7 +1136,7 @@ tools_docgen_extractor_render_fn_sig:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	movq %rdi, %rbx
-	leaq str355(%rip), %rdi
+	leaq str387(%rip), %rdi
 	callq __rt_str_concat
 	movq %r14, %rsi
 	movq %rbx, %rdi
@@ -1106,13 +1146,13 @@ tools_docgen_extractor_render_fn_sig:
 .Lbb83:
 	movq %r13, %rbx
 	movq %r14, %rsi
-	leaq str352(%rip), %rax
+	leaq str384(%rip), %rax
 	movq %rax, (%rbx)
-	leaq str352(%rip), %rax
+	leaq str384(%rip), %rax
 	movq %rax, %rbx
 .Lbb86:
 	movq %rsi, %r13
-	leaq str359(%rip), %rsi
+	leaq str391(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
@@ -1120,7 +1160,7 @@ tools_docgen_extractor_render_fn_sig:
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r12
-	leaq str362(%rip), %rsi
+	leaq str394(%rip), %rsi
 	callq __rt_str_concat
 	movq %r12, %rsi
 	movq %rax, %rdi
@@ -1128,7 +1168,7 @@ tools_docgen_extractor_render_fn_sig:
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq str365(%rip), %rsi
+	leaq str397(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -1188,7 +1228,7 @@ tools_docgen_extractor_render_params:
 	movq 8(%rax), %rdi
 	movq 16(%rax), %rax
 	movq 8(%rax), %r14
-	leaq str409(%rip), %rsi
+	leaq str441(%rip), %rsi
 	callq __rt_str_concat
 	movq %r14, %rdi
 	movq %rax, %r14
@@ -1277,7 +1317,7 @@ tools_docgen_extractor_render_fields:
 	cmpq $1, %rax
 	jz .Lbb106
 	movq %rsi, %r14
-	leaq str467(%rip), %rsi
+	leaq str499(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rdi
 	movq %rax, %r13
@@ -1337,7 +1377,7 @@ tools_docgen_extractor_scan_doc_comments:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq str477(%rip), %rsi
+	leaq str509(%rip), %rsi
 	callq donna_string_split
 	movq %rax, %rdi
 	leaq donna_nil(%rip), %rcx
@@ -1404,7 +1444,7 @@ tools_docgen_extractor_collect_blocks:
 	movq %r15, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r15
-	leaq str530(%rip), %rsi
+	leaq str562(%rip), %rsi
 	callq donna_string_join
 	movq %r14, %rdi
 	movq %rax, -16(%rbp)
@@ -1474,7 +1514,7 @@ tools_docgen_extractor_collect_blocks:
 	jz .Lbb128
 	callq donna_list_reverse
 	movq %rax, %rdi
-	leaq str494(%rip), %rsi
+	leaq str526(%rip), %rsi
 	callq donna_string_join
 	movq %r12, %rdi
 	movq %rax, %r12
@@ -1523,7 +1563,7 @@ tools_docgen_extractor_is_doc_line:
 	pushq %r12
 	callq donna_string_trim_start
 	movq %rax, %rdi
-	leaq str545(%rip), %rsi
+	leaq str577(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_starts_with
 	movq %rbx, %rdi
@@ -1544,7 +1584,7 @@ tools_docgen_extractor_is_doc_line:
 	movq %rax, %rdi
 	subq $16, %rsp
 	movq %rsp, %r12
-	leaq str562(%rip), %rsi
+	leaq str594(%rip), %rsi
 	callq strcmp
 	cmpq $0, %rax
 	jz .Lbb136
@@ -1592,7 +1632,7 @@ tools_docgen_extractor_strip_doc_prefix:
 	movl $3, %esi
 	callq donna_string_slice
 	movq %rax, %rbx
-	leaq str574(%rip), %rsi
+	leaq str606(%rip), %rsi
 	movq %rbx, %rdi
 	callq donna_string_starts_with
 	cmpq $1, %rax
@@ -1648,7 +1688,7 @@ tools_docgen_extractor_find_doc:
 	movq %rax, (%rbx)
 	jmp .Lbb152
 .Lbb151:
-	leaq str591(%rip), %rax
+	leaq str623(%rip), %rax
 .Lbb152:
 	movq %rbp, %rsp
 	subq $16, %rsp

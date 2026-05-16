@@ -18,175 +18,134 @@ str25:
 
 .data
 .balign 8
-str35:
+str36:
 	.ascii "invalid donna.toml: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str40:
+str42:
 	.ascii "name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str48:
+str50:
 	.ascii "donna.toml is missing required field `name`"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str51:
+str54:
 	.ascii "src"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str53:
+str56:
 	.ascii "build"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str88:
+str95:
 	.ascii "bin"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str91:
+str98:
 	.ascii "dev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str94:
+str101:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str97:
+str104:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str102:
+str109:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str105:
+str112:
 	.ascii "test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str261:
+str268:
 	.ascii "donna.toml"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str283:
+str290:
 	.ascii "name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str285:
+str292:
 	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str287:
+str294:
 	.ascii "description"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str289:
+str296:
 	.ascii "authors"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str292:
+str299:
 	.ascii "homepage"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str299:
+str314:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str300:
+str315:
 	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str301:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-donna_nil:
-	.quad 0
-/* end data */
-
-.data
-.balign 8
-str302:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str303:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str304:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str306:
-	.ascii "licences"
 	.byte 0
 /* end data */
 
@@ -199,7 +158,41 @@ str316:
 
 .data
 .balign 8
-str325:
+donna_nil:
+	.quad 0
+/* end data */
+
+.data
+.balign 8
+str317:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str318:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str319:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str329:
+	.ascii "licences"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str339:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -213,175 +206,182 @@ str348:
 
 .data
 .balign 8
-str357:
-	.ascii "licence"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str360:
-	.ascii "repository"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str370:
-	.ascii "repository"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str374:
-	.ascii "type"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str376:
-	.ascii "user"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str378:
-	.ascii "repo"
+str371:
+	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str380:
-	.ascii "github"
+	.ascii "licence"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str395:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str396:
-	.ascii "https://github.com/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str398:
-	.ascii "/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str402:
+str383:
 	.ascii "repository"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str408:
+str393:
+	.ascii "repository"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str397:
+	.ascii "type"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str399:
+	.ascii "user"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str401:
+	.ascii "repo"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str403:
+	.ascii "github"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str418:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str419:
 	.ascii "https://github.com/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str420:
+str421:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str423:
+str425:
+	.ascii "repository"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str431:
+	.ascii "https://github.com/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str443:
+	.ascii "/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str446:
 	.ascii "git@github.com:"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str435:
+str458:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str484:
+str507:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str490:
+str514:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str501:
+str525:
 	.ascii ".git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str512:
+str536:
 	.ascii "links"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str555:
+str579:
 	.ascii "title"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str565:
+str589:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str567:
+str591:
 	.ascii "href"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str577:
+str601:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str598:
+str622:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str628:
+str653:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -546,12 +546,14 @@ builder_scanner_ProjectMeta:
 .globl builder_scanner_scan
 builder_scanner_scan:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
 	mov	x21, x0
 	adrp	x1, str17
 	add	x1, x1, #:lo12:str17
@@ -575,8 +577,8 @@ builder_scanner_scan:
 	cmp	x1, #1
 	beq	.L14
 	bl	parsetoml_parsetoml_unwrap_table
-	adrp	x1, str40
-	add	x1, x1, #:lo12:str40
+	adrp	x1, str42
+	add	x1, x1, #:lo12:str42
 	bl	parsetoml_parsetoml_get_string
 	mov	x20, x0
 	bl	parsetoml_parsetoml_is_err
@@ -588,30 +590,51 @@ builder_scanner_scan:
 	cmp	x1, #1
 	beq	.L12
 	bl	parsetoml_parsetoml_unwrap_string
-	mov	x17, x0
+	mov	x24, x0
 	mov	x0, x21
-	mov	x21, x17
-	adrp	x1, str51
-	add	x1, x1, #:lo12:str51
+	adrp	x1, str54
+	add	x1, x1, #:lo12:str54
+	mov	x21, x0
+	bl	donna_files_join
+	mov	x23, x0
+	mov	x0, x21
+	adrp	x1, str56
+	add	x1, x1, #:lo12:str56
+	bl	donna_files_join
 	mov	x22, x0
-	bl	donna_files_join
-	mov	x1, x0
-	mov	x0, x22
-	mov	x22, x1
-	adrp	x1, str53
-	add	x1, x1, #:lo12:str53
-	bl	donna_files_join
-	mov	x1, x22
-	mov	x2, x0
-	mov	x0, x21
-	bl	builder_scanner_Project
-	bl	builder_scanner_ScanOk
+	mov	x0, #32
+	bl	malloc
+	mov	x21, x0
+	mov	x0, #0
+	str	x0, [x21]
+	mov	x0, #8
+	add	x0, x21, x0
+	str	x24, [x0]
+	mov	x0, #16
+	add	x0, x21, x0
+	str	x23, [x0]
+	mov	x0, #24
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
 	str	x0, [x20]
 	b	.L13
 .L12:
-	adrp	x0, str48
-	add	x0, x0, #:lo12:str48
-	bl	builder_scanner_ScanErr
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, str50
+	add	x1, x1, #:lo12:str50
+	str	x1, [x2]
 	str	x0, [x20]
 .L13:
 	str	x0, [x19]
@@ -619,23 +642,38 @@ builder_scanner_scan:
 .L14:
 	bl	parsetoml_parsetoml_err_msg
 	mov	x1, x0
-	adrp	x0, str35
-	add	x0, x0, #:lo12:str35
+	adrp	x0, str36
+	add	x0, x0, #:lo12:str36
 	bl	__rt_str_concat
-	bl	builder_scanner_ScanErr
+	mov	x20, x0
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	.L16
 .L15:
-	adrp	x0, str25
-	add	x0, x0, #:lo12:str25
-	bl	builder_scanner_ScanErr
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, str25
+	add	x1, x1, #:lo12:str25
+	str	x1, [x2]
 .L16:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 .type builder_scanner_scan, @function
 .size builder_scanner_scan, .-builder_scanner_scan
@@ -697,8 +735,8 @@ builder_scanner_project_bin_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	builder_scanner_project_build_dir
-	adrp	x1, str88
-	add	x1, x1, #:lo12:str88
+	adrp	x1, str95
+	add	x1, x1, #:lo12:str95
 	bl	donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -714,8 +752,8 @@ builder_scanner_project_dev_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	builder_scanner_project_build_dir
-	adrp	x1, str91
-	add	x1, x1, #:lo12:str91
+	adrp	x1, str98
+	add	x1, x1, #:lo12:str98
 	bl	donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -731,8 +769,8 @@ builder_scanner_project_dev_artifacts_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	builder_scanner_project_dev_dir
-	adrp	x1, str94
-	add	x1, x1, #:lo12:str94
+	adrp	x1, str101
+	add	x1, x1, #:lo12:str101
 	bl	donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -748,8 +786,8 @@ builder_scanner_project_packages_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	builder_scanner_project_build_dir
-	adrp	x1, str97
-	add	x1, x1, #:lo12:str97
+	adrp	x1, str104
+	add	x1, x1, #:lo12:str104
 	bl	donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -784,8 +822,8 @@ builder_scanner_project_package_artifacts_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	builder_scanner_project_package_dir
-	adrp	x1, str102
-	add	x1, x1, #:lo12:str102
+	adrp	x1, str109
+	add	x1, x1, #:lo12:str109
 	bl	donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -801,8 +839,8 @@ builder_scanner_project_test_dir:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	bl	builder_scanner_project_build_dir
-	adrp	x1, str105
-	add	x1, x1, #:lo12:str105
+	adrp	x1, str112
+	add	x1, x1, #:lo12:str112
 	bl	donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -958,18 +996,18 @@ builder_scanner_meta_links:
 .globl builder_scanner_scan_meta
 builder_scanner_scan_meta:
 	hint	#34
-	stp	x29, x30, [sp, -80]!
+	stp	x29, x30, [sp, -96]!
 	mov	x29, sp
-	str	x19, [x29, 72]
-	str	x20, [x29, 64]
-	str	x21, [x29, 56]
-	str	x22, [x29, 48]
-	str	x23, [x29, 40]
-	str	x24, [x29, 32]
-	str	x25, [x29, 24]
-	str	x26, [x29, 16]
-	adrp	x1, str261
-	add	x1, x1, #:lo12:str261
+	str	x19, [x29, 88]
+	str	x20, [x29, 80]
+	str	x21, [x29, 72]
+	str	x22, [x29, 64]
+	str	x23, [x29, 56]
+	str	x24, [x29, 48]
+	str	x25, [x29, 40]
+	str	x26, [x29, 32]
+	adrp	x1, str268
+	add	x1, x1, #:lo12:str268
 	bl	donna_files_join
 	mov	x19, x0
 	bl	donna_files_exists
@@ -988,62 +1026,76 @@ builder_scanner_scan_meta:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, str283
-	add	x1, x1, #:lo12:str283
+	adrp	x1, str290
+	add	x1, x1, #:lo12:str290
 	mov	x20, x0
 	bl	builder_scanner_opt_str
+	mov	x26, x0
+	mov	x0, x20
+	adrp	x1, str292
+	add	x1, x1, #:lo12:str292
+	mov	x20, x0
+	bl	builder_scanner_opt_str
+	mov	x25, x0
+	mov	x0, x20
+	adrp	x1, str294
+	add	x1, x1, #:lo12:str294
+	mov	x20, x0
+	bl	builder_scanner_opt_str
+	mov	x24, x0
+	mov	x0, x20
+	adrp	x1, str296
+	add	x1, x1, #:lo12:str296
+	mov	x20, x0
+	bl	builder_scanner_str_array
+	mov	x23, x0
+	mov	x0, x20
+	mov	x20, x0
+	bl	builder_scanner_parse_licence
+	mov	x22, x0
+	mov	x0, x20
+	adrp	x1, str299
+	add	x1, x1, #:lo12:str299
+	mov	x20, x0
+	bl	builder_scanner_opt_str
+	mov	x21, x0
+	mov	x0, x20
+	mov	x20, x0
+	bl	builder_scanner_parse_repository
 	mov	x17, x0
 	mov	x0, x20
 	mov	x20, x17
-	adrp	x1, str285
-	add	x1, x1, #:lo12:str285
-	mov	x21, x0
-	bl	builder_scanner_opt_str
-	mov	x1, x0
-	mov	x0, x21
-	mov	x22, x1
-	adrp	x1, str287
-	add	x1, x1, #:lo12:str287
-	mov	x21, x0
-	bl	builder_scanner_opt_str
-	mov	x1, x22
-	mov	x22, x0
-	mov	x0, x21
-	mov	x24, x1
-	adrp	x1, str289
-	add	x1, x1, #:lo12:str289
-	mov	x21, x0
-	bl	builder_scanner_str_array
-	mov	x23, x0
-	mov	x0, x21
-	mov	x21, x0
-	bl	builder_scanner_parse_licence
-	mov	x1, x24
-	mov	x24, x0
-	mov	x0, x21
-	mov	x21, x1
-	adrp	x1, str292
-	add	x1, x1, #:lo12:str292
-	mov	x25, x0
-	bl	builder_scanner_opt_str
-	mov	x17, x0
-	mov	x0, x25
-	mov	x25, x17
-	mov	x26, x0
-	bl	builder_scanner_parse_repository
-	mov	x17, x0
-	mov	x0, x26
-	mov	x26, x17
 	bl	builder_scanner_parse_links
-	mov	x6, x26
-	mov	x5, x25
-	mov	x4, x24
-	mov	x3, x23
-	mov	x2, x22
-	mov	x1, x21
-	mov	x7, x0
-	mov	x0, x20
-	bl	builder_scanner_ProjectMeta
+	str	x0, [x29, 16]
+	mov	x0, #72
+	bl	malloc
+	ldr	x1, [x29, 16]
+	mov	x2, #0
+	str	x2, [x0]
+	mov	x2, #8
+	add	x2, x0, x2
+	str	x26, [x2]
+	mov	x2, #16
+	add	x2, x0, x2
+	str	x25, [x2]
+	mov	x2, #24
+	add	x2, x0, x2
+	str	x24, [x2]
+	mov	x2, #32
+	add	x2, x0, x2
+	str	x23, [x2]
+	mov	x2, #40
+	add	x2, x0, x2
+	str	x22, [x2]
+	mov	x2, #48
+	add	x2, x0, x2
+	str	x21, [x2]
+	mov	x2, #56
+	add	x2, x0, x2
+	str	x20, [x2]
+	mov	x2, #64
+	add	x2, x0, x2
+	str	x1, [x2]
 	str	x0, [x19]
 	b	.L60
 .L58:
@@ -1053,16 +1105,16 @@ builder_scanner_scan_meta:
 .L59:
 	bl	builder_scanner_empty_meta
 .L60:
-	ldr	x19, [x29, 72]
-	ldr	x20, [x29, 64]
-	ldr	x21, [x29, 56]
-	ldr	x22, [x29, 48]
-	ldr	x23, [x29, 40]
-	ldr	x24, [x29, 32]
-	ldr	x25, [x29, 24]
-	ldr	x26, [x29, 16]
+	ldr	x19, [x29, 88]
+	ldr	x20, [x29, 80]
+	ldr	x21, [x29, 72]
+	ldr	x22, [x29, 64]
+	ldr	x23, [x29, 56]
+	ldr	x24, [x29, 48]
+	ldr	x25, [x29, 40]
+	ldr	x26, [x29, 32]
 	mov sp, x29
-	ldp	x29, x30, [sp], 80
+	ldp	x29, x30, [sp], 96
 	ret
 .type builder_scanner_scan_meta, @function
 .size builder_scanner_scan_meta, .-builder_scanner_scan_meta
@@ -1074,23 +1126,50 @@ builder_scanner_empty_meta:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x7, donna_nil
-	add	x7, x7, #:lo12:donna_nil
-	adrp	x6, str304
-	add	x6, x6, #:lo12:str304
-	adrp	x5, str303
-	add	x5, x5, #:lo12:str303
-	adrp	x4, str302
-	add	x4, x4, #:lo12:str302
-	adrp	x3, donna_nil
-	add	x3, x3, #:lo12:donna_nil
-	adrp	x2, str301
-	add	x2, x2, #:lo12:str301
-	adrp	x1, str300
-	add	x1, x1, #:lo12:str300
-	adrp	x0, str299
-	add	x0, x0, #:lo12:str299
-	bl	builder_scanner_ProjectMeta
+	mov	x0, #72
+	bl	malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, str314
+	add	x1, x1, #:lo12:str314
+	str	x1, [x2]
+	mov	x1, #16
+	add	x2, x0, x1
+	adrp	x1, str315
+	add	x1, x1, #:lo12:str315
+	str	x1, [x2]
+	mov	x1, #24
+	add	x2, x0, x1
+	adrp	x1, str316
+	add	x1, x1, #:lo12:str316
+	str	x1, [x2]
+	mov	x1, #32
+	add	x2, x0, x1
+	adrp	x1, donna_nil
+	add	x1, x1, #:lo12:donna_nil
+	str	x1, [x2]
+	mov	x1, #40
+	add	x2, x0, x1
+	adrp	x1, str317
+	add	x1, x1, #:lo12:str317
+	str	x1, [x2]
+	mov	x1, #48
+	add	x2, x0, x1
+	adrp	x1, str318
+	add	x1, x1, #:lo12:str318
+	str	x1, [x2]
+	mov	x1, #56
+	add	x2, x0, x1
+	adrp	x1, str319
+	add	x1, x1, #:lo12:str319
+	str	x1, [x2]
+	mov	x1, #64
+	add	x2, x0, x1
+	adrp	x1, donna_nil
+	add	x1, x1, #:lo12:donna_nil
+	str	x1, [x2]
 	ldp	x29, x30, [sp], 16
 	ret
 .type builder_scanner_empty_meta, @function
@@ -1105,8 +1184,8 @@ builder_scanner_parse_licence:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	str	x20, [x29, 16]
-	adrp	x1, str306
-	add	x1, x1, #:lo12:str306
+	adrp	x1, str329
+	add	x1, x1, #:lo12:str329
 	mov	x19, x0
 	bl	parsetoml_parsetoml_get_array
 	mov	x1, x0
@@ -1145,12 +1224,12 @@ builder_scanner_parse_licence:
 .L69:
 	cmp	w3, #0
 	bne	.L72
-	adrp	x2, str348
-	add	x2, x2, #:lo12:str348
+	adrp	x2, str371
+	add	x2, x2, #:lo12:str371
 	str	x2, [x1]
 	mov	x20, x0
-	adrp	x19, str348
-	add	x19, x19, #:lo12:str348
+	adrp	x19, str371
+	add	x19, x19, #:lo12:str371
 	b	.L76
 .L72:
 	mov	x3, #8
@@ -1164,18 +1243,18 @@ builder_scanner_parse_licence:
 	b	.L76
 .L74:
 	mov	x20, x0
-	adrp	x0, str325
-	add	x0, x0, #:lo12:str325
+	adrp	x0, str348
+	add	x0, x0, #:lo12:str348
 	str	x0, [x1]
-	adrp	x19, str325
-	add	x19, x19, #:lo12:str325
+	adrp	x19, str348
+	add	x19, x19, #:lo12:str348
 .L76:
 	mov	x0, x19
 	b	.L79
 .L77:
 	mov	x20, x0
-	adrp	x0, str316
-	add	x0, x0, #:lo12:str316
+	adrp	x0, str339
+	add	x0, x0, #:lo12:str339
 .L79:
 	mov	x19, x0
 	bl	donna_string_is_empty
@@ -1187,8 +1266,8 @@ builder_scanner_parse_licence:
 	cmp	x1, #0
 	beq	.L82
 	mov	x0, x20
-	adrp	x1, str357
-	add	x1, x1, #:lo12:str357
+	adrp	x1, str380
+	add	x1, x1, #:lo12:str380
 	bl	builder_scanner_opt_str
 	str	x0, [x19]
 	b	.L83
@@ -1214,8 +1293,8 @@ builder_scanner_parse_repository:
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
 	str	x22, [x29, 16]
-	adrp	x1, str360
-	add	x1, x1, #:lo12:str360
+	adrp	x1, str383
+	add	x1, x1, #:lo12:str383
 	mov	x19, x0
 	bl	parsetoml_parsetoml_get_table
 	ldr	x1, [x0]
@@ -1224,27 +1303,27 @@ builder_scanner_parse_repository:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, str374
-	add	x1, x1, #:lo12:str374
+	adrp	x1, str397
+	add	x1, x1, #:lo12:str397
 	mov	x20, x0
 	bl	builder_scanner_opt_str
 	mov	x17, x0
 	mov	x0, x20
 	mov	x20, x17
-	adrp	x1, str376
-	add	x1, x1, #:lo12:str376
+	adrp	x1, str399
+	add	x1, x1, #:lo12:str399
 	mov	x21, x0
 	bl	builder_scanner_opt_str
 	mov	x22, x0
 	mov	x0, x21
-	adrp	x1, str378
-	add	x1, x1, #:lo12:str378
+	adrp	x1, str401
+	add	x1, x1, #:lo12:str401
 	bl	builder_scanner_opt_str
 	mov	x1, x0
 	mov	x0, x20
 	mov	x21, x1
-	adrp	x1, str380
-	add	x1, x1, #:lo12:str380
+	adrp	x1, str403
+	add	x1, x1, #:lo12:str403
 	bl	donna_string_equal
 	mov	x1, x0
 	mov	x0, x19
@@ -1253,8 +1332,8 @@ builder_scanner_parse_repository:
 	mov	x19, sp
 	cmp	x1, #1
 	beq	.L87
-	adrp	x1, str402
-	add	x1, x1, #:lo12:str402
+	adrp	x1, str425
+	add	x1, x1, #:lo12:str425
 	bl	builder_scanner_opt_str
 	str	x0, [x19]
 	b	.L94
@@ -1271,31 +1350,31 @@ builder_scanner_parse_repository:
 	mov	x20, sp
 	cmp	x0, #1
 	beq	.L89
-	adrp	x0, str396
-	add	x0, x0, #:lo12:str396
+	adrp	x0, str419
+	add	x0, x0, #:lo12:str419
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str398
-	add	x1, x1, #:lo12:str398
+	adrp	x1, str421
+	add	x1, x1, #:lo12:str421
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
 	str	x0, [x20]
 	b	.L91
 .L89:
-	adrp	x0, str395
-	add	x0, x0, #:lo12:str395
+	adrp	x0, str418
+	add	x0, x0, #:lo12:str418
 	str	x0, [x20]
-	adrp	x0, str395
-	add	x0, x0, #:lo12:str395
+	adrp	x0, str418
+	add	x0, x0, #:lo12:str418
 .L91:
 	str	x0, [x19]
 	b	.L94
 .L92:
 	mov	x0, x19
-	adrp	x1, str370
-	add	x1, x1, #:lo12:str370
+	adrp	x1, str393
+	add	x1, x1, #:lo12:str393
 	bl	builder_scanner_opt_str
 .L94:
 	ldr	x19, [x29, 40]
@@ -1321,16 +1400,16 @@ builder_scanner_github_owner_repo:
 	str	x22, [x29, 16]
 	bl	builder_scanner_strip_trailing_slash
 	bl	builder_scanner_strip_git_suffix
-	adrp	x1, str408
-	add	x1, x1, #:lo12:str408
+	adrp	x1, str431
+	add	x1, x1, #:lo12:str431
 	mov	x19, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #1
 	beq	.L100
-	adrp	x1, str423
-	add	x1, x1, #:lo12:str423
+	adrp	x1, str446
+	add	x1, x1, #:lo12:str446
 	mov	x19, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
@@ -1348,8 +1427,8 @@ builder_scanner_github_owner_repo:
 	b	.L101
 .L99:
 	mov	x20, x0
-	adrp	x0, str423
-	add	x0, x0, #:lo12:str423
+	adrp	x0, str446
+	add	x0, x0, #:lo12:str446
 	bl	donna_string_length
 	mov	x22, x0
 	mov	x0, x20
@@ -1359,24 +1438,24 @@ builder_scanner_github_owner_repo:
 	mov	x0, x20
 	mov	x20, x17
 	mov	x21, x0
-	adrp	x0, str423
-	add	x0, x0, #:lo12:str423
+	adrp	x0, str446
+	add	x0, x0, #:lo12:str446
 	bl	donna_string_length
 	mov	x1, x22
 	mov	x2, x0
 	mov	x0, x21
 	sub	x2, x20, x2
 	bl	donna_string_slice
-	adrp	x1, str435
-	add	x1, x1, #:lo12:str435
+	adrp	x1, str458
+	add	x1, x1, #:lo12:str458
 	bl	donna_string_split
 	bl	builder_scanner_owner_repo_from_parts
 	str	x0, [x19]
 	b	.L101
 .L100:
 	mov	x19, x0
-	adrp	x0, str408
-	add	x0, x0, #:lo12:str408
+	adrp	x0, str431
+	add	x0, x0, #:lo12:str431
 	bl	donna_string_length
 	mov	x21, x0
 	mov	x0, x19
@@ -1386,16 +1465,16 @@ builder_scanner_github_owner_repo:
 	mov	x0, x19
 	mov	x19, x17
 	mov	x20, x0
-	adrp	x0, str408
-	add	x0, x0, #:lo12:str408
+	adrp	x0, str431
+	add	x0, x0, #:lo12:str431
 	bl	donna_string_length
 	mov	x1, x21
 	mov	x2, x0
 	mov	x0, x20
 	sub	x2, x19, x2
 	bl	donna_string_slice
-	adrp	x1, str420
-	add	x1, x1, #:lo12:str420
+	adrp	x1, str443
+	add	x1, x1, #:lo12:str443
 	bl	donna_string_split
 	bl	builder_scanner_owner_repo_from_parts
 .L101:
@@ -1480,12 +1559,19 @@ builder_scanner_owner_repo_from_parts:
 	cmp	x2, #1
 	beq	.L114
 	mov	x20, x1
-	adrp	x1, str484
-	add	x1, x1, #:lo12:str484
+	adrp	x1, str507
+	add	x1, x1, #:lo12:str507
 	bl	__rt_str_concat
 	mov	x1, x20
 	bl	__rt_str_concat
-	bl	donna_option_Some
+	mov	x20, x0
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	.L116
 .L114:
@@ -1512,8 +1598,8 @@ builder_scanner_strip_trailing_slash:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, str490
-	add	x1, x1, #:lo12:str490
+	adrp	x1, str514
+	add	x1, x1, #:lo12:str514
 	mov	x19, x0
 	bl	donna_string_ends_with
 	mov	x1, x0
@@ -1543,8 +1629,8 @@ builder_scanner_strip_git_suffix:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, str501
-	add	x1, x1, #:lo12:str501
+	adrp	x1, str525
+	add	x1, x1, #:lo12:str525
 	mov	x19, x0
 	bl	donna_string_ends_with
 	mov	x1, x0
@@ -1573,8 +1659,8 @@ builder_scanner_parse_links:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x1, str512
-	add	x1, x1, #:lo12:str512
+	adrp	x1, str536
+	add	x1, x1, #:lo12:str536
 	bl	parsetoml_parsetoml_get_array
 	ldr	x1, [x0]
 	cmp	x1, #1
@@ -1652,8 +1738,8 @@ builder_scanner_collect_links:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, str555
-	add	x1, x1, #:lo12:str555
+	adrp	x1, str579
+	add	x1, x1, #:lo12:str579
 	mov	x21, x0
 	bl	builder_scanner_lookup_pair
 	mov	x2, x0
@@ -1664,11 +1750,11 @@ builder_scanner_collect_links:
 	ldr	x3, [x2]
 	cmp	x3, #0
 	beq	.L138
-	adrp	x2, str565
-	add	x2, x2, #:lo12:str565
+	adrp	x2, str589
+	add	x2, x2, #:lo12:str589
 	str	x2, [x1]
-	adrp	x22, str565
-	add	x22, x22, #:lo12:str565
+	adrp	x22, str589
+	add	x22, x22, #:lo12:str589
 	b	.L139
 .L138:
 	mov	x3, #8
@@ -1676,8 +1762,8 @@ builder_scanner_collect_links:
 	ldr	x22, [x2]
 	str	x22, [x1]
 .L139:
-	adrp	x1, str567
-	add	x1, x1, #:lo12:str567
+	adrp	x1, str591
+	add	x1, x1, #:lo12:str591
 	bl	builder_scanner_lookup_pair
 	mov	x2, x0
 	mov	x0, x20
@@ -1687,11 +1773,11 @@ builder_scanner_collect_links:
 	ldr	x3, [x2]
 	cmp	x3, #0
 	beq	.L142
-	adrp	x2, str577
-	add	x2, x2, #:lo12:str577
+	adrp	x2, str601
+	add	x2, x2, #:lo12:str601
 	str	x2, [x1]
-	adrp	x21, str577
-	add	x21, x21, #:lo12:str577
+	adrp	x21, str601
+	add	x21, x21, #:lo12:str601
 	b	.L143
 .L142:
 	mov	x3, #8
@@ -1778,9 +1864,15 @@ builder_scanner_lookup_pair:
 	str	x0, [x19]
 	b	.L152
 .L151:
-	adrp	x0, str598
-	add	x0, x0, #:lo12:str598
-	bl	parsetoml_parsetoml_TomlString
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, str622
+	add	x1, x1, #:lo12:str622
+	str	x1, [x2]
 .L152:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -1802,8 +1894,8 @@ builder_scanner_opt_str:
 	ldr	x1, [x0]
 	cmp	x1, #0
 	beq	.L155
-	adrp	x0, str628
-	add	x0, x0, #:lo12:str628
+	adrp	x0, str653
+	add	x0, x0, #:lo12:str653
 	b	.L156
 .L155:
 	mov	x1, #8

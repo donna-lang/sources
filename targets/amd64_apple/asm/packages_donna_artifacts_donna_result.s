@@ -105,21 +105,30 @@ _donna_result_map:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
 	cmpl $0, %eax
 	jnz Lbb16
-	movq 8(%rdi), %rdi
-	callq _donna_result_Error
+	movq 8(%rdi), %rbx
+	movl $16, %edi
+	callq _malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
 	jmp Lbb17
 Lbb16:
 	movq 8(%rdi), %rdi
 	callq *%rsi
-	movq %rax, %rdi
-	callq _donna_result_Ok
+	movq %rax, %rbx
+	movl $16, %edi
+	callq _malloc
+	movq $0, (%rax)
+	movq %rbx, 8(%rax)
 Lbb17:
+	popq %rbx
 	leave
 	ret
 /* end function donna_result_map */
@@ -131,6 +140,8 @@ _donna_result_map_error:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	setz %al
@@ -139,13 +150,20 @@ _donna_result_map_error:
 	jnz Lbb20
 	movq 8(%rdi), %rdi
 	callq *%rsi
-	movq %rax, %rdi
-	callq _donna_result_Error
+	movq %rax, %rbx
+	movl $16, %edi
+	callq _malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
 	jmp Lbb21
 Lbb20:
-	movq 8(%rdi), %rdi
-	callq _donna_result_Ok
+	movq 8(%rdi), %rbx
+	movl $16, %edi
+	callq _malloc
+	movq $0, (%rax)
+	movq %rbx, 8(%rax)
 Lbb21:
+	popq %rbx
 	leave
 	ret
 /* end function donna_result_map_error */
@@ -157,19 +175,25 @@ _donna_result_then:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
 	cmpl $0, %eax
 	jnz Lbb24
-	movq 8(%rdi), %rdi
-	callq _donna_result_Error
+	movq 8(%rdi), %rbx
+	movl $16, %edi
+	callq _malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
 	jmp Lbb25
 Lbb24:
 	movq 8(%rdi), %rdi
 	callq *%rsi
 Lbb25:
+	popq %rbx
 	leave
 	ret
 /* end function donna_result_then */

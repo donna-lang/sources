@@ -104,8 +104,9 @@ donna_option_unwrap:
 .globl donna_option_map
 donna_option_map:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
+	str	x19, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
 	beq	.L16
@@ -113,13 +114,21 @@ donna_option_map:
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	blr	x1
-	bl	donna_option_Some
+	mov	x19, x0
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 	b	.L17
 .L16:
 	adrp	x0, donna_option_None
 	add	x0, x0, #:lo12:donna_option_None
 .L17:
-	ldp	x29, x30, [sp], 16
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
 	ret
 .type donna_option_map, @function
 .size donna_option_map, .-donna_option_map
@@ -199,20 +208,19 @@ donna_option_filter:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
+	str	x20, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
 	beq	.L34
 	mov	x2, #8
 	add	x0, x0, x2
-	ldr	x0, [x0]
-	mov	x19, x0
+	ldr	x20, [x0]
+	mov	x0, x20
 	blr	x1
-	mov	x1, x0
-	mov	x0, x19
-	mov	x2, #16
-	sub	sp, sp, x2
+	mov	x1, #16
+	sub	sp, sp, x1
 	mov	x19, sp
-	cmp	x1, #1
+	cmp	x0, #1
 	beq	.L33
 	adrp	x0, donna_option_None
 	add	x0, x0, #:lo12:donna_option_None
@@ -221,7 +229,13 @@ donna_option_filter:
 	add	x0, x0, #:lo12:donna_option_None
 	b	.L35
 .L33:
-	bl	donna_option_Some
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	.L35
 .L34:
@@ -229,6 +243,7 @@ donna_option_filter:
 	add	x0, x0, #:lo12:donna_option_None
 .L35:
 	ldr	x19, [x29, 24]
+	ldr	x20, [x29, 16]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
 	ret

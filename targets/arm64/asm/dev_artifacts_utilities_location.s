@@ -1,41 +1,41 @@
 .data
 .balign 8
-str73:
+str82:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str78:
+str87:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str86:
+str95:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str91:
+str100:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str117:
+str135:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str134:
+str152:
 	.ascii "src/"
 	.byte 0
 /* end data */
@@ -122,16 +122,40 @@ utilities_location_zero:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	mov	x2, #0
-	mov	x1, #1
+	str	x20, [x29, 16]
+	mov	x20, x0
+	mov	x0, #32
+	bl	malloc
 	mov	x19, x0
+	mov	x0, #0
+	str	x0, [x19]
+	mov	x0, #8
+	add	x1, x19, x0
 	mov	x0, #1
-	bl	utilities_location_Position
-	mov	x1, x0
-	mov	x0, x19
-	mov	x2, x1
-	bl	utilities_location_Span
+	str	x0, [x1]
+	mov	x0, #16
+	add	x1, x19, x0
+	mov	x0, #1
+	str	x0, [x1]
+	mov	x0, #24
+	add	x1, x19, x0
+	mov	x0, #0
+	str	x0, [x1]
+	mov	x0, #32
+	bl	malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x19, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x19, [x1]
 	ldr	x19, [x29, 24]
+	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
 	ret
 .type utilities_location_zero, @function
@@ -143,10 +167,33 @@ utilities_location_zero:
 .globl utilities_location_from_positions
 utilities_location_from_positions:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -48]!
 	mov	x29, sp
-	bl	utilities_location_Span
-	ldp	x29, x30, [sp], 16
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x21, x2
+	mov	x20, x1
+	mov	x19, x0
+	mov	x0, #32
+	bl	malloc
+	mov	x2, x21
+	mov	x1, x20
+	mov	x3, #0
+	str	x3, [x0]
+	mov	x3, #8
+	add	x3, x0, x3
+	str	x19, [x3]
+	mov	x3, #16
+	add	x3, x0, x3
+	str	x1, [x3]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x2, [x1]
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
 	ret
 .type utilities_location_from_positions, @function
 .size utilities_location_from_positions, .-utilities_location_from_positions
@@ -289,8 +336,8 @@ utilities_location_label:
 	mov	x0, x19
 	mov	x19, x17
 	bl	utilities_location_span_file
-	adrp	x1, str73
-	add	x1, x1, #:lo12:str73
+	adrp	x1, str82
+	add	x1, x1, #:lo12:str82
 	bl	__rt_str_concat
 	mov	x20, x0
 	mov	x0, x19
@@ -299,8 +346,8 @@ utilities_location_label:
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str78
-	add	x1, x1, #:lo12:str78
+	adrp	x1, str87
+	add	x1, x1, #:lo12:str87
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -334,8 +381,8 @@ utilities_location_short_label:
 	mov	x19, x17
 	bl	utilities_location_span_file
 	bl	utilities_location_strip_src_prefix
-	adrp	x1, str86
-	add	x1, x1, #:lo12:str86
+	adrp	x1, str95
+	add	x1, x1, #:lo12:str95
 	bl	__rt_str_concat
 	mov	x20, x0
 	mov	x0, x19
@@ -344,8 +391,8 @@ utilities_location_short_label:
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str91
-	add	x1, x1, #:lo12:str91
+	adrp	x1, str100
+	add	x1, x1, #:lo12:str100
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -368,28 +415,38 @@ utilities_location_short_label:
 .globl utilities_location_merge
 utilities_location_merge:
 	hint	#34
-	stp	x29, x30, [sp, -32]!
+	stp	x29, x30, [sp, -48]!
 	mov	x29, sp
-	str	x19, [x29, 24]
-	str	x20, [x29, 16]
-	mov	x20, x1
-	mov	x19, x0
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x19, x1
+	mov	x20, x0
 	bl	utilities_location_span_file
-	mov	x17, x0
-	mov	x0, x19
-	mov	x19, x17
-	bl	utilities_location_span_start
-	mov	x17, x0
+	mov	x21, x0
 	mov	x0, x20
-	mov	x20, x17
-	bl	utilities_location_span_end
-	mov	x1, x20
-	mov	x2, x0
+	bl	utilities_location_span_start
+	mov	x20, x0
 	mov	x0, x19
-	bl	utilities_location_Span
-	ldr	x19, [x29, 24]
-	ldr	x20, [x29, 16]
-	ldp	x29, x30, [sp], 32
+	bl	utilities_location_span_end
+	mov	x19, x0
+	mov	x0, #32
+	bl	malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x20, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x19, [x1]
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
 	ret
 .type utilities_location_merge, @function
 .size utilities_location_merge, .-utilities_location_merge
@@ -425,62 +482,63 @@ utilities_location_scan_pos:
 	str	x22, [x29, 32]
 	str	x23, [x29, 24]
 	str	x24, [x29, 16]
-	mov	x23, x4
-	mov	x22, x2
+	mov	x24, x4
+	mov	x22, x3
+	mov	x21, x2
+	cmp	x1, x24
 	mov	x20, x1
-	mov	x1, x3
-	cmp	x20, x23
-	mov	x21, x1
 	cset	x1, ge
 	cmp	x1, #1
 	beq	.L38
 	mov	x19, x0
 	bl	donna_string_length
-	mov	x2, x23
+	mov	x3, x22
+	mov	x2, x21
 	mov	x1, x20
-	mov	x3, x0
+	mov	x4, x0
 	mov	x0, x19
-	cmp	x1, x3
-	mov	x24, x2
+	cmp	x1, x4
+	mov	x22, x2
 	cset	x2, ge
+	mov	x23, x3
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
 	beq	.L36
-	mov	x23, x1
+	mov	x21, x1
 	mov	x20, x0
 	bl	donna_string_char_at
-	mov	x1, x23
-	mov	x23, x1
-	adrp	x1, str117
-	add	x1, x1, #:lo12:str117
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, str135
+	add	x1, x1, #:lo12:str135
 	bl	strcmp
-	mov	x2, x24
-	mov	x1, x23
-	mov	x3, x0
-	mov	x0, x20
-	cmp	x3, #0
-	cset	x3, eq
-	mov	x4, #16
-	sub	sp, sp, x4
-	mov	x20, sp
-	mov	x4, #1
-	add	x1, x1, x4
-	cmp	x3, #1
-	beq	.L34
-	mov	x3, #1
-	add	x3, x21, x3
-	mov	x4, x2
+	mov	x4, x24
+	mov	x3, x23
 	mov	x2, x22
+	mov	x1, x21
+	mov	x5, x0
+	mov	x0, x20
+	cmp	x5, #0
+	cset	x5, eq
+	mov	x6, #16
+	sub	sp, sp, x6
+	mov	x20, sp
+	mov	x6, #1
+	add	x1, x1, x6
+	cmp	x5, #1
+	beq	.L34
+	mov	x5, #1
+	add	x3, x3, x5
 	bl	utilities_location_scan_pos
 	str	x0, [x20]
 	b	.L35
 .L34:
-	mov	x21, x2
+	mov	x22, x2
 	mov	x2, #1
 	add	x2, x22, x2
-	mov	x4, x21
+	mov	x21, x4
 	mov	x3, #1
 	bl	utilities_location_scan_pos
 	str	x0, [x20]
@@ -488,17 +546,44 @@ utilities_location_scan_pos:
 	str	x0, [x19]
 	b	.L40
 .L36:
-	mov	x2, x24
-	mov	x1, x21
-	mov	x0, x22
-	bl	utilities_location_Position
+	mov	x21, x24
+	mov	x20, x23
+	mov	x0, #32
+	bl	malloc
+	mov	x2, x22
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x2, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x20, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x21, [x1]
 	str	x0, [x19]
 	b	.L40
 .L38:
-	mov	x2, x23
-	mov	x1, x21
-	mov	x0, x22
-	bl	utilities_location_Position
+	mov	x20, x22
+	mov	x19, x21
+	mov	x21, x24
+	mov	x0, #32
+	bl	malloc
+	mov	x4, x21
+	mov	x3, x20
+	mov	x2, x19
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x2, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x3, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x4, [x1]
 .L40:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
@@ -522,8 +607,8 @@ utilities_location_strip_src_prefix:
 	str	x19, [x29, 40]
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
-	adrp	x1, str134
-	add	x1, x1, #:lo12:str134
+	adrp	x1, str152
+	add	x1, x1, #:lo12:str152
 	mov	x19, x0
 	bl	donna_string_index_of
 	mov	x1, x0
@@ -547,8 +632,8 @@ utilities_location_strip_src_prefix:
 	mov	x20, x0
 	mov	x0, x19
 	mov	x21, x1
-	adrp	x1, str134
-	add	x1, x1, #:lo12:str134
+	adrp	x1, str152
+	add	x1, x1, #:lo12:str152
 	mov	x19, x0
 	mov	x0, x20
 	bl	donna_string_index_of

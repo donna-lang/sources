@@ -230,294 +230,294 @@ donna_nil:
 
 .data
 .balign 8
-str217:
+str231:
 	.ascii "%"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str225:
+str239:
 	.ascii "$"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str243:
+str257:
 	.ascii "d_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str252:
+str266:
 	.ascii "w"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str257:
+str271:
 	.ascii "l"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str262:
+str276:
 	.ascii "s"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str267:
-	.ascii "d"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str272:
-	.ascii "z"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str273:
-	.ascii "b"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str281:
-	.ascii "w"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str286:
-	.ascii "l"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str291:
-	.ascii "s"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str296:
 	.ascii "d"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str301:
+str286:
+	.ascii "z"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str287:
+	.ascii "b"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str295:
 	.ascii "w"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str302:
-	.ascii "w"
+str300:
+	.ascii "l"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str305:
+	.ascii "s"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str310:
-	.ascii "ceql"
+	.ascii "d"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str315:
+	.ascii "w"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str316:
+	.ascii "w"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str324:
+	.ascii "ceql"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str329:
 	.ascii "cnel"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str320:
+str334:
 	.ascii "csltl"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str325:
+str339:
 	.ascii "cslel"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str330:
+str344:
 	.ascii "csgtl"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str335:
+str349:
 	.ascii "csgel"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str340:
+str354:
 	.ascii "ceqw"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str345:
+str359:
 	.ascii "cnew"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str350:
+str364:
 	.ascii "csltw"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str355:
+str369:
 	.ascii "cslew"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str360:
+str374:
 	.ascii "csgtw"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str365:
+str379:
 	.ascii "csgew"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str370:
+str384:
 	.ascii "ceqd"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str375:
+str389:
 	.ascii "cned"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str380:
+str394:
 	.ascii "cltd"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str385:
+str399:
 	.ascii "cled"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str390:
+str404:
 	.ascii "cgtd"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str395:
+str409:
 	.ascii "cged"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str400:
+str414:
 	.ascii "ceqs"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str405:
+str419:
 	.ascii "cnes"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str410:
+str424:
 	.ascii "clts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str415:
+str429:
 	.ascii "cles"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str420:
+str434:
 	.ascii "cgts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str421:
+str435:
 	.ascii "cges"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str429:
+str443:
 	.ascii "export "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str434:
+str448:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str441:
+str455:
 	.ascii "section "
 	.byte 34
 	.byte 0
@@ -525,7 +525,7 @@ str441:
 
 .data
 .balign 8
-str443:
+str457:
 	.byte 34
 	.ascii " export "
 	.byte 0
@@ -533,7 +533,7 @@ str443:
 
 .data
 .balign 8
-str447:
+str461:
 	.ascii "section "
 	.byte 34
 	.byte 0
@@ -541,7 +541,7 @@ str447:
 
 .data
 .balign 8
-str449:
+str463:
 	.byte 34
 	.ascii " "
 	.byte 0
@@ -549,175 +549,161 @@ str449:
 
 .data
 .balign 8
-str462:
+str476:
 	.ascii "add "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str465:
+str479:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str477:
+str491:
 	.ascii "sub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str480:
+str494:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str492:
+str506:
 	.ascii "mul "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str495:
+str509:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str507:
+str521:
 	.ascii "div "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str510:
+str524:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str522:
+str536:
 	.ascii "rem "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str525:
+str539:
 	.ascii ", "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str535:
-	.ascii "neg "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str546:
-	.ascii "and "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str549:
+	.ascii "neg "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str560:
+	.ascii "and "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str563:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str561:
+str575:
 	.ascii "or "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str564:
+str578:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str576:
+str590:
 	.ascii "xor "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str579:
+str593:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str591:
+str605:
 	.ascii "sar "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str594:
+str608:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str606:
+str620:
 	.ascii "shr "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str609:
+str623:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str621:
+str635:
 	.ascii "shl "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str624:
-	.ascii ", "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str641:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str645:
+str638:
 	.ascii ", "
 	.byte 0
 /* end data */
@@ -725,440 +711,454 @@ str645:
 .data
 .balign 8
 str655:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str659:
+	.ascii ", "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str669:
 	.ascii "alloc4 "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str664:
+str678:
 	.ascii "alloc8 "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str673:
+str687:
 	.ascii "alloc16 "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str684:
+str698:
 	.ascii "storew "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str687:
+str701:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str699:
+str713:
 	.ascii "storel "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str702:
+str716:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str714:
+str728:
 	.ascii "stores "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str717:
+str731:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str729:
+str743:
 	.ascii "stored "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str732:
+str746:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str744:
+str758:
 	.ascii "storeb "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str747:
+str761:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str759:
+str773:
 	.ascii "storeh "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str762:
+str776:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str772:
+str786:
 	.ascii "loadw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str781:
+str795:
 	.ascii "loadl "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str790:
+str804:
 	.ascii "loads "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str799:
+str813:
 	.ascii "loadd "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str808:
+str822:
 	.ascii "loadsb "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str817:
+str831:
 	.ascii "loadub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str826:
+str840:
 	.ascii "loadsh "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str835:
+str849:
 	.ascii "loaduh "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str844:
+str858:
 	.ascii "loadsw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str853:
+str867:
 	.ascii "loaduw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str862:
+str876:
 	.ascii "extsw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str871:
+str885:
 	.ascii "extuw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str880:
+str894:
 	.ascii "extsb "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str889:
+str903:
 	.ascii "extub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str898:
+str912:
 	.ascii "exts "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str907:
+str921:
 	.ascii "truncd "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str916:
+str930:
 	.ascii "stosi "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str925:
+str939:
 	.ascii "dtosi "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str934:
+str948:
 	.ascii "cast "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str943:
+str957:
 	.ascii "copy "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str958:
+str972:
 	.ascii "ret"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str961:
+str975:
 	.ascii "ret "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str971:
+str985:
 	.ascii "jmp @"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str983:
+str997:
 	.ascii "jnz "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str986:
-	.ascii ", @"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str989:
-	.ascii ", @"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 str1000:
-	.ascii "call "
+	.ascii ", @"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str1003:
-	.ascii "("
+	.ascii ", @"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1007:
-	.ascii ")"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1025:
-	.ascii "..."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1027:
-	.ascii ", ..."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1036:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1037:
-	.ascii ", "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1041:
+str1014:
 	.ascii "call "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1044:
+str1017:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1048:
+str1021:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1052:
-	.ascii "phi "
+str1039:
+	.ascii "..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1069:
-	.ascii " ="
+str1041:
+	.ascii ", ..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1073:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1088:
-	.ascii "@"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1090:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1092:
+str1050:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1115:
-	.ascii ""
+str1051:
+	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1119:
-	.ascii " "
+str1055:
+	.ascii "call "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1125:
-	.ascii "function "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1128:
-	.ascii "$"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1131:
+str1058:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1134:
+str1062:
+	.ascii ")"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1066:
+	.ascii "phi "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1083:
+	.ascii " ="
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1087:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1102:
+	.ascii "@"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1104:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1106:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1129:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1133:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1139:
+	.ascii "function "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1142:
+	.ascii "$"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1145:
+	.ascii "("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1148:
 	.ascii ") {"
 	.byte 10
 	.byte 0
@@ -1166,14 +1166,14 @@ str1134:
 
 .data
 .balign 8
-str1136:
+str1150:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1139:
+str1153:
 	.ascii "}"
 	.byte 10
 	.byte 0
@@ -1181,77 +1181,77 @@ str1139:
 
 .data
 .balign 8
-str1158:
+str1172:
 	.ascii "$"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1162:
+str1176:
 	.ascii "$"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1164:
+str1178:
 	.ascii " +"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1185:
+str1199:
 	.ascii "d_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1205:
+str1219:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1208:
+str1222:
 	.ascii "align "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1211:
+str1225:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1216:
+str1230:
 	.ascii "data $"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1219:
+str1233:
 	.ascii " = "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1222:
+str1236:
 	.ascii "{ "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1225:
+str1239:
 	.ascii " }"
 	.byte 10
 	.byte 0
@@ -1259,50 +1259,43 @@ str1225:
 
 .data
 .balign 8
-str1237:
+str1251:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1240:
+str1254:
 	.byte 9
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1243:
+str1257:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1252:
+str1266:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1264:
+str1278:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1277:
+str1291:
 	.ascii "@"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1279:
-	.ascii " "
 	.byte 0
 /* end data */
 
@@ -1315,21 +1308,28 @@ str1293:
 
 .data
 .balign 8
-str1310:
+str1307:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1324:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1311:
+str1325:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1331:
+str1345:
 	.byte 34
 	.byte 34
 	.byte 0
@@ -1337,43 +1337,22 @@ str1331:
 
 .data
 .balign 8
-str1333:
+str1347:
 	.byte 34
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1335:
+str1349:
 	.byte 34
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1343:
+str1357:
 	.ascii ", b "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1368:
-	.ascii ", b "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1372:
-	.byte 34
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1374:
-	.byte 34
 	.byte 0
 /* end data */
 
@@ -1386,28 +1365,49 @@ str1382:
 
 .data
 .balign 8
-str1385:
-	.ascii ", b "
+str1386:
+	.byte 34
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str1388:
+	.byte 34
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1396:
 	.ascii ", b "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1394:
-	.ascii ""
+str1399:
+	.ascii ", b "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str1402:
+	.ascii ", b "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1408:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1416:
 	.ascii ", "
 	.byte 0
 /* end data */
@@ -3006,10 +3006,19 @@ compiler_codegen_il_new_block:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
 	subq $32, %rsp
-	leaq donna_nil(%rip), %rdx
-	callq compiler_codegen_il_Block
+	movq %rcx, %rsi
+	movl $24, %ecx
+	callq malloc
+	movq %rsi, %rcx
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rcx, 8(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 16(%rax)
+	popq %rsi
 	leave
 	ret
 /* end function compiler_codegen_il_new_block */
@@ -3025,8 +3034,8 @@ compiler_codegen_il_add_stmt:
 	pushq %rbx
 	pushq %rsi
 	pushq %rdi
-	movq %rdx, %rdi
-	movq 8(%rcx), %rsi
+	movq %rdx, %rsi
+	movq 8(%rcx), %rdi
 	movq 16(%rcx), %rcx
 	subq $32, %rsp
 	movq %rcx, %rbx
@@ -3036,17 +3045,20 @@ compiler_codegen_il_add_stmt:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	movq $1, (%rdx)
-	movq %rdi, 8(%rdx)
+	movq %rsi, 8(%rdx)
 	leaq donna_nil(%rip), %rax
 	movq %rax, 16(%rdx)
 	subq $32, %rsp
 	callq donna_list_append
-	movq %rsi, %rcx
-	movq %rax, %rdx
+	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq compiler_codegen_il_Block
+	movl $24, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rdi, 8(%rax)
+	movq %rsi, 16(%rax)
 	popq %rdi
 	popq %rsi
 	popq %rbx
@@ -3061,21 +3073,33 @@ compiler_codegen_il_assign_inst:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
+	pushq %rbx
+	pushq %r12
 	pushq %rsi
-	movq %rcx, %rsi
-	movq %rdx, %rcx
-	movq %r8, %rdx
-	movq %r9, %r8
+	pushq %rdi
+	movq %r9, %r12
+	movq %r8, %rbx
+	movq %rdx, %rsi
 	subq $32, %rsp
-	callq compiler_codegen_il_Assign
-	movq %rsi, %rcx
+	movq %rcx, %rdi
+	movl $32, %ecx
+	callq malloc
+	movq %r12, %r9
+	movq %rbx, %r8
+	movq %rdi, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
+	movq $0, (%rdx)
+	movq %rsi, 8(%rdx)
+	movq %r8, 16(%rdx)
+	movq %r9, 24(%rdx)
 	subq $32, %rsp
 	callq compiler_codegen_il_add_stmt
 	subq $-32, %rsp
+	popq %rdi
 	popq %rsi
+	popq %r12
+	popq %rbx
 	leave
 	ret
 /* end function compiler_codegen_il_assign_inst */
@@ -3087,18 +3111,22 @@ compiler_codegen_il_volatile_inst:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
 	pushq %rsi
-	movq %rcx, %rsi
-	movq %rdx, %rcx
+	pushq %rdi
+	movq %rdx, %rsi
 	subq $32, %rsp
-	callq compiler_codegen_il_Volatile
-	movq %rsi, %rcx
+	movq %rcx, %rdi
+	movl $16, %ecx
+	callq malloc
+	movq %rdi, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
+	movq $1, (%rdx)
+	movq %rsi, 8(%rdx)
 	subq $32, %rsp
 	callq compiler_codegen_il_add_stmt
 	subq $-32, %rsp
+	popq %rdi
 	popq %rsi
 	leave
 	ret
@@ -3112,10 +3140,14 @@ compiler_codegen_il_new_module:
 	pushq %rbp
 	movq %rsp, %rbp
 	subq $32, %rsp
-	leaq donna_nil(%rip), %rdx
-	leaq donna_nil(%rip), %rcx
-	callq compiler_codegen_il_ILModule
+	movl $24, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $0, (%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 8(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 16(%rax)
 	leave
 	ret
 /* end function compiler_codegen_il_new_module */
@@ -3148,12 +3180,15 @@ compiler_codegen_il_add_function:
 	movq %rax, 16(%rdx)
 	subq $32, %rsp
 	callq donna_list_append
-	movq %rsi, %rdx
-	movq %rax, %rcx
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq compiler_codegen_il_ILModule
+	movl $24, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rdi, 8(%rax)
+	movq %rsi, 16(%rax)
 	popq %rdi
 	popq %rsi
 	popq %rbx
@@ -3172,8 +3207,8 @@ compiler_codegen_il_add_data_def:
 	pushq %rbx
 	pushq %rsi
 	pushq %rdi
-	movq %rdx, %rdi
-	movq 8(%rcx), %rsi
+	movq %rdx, %rsi
+	movq 8(%rcx), %rdi
 	movq 16(%rcx), %rcx
 	subq $32, %rsp
 	movq %rcx, %rbx
@@ -3183,17 +3218,20 @@ compiler_codegen_il_add_data_def:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	movq $1, (%rdx)
-	movq %rdi, 8(%rdx)
+	movq %rsi, 8(%rdx)
 	leaq donna_nil(%rip), %rax
 	movq %rax, 16(%rdx)
 	subq $32, %rsp
 	callq donna_list_append
-	movq %rsi, %rcx
-	movq %rax, %rdx
+	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq compiler_codegen_il_ILModule
+	movl $24, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rdi, 8(%rax)
+	movq %rsi, 16(%rax)
 	popq %rdi
 	popq %rsi
 	popq %rbx
@@ -3222,7 +3260,7 @@ compiler_codegen_il_display_value:
 	jz Lbb149
 	movq 8(%rcx), %rdx
 	subq $32, %rsp
-	leaq str243(%rip), %rcx
+	leaq str257(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb153
@@ -3241,14 +3279,14 @@ Lbb150:
 Lbb151:
 	movq 8(%rcx), %rdx
 	subq $32, %rsp
-	leaq str225(%rip), %rcx
+	leaq str239(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb153
 Lbb152:
 	movq 8(%rcx), %rdx
 	subq $32, %rsp
-	leaq str217(%rip), %rcx
+	leaq str231(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 Lbb153:
@@ -3272,22 +3310,22 @@ compiler_codegen_il_display_type:
 	jz Lbb161
 	cmpq $4, %rax
 	jz Lbb160
-	leaq str273(%rip), %rax
+	leaq str287(%rip), %rax
 	jmp Lbb165
 Lbb160:
-	leaq str272(%rip), %rax
+	leaq str286(%rip), %rax
 	jmp Lbb165
 Lbb161:
-	leaq str267(%rip), %rax
+	leaq str281(%rip), %rax
 	jmp Lbb165
 Lbb162:
-	leaq str262(%rip), %rax
+	leaq str276(%rip), %rax
 	jmp Lbb165
 Lbb163:
-	leaq str257(%rip), %rax
+	leaq str271(%rip), %rax
 	jmp Lbb165
 Lbb164:
-	leaq str252(%rip), %rax
+	leaq str266(%rip), %rax
 Lbb165:
 	ret
 /* end function compiler_codegen_il_display_type */
@@ -3308,22 +3346,22 @@ compiler_codegen_il_into_abi:
 	jz Lbb173
 	cmpq $4, %rax
 	jz Lbb172
-	leaq str302(%rip), %rax
+	leaq str316(%rip), %rax
 	jmp Lbb177
 Lbb172:
-	leaq str301(%rip), %rax
+	leaq str315(%rip), %rax
 	jmp Lbb177
 Lbb173:
-	leaq str296(%rip), %rax
+	leaq str310(%rip), %rax
 	jmp Lbb177
 Lbb174:
-	leaq str291(%rip), %rax
+	leaq str305(%rip), %rax
 	jmp Lbb177
 Lbb175:
-	leaq str286(%rip), %rax
+	leaq str300(%rip), %rax
 	jmp Lbb177
 Lbb176:
-	leaq str281(%rip), %rax
+	leaq str295(%rip), %rax
 Lbb177:
 	ret
 /* end function compiler_codegen_il_into_abi */
@@ -3380,76 +3418,76 @@ compiler_codegen_il_display_comp:
 	jz Lbb203
 	cmpq $22, %rax
 	jz Lbb202
-	leaq str421(%rip), %rax
+	leaq str435(%rip), %rax
 	jmp Lbb225
 Lbb202:
-	leaq str420(%rip), %rax
+	leaq str434(%rip), %rax
 	jmp Lbb225
 Lbb203:
-	leaq str415(%rip), %rax
+	leaq str429(%rip), %rax
 	jmp Lbb225
 Lbb204:
-	leaq str410(%rip), %rax
+	leaq str424(%rip), %rax
 	jmp Lbb225
 Lbb205:
-	leaq str405(%rip), %rax
+	leaq str419(%rip), %rax
 	jmp Lbb225
 Lbb206:
-	leaq str400(%rip), %rax
+	leaq str414(%rip), %rax
 	jmp Lbb225
 Lbb207:
-	leaq str395(%rip), %rax
+	leaq str409(%rip), %rax
 	jmp Lbb225
 Lbb208:
-	leaq str390(%rip), %rax
+	leaq str404(%rip), %rax
 	jmp Lbb225
 Lbb209:
-	leaq str385(%rip), %rax
+	leaq str399(%rip), %rax
 	jmp Lbb225
 Lbb210:
-	leaq str380(%rip), %rax
+	leaq str394(%rip), %rax
 	jmp Lbb225
 Lbb211:
-	leaq str375(%rip), %rax
+	leaq str389(%rip), %rax
 	jmp Lbb225
 Lbb212:
-	leaq str370(%rip), %rax
+	leaq str384(%rip), %rax
 	jmp Lbb225
 Lbb213:
-	leaq str365(%rip), %rax
+	leaq str379(%rip), %rax
 	jmp Lbb225
 Lbb214:
-	leaq str360(%rip), %rax
+	leaq str374(%rip), %rax
 	jmp Lbb225
 Lbb215:
-	leaq str355(%rip), %rax
+	leaq str369(%rip), %rax
 	jmp Lbb225
 Lbb216:
-	leaq str350(%rip), %rax
+	leaq str364(%rip), %rax
 	jmp Lbb225
 Lbb217:
-	leaq str345(%rip), %rax
+	leaq str359(%rip), %rax
 	jmp Lbb225
 Lbb218:
-	leaq str340(%rip), %rax
+	leaq str354(%rip), %rax
 	jmp Lbb225
 Lbb219:
-	leaq str335(%rip), %rax
+	leaq str349(%rip), %rax
 	jmp Lbb225
 Lbb220:
-	leaq str330(%rip), %rax
+	leaq str344(%rip), %rax
 	jmp Lbb225
 Lbb221:
-	leaq str325(%rip), %rax
+	leaq str339(%rip), %rax
 	jmp Lbb225
 Lbb222:
-	leaq str320(%rip), %rax
+	leaq str334(%rip), %rax
 	jmp Lbb225
 Lbb223:
-	leaq str315(%rip), %rax
+	leaq str329(%rip), %rax
 	jmp Lbb225
 Lbb224:
-	leaq str310(%rip), %rax
+	leaq str324(%rip), %rax
 Lbb225:
 	ret
 /* end function compiler_codegen_il_display_comp */
@@ -3473,32 +3511,32 @@ compiler_codegen_il_display_linkage:
 	jnz Lbb230
 	movq 8(%rcx), %rdx
 	subq $32, %rsp
-	leaq str447(%rip), %rcx
+	leaq str461(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str449(%rip), %rdx
+	leaq str463(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb233
 Lbb230:
 	movq 8(%rcx), %rdx
 	subq $32, %rsp
-	leaq str441(%rip), %rcx
+	leaq str455(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str443(%rip), %rdx
+	leaq str457(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb233
 Lbb231:
-	leaq str434(%rip), %rax
+	leaq str448(%rip), %rax
 	jmp Lbb233
 Lbb232:
-	leaq str429(%rip), %rax
+	leaq str443(%rip), %rax
 Lbb233:
 	leave
 	ret
@@ -3623,7 +3661,7 @@ compiler_codegen_il_display_inst:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1052(%rip), %rcx
+	leaq str1066(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3645,7 +3683,7 @@ Lbb282:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1027(%rip), %rdx
+	leaq str1041(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rcx
 	movq %rax, %rdx
@@ -3655,9 +3693,9 @@ Lbb282:
 	jmp Lbb288
 Lbb285:
 	movq %rdi, %rcx
-	leaq str1025(%rip), %rax
+	leaq str1039(%rip), %rax
 	movq %rax, (%rsi)
-	leaq str1025(%rip), %rax
+	leaq str1039(%rip), %rax
 	movq %rax, %rdi
 Lbb288:
 	subq $32, %rsp
@@ -3676,7 +3714,7 @@ Lbb288:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rbx
-	leaq str1037(%rip), %rcx
+	leaq str1051(%rip), %rcx
 	callq __rt_str_concat
 	movq %rbx, %rcx
 	movq %rax, %rdx
@@ -3686,9 +3724,9 @@ Lbb288:
 	jmp Lbb294
 Lbb291:
 	movq %rbx, %rcx
-	leaq str1036(%rip), %rax
+	leaq str1050(%rip), %rax
 	movq %rax, (%rsi)
-	leaq str1036(%rip), %rax
+	leaq str1050(%rip), %rax
 	movq %rax, %rsi
 Lbb294:
 	subq $32, %rsp
@@ -3696,14 +3734,14 @@ Lbb294:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1041(%rip), %rcx
+	leaq str1055(%rip), %rcx
 	callq __rt_str_concat
 	movq %rdi, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rdi
-	leaq str1044(%rip), %rdx
+	leaq str1058(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rdx
 	movq %rax, %rcx
@@ -3718,7 +3756,7 @@ Lbb294:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1048(%rip), %rdx
+	leaq str1062(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3732,12 +3770,12 @@ Lbb295:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str1000(%rip), %rcx
+	leaq str1014(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1003(%rip), %rdx
+	leaq str1017(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -3752,7 +3790,7 @@ Lbb295:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1007(%rip), %rdx
+	leaq str1021(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3765,14 +3803,14 @@ Lbb296:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str983(%rip), %rcx
+	leaq str997(%rip), %rcx
 	callq __rt_str_concat
 	movq %rdi, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rdi
-	leaq str986(%rip), %rdx
+	leaq str1000(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rdx
 	movq %rax, %rcx
@@ -3784,7 +3822,7 @@ Lbb296:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str989(%rip), %rdx
+	leaq str1003(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -3796,7 +3834,7 @@ Lbb296:
 Lbb297:
 	movq 8(%rax), %rdx
 	subq $32, %rsp
-	leaq str971(%rip), %rcx
+	leaq str985(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3813,15 +3851,15 @@ Lbb298:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str961(%rip), %rcx
+	leaq str975(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	movq %rax, (%rsi)
 	jmp Lbb343
 Lbb300:
-	leaq str958(%rip), %rax
+	leaq str972(%rip), %rax
 	movq %rax, (%rsi)
-	leaq str958(%rip), %rax
+	leaq str972(%rip), %rax
 	jmp Lbb343
 Lbb301:
 	movq 8(%rax), %rcx
@@ -3830,7 +3868,7 @@ Lbb301:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str943(%rip), %rcx
+	leaq str957(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3841,7 +3879,7 @@ Lbb302:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str934(%rip), %rcx
+	leaq str948(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3852,7 +3890,7 @@ Lbb303:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str925(%rip), %rcx
+	leaq str939(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3863,7 +3901,7 @@ Lbb304:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str916(%rip), %rcx
+	leaq str930(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3874,7 +3912,7 @@ Lbb305:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str907(%rip), %rcx
+	leaq str921(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3885,7 +3923,7 @@ Lbb306:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str898(%rip), %rcx
+	leaq str912(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3896,7 +3934,7 @@ Lbb307:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str889(%rip), %rcx
+	leaq str903(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3907,7 +3945,7 @@ Lbb308:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str880(%rip), %rcx
+	leaq str894(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3918,7 +3956,7 @@ Lbb309:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str871(%rip), %rcx
+	leaq str885(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3929,7 +3967,7 @@ Lbb310:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str862(%rip), %rcx
+	leaq str876(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3940,7 +3978,7 @@ Lbb311:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str853(%rip), %rcx
+	leaq str867(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3951,7 +3989,7 @@ Lbb312:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str844(%rip), %rcx
+	leaq str858(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3962,7 +4000,7 @@ Lbb313:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str835(%rip), %rcx
+	leaq str849(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3973,7 +4011,7 @@ Lbb314:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str826(%rip), %rcx
+	leaq str840(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3984,7 +4022,7 @@ Lbb315:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str817(%rip), %rcx
+	leaq str831(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -3995,7 +4033,7 @@ Lbb316:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str808(%rip), %rcx
+	leaq str822(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4006,7 +4044,7 @@ Lbb317:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str799(%rip), %rcx
+	leaq str813(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4017,7 +4055,7 @@ Lbb318:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str790(%rip), %rcx
+	leaq str804(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4028,7 +4066,7 @@ Lbb319:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str781(%rip), %rcx
+	leaq str795(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4039,7 +4077,7 @@ Lbb320:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str772(%rip), %rcx
+	leaq str786(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4053,12 +4091,12 @@ Lbb321:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str759(%rip), %rcx
+	leaq str773(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str762(%rip), %rdx
+	leaq str776(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4082,12 +4120,12 @@ Lbb322:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str744(%rip), %rcx
+	leaq str758(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str747(%rip), %rdx
+	leaq str761(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4111,12 +4149,12 @@ Lbb323:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str729(%rip), %rcx
+	leaq str743(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str732(%rip), %rdx
+	leaq str746(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4140,12 +4178,12 @@ Lbb324:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str714(%rip), %rcx
+	leaq str728(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str717(%rip), %rdx
+	leaq str731(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4169,12 +4207,12 @@ Lbb325:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str699(%rip), %rcx
+	leaq str713(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str702(%rip), %rdx
+	leaq str716(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4198,12 +4236,12 @@ Lbb326:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str684(%rip), %rcx
+	leaq str698(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str687(%rip), %rdx
+	leaq str701(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4224,7 +4262,7 @@ Lbb327:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str673(%rip), %rcx
+	leaq str687(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4235,7 +4273,7 @@ Lbb328:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str664(%rip), %rcx
+	leaq str678(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4246,7 +4284,7 @@ Lbb329:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str655(%rip), %rcx
+	leaq str669(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4259,7 +4297,7 @@ Lbb330:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str641(%rip), %rdx
+	leaq str655(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rcx
 	movq %rax, %rdi
@@ -4274,7 +4312,7 @@ Lbb330:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str645(%rip), %rdx
+	leaq str659(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4298,12 +4336,12 @@ Lbb331:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str621(%rip), %rcx
+	leaq str635(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str624(%rip), %rdx
+	leaq str638(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4327,12 +4365,12 @@ Lbb332:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str606(%rip), %rcx
+	leaq str620(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str609(%rip), %rdx
+	leaq str623(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4356,12 +4394,12 @@ Lbb333:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str591(%rip), %rcx
+	leaq str605(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str594(%rip), %rdx
+	leaq str608(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4385,12 +4423,12 @@ Lbb334:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str576(%rip), %rcx
+	leaq str590(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str579(%rip), %rdx
+	leaq str593(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4414,12 +4452,12 @@ Lbb335:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str561(%rip), %rcx
+	leaq str575(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str564(%rip), %rdx
+	leaq str578(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4443,12 +4481,12 @@ Lbb336:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str546(%rip), %rcx
+	leaq str560(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str549(%rip), %rdx
+	leaq str563(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4469,7 +4507,7 @@ Lbb337:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str535(%rip), %rcx
+	leaq str549(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb343
@@ -4483,12 +4521,12 @@ Lbb338:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str522(%rip), %rcx
+	leaq str536(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str525(%rip), %rdx
+	leaq str539(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4512,12 +4550,12 @@ Lbb339:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str507(%rip), %rcx
+	leaq str521(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str510(%rip), %rdx
+	leaq str524(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4541,12 +4579,12 @@ Lbb340:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str492(%rip), %rcx
+	leaq str506(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str495(%rip), %rdx
+	leaq str509(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4570,12 +4608,12 @@ Lbb341:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str477(%rip), %rcx
+	leaq str491(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str480(%rip), %rdx
+	leaq str494(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4599,12 +4637,12 @@ Lbb342:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str462(%rip), %rcx
+	leaq str476(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str465(%rip), %rdx
+	leaq str479(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4657,7 +4695,7 @@ Lbb346:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1069(%rip), %rdx
+	leaq str1083(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rcx
 	movq %rax, %rdi
@@ -4672,7 +4710,7 @@ Lbb346:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1073(%rip), %rdx
+	leaq str1087(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -4712,18 +4750,18 @@ compiler_codegen_il_display_block:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str1088(%rip), %rcx
+	leaq str1102(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1090(%rip), %rdx
+	leaq str1104(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1092(%rip), %rdx
+	leaq str1106(%rip), %rdx
 	callq donna_string_join
 	movq %rsi, %rcx
 	movq %rax, %rdx
@@ -4772,14 +4810,14 @@ compiler_codegen_il_display_function:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rbx
-	leaq str1119(%rip), %rdx
+	leaq str1133(%rip), %rdx
 	callq __rt_str_concat
 	movq %r12, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
 	jmp Lbb354
 Lbb352:
-	leaq str1115(%rip), %rax
+	leaq str1129(%rip), %rax
 	movq %rax, %rdx
 Lbb354:
 	subq $32, %rsp
@@ -4804,7 +4842,7 @@ Lbb354:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %r12
-	leaq str1125(%rip), %rdx
+	leaq str1139(%rip), %rdx
 	callq __rt_str_concat
 	movq %r12, %rdx
 	movq %rax, %rcx
@@ -4816,7 +4854,7 @@ Lbb354:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rbx
-	leaq str1128(%rip), %rdx
+	leaq str1142(%rip), %rdx
 	callq __rt_str_concat
 	movq %rbx, %rdx
 	movq %rax, %rcx
@@ -4828,7 +4866,7 @@ Lbb354:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rdi
-	leaq str1131(%rip), %rdx
+	leaq str1145(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rdx
 	movq %rax, %rcx
@@ -4838,13 +4876,13 @@ Lbb354:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1134(%rip), %rdx
+	leaq str1148(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1136(%rip), %rdx
+	leaq str1150(%rip), %rdx
 	callq donna_string_join
 	movq %rsi, %rcx
 	movq %rax, %rdx
@@ -4854,7 +4892,7 @@ Lbb354:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1139(%rip), %rdx
+	leaq str1153(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	popq %rdi
@@ -4887,7 +4925,7 @@ compiler_codegen_il_display_data_item:
 	jz Lbb360
 	movq 8(%rcx), %rdx
 	subq $32, %rsp
-	leaq str1185(%rip), %rcx
+	leaq str1199(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	jmp Lbb365
@@ -4914,12 +4952,12 @@ Lbb362:
 	movq 8(%rax), %rcx
 	subq $32, %rsp
 	movq %rcx, %rdi
-	leaq str1162(%rip), %rcx
+	leaq str1176(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1164(%rip), %rdx
+	leaq str1178(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rcx
 	movq %rax, %rdi
@@ -4936,7 +4974,7 @@ Lbb362:
 	jmp Lbb365
 Lbb364:
 	subq $32, %rsp
-	leaq str1158(%rip), %rcx
+	leaq str1172(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	movq %rax, (%rsi)
@@ -4982,14 +5020,14 @@ compiler_codegen_il_display_data_def:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rdi
-	leaq str1208(%rip), %rcx
+	leaq str1222(%rip), %rcx
 	callq __rt_str_concat
 	movq %rbx, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rbx
-	leaq str1211(%rip), %rdx
+	leaq str1225(%rip), %rdx
 	callq __rt_str_concat
 	movq %rbx, %rdx
 	movq %rdi, %rcx
@@ -4998,7 +5036,7 @@ compiler_codegen_il_display_data_def:
 	jmp Lbb371
 Lbb368:
 	movq %rbx, %rdx
-	leaq str1205(%rip), %rax
+	leaq str1219(%rip), %rax
 	movq %rax, %rdi
 Lbb371:
 	subq $32, %rsp
@@ -5015,7 +5053,7 @@ Lbb371:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rbx
-	leaq str1216(%rip), %rdx
+	leaq str1230(%rip), %rdx
 	callq __rt_str_concat
 	movq %rbx, %rdx
 	movq %rax, %rcx
@@ -5027,7 +5065,7 @@ Lbb371:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rdi
-	leaq str1219(%rip), %rdx
+	leaq str1233(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rdx
 	movq %rax, %rcx
@@ -5039,7 +5077,7 @@ Lbb371:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str1222(%rip), %rdx
+	leaq str1236(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -5049,7 +5087,7 @@ Lbb371:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1225(%rip), %rdx
+	leaq str1239(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	popq %rdi
@@ -5088,7 +5126,7 @@ compiler_codegen_il_display_module:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1237(%rip), %rdx
+	leaq str1251(%rip), %rdx
 	callq donna_string_join
 	subq $-32, %rsp
 	popq %rsi
@@ -5107,12 +5145,12 @@ compiler_codegen_il_display_stmt_indented:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1240(%rip), %rcx
+	leaq str1254(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1243(%rip), %rdx
+	leaq str1257(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	leave
@@ -5135,7 +5173,7 @@ compiler_codegen_il_display_param:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1252(%rip), %rdx
+	leaq str1266(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -5169,7 +5207,7 @@ compiler_codegen_il_display_call_arg:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1264(%rip), %rdx
+	leaq str1278(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -5217,12 +5255,12 @@ compiler_codegen_il_display_phi_pred:
 	movq 8(%rcx), %rcx
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str1277(%rip), %rcx
+	leaq str1291(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1279(%rip), %rdx
+	leaq str1293(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -5274,7 +5312,7 @@ compiler_codegen_il_display_typed_item:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1293(%rip), %rdx
+	leaq str1307(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -5339,9 +5377,9 @@ compiler_codegen_il_escape_str_for_qbe:
 	subq $-32, %rsp
 	subq $48, %rsp
 	movq %rsp, %rdx
-	leaq str1311(%rip), %rax
+	leaq str1325(%rip), %rax
 	movq %rax, 32(%rdx)
-	leaq str1310(%rip), %r9
+	leaq str1324(%rip), %r9
 	movl $0, %edx
 	callq compiler_codegen_il_escape_str_loop
 	subq $-48, %rsp
@@ -5447,14 +5485,14 @@ Lbb396:
 	cmpq $1, %rax
 	jz Lbb405
 	subq $32, %rsp
-	leaq str1372(%rip), %rcx
+	leaq str1386(%rip), %rcx
 	callq __rt_str_concat
 	movq %r12, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %r13
-	leaq str1374(%rip), %rdx
+	leaq str1388(%rip), %rdx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -5475,7 +5513,7 @@ Lbb396:
 	jz Lbb401
 	subq $32, %rsp
 	movq %rdx, %r13
-	leaq str1385(%rip), %rdx
+	leaq str1399(%rip), %rdx
 	movq %rcx, %r12
 	movq %rax, %rcx
 	callq __rt_str_concat
@@ -5493,7 +5531,7 @@ Lbb396:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %r12
-	leaq str1388(%rip), %rdx
+	leaq str1402(%rip), %rdx
 	callq __rt_str_concat
 	movq %r12, %rdx
 	movq %rax, %rcx
@@ -5514,7 +5552,7 @@ Lbb401:
 	movq %r13, %r12
 	subq $32, %rsp
 	movq %rdx, %r13
-	leaq str1382(%rip), %rdx
+	leaq str1396(%rip), %rdx
 	callq __rt_str_concat
 	movq %r13, %rdx
 	movq %rax, %rcx
@@ -5551,7 +5589,7 @@ Lbb405:
 	jz Lbb408
 	subq $32, %rsp
 	movq %rdx, %r13
-	leaq str1368(%rip), %rdx
+	leaq str1382(%rip), %rdx
 	movq %rcx, %rdi
 	movq %rax, %rcx
 	callq __rt_str_concat
@@ -5579,7 +5617,7 @@ Lbb411:
 	subq $48, %rsp
 	movq %rsp, %rax
 	movq %rdi, 32(%rax)
-	leaq str1394(%rip), %r9
+	leaq str1408(%rip), %r9
 	callq compiler_codegen_il_escape_str_loop
 	subq $-48, %rsp
 	movq %rax, (%rsi)
@@ -5597,12 +5635,12 @@ Lbb412:
 	cmpq $1, %rax
 	jz Lbb419
 	subq $32, %rsp
-	leaq str1333(%rip), %rcx
+	leaq str1347(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str1335(%rip), %rdx
+	leaq str1349(%rip), %rdx
 	callq __rt_str_concat
 	movq %rax, %rbx
 	subq $-32, %rsp
@@ -5617,7 +5655,7 @@ Lbb412:
 	cmpq $1, %rcx
 	jz Lbb416
 	subq $32, %rsp
-	leaq str1343(%rip), %rdx
+	leaq str1357(%rip), %rdx
 	movq %rax, %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
@@ -5649,9 +5687,9 @@ Lbb419:
 	movq %rax, (%rcx)
 	jmp Lbb422
 Lbb421:
-	leaq str1331(%rip), %rax
+	leaq str1345(%rip), %rax
 	movq %rax, (%rcx)
-	leaq str1331(%rip), %rax
+	leaq str1345(%rip), %rax
 Lbb422:
 	movq %rax, (%rsi)
 Lbb423:
@@ -5675,7 +5713,7 @@ compiler_codegen_il_join_comma:
 	pushq %rbp
 	movq %rsp, %rbp
 	subq $32, %rsp
-	leaq str1402(%rip), %rdx
+	leaq str1416(%rip), %rdx
 	callq donna_string_join
 	subq $-32, %rsp
 	leave

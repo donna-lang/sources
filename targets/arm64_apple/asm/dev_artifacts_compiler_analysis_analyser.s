@@ -75,18 +75,19 @@ _compiler_analysis_analyser_analyse_unused_fns:
 .balign 4
 _compiler_analysis_analyser_check_unused_fns:
 	hint	#34
-	stp	x29, x30, [sp, -64]!
+	stp	x29, x30, [sp, -80]!
 	mov	x29, sp
-	str	x19, [x29, 56]
-	str	x20, [x29, 48]
-	str	x21, [x29, 40]
-	str	x22, [x29, 32]
-	str	x23, [x29, 24]
-	str	x24, [x29, 16]
+	str	x19, [x29, 72]
+	str	x20, [x29, 64]
+	str	x21, [x29, 56]
+	str	x22, [x29, 48]
+	str	x23, [x29, 40]
+	str	x24, [x29, 32]
+	str	x25, [x29, 24]
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L21
+	beq	L20
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x20, [x1]
@@ -95,56 +96,63 @@ _compiler_analysis_analyser_check_unused_fns:
 	ldr	x0, [x0]
 	mov	x1, x19
 	bl	_compiler_analysis_analyser_check_unused_fns
-	mov	x23, x0
+	mov	x22, x0
 	mov	x0, x19
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
 	ldr	x1, [x20]
 	cmp	x1, #1
-	beq	L19
+	beq	L18
 	mov	x1, #8
 	add	x1, x20, x1
-	ldr	x22, [x1]
+	ldr	x25, [x1]
 	mov	x1, #16
 	add	x1, x20, x1
-	ldr	x2, [x1]
-	mov	x1, #48
-	add	x1, x20, x1
 	ldr	x1, [x1]
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #48
+	add	x2, x20, x2
+	ldr	x23, [x2]
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x20, sp
-	cmp	x2, #1
-	beq	L16
-	mov	x24, x1
+	cmp	x1, #1
+	beq	L15
 	adrp	x1, _str68@page
 	add	x1, x1, _str68@pageoff
 	mov	x21, x0
-	mov	x0, x22
+	mov	x0, x25
 	bl	_donna_string_equal
-	mov	x1, x24
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x21
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x21, sp
-	cmp	x2, #1
-	beq	L13
-	mov	x24, x1
-	mov	x1, x22
+	cmp	x1, #1
+	beq	L12
+	mov	x1, x25
 	bl	_compiler_analysis_scope_contains_name
-	mov	x1, x24
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x22
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x22, sp
-	cmp	x2, #1
+	cmp	x1, #1
 	beq	L10
-	bl	_errors_error_WarnUnusedFunction
 	mov	x24, x0
-	mov	x0, x23
+	mov	x0, #24
+	bl	_malloc
+	mov	x17, x0
+	mov	x0, x24
+	mov	x24, x17
+	mov	x1, #2
+	str	x1, [x24]
+	mov	x1, #8
+	add	x1, x24, x1
+	str	x25, [x1]
+	mov	x1, #16
+	add	x1, x24, x1
+	str	x23, [x1]
 	mov	x23, x0
 	mov	x0, #24
 	bl	_malloc
@@ -157,41 +165,41 @@ _compiler_analysis_analyser_check_unused_fns:
 	add	x1, x0, x1
 	str	x23, [x1]
 	str	x0, [x22]
-	b	L12
+	b	L11
 L10:
-	mov	x0, x23
 	str	x0, [x22]
+L11:
+	str	x0, [x21]
+	b	L14
 L12:
+	mov	x0, x22
 	str	x0, [x21]
-	b	L15
-L13:
-	mov	x0, x23
-	str	x0, [x21]
+L14:
+	str	x0, [x20]
+	b	L17
 L15:
+	mov	x0, x22
 	str	x0, [x20]
-	b	L18
-L16:
-	mov	x0, x23
-	str	x0, [x20]
+L17:
+	str	x0, [x19]
+	b	L21
 L18:
+	mov	x0, x22
 	str	x0, [x19]
-	b	L22
-L19:
-	mov	x0, x23
-	str	x0, [x19]
-	b	L22
-L21:
+	b	L21
+L20:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L22:
-	ldr	x19, [x29, 56]
-	ldr	x20, [x29, 48]
-	ldr	x21, [x29, 40]
-	ldr	x22, [x29, 32]
-	ldr	x23, [x29, 24]
-	ldr	x24, [x29, 16]
+L21:
+	ldr	x19, [x29, 72]
+	ldr	x20, [x29, 64]
+	ldr	x21, [x29, 56]
+	ldr	x22, [x29, 48]
+	ldr	x23, [x29, 40]
+	ldr	x24, [x29, 32]
+	ldr	x25, [x29, 24]
 	mov sp, x29
-	ldp	x29, x30, [sp], 64
+	ldp	x29, x30, [sp], 80
 	ret
 /* end function compiler_analysis_analyser_check_unused_fns */
 
@@ -223,16 +231,16 @@ _compiler_analysis_analyser_fn_refs:
 	mov	x29, sp
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L27
+	beq	L26
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-	b	L28
-L27:
+	b	L27
+L26:
 	mov	x1, #40
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_analysis_scope_refs_in_expr
-L28:
+L27:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function compiler_analysis_analyser_fn_refs */
@@ -241,49 +249,59 @@ L28:
 .balign 4
 _compiler_analysis_analyser_check_imports:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L35
+	beq	L33
 	mov	x1, #8
 	add	x1, x0, x1
-	ldr	x22, [x1]
+	ldr	x21, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	mov	x1, x19
 	bl	_compiler_analysis_analyser_check_imports
-	mov	x21, x0
+	mov	x20, x0
 	mov	x0, x19
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x19, sp
 	mov	x1, #16
-	add	x1, x22, x1
-	ldr	x20, [x1]
+	add	x1, x21, x1
+	ldr	x23, [x1]
 	mov	x1, #24
-	add	x1, x22, x1
-	ldr	x1, [x1]
-	mov	x22, x1
-	mov	x1, x20
+	add	x1, x21, x1
+	ldr	x21, [x1]
+	mov	x1, x23
 	bl	_compiler_analysis_scope_contains_name
-	mov	x1, x22
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x20
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x20, sp
-	cmp	x2, #1
-	beq	L32
-	bl	_errors_error_WarnUnusedImport
+	cmp	x1, #1
+	beq	L31
 	mov	x22, x0
-	mov	x0, x21
+	mov	x0, #24
+	bl	_malloc
+	mov	x17, x0
+	mov	x0, x22
+	mov	x22, x17
+	mov	x1, #3
+	str	x1, [x22]
+	mov	x1, #8
+	add	x1, x22, x1
+	str	x23, [x1]
+	mov	x1, #16
+	add	x1, x22, x1
+	str	x21, [x1]
 	mov	x21, x0
 	mov	x0, #24
 	bl	_malloc
@@ -296,23 +314,23 @@ _compiler_analysis_analyser_check_imports:
 	add	x1, x0, x1
 	str	x21, [x1]
 	str	x0, [x20]
-	b	L34
-L32:
-	mov	x0, x21
+	b	L32
+L31:
 	str	x0, [x20]
-L34:
+L32:
 	str	x0, [x19]
-	b	L36
-L35:
+	b	L34
+L33:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L36:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
+L34:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 /* end function compiler_analysis_analyser_check_imports */
 
@@ -328,7 +346,7 @@ _compiler_analysis_analyser_analyse_fn:
 	mov	x1, x0
 	ldr	x0, [x1]
 	cmp	x0, #1
-	beq	L39
+	beq	L37
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -352,11 +370,11 @@ _compiler_analysis_analyser_analyse_fn:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_donna_list_append
-	b	L40
-L39:
+	b	L38
+L37:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L40:
+L38:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -368,19 +386,20 @@ L40:
 .balign 4
 _compiler_analysis_analyser_check_params:
 	hint	#34
-	stp	x29, x30, [sp, -64]!
+	stp	x29, x30, [sp, -80]!
 	mov	x29, sp
-	str	x19, [x29, 56]
-	str	x20, [x29, 48]
-	str	x21, [x29, 40]
-	str	x22, [x29, 32]
-	str	x23, [x29, 24]
-	str	x24, [x29, 16]
-	mov	x21, x0
+	str	x19, [x29, 72]
+	str	x20, [x29, 64]
+	str	x21, [x29, 56]
+	str	x22, [x29, 48]
+	str	x23, [x29, 40]
+	str	x24, [x29, 32]
+	str	x25, [x29, 24]
+	mov	x24, x0
 	mov	x0, x2
 	ldr	x2, [x1]
 	cmp	x2, #0
-	beq	L51
+	beq	L48
 	mov	x2, #8
 	add	x2, x1, x2
 	ldr	x20, [x2]
@@ -389,47 +408,55 @@ _compiler_analysis_analyser_check_params:
 	ldr	x1, [x1]
 	mov	x2, x0
 	mov	x19, x0
-	mov	x0, x21
+	mov	x0, x24
 	bl	_compiler_analysis_analyser_check_params
-	mov	x1, x21
-	mov	x22, x0
+	mov	x21, x0
 	mov	x0, x19
-	mov	x2, #16
-	sub	sp, sp, x2
+	mov	x1, #16
+	sub	sp, sp, x1
 	mov	x19, sp
-	mov	x2, #8
-	add	x2, x20, x2
-	ldr	x21, [x2]
-	mov	x23, x1
+	mov	x1, #8
+	add	x1, x20, x1
+	ldr	x25, [x1]
 	mov	x1, #24
 	add	x1, x20, x1
-	ldr	x24, [x1]
+	ldr	x22, [x1]
 	mov	x20, x0
-	mov	x0, x21
+	mov	x0, x25
 	bl	_compiler_analysis_scope_is_discard
-	mov	x1, x23
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x20
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x20, sp
-	cmp	x2, #1
-	beq	L48
-	mov	x23, x1
-	mov	x1, x21
-	bl	_compiler_analysis_scope_contains_name
-	mov	x2, x24
-	mov	x1, x23
-	mov	x3, x0
-	mov	x0, x21
-	mov	x4, #16
-	sub	sp, sp, x4
-	mov	x21, sp
-	cmp	x3, #1
+	cmp	x1, #1
 	beq	L45
-	bl	_errors_error_WarnUnusedParam
+	mov	x1, x25
+	bl	_compiler_analysis_scope_contains_name
+	mov	x1, x0
+	mov	x0, x21
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x21, sp
+	cmp	x1, #1
+	beq	L43
 	mov	x23, x0
-	mov	x0, x22
+	mov	x0, #32
+	bl	_malloc
+	mov	x17, x0
+	mov	x0, x23
+	mov	x23, x17
+	mov	x1, #1
+	str	x1, [x23]
+	mov	x1, #8
+	add	x1, x23, x1
+	str	x25, [x1]
+	mov	x1, #16
+	add	x1, x23, x1
+	str	x24, [x1]
+	mov	x1, #24
+	add	x1, x23, x1
+	str	x22, [x1]
 	mov	x22, x0
 	mov	x0, #24
 	bl	_malloc
@@ -442,31 +469,31 @@ _compiler_analysis_analyser_check_params:
 	add	x1, x0, x1
 	str	x22, [x1]
 	str	x0, [x21]
+	b	L44
+L43:
+	str	x0, [x21]
+L44:
+	str	x0, [x20]
 	b	L47
 L45:
-	mov	x0, x22
-	str	x0, [x21]
+	mov	x0, x21
+	str	x0, [x20]
 L47:
-	str	x0, [x20]
-	b	L50
-L48:
-	mov	x0, x22
-	str	x0, [x20]
-L50:
 	str	x0, [x19]
-	b	L52
-L51:
+	b	L49
+L48:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L52:
-	ldr	x19, [x29, 56]
-	ldr	x20, [x29, 48]
-	ldr	x21, [x29, 40]
-	ldr	x22, [x29, 32]
-	ldr	x23, [x29, 24]
-	ldr	x24, [x29, 16]
+L49:
+	ldr	x19, [x29, 72]
+	ldr	x20, [x29, 64]
+	ldr	x21, [x29, 56]
+	ldr	x22, [x29, 48]
+	ldr	x23, [x29, 40]
+	ldr	x24, [x29, 32]
+	ldr	x25, [x29, 24]
 	mov sp, x29
-	ldp	x29, x30, [sp], 64
+	ldp	x29, x30, [sp], 80
 	ret
 /* end function compiler_analysis_analyser_check_params */
 
@@ -477,44 +504,51 @@ _compiler_analysis_analyser_analyse_expr:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
+	str	x20, [x29, 16]
 	ldr	x1, [x0]
 	cmp	x1, #13
-	beq	L81
-	cmp	x1, #12
-	beq	L80
-	cmp	x1, #15
-	beq	L79
-	cmp	x1, #9
 	beq	L78
-	cmp	x1, #10
+	cmp	x1, #12
 	beq	L77
-	cmp	x1, #14
+	cmp	x1, #15
 	beq	L76
-	cmp	x1, #16
+	cmp	x1, #9
 	beq	L75
-	cmp	x1, #17
+	cmp	x1, #10
 	beq	L74
-	cmp	x1, #6
+	cmp	x1, #14
 	beq	L73
-	cmp	x1, #7
+	cmp	x1, #16
 	beq	L72
-	cmp	x1, #8
+	cmp	x1, #17
 	beq	L71
-	cmp	x1, #11
+	cmp	x1, #6
 	beq	L70
-	cmp	x1, #5
+	cmp	x1, #7
 	beq	L69
-	cmp	x1, #18
+	cmp	x1, #8
 	beq	L68
+	cmp	x1, #11
+	beq	L67
+	cmp	x1, #5
+	beq	L66
+	cmp	x1, #18
+	beq	L65
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-	b	L82
-L68:
+	b	L79
+L65:
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_errors_error_WarnTodo
+	ldr	x20, [x0]
+	mov	x0, #16
+	bl	_malloc
 	mov	x19, x0
+	mov	x0, #5
+	str	x0, [x19]
+	mov	x0, #8
+	add	x0, x19, x0
+	str	x20, [x0]
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
@@ -527,20 +561,20 @@ L68:
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-	b	L82
-L69:
+	b	L79
+L66:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_analysis_analyser_analyse_expr
-	b	L82
-L70:
+	b	L79
+L67:
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_analysis_analyser_analyse_expr
-	b	L82
-L71:
+	b	L79
+L68:
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -558,36 +592,36 @@ L71:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_donna_list_append
-	b	L82
+	b	L79
+L69:
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	adrp	x1, _compiler_analysis_analyser_analyse_expr@page
+	add	x1, x1, _compiler_analysis_analyser_analyse_expr@pageoff
+	bl	_donna_list_flat_map
+	b	L79
+L70:
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	adrp	x1, _compiler_analysis_analyser_analyse_expr@page
+	add	x1, x1, _compiler_analysis_analyser_analyse_expr@pageoff
+	bl	_donna_list_flat_map
+	b	L79
+L71:
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	bl	_compiler_analysis_analyser_analyse_expr
+	b	L79
 L72:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, _compiler_analysis_analyser_analyse_expr@page
-	add	x1, x1, _compiler_analysis_analyser_analyse_expr@pageoff
-	bl	_donna_list_flat_map
-	b	L82
+	bl	_compiler_analysis_analyser_analyse_expr
+	b	L79
 L73:
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	adrp	x1, _compiler_analysis_analyser_analyse_expr@page
-	add	x1, x1, _compiler_analysis_analyser_analyse_expr@pageoff
-	bl	_donna_list_flat_map
-	b	L82
-L74:
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_compiler_analysis_analyser_analyse_expr
-	b	L82
-L75:
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_compiler_analysis_analyser_analyse_expr
-	b	L82
-L76:
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -603,8 +637,8 @@ L76:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_donna_list_append
-	b	L82
-L77:
+	b	L79
+L74:
 	mov	x1, x0
 	mov	x0, #16
 	add	x0, x1, x0
@@ -620,8 +654,8 @@ L77:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_donna_list_append
-	b	L82
-L78:
+	b	L79
+L75:
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -639,14 +673,14 @@ L78:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_donna_list_append
-	b	L82
-L79:
+	b	L79
+L76:
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_analysis_analyser_analyse_expr
-	b	L82
-L80:
+	b	L79
+L77:
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -664,14 +698,15 @@ L80:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_donna_list_append
-	b	L82
-L81:
+	b	L79
+L78:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_analysis_analyser_analyse_block
-L82:
+L79:
 	ldr	x19, [x29, 24]
+	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
 	ret
 /* end function compiler_analysis_analyser_analyse_expr */
@@ -692,7 +727,7 @@ _compiler_analysis_analyser_analyse_clause:
 	ldr	x19, [x1]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L85
+	beq	L82
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -700,12 +735,12 @@ _compiler_analysis_analyser_analyse_clause:
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	b	L87
-L85:
+	b	L84
+L82:
 	mov	x0, x19
 	adrp	x19, _donna_nil@page
 	add	x19, x19, _donna_nil@pageoff
-L87:
+L84:
 	bl	_compiler_analysis_analyser_analyse_expr
 	mov	x1, x0
 	mov	x0, x19
@@ -719,17 +754,18 @@ L87:
 .balign 4
 _compiler_analysis_analyser_analyse_block:
 	hint	#34
-	stp	x29, x30, [sp, -64]!
+	stp	x29, x30, [sp, -80]!
 	mov	x29, sp
-	str	x19, [x29, 56]
-	str	x20, [x29, 48]
-	str	x21, [x29, 40]
-	str	x22, [x29, 32]
-	str	x23, [x29, 24]
-	str	x24, [x29, 16]
+	str	x19, [x29, 72]
+	str	x20, [x29, 64]
+	str	x21, [x29, 56]
+	str	x22, [x29, 48]
+	str	x23, [x29, 40]
+	str	x24, [x29, 32]
+	str	x25, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L108
+	beq	L105
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x23, [x1]
@@ -750,9 +786,9 @@ _compiler_analysis_analyser_analyse_block:
 	mov	x22, x0
 	ldr	x0, [x23]
 	cmp	x0, #0
-	beq	L95
+	beq	L92
 	cmp	x0, #1
-	beq	L93
+	beq	L90
 	mov	x0, #8
 	add	x0, x23, x0
 	ldr	x0, [x0]
@@ -761,8 +797,8 @@ _compiler_analysis_analyser_analyse_block:
 	mov	x21, x1
 	bl	_donna_list_append
 	str	x0, [x19]
-	b	L109
-L93:
+	b	L106
+L90:
 	mov	x21, x20
 	mov	x0, #8
 	add	x0, x23, x0
@@ -781,56 +817,68 @@ L93:
 	mov	x1, x22
 	bl	_compiler_analysis_analyser_check_unused_bindings
 	mov	x1, x21
-	mov	x24, x1
 	bl	_donna_list_append
 	mov	x1, x0
 	mov	x0, x20
 	bl	_donna_list_append
 	str	x0, [x19]
-	b	L109
-L95:
+	b	L106
+L92:
 	mov	x0, x22
-	mov	x24, x20
-	mov	x22, x23
-	mov	x1, #8
-	add	x1, x22, x1
-	ldr	x20, [x1]
-	mov	x21, x0
+	mov	x1, x20
+	mov	x21, x23
+	mov	x2, #8
+	add	x2, x21, x2
+	ldr	x24, [x2]
+	mov	x20, x0
 	mov	x0, #24
-	add	x0, x22, x0
+	add	x0, x21, x0
 	ldr	x0, [x0]
+	mov	x22, x1
 	mov	x1, #32
-	add	x1, x22, x1
+	add	x1, x21, x1
 	ldr	x23, [x1]
 	bl	_compiler_analysis_analyser_analyse_expr
-	mov	x22, x0
-	mov	x0, x21
-	mov	x21, x0
+	mov	x17, x0
 	mov	x0, x20
+	mov	x20, x17
+	mov	x21, x0
+	mov	x0, x24
 	bl	_compiler_analysis_scope_is_discard
-	mov	x1, x23
+	mov	x1, x22
 	mov	x2, x0
 	mov	x0, x21
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x21, sp
 	cmp	x2, #1
-	beq	L104
-	mov	x23, x1
-	mov	x1, x20
+	beq	L101
+	mov	x25, x1
+	mov	x1, x24
 	bl	_compiler_analysis_scope_contains_name
-	mov	x1, x23
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x20
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x20, sp
-	cmp	x2, #1
-	beq	L99
-	bl	_errors_error_WarnUnusedVariable
+	cmp	x1, #1
+	beq	L96
+	mov	x22, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x25
 	mov	x17, x0
 	mov	x0, x22
 	mov	x22, x17
+	mov	x2, #0
+	str	x2, [x22]
+	mov	x2, #8
+	add	x2, x22, x2
+	str	x24, [x2]
+	mov	x24, x1
+	mov	x1, #16
+	add	x1, x22, x1
+	str	x23, [x1]
 	mov	x23, x0
 	mov	x0, #24
 	bl	_malloc
@@ -848,48 +896,47 @@ L95:
 	add	x3, x3, _donna_nil@pageoff
 	str	x3, [x4]
 	str	x2, [x20]
-	b	L102
-L99:
-	mov	x0, x22
-	mov	x1, x24
+	b	L99
+L96:
+	mov	x1, x25
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
 	str	x2, [x20]
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
-L102:
+L99:
 	str	x2, [x21]
 	mov	x20, x0
-	b	L107
-L104:
-	mov	x0, x22
-	mov	x1, x24
+	b	L104
+L101:
+	mov	x0, x20
 	mov	x20, x0
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
 	str	x0, [x21]
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
-L107:
+L104:
 	mov	x0, x2
 	bl	_donna_list_append
 	mov	x1, x0
 	mov	x0, x20
 	bl	_donna_list_append
 	str	x0, [x19]
-	b	L109
-L108:
+	b	L106
+L105:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L109:
-	ldr	x19, [x29, 56]
-	ldr	x20, [x29, 48]
-	ldr	x21, [x29, 40]
-	ldr	x22, [x29, 32]
-	ldr	x23, [x29, 24]
-	ldr	x24, [x29, 16]
+L106:
+	ldr	x19, [x29, 72]
+	ldr	x20, [x29, 64]
+	ldr	x21, [x29, 56]
+	ldr	x22, [x29, 48]
+	ldr	x23, [x29, 40]
+	ldr	x24, [x29, 32]
+	ldr	x25, [x29, 24]
 	mov sp, x29
-	ldp	x29, x30, [sp], 64
+	ldp	x29, x30, [sp], 80
 	ret
 /* end function compiler_analysis_analyser_analyse_block */
 
@@ -897,56 +944,64 @@ L109:
 .balign 4
 _compiler_analysis_analyser_check_unused_bindings:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L119
+	beq	L115
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
 	mov	x2, #16
 	add	x0, x0, x2
 	ldr	x0, [x0]
-	ldr	x20, [x1]
+	ldr	x23, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x1, [x1]
-	mov	x22, x1
+	ldr	x21, [x1]
 	mov	x1, x19
 	bl	_compiler_analysis_analyser_check_unused_bindings
-	mov	x21, x0
+	mov	x20, x0
 	mov	x0, x19
 	mov	x19, x0
-	mov	x0, x20
+	mov	x0, x23
 	bl	_compiler_analysis_scope_is_discard
-	mov	x1, x22
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x19
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x19, sp
-	cmp	x2, #1
-	beq	L117
-	mov	x22, x1
-	mov	x1, x20
+	cmp	x1, #1
+	beq	L113
+	mov	x1, x23
 	bl	_compiler_analysis_scope_contains_name
-	mov	x1, x22
-	mov	x2, x0
+	mov	x1, x0
 	mov	x0, x20
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x20, sp
-	cmp	x2, #1
-	beq	L114
-	bl	_errors_error_WarnUnusedVariable
+	cmp	x1, #1
+	beq	L111
 	mov	x22, x0
-	mov	x0, x21
+	mov	x0, #24
+	bl	_malloc
+	mov	x17, x0
+	mov	x0, x22
+	mov	x22, x17
+	mov	x1, #0
+	str	x1, [x22]
+	mov	x1, #8
+	add	x1, x22, x1
+	str	x23, [x1]
+	mov	x1, #16
+	add	x1, x22, x1
+	str	x21, [x1]
 	mov	x21, x0
 	mov	x0, #24
 	bl	_malloc
@@ -959,27 +1014,27 @@ _compiler_analysis_analyser_check_unused_bindings:
 	add	x1, x0, x1
 	str	x21, [x1]
 	str	x0, [x20]
-	b	L116
-L114:
-	mov	x0, x21
+	b	L112
+L111:
 	str	x0, [x20]
-L116:
+L112:
 	str	x0, [x19]
-	b	L120
-L117:
-	mov	x0, x21
+	b	L116
+L113:
+	mov	x0, x20
 	str	x0, [x19]
-	b	L120
-L119:
+	b	L116
+L115:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L120:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
+L116:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 /* end function compiler_analysis_analyser_check_unused_bindings */
 

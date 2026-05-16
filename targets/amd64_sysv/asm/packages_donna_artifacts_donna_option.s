@@ -86,17 +86,23 @@ donna_option_map:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz .Lbb11
 	movq 8(%rdi), %rdi
 	callq *%rsi
-	movq %rax, %rdi
-	callq donna_option_Some
+	movq %rax, %rbx
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
 	jmp .Lbb12
 .Lbb11:
 	leaq donna_option_None(%rip), %rax
 .Lbb12:
+	popq %rbx
 	leave
 	ret
 .type donna_option_map, @function
@@ -167,15 +173,14 @@ donna_option_filter:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
 	pushq %rbx
+	pushq %r12
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz .Lbb27
-	movq 8(%rdi), %rdi
-	movq %rdi, %rbx
+	movq 8(%rdi), %r12
+	movq %r12, %rdi
 	callq *%rsi
-	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
@@ -185,7 +190,10 @@ donna_option_filter:
 	leaq donna_option_None(%rip), %rax
 	jmp .Lbb28
 .Lbb26:
-	callq donna_option_Some
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
 	jmp .Lbb28
 .Lbb27:
@@ -193,6 +201,7 @@ donna_option_filter:
 .Lbb28:
 	movq %rbp, %rsp
 	subq $16, %rsp
+	popq %r12
 	popq %rbx
 	leave
 	ret
