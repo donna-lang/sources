@@ -18,175 +18,134 @@ str25:
 
 .data
 .balign 8
-str35:
+str36:
 	.ascii "invalid donna.toml: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str40:
+str42:
 	.ascii "name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str48:
+str50:
 	.ascii "donna.toml is missing required field `name`"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str51:
+str54:
 	.ascii "src"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str53:
+str56:
 	.ascii "build"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str88:
+str95:
 	.ascii "bin"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str91:
+str98:
 	.ascii "dev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str94:
+str101:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str97:
+str104:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str102:
+str109:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str105:
+str112:
 	.ascii "test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str261:
+str268:
 	.ascii "donna.toml"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str283:
+str290:
 	.ascii "name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str285:
+str292:
 	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str287:
+str294:
 	.ascii "description"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str289:
+str296:
 	.ascii "authors"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str292:
+str299:
 	.ascii "homepage"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str299:
+str314:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str300:
+str315:
 	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str301:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-donna_nil:
-	.quad 0
-/* end data */
-
-.data
-.balign 8
-str302:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str303:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str304:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str306:
-	.ascii "licences"
 	.byte 0
 /* end data */
 
@@ -199,7 +158,41 @@ str316:
 
 .data
 .balign 8
-str325:
+donna_nil:
+	.quad 0
+/* end data */
+
+.data
+.balign 8
+str317:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str318:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str319:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str329:
+	.ascii "licences"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str339:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -213,175 +206,182 @@ str348:
 
 .data
 .balign 8
-str357:
-	.ascii "licence"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str360:
-	.ascii "repository"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str370:
-	.ascii "repository"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str374:
-	.ascii "type"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str376:
-	.ascii "user"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str378:
-	.ascii "repo"
+str371:
+	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str380:
-	.ascii "github"
+	.ascii "licence"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str395:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str396:
-	.ascii "https://github.com/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str398:
-	.ascii "/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str402:
+str383:
 	.ascii "repository"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str408:
+str393:
+	.ascii "repository"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str397:
+	.ascii "type"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str399:
+	.ascii "user"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str401:
+	.ascii "repo"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str403:
+	.ascii "github"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str418:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str419:
 	.ascii "https://github.com/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str420:
+str421:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str423:
+str425:
+	.ascii "repository"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str431:
+	.ascii "https://github.com/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str443:
+	.ascii "/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str446:
 	.ascii "git@github.com:"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str435:
+str458:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str484:
+str507:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str490:
+str514:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str501:
+str525:
 	.ascii ".git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str512:
+str536:
 	.ascii "links"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str555:
+str579:
 	.ascii "title"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str565:
+str589:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str567:
+str591:
 	.ascii "href"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str577:
+str601:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str598:
+str622:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str628:
+str653:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -520,6 +520,8 @@ builder_scanner_scan:
 	movq %rsp, %rbp
 	pushq %rbx
 	pushq %r12
+	pushq %r13
+	pushq %r14
 	pushq %rsi
 	pushq %rdi
 	movq %rcx, %rbx
@@ -558,7 +560,7 @@ builder_scanner_scan:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str40(%rip), %rdx
+	leaq str42(%rip), %rdx
 	callq parsetoml_parsetoml_get_string
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -574,37 +576,45 @@ builder_scanner_scan:
 	subq $32, %rsp
 	callq parsetoml_parsetoml_unwrap_string
 	movq %rbx, %rcx
+	movq %rax, %r14
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str54(%rip), %rdx
+	movq %rcx, %rbx
+	callq donna_files_join
+	movq %rbx, %rcx
+	movq %rax, %r13
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str56(%rip), %rdx
+	callq donna_files_join
+	movq %rax, %r12
+	subq $-32, %rsp
+	subq $32, %rsp
+	movl $32, %ecx
+	callq malloc
 	movq %rax, %rbx
 	subq $-32, %rsp
+	movq $0, (%rbx)
+	movq %r14, 8(%rbx)
+	movq %r13, 16(%rbx)
+	movq %r12, 24(%rbx)
 	subq $32, %rsp
-	leaq str51(%rip), %rdx
-	movq %rcx, %r12
-	callq donna_files_join
-	movq %r12, %rcx
-	movq %rax, %rdx
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rdx, %r12
-	leaq str53(%rip), %rdx
-	callq donna_files_join
-	movq %r12, %rdx
-	movq %rbx, %rcx
-	movq %rax, %r8
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq builder_scanner_Project
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq builder_scanner_ScanOk
-	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rbx, 8(%rax)
 	movq %rax, (%rdi)
 	jmp Lbb13
 Lbb12:
 	subq $32, %rsp
-	leaq str48(%rip), %rcx
-	callq builder_scanner_ScanErr
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	leaq str50(%rip), %rcx
+	movq %rcx, 8(%rax)
 	movq %rax, (%rdi)
 Lbb13:
 	movq %rax, (%rsi)
@@ -615,25 +625,33 @@ Lbb14:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str35(%rip), %rcx
+	leaq str36(%rip), %rcx
 	callq __rt_str_concat
-	movq %rax, %rcx
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq builder_scanner_ScanErr
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb16
 Lbb15:
 	subq $32, %rsp
-	leaq str25(%rip), %rcx
-	callq builder_scanner_ScanErr
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	leaq str25(%rip), %rcx
+	movq %rcx, 8(%rax)
 Lbb16:
 	movq %rbp, %rsp
-	subq $32, %rsp
+	subq $48, %rsp
 	popq %rdi
 	popq %rsi
+	popq %r14
+	popq %r13
 	popq %r12
 	popq %rbx
 	leave
@@ -679,7 +697,7 @@ builder_scanner_project_bin_dir:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str88(%rip), %rdx
+	leaq str95(%rip), %rdx
 	callq donna_files_join
 	subq $-32, %rsp
 	leave
@@ -698,7 +716,7 @@ builder_scanner_project_dev_dir:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str91(%rip), %rdx
+	leaq str98(%rip), %rdx
 	callq donna_files_join
 	subq $-32, %rsp
 	leave
@@ -717,7 +735,7 @@ builder_scanner_project_dev_artifacts_dir:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str94(%rip), %rdx
+	leaq str101(%rip), %rdx
 	callq donna_files_join
 	subq $-32, %rsp
 	leave
@@ -736,7 +754,7 @@ builder_scanner_project_packages_dir:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str97(%rip), %rdx
+	leaq str104(%rip), %rdx
 	callq donna_files_join
 	subq $-32, %rsp
 	leave
@@ -778,7 +796,7 @@ builder_scanner_project_package_artifacts_dir:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str102(%rip), %rdx
+	leaq str109(%rip), %rdx
 	callq donna_files_join
 	subq $-32, %rsp
 	leave
@@ -797,7 +815,7 @@ builder_scanner_project_test_dir:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str105(%rip), %rdx
+	leaq str112(%rip), %rdx
 	callq donna_files_join
 	subq $-32, %rsp
 	leave
@@ -901,7 +919,7 @@ builder_scanner_scan_meta:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $24, %rsp
+	subq $40, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -910,7 +928,7 @@ builder_scanner_scan_meta:
 	pushq %rsi
 	pushq %rdi
 	subq $32, %rsp
-	leaq str261(%rip), %rdx
+	leaq str268(%rip), %rdx
 	callq donna_files_join
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -935,75 +953,72 @@ builder_scanner_scan_meta:
 	jz Lbb58
 	movq 8(%rax), %rcx
 	subq $32, %rsp
-	leaq str283(%rip), %rdx
+	leaq str290(%rip), %rdx
 	movq %rcx, %rdi
 	callq builder_scanner_opt_str
-	movq %rdi, %rcx
-	movq %rax, %r12
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str285(%rip), %rdx
-	movq %rcx, %rdi
-	callq builder_scanner_opt_str
-	movq %rdi, %rcx
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rdx, %rbx
-	leaq str287(%rip), %rdx
-	movq %rcx, %rdi
-	callq builder_scanner_opt_str
-	movq %rbx, %rdx
-	movq %rdi, %rcx
-	movq %rax, %r14
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rdx, %rbx
-	leaq str289(%rip), %rdx
-	movq %rcx, %rdi
-	callq builder_scanner_str_array
 	movq %rdi, %rcx
 	movq %rax, %r15
 	subq $-32, %rsp
 	subq $32, %rsp
+	leaq str292(%rip), %rdx
+	movq %rcx, %rdi
+	callq builder_scanner_opt_str
+	movq %rdi, %rcx
+	movq %rax, %r14
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str294(%rip), %rdx
+	movq %rcx, %rdi
+	callq builder_scanner_opt_str
+	movq %rdi, %rcx
+	movq %rax, %r13
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str296(%rip), %rdx
+	movq %rcx, %rdi
+	callq builder_scanner_str_array
+	movq %rdi, %rcx
+	movq %rax, %r12
+	subq $-32, %rsp
+	subq $32, %rsp
 	movq %rcx, %rdi
 	callq builder_scanner_parse_licence
-	movq %rbx, %rdx
 	movq %rdi, %rcx
-	movq %rax, %rdi
+	movq %rax, %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdx, %r13
-	leaq str292(%rip), %rdx
-	movq %rcx, %rbx
+	leaq str299(%rip), %rdx
+	movq %rcx, %rdi
 	callq builder_scanner_opt_str
-	movq %rbx, %rcx
-	movq %rax, -8(%rbp)
+	movq %rdi, %rcx
+	movq %rax, -16(%rbp)
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rcx, %rbx
+	movq %rcx, %rdi
 	callq builder_scanner_parse_repository
-	movq %rbx, %rcx
-	movq %rax, -16(%rbp)
-	movq -8(%rbp), %rbx
+	movq %rdi, %rcx
+	movq %rax, -32(%rbp)
+	movq -16(%rbp), %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq builder_scanner_parse_links
-	movq %r15, %r9
-	movq %r14, %r8
-	movq %r13, %rdx
-	movq %r12, %rcx
-	movq %rax, %r11
-	movq -16(%rbp), %r10
+	movq %rax, -24(%rbp)
 	subq $-32, %rsp
-	subq $64, %rsp
-	movq %rsp, %rax
-	movq %r11, 56(%rax)
-	movq %r10, 48(%rax)
+	subq $32, %rsp
+	movl $72, %ecx
+	callq malloc
+	movq -24(%rbp), %rcx
+	movq -32(%rbp), %rdx
+	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %r15, 8(%rax)
+	movq %r14, 16(%rax)
+	movq %r13, 24(%rax)
+	movq %r12, 32(%rax)
 	movq %rbx, 40(%rax)
-	movq %rdi, 32(%rax)
-	callq builder_scanner_ProjectMeta
-	subq $-64, %rsp
+	movq %rdi, 48(%rax)
+	movq %rdx, 56(%rax)
+	movq %rcx, 64(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb60
 Lbb58:
@@ -1018,7 +1033,7 @@ Lbb59:
 	subq $-32, %rsp
 Lbb60:
 	movq %rbp, %rsp
-	subq $80, %rsp
+	subq $96, %rsp
 	popq %rdi
 	popq %rsi
 	popq %r15
@@ -1036,22 +1051,27 @@ builder_scanner_empty_meta:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $64, %rsp
-	movq %rsp, %rcx
-	leaq donna_nil(%rip), %rax
-	movq %rax, 56(%rcx)
-	leaq str304(%rip), %rax
-	movq %rax, 48(%rcx)
-	leaq str303(%rip), %rax
-	movq %rax, 40(%rcx)
-	leaq str302(%rip), %rax
-	movq %rax, 32(%rcx)
-	leaq donna_nil(%rip), %r9
-	leaq str301(%rip), %r8
-	leaq str300(%rip), %rdx
-	leaq str299(%rip), %rcx
-	callq builder_scanner_ProjectMeta
-	subq $-64, %rsp
+	subq $32, %rsp
+	movl $72, %ecx
+	callq malloc
+	subq $-32, %rsp
+	movq $0, (%rax)
+	leaq str314(%rip), %rcx
+	movq %rcx, 8(%rax)
+	leaq str315(%rip), %rcx
+	movq %rcx, 16(%rax)
+	leaq str316(%rip), %rcx
+	movq %rcx, 24(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 32(%rax)
+	leaq str317(%rip), %rcx
+	movq %rcx, 40(%rax)
+	leaq str318(%rip), %rcx
+	movq %rcx, 48(%rax)
+	leaq str319(%rip), %rcx
+	movq %rcx, 56(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 64(%rax)
 	leave
 	ret
 /* end function builder_scanner_empty_meta */
@@ -1065,7 +1085,7 @@ builder_scanner_parse_licence:
 	pushq %rsi
 	pushq %rdi
 	subq $32, %rsp
-	leaq str306(%rip), %rdx
+	leaq str329(%rip), %rdx
 	movq %rcx, %rsi
 	callq parsetoml_parsetoml_get_array
 	movq %rsi, %rcx
@@ -1100,9 +1120,9 @@ Lbb68:
 Lbb69:
 	cmpl $0, %esi
 	jnz Lbb71
-	leaq str348(%rip), %rax
+	leaq str371(%rip), %rax
 	movq %rax, (%rdx)
-	leaq str348(%rip), %rax
+	leaq str371(%rip), %rax
 	jmp Lbb74
 Lbb71:
 	movq 8(%rax), %rax
@@ -1110,12 +1130,12 @@ Lbb71:
 	movq %rax, (%rdx)
 	jmp Lbb74
 Lbb72:
-	leaq str325(%rip), %rax
+	leaq str348(%rip), %rax
 	movq %rax, (%rdx)
-	leaq str325(%rip), %rax
+	leaq str348(%rip), %rax
 	jmp Lbb74
 Lbb73:
-	leaq str316(%rip), %rax
+	leaq str339(%rip), %rax
 Lbb74:
 	movq %rax, %rsi
 	subq $32, %rsp
@@ -1131,7 +1151,7 @@ Lbb74:
 	cmpq $0, %rdx
 	jz Lbb76
 	subq $32, %rsp
-	leaq str357(%rip), %rdx
+	leaq str380(%rip), %rdx
 	callq builder_scanner_opt_str
 	subq $-32, %rsp
 	movq %rax, (%rsi)
@@ -1158,7 +1178,7 @@ builder_scanner_parse_repository:
 	pushq %rsi
 	pushq %rdi
 	subq $32, %rsp
-	leaq str360(%rip), %rdx
+	leaq str383(%rip), %rdx
 	movq %rcx, %rsi
 	callq parsetoml_parsetoml_get_table
 	movq %rsi, %rcx
@@ -1169,28 +1189,28 @@ builder_scanner_parse_repository:
 	jz Lbb85
 	movq 8(%rax), %rcx
 	subq $32, %rsp
-	leaq str374(%rip), %rdx
+	leaq str397(%rip), %rdx
 	movq %rcx, %rdi
 	callq builder_scanner_opt_str
 	movq %rdi, %rcx
 	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str376(%rip), %rdx
+	leaq str399(%rip), %rdx
 	movq %rcx, %rbx
 	callq builder_scanner_opt_str
 	movq %rbx, %rcx
 	movq %rax, %r12
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str378(%rip), %rdx
+	leaq str401(%rip), %rdx
 	callq builder_scanner_opt_str
 	movq %rdi, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rbx
-	leaq str380(%rip), %rdx
+	leaq str403(%rip), %rdx
 	callq donna_string_equal
 	movq %rsi, %rcx
 	subq $-32, %rsp
@@ -1199,7 +1219,7 @@ builder_scanner_parse_repository:
 	cmpq $1, %rax
 	jz Lbb81
 	subq $32, %rsp
-	leaq str402(%rip), %rdx
+	leaq str425(%rip), %rdx
 	callq builder_scanner_opt_str
 	subq $-32, %rsp
 	movq %rax, (%rsi)
@@ -1221,14 +1241,14 @@ Lbb81:
 	cmpq $1, %rax
 	jz Lbb83
 	subq $32, %rsp
-	leaq str396(%rip), %rcx
+	leaq str419(%rip), %rcx
 	callq __rt_str_concat
 	movq %rbx, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rbx
-	leaq str398(%rip), %rdx
+	leaq str421(%rip), %rdx
 	callq __rt_str_concat
 	movq %rbx, %rdx
 	movq %rax, %rcx
@@ -1239,16 +1259,16 @@ Lbb81:
 	movq %rax, (%rdi)
 	jmp Lbb84
 Lbb83:
-	leaq str395(%rip), %rax
+	leaq str418(%rip), %rax
 	movq %rax, (%rdi)
-	leaq str395(%rip), %rax
+	leaq str418(%rip), %rax
 Lbb84:
 	movq %rax, (%rsi)
 	jmp Lbb87
 Lbb85:
 	movq %rsi, %rcx
 	subq $32, %rsp
-	leaq str370(%rip), %rdx
+	leaq str393(%rip), %rdx
 	callq builder_scanner_opt_str
 	subq $-32, %rsp
 Lbb87:
@@ -1281,7 +1301,7 @@ builder_scanner_github_owner_repo:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str408(%rip), %rdx
+	leaq str431(%rip), %rdx
 	movq %rcx, %rsi
 	callq donna_string_starts_with
 	movq %rsi, %rcx
@@ -1289,7 +1309,7 @@ builder_scanner_github_owner_repo:
 	cmpq $1, %rax
 	jz Lbb92
 	subq $32, %rsp
-	leaq str423(%rip), %rdx
+	leaq str446(%rip), %rdx
 	movq %rcx, %rsi
 	callq donna_string_starts_with
 	movq %rsi, %rcx
@@ -1305,7 +1325,7 @@ builder_scanner_github_owner_repo:
 Lbb91:
 	subq $32, %rsp
 	movq %rcx, %rdi
-	leaq str423(%rip), %rcx
+	leaq str446(%rip), %rcx
 	callq donna_string_length
 	movq %rdi, %rcx
 	movq %rax, %r12
@@ -1318,7 +1338,7 @@ Lbb91:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rbx
-	leaq str423(%rip), %rcx
+	leaq str446(%rip), %rcx
 	callq donna_string_length
 	movq %r12, %rdx
 	movq %rbx, %rcx
@@ -1330,7 +1350,7 @@ Lbb91:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str435(%rip), %rdx
+	leaq str458(%rip), %rdx
 	callq donna_string_split
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -1342,7 +1362,7 @@ Lbb91:
 Lbb92:
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str408(%rip), %rcx
+	leaq str431(%rip), %rcx
 	callq donna_string_length
 	movq %rsi, %rcx
 	movq %rax, %rbx
@@ -1355,7 +1375,7 @@ Lbb92:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rdi
-	leaq str408(%rip), %rcx
+	leaq str431(%rip), %rcx
 	callq donna_string_length
 	movq %rbx, %rdx
 	movq %rdi, %rcx
@@ -1367,7 +1387,7 @@ Lbb92:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str420(%rip), %rdx
+	leaq str443(%rip), %rdx
 	callq donna_string_split
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -1451,18 +1471,21 @@ Lbb104:
 	jz Lbb106
 	subq $32, %rsp
 	movq %rdx, %rdi
-	leaq str484(%rip), %rdx
+	leaq str507(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq __rt_str_concat
-	movq %rax, %rcx
+	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq donna_option_Some
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb107
 Lbb106:
@@ -1489,7 +1512,7 @@ builder_scanner_strip_trailing_slash:
 	pushq %rsi
 	movq %rcx, %rsi
 	subq $32, %rsp
-	leaq str490(%rip), %rdx
+	leaq str514(%rip), %rdx
 	movq %rsi, %rcx
 	callq donna_string_ends_with
 	subq $-32, %rsp
@@ -1527,7 +1550,7 @@ builder_scanner_strip_git_suffix:
 	pushq %rsi
 	movq %rcx, %rsi
 	subq $32, %rsp
-	leaq str501(%rip), %rdx
+	leaq str525(%rip), %rdx
 	movq %rsi, %rcx
 	callq donna_string_ends_with
 	subq $-32, %rsp
@@ -1562,7 +1585,7 @@ builder_scanner_parse_links:
 	pushq %rbp
 	movq %rsp, %rbp
 	subq $32, %rsp
-	leaq str512(%rip), %rdx
+	leaq str536(%rip), %rdx
 	callq parsetoml_parsetoml_get_array
 	subq $-32, %rsp
 	movq (%rax), %rcx
@@ -1627,7 +1650,7 @@ Lbb127:
 	movq 16(%rcx), %rdi
 	movq 8(%rax), %rcx
 	subq $32, %rsp
-	leaq str555(%rip), %rdx
+	leaq str579(%rip), %rdx
 	movq %rcx, %rbx
 	callq builder_scanner_lookup_pair
 	movq %rbx, %rcx
@@ -1638,9 +1661,9 @@ Lbb127:
 	movq (%rdx), %r8
 	cmpq $0, %r8
 	jz Lbb130
-	leaq str565(%rip), %rdx
+	leaq str589(%rip), %rdx
 	movq %rdx, (%rax)
-	leaq str565(%rip), %rax
+	leaq str589(%rip), %rax
 	movq %rax, %r12
 	jmp Lbb131
 Lbb130:
@@ -1648,7 +1671,7 @@ Lbb130:
 	movq %r12, (%rax)
 Lbb131:
 	subq $32, %rsp
-	leaq str567(%rip), %rdx
+	leaq str591(%rip), %rdx
 	callq builder_scanner_lookup_pair
 	movq %rdi, %rcx
 	movq %rax, %rdx
@@ -1658,9 +1681,9 @@ Lbb131:
 	movq (%rdx), %rdi
 	cmpq $0, %rdi
 	jz Lbb134
-	leaq str577(%rip), %rdx
+	leaq str601(%rip), %rdx
 	movq %rdx, (%rax)
-	leaq str577(%rip), %rax
+	leaq str601(%rip), %rax
 	movq %rax, %rbx
 	jmp Lbb135
 Lbb134:
@@ -1746,9 +1769,12 @@ Lbb142:
 	jmp Lbb144
 Lbb143:
 	subq $32, %rsp
-	leaq str598(%rip), %rcx
-	callq parsetoml_parsetoml_TomlString
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $0, (%rax)
+	leaq str622(%rip), %rcx
+	movq %rcx, 8(%rax)
 Lbb144:
 	movq %rbp, %rsp
 	subq $32, %rsp
@@ -1771,7 +1797,7 @@ builder_scanner_opt_str:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz Lbb147
-	leaq str628(%rip), %rax
+	leaq str653(%rip), %rax
 	jmp Lbb148
 Lbb147:
 	movq 8(%rax), %rax

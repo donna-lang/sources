@@ -1,55 +1,55 @@
 .data
 .balign 8
-str136:
+str144:
 	.ascii "="
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str139:
+str151:
 	.ascii "="
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str140:
+str152:
 	.ascii "unknown"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str193:
+str208:
 	.ascii "constant name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str223:
+str242:
 	.ascii "constant name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str249:
+str271:
 	.ascii "const"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str252:
+str278:
 	.ascii "const"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str253:
+str279:
 	.ascii "unknown"
 	.byte 0
 /* end data */
@@ -59,21 +59,22 @@ str253:
 .globl compiler_parser_parse_constants_parse_const
 compiler_parser_parse_constants_parse_const:
 	hint	#34
-	stp	x29, x30, [sp, -80]!
+	stp	x29, x30, [sp, -96]!
 	mov	x29, sp
-	str	x19, [x29, 72]
-	str	x20, [x29, 64]
-	str	x21, [x29, 56]
-	str	x22, [x29, 48]
-	str	x23, [x29, 40]
-	str	x24, [x29, 32]
-	str	x25, [x29, 24]
+	str	x19, [x29, 88]
+	str	x20, [x29, 80]
+	str	x21, [x29, 72]
+	str	x22, [x29, 64]
+	str	x23, [x29, 56]
+	str	x24, [x29, 48]
+	str	x25, [x29, 40]
+	str	x26, [x29, 32]
+	str	x27, [x29, 24]
 	bl	compiler_parser_parse_constants_parse_pub
-	ldr	x1, [x0]
-	mov	x2, #8
-	add	x0, x0, x2
+	ldr	x26, [x0]
+	mov	x1, #8
+	add	x0, x0, x1
 	ldr	x0, [x0]
-	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #1
 	beq	.L2
@@ -199,15 +200,31 @@ compiler_parser_parse_constants_parse_const:
 .L28:
 	cmp	w1, #0
 	bne	.L30
-	adrp	x0, str253
-	add	x0, x0, #:lo12:str253
+	adrp	x0, str279
+	add	x0, x0, #:lo12:str279
 	bl	utilities_location_zero
-	mov	x1, x0
-	adrp	x0, str252
-	add	x0, x0, #:lo12:str252
-	bl	errors_error_ParseUnexpectedEof
-	bl	compiler_parser_parse_result_PErr
-	b	.L52
+	mov	x20, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x19, x0
+	mov	x0, #7
+	str	x0, [x19]
+	mov	x0, #8
+	add	x1, x19, x0
+	adrp	x0, str278
+	add	x0, x0, #:lo12:str278
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
+	b	.L50
 .L30:
 	mov	x1, #8
 	add	x0, x0, x1
@@ -215,26 +232,61 @@ compiler_parser_parse_constants_parse_const:
 	ldr	x0, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x19, [x1]
+	ldr	x20, [x1]
 	bl	compiler_lexer_token_to_string
-	mov	x2, x19
-	adrp	x1, str249
-	add	x1, x1, #:lo12:str249
-	bl	errors_error_ParseUnexpectedToken
-	bl	compiler_parser_parse_result_PErr
-	b	.L52
+	mov	x21, x0
+	mov	x0, #32
+	bl	malloc
+	mov	x19, x0
+	mov	x0, #6
+	str	x0, [x19]
+	mov	x0, #8
+	add	x0, x19, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x1, x19, x0
+	adrp	x0, str271
+	add	x0, x0, #:lo12:str271
+	str	x0, [x1]
+	mov	x0, #24
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
+	b	.L50
 .L31:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x1, [x0]
-	adrp	x0, str223
-	add	x0, x0, #:lo12:str223
-	bl	errors_error_ParseUnexpectedEof
-	bl	compiler_parser_parse_result_PErr
-	b	.L52
+	ldr	x20, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x19, x0
+	mov	x0, #7
+	str	x0, [x19]
+	mov	x0, #8
+	add	x1, x19, x0
+	adrp	x0, str242
+	add	x0, x0, #:lo12:str242
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
+	b	.L50
 .L32:
 	mov	x1, #16
 	add	x0, x0, x1
@@ -245,26 +297,43 @@ compiler_parser_parse_constants_parse_const:
 	ldr	x0, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x19, [x1]
+	ldr	x20, [x1]
 	bl	compiler_lexer_token_to_string
-	mov	x2, x19
-	adrp	x1, str193
-	add	x1, x1, #:lo12:str193
-	bl	errors_error_ParseUnexpectedToken
-	bl	compiler_parser_parse_result_PErr
-	b	.L52
+	mov	x21, x0
+	mov	x0, #32
+	bl	malloc
+	mov	x19, x0
+	mov	x0, #6
+	str	x0, [x19]
+	mov	x0, #8
+	add	x0, x19, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x1, x19, x0
+	adrp	x0, str208
+	add	x0, x0, #:lo12:str208
+	str	x0, [x1]
+	mov	x0, #24
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
+	b	.L50
 .L33:
-	mov	x1, x19
-	mov	x2, #8
-	add	x2, x0, x2
-	ldr	x2, [x2]
-	mov	x3, #16
-	add	x0, x0, x3
+	mov	x1, #8
+	add	x1, x0, x1
+	ldr	x1, [x1]
+	mov	x2, #16
+	add	x0, x0, x2
 	ldr	x0, [x0]
-	mov	x3, #8
-	add	x2, x2, x3
-	ldr	x20, [x2]
-	mov	x19, x1
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x23, [x1]
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -274,142 +343,193 @@ compiler_parser_parse_constants_parse_const:
 	ldr	x1, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x21, [x1]
+	ldr	x27, [x1]
 	bl	compiler_parser_parse_constants_parse_optional_annotation
-	mov	x4, x20
-	mov	x1, x19
-	ldr	x2, [x0]
-	mov	x3, #8
-	add	x0, x0, x3
+	ldr	x25, [x0]
+	mov	x1, #8
+	add	x0, x0, x1
 	ldr	x0, [x0]
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x1, #16
+	sub	sp, sp, x1
 	mov	x19, sp
-	mov	x20, x1
 	ldr	x1, [x0]
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x2, #16
+	sub	sp, sp, x2
 	mov	x3, sp
 	cmp	x1, #1
-	beq	.L37
-	mov	x5, #0
-	str	x5, [x3]
-	mov	x22, x2
-	mov	x25, x4
+	beq	.L36
 	mov	x2, #0
-	b	.L38
-.L37:
-	mov	x5, #8
-	add	x5, x0, x5
-	ldr	x5, [x5]
-	ldr	x5, [x5]
-	ldr	x5, [x5]
-	cmp	x5, #28
-	mov	x22, x2
+	str	x2, [x3]
+	mov	x2, #0
+	b	.L37
+.L36:
+	mov	x2, #8
+	add	x2, x0, x2
+	ldr	x2, [x2]
+	ldr	x2, [x2]
+	ldr	x2, [x2]
+	cmp	x2, #28
 	cset	x2, eq
-	mov	x25, x4
 	mov	x4, #1
 	and	x2, x2, x4
 	str	x2, [x3]
-.L38:
+.L37:
 	cmp	w2, #0
-	bne	.L47
+	bne	.L46
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x1, #1
-	beq	.L42
+	beq	.L41
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	.L44
-.L42:
+	b	.L43
+.L41:
 	mov	x1, #1
 	str	x1, [x2]
 	mov	x1, #1
-.L44:
+.L43:
 	cmp	w1, #0
-	bne	.L46
-	adrp	x0, str140
-	add	x0, x0, #:lo12:str140
+	bne	.L45
+	adrp	x0, str152
+	add	x0, x0, #:lo12:str152
 	bl	utilities_location_zero
-	mov	x1, x0
-	adrp	x0, str139
-	add	x0, x0, #:lo12:str139
-	bl	errors_error_ParseUnexpectedEof
-	bl	compiler_parser_parse_result_PErr
+	mov	x21, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x20, x0
+	mov	x0, #7
+	str	x0, [x20]
+	mov	x0, #8
+	add	x1, x20, x0
+	adrp	x0, str151
+	add	x0, x0, #:lo12:str151
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
-	b	.L52
-.L46:
+	b	.L50
+.L45:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
 	ldr	x0, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x20, [x1]
+	ldr	x21, [x1]
 	bl	compiler_lexer_token_to_string
-	mov	x2, x20
-	adrp	x1, str136
-	add	x1, x1, #:lo12:str136
-	bl	errors_error_ParseUnexpectedToken
-	bl	compiler_parser_parse_result_PErr
+	mov	x22, x0
+	mov	x0, #32
+	bl	malloc
+	mov	x20, x0
+	mov	x0, #6
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x22, [x0]
+	mov	x0, #16
+	add	x1, x20, x0
+	adrp	x0, str144
+	add	x0, x0, #:lo12:str144
+	str	x0, [x1]
+	mov	x0, #24
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
-	b	.L52
-.L47:
-	mov	x1, x20
-	mov	x20, x1
+	b	.L50
+.L46:
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	compiler_parser_parse_exprs_parse_expr
-	mov	x2, x22
-	mov	x1, x20
-	mov	x3, #16
-	sub	sp, sp, x3
+	mov	x1, #16
+	sub	sp, sp, x1
 	mov	x20, sp
-	ldr	x3, [x0]
-	cmp	x3, #1
-	beq	.L50
-	mov	x23, x2
-	mov	x2, #8
-	add	x2, x0, x2
-	ldr	x24, [x2]
-	mov	x22, x1
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	.L48
+	mov	x1, #8
+	add	x1, x0, x1
+	ldr	x24, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	compiler_parser_parse_result_skip_newlines
-	mov	x4, x25
-	mov	x3, x24
-	mov	x2, x23
-	mov	x1, x22
-	mov	x17, x0
-	mov	x0, x21
-	mov	x21, x17
-	bl	compiler_parser_ast_Const
-	mov	x1, x21
-	bl	compiler_parser_parse_result_POk
+	mov	x21, x0
+	mov	x0, #48
+	bl	malloc
+	mov	x22, x0
+	mov	x0, #0
+	str	x0, [x22]
+	mov	x0, #8
+	add	x0, x22, x0
+	str	x27, [x0]
+	mov	x0, #16
+	add	x0, x22, x0
+	str	x26, [x0]
+	mov	x0, #24
+	add	x0, x22, x0
+	str	x25, [x0]
+	mov	x0, #32
+	add	x0, x22, x0
+	str	x24, [x0]
+	mov	x0, #40
+	add	x0, x22, x0
+	str	x23, [x0]
+	mov	x0, #24
+	bl	malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x21, [x1]
 	str	x0, [x20]
-	b	.L51
-.L50:
+	b	.L49
+.L48:
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	compiler_parser_parse_result_PErr
+	ldr	x21, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
 	str	x0, [x20]
-.L51:
+.L49:
 	str	x0, [x19]
-.L52:
-	ldr	x19, [x29, 72]
-	ldr	x20, [x29, 64]
-	ldr	x21, [x29, 56]
-	ldr	x22, [x29, 48]
-	ldr	x23, [x29, 40]
-	ldr	x24, [x29, 32]
-	ldr	x25, [x29, 24]
+.L50:
+	ldr	x19, [x29, 88]
+	ldr	x20, [x29, 80]
+	ldr	x21, [x29, 72]
+	ldr	x22, [x29, 64]
+	ldr	x23, [x29, 56]
+	ldr	x24, [x29, 48]
+	ldr	x25, [x29, 40]
+	ldr	x26, [x29, 32]
+	ldr	x27, [x29, 24]
 	mov sp, x29
-	ldp	x29, x30, [sp], 80
+	ldp	x29, x30, [sp], 96
 	ret
 .type compiler_parser_parse_constants_parse_const, @function
 .size compiler_parser_parse_constants_parse_const, .-compiler_parser_parse_constants_parse_const
@@ -424,10 +544,10 @@ compiler_parser_parse_constants_parse_pub:
 	str	x19, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L55
+	beq	.L53
 	mov	x1, #0
-	b	.L56
-.L55:
+	b	.L54
+.L53:
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -437,9 +557,9 @@ compiler_parser_parse_constants_parse_pub:
 	cset	x1, eq
 	mov	x2, #1
 	and	x1, x1, x2
-.L56:
+.L54:
 	cmp	w1, #0
-	bne	.L58
+	bne	.L56
 	mov	x19, x0
 	mov	x0, #16
 	bl	malloc
@@ -448,8 +568,8 @@ compiler_parser_parse_constants_parse_pub:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x19, [x1]
-	b	.L59
-.L58:
+	b	.L57
+.L56:
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x19, [x0]
@@ -460,7 +580,7 @@ compiler_parser_parse_constants_parse_pub:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x19, [x1]
-.L59:
+.L57:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -477,13 +597,14 @@ compiler_parser_parse_constants_parse_optional_annotation:
 	str	x19, [x29, 40]
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
+	str	x22, [x29, 16]
 	mov	x20, x0
 	ldr	x0, [x20]
 	cmp	x0, #1
-	beq	.L62
+	beq	.L60
 	mov	x0, #0
-	b	.L63
-.L62:
+	b	.L61
+.L60:
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
@@ -493,9 +614,9 @@ compiler_parser_parse_constants_parse_optional_annotation:
 	cset	x0, eq
 	mov	x1, #1
 	and	x0, x0, x1
-.L63:
+.L61:
 	cmp	w0, #0
-	bne	.L65
+	bne	.L63
 	mov	x0, #16
 	bl	malloc
 	adrp	x1, donna_option_None
@@ -504,27 +625,32 @@ compiler_parser_parse_constants_parse_optional_annotation:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x20, [x1]
-	b	.L68
-.L65:
+	b	.L66
+.L63:
 	mov	x0, #16
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	bl	compiler_parser_parse_types_parse_type
-	mov	x1, x0
-	mov	x0, #16
-	sub	sp, sp, x0
+	mov	x1, #16
+	sub	sp, sp, x1
 	mov	x19, sp
-	ldr	x0, [x1]
-	cmp	x0, #1
-	beq	.L67
-	mov	x0, #8
-	add	x0, x1, x0
-	ldr	x0, [x0]
-	mov	x2, #16
-	add	x1, x1, x2
-	ldr	x20, [x1]
-	bl	donna_option_Some
+	ldr	x1, [x0]
+	cmp	x1, #1
+	beq	.L65
+	mov	x1, #8
+	add	x1, x0, x1
+	ldr	x22, [x1]
+	mov	x1, #16
+	add	x0, x0, x1
+	ldr	x20, [x0]
+	mov	x0, #16
+	bl	malloc
 	mov	x21, x0
+	mov	x0, #1
+	str	x0, [x21]
+	mov	x0, #8
+	add	x0, x21, x0
+	str	x22, [x0]
 	mov	x0, #16
 	bl	malloc
 	str	x21, [x0]
@@ -532,8 +658,8 @@ compiler_parser_parse_constants_parse_optional_annotation:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L68
-.L67:
+	b	.L66
+.L65:
 	mov	x0, #16
 	bl	malloc
 	adrp	x1, donna_option_None
@@ -543,10 +669,11 @@ compiler_parser_parse_constants_parse_optional_annotation:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-.L68:
+.L66:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
+	ldr	x22, [x29, 16]
 	mov sp, x29
 	ldp	x29, x30, [sp], 48
 	ret

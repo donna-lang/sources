@@ -48,79 +48,71 @@ str58:
 
 .data
 .balign 8
-str74:
+str75:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str78:
+str79:
 	.ascii "artifacts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str80:
+str81:
 	.ascii "packages"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str120:
+str122:
 	.ascii "lex"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str133:
+str135:
 	.ascii "parse"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str162:
+str164:
 	.ascii "check ok"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str164:
+str166:
 	.ascii "  no errors or warnings"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str169:
+str171:
 	.ascii "warning"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str171:
+str173:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str174:
+str176:
 	.ascii " warning(s)"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str178:
-	.byte 10
-	.byte 10
 	.byte 0
 /* end data */
 
@@ -134,58 +126,58 @@ str180:
 
 .data
 .balign 8
-str195:
-	.ascii "error"
+str182:
+	.byte 10
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str197:
-	.ascii ": found "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str200:
-	.ascii " error(s)"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str204:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str206:
+str199:
 	.ascii ": found "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str209:
+str202:
+	.ascii " error(s)"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str206:
+	.ascii "error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str208:
+	.ascii ": found "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str211:
 	.ascii " error(s), "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str213:
+str215:
 	.ascii " warning(s)"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str218:
-	.byte 10
-	.byte 10
 	.byte 0
 /* end data */
 
@@ -199,37 +191,37 @@ str220:
 
 .data
 .balign 8
-str225:
-	.ascii "error"
+str222:
+	.byte 10
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str227:
+	.ascii "error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str229:
 	.ascii ": found "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str230:
+str232:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str233:
+str235:
 	.ascii " error(s)"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str237:
-	.byte 10
-	.byte 10
 	.byte 0
 /* end data */
 
@@ -243,14 +235,22 @@ str239:
 
 .data
 .balign 8
-str282:
+str241:
+	.byte 10
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str284:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str295:
+str297:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -429,42 +429,42 @@ cli_cmd_check_compile_deps:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rdx, %rbx
+	movq %rdx, %r13
 	movq (%rdi), %rax
 	cmpq $0, %rax
 	jz .Lbb14
 	movq 8(%rdi), %r14
-	movq 16(%rdi), %r12
-	movq %r12, -16(%rbp)
-	movq %rsi, %r12
-	leaq str74(%rip), %rsi
-	movq %r12, %rdi
+	movq 16(%rdi), %rbx
+	movq %rbx, -16(%rbp)
+	movq %rsi, %rbx
+	leaq str75(%rip), %rsi
+	movq %rbx, %rdi
 	callq donna_files_join
 	movq %rax, %rdi
-	movq %rdi, %r13
+	movq %rdi, %r12
 	movq %r14, %rdi
 	callq builder_dependencies_dep_name
-	movq %r13, %rdi
+	movq %r12, %rdi
 	movq %rax, %rsi
 	callq donna_files_join
-	movq %r12, %rsi
+	movq %rbx, %rsi
 	movq %rax, %rdi
-	movq %rsi, %r13
-	leaq str78(%rip), %rsi
-	movq %rdi, %r12
+	movq %rsi, %r12
+	leaq str79(%rip), %rsi
+	movq %rdi, %rbx
 	callq donna_files_join
-	movq %r13, %rsi
-	movq %r12, %rdi
+	movq %r12, %rsi
+	movq %rbx, %rdi
 	movq %rax, %r15
-	movq %rsi, %r13
-	leaq str80(%rip), %rsi
-	movq %rdi, %r12
-	movq %r13, %rdi
+	movq %rsi, %r12
+	leaq str81(%rip), %rsi
+	movq %rdi, %rbx
+	movq %r12, %rdi
 	callq donna_files_join
 	movq %rax, %rdi
 	callq donna_files_mkdir
-	movq %r12, %rdi
-	movq -16(%rbp), %r12
+	movq %rbx, %rdi
+	movq -16(%rbp), %rbx
 	callq donna_files_mkdir
 	movq %r14, %rdi
 	movq %rdi, %r14
@@ -480,9 +480,10 @@ cli_cmd_check_compile_deps:
 	movq %r14, %rdi
 	movq %rax, %rsi
 	movl $0, %r8d
-	movq %rbx, %rcx
+	movq %r13, %rcx
 	callq builder_pipeline_compile_dir
-	movq %r13, %rsi
+	movq %r13, %rdx
+	movq %r12, %rsi
 	movq %rbx, %rdi
 	subq $16, %rsp
 	movq %rsp, %rbx
@@ -495,6 +496,8 @@ cli_cmd_check_compile_deps:
 	movq 8(%rax), %rax
 	movq %rsi, %r13
 	movq (%rax), %rsi
+	movq %rdi, %r12
+	movq %rdx, %rdi
 	callq donna_list_append
 	movq %r13, %rsi
 	movq %r12, %rdi
@@ -503,13 +506,20 @@ cli_cmd_check_compile_deps:
 	movq %rax, (%rbx)
 	jmp .Lbb16
 .Lbb13:
-	movq 8(%rax), %rdi
-	callq donna_result_Error
+	movq 8(%rax), %r12
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
 	jmp .Lbb16
 .Lbb14:
-	movq %rbx, %rdi
-	callq donna_result_Ok
+	movq %r13, %rbx
+	movl $16, %edi
+	callq malloc
+	movq %rbx, %rdx
+	movq $0, (%rax)
+	movq %rdx, 8(%rax)
 .Lbb16:
 	movq %rbp, %rsp
 	subq $64, %rsp
@@ -598,14 +608,14 @@ cli_cmd_check_check_file:
 .Lbb24:
 	movq %r14, %rsi
 	movq 8(%rax), %rdi
-	leaq str133(%rip), %rdx
+	leaq str135(%rip), %rdx
 	callq cli_cmd_check_render_phase_errors
 	movq %rax, (%rbx)
 	jmp .Lbb28
 .Lbb26:
 	movq %r14, %rsi
 	movq 8(%rax), %rdi
-	leaq str120(%rip), %rdx
+	leaq str122(%rip), %rdx
 	callq cli_cmd_check_render_phase_errors
 .Lbb28:
 	movq %rbp, %rsp
@@ -644,7 +654,7 @@ cli_cmd_check_render_check_ok:
 	callq donna_list_length
 	movq %rax, %rdi
 	movq %rdi, %r12
-	leaq str169(%rip), %rdi
+	leaq str171(%rip), %rdi
 	callq utilities_colors_yellow
 	movq %r12, %rdi
 	movq %rax, %r12
@@ -652,10 +662,10 @@ cli_cmd_check_render_check_ok:
 	movq %r12, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r12
-	leaq str171(%rip), %rdi
+	leaq str173(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str174(%rip), %rsi
+	leaq str176(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq utilities_colors_bold
@@ -665,23 +675,23 @@ cli_cmd_check_render_check_ok:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	movq %rsi, %rbx
-	leaq str178(%rip), %rsi
+	leaq str180(%rip), %rsi
 	callq donna_string_join
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq str180(%rip), %rsi
+	leaq str182(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	callq __rt_str_concat
 	jmp .Lbb32
 .Lbb31:
-	leaq str162(%rip), %rdi
+	leaq str164(%rip), %rdi
 	callq utilities_colors_green
 	movq %rax, %rdi
 	movq %rdi, %rbx
-	leaq str164(%rip), %rdi
+	leaq str166(%rip), %rdi
 	callq utilities_colors_dim
 	movq %rbx, %rdi
 	movq %rax, %rsi
@@ -735,7 +745,7 @@ cli_cmd_check_render_errors_and_warnings:
 	cmpq $1, %rax
 	jz .Lbb36
 	movq %rdi, %r12
-	leaq str204(%rip), %rdi
+	leaq str206(%rip), %rdi
 	callq utilities_colors_error_header
 	movq %r12, %rdi
 	movq %rax, %r12
@@ -743,10 +753,10 @@ cli_cmd_check_render_errors_and_warnings:
 	movq %r13, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r13
-	leaq str206(%rip), %rdi
+	leaq str208(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str209(%rip), %rsi
+	leaq str211(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rdi
 	movq %rax, %r13
@@ -755,7 +765,7 @@ cli_cmd_check_render_errors_and_warnings:
 	movq %rax, %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str213(%rip), %rsi
+	leaq str215(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq utilities_colors_bold
@@ -767,7 +777,7 @@ cli_cmd_check_render_errors_and_warnings:
 	jmp .Lbb37
 .Lbb36:
 	movq %rdi, %r12
-	leaq str195(%rip), %rdi
+	leaq str197(%rip), %rdi
 	callq utilities_colors_error_header
 	movq %r12, %rdi
 	movq %rax, %r12
@@ -775,10 +785,10 @@ cli_cmd_check_render_errors_and_warnings:
 	movq %r12, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r12
-	leaq str197(%rip), %rdi
+	leaq str199(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str200(%rip), %rsi
+	leaq str202(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq utilities_colors_bold
@@ -789,12 +799,12 @@ cli_cmd_check_render_errors_and_warnings:
 	movq %rax, %rsi
 .Lbb37:
 	movq %rsi, %rbx
-	leaq str218(%rip), %rsi
+	leaq str220(%rip), %rsi
 	callq donna_string_join
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq str220(%rip), %rsi
+	leaq str222(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -827,7 +837,7 @@ cli_cmd_check_render_phase_errors:
 	callq donna_list_length
 	movq %rax, %rdi
 	movq %rdi, %r12
-	leaq str225(%rip), %rdi
+	leaq str227(%rip), %rdi
 	callq utilities_colors_error_header
 	movq %r12, %rdi
 	movq %rax, %r12
@@ -835,18 +845,18 @@ cli_cmd_check_render_phase_errors:
 	movq %r12, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r12
-	leaq str227(%rip), %rdi
+	leaq str229(%rip), %rdi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str230(%rip), %rsi
+	leaq str232(%rip), %rsi
 	callq __rt_str_concat
 	movq %r13, %rsi
 	movq %rax, %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str233(%rip), %rsi
+	leaq str235(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq utilities_colors_bold
@@ -856,12 +866,12 @@ cli_cmd_check_render_phase_errors:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	movq %rsi, %rbx
-	leaq str237(%rip), %rsi
+	leaq str239(%rip), %rsi
 	callq donna_string_join
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq str239(%rip), %rsi
+	leaq str241(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -992,7 +1002,7 @@ cli_cmd_check_first_positional:
 	movq 8(%rdi), %rax
 	movq %rdi, %r12
 	movq (%rax), %rdi
-	leaq str295(%rip), %rsi
+	leaq str297(%rip), %rsi
 	callq strcmp
 	movq %r12, %rdi
 	cmpq $0, %rax
@@ -1011,7 +1021,7 @@ cli_cmd_check_first_positional:
 	movq 8(%rax), %rax
 	jmp .Lbb60
 .Lbb59:
-	leaq str282(%rip), %rax
+	leaq str284(%rip), %rax
 .Lbb60:
 	movq %rbp, %rsp
 	subq $16, %rsp

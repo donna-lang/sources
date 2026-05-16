@@ -230,294 +230,294 @@ _donna_nil:
 
 .data
 .balign 8
-_str217:
+_str231:
 	.ascii "%"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str225:
+_str239:
 	.ascii "$"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str243:
+_str257:
 	.ascii "d_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str252:
+_str266:
 	.ascii "w"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str257:
+_str271:
 	.ascii "l"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str262:
+_str276:
 	.ascii "s"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str267:
-	.ascii "d"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str272:
-	.ascii "z"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str273:
-	.ascii "b"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str281:
-	.ascii "w"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str286:
-	.ascii "l"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str291:
-	.ascii "s"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str296:
 	.ascii "d"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str301:
+_str286:
+	.ascii "z"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str287:
+	.ascii "b"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str295:
 	.ascii "w"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str302:
-	.ascii "w"
+_str300:
+	.ascii "l"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str305:
+	.ascii "s"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str310:
-	.ascii "ceql"
+	.ascii "d"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str315:
+	.ascii "w"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str316:
+	.ascii "w"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str324:
+	.ascii "ceql"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str329:
 	.ascii "cnel"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str320:
+_str334:
 	.ascii "csltl"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str325:
+_str339:
 	.ascii "cslel"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str330:
+_str344:
 	.ascii "csgtl"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str335:
+_str349:
 	.ascii "csgel"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str340:
+_str354:
 	.ascii "ceqw"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str345:
+_str359:
 	.ascii "cnew"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str350:
+_str364:
 	.ascii "csltw"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str355:
+_str369:
 	.ascii "cslew"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str360:
+_str374:
 	.ascii "csgtw"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str365:
+_str379:
 	.ascii "csgew"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str370:
+_str384:
 	.ascii "ceqd"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str375:
+_str389:
 	.ascii "cned"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str380:
+_str394:
 	.ascii "cltd"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str385:
+_str399:
 	.ascii "cled"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str390:
+_str404:
 	.ascii "cgtd"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str395:
+_str409:
 	.ascii "cged"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str400:
+_str414:
 	.ascii "ceqs"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str405:
+_str419:
 	.ascii "cnes"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str410:
+_str424:
 	.ascii "clts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str415:
+_str429:
 	.ascii "cles"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str420:
+_str434:
 	.ascii "cgts"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str421:
+_str435:
 	.ascii "cges"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str429:
+_str443:
 	.ascii "export "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str434:
+_str448:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str441:
+_str455:
 	.ascii "section "
 	.byte 34
 	.byte 0
@@ -525,7 +525,7 @@ _str441:
 
 .data
 .balign 8
-_str443:
+_str457:
 	.byte 34
 	.ascii " export "
 	.byte 0
@@ -533,7 +533,7 @@ _str443:
 
 .data
 .balign 8
-_str447:
+_str461:
 	.ascii "section "
 	.byte 34
 	.byte 0
@@ -541,7 +541,7 @@ _str447:
 
 .data
 .balign 8
-_str449:
+_str463:
 	.byte 34
 	.ascii " "
 	.byte 0
@@ -549,175 +549,161 @@ _str449:
 
 .data
 .balign 8
-_str462:
+_str476:
 	.ascii "add "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str465:
+_str479:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str477:
+_str491:
 	.ascii "sub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str480:
+_str494:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str492:
+_str506:
 	.ascii "mul "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str495:
+_str509:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str507:
+_str521:
 	.ascii "div "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str510:
+_str524:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str522:
+_str536:
 	.ascii "rem "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str525:
+_str539:
 	.ascii ", "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str535:
-	.ascii "neg "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str546:
-	.ascii "and "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str549:
+	.ascii "neg "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str560:
+	.ascii "and "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str563:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str561:
+_str575:
 	.ascii "or "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str564:
+_str578:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str576:
+_str590:
 	.ascii "xor "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str579:
+_str593:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str591:
+_str605:
 	.ascii "sar "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str594:
+_str608:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str606:
+_str620:
 	.ascii "shr "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str609:
+_str623:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str621:
+_str635:
 	.ascii "shl "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str624:
-	.ascii ", "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str641:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str645:
+_str638:
 	.ascii ", "
 	.byte 0
 /* end data */
@@ -725,440 +711,454 @@ _str645:
 .data
 .balign 8
 _str655:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str659:
+	.ascii ", "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str669:
 	.ascii "alloc4 "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str664:
+_str678:
 	.ascii "alloc8 "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str673:
+_str687:
 	.ascii "alloc16 "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str684:
+_str698:
 	.ascii "storew "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str687:
+_str701:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str699:
+_str713:
 	.ascii "storel "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str702:
+_str716:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str714:
+_str728:
 	.ascii "stores "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str717:
+_str731:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str729:
+_str743:
 	.ascii "stored "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str732:
+_str746:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str744:
+_str758:
 	.ascii "storeb "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str747:
+_str761:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str759:
+_str773:
 	.ascii "storeh "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str762:
+_str776:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str772:
+_str786:
 	.ascii "loadw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str781:
+_str795:
 	.ascii "loadl "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str790:
+_str804:
 	.ascii "loads "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str799:
+_str813:
 	.ascii "loadd "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str808:
+_str822:
 	.ascii "loadsb "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str817:
+_str831:
 	.ascii "loadub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str826:
+_str840:
 	.ascii "loadsh "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str835:
+_str849:
 	.ascii "loaduh "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str844:
+_str858:
 	.ascii "loadsw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str853:
+_str867:
 	.ascii "loaduw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str862:
+_str876:
 	.ascii "extsw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str871:
+_str885:
 	.ascii "extuw "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str880:
+_str894:
 	.ascii "extsb "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str889:
+_str903:
 	.ascii "extub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str898:
+_str912:
 	.ascii "exts "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str907:
+_str921:
 	.ascii "truncd "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str916:
+_str930:
 	.ascii "stosi "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str925:
+_str939:
 	.ascii "dtosi "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str934:
+_str948:
 	.ascii "cast "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str943:
+_str957:
 	.ascii "copy "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str958:
+_str972:
 	.ascii "ret"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str961:
+_str975:
 	.ascii "ret "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str971:
+_str985:
 	.ascii "jmp @"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str983:
+_str997:
 	.ascii "jnz "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str986:
-	.ascii ", @"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str989:
-	.ascii ", @"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 _str1000:
-	.ascii "call "
+	.ascii ", @"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str1003:
-	.ascii "("
+	.ascii ", @"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1007:
-	.ascii ")"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1025:
-	.ascii "..."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1027:
-	.ascii ", ..."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1036:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1037:
-	.ascii ", "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1041:
+_str1014:
 	.ascii "call "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1044:
+_str1017:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1048:
+_str1021:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1052:
-	.ascii "phi "
+_str1039:
+	.ascii "..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1069:
-	.ascii " ="
+_str1041:
+	.ascii ", ..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1073:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1088:
-	.ascii "@"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1090:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1092:
+_str1050:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1115:
-	.ascii ""
+_str1051:
+	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1119:
-	.ascii " "
+_str1055:
+	.ascii "call "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1125:
-	.ascii "function "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1128:
-	.ascii "$"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1131:
+_str1058:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1134:
+_str1062:
+	.ascii ")"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1066:
+	.ascii "phi "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1083:
+	.ascii " ="
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1087:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1102:
+	.ascii "@"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1104:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1106:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1129:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1133:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1139:
+	.ascii "function "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1142:
+	.ascii "$"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1145:
+	.ascii "("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1148:
 	.ascii ") {"
 	.byte 10
 	.byte 0
@@ -1166,14 +1166,14 @@ _str1134:
 
 .data
 .balign 8
-_str1136:
+_str1150:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1139:
+_str1153:
 	.ascii "}"
 	.byte 10
 	.byte 0
@@ -1181,77 +1181,77 @@ _str1139:
 
 .data
 .balign 8
-_str1158:
+_str1172:
 	.ascii "$"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1162:
+_str1176:
 	.ascii "$"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1164:
+_str1178:
 	.ascii " +"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1185:
+_str1199:
 	.ascii "d_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1205:
+_str1219:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1208:
+_str1222:
 	.ascii "align "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1211:
+_str1225:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1216:
+_str1230:
 	.ascii "data $"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1219:
+_str1233:
 	.ascii " = "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1222:
+_str1236:
 	.ascii "{ "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1225:
+_str1239:
 	.ascii " }"
 	.byte 10
 	.byte 0
@@ -1259,50 +1259,43 @@ _str1225:
 
 .data
 .balign 8
-_str1237:
+_str1251:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1240:
+_str1254:
 	.byte 9
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1243:
+_str1257:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1252:
+_str1266:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1264:
+_str1278:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1277:
+_str1291:
 	.ascii "@"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1279:
-	.ascii " "
 	.byte 0
 /* end data */
 
@@ -1315,21 +1308,28 @@ _str1293:
 
 .data
 .balign 8
-_str1310:
+_str1307:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1324:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1311:
+_str1325:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1331:
+_str1345:
 	.byte 34
 	.byte 34
 	.byte 0
@@ -1337,43 +1337,22 @@ _str1331:
 
 .data
 .balign 8
-_str1333:
+_str1347:
 	.byte 34
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1335:
+_str1349:
 	.byte 34
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1343:
+_str1357:
 	.ascii ", b "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1368:
-	.ascii ", b "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1372:
-	.byte 34
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str1374:
-	.byte 34
 	.byte 0
 /* end data */
 
@@ -1386,28 +1365,49 @@ _str1382:
 
 .data
 .balign 8
-_str1385:
-	.ascii ", b "
+_str1386:
+	.byte 34
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str1388:
+	.byte 34
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1396:
 	.ascii ", b "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str1394:
-	.ascii ""
+_str1399:
+	.ascii ", b "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str1402:
+	.ascii ", b "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1408:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1416:
 	.ascii ", "
 	.byte 0
 /* end data */
@@ -3041,12 +3041,24 @@ _compiler_codegen_il_ILModule:
 .globl _compiler_codegen_il_new_block
 _compiler_codegen_il_new_block:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
+	mov	x1, #16
+	add	x2, x0, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
-	bl	_compiler_codegen_il_Block
-	ldp	x29, x30, [sp], 16
+	str	x1, [x2]
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
 	ret
 /* end function compiler_codegen_il_new_block */
 
@@ -3060,10 +3072,10 @@ _compiler_codegen_il_add_stmt:
 	str	x19, [x29, 40]
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
-	mov	x20, x1
+	mov	x19, x1
 	mov	x1, #8
 	add	x1, x0, x1
-	ldr	x19, [x1]
+	ldr	x20, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -3076,16 +3088,24 @@ _compiler_codegen_il_add_stmt:
 	str	x2, [x1]
 	mov	x2, #8
 	add	x2, x1, x2
-	str	x20, [x2]
+	str	x19, [x2]
 	mov	x2, #16
 	add	x3, x1, x2
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
 	str	x2, [x3]
 	bl	_donna_list_append
-	mov	x1, x0
-	mov	x0, x19
-	bl	_compiler_codegen_il_Block
+	mov	x19, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x19, [x1]
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3098,19 +3118,39 @@ _compiler_codegen_il_add_stmt:
 .globl _compiler_codegen_il_assign_inst
 _compiler_codegen_il_assign_inst:
 	hint	#34
-	stp	x29, x30, [sp, -32]!
+	stp	x29, x30, [sp, -48]!
 	mov	x29, sp
-	str	x19, [x29, 24]
-	mov	x19, x0
-	mov	x0, x1
-	mov	x1, x2
-	mov	x2, x3
-	bl	_compiler_codegen_il_Assign
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	str	x22, [x29, 16]
+	mov	x22, x3
+	mov	x21, x2
+	mov	x19, x1
+	mov	x20, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x3, x22
+	mov	x2, x21
 	mov	x1, x0
-	mov	x0, x19
+	mov	x0, x20
+	mov	x4, #0
+	str	x4, [x1]
+	mov	x4, #8
+	add	x4, x1, x4
+	str	x19, [x4]
+	mov	x4, #16
+	add	x4, x1, x4
+	str	x2, [x4]
+	mov	x2, #24
+	add	x2, x1, x2
+	str	x3, [x2]
 	bl	_compiler_codegen_il_add_stmt
-	ldr	x19, [x29, 24]
-	ldp	x29, x30, [sp], 32
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldr	x22, [x29, 16]
+	ldp	x29, x30, [sp], 48
 	ret
 /* end function compiler_codegen_il_assign_inst */
 
@@ -3122,13 +3162,21 @@ _compiler_codegen_il_volatile_inst:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	mov	x19, x0
-	mov	x0, x1
-	bl	_compiler_codegen_il_Volatile
+	str	x20, [x29, 16]
+	mov	x19, x1
+	mov	x20, x0
+	mov	x0, #16
+	bl	_malloc
 	mov	x1, x0
-	mov	x0, x19
+	mov	x0, x20
+	mov	x2, #1
+	str	x2, [x1]
+	mov	x2, #8
+	add	x2, x1, x2
+	str	x19, [x2]
 	bl	_compiler_codegen_il_add_stmt
 	ldr	x19, [x29, 24]
+	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
 	ret
 /* end function compiler_codegen_il_volatile_inst */
@@ -3140,11 +3188,20 @@ _compiler_codegen_il_new_module:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
-	adrp	x0, _donna_nil@page
-	add	x0, x0, _donna_nil@pageoff
-	bl	_compiler_codegen_il_ILModule
+	str	x1, [x2]
+	mov	x1, #16
+	add	x2, x0, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function compiler_codegen_il_new_module */
@@ -3183,8 +3240,17 @@ _compiler_codegen_il_add_function:
 	add	x2, x2, _donna_nil@pageoff
 	str	x2, [x3]
 	bl	_donna_list_append
-	mov	x1, x19
-	bl	_compiler_codegen_il_ILModule
+	mov	x20, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x19, [x1]
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3202,10 +3268,10 @@ _compiler_codegen_il_add_data_def:
 	str	x19, [x29, 40]
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
-	mov	x20, x1
+	mov	x19, x1
 	mov	x1, #8
 	add	x1, x0, x1
-	ldr	x19, [x1]
+	ldr	x20, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -3218,16 +3284,24 @@ _compiler_codegen_il_add_data_def:
 	str	x2, [x1]
 	mov	x2, #8
 	add	x2, x1, x2
-	str	x20, [x2]
+	str	x19, [x2]
 	mov	x2, #16
 	add	x3, x1, x2
 	adrp	x2, _donna_nil@page
 	add	x2, x2, _donna_nil@pageoff
 	str	x2, [x3]
 	bl	_donna_list_append
-	mov	x1, x0
-	mov	x0, x19
-	bl	_compiler_codegen_il_ILModule
+	mov	x19, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x19, [x1]
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3254,8 +3328,8 @@ _compiler_codegen_il_display_value:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
-	adrp	x0, _str243@page
-	add	x0, x0, _str243@pageoff
+	adrp	x0, _str257@page
+	add	x0, x0, _str257@pageoff
 	bl	___rt_str_concat
 	b	L153
 L149:
@@ -3274,16 +3348,16 @@ L151:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
-	adrp	x0, _str225@page
-	add	x0, x0, _str225@pageoff
+	adrp	x0, _str239@page
+	add	x0, x0, _str239@pageoff
 	bl	___rt_str_concat
 	b	L153
 L152:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
-	adrp	x0, _str217@page
-	add	x0, x0, _str217@pageoff
+	adrp	x0, _str231@page
+	add	x0, x0, _str231@pageoff
 	bl	___rt_str_concat
 L153:
 	ldp	x29, x30, [sp], 16
@@ -3308,28 +3382,28 @@ _compiler_codegen_il_display_type:
 	beq	L161
 	cmp	x0, #4
 	beq	L160
-	adrp	x0, _str273@page
-	add	x0, x0, _str273@pageoff
+	adrp	x0, _str287@page
+	add	x0, x0, _str287@pageoff
 	b	L165
 L160:
-	adrp	x0, _str272@page
-	add	x0, x0, _str272@pageoff
+	adrp	x0, _str286@page
+	add	x0, x0, _str286@pageoff
 	b	L165
 L161:
-	adrp	x0, _str267@page
-	add	x0, x0, _str267@pageoff
+	adrp	x0, _str281@page
+	add	x0, x0, _str281@pageoff
 	b	L165
 L162:
-	adrp	x0, _str262@page
-	add	x0, x0, _str262@pageoff
+	adrp	x0, _str276@page
+	add	x0, x0, _str276@pageoff
 	b	L165
 L163:
-	adrp	x0, _str257@page
-	add	x0, x0, _str257@pageoff
+	adrp	x0, _str271@page
+	add	x0, x0, _str271@pageoff
 	b	L165
 L164:
-	adrp	x0, _str252@page
-	add	x0, x0, _str252@pageoff
+	adrp	x0, _str266@page
+	add	x0, x0, _str266@pageoff
 L165:
 	ldp	x29, x30, [sp], 16
 	ret
@@ -3353,28 +3427,28 @@ _compiler_codegen_il_into_abi:
 	beq	L173
 	cmp	x0, #4
 	beq	L172
-	adrp	x0, _str302@page
-	add	x0, x0, _str302@pageoff
+	adrp	x0, _str316@page
+	add	x0, x0, _str316@pageoff
 	b	L177
 L172:
-	adrp	x0, _str301@page
-	add	x0, x0, _str301@pageoff
+	adrp	x0, _str315@page
+	add	x0, x0, _str315@pageoff
 	b	L177
 L173:
-	adrp	x0, _str296@page
-	add	x0, x0, _str296@pageoff
+	adrp	x0, _str310@page
+	add	x0, x0, _str310@pageoff
 	b	L177
 L174:
-	adrp	x0, _str291@page
-	add	x0, x0, _str291@pageoff
+	adrp	x0, _str305@page
+	add	x0, x0, _str305@pageoff
 	b	L177
 L175:
-	adrp	x0, _str286@page
-	add	x0, x0, _str286@pageoff
+	adrp	x0, _str300@page
+	add	x0, x0, _str300@pageoff
 	b	L177
 L176:
-	adrp	x0, _str281@page
-	add	x0, x0, _str281@pageoff
+	adrp	x0, _str295@page
+	add	x0, x0, _str295@pageoff
 L177:
 	ldp	x29, x30, [sp], 16
 	ret
@@ -3434,100 +3508,100 @@ _compiler_codegen_il_display_comp:
 	beq	L203
 	cmp	x0, #22
 	beq	L202
-	adrp	x0, _str421@page
-	add	x0, x0, _str421@pageoff
+	adrp	x0, _str435@page
+	add	x0, x0, _str435@pageoff
 	b	L225
 L202:
-	adrp	x0, _str420@page
-	add	x0, x0, _str420@pageoff
+	adrp	x0, _str434@page
+	add	x0, x0, _str434@pageoff
 	b	L225
 L203:
-	adrp	x0, _str415@page
-	add	x0, x0, _str415@pageoff
+	adrp	x0, _str429@page
+	add	x0, x0, _str429@pageoff
 	b	L225
 L204:
-	adrp	x0, _str410@page
-	add	x0, x0, _str410@pageoff
+	adrp	x0, _str424@page
+	add	x0, x0, _str424@pageoff
 	b	L225
 L205:
-	adrp	x0, _str405@page
-	add	x0, x0, _str405@pageoff
+	adrp	x0, _str419@page
+	add	x0, x0, _str419@pageoff
 	b	L225
 L206:
-	adrp	x0, _str400@page
-	add	x0, x0, _str400@pageoff
+	adrp	x0, _str414@page
+	add	x0, x0, _str414@pageoff
 	b	L225
 L207:
-	adrp	x0, _str395@page
-	add	x0, x0, _str395@pageoff
+	adrp	x0, _str409@page
+	add	x0, x0, _str409@pageoff
 	b	L225
 L208:
-	adrp	x0, _str390@page
-	add	x0, x0, _str390@pageoff
+	adrp	x0, _str404@page
+	add	x0, x0, _str404@pageoff
 	b	L225
 L209:
-	adrp	x0, _str385@page
-	add	x0, x0, _str385@pageoff
+	adrp	x0, _str399@page
+	add	x0, x0, _str399@pageoff
 	b	L225
 L210:
-	adrp	x0, _str380@page
-	add	x0, x0, _str380@pageoff
+	adrp	x0, _str394@page
+	add	x0, x0, _str394@pageoff
 	b	L225
 L211:
-	adrp	x0, _str375@page
-	add	x0, x0, _str375@pageoff
+	adrp	x0, _str389@page
+	add	x0, x0, _str389@pageoff
 	b	L225
 L212:
-	adrp	x0, _str370@page
-	add	x0, x0, _str370@pageoff
+	adrp	x0, _str384@page
+	add	x0, x0, _str384@pageoff
 	b	L225
 L213:
-	adrp	x0, _str365@page
-	add	x0, x0, _str365@pageoff
+	adrp	x0, _str379@page
+	add	x0, x0, _str379@pageoff
 	b	L225
 L214:
-	adrp	x0, _str360@page
-	add	x0, x0, _str360@pageoff
+	adrp	x0, _str374@page
+	add	x0, x0, _str374@pageoff
 	b	L225
 L215:
-	adrp	x0, _str355@page
-	add	x0, x0, _str355@pageoff
+	adrp	x0, _str369@page
+	add	x0, x0, _str369@pageoff
 	b	L225
 L216:
-	adrp	x0, _str350@page
-	add	x0, x0, _str350@pageoff
+	adrp	x0, _str364@page
+	add	x0, x0, _str364@pageoff
 	b	L225
 L217:
-	adrp	x0, _str345@page
-	add	x0, x0, _str345@pageoff
+	adrp	x0, _str359@page
+	add	x0, x0, _str359@pageoff
 	b	L225
 L218:
-	adrp	x0, _str340@page
-	add	x0, x0, _str340@pageoff
+	adrp	x0, _str354@page
+	add	x0, x0, _str354@pageoff
 	b	L225
 L219:
-	adrp	x0, _str335@page
-	add	x0, x0, _str335@pageoff
+	adrp	x0, _str349@page
+	add	x0, x0, _str349@pageoff
 	b	L225
 L220:
-	adrp	x0, _str330@page
-	add	x0, x0, _str330@pageoff
+	adrp	x0, _str344@page
+	add	x0, x0, _str344@pageoff
 	b	L225
 L221:
-	adrp	x0, _str325@page
-	add	x0, x0, _str325@pageoff
+	adrp	x0, _str339@page
+	add	x0, x0, _str339@pageoff
 	b	L225
 L222:
-	adrp	x0, _str320@page
-	add	x0, x0, _str320@pageoff
+	adrp	x0, _str334@page
+	add	x0, x0, _str334@pageoff
 	b	L225
 L223:
-	adrp	x0, _str315@page
-	add	x0, x0, _str315@pageoff
+	adrp	x0, _str329@page
+	add	x0, x0, _str329@pageoff
 	b	L225
 L224:
-	adrp	x0, _str310@page
-	add	x0, x0, _str310@pageoff
+	adrp	x0, _str324@page
+	add	x0, x0, _str324@pageoff
 L225:
 	ldp	x29, x30, [sp], 16
 	ret
@@ -3550,31 +3624,31 @@ _compiler_codegen_il_display_linkage:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
-	adrp	x0, _str447@page
-	add	x0, x0, _str447@pageoff
+	adrp	x0, _str461@page
+	add	x0, x0, _str461@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str449@page
-	add	x1, x1, _str449@pageoff
+	adrp	x1, _str463@page
+	add	x1, x1, _str463@pageoff
 	bl	___rt_str_concat
 	b	L233
 L230:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
-	adrp	x0, _str441@page
-	add	x0, x0, _str441@pageoff
+	adrp	x0, _str455@page
+	add	x0, x0, _str455@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str443@page
-	add	x1, x1, _str443@pageoff
+	adrp	x1, _str457@page
+	add	x1, x1, _str457@pageoff
 	bl	___rt_str_concat
 	b	L233
 L231:
-	adrp	x0, _str434@page
-	add	x0, x0, _str434@pageoff
+	adrp	x0, _str448@page
+	add	x0, x0, _str448@pageoff
 	b	L233
 L232:
-	adrp	x0, _str429@page
-	add	x0, x0, _str429@pageoff
+	adrp	x0, _str443@page
+	add	x0, x0, _str443@pageoff
 L233:
 	ldp	x29, x30, [sp], 16
 	ret
@@ -3691,8 +3765,8 @@ _compiler_codegen_il_display_inst:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_phi_preds
 	mov	x1, x0
-	adrp	x0, _str1052@page
-	add	x0, x0, _str1052@pageoff
+	adrp	x0, _str1066@page
+	add	x0, x0, _str1066@pageoff
 	bl	___rt_str_concat
 	b	L343
 L282:
@@ -3715,8 +3789,8 @@ L282:
 	cmp	x1, #1
 	beq	L284
 	bl	_compiler_codegen_il_display_call_args
-	adrp	x1, _str1027@page
-	add	x1, x1, _str1027@pageoff
+	adrp	x1, _str1041@page
+	add	x1, x1, _str1041@pageoff
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x0, x21
@@ -3724,11 +3798,11 @@ L282:
 	b	L287
 L284:
 	mov	x0, x21
-	adrp	x1, _str1025@page
-	add	x1, x1, _str1025@pageoff
+	adrp	x1, _str1039@page
+	add	x1, x1, _str1039@pageoff
 	str	x1, [x20]
-	adrp	x1, _str1025@page
-	add	x1, x1, _str1025@pageoff
+	adrp	x1, _str1039@page
+	add	x1, x1, _str1039@pageoff
 L287:
 	mov	x21, x1
 	mov	x20, x0
@@ -3744,8 +3818,8 @@ L287:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str1037@page
-	add	x0, x0, _str1037@pageoff
+	adrp	x0, _str1051@page
+	add	x0, x0, _str1051@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	mov	x17, x0
@@ -3759,28 +3833,28 @@ L290:
 	mov	x0, x19
 	mov	x19, x20
 	mov	x20, x1
-	adrp	x1, _str1036@page
-	add	x1, x1, _str1036@pageoff
+	adrp	x1, _str1050@page
+	add	x1, x1, _str1050@pageoff
 	str	x1, [x19]
-	adrp	x19, _str1036@page
-	add	x19, x19, _str1036@pageoff
+	adrp	x19, _str1050@page
+	add	x19, x19, _str1050@pageoff
 L293:
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str1041@page
-	add	x0, x0, _str1041@pageoff
+	adrp	x0, _str1055@page
+	add	x0, x0, _str1055@pageoff
 	bl	___rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, _str1044@page
-	add	x1, x1, _str1044@pageoff
+	adrp	x1, _str1058@page
+	add	x1, x1, _str1058@pageoff
 	bl	___rt_str_concat
 	mov	x1, x20
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
-	adrp	x1, _str1048@page
-	add	x1, x1, _str1048@pageoff
+	adrp	x1, _str1062@page
+	add	x1, x1, _str1062@pageoff
 	bl	___rt_str_concat
 	b	L343
 L294:
@@ -3794,11 +3868,11 @@ L294:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str1000@page
-	add	x0, x0, _str1000@pageoff
+	adrp	x0, _str1014@page
+	add	x0, x0, _str1014@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str1003@page
-	add	x1, x1, _str1003@pageoff
+	adrp	x1, _str1017@page
+	add	x1, x1, _str1017@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -3807,8 +3881,8 @@ L294:
 	mov	x1, x0
 	mov	x0, x19
 	bl	___rt_str_concat
-	adrp	x1, _str1007@page
-	add	x1, x1, _str1007@pageoff
+	adrp	x1, _str1021@page
+	add	x1, x1, _str1021@pageoff
 	bl	___rt_str_concat
 	b	L343
 L295:
@@ -3823,20 +3897,20 @@ L295:
 	ldr	x19, [x1]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str983@page
-	add	x0, x0, _str983@pageoff
+	adrp	x0, _str997@page
+	add	x0, x0, _str997@pageoff
 	bl	___rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, _str986@page
-	add	x1, x1, _str986@pageoff
+	adrp	x1, _str1000@page
+	add	x1, x1, _str1000@pageoff
 	bl	___rt_str_concat
 	mov	x1, x20
 	bl	___rt_str_concat
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str989@page
-	add	x1, x1, _str989@pageoff
+	adrp	x1, _str1003@page
+	add	x1, x1, _str1003@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -3845,8 +3919,8 @@ L296:
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x1, [x0]
-	adrp	x0, _str971@page
-	add	x0, x0, _str971@pageoff
+	adrp	x0, _str985@page
+	add	x0, x0, _str985@pageoff
 	bl	___rt_str_concat
 	b	L343
 L297:
@@ -3864,17 +3938,17 @@ L297:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str961@page
-	add	x0, x0, _str961@pageoff
+	adrp	x0, _str975@page
+	add	x0, x0, _str975@pageoff
 	bl	___rt_str_concat
 	str	x0, [x19]
 	b	L343
 L299:
-	adrp	x0, _str958@page
-	add	x0, x0, _str958@pageoff
+	adrp	x0, _str972@page
+	add	x0, x0, _str972@pageoff
 	str	x0, [x19]
-	adrp	x0, _str958@page
-	add	x0, x0, _str958@pageoff
+	adrp	x0, _str972@page
+	add	x0, x0, _str972@pageoff
 	b	L343
 L301:
 	mov	x0, #8
@@ -3882,8 +3956,8 @@ L301:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str943@page
-	add	x0, x0, _str943@pageoff
+	adrp	x0, _str957@page
+	add	x0, x0, _str957@pageoff
 	bl	___rt_str_concat
 	b	L343
 L302:
@@ -3892,8 +3966,8 @@ L302:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str934@page
-	add	x0, x0, _str934@pageoff
+	adrp	x0, _str948@page
+	add	x0, x0, _str948@pageoff
 	bl	___rt_str_concat
 	b	L343
 L303:
@@ -3902,8 +3976,8 @@ L303:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str925@page
-	add	x0, x0, _str925@pageoff
+	adrp	x0, _str939@page
+	add	x0, x0, _str939@pageoff
 	bl	___rt_str_concat
 	b	L343
 L304:
@@ -3912,8 +3986,8 @@ L304:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str916@page
-	add	x0, x0, _str916@pageoff
+	adrp	x0, _str930@page
+	add	x0, x0, _str930@pageoff
 	bl	___rt_str_concat
 	b	L343
 L305:
@@ -3922,8 +3996,8 @@ L305:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str907@page
-	add	x0, x0, _str907@pageoff
+	adrp	x0, _str921@page
+	add	x0, x0, _str921@pageoff
 	bl	___rt_str_concat
 	b	L343
 L306:
@@ -3932,8 +4006,8 @@ L306:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str898@page
-	add	x0, x0, _str898@pageoff
+	adrp	x0, _str912@page
+	add	x0, x0, _str912@pageoff
 	bl	___rt_str_concat
 	b	L343
 L307:
@@ -3942,8 +4016,8 @@ L307:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str889@page
-	add	x0, x0, _str889@pageoff
+	adrp	x0, _str903@page
+	add	x0, x0, _str903@pageoff
 	bl	___rt_str_concat
 	b	L343
 L308:
@@ -3952,8 +4026,8 @@ L308:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str880@page
-	add	x0, x0, _str880@pageoff
+	adrp	x0, _str894@page
+	add	x0, x0, _str894@pageoff
 	bl	___rt_str_concat
 	b	L343
 L309:
@@ -3962,8 +4036,8 @@ L309:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str871@page
-	add	x0, x0, _str871@pageoff
+	adrp	x0, _str885@page
+	add	x0, x0, _str885@pageoff
 	bl	___rt_str_concat
 	b	L343
 L310:
@@ -3972,8 +4046,8 @@ L310:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str862@page
-	add	x0, x0, _str862@pageoff
+	adrp	x0, _str876@page
+	add	x0, x0, _str876@pageoff
 	bl	___rt_str_concat
 	b	L343
 L311:
@@ -3982,8 +4056,8 @@ L311:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str853@page
-	add	x0, x0, _str853@pageoff
+	adrp	x0, _str867@page
+	add	x0, x0, _str867@pageoff
 	bl	___rt_str_concat
 	b	L343
 L312:
@@ -3992,8 +4066,8 @@ L312:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str844@page
-	add	x0, x0, _str844@pageoff
+	adrp	x0, _str858@page
+	add	x0, x0, _str858@pageoff
 	bl	___rt_str_concat
 	b	L343
 L313:
@@ -4002,8 +4076,8 @@ L313:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str835@page
-	add	x0, x0, _str835@pageoff
+	adrp	x0, _str849@page
+	add	x0, x0, _str849@pageoff
 	bl	___rt_str_concat
 	b	L343
 L314:
@@ -4012,8 +4086,8 @@ L314:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str826@page
-	add	x0, x0, _str826@pageoff
+	adrp	x0, _str840@page
+	add	x0, x0, _str840@pageoff
 	bl	___rt_str_concat
 	b	L343
 L315:
@@ -4022,8 +4096,8 @@ L315:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str817@page
-	add	x0, x0, _str817@pageoff
+	adrp	x0, _str831@page
+	add	x0, x0, _str831@pageoff
 	bl	___rt_str_concat
 	b	L343
 L316:
@@ -4032,8 +4106,8 @@ L316:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str808@page
-	add	x0, x0, _str808@pageoff
+	adrp	x0, _str822@page
+	add	x0, x0, _str822@pageoff
 	bl	___rt_str_concat
 	b	L343
 L317:
@@ -4042,8 +4116,8 @@ L317:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str799@page
-	add	x0, x0, _str799@pageoff
+	adrp	x0, _str813@page
+	add	x0, x0, _str813@pageoff
 	bl	___rt_str_concat
 	b	L343
 L318:
@@ -4052,8 +4126,8 @@ L318:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str790@page
-	add	x0, x0, _str790@pageoff
+	adrp	x0, _str804@page
+	add	x0, x0, _str804@pageoff
 	bl	___rt_str_concat
 	b	L343
 L319:
@@ -4062,8 +4136,8 @@ L319:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str781@page
-	add	x0, x0, _str781@pageoff
+	adrp	x0, _str795@page
+	add	x0, x0, _str795@pageoff
 	bl	___rt_str_concat
 	b	L343
 L320:
@@ -4072,8 +4146,8 @@ L320:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str772@page
-	add	x0, x0, _str772@pageoff
+	adrp	x0, _str786@page
+	add	x0, x0, _str786@pageoff
 	bl	___rt_str_concat
 	b	L343
 L321:
@@ -4087,11 +4161,11 @@ L321:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str759@page
-	add	x0, x0, _str759@pageoff
+	adrp	x0, _str773@page
+	add	x0, x0, _str773@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str762@page
-	add	x1, x1, _str762@pageoff
+	adrp	x1, _str776@page
+	add	x1, x1, _str776@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4112,11 +4186,11 @@ L322:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str744@page
-	add	x0, x0, _str744@pageoff
+	adrp	x0, _str758@page
+	add	x0, x0, _str758@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str747@page
-	add	x1, x1, _str747@pageoff
+	adrp	x1, _str761@page
+	add	x1, x1, _str761@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4137,11 +4211,11 @@ L323:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str729@page
-	add	x0, x0, _str729@pageoff
+	adrp	x0, _str743@page
+	add	x0, x0, _str743@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str732@page
-	add	x1, x1, _str732@pageoff
+	adrp	x1, _str746@page
+	add	x1, x1, _str746@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4162,11 +4236,11 @@ L324:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str714@page
-	add	x0, x0, _str714@pageoff
+	adrp	x0, _str728@page
+	add	x0, x0, _str728@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str717@page
-	add	x1, x1, _str717@pageoff
+	adrp	x1, _str731@page
+	add	x1, x1, _str731@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4187,11 +4261,11 @@ L325:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str699@page
-	add	x0, x0, _str699@pageoff
+	adrp	x0, _str713@page
+	add	x0, x0, _str713@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str702@page
-	add	x1, x1, _str702@pageoff
+	adrp	x1, _str716@page
+	add	x1, x1, _str716@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4212,11 +4286,11 @@ L326:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str684@page
-	add	x0, x0, _str684@pageoff
+	adrp	x0, _str698@page
+	add	x0, x0, _str698@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str687@page
-	add	x1, x1, _str687@pageoff
+	adrp	x1, _str701@page
+	add	x1, x1, _str701@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4232,8 +4306,8 @@ L327:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str673@page
-	add	x0, x0, _str673@pageoff
+	adrp	x0, _str687@page
+	add	x0, x0, _str687@pageoff
 	bl	___rt_str_concat
 	b	L343
 L328:
@@ -4242,8 +4316,8 @@ L328:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str664@page
-	add	x0, x0, _str664@pageoff
+	adrp	x0, _str678@page
+	add	x0, x0, _str678@pageoff
 	bl	___rt_str_concat
 	b	L343
 L329:
@@ -4252,8 +4326,8 @@ L329:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str655@page
-	add	x0, x0, _str655@pageoff
+	adrp	x0, _str669@page
+	add	x0, x0, _str669@pageoff
 	bl	___rt_str_concat
 	b	L343
 L330:
@@ -4267,8 +4341,8 @@ L330:
 	add	x1, x1, x2
 	ldr	x19, [x1]
 	bl	_compiler_codegen_il_display_comp
-	adrp	x1, _str641@page
-	add	x1, x1, _str641@pageoff
+	adrp	x1, _str655@page
+	add	x1, x1, _str655@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -4277,8 +4351,8 @@ L330:
 	mov	x1, x0
 	mov	x0, x20
 	bl	___rt_str_concat
-	adrp	x1, _str645@page
-	add	x1, x1, _str645@pageoff
+	adrp	x1, _str659@page
+	add	x1, x1, _str659@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4299,11 +4373,11 @@ L331:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str621@page
-	add	x0, x0, _str621@pageoff
+	adrp	x0, _str635@page
+	add	x0, x0, _str635@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str624@page
-	add	x1, x1, _str624@pageoff
+	adrp	x1, _str638@page
+	add	x1, x1, _str638@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4324,11 +4398,11 @@ L332:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str606@page
-	add	x0, x0, _str606@pageoff
+	adrp	x0, _str620@page
+	add	x0, x0, _str620@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str609@page
-	add	x1, x1, _str609@pageoff
+	adrp	x1, _str623@page
+	add	x1, x1, _str623@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4349,11 +4423,11 @@ L333:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str591@page
-	add	x0, x0, _str591@pageoff
+	adrp	x0, _str605@page
+	add	x0, x0, _str605@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str594@page
-	add	x1, x1, _str594@pageoff
+	adrp	x1, _str608@page
+	add	x1, x1, _str608@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4374,11 +4448,11 @@ L334:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str576@page
-	add	x0, x0, _str576@pageoff
+	adrp	x0, _str590@page
+	add	x0, x0, _str590@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str579@page
-	add	x1, x1, _str579@pageoff
+	adrp	x1, _str593@page
+	add	x1, x1, _str593@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4399,11 +4473,11 @@ L335:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str561@page
-	add	x0, x0, _str561@pageoff
+	adrp	x0, _str575@page
+	add	x0, x0, _str575@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str564@page
-	add	x1, x1, _str564@pageoff
+	adrp	x1, _str578@page
+	add	x1, x1, _str578@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4424,11 +4498,11 @@ L336:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str546@page
-	add	x0, x0, _str546@pageoff
+	adrp	x0, _str560@page
+	add	x0, x0, _str560@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str549@page
-	add	x1, x1, _str549@pageoff
+	adrp	x1, _str563@page
+	add	x1, x1, _str563@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4444,8 +4518,8 @@ L337:
 	ldr	x0, [x0]
 	bl	_compiler_codegen_il_display_value
 	mov	x1, x0
-	adrp	x0, _str535@page
-	add	x0, x0, _str535@pageoff
+	adrp	x0, _str549@page
+	add	x0, x0, _str549@pageoff
 	bl	___rt_str_concat
 	b	L343
 L338:
@@ -4459,11 +4533,11 @@ L338:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str522@page
-	add	x0, x0, _str522@pageoff
+	adrp	x0, _str536@page
+	add	x0, x0, _str536@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str525@page
-	add	x1, x1, _str525@pageoff
+	adrp	x1, _str539@page
+	add	x1, x1, _str539@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4484,11 +4558,11 @@ L339:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str507@page
-	add	x0, x0, _str507@pageoff
+	adrp	x0, _str521@page
+	add	x0, x0, _str521@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str510@page
-	add	x1, x1, _str510@pageoff
+	adrp	x1, _str524@page
+	add	x1, x1, _str524@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4509,11 +4583,11 @@ L340:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str492@page
-	add	x0, x0, _str492@pageoff
+	adrp	x0, _str506@page
+	add	x0, x0, _str506@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str495@page
-	add	x1, x1, _str495@pageoff
+	adrp	x1, _str509@page
+	add	x1, x1, _str509@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4534,11 +4608,11 @@ L341:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str477@page
-	add	x0, x0, _str477@pageoff
+	adrp	x0, _str491@page
+	add	x0, x0, _str491@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str480@page
-	add	x1, x1, _str480@pageoff
+	adrp	x1, _str494@page
+	add	x1, x1, _str494@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4559,11 +4633,11 @@ L342:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str462@page
-	add	x0, x0, _str462@pageoff
+	adrp	x0, _str476@page
+	add	x0, x0, _str476@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str465@page
-	add	x1, x1, _str465@pageoff
+	adrp	x1, _str479@page
+	add	x1, x1, _str479@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4610,8 +4684,8 @@ L346:
 	add	x1, x1, x2
 	ldr	x19, [x1]
 	bl	_compiler_codegen_il_display_value
-	adrp	x1, _str1069@page
-	add	x1, x1, _str1069@pageoff
+	adrp	x1, _str1083@page
+	add	x1, x1, _str1083@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -4620,8 +4694,8 @@ L346:
 	mov	x1, x0
 	mov	x0, x20
 	bl	___rt_str_concat
-	adrp	x1, _str1073@page
-	add	x1, x1, _str1073@pageoff
+	adrp	x1, _str1087@page
+	add	x1, x1, _str1087@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -4657,17 +4731,17 @@ _compiler_codegen_il_display_block:
 	bl	_donna_list_map
 	mov	x1, x19
 	mov	x19, x0
-	adrp	x0, _str1088@page
-	add	x0, x0, _str1088@pageoff
+	adrp	x0, _str1102@page
+	add	x0, x0, _str1102@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str1090@page
-	add	x1, x1, _str1090@pageoff
+	adrp	x1, _str1104@page
+	add	x1, x1, _str1104@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, _str1092@page
-	add	x1, x1, _str1092@pageoff
+	adrp	x1, _str1106@page
+	add	x1, x1, _str1106@pageoff
 	bl	_donna_string_join
 	mov	x1, x0
 	mov	x0, x19
@@ -4721,15 +4795,15 @@ _compiler_codegen_il_display_function:
 	bl	_compiler_codegen_il_display_type
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, _str1119@page
-	add	x1, x1, _str1119@pageoff
+	adrp	x1, _str1133@page
+	add	x1, x1, _str1133@pageoff
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x0, x22
 	b	L353
 L352:
-	adrp	x1, _str1115@page
-	add	x1, x1, _str1115@pageoff
+	adrp	x1, _str1129@page
+	add	x1, x1, _str1129@pageoff
 L353:
 	mov	x22, x1
 	adrp	x1, _compiler_codegen_il_display_param@page
@@ -4749,39 +4823,39 @@ L353:
 	mov	x0, x19
 	mov	x19, x17
 	mov	x22, x1
-	adrp	x1, _str1125@page
-	add	x1, x1, _str1125@pageoff
+	adrp	x1, _str1139@page
+	add	x1, x1, _str1139@pageoff
 	bl	___rt_str_concat
 	mov	x1, x22
 	bl	___rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, _str1128@page
-	add	x1, x1, _str1128@pageoff
+	adrp	x1, _str1142@page
+	add	x1, x1, _str1142@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	bl	___rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, _str1131@page
-	add	x1, x1, _str1131@pageoff
+	adrp	x1, _str1145@page
+	add	x1, x1, _str1145@pageoff
 	bl	___rt_str_concat
 	mov	x1, x20
 	bl	___rt_str_concat
-	adrp	x1, _str1134@page
-	add	x1, x1, _str1134@pageoff
+	adrp	x1, _str1148@page
+	add	x1, x1, _str1148@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, _str1136@page
-	add	x1, x1, _str1136@pageoff
+	adrp	x1, _str1150@page
+	add	x1, x1, _str1150@pageoff
 	bl	_donna_string_join
 	mov	x1, x0
 	mov	x0, x19
 	bl	___rt_str_concat
-	adrp	x1, _str1139@page
-	add	x1, x1, _str1139@pageoff
+	adrp	x1, _str1153@page
+	add	x1, x1, _str1153@pageoff
 	bl	___rt_str_concat
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
@@ -4811,8 +4885,8 @@ _compiler_codegen_il_display_data_item:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
-	adrp	x0, _str1185@page
-	add	x0, x0, _str1185@pageoff
+	adrp	x0, _str1199@page
+	add	x0, x0, _str1199@pageoff
 	bl	___rt_str_concat
 	b	L364
 L359:
@@ -4844,11 +4918,11 @@ L361:
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	mov	x20, x0
-	adrp	x0, _str1162@page
-	add	x0, x0, _str1162@pageoff
+	adrp	x0, _str1176@page
+	add	x0, x0, _str1176@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str1164@page
-	add	x1, x1, _str1164@pageoff
+	adrp	x1, _str1178@page
+	add	x1, x1, _str1178@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -4860,8 +4934,8 @@ L361:
 	str	x0, [x19]
 	b	L364
 L363:
-	adrp	x0, _str1158@page
-	add	x0, x0, _str1158@pageoff
+	adrp	x0, _str1172@page
+	add	x0, x0, _str1172@pageoff
 	bl	___rt_str_concat
 	str	x0, [x19]
 L364:
@@ -4913,13 +4987,13 @@ _compiler_codegen_il_display_data_def:
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, _str1208@page
-	add	x0, x0, _str1208@pageoff
+	adrp	x0, _str1222@page
+	add	x0, x0, _str1222@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, _str1211@page
-	add	x1, x1, _str1211@pageoff
+	adrp	x1, _str1225@page
+	add	x1, x1, _str1225@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	mov	x17, x0
@@ -4928,8 +5002,8 @@ _compiler_codegen_il_display_data_def:
 	b	L369
 L367:
 	mov	x1, x21
-	adrp	x20, _str1205@page
-	add	x20, x20, _str1205@pageoff
+	adrp	x20, _str1219@page
+	add	x20, x20, _str1219@pageoff
 L369:
 	mov	x21, x1
 	adrp	x1, _compiler_codegen_il_display_typed_item@page
@@ -4941,27 +5015,27 @@ L369:
 	mov	x0, x19
 	mov	x19, x17
 	mov	x21, x1
-	adrp	x1, _str1216@page
-	add	x1, x1, _str1216@pageoff
+	adrp	x1, _str1230@page
+	add	x1, x1, _str1230@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	bl	___rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, _str1219@page
-	add	x1, x1, _str1219@pageoff
+	adrp	x1, _str1233@page
+	add	x1, x1, _str1233@pageoff
 	bl	___rt_str_concat
 	mov	x1, x20
 	bl	___rt_str_concat
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str1222@page
-	add	x1, x1, _str1222@pageoff
+	adrp	x1, _str1236@page
+	add	x1, x1, _str1236@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
-	adrp	x1, _str1225@page
-	add	x1, x1, _str1225@pageoff
+	adrp	x1, _str1239@page
+	add	x1, x1, _str1239@pageoff
 	bl	___rt_str_concat
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -4997,8 +5071,8 @@ _compiler_codegen_il_display_module:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_donna_list_append
-	adrp	x1, _str1237@page
-	add	x1, x1, _str1237@pageoff
+	adrp	x1, _str1251@page
+	add	x1, x1, _str1251@pageoff
 	bl	_donna_string_join
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
@@ -5013,11 +5087,11 @@ _compiler_codegen_il_display_stmt_indented:
 	mov	x29, sp
 	bl	_compiler_codegen_il_display_statement
 	mov	x1, x0
-	adrp	x0, _str1240@page
-	add	x0, x0, _str1240@pageoff
+	adrp	x0, _str1254@page
+	add	x0, x0, _str1254@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str1243@page
-	add	x1, x1, _str1243@pageoff
+	adrp	x1, _str1257@page
+	add	x1, x1, _str1257@pageoff
 	bl	___rt_str_concat
 	ldp	x29, x30, [sp], 16
 	ret
@@ -5036,8 +5110,8 @@ _compiler_codegen_il_display_param:
 	add	x1, x1, x2
 	ldr	x19, [x1]
 	bl	_compiler_codegen_il_into_abi
-	adrp	x1, _str1252@page
-	add	x1, x1, _str1252@pageoff
+	adrp	x1, _str1266@page
+	add	x1, x1, _str1266@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -5064,8 +5138,8 @@ _compiler_codegen_il_display_call_arg:
 	add	x1, x1, x2
 	ldr	x19, [x1]
 	bl	_compiler_codegen_il_into_abi
-	adrp	x1, _str1264@page
-	add	x1, x1, _str1264@pageoff
+	adrp	x1, _str1278@page
+	add	x1, x1, _str1278@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -5105,11 +5179,11 @@ _compiler_codegen_il_display_phi_pred:
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	mov	x19, x0
-	adrp	x0, _str1277@page
-	add	x0, x0, _str1277@pageoff
+	adrp	x0, _str1291@page
+	add	x0, x0, _str1291@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str1279@page
-	add	x1, x1, _str1279@pageoff
+	adrp	x1, _str1293@page
+	add	x1, x1, _str1293@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -5150,8 +5224,8 @@ _compiler_codegen_il_display_typed_item:
 	add	x1, x1, x2
 	ldr	x19, [x1]
 	bl	_compiler_codegen_il_display_type
-	adrp	x1, _str1293@page
-	add	x1, x1, _str1293@pageoff
+	adrp	x1, _str1307@page
+	add	x1, x1, _str1307@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -5205,10 +5279,10 @@ _compiler_codegen_il_escape_str_for_qbe:
 	bl	_donna_string_length
 	mov	x2, x0
 	mov	x0, x19
-	adrp	x4, _str1311@page
-	add	x4, x4, _str1311@pageoff
-	adrp	x3, _str1310@page
-	add	x3, x3, _str1310@pageoff
+	adrp	x4, _str1325@page
+	add	x4, x4, _str1325@pageoff
+	adrp	x3, _str1324@page
+	add	x3, x3, _str1324@pageoff
 	mov	x1, #0
 	bl	_compiler_codegen_il_escape_str_loop
 	ldr	x19, [x29, 24]
@@ -5301,13 +5375,13 @@ L394:
 	cmp	x2, #1
 	beq	L403
 	mov	x21, x0
-	adrp	x0, _str1372@page
-	add	x0, x0, _str1372@pageoff
+	adrp	x0, _str1386@page
+	add	x0, x0, _str1386@pageoff
 	bl	___rt_str_concat
 	mov	x1, x23
 	mov	x23, x1
-	adrp	x1, _str1374@page
-	add	x1, x1, _str1374@pageoff
+	adrp	x1, _str1388@page
+	add	x1, x1, _str1388@pageoff
 	bl	___rt_str_concat
 	mov	x26, x0
 	mov	x0, x21
@@ -5322,8 +5396,8 @@ L394:
 	cmp	x2, #1
 	beq	L399
 	mov	x23, x1
-	adrp	x1, _str1385@page
-	add	x1, x1, _str1385@pageoff
+	adrp	x1, _str1399@page
+	add	x1, x1, _str1399@pageoff
 	bl	___rt_str_concat
 	mov	x1, x23
 	mov	x23, x1
@@ -5331,8 +5405,8 @@ L394:
 	bl	___rt_str_concat
 	mov	x1, x23
 	mov	x23, x1
-	adrp	x1, _str1388@page
-	add	x1, x1, _str1388@pageoff
+	adrp	x1, _str1402@page
+	add	x1, x1, _str1402@pageoff
 	bl	___rt_str_concat
 	mov	x1, x23
 	mov	x23, x1
@@ -5346,8 +5420,8 @@ L394:
 L399:
 	mov	x0, x26
 	mov	x23, x1
-	adrp	x1, _str1382@page
-	add	x1, x1, _str1382@pageoff
+	adrp	x1, _str1396@page
+	add	x1, x1, _str1396@pageoff
 	bl	___rt_str_concat
 	mov	x1, x23
 	mov	x23, x1
@@ -5373,8 +5447,8 @@ L403:
 	cmp	x2, #1
 	beq	L405
 	mov	x23, x1
-	adrp	x1, _str1368@page
-	add	x1, x1, _str1368@pageoff
+	adrp	x1, _str1382@page
+	add	x1, x1, _str1382@pageoff
 	bl	___rt_str_concat
 	mov	x4, x25
 	mov	x1, x23
@@ -5395,8 +5469,8 @@ L405:
 L407:
 	str	x4, [x20]
 L408:
-	adrp	x3, _str1394@page
-	add	x3, x3, _str1394@pageoff
+	adrp	x3, _str1408@page
+	add	x3, x3, _str1408@pageoff
 	bl	_compiler_codegen_il_escape_str_loop
 	str	x0, [x19]
 	b	L421
@@ -5415,11 +5489,11 @@ L409:
 	cmp	x2, #1
 	beq	L416
 	mov	x20, x0
-	adrp	x0, _str1333@page
-	add	x0, x0, _str1333@pageoff
+	adrp	x0, _str1347@page
+	add	x0, x0, _str1347@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str1335@page
-	add	x1, x1, _str1335@pageoff
+	adrp	x1, _str1349@page
+	add	x1, x1, _str1349@pageoff
 	bl	___rt_str_concat
 	mov	x21, x0
 	mov	x0, x20
@@ -5432,8 +5506,8 @@ L409:
 	mov	x20, sp
 	cmp	x1, #1
 	beq	L413
-	adrp	x1, _str1343@page
-	add	x1, x1, _str1343@pageoff
+	adrp	x1, _str1357@page
+	add	x1, x1, _str1357@pageoff
 	bl	___rt_str_concat
 	mov	x1, x21
 	bl	___rt_str_concat
@@ -5458,11 +5532,11 @@ L416:
 	str	x0, [x1]
 	b	L420
 L418:
-	adrp	x0, _str1331@page
-	add	x0, x0, _str1331@pageoff
+	adrp	x0, _str1345@page
+	add	x0, x0, _str1345@pageoff
 	str	x0, [x1]
-	adrp	x0, _str1331@page
-	add	x0, x0, _str1331@pageoff
+	adrp	x0, _str1345@page
+	add	x0, x0, _str1345@pageoff
 L420:
 	str	x0, [x19]
 L421:
@@ -5485,8 +5559,8 @@ _compiler_codegen_il_join_comma:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x1, _str1402@page
-	add	x1, x1, _str1402@pageoff
+	adrp	x1, _str1416@page
+	add	x1, x1, _str1416@pageoff
 	bl	_donna_string_join
 	ldp	x29, x30, [sp], 16
 	ret

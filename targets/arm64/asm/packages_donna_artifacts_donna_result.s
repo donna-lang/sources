@@ -143,24 +143,39 @@ donna_result_unwrap_error:
 .globl donna_result_map
 donna_result_map:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
+	str	x19, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
 	beq	.L22
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	donna_result_Error
+	ldr	x19, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 	b	.L23
 .L22:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	blr	x1
-	bl	donna_result_Ok
+	mov	x19, x0
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 .L23:
-	ldp	x29, x30, [sp], 16
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
 	ret
 .type donna_result_map, @function
 .size donna_result_map, .-donna_result_map
@@ -171,8 +186,9 @@ donna_result_map:
 .globl donna_result_map_error
 donna_result_map_error:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
+	str	x19, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
 	beq	.L26
@@ -180,15 +196,29 @@ donna_result_map_error:
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	blr	x1
-	bl	donna_result_Error
+	mov	x19, x0
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 	b	.L27
 .L26:
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	donna_result_Ok
+	ldr	x19, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 .L27:
-	ldp	x29, x30, [sp], 16
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
 	ret
 .type donna_result_map_error, @function
 .size donna_result_map_error, .-donna_result_map_error
@@ -199,15 +229,22 @@ donna_result_map_error:
 .globl donna_result_then
 donna_result_then:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
+	str	x19, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
 	beq	.L30
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	donna_result_Error
+	ldr	x19, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 	b	.L31
 .L30:
 	mov	x2, #8
@@ -215,7 +252,8 @@ donna_result_then:
 	ldr	x0, [x0]
 	blr	x1
 .L31:
-	ldp	x29, x30, [sp], 16
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
 	ret
 .type donna_result_then, @function
 .size donna_result_then, .-donna_result_then

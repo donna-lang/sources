@@ -6,63 +6,63 @@ _donna_nil:
 
 .data
 .balign 8
-_str136:
+_str141:
 	.ascii ", or )"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str139:
+_str148:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str140:
+_str149:
 	.ascii "unknown"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str199:
+_str211:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str219:
+_str231:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str250:
+_str262:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str276:
+_str288:
 	.ascii "parameter name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str279:
+_str295:
 	.ascii "parameter name"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str280:
+_str296:
 	.ascii "unknown"
 	.byte 0
 /* end data */
@@ -72,8 +72,9 @@ _str280:
 .globl _compiler_parser_parse_params_parse_params
 _compiler_parser_parse_params_parse_params:
 	hint	#34
-	stp	x29, x30, [sp, -16]!
+	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
+	str	x19, [x29, 24]
 	bl	_compiler_parser_parse_result_skip_newlines
 	ldr	x1, [x0]
 	cmp	x1, #1
@@ -100,12 +101,22 @@ L3:
 L5:
 	mov	x1, #16
 	add	x0, x0, x1
-	ldr	x1, [x0]
-	adrp	x0, _donna_nil@page
-	add	x0, x0, _donna_nil@pageoff
-	bl	_compiler_parser_parse_result_POk
+	ldr	x19, [x0]
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x19, [x1]
 L6:
-	ldp	x29, x30, [sp], 16
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
 	ret
 /* end function compiler_parser_parse_params_parse_params */
 
@@ -126,8 +137,7 @@ _compiler_parser_parse_params_parse_param_list:
 	beq	L29
 	mov	x1, #8
 	add	x1, x0, x1
-	mov	x21, x20
-	ldr	x20, [x1]
+	ldr	x22, [x1]
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -197,14 +207,30 @@ L21:
 L23:
 	cmp	w1, #0
 	bne	L25
-	adrp	x0, _str140@page
-	add	x0, x0, _str140@pageoff
+	adrp	x0, _str149@page
+	add	x0, x0, _str149@pageoff
 	bl	_utilities_location_zero
-	mov	x1, x0
-	adrp	x0, _str139@page
-	add	x0, x0, _str139@pageoff
-	bl	_errors_error_ParseUnexpectedEof
-	bl	_compiler_parser_parse_result_PErr
+	mov	x21, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x20, x0
+	mov	x0, #7
+	str	x0, [x20]
+	mov	x0, #8
+	add	x1, x20, x0
+	adrp	x0, _str148@page
+	add	x0, x0, _str148@pageoff
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L30
 L25:
@@ -214,40 +240,65 @@ L25:
 	ldr	x0, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x20, [x1]
+	ldr	x21, [x1]
 	bl	_compiler_lexer_token_to_string
-	mov	x2, x20
-	adrp	x1, _str136@page
-	add	x1, x1, _str136@pageoff
-	bl	_errors_error_ParseUnexpectedToken
-	bl	_compiler_parser_parse_result_PErr
+	mov	x22, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x20, x0
+	mov	x0, #6
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x22, [x0]
+	mov	x0, #16
+	add	x1, x20, x0
+	adrp	x0, _str141@page
+	add	x0, x0, _str141@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L30
 L26:
 	mov	x1, #16
 	add	x0, x0, x1
-	ldr	x22, [x0]
+	mov	x21, x20
+	ldr	x20, [x0]
 	mov	x0, #24
 	bl	_malloc
-	mov	x1, x22
-	mov	x2, #1
-	str	x2, [x0]
-	mov	x2, #8
-	add	x2, x0, x2
-	str	x20, [x2]
-	mov	x20, x1
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x21, [x1]
 	bl	_donna_list_reverse
-	mov	x1, x20
-	bl	_compiler_parser_parse_result_POk
+	mov	x21, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L30
 L27:
-	mov	x17, x20
-	mov	x20, x21
-	mov	x21, x17
+	mov	x21, x22
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
@@ -271,8 +322,14 @@ L27:
 L29:
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_compiler_parser_parse_result_PErr
+	ldr	x19, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 L30:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -343,8 +400,8 @@ L41:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, _str199@page
-	add	x1, x1, _str199@pageoff
+	adrp	x1, _str211@page
+	add	x1, x1, _str211@pageoff
 	bl	_strcmp
 	cmp	x0, #0
 	cset	x0, eq
@@ -397,14 +454,30 @@ L52:
 L54:
 	cmp	w0, #0
 	bne	L56
-	adrp	x0, _str280@page
-	add	x0, x0, _str280@pageoff
+	adrp	x0, _str296@page
+	add	x0, x0, _str296@pageoff
 	bl	_utilities_location_zero
-	mov	x1, x0
-	adrp	x0, _str279@page
-	add	x0, x0, _str279@pageoff
-	bl	_errors_error_ParseUnexpectedEof
-	bl	_compiler_parser_parse_result_PErr
+	mov	x20, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x19, x0
+	mov	x0, #7
+	str	x0, [x19]
+	mov	x0, #8
+	add	x1, x19, x0
+	adrp	x0, _str295@page
+	add	x0, x0, _str295@pageoff
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 	b	L60
 L56:
 	mov	x0, #8
@@ -413,13 +486,32 @@ L56:
 	ldr	x0, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x19, [x1]
+	ldr	x20, [x1]
 	bl	_compiler_lexer_token_to_string
-	mov	x2, x19
-	adrp	x1, _str276@page
-	add	x1, x1, _str276@pageoff
-	bl	_errors_error_ParseUnexpectedToken
-	bl	_compiler_parser_parse_result_PErr
+	mov	x21, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x19, x0
+	mov	x0, #6
+	str	x0, [x19]
+	mov	x0, #8
+	add	x0, x19, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x1, x19, x0
+	adrp	x0, _str288@page
+	add	x0, x0, _str288@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
 	b	L60
 L57:
 	mov	x0, #8
@@ -436,8 +528,8 @@ L57:
 	add	x2, x2, x3
 	ldr	x20, [x2]
 	mov	x19, x0
-	adrp	x0, _str250@page
-	add	x0, x0, _str250@pageoff
+	adrp	x0, _str262@page
+	add	x0, x0, _str262@pageoff
 	bl	___rt_str_concat
 	mov	x1, x20
 	mov	x2, x0
@@ -454,8 +546,8 @@ L58:
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
-	adrp	x2, _str219@page
-	add	x2, x2, _str219@pageoff
+	adrp	x2, _str231@page
+	add	x2, x2, _str231@pageoff
 	bl	_compiler_parser_parse_params_parse_param_with_name
 	b	L60
 L59:
@@ -487,85 +579,149 @@ L60:
 .balign 4
 _compiler_parser_parse_params_parse_param_with_name:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
-	mov	x19, x0
-	mov	x0, x2
-	mov	x2, x1
-	ldr	x1, [x19]
-	cmp	x1, #1
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
+	ldr	x3, [x0]
+	cmp	x3, #1
 	beq	L63
+	mov	x21, x2
+	mov	x20, x1
 	mov	x1, #0
 	b	L64
 L63:
-	mov	x1, #8
-	add	x1, x19, x1
-	ldr	x1, [x1]
-	ldr	x1, [x1]
-	ldr	x1, [x1]
-	cmp	x1, #24
+	mov	x3, #8
+	add	x3, x0, x3
+	ldr	x3, [x3]
+	ldr	x3, [x3]
+	ldr	x3, [x3]
+	cmp	x3, #24
+	mov	x20, x1
 	cset	x1, eq
-	mov	x3, #1
-	and	x1, x1, x3
+	mov	x21, x2
+	mov	x2, #1
+	and	x1, x1, x2
 L64:
 	cmp	w1, #0
 	bne	L66
-	adrp	x1, _donna_option_None@page
-	add	x1, x1, _donna_option_None@pageoff
-	mov	x21, x0
-	bl	_compiler_parser_ast_Param
-	mov	x1, x19
-	bl	_compiler_parser_parse_result_POk
+	mov	x19, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x2, x21
+	mov	x1, x20
+	mov	x20, x0
+	mov	x0, x19
+	mov	x3, #0
+	str	x3, [x20]
+	mov	x3, #8
+	add	x3, x20, x3
+	str	x2, [x3]
+	mov	x2, #16
+	add	x3, x20, x2
+	adrp	x2, _donna_option_None@page
+	add	x2, x2, _donna_option_None@pageoff
+	str	x2, [x3]
+	mov	x2, #24
+	add	x2, x20, x2
+	str	x1, [x2]
+	mov	x19, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x19, [x1]
 	b	L70
 L66:
-	mov	x21, x0
-	mov	x0, x19
-	mov	x19, x2
+	mov	x1, x20
+	mov	x20, x21
+	mov	x19, x1
 	mov	x1, #16
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_compiler_parser_parse_types_parse_type
-	mov	x2, x19
-	mov	x1, #16
-	sub	sp, sp, x1
+	mov	x2, x20
+	mov	x1, x19
+	mov	x3, #16
+	sub	sp, sp, x3
 	mov	x19, sp
-	ldr	x1, [x0]
-	cmp	x1, #1
+	ldr	x3, [x0]
+	cmp	x3, #1
 	beq	L69
-	mov	x1, x0
+	mov	x23, x2
+	mov	x2, #8
+	add	x2, x0, x2
+	ldr	x24, [x2]
+	mov	x21, x1
+	mov	x1, #16
+	add	x0, x0, x1
+	ldr	x20, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x22, x0
+	mov	x0, #1
+	str	x0, [x22]
 	mov	x0, #8
-	add	x0, x1, x0
-	ldr	x0, [x0]
-	mov	x22, x2
-	mov	x2, #16
-	add	x1, x1, x2
-	ldr	x20, [x1]
-	bl	_donna_option_Some
-	mov	x2, x22
-	mov	x1, x0
-	mov	x0, x21
-	bl	_compiler_parser_ast_Param
-	mov	x1, x20
-	bl	_compiler_parser_parse_result_POk
+	add	x0, x22, x0
+	str	x24, [x0]
+	mov	x0, #32
+	bl	_malloc
+	mov	x2, x23
+	mov	x1, x21
+	mov	x21, x0
+	mov	x0, #0
+	str	x0, [x21]
+	mov	x0, #8
+	add	x0, x21, x0
+	str	x2, [x0]
+	mov	x0, #16
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #24
+	add	x0, x21, x0
+	str	x1, [x0]
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L70
 L69:
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_compiler_parser_parse_result_PErr
+	ldr	x20, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 L70:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 /* end function compiler_parser_parse_params_parse_param_with_name */
 

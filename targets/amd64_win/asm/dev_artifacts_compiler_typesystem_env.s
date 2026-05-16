@@ -48,15 +48,20 @@ compiler_typesystem_env_new_env:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $48, %rsp
-	movq %rsp, %rax
-	movq $0, 32(%rax)
-	leaq donna_nil(%rip), %r9
-	leaq donna_nil(%rip), %r8
-	leaq donna_nil(%rip), %rdx
+	subq $32, %rsp
+	movl $48, %ecx
+	callq malloc
+	subq $-32, %rsp
+	movq $0, (%rax)
 	leaq donna_nil(%rip), %rcx
-	callq compiler_typesystem_env_Env
-	subq $-48, %rsp
+	movq %rcx, 8(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 16(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 24(%rax)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 32(%rax)
+	movq $0, 40(%rax)
 	leave
 	ret
 /* end function compiler_typesystem_env_new_env */
@@ -90,32 +95,35 @@ compiler_typesystem_env_fresh_var:
 	pushq %rbx
 	pushq %r12
 	pushq %r13
+	pushq %r14
+	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq %rcx, %rax
-	movq 8(%rax), %rcx
-	movq 16(%rax), %rbx
-	movq 24(%rax), %r12
-	movq 32(%rax), %r13
-	movq 40(%rax), %rsi
+	movq 8(%rcx), %r15
+	movq 16(%rcx), %r14
+	movq 24(%rcx), %r13
+	movq 32(%rcx), %r12
+	movq 40(%rcx), %rsi
 	subq $32, %rsp
-	movq %rcx, %rdi
-	movq %rsi, %rcx
-	callq compiler_typesystem_types_TTypeVar
-	movq %r13, %r9
-	movq %r12, %r8
-	movq %rbx, %rdx
-	movq %rdi, %rcx
+	movl $16, %ecx
+	callq malloc
 	movq %rax, %rdi
 	subq $-32, %rsp
-	movq %rsi, %rax
-	addq $1, %rax
-	subq $48, %rsp
-	movq %rsp, %rsi
-	movq %rax, 32(%rsi)
-	callq compiler_typesystem_env_Env
+	movq $9, (%rdi)
+	movq %rsi, 8(%rdi)
+	movq %rsi, %rbx
+	addq $1, %rbx
+	subq $32, %rsp
+	movl $48, %ecx
+	callq malloc
 	movq %rax, %rsi
-	subq $-48, %rsp
+	subq $-32, %rsp
+	movq $0, (%rsi)
+	movq %r15, 8(%rsi)
+	movq %r14, 16(%rsi)
+	movq %r13, 24(%rsi)
+	movq %r12, 32(%rsi)
+	movq %rbx, 40(%rsi)
 	subq $32, %rsp
 	movl $16, %ecx
 	callq malloc
@@ -124,6 +132,8 @@ compiler_typesystem_env_fresh_var:
 	movq %rsi, 8(%rax)
 	popq %rdi
 	popq %rsi
+	popq %r15
+	popq %r14
 	popq %r13
 	popq %r12
 	popq %rbx
@@ -138,8 +148,8 @@ compiler_typesystem_env_env_lookup:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
 	pushq %rsi
+	pushq %rdi
 	movq 8(%rcx), %rcx
 	subq $32, %rsp
 	callq compiler_typesystem_env_lookup_scheme
@@ -153,17 +163,23 @@ compiler_typesystem_env_env_lookup:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz Lbb13
-	movq 16(%rax), %rcx
+	movq 16(%rax), %rdi
 	subq $32, %rsp
-	callq donna_option_Some
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb15
 Lbb13:
-	movq 8(%rax), %rcx
+	movq 8(%rax), %rdi
 	subq $32, %rsp
-	callq donna_option_Some
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb15
 Lbb14:
@@ -171,6 +187,7 @@ Lbb14:
 Lbb15:
 	movq %rbp, %rsp
 	subq $16, %rsp
+	popq %rdi
 	popq %rsi
 	leave
 	ret
@@ -236,42 +253,47 @@ compiler_typesystem_env_env_bind:
 	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq %rdx, %rbx
-	movq %rcx, %rax
-	movq %r8, %rcx
-	movq 8(%rax), %rdi
-	movq 16(%rax), %r12
-	movq 24(%rax), %r13
-	movq 32(%rax), %r14
-	movq 40(%rax), %rsi
-	subq $32, %rsp
-	callq compiler_typesystem_types_Mono
-	movq %rax, %r15
-	subq $-32, %rsp
+	movq %r8, %r13
+	movq %rdx, %r15
+	movq 8(%rcx), %r14
+	movq 16(%rcx), %r12
+	movq 24(%rcx), %rbx
+	movq 32(%rcx), %rdi
+	movq 40(%rcx), %rsi
 	subq $32, %rsp
 	movl $16, %ecx
 	callq malloc
-	movq %rbx, %rdx
-	movq %rax, %rbx
+	movq %r13, %r8
+	movq %rax, %r13
 	subq $-32, %rsp
-	movq %rdx, (%rbx)
-	movq %r15, 8(%rbx)
+	movq $0, (%r13)
+	movq %r8, 8(%r13)
+	subq $32, %rsp
+	movl $16, %ecx
+	callq malloc
+	movq %r15, %rdx
+	movq %rax, %r15
+	subq $-32, %rsp
+	movq %rdx, (%r15)
+	movq %r13, 8(%r15)
 	subq $32, %rsp
 	movl $24, %ecx
 	callq malloc
-	movq %r14, %r9
-	movq %r13, %r8
-	movq %r12, %rdx
-	movq %rax, %rcx
+	movq %rax, %r13
 	subq $-32, %rsp
-	movq $1, (%rcx)
-	movq %rbx, 8(%rcx)
-	movq %rdi, 16(%rcx)
-	subq $48, %rsp
-	movq %rsp, %rax
-	movq %rsi, 32(%rax)
-	callq compiler_typesystem_env_Env
-	subq $-48, %rsp
+	movq $1, (%r13)
+	movq %r15, 8(%r13)
+	movq %r14, 16(%r13)
+	subq $32, %rsp
+	movl $48, %ecx
+	callq malloc
+	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
+	movq %rbx, 24(%rax)
+	movq %rdi, 32(%rax)
+	movq %rsi, 40(%rax)
 	popq %rdi
 	popq %rsi
 	popq %r15
@@ -299,41 +321,39 @@ compiler_typesystem_env_env_register_alias:
 	pushq %rsi
 	pushq %rdi
 	movq %r8, %r15
-	movq %rdx, %r12
-	movq %rcx, %rax
-	movq 8(%rax), %rcx
-	movq 16(%rax), %r13
-	movq 24(%rax), %rdi
-	movq 32(%rax), %r14
-	movq 40(%rax), %rsi
+	movq %rdx, %rbx
+	movq 8(%rcx), %r13
+	movq 16(%rcx), %r12
+	movq 24(%rcx), %r14
+	movq 32(%rcx), %rdi
+	movq 40(%rcx), %rsi
 	subq $32, %rsp
-	movq %rcx, %rbx
 	movl $16, %ecx
 	callq malloc
 	movq %r15, %r8
-	movq %r12, %rdx
-	movq %rbx, %rcx
-	movq %rax, %rbx
+	movq %rbx, %rdx
+	movq %rax, %r15
 	subq $-32, %rsp
-	movq %rdx, (%rbx)
-	movq %r8, 8(%rbx)
+	movq %rdx, (%r15)
+	movq %r8, 8(%r15)
 	subq $32, %rsp
-	movq %rcx, %r12
 	movl $24, %ecx
 	callq malloc
-	movq %r14, %r9
-	movq %r13, %rdx
-	movq %r12, %rcx
-	movq %rax, %r8
+	movq %rax, %rbx
 	subq $-32, %rsp
-	movq $1, (%r8)
-	movq %rbx, 8(%r8)
-	movq %rdi, 16(%r8)
-	subq $48, %rsp
-	movq %rsp, %rax
-	movq %rsi, 32(%rax)
-	callq compiler_typesystem_env_Env
-	subq $-48, %rsp
+	movq $1, (%rbx)
+	movq %r15, 8(%rbx)
+	movq %r14, 16(%rbx)
+	subq $32, %rsp
+	movl $48, %ecx
+	callq malloc
+	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
+	movq %rbx, 24(%rax)
+	movq %rdi, 32(%rax)
+	movq %rsi, 40(%rax)
 	popq %rdi
 	popq %rsi
 	popq %r15
@@ -360,66 +380,63 @@ compiler_typesystem_env_env_add_module:
 	pushq %r15
 	pushq %rsi
 	pushq %rdi
-	movq %r9, %r13
+	movq %r9, %r12
 	movq %r8, %r15
-	movq %rdx, %r12
-	movq %rcx, %rax
-	movq 8(%rax), %rcx
-	movq 16(%rax), %rbx
-	movq 24(%rax), %rdi
-	movq 32(%rax), %r14
-	movq 40(%rax), %rsi
-	movq %rsi, -16(%rbp)
-	subq $32, %rsp
-	movq %rcx, %rsi
-	movl $16, %ecx
-	callq malloc
-	movq %r13, %r9
-	movq %rsi, %rcx
+	movq %rdx, %rbx
+	movq 8(%rcx), %r13
+	movq 16(%rcx), %rax
+	movq 24(%rcx), %r14
+	movq 32(%rcx), %rdi
 	movq %rax, %rsi
-	subq $-32, %rsp
-	movq %r12, (%rsi)
-	movq %r9, 8(%rsi)
+	movq 40(%rcx), %rax
+	movq %rax, -16(%rbp)
 	subq $32, %rsp
-	movq %rcx, %r13
-	movl $24, %ecx
-	callq malloc
-	movq %r13, %rcx
-	movq %rax, %r13
-	movq %rsi, %rax
-	movq -16(%rbp), %rsi
-	subq $-32, %rsp
-	movq $1, (%r13)
-	movq %rax, 8(%r13)
-	movq %rbx, 16(%r13)
-	subq $32, %rsp
-	movq %rcx, %rbx
 	movl $16, %ecx
 	callq malloc
-	movq %r15, %r8
-	movq %r12, %rdx
-	movq %rbx, %rcx
-	movq %rax, %rbx
+	movq %r12, %r9
+	movq %rax, %rcx
 	subq $-32, %rsp
-	movq %rdx, (%rbx)
-	movq %r8, 8(%rbx)
+	movq %rbx, (%rcx)
+	movq %r9, 8(%rcx)
 	subq $32, %rsp
 	movq %rcx, %r12
 	movl $24, %ecx
 	callq malloc
-	movq %r14, %r9
-	movq %r13, %rdx
 	movq %r12, %rcx
-	movq %rax, %r8
+	movq %rax, %r12
+	movq %rsi, %rax
+	movq -16(%rbp), %rsi
 	subq $-32, %rsp
-	movq $1, (%r8)
-	movq %rbx, 8(%r8)
-	movq %rdi, 16(%r8)
-	subq $48, %rsp
-	movq %rsp, %rax
-	movq %rsi, 32(%rax)
-	callq compiler_typesystem_env_Env
-	subq $-48, %rsp
+	movq $1, (%r12)
+	movq %rcx, 8(%r12)
+	movq %rax, 16(%r12)
+	subq $32, %rsp
+	movl $16, %ecx
+	callq malloc
+	movq %r15, %r8
+	movq %rbx, %rdx
+	movq %rax, %r15
+	subq $-32, %rsp
+	movq %rdx, (%r15)
+	movq %r8, 8(%r15)
+	subq $32, %rsp
+	movl $24, %ecx
+	callq malloc
+	movq %rax, %rbx
+	subq $-32, %rsp
+	movq $1, (%rbx)
+	movq %r15, 8(%rbx)
+	movq %r14, 16(%rbx)
+	subq $32, %rsp
+	movl $48, %ecx
+	callq malloc
+	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
+	movq %rbx, 24(%rax)
+	movq %rdi, 32(%rax)
+	movq %rsi, 40(%rax)
 	popq %rdi
 	popq %rsi
 	popq %r15
@@ -447,41 +464,39 @@ compiler_typesystem_env_env_add_ctor:
 	pushq %rsi
 	pushq %rdi
 	movq %r8, %r15
-	movq %rdx, %r12
-	movq %rcx, %rax
-	movq 8(%rax), %rcx
-	movq 16(%rax), %r13
-	movq 24(%rax), %r14
-	movq 32(%rax), %rdi
-	movq 40(%rax), %rsi
+	movq %rdx, %rdi
+	movq 8(%rcx), %r13
+	movq 16(%rcx), %r12
+	movq 24(%rcx), %rbx
+	movq 32(%rcx), %r14
+	movq 40(%rcx), %rsi
 	subq $32, %rsp
-	movq %rcx, %rbx
 	movl $16, %ecx
 	callq malloc
 	movq %r15, %r8
-	movq %r12, %rdx
-	movq %rbx, %rcx
-	movq %rax, %rbx
+	movq %rdi, %rdx
+	movq %rax, %r15
 	subq $-32, %rsp
-	movq %rdx, (%rbx)
-	movq %r8, 8(%rbx)
+	movq %rdx, (%r15)
+	movq %r8, 8(%r15)
 	subq $32, %rsp
-	movq %rcx, %r12
 	movl $24, %ecx
 	callq malloc
-	movq %r14, %r8
-	movq %r13, %rdx
-	movq %r12, %rcx
-	movq %rax, %r9
+	movq %rax, %rdi
 	subq $-32, %rsp
-	movq $1, (%r9)
-	movq %rbx, 8(%r9)
-	movq %rdi, 16(%r9)
-	subq $48, %rsp
-	movq %rsp, %rax
-	movq %rsi, 32(%rax)
-	callq compiler_typesystem_env_Env
-	subq $-48, %rsp
+	movq $1, (%rdi)
+	movq %r15, 8(%rdi)
+	movq %r14, 16(%rdi)
+	subq $32, %rsp
+	movl $48, %ecx
+	callq malloc
+	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
+	movq %rbx, 24(%rax)
+	movq %rdi, 32(%rax)
+	movq %rsi, 40(%rax)
 	popq %rdi
 	popq %rsi
 	popq %r15
@@ -505,7 +520,7 @@ compiler_typesystem_env_lookup_scheme:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb35
+	jz Lbb34
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	movq %rcx, %rsi
@@ -525,17 +540,19 @@ compiler_typesystem_env_lookup_scheme:
 	callq compiler_typesystem_env_lookup_scheme
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb36
+	jmp Lbb35
 Lbb33:
-	movq %rdi, %rcx
 	subq $32, %rsp
-	callq donna_option_Some
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb36
-Lbb35:
+	jmp Lbb35
+Lbb34:
 	leaq donna_option_None(%rip), %rax
-Lbb36:
+Lbb35:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -557,7 +574,7 @@ compiler_typesystem_env_lookup_module:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb42
+	jz Lbb40
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	movq %rcx, %rsi
@@ -572,22 +589,24 @@ compiler_typesystem_env_lookup_module:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb40
+	jz Lbb39
 	subq $32, %rsp
 	callq compiler_typesystem_env_lookup_module
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb43
-Lbb40:
-	movq %rdi, %rcx
+	jmp Lbb41
+Lbb39:
 	subq $32, %rsp
-	callq donna_option_Some
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb43
-Lbb42:
+	jmp Lbb41
+Lbb40:
 	leaq donna_option_None(%rip), %rax
-Lbb43:
+Lbb41:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -609,7 +628,7 @@ compiler_typesystem_env_lookup_string:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb49
+	jz Lbb46
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	movq %rcx, %rsi
@@ -624,22 +643,24 @@ compiler_typesystem_env_lookup_string:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb47
+	jz Lbb45
 	subq $32, %rsp
 	callq compiler_typesystem_env_lookup_string
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb50
-Lbb47:
-	movq %rdi, %rcx
+	jmp Lbb47
+Lbb45:
 	subq $32, %rsp
-	callq donna_option_Some
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb50
-Lbb49:
+	jmp Lbb47
+Lbb46:
 	leaq donna_option_None(%rip), %rax
-Lbb50:
+Lbb47:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -661,7 +682,7 @@ compiler_typesystem_env_lookup_ctor:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb56
+	jz Lbb52
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rcx
 	movq %rcx, %rsi
@@ -676,22 +697,24 @@ compiler_typesystem_env_lookup_ctor:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb54
+	jz Lbb51
 	subq $32, %rsp
 	callq compiler_typesystem_env_lookup_ctor
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb57
-Lbb54:
-	movq %rdi, %rcx
+	jmp Lbb53
+Lbb51:
 	subq $32, %rsp
-	callq donna_option_Some
+	movl $16, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $1, (%rax)
+	movq %rdi, 8(%rax)
 	movq %rax, (%rsi)
-	jmp Lbb57
-Lbb56:
+	jmp Lbb53
+Lbb52:
 	leaq donna_option_None(%rip), %rax
-Lbb57:
+Lbb53:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi

@@ -28,7 +28,7 @@ str29:
 
 .data
 .balign 8
-str43:
+str44:
 	.ascii "parse error: "
 	.byte 0
 /* end data */
@@ -41,238 +41,238 @@ donna_nil:
 
 .data
 .balign 8
-str58:
+str60:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str174:
+str182:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str215:
+str224:
 	.ascii "command -v qbe >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str218:
+str227:
 	.ascii "DONNA_CC"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str227:
+str236:
 	.ascii "command -v cc >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str235:
+str244:
 	.ascii "cc"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str236:
+str245:
 	.ascii "command -v zig >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str244:
+str253:
 	.ascii "zig cc"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str245:
+str254:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str253:
+str262:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str258:
+str267:
 	.ascii ".s"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str266:
+str275:
 	.ascii "qbe -o "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str269:
+str278:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str273:
+str282:
 	.ascii " >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str282:
+str291:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str338:
+str349:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str340:
+str351:
 	.ascii ": QBE failed to compile "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str344:
+str355:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str346:
+str357:
 	.ascii "  hint: run `qbe "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str348:
+str359:
 	.ascii "` to see the backend error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str370:
+str381:
 	.ascii "-o"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str377:
+str388:
 	.ascii "-O2"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str381:
+str392:
 	.ascii "-c"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str386:
+str397:
 	.ascii " >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str401:
+str412:
 	.ascii "ffi"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str423:
+str434:
 	.ascii ".c"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str433:
+str444:
 	.ascii ".o"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str441:
+str452:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str442:
+str453:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str450:
+str461:
 	.ascii "test "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str453:
+str464:
 	.ascii " -nt "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str460:
+str471:
 	.ascii "'"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str461:
+str472:
 	.ascii "'"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str462:
+str473:
 	.ascii "'"
 	.byte 92
 	.ascii "''"
@@ -281,105 +281,105 @@ str462:
 
 .data
 .balign 8
-str465:
+str476:
 	.ascii "'"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str473:
+str484:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str500:
+str511:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str533:
+str544:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str560:
+str571:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str574:
+str585:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str598:
+str609:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str649:
+str660:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str673:
+str684:
 	.ascii "import "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str692:
+str703:
 	.ascii " as "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str746:
+str757:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str761:
+str772:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str763:
+str774:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str963:
+str974:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str976:
+str987:
 	.ascii "import "
 	.byte 0
 /* end data */
@@ -415,11 +415,11 @@ builder_pipeline_compile_module:
 	callq donna_files_join
 	movq %r13, %r8
 	movq %r12, %rsi
-	movq %rax, %r15
+	movq %rax, %r14
 	cmpq $1, %r8
 	jz .Lbb2
 	movq %rsi, %r12
-	movq %r15, %rsi
+	movq %r14, %rsi
 	movq %rbx, %rdi
 	callq builder_pipeline_file_is_current
 	jmp .Lbb4
@@ -429,28 +429,28 @@ builder_pipeline_compile_module:
 .Lbb4:
 	movq %rax, %r13
 	subq $16, %rsp
-	movq %rsp, %r14
+	movq %rsp, %r15
 	cmpq $1, %r13
 	jz .Lbb7
 	movq %r12, %rdi
 	callq utilities_logger_step
 	movq %r13, %rax
 	leaq str17(%rip), %rcx
-	movq %rcx, (%r14)
+	movq %rcx, (%r15)
 	movq %rax, %r13
 	jmp .Lbb9
 .Lbb7:
 	movq %r13, %rax
 	movq %rax, %r13
 	leaq str16(%rip), %rax
-	movq %rax, (%r14)
+	movq %rax, (%r15)
 .Lbb9:
 	movq %rbx, %rdi
 	callq donna_files_read
 	movq %rax, %rsi
-	movq %rsi, %r14
+	movq %rsi, %r15
 	movq %rbx, %rsi
-	movq %r14, %rdi
+	movq %r15, %rdi
 	callq compiler_lexer_lexer_lex
 	subq $16, %rsp
 	movq %rsp, %rcx
@@ -472,10 +472,10 @@ builder_pipeline_compile_module:
 	movq %rcx, %rsi
 	movq 8(%rax), %rdi
 	callq compiler_typesystem_checker_check_module_with_imports
-	movq %r14, %rsi
+	movq %r15, %rsi
 	subq $16, %rsp
-	movq %rsp, %r14
-	movq %r14, -24(%rbp)
+	movq %rsp, %r15
+	movq %r15, -24(%rbp)
 	movq (%rax), %rcx
 	cmpq $1, %rcx
 	setz %cl
@@ -483,12 +483,13 @@ builder_pipeline_compile_module:
 	cmpl $0, %ecx
 	jnz .Lbb17
 	movq 8(%rax), %rdi
-	movq %rdi, %r14
+	movq %rdi, %r15
 	callq compiler_typesystem_checker_extract_interface
-	movq %r14, %rdi
-	movq %rax, %r14
+	movq %r15, %rdi
+	movq %rax, %rcx
 	movq %r13, %rax
 	movq -24(%rbp), %r13
+	movq %rcx, %r15
 	subq $16, %rsp
 	movq %rsp, %rcx
 	movq %rcx, -32(%rbp)
@@ -496,52 +497,66 @@ builder_pipeline_compile_module:
 	jz .Lbb15
 	callq compiler_codegen_codegen_generate
 	movq %rax, %rsi
-	movq %r15, %rdi
+	movq %r14, %rdi
 	callq donna_files_write
 	movl $24, %edi
 	callq malloc
-	movq %rax, %rdi
+	movq %r15, %rcx
+	movq %rax, %r15
 	movq %r14, %rax
 	movq -32(%rbp), %r14
-	movq %rax, (%rdi)
-	movq %r15, 8(%rdi)
-	movq $1, 16(%rdi)
-	callq donna_result_Ok
+	movq %rcx, (%r15)
+	movq %rax, 8(%r15)
+	movq $1, 16(%r15)
+	movl $16, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r15, 8(%rax)
 	movq %rax, (%r14)
 	jmp .Lbb16
 .Lbb15:
 	movl $24, %edi
 	callq malloc
-	movq %rax, %rdi
+	movq %r15, %rcx
+	movq %rax, %r15
 	movq %r14, %rax
 	movq -32(%rbp), %r14
-	movq %rax, (%rdi)
-	movq %r15, 8(%rdi)
-	movq $0, 16(%rdi)
-	callq donna_result_Ok
+	movq %rcx, (%r15)
+	movq %rax, 8(%r15)
+	movq $0, 16(%r15)
+	movl $16, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r15, 8(%rax)
 	movq %rax, (%r14)
 .Lbb16:
 	movq %rax, (%r13)
 	jmp .Lbb19
 .Lbb17:
-	movq %r14, %r13
+	movq %r15, %r13
 	movq 8(%rax), %rdi
 	leaq donna_nil(%rip), %rdx
 	callq builder_pipeline_render_errors
 	movq %rax, %rdi
-	leaq str58(%rip), %rsi
+	leaq str60(%rip), %rsi
 	callq donna_string_join
-	movq %rax, %rdi
-	callq donna_result_Error
+	movq %rax, %r14
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r14, 8(%rax)
 	movq %rax, (%r13)
 .Lbb19:
 	movq %rax, (%r12)
 	jmp .Lbb21
 .Lbb20:
-	leaq str43(%rip), %rdi
+	leaq str44(%rip), %rdi
 	callq __rt_str_concat
-	movq %rax, %rdi
-	callq donna_result_Error
+	movq %rax, %r13
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r13, 8(%rax)
 	movq %rax, (%r12)
 .Lbb21:
 	movq %rax, (%rbx)
@@ -551,8 +566,11 @@ builder_pipeline_compile_module:
 	movq %rcx, %rbx
 	leaq str29(%rip), %rdi
 	callq __rt_str_concat
-	movq %rax, %rdi
-	callq donna_result_Error
+	movq %rax, %r12
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
 .Lbb24:
 	movq %rbp, %rsp
@@ -670,41 +688,44 @@ builder_pipeline_compile_pairs_loop:
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %r10
 	movq %r10, -56(%rbp)
-	movq %r9, %r13
+	movq %r9, %rbx
 	movq (%rax), %r9
 	movq %r9, -16(%rbp)
 	movq 8(%rax), %rax
 	movq %rax, -24(%rbp)
 	movq %rsi, %r14
 	movq %r12, %rsi
-	movq %rdi, %rbx
+	movq %rdi, %r13
 	movq %r15, %rdi
 	callq donna_list_append
 	movq %r15, %rdx
 	movq %r14, %rsi
-	movq %rbx, %rdi
+	movq %r13, %rdi
 	movq %rax, %rcx
 	movq -24(%rbp), %rax
-	movq %rdi, %rbx
+	movq %rdi, %r13
 	movq -16(%rbp), %rdi
-	movq %r13, %r8
-	movq %rdx, %r14
+	movq %rbx, %r8
+	movq %rdx, %r15
 	movq %rsi, %rdx
-	movq %rsi, %r15
+	movq %rsi, %r14
 	movq %rax, %rsi
 	callq builder_pipeline_compile_module
-	movq %r15, %rsi
-	movq %rbx, %rdi
+	movq %r15, %rdx
+	movq %r14, %rsi
+	movq %r13, %rdi
 	movq -24(%rbp), %r15
 	subq $16, %rsp
-	movq %rsp, %rbx
-	movq %rbx, -40(%rbp)
-	movq (%rax), %rcx
-	cmpq $1, %rcx
-	setz %cl
-	movzbq %cl, %rcx
-	cmpl $0, %ecx
-	jnz .Lbb38
+	movq %rsp, %rcx
+	movq %rcx, -40(%rbp)
+	movq %rsi, %r13
+	movq (%rax), %rsi
+	cmpq $1, %rsi
+	movq %rdx, %r14
+	setz %dl
+	movzbq %dl, %rdx
+	cmpl $0, %edx
+	jnz .Lbb37
 	movq 8(%rax), %rax
 	movq (%rax), %rcx
 	movq %rcx, -32(%rbp)
@@ -715,15 +736,13 @@ builder_pipeline_compile_pairs_loop:
 	movq %rsp, %rax
 	cmpq $1, %rcx
 	jz .Lbb34
-	movq %r13, (%rax)
-	movq %r13, -64(%rbp)
-	movq %rsi, %r13
-	jmp .Lbb37
+	movq %rbx, (%rax)
+	movq %rbx, -64(%rbp)
+	jmp .Lbb36
 .Lbb34:
-	movq %rsi, %r13
 	movq $1, (%rax)
 	movq $1, -64(%rbp)
-.Lbb37:
+.Lbb36:
 	movq %rdi, %rbx
 	movl $16, %edi
 	callq malloc
@@ -760,28 +779,34 @@ builder_pipeline_compile_pairs_loop:
 	callq builder_pipeline_compile_pairs_loop
 	movq %rax, (%rbx)
 	jmp .Lbb41
-.Lbb38:
-	movq 8(%rax), %rdi
-	callq donna_result_Error
+.Lbb37:
+	movq %rcx, %rbx
+	movq 8(%rax), %r12
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
 	jmp .Lbb41
 .Lbb39:
-	movq %r9, %r13
-	movq %rdi, %rbx
+	movq %r9, %rbx
+	xchgq %rdi, %r12
+	callq donna_list_reverse
 	movq %r12, %rdi
+	movq %rax, %r13
 	callq donna_list_reverse
-	movq %rbx, %rdi
 	movq %rax, %r12
-	callq donna_list_reverse
-	movq %rax, %rbx
 	movl $24, %edi
 	callq malloc
-	movq %r13, %r9
-	movq %rax, %rdi
-	movq %r12, (%rdi)
-	movq %rbx, 8(%rdi)
-	movq %r9, 16(%rdi)
-	callq donna_result_Ok
+	movq %rbx, %r9
+	movq %rax, %rbx
+	movq %r13, (%rbx)
+	movq %r12, 8(%rbx)
+	movq %r9, 16(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %rbx, 8(%rax)
 .Lbb41:
 	movq %rbp, %rsp
 	subq $112, %rsp
@@ -808,8 +833,8 @@ builder_pipeline_compile_loop:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq 16(%rbp), %rbx
-	movq %r8, %r12
+	movq 16(%rbp), %r12
+	movq %r8, %rbx
 	movq %rcx, -32(%rbp)
 	movq %rdx, %r14
 	movq %rsi, %r13
@@ -826,13 +851,13 @@ builder_pipeline_compile_loop:
 	callq donna_files_basename
 	movq %rax, %rdi
 	callq donna_files_drop_extension
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %r15
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq %r13, %rdi
 	callq donna_string_is_empty
 	movq %r13, %rsi
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rdx
 	movq -32(%rbp), %rcx
 	subq $16, %rsp
@@ -841,8 +866,8 @@ builder_pipeline_compile_loop:
 	cmpq $1, %rdx
 	jz .Lbb45
 	movq %rsi, %r13
-	leaq str174(%rip), %rsi
-	movq %rdi, %r12
+	leaq str182(%rip), %rsi
+	movq %rdi, %rbx
 	movq %r13, %rdi
 	callq __rt_str_concat
 	movq %r13, %rsi
@@ -854,7 +879,7 @@ builder_pipeline_compile_loop:
 	callq __rt_str_concat
 	movq %r15, %rcx
 	movq %r13, %rsi
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %r15
 	movq -16(%rbp), %rax
 	movq %r15, (%rax)
@@ -864,37 +889,36 @@ builder_pipeline_compile_loop:
 .Lbb46:
 	movq %rsi, %r13
 	movq %rdi, %rsi
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq %rcx, %rdi
 	callq donna_list_append
 	movq %r14, %rdx
 	movq %r13, %rsi
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq %rax, %rcx
-	movq %rdi, %r12
+	movq %rdi, %rbx
 	movq -24(%rbp), %rdi
-	movq %rbx, %r8
+	movq %r12, %r8
 	movq %rdx, %r14
 	movq %rsi, %r13
 	movq %r15, %rsi
 	callq builder_pipeline_compile_module
 	movq %r14, %rdx
 	movq %r13, %rsi
-	movq %r12, %rdi
+	movq %rbx, %rdi
 	movq -32(%rbp), %rcx
 	subq $16, %rsp
-	movq %rsp, %r12
-	movq %r12, -80(%rbp)
+	movq %rsp, %rbx
+	movq %rbx, -80(%rbp)
 	movq (%rax), %r8
 	cmpq $1, %r8
 	setz %r8b
 	movzbq %r8b, %r8
 	cmpl $0, %r8d
-	jnz .Lbb53
+	jnz .Lbb54
 	movq 8(%rax), %rax
-	movq %rsi, %r12
-	movq (%rax), %rsi
-	movq %rsi, -40(%rbp)
+	movq (%rax), %r8
+	movq %r8, -40(%rbp)
 	movq %rdx, %r13
 	movq 8(%rax), %rdx
 	movq %rdx, -56(%rbp)
@@ -904,13 +928,15 @@ builder_pipeline_compile_loop:
 	movq %rsp, %rax
 	cmpq $1, %rcx
 	jz .Lbb50
-	movq %rbx, (%rax)
-	movq %rbx, -72(%rbp)
-	jmp .Lbb52
+	movq %r12, (%rax)
+	movq %r12, -72(%rbp)
+	movq %rsi, %r12
+	jmp .Lbb53
 .Lbb50:
+	movq %rsi, %r12
 	movq $1, (%rax)
 	movq $1, -72(%rbp)
-.Lbb52:
+.Lbb53:
 	movq %rdi, %rbx
 	movl $16, %edi
 	callq malloc
@@ -939,8 +965,7 @@ builder_pipeline_compile_loop:
 	movq %r12, %rsi
 	movq %rbx, %rdi
 	movq %rax, %r9
-	movq -72(%rbp), %rbx
-	movq %rbx, %r12
+	movq -72(%rbp), %r12
 	movq -80(%rbp), %rbx
 	movq -56(%rbp), %rax
 	movq %rdi, %r13
@@ -955,26 +980,31 @@ builder_pipeline_compile_loop:
 	subq $-16, %rsp
 	movq %rax, (%rbx)
 	jmp .Lbb57
-.Lbb53:
-	movq %r12, %rbx
-	movq 8(%rax), %rdi
-	callq donna_result_Error
+.Lbb54:
+	movq 8(%rax), %r12
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
 	jmp .Lbb57
 .Lbb55:
-	xchgq %rdi, %r12
+	xchgq %rdi, %rbx
 	callq donna_list_reverse
-	movq %r12, %rdi
+	movq %rbx, %rdi
+	movq %rax, %r14
+	callq donna_list_reverse
 	movq %rax, %r13
-	callq donna_list_reverse
-	movq %rax, %r12
 	movl $24, %edi
 	callq malloc
-	movq %rax, %rdi
-	movq %r13, (%rdi)
-	movq %r12, 8(%rdi)
-	movq %rbx, 16(%rdi)
-	callq donna_result_Ok
+	movq %rax, %rbx
+	movq %r14, (%rbx)
+	movq %r13, 8(%rbx)
+	movq %r12, 16(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %rbx, 8(%rax)
 .Lbb57:
 	movq %rbp, %rsp
 	subq $128, %rsp
@@ -996,7 +1026,7 @@ builder_pipeline_qbe_available:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq str215(%rip), %rdi
+	leaq str224(%rip), %rdi
 	callq donna_shell_run
 	cmpq $0, %rax
 	setz %al
@@ -1016,7 +1046,7 @@ builder_pipeline_c_compiler_command:
 	movq %rsp, %rbp
 	subq $8, %rsp
 	pushq %rbx
-	leaq str218(%rip), %rdi
+	leaq str227(%rip), %rdi
 	callq donna_shell_getenv
 	movq %rax, %rdi
 	callq donna_string_trim
@@ -1027,7 +1057,7 @@ builder_pipeline_c_compiler_command:
 	movq %rbx, %rax
 	cmpq $0, %rcx
 	jz .Lbb67
-	leaq str227(%rip), %rdi
+	leaq str236(%rip), %rdi
 	callq donna_shell_run
 	cmpq $0, %rax
 	setz %al
@@ -1036,7 +1066,7 @@ builder_pipeline_c_compiler_command:
 	movq %rsp, %rbx
 	cmpq $1, %rax
 	jz .Lbb66
-	leaq str236(%rip), %rdi
+	leaq str245(%rip), %rdi
 	callq donna_shell_run
 	cmpq $0, %rax
 	setz %al
@@ -1045,21 +1075,21 @@ builder_pipeline_c_compiler_command:
 	movq %rsp, %rcx
 	cmpq $1, %rax
 	jz .Lbb64
-	leaq str245(%rip), %rax
+	leaq str254(%rip), %rax
 	movq %rax, (%rcx)
-	leaq str245(%rip), %rax
+	leaq str254(%rip), %rax
 	jmp .Lbb65
 .Lbb64:
-	leaq str244(%rip), %rax
+	leaq str253(%rip), %rax
 	movq %rax, (%rcx)
-	leaq str244(%rip), %rax
+	leaq str253(%rip), %rax
 .Lbb65:
 	movq %rax, (%rbx)
 	jmp .Lbb67
 .Lbb66:
-	leaq str235(%rip), %rax
+	leaq str244(%rip), %rax
 	movq %rax, (%rbx)
-	leaq str235(%rip), %rax
+	leaq str244(%rip), %rax
 .Lbb67:
 	movq %rbp, %rsp
 	subq $16, %rsp
@@ -1101,7 +1131,7 @@ builder_pipeline_c_command:
 	movq %rdi, %rbx
 	callq builder_pipeline_c_compiler_command
 	movq %rax, %rdi
-	leaq str253(%rip), %rsi
+	leaq str262(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -1128,7 +1158,7 @@ builder_pipeline_run_qbe:
 	movq %rdi, %rbx
 	callq donna_files_drop_extension
 	movq %rax, %rdi
-	leaq str258(%rip), %rsi
+	leaq str267(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -1144,10 +1174,10 @@ builder_pipeline_run_qbe:
 	movq %r12, %rdi
 	movq %rax, %rsi
 	movq %rdi, %r12
-	leaq str266(%rip), %rdi
+	leaq str275(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str269(%rip), %rsi
+	leaq str278(%rip), %rsi
 	callq __rt_str_concat
 	movq %r12, %rdi
 	movq %rax, %r12
@@ -1156,7 +1186,7 @@ builder_pipeline_run_qbe:
 	movq %rax, %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str273(%rip), %rsi
+	leaq str282(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq donna_shell_run
@@ -1169,9 +1199,9 @@ builder_pipeline_run_qbe:
 	movq %rsp, %rcx
 	cmpq $1, %rdx
 	jz .Lbb75
-	leaq str282(%rip), %rax
+	leaq str291(%rip), %rax
 	movq %rax, (%rcx)
-	leaq str282(%rip), %rax
+	leaq str291(%rip), %rax
 	jmp .Lbb77
 .Lbb75:
 	movq %rax, (%rcx)
@@ -1308,15 +1338,21 @@ builder_pipeline_run_qbe_all_checked_loop:
 	jmp .Lbb94
 .Lbb91:
 	callq builder_pipeline_qbe_compile_error
-	movq %rax, %rdi
-	callq donna_result_Error
+	movq %rax, %r12
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
 	jmp .Lbb94
 .Lbb92:
 	movq %r12, %rdi
 	callq donna_list_reverse
-	movq %rax, %rdi
-	callq donna_result_Ok
+	movq %rax, %rbx
+	movl $16, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %rbx, 8(%rax)
 .Lbb94:
 	movq %rbp, %rsp
 	subq $32, %rsp
@@ -1339,12 +1375,12 @@ builder_pipeline_qbe_compile_error:
 	pushq %rbx
 	pushq %r12
 	movq %rdi, %rbx
-	leaq str338(%rip), %rdi
+	leaq str349(%rip), %rdi
 	callq utilities_colors_red
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq str340(%rip), %rsi
+	leaq str351(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	movq %rdi, %r12
@@ -1356,15 +1392,15 @@ builder_pipeline_qbe_compile_error:
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rsi, %rbx
-	leaq str344(%rip), %rsi
+	leaq str355(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rsi
 	movq %rax, %rdi
 	movq %rdi, %rbx
-	leaq str346(%rip), %rdi
+	leaq str357(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str348(%rip), %rsi
+	leaq str359(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq utilities_colors_dim
@@ -1420,7 +1456,7 @@ builder_pipeline_compile_c:
 	movq %r13, %rdi
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq str370(%rip), %rax
+	leaq str381(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %r14, 16(%r13)
 	movq %rdi, %r14
@@ -1435,21 +1471,21 @@ builder_pipeline_compile_c:
 	callq malloc
 	movq %rax, %r13
 	movq $1, (%r13)
-	leaq str377(%rip), %rax
+	leaq str388(%rip), %rax
 	movq %rax, 8(%r13)
 	movq %r14, 16(%r13)
 	movl $24, %edi
 	callq malloc
 	movq %rax, %rdi
 	movq $1, (%rdi)
-	leaq str381(%rip), %rax
+	leaq str392(%rip), %rax
 	movq %rax, 8(%rdi)
 	movq %r13, 16(%rdi)
 	callq builder_pipeline_c_command
 	movq %r12, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str386(%rip), %rsi
+	leaq str397(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq donna_shell_run
@@ -1511,7 +1547,7 @@ builder_pipeline_compile_ffi:
 	pushq %rbx
 	pushq %r12
 	movq %rsi, %r12
-	leaq str401(%rip), %rsi
+	leaq str412(%rip), %rsi
 	callq donna_files_join
 	movq %rax, %rbx
 	movq %rbx, %rdi
@@ -1558,7 +1594,7 @@ builder_pipeline_compile_c_files:
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r12
 	movq %rsi, %r13
-	leaq str423(%rip), %rsi
+	leaq str434(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_ends_with
 	movq %r13, %rsi
@@ -1580,7 +1616,7 @@ builder_pipeline_compile_c_files:
 	movq %r13, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r13
-	leaq str433(%rip), %rsi
+	leaq str444(%rip), %rsi
 	callq __rt_str_concat
 	movq %r15, %rdi
 	movq %rax, %rsi
@@ -1636,8 +1672,8 @@ builder_pipeline_mod_name_to_stem:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq str442(%rip), %rdx
-	leaq str441(%rip), %rsi
+	leaq str453(%rip), %rdx
+	leaq str452(%rip), %rsi
 	callq donna_string_replace
 	leave
 	ret
@@ -1664,10 +1700,10 @@ builder_pipeline_file_is_current:
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	movq %rdi, %rbx
-	leaq str450(%rip), %rdi
+	leaq str461(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str453(%rip), %rsi
+	leaq str464(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -1698,14 +1734,14 @@ builder_pipeline_sh_quote:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq str462(%rip), %rdx
-	leaq str461(%rip), %rsi
+	leaq str473(%rip), %rdx
+	leaq str472(%rip), %rsi
 	callq donna_string_replace
 	movq %rax, %rsi
-	leaq str460(%rip), %rdi
+	leaq str471(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str465(%rip), %rsi
+	leaq str476(%rip), %rsi
 	callq __rt_str_concat
 	leave
 	ret
@@ -1750,7 +1786,7 @@ builder_pipeline_join_shell_args:
 	movq 16(%rax), %rbx
 	callq builder_pipeline_sh_quote
 	movq %rax, %rdi
-	leaq str500(%rip), %rsi
+	leaq str511(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -1764,7 +1800,7 @@ builder_pipeline_join_shell_args:
 	callq builder_pipeline_sh_quote
 	jmp .Lbb135
 .Lbb134:
-	leaq str473(%rip), %rax
+	leaq str484(%rip), %rax
 .Lbb135:
 	movq %rbp, %rsp
 	subq $16, %rsp
@@ -1840,7 +1876,7 @@ builder_pipeline_collect_donna:
 	movq 8(%rdi), %r13
 	movq 16(%rdi), %rdi
 	movq %rsi, %r14
-	leaq str533(%rip), %rsi
+	leaq str544(%rip), %rsi
 	movq %rdi, %rbx
 	movq %r13, %rdi
 	callq donna_string_ends_with
@@ -1922,7 +1958,7 @@ builder_pipeline_collect_pairs_recursive:
 	movq %rbx, %rdi
 	movq %rax, %rbx
 	movq %rsi, %r14
-	leaq str560(%rip), %rsi
+	leaq str571(%rip), %rsi
 	movq %rdi, %r13
 	callq donna_string_ends_with
 	movq %r13, %rdi
@@ -1957,7 +1993,7 @@ builder_pipeline_collect_pairs_recursive:
 	cmpq $1, %rcx
 	jz .Lbb155
 	movq %rsi, %r14
-	leaq str598(%rip), %rsi
+	leaq str609(%rip), %rsi
 	movq %rdi, %r13
 	movq %r15, %rdi
 	callq __rt_str_concat
@@ -2041,7 +2077,7 @@ builder_pipeline_collect_pairs_recursive:
 	cmpq $1, %rdx
 	jz .Lbb165
 	movq %rsi, %r14
-	leaq str574(%rip), %rsi
+	leaq str585(%rip), %rsi
 	movq %rdi, %r13
 	movq %r15, %rdi
 	callq __rt_str_concat
@@ -2193,7 +2229,7 @@ builder_pipeline_tag_with_local_deps:
 	movq %r14, %rsi
 	movq %rax, %rdi
 	movq %rsi, %r14
-	leaq str649(%rip), %rsi
+	leaq str660(%rip), %rsi
 	callq donna_string_split
 	movq %r14, %rsi
 	movq %rax, %rdi
@@ -2259,7 +2295,7 @@ builder_pipeline_parse_import_names:
 	jz .Lbb189
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r13
-	leaq str673(%rip), %rsi
+	leaq str684(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_starts_with
 	movq %rbx, %rdi
@@ -2321,7 +2357,7 @@ builder_pipeline_import_path_only:
 	pushq %rbx
 	callq donna_string_trim
 	movq %rax, %rbx
-	leaq str692(%rip), %rsi
+	leaq str703(%rip), %rsi
 	movq %rbx, %rdi
 	callq donna_string_split
 	movq %rax, %rcx
@@ -2477,7 +2513,7 @@ builder_pipeline_find_local_dep_by_last_segment:
 	movq %rax, (%rbx)
 	jmp .Lbb212
 .Lbb211:
-	leaq str746(%rip), %rax
+	leaq str757(%rip), %rax
 .Lbb212:
 	movq %rbp, %rsp
 	subq $32, %rsp
@@ -2496,10 +2532,10 @@ builder_pipeline_path_last_segment:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq str761(%rip), %rsi
+	leaq str772(%rip), %rsi
 	callq donna_string_split
 	movq %rax, %rdi
-	leaq str763(%rip), %rsi
+	leaq str774(%rip), %rsi
 	callq builder_pipeline_path_last_segment_loop
 	leave
 	ret
@@ -2975,7 +3011,7 @@ builder_pipeline_count_imports:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	leaq str963(%rip), %rsi
+	leaq str974(%rip), %rsi
 	callq donna_string_split
 	movq %rax, %rdi
 	movl $0, %esi
@@ -3001,7 +3037,7 @@ builder_pipeline_count_import_lines:
 	jz .Lbb266
 	movq 8(%rax), %rdi
 	movq 16(%rax), %r12
-	leaq str976(%rip), %rsi
+	leaq str987(%rip), %rsi
 	callq donna_string_starts_with
 	movq %r12, %rdi
 	movq %rax, %rcx

@@ -72,63 +72,90 @@ _donna_dict_insert:
 	str	x22, [x29, 32]
 	str	x23, [x29, 24]
 	str	x24, [x29, 16]
-	mov	x21, x2
-	mov	x2, x0
-	mov	x0, x1
-	mov	x20, x0
-	ldr	x0, [x2]
-	cmp	x0, #0
+	ldr	x4, [x0]
+	cmp	x4, #0
 	beq	L9
-	mov	x0, #8
-	add	x0, x2, x0
-	ldr	x0, [x0]
-	mov	x1, #16
-	add	x1, x2, x1
-	ldr	x1, [x1]
+	mov	x4, #8
+	add	x4, x0, x4
+	ldr	x22, [x4]
 	mov	x24, x3
-	mov	x3, #24
-	add	x2, x2, x3
-	ldr	x23, [x2]
-	mov	x22, x1
-	mov	x1, x0
-	mov	x19, x0
-	mov	x0, x20
+	mov	x3, #16
+	add	x3, x0, x3
+	ldr	x21, [x3]
+	mov	x23, x2
+	mov	x2, #24
+	add	x0, x0, x2
+	ldr	x20, [x0]
+	mov	x19, x1
+	mov	x1, x22
+	mov	x0, x19
 	blr	x24
 	mov	x3, x24
 	mov	x2, x23
-	mov	x1, x22
-	mov	x4, x0
-	mov	x0, x19
-	mov	x5, #16
-	sub	sp, sp, x5
+	mov	x1, x19
+	mov	x4, #16
+	sub	sp, sp, x4
 	mov	x19, sp
-	cmp	x4, #1
+	cmp	x0, #1
 	beq	L7
-	mov	x22, x2
-	mov	x2, x21
-	mov	x21, x1
-	mov	x1, x20
-	mov	x20, x0
-	mov	x0, x22
-	bl	_donna_dict_insert
-	mov	x1, x21
-	mov	x2, x0
 	mov	x0, x20
-	bl	_donna_dict_Entry
+	bl	_donna_dict_insert
+	mov	x20, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L11
 L7:
+	mov	x22, x2
+	mov	x21, x1
+	mov	x0, #32
+	bl	_malloc
+	mov	x2, x22
 	mov	x1, x21
-	mov	x0, x20
-	bl	_donna_dict_Entry
+	mov	x3, #1
+	str	x3, [x0]
+	mov	x3, #8
+	add	x3, x0, x3
+	str	x1, [x3]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x2, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L11
 L9:
-	mov	x1, x21
-	mov	x0, x20
-	adrp	x2, _donna_dict_Empty@page
-	add	x2, x2, _donna_dict_Empty@pageoff
-	bl	_donna_dict_Entry
+	mov	x20, x2
+	mov	x19, x1
+	mov	x0, #32
+	bl	_malloc
+	mov	x2, x20
+	mov	x1, x19
+	mov	x3, #1
+	str	x3, [x0]
+	mov	x3, #8
+	add	x3, x0, x3
+	str	x1, [x3]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x2, [x1]
+	mov	x1, #24
+	add	x2, x0, x1
+	adrp	x1, _donna_dict_Empty@page
+	add	x1, x1, _donna_dict_Empty@pageoff
+	str	x1, [x2]
 L11:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
@@ -273,7 +300,7 @@ _donna_dict_delete:
 	beq	L30
 	mov	x3, #8
 	add	x3, x0, x3
-	ldr	x20, [x3]
+	ldr	x22, [x3]
 	mov	x3, #16
 	add	x3, x0, x3
 	ldr	x21, [x3]
@@ -281,13 +308,13 @@ _donna_dict_delete:
 	mov	x2, #24
 	add	x0, x0, x2
 	ldr	x0, [x0]
-	mov	x22, x1
-	mov	x1, x20
+	mov	x20, x1
+	mov	x1, x22
 	mov	x19, x0
-	mov	x0, x22
+	mov	x0, x20
 	blr	x23
 	mov	x2, x23
-	mov	x1, x22
+	mov	x1, x20
 	mov	x3, x0
 	mov	x0, x19
 	mov	x4, #16
@@ -296,10 +323,20 @@ _donna_dict_delete:
 	cmp	x3, #1
 	beq	L29
 	bl	_donna_dict_delete
-	mov	x1, x21
-	mov	x2, x0
-	mov	x0, x20
-	bl	_donna_dict_Entry
+	mov	x20, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L31
 L29:
@@ -582,30 +619,39 @@ _donna_dict_map_values:
 	str	x19, [x29, 40]
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
-	mov	x21, x1
+	mov	x20, x1
 	mov	x1, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
 	beq	L61
 	mov	x0, #8
 	add	x0, x1, x0
-	ldr	x19, [x0]
+	ldr	x21, [x0]
 	mov	x0, #16
 	add	x0, x1, x0
 	ldr	x0, [x0]
 	mov	x2, #24
 	add	x1, x1, x2
-	ldr	x20, [x1]
-	blr	x21
-	mov	x1, x21
-	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	bl	_donna_dict_map_values
+	ldr	x19, [x1]
+	blr	x20
 	mov	x1, x20
-	mov	x2, x0
+	mov	x20, x0
 	mov	x0, x19
-	bl	_donna_dict_Entry
+	bl	_donna_dict_map_values
+	mov	x19, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x20, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x19, [x1]
 	b	L62
 L61:
 	adrp	x0, _donna_dict_Empty@page
@@ -634,19 +680,19 @@ _donna_dict_filter:
 	beq	L67
 	mov	x2, #8
 	add	x2, x0, x2
-	ldr	x20, [x2]
+	ldr	x22, [x2]
 	mov	x2, #16
 	add	x2, x0, x2
 	ldr	x21, [x2]
 	mov	x2, #24
 	add	x0, x0, x2
 	ldr	x0, [x0]
-	mov	x22, x1
+	mov	x20, x1
 	mov	x1, x21
 	mov	x19, x0
-	mov	x0, x20
-	blr	x22
-	mov	x1, x22
+	mov	x0, x22
+	blr	x20
+	mov	x1, x20
 	mov	x2, x0
 	mov	x0, x19
 	mov	x3, #16
@@ -659,10 +705,20 @@ _donna_dict_filter:
 	b	L68
 L66:
 	bl	_donna_dict_filter
-	mov	x1, x21
-	mov	x2, x0
-	mov	x0, x20
-	bl	_donna_dict_Entry
+	mov	x20, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L68
 L67:
@@ -798,22 +854,22 @@ _donna_dict_update:
 	beq	L83
 	mov	x0, #8
 	add	x0, x2, x0
+	ldr	x22, [x0]
+	mov	x0, #16
+	add	x0, x2, x0
 	ldr	x0, [x0]
-	mov	x4, #16
-	add	x4, x2, x4
-	ldr	x20, [x4]
 	mov	x24, x3
 	mov	x3, #24
 	add	x2, x2, x3
-	ldr	x22, [x2]
-	mov	x21, x1
-	mov	x1, x0
+	ldr	x21, [x2]
+	mov	x20, x1
+	mov	x1, x22
 	mov	x19, x0
-	mov	x0, x21
+	mov	x0, x20
 	blr	x24
 	mov	x3, x24
 	mov	x2, x23
-	mov	x1, x21
+	mov	x1, x20
 	mov	x4, x0
 	mov	x0, x19
 	mov	x5, #16
@@ -821,26 +877,45 @@ _donna_dict_update:
 	mov	x19, sp
 	cmp	x4, #1
 	beq	L81
-	mov	x21, x0
-	mov	x0, x22
-	bl	_donna_dict_update
-	mov	x2, x0
-	mov	x0, x21
-	mov	x1, x20
 	mov	x20, x0
-	bl	_donna_dict_Entry
+	mov	x0, x21
+	bl	_donna_dict_update
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x21, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L84
 L81:
-	mov	x21, x22
-	mov	x17, x20
-	mov	x20, x0
-	mov	x0, x17
+	mov	x20, x21
 	blr	x2
-	mov	x2, x21
-	mov	x1, x0
-	mov	x0, x20
-	bl	_donna_dict_Entry
+	mov	x21, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x21, [x1]
+	mov	x1, #24
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L84
 L83:

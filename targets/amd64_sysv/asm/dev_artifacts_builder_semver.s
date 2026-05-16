@@ -20,49 +20,49 @@ donna_nil:
 
 .data
 .balign 8
-str159:
+str163:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str164:
+str168:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str200:
+str204:
 	.ascii " and "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str253:
+str257:
 	.ascii ">="
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str276:
+str282:
 	.ascii ">"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str299:
+str307:
 	.ascii "<="
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str322:
+str332:
 	.ascii "<"
 	.byte 0
 /* end data */
@@ -198,6 +198,8 @@ builder_semver_parse:
 	pushq %rbx
 	pushq %r12
 	pushq %r13
+	pushq %r14
+	pushq %r15
 	leaq str12(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_starts_with
@@ -278,26 +280,34 @@ builder_semver_parse:
 .Lbb26:
 	movq 8(%rax), %rdi
 	movq 16(%rax), %rax
-	movq 8(%rax), %r12
-	movq 16(%rax), %rax
 	movq 8(%rax), %r13
-	callq builder_semver_parse_nat
-	movq %r12, %rdi
-	movq %rax, %r12
+	movq 16(%rax), %rax
+	movq 8(%rax), %r12
 	callq builder_semver_parse_nat
 	movq %r13, %rdi
-	movq %rax, %r13
+	movq %rax, %r15
 	callq builder_semver_parse_nat
-	movq %r13, %rsi
 	movq %r12, %rdi
-	movq %rax, %rdx
-	callq builder_semver_Version
-	movq %rax, %rdi
-	callq donna_option_Some
+	movq %rax, %r14
+	callq builder_semver_parse_nat
+	movq %rax, %r13
+	movl $32, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $0, (%r12)
+	movq %r15, 8(%r12)
+	movq %r14, 16(%r12)
+	movq %r13, 24(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
 .Lbb27:
 	movq %rbp, %rsp
-	subq $32, %rsp
+	subq $48, %rsp
+	popq %r15
+	popq %r14
 	popq %r13
 	popq %r12
 	popq %rbx
@@ -501,7 +511,7 @@ builder_semver_to_string:
 	movq %rax, %rdi
 	callq donna_int_to_string
 	movq %rax, %rdi
-	leaq str159(%rip), %rsi
+	leaq str163(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	movq %rdi, %r12
@@ -513,7 +523,7 @@ builder_semver_to_string:
 	movq %rax, %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str164(%rip), %rsi
+	leaq str168(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -590,7 +600,7 @@ builder_semver_split_and:
 	pushq %r12
 	pushq %r13
 	pushq %r14
-	leaq str200(%rip), %rsi
+	leaq str204(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_index_of
 	movq %rbx, %rdi
@@ -712,17 +722,19 @@ builder_semver_parse_one:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
 	pushq %r14
-	leaq str253(%rip), %rsi
+	pushq %r15
+	leaq str257(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_starts_with
 	movq %rbx, %rdi
 	cmpq $1, %rax
 	jz .Lbb105
-	leaq str276(%rip), %rsi
+	leaq str282(%rip), %rsi
 	movq %rdi, %rbx
 	callq donna_string_starts_with
 	movq %rbx, %rdi
@@ -730,7 +742,7 @@ builder_semver_parse_one:
 	movq %rsp, %rbx
 	cmpq $1, %rax
 	jz .Lbb101
-	leaq str299(%rip), %rsi
+	leaq str307(%rip), %rsi
 	movq %rdi, %r12
 	callq donna_string_starts_with
 	movq %r12, %rdi
@@ -738,7 +750,7 @@ builder_semver_parse_one:
 	movq %rsp, %r12
 	cmpq $1, %rax
 	jz .Lbb96
-	leaq str322(%rip), %rsi
+	leaq str332(%rip), %rsi
 	movq %rdi, %r13
 	callq donna_string_starts_with
 	movq %r13, %rdi
@@ -754,10 +766,16 @@ builder_semver_parse_one:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz .Lbb89
-	movq 8(%rax), %rdi
-	callq builder_semver_Gte
-	movq %rax, %rdi
-	callq donna_option_Some
+	movq 8(%rax), %r15
+	movl $16, %edi
+	callq malloc
+	xchgq %rax, %r15
+	movq $0, (%r15)
+	movq %rax, 8(%r15)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r15, 8(%rax)
 	movq %rax, (%r14)
 	jmp .Lbb90
 .Lbb89:
@@ -784,10 +802,16 @@ builder_semver_parse_one:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz .Lbb93
-	movq 8(%rax), %rdi
-	callq builder_semver_Lt
-	movq %rax, %rdi
-	callq donna_option_Some
+	movq 8(%rax), %r15
+	movl $16, %edi
+	callq malloc
+	xchgq %rax, %r15
+	movq $3, (%r15)
+	movq %rax, 8(%r15)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r15, 8(%rax)
 	movq %rax, (%r14)
 	jmp .Lbb94
 .Lbb93:
@@ -816,10 +840,16 @@ builder_semver_parse_one:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz .Lbb98
-	movq 8(%rax), %rdi
-	callq builder_semver_Lte
-	movq %rax, %rdi
-	callq donna_option_Some
+	movq 8(%rax), %r15
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r14
+	movq $2, (%r14)
+	movq %r15, 8(%r14)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r14, 8(%rax)
 	movq %rax, (%r13)
 	jmp .Lbb99
 .Lbb98:
@@ -848,10 +878,16 @@ builder_semver_parse_one:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz .Lbb103
-	movq 8(%rax), %rdi
-	callq builder_semver_Gt
-	movq %rax, %rdi
-	callq donna_option_Some
+	movq 8(%rax), %r14
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r13
+	movq $1, (%r13)
+	movq %r14, 8(%r13)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r13, 8(%rax)
 	movq %rax, (%r12)
 	jmp .Lbb104
 .Lbb103:
@@ -878,10 +914,16 @@ builder_semver_parse_one:
 	movq (%rax), %rcx
 	cmpq $0, %rcx
 	jz .Lbb107
-	movq 8(%rax), %rdi
-	callq builder_semver_Gte
-	movq %rax, %rdi
-	callq donna_option_Some
+	movq 8(%rax), %r13
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $0, (%r12)
+	movq %r13, 8(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
 	jmp .Lbb108
 .Lbb107:
@@ -890,7 +932,8 @@ builder_semver_parse_one:
 	leaq donna_option_None(%rip), %rax
 .Lbb108:
 	movq %rbp, %rsp
-	subq $32, %rsp
+	subq $48, %rsp
+	popq %r15
 	popq %r14
 	popq %r13
 	popq %r12

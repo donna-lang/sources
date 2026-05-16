@@ -20,49 +20,49 @@ donna_nil:
 
 .data
 .balign 8
-str159:
+str163:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str164:
+str168:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str200:
+str204:
 	.ascii " and "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str253:
+str257:
 	.ascii ">="
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str276:
+str282:
 	.ascii ">"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str299:
+str307:
 	.ascii "<="
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str322:
+str332:
 	.ascii "<"
 	.byte 0
 /* end data */
@@ -201,11 +201,13 @@ builder_semver_Lt:
 .globl builder_semver_parse
 builder_semver_parse:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
 	adrp	x1, str12
 	add	x1, x1, #:lo12:str12
 	mov	x19, x0
@@ -304,34 +306,51 @@ builder_semver_parse:
 	ldr	x1, [x1]
 	mov	x2, #8
 	add	x2, x1, x2
-	ldr	x20, [x2]
+	ldr	x21, [x2]
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x21, [x1]
+	ldr	x20, [x1]
 	bl	builder_semver_parse_nat
-	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	bl	builder_semver_parse_nat
-	mov	x17, x0
+	mov	x23, x0
 	mov	x0, x21
-	mov	x21, x17
 	bl	builder_semver_parse_nat
-	mov	x1, x21
-	mov	x2, x0
+	mov	x22, x0
 	mov	x0, x20
-	bl	builder_semver_Version
-	bl	donna_option_Some
+	bl	builder_semver_parse_nat
+	mov	x21, x0
+	mov	x0, #32
+	bl	malloc
+	mov	x20, x0
+	mov	x0, #0
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x23, [x0]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x22, [x0]
+	mov	x0, #24
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 .L28:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 .type builder_semver_parse, @function
 .size builder_semver_parse, .-builder_semver_parse
@@ -543,8 +562,8 @@ builder_semver_to_string:
 	mov	x0, x19
 	bl	builder_semver_vmajor
 	bl	donna_int_to_string
-	adrp	x1, str159
-	add	x1, x1, #:lo12:str159
+	adrp	x1, str163
+	add	x1, x1, #:lo12:str163
 	bl	__rt_str_concat
 	mov	x20, x0
 	mov	x0, x19
@@ -553,8 +572,8 @@ builder_semver_to_string:
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str164
-	add	x1, x1, #:lo12:str164
+	adrp	x1, str168
+	add	x1, x1, #:lo12:str168
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -632,8 +651,8 @@ builder_semver_split_and:
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
 	str	x22, [x29, 16]
-	adrp	x1, str200
-	add	x1, x1, #:lo12:str200
+	adrp	x1, str204
+	add	x1, x1, #:lo12:str204
 	mov	x19, x0
 	bl	donna_string_index_of
 	mov	x17, x0
@@ -777,22 +796,24 @@ builder_semver_collect_constraints:
 .balign 16
 builder_semver_parse_one:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
-	adrp	x1, str253
-	add	x1, x1, #:lo12:str253
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
+	adrp	x1, str257
+	add	x1, x1, #:lo12:str257
 	mov	x19, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #1
 	beq	.L111
-	adrp	x1, str276
-	add	x1, x1, #:lo12:str276
+	adrp	x1, str282
+	add	x1, x1, #:lo12:str282
 	mov	x19, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
@@ -802,8 +823,8 @@ builder_semver_parse_one:
 	mov	x19, sp
 	cmp	x1, #1
 	beq	.L106
-	adrp	x1, str299
-	add	x1, x1, #:lo12:str299
+	adrp	x1, str307
+	add	x1, x1, #:lo12:str307
 	mov	x20, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
@@ -813,8 +834,8 @@ builder_semver_parse_one:
 	mov	x20, sp
 	cmp	x1, #1
 	beq	.L100
-	adrp	x1, str322
-	add	x1, x1, #:lo12:str322
+	adrp	x1, str332
+	add	x1, x1, #:lo12:str332
 	mov	x21, x0
 	bl	donna_string_starts_with
 	mov	x1, x0
@@ -834,9 +855,22 @@ builder_semver_parse_one:
 	beq	.L91
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	builder_semver_Gte
-	bl	donna_option_Some
+	ldr	x24, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x23, x0
+	mov	x0, #0
+	str	x0, [x23]
+	mov	x0, #8
+	add	x0, x23, x0
+	str	x24, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x23, [x1]
 	str	x0, [x22]
 	b	.L93
 .L91:
@@ -867,9 +901,22 @@ builder_semver_parse_one:
 	beq	.L96
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	builder_semver_Lt
-	bl	donna_option_Some
+	ldr	x24, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x23, x0
+	mov	x0, #3
+	str	x0, [x23]
+	mov	x0, #8
+	add	x0, x23, x0
+	str	x24, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x23, [x1]
 	str	x0, [x22]
 	b	.L98
 .L96:
@@ -902,9 +949,22 @@ builder_semver_parse_one:
 	beq	.L102
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	builder_semver_Lte
-	bl	donna_option_Some
+	ldr	x23, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x22, x0
+	mov	x0, #2
+	str	x0, [x22]
+	mov	x0, #8
+	add	x0, x22, x0
+	str	x23, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
 	str	x0, [x21]
 	b	.L104
 .L102:
@@ -937,9 +997,22 @@ builder_semver_parse_one:
 	beq	.L108
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	builder_semver_Gt
-	bl	donna_option_Some
+	ldr	x22, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x21, x0
+	mov	x0, #1
+	str	x0, [x21]
+	mov	x0, #8
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
 	str	x0, [x20]
 	b	.L110
 .L108:
@@ -970,9 +1043,22 @@ builder_semver_parse_one:
 	beq	.L113
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	builder_semver_Gte
-	bl	donna_option_Some
+	ldr	x21, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x20, x0
+	mov	x0, #0
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	bl	malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	.L115
 .L113:
@@ -982,12 +1068,14 @@ builder_semver_parse_one:
 	adrp	x0, donna_option_None
 	add	x0, x0, #:lo12:donna_option_None
 .L115:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 .type builder_semver_parse_one, @function
 .size builder_semver_parse_one, .-builder_semver_parse_one

@@ -12,9 +12,15 @@ _donna_int_parse:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
 	callq _atoi
-	movq %rax, %rdi
-	callq _donna_option_Some
+	movq %rax, %rbx
+	movl $16, %edi
+	callq _malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
+	popq %rbx
 	leave
 	ret
 /* end function donna_int_parse */

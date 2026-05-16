@@ -1,41 +1,41 @@
 .data
 .balign 8
-str73:
+str82:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str78:
+str87:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str86:
+str95:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str91:
+str100:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str117:
+str135:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str134:
+str152:
 	.ascii "src/"
 	.byte 0
 /* end data */
@@ -111,21 +111,30 @@ utilities_location_zero:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
 	pushq %rsi
+	pushq %rdi
 	subq $32, %rsp
-	movl $0, %r8d
-	movl $1, %edx
 	movq %rcx, %rsi
-	movl $1, %ecx
-	callq utilities_location_Position
+	movl $32, %ecx
+	callq malloc
 	movq %rsi, %rcx
-	movq %rax, %rdx
+	movq %rax, %rsi
 	subq $-32, %rsp
+	movq $0, (%rsi)
+	movq $1, 8(%rsi)
+	movq $1, 16(%rsi)
+	movq $0, 24(%rsi)
 	subq $32, %rsp
-	movq %rdx, %r8
-	callq utilities_location_Span
+	movq %rcx, %rdi
+	movl $32, %ecx
+	callq malloc
+	movq %rdi, %rcx
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rcx, 8(%rax)
+	movq %rsi, 16(%rax)
+	movq %rsi, 24(%rax)
+	popq %rdi
 	popq %rsi
 	leave
 	ret
@@ -138,9 +147,27 @@ utilities_location_from_positions:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	pushq %rsi
+	pushq %rdi
+	movq %r8, %rbx
+	movq %rdx, %rdi
 	subq $32, %rsp
-	callq utilities_location_Span
+	movq %rcx, %rsi
+	movl $32, %ecx
+	callq malloc
+	movq %rbx, %r8
+	movq %rdi, %rdx
+	movq %rsi, %rcx
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rcx, 8(%rax)
+	movq %rdx, 16(%rax)
+	movq %r8, 24(%rax)
+	popq %rdi
+	popq %rsi
+	popq %rbx
 	leave
 	ret
 /* end function utilities_location_from_positions */
@@ -253,7 +280,7 @@ utilities_location_label:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str73(%rip), %rdx
+	leaq str82(%rip), %rdx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -273,7 +300,7 @@ utilities_location_label:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str78(%rip), %rdx
+	leaq str87(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -320,7 +347,7 @@ utilities_location_short_label:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str86(%rip), %rdx
+	leaq str95(%rip), %rdx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -340,7 +367,7 @@ utilities_location_short_label:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str91(%rip), %rdx
+	leaq str100(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -370,31 +397,37 @@ utilities_location_merge:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
 	pushq %rsi
 	pushq %rdi
-	movq %rdx, %rdi
+	movq %rdx, %rsi
 	subq $32, %rsp
-	movq %rcx, %rsi
+	movq %rcx, %rdi
 	callq utilities_location_span_file
-	movq %rsi, %rcx
-	movq %rax, %rsi
+	movq %rdi, %rcx
+	movq %rax, %rbx
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq utilities_location_span_start
-	movq %rdi, %rcx
+	movq %rsi, %rcx
 	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
 	callq utilities_location_span_end
-	movq %rdi, %rdx
-	movq %rsi, %rcx
-	movq %rax, %r8
+	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
-	callq utilities_location_Span
+	movl $32, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rbx, 8(%rax)
+	movq %rdi, 16(%rax)
+	movq %rsi, 24(%rax)
 	popq %rdi
 	popq %rsi
+	popq %rbx
 	leave
 	ret
 /* end function utilities_location_merge */
@@ -430,69 +463,63 @@ utilities_location_scan_pos:
 	pushq %r14
 	pushq %rsi
 	pushq %rdi
-	movq 48(%rbp), %r14
+	movq 48(%rbp), %rsi
 	movq %r9, %rdi
 	movq %r8, %r12
-	movq %rdx, %r13
-	cmpq %r14, %r13
+	movq %rdx, %r14
+	cmpq %rsi, %r14
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
 	jz Lbb38
 	subq $32, %rsp
-	movq %rcx, %rsi
+	movq %rcx, %rbx
 	callq donna_string_length
-	movq %rdi, %rdx
-	movq %rsi, %rcx
+	movq %rbx, %rcx
 	subq $-32, %rsp
-	cmpq %rax, %r13
+	cmpq %rax, %r14
 	setge %al
 	movzbq %al, %rax
+	movq %rsi, %rbx
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
 	jz Lbb36
 	subq $32, %rsp
-	movq %rdx, %rbx
-	movq %r13, %rdx
-	movq %rcx, %rdi
+	movq %r14, %rdx
+	movq %rcx, %r13
 	callq donna_string_char_at
-	movq %rbx, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdx, %rbx
-	leaq str117(%rip), %rdx
+	leaq str135(%rip), %rdx
 	callq strcmp
-	movq %r14, %r8
-	movq %rbx, %rdx
-	movq %rdi, %rcx
+	movq %r13, %rcx
 	subq $-32, %rsp
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
+	movq %rdi, %r13
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %rax
 	setz %al
 	movzbq %al, %rax
-	movq %rdx, %rbx
-	movq %r13, %rdx
+	movq %r14, %rdx
 	addq $1, %rdx
 	cmpl $0, %eax
 	jnz Lbb34
-	movq %rbx, %r9
+	movq %r13, %r9
 	addq $1, %r9
 	subq $48, %rsp
 	movq %rsp, %rax
-	movq %r8, 32(%rax)
+	movq %rbx, 32(%rax)
 	movq %r12, %r8
 	callq utilities_location_scan_pos
 	subq $-48, %rsp
 	movq %rax, (%rdi)
 	jmp Lbb35
 Lbb34:
-	movq %r8, %rbx
 	movq %r12, %r8
 	addq $1, %r8
 	subq $48, %rsp
@@ -506,20 +533,27 @@ Lbb35:
 	movq %rax, (%rsi)
 	jmp Lbb40
 Lbb36:
-	movq %r14, %r8
-	movq %r12, %rcx
+	xchgq %rbx, %rdi
 	subq $32, %rsp
-	callq utilities_location_Position
+	movl $32, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	movq %rdi, 24(%rax)
 	movq %rax, (%rsi)
 	jmp Lbb40
 Lbb38:
-	movq %r14, %r8
-	movq %rdi, %rdx
-	movq %r12, %rcx
+	movq %r12, %rbx
 	subq $32, %rsp
-	callq utilities_location_Position
+	movl $32, %ecx
+	callq malloc
 	subq $-32, %rsp
+	movq $0, (%rax)
+	movq %rbx, 8(%rax)
+	movq %rdi, 16(%rax)
+	movq %rsi, 24(%rax)
 Lbb40:
 	movq %rbp, %rsp
 	subq $48, %rsp
@@ -545,7 +579,7 @@ utilities_location_strip_src_prefix:
 	pushq %rdi
 	movq %rcx, %rsi
 	subq $32, %rsp
-	leaq str134(%rip), %rdx
+	leaq str152(%rip), %rdx
 	movq %rsi, %rcx
 	callq donna_string_index_of
 	xchgq %rax, %rsi
@@ -573,7 +607,7 @@ utilities_location_strip_src_prefix:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rbx
-	leaq str134(%rip), %rdx
+	leaq str152(%rip), %rdx
 	movq %rcx, %rsi
 	callq donna_string_index_of
 	movq %rsi, %rcx

@@ -14,14 +14,14 @@ str8:
 
 .data
 .balign 8
-str32:
+str35:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str170:
+str184:
 	.ascii "-"
 	.byte 0
 /* end data */
@@ -34,140 +34,140 @@ donna_nil:
 
 .data
 .balign 8
-str629:
+str700:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str632:
+str707:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str673:
+str751:
 	.ascii "pattern"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str813:
+str900:
 	.ascii ", or )"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str816:
+str907:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str817:
+str908:
 	.ascii "unknown"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1099:
+str1204:
 	.ascii ", ] or .."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1102:
+str1211:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1136:
+str1248:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1160:
+str1278:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1209:
+str1327:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1236:
+str1360:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1239:
+str1367:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1272:
+str1403:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1329:
+str1466:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1332:
+str1473:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1420:
+str1570:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1423:
+str1577:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1450:
+str1607:
 	.ascii "name or _"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1453:
+str1614:
 	.ascii "spread variable"
 	.byte 0
 /* end data */
@@ -179,7 +179,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $24, %rsp
+	subq $56, %rsp
 	pushq %rbx
 	pushq %r12
 	pushq %r13
@@ -189,7 +189,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rax, %rbx
 	movq (%rbx), %rax
 	cmpq $0, %rax
-	jz .Lbb137
+	jz .Lbb138
 	cmpq $1, %rax
 	setz %al
 	movzbq %al, %rax
@@ -216,7 +216,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	jmp .Lbb8
 .Lbb7:
 	movq 8(%rax), %rdi
-	leaq str32(%rip), %rsi
+	leaq str35(%rip), %rsi
 	callq strcmp
 	cmpq $0, %rax
 	setz %al
@@ -228,7 +228,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rax, (%r12)
 .Lbb9:
 	cmpl $0, %eax
-	jnz .Lbb136
+	jnz .Lbb137
 	movq (%rbx), %rax
 	cmpq $1, %rax
 	setz %cl
@@ -251,7 +251,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rcx, (%rdx)
 .Lbb14:
 	cmpl $0, %ecx
-	jnz .Lbb135
+	jnz .Lbb136
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
@@ -270,7 +270,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rcx, (%rdx)
 .Lbb19:
 	cmpl $0, %ecx
-	jnz .Lbb134
+	jnz .Lbb135
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
@@ -312,7 +312,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rcx, (%rdx)
 .Lbb28:
 	cmpl $0, %ecx
-	jnz .Lbb133
+	jnz .Lbb134
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
@@ -331,7 +331,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rcx, (%rdx)
 .Lbb33:
 	cmpl $0, %ecx
-	jnz .Lbb132
+	jnz .Lbb133
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
@@ -350,7 +350,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rcx, (%rdx)
 .Lbb38:
 	cmpl $0, %ecx
-	jnz .Lbb131
+	jnz .Lbb132
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
@@ -384,7 +384,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rcx, (%rdx)
 .Lbb47:
 	cmpl $0, %ecx
-	jnz .Lbb130
+	jnz .Lbb131
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
@@ -418,7 +418,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rcx, (%rdx)
 .Lbb56:
 	cmpl $0, %ecx
-	jnz .Lbb129
+	jnz .Lbb130
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
@@ -437,7 +437,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	movq %rcx, (%rdx)
 .Lbb61:
 	cmpl $0, %ecx
-	jnz .Lbb118
+	jnz .Lbb120
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rax
@@ -497,25 +497,32 @@ compiler_parser_parse_patterns_parse_pattern:
 	jnz .Lbb78
 	movq 8(%rbx), %rax
 	movq (%rax), %rdi
-	movq 8(%rax), %rbx
+	movq 8(%rax), %r12
 	callq compiler_lexer_token_to_string
-	movq %rbx, %rdx
-	movq %rax, %rdi
-	leaq str673(%rip), %rsi
-	callq errors_error_ParseUnexpectedToken
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
-	jmp .Lbb138
+	movq %rax, %r13
+	movl $32, %edi
+	callq malloc
+	movq %rax, %rbx
+	movq $6, (%rbx)
+	movq %r13, 8(%rbx)
+	leaq str751(%rip), %rax
+	movq %rax, 16(%rbx)
+	movq %r12, 24(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
+	jmp .Lbb139
 .Lbb78:
 	movq 8(%rbx), %rax
 	movq 16(%rbx), %rdi
 	movq 8(%rax), %rsi
 	callq compiler_parser_parse_patterns_parse_list_pattern
-	jmp .Lbb138
+	jmp .Lbb139
 .Lbb79:
 	movq 8(%rbx), %rcx
 	movq 16(%rbx), %rax
-	movq 8(%rcx), %rsi
+	movq 8(%rcx), %r15
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq (%rax), %rdx
@@ -523,10 +530,10 @@ compiler_parser_parse_patterns_parse_pattern:
 	setz %cl
 	movzbq %cl, %rcx
 	subq $16, %rsp
-	movq %rsp, %rdi
+	movq %rsp, %rsi
 	cmpl $0, %ecx
 	jnz .Lbb82
-	movq $0, (%rdi)
+	movq $0, (%rsi)
 	movl $0, %ecx
 	jmp .Lbb83
 .Lbb82:
@@ -537,7 +544,7 @@ compiler_parser_parse_patterns_parse_pattern:
 	setz %cl
 	movzbq %cl, %rcx
 	andq $1, %rcx
-	movq %rcx, (%rdi)
+	movq %rcx, (%rsi)
 .Lbb83:
 	cmpl $0, %ecx
 	jnz .Lbb92
@@ -554,31 +561,43 @@ compiler_parser_parse_patterns_parse_pattern:
 .Lbb89:
 	cmpl $0, %ecx
 	jnz .Lbb91
-	leaq str632(%rip), %rdi
-	callq errors_error_ParseUnexpectedEof
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $7, (%r12)
+	leaq str707(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %r15, 16(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb138
+	jmp .Lbb139
 .Lbb91:
 	movq 8(%rax), %rax
 	movq (%rax), %rdi
-	movq 8(%rax), %r12
+	movq 8(%rax), %r13
 	callq compiler_lexer_token_to_string
-	movq %r12, %rdx
-	movq %rax, %rdi
-	leaq str629(%rip), %rsi
-	callq errors_error_ParseUnexpectedToken
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movq %rax, %r14
+	movl $32, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $6, (%r12)
+	movq %r14, 8(%r12)
+	leaq str700(%rip), %rax
+	movq %rax, 16(%r12)
+	movq %r13, 24(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb138
+	jmp .Lbb139
 .Lbb92:
 	movq 16(%rax), %rdi
-	movq %rsi, %r12
 	leaq donna_nil(%rip), %rsi
 	callq compiler_parser_parse_patterns_parse_paren_patterns
-	movq %r12, %rsi
 	subq $16, %rsp
 	movq %rsp, %r12
 	movq (%rax), %rcx
@@ -587,104 +606,241 @@ compiler_parser_parse_patterns_parse_pattern:
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
 	jnz .Lbb94
-	movq 8(%rax), %rdi
+	movq 8(%rax), %r14
 	movq 16(%rax), %r13
-	callq compiler_parser_ast_PTuple
-	movq %r13, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r14
+	movq $7, (%r14)
+	movq %rax, 8(%r14)
+	movq %r15, 16(%r14)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r14, 8(%rax)
+	movq %r13, 16(%rax)
 	movq %rax, (%r12)
 	jmp .Lbb95
 .Lbb94:
-	movq 8(%rax), %rdi
-	callq compiler_parser_parse_result_PErr
+	movq 8(%rax), %r13
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r13, 8(%rax)
 	movq %rax, (%r12)
 .Lbb95:
 	movq %rax, (%rbx)
-	jmp .Lbb138
+	jmp .Lbb139
 .Lbb96:
 	movq 8(%rbx), %rax
 	movq 16(%rbx), %r12
 	movq (%rax), %rcx
-	movq 8(%rcx), %rdi
-	movq 8(%rax), %rcx
+	movq 8(%rcx), %r14
+	movq 8(%rax), %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq (%r12), %rax
-	cmpq $1, %rax
-	setz %al
-	movzbq %al, %rax
+	movq (%r12), %rcx
+	cmpq $1, %rcx
+	setz %dl
+	movzbq %dl, %rdx
 	subq $16, %rsp
-	movq %rsp, %rdx
-	cmpl $0, %eax
+	movq %rsp, %rcx
+	cmpl $0, %edx
 	jnz .Lbb99
-	movq $0, (%rdx)
+	movq $0, (%rcx)
+	movq %rax, %r13
 	movl $0, %eax
 	jmp .Lbb104
 .Lbb99:
-	movq 8(%r12), %rax
-	movq 16(%r12), %rsi
-	movq (%rax), %rax
-	movq (%rax), %rax
-	movq (%rsi), %r8
-	cmpq $1, %r8
-	setz %r9b
-	movzbq %r9b, %r9
+	movq 8(%r12), %rsi
+	movq 16(%r12), %rdx
+	movq (%rsi), %rsi
+	movq (%rsi), %rsi
+	movq (%rdx), %rdi
+	cmpq $1, %rdi
+	setz %r8b
+	movzbq %r8b, %r8
 	subq $16, %rsp
-	movq %rsp, %r8
-	cmpl $0, %r9d
+	movq %rsp, %rdi
+	cmpl $0, %r8d
 	jnz .Lbb102
-	movq $0, (%r8)
-	movl $0, %esi
+	movq $0, (%rdi)
+	movl $0, %edx
 	jmp .Lbb103
 .Lbb102:
-	movq 8(%rsi), %rsi
-	movq (%rsi), %rsi
-	movq (%rsi), %rsi
-	cmpq $5, %rsi
-	setz %sil
-	movzbq %sil, %rsi
-	andq $1, %rsi
-	movq %rsi, (%r8)
+	movq 8(%rdx), %rdx
+	movq (%rdx), %rdx
+	movq (%rdx), %rdx
+	cmpq $5, %rdx
+	setz %dl
+	movzbq %dl, %rdx
+	andq $1, %rdx
+	movq %rdx, (%rdi)
 .Lbb103:
-	cmpq $26, %rax
+	cmpq $26, %rsi
+	movq %rax, %r13
 	setz %al
 	movzbq %al, %rax
 	andq $1, %rax
-	andq %rsi, %rax
-	movq %rax, (%rdx)
+	andq %rdx, %rax
+	movq %rax, (%rcx)
 .Lbb104:
 	cmpl $0, %eax
 	jnz .Lbb106
-	movq %rcx, %rsi
-	callq compiler_parser_ast_PVar
-	movq %rax, %rdi
-	movq %r12, %rsi
-	callq compiler_parser_parse_result_POk
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r13
+	movq $2, (%r13)
+	movq %r14, 8(%r13)
+	movq %rax, 16(%r13)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb138
+	jmp .Lbb139
 .Lbb106:
+	movq %r13, %rax
 	movq 16(%r12), %rdx
-	movq 8(%rdx), %rax
-	movq 16(%rdx), %r14
-	movq (%rax), %rax
-	movq 8(%rax), %r13
+	movq 8(%rdx), %rcx
+	movq 16(%rdx), %r13
+	movq (%rcx), %rcx
+	movq 8(%rcx), %rdx
+	movq %rax, %r12
 	subq $16, %rsp
-	movq %rsp, %r12
-	movq (%r14), %rax
+	movq %rsp, %rax
+	movq %rax, -16(%rbp)
+	movq (%r13), %rcx
+	cmpq $1, %rcx
+	setz %cl
+	movzbq %cl, %rcx
+	movq %rdx, %r15
+	subq $16, %rsp
+	movq %rsp, %rdx
+	cmpl $0, %ecx
+	jnz .Lbb110
+	movq $0, (%rdx)
+	movl $0, %ecx
+	jmp .Lbb111
+.Lbb110:
+	movq 8(%r13), %rcx
+	movq (%rcx), %rcx
+	movq (%rcx), %rcx
+	cmpq $30, %rcx
+	setz %cl
+	movzbq %cl, %rcx
+	andq $1, %rcx
+	movq %rcx, (%rdx)
+.Lbb111:
+	cmpl $0, %ecx
+	jnz .Lbb113
+	movl $16, %edi
+	callq malloc
+	xchgq %rax, %r14
+	movq $1, (%r14)
+	movq %rax, 8(%r14)
+	movl $40, %edi
+	callq malloc
+	movq %r14, %rcx
+	movq %rax, %r14
+	movq %r12, %rax
+	movq -16(%rbp), %r12
+	movq $9, (%r14)
+	movq %rcx, 8(%r14)
+	movq %r15, 16(%r14)
+	leaq donna_nil(%rip), %rcx
+	movq %rcx, 24(%r14)
+	movq %rax, 32(%r14)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r14, 8(%rax)
+	movq %r13, 16(%rax)
+	movq %rax, (%r12)
+	jmp .Lbb119
+.Lbb113:
+	xchgq %rax, %r12
+	xchgq %r13, %rax
+	movq 16(%rax), %rdi
+	leaq donna_nil(%rip), %rsi
+	callq compiler_parser_parse_patterns_parse_paren_patterns
+	movq %r15, %rdx
+	subq $16, %rsp
+	movq %rsp, %rcx
+	movq %rcx, -40(%rbp)
+	movq (%rax), %rsi
+	cmpq $1, %rsi
+	movq %rdx, %r15
+	setz %dl
+	movzbq %dl, %rdx
+	cmpl $0, %edx
+	jnz .Lbb116
+	movq 8(%rax), %rcx
+	movq %rcx, -32(%rbp)
+	movq 16(%rax), %rax
+	movq %rax, -24(%rbp)
+	movl $16, %edi
+	callq malloc
+	xchgq %rax, %r14
+	movq $1, (%r14)
+	movq %rax, 8(%r14)
+	movl $40, %edi
+	callq malloc
+	movq %r15, %rdx
+	movq %r14, %rsi
+	movq %rax, %r15
+	movq %r13, %rax
+	movq -40(%rbp), %r13
+	movq -24(%rbp), %r14
+	movq -32(%rbp), %rcx
+	movq $9, (%r15)
+	movq %rsi, 8(%r15)
+	movq %rdx, 16(%r15)
+	movq %rcx, 24(%r15)
+	movq %rax, 32(%r15)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r15, 8(%rax)
+	movq %r14, 16(%rax)
+	movq %rax, (%r13)
+	jmp .Lbb118
+.Lbb116:
+	movq %rcx, %r13
+	movq 8(%rax), %r14
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r14, 8(%rax)
+	movq %rax, (%r13)
+.Lbb118:
+	movq %rax, (%r12)
+.Lbb119:
+	movq %rax, (%rbx)
+	jmp .Lbb139
+.Lbb120:
+	movq 8(%rbx), %rax
+	movq 16(%rbx), %r13
+	movq (%rax), %rcx
+	movq 8(%rcx), %rcx
+	movq 8(%rax), %r15
+	subq $16, %rsp
+	movq %rsp, %rbx
+	movq (%r13), %rax
 	cmpq $1, %rax
 	setz %al
 	movzbq %al, %rax
-	movq %rcx, %r15
+	movq %rcx, %r12
 	subq $16, %rsp
 	movq %rsp, %rcx
 	cmpl $0, %eax
-	jnz .Lbb109
+	jnz .Lbb123
 	movq $0, (%rcx)
 	movl $0, %eax
-	jmp .Lbb110
-.Lbb109:
-	movq 8(%r14), %rax
+	jmp .Lbb124
+.Lbb123:
+	movq 8(%r13), %rax
 	movq (%rax), %rax
 	movq (%rax), %rax
 	cmpq $30, %rax
@@ -692,246 +848,233 @@ compiler_parser_parse_patterns_parse_pattern:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rcx)
-.Lbb110:
-	cmpl $0, %eax
-	jnz .Lbb112
-	callq donna_option_Some
-	movq %r15, %rcx
-	movq %r13, %rsi
-	movq %rax, %rdi
-	movq %rcx, %r15
-	leaq donna_nil(%rip), %rdx
-	callq compiler_parser_ast_PCons
-	movq %rax, %rdi
-	movq %r14, %rsi
-	callq compiler_parser_parse_result_POk
-	movq %rax, (%r12)
-	jmp .Lbb117
-.Lbb112:
-	movq %r13, %rsi
-	movq %rdi, %r13
-	movq 16(%r14), %rdi
-	movq %rsi, %r14
-	leaq donna_nil(%rip), %rsi
-	callq compiler_parser_parse_patterns_parse_paren_patterns
-	movq %r15, %rcx
-	movq %r14, %rsi
-	movq %r13, %rdi
-	subq $16, %rsp
-	movq %rsp, %r13
-	movq (%rax), %rdx
-	cmpq $1, %rdx
-	movq %rcx, %r15
-	setz %cl
-	movzbq %cl, %rcx
-	cmpl $0, %ecx
-	jnz .Lbb115
-	movq 8(%rax), %rdx
-	movq %rdx, -16(%rbp)
-	movq %rsi, %r14
-	movq 16(%rax), %rsi
-	movq %rsi, -8(%rbp)
-	callq donna_option_Some
-	movq %r15, %rcx
-	movq %r14, %rsi
-	movq %rax, %rdi
-	movq -8(%rbp), %r14
-	movq -16(%rbp), %rdx
-	callq compiler_parser_ast_PCons
-	movq %r14, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	movq %rax, (%r13)
-	jmp .Lbb116
-.Lbb115:
-	movq 8(%rax), %rdi
-	callq compiler_parser_parse_result_PErr
-	movq %rax, (%r13)
-.Lbb116:
-	movq %rax, (%r12)
-.Lbb117:
-	movq %rax, (%rbx)
-	jmp .Lbb138
-.Lbb118:
-	movq 8(%rbx), %rax
-	movq 16(%rbx), %r12
-	movq (%rax), %rcx
-	movq 8(%rcx), %rsi
-	movq 8(%rax), %rcx
-	subq $16, %rsp
-	movq %rsp, %rbx
-	movq (%r12), %rax
-	cmpq $1, %rax
-	setz %al
-	movzbq %al, %rax
-	subq $16, %rsp
-	movq %rsp, %rdx
-	cmpl $0, %eax
-	jnz .Lbb121
-	movq $0, (%rdx)
-	movl $0, %eax
-	jmp .Lbb122
-.Lbb121:
-	movq 8(%r12), %rax
-	movq (%rax), %rax
-	movq (%rax), %rax
-	cmpq $30, %rax
-	setz %al
-	movzbq %al, %rax
-	andq $1, %rax
-	movq %rax, (%rdx)
-.Lbb122:
-	cmpl $0, %eax
-	jnz .Lbb124
-	movq %rcx, %r13
-	leaq donna_nil(%rip), %rdx
-	leaq donna_option_None(%rip), %rdi
-	callq compiler_parser_ast_PCons
-	movq %rax, %rdi
-	movq %r12, %rsi
-	callq compiler_parser_parse_result_POk
-	movq %rax, (%rbx)
-	jmp .Lbb138
 .Lbb124:
-	movq %rcx, %r13
-	movq 16(%r12), %rdi
-	movq %rsi, %r12
+	cmpl $0, %eax
+	jnz .Lbb126
+	movl $40, %edi
+	callq malloc
+	movq %r12, %rcx
+	movq %rax, %r12
+	movq $9, (%r12)
+	leaq donna_option_None(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %rcx, 16(%r12)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 24(%r12)
+	movq %r15, 32(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %r13, 16(%rax)
+	movq %rax, (%rbx)
+	jmp .Lbb139
+.Lbb126:
+	movq 16(%r13), %rdi
 	leaq donna_nil(%rip), %rsi
 	callq compiler_parser_parse_patterns_parse_paren_patterns
-	movq %r13, %rcx
-	movq %r12, %rsi
+	movq %r12, %rcx
 	subq $16, %rsp
 	movq %rsp, %r12
 	movq (%rax), %rdx
 	cmpq $1, %rdx
-	setz %dl
-	movzbq %dl, %rdx
-	cmpl $0, %edx
-	jnz .Lbb127
-	movq 8(%rax), %rdx
-	movq 16(%rax), %r13
-	leaq donna_option_None(%rip), %rdi
-	callq compiler_parser_ast_PCons
-	movq %r13, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
+	movq %rcx, %r14
+	setz %cl
+	movzbq %cl, %rcx
+	cmpl $0, %ecx
+	jnz .Lbb128
+	movq 8(%rax), %r13
+	movq 16(%rax), %rax
+	movq %rax, -48(%rbp)
+	movl $40, %edi
+	callq malloc
+	movq %r14, %rcx
+	movq %rax, %r14
+	movq %r13, %rax
+	movq -48(%rbp), %r13
+	movq $9, (%r14)
+	leaq donna_option_None(%rip), %rdx
+	movq %rdx, 8(%r14)
+	movq %rcx, 16(%r14)
+	movq %rax, 24(%r14)
+	movq %r15, 32(%r14)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r14, 8(%rax)
+	movq %r13, 16(%rax)
 	movq %rax, (%r12)
-	jmp .Lbb128
-.Lbb127:
-	movq 8(%rax), %rdi
-	callq compiler_parser_parse_result_PErr
-	movq %rax, (%r12)
+	jmp .Lbb129
 .Lbb128:
-	movq %rax, (%rbx)
-	jmp .Lbb138
+	movq 8(%rax), %r13
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r13, 8(%rax)
+	movq %rax, (%r12)
 .Lbb129:
-	movq 8(%rbx), %rax
-	movq 16(%rbx), %rsi
-	movq %rsi, %rbx
-	movq 8(%rax), %rsi
-	movl $0, %edi
-	callq compiler_parser_ast_PBool
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	jmp .Lbb138
+	movq %rax, (%rbx)
+	jmp .Lbb139
 .Lbb130:
 	movq 8(%rbx), %rax
-	movq 16(%rbx), %rsi
-	movq %rsi, %rbx
-	movq 8(%rax), %rsi
-	movl $1, %edi
-	callq compiler_parser_ast_PBool
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	jmp .Lbb138
+	movq 16(%rbx), %rbx
+	movq 8(%rax), %r13
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $6, (%r12)
+	movq $0, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	jmp .Lbb139
 .Lbb131:
 	movq 8(%rbx), %rax
-	movq 16(%rbx), %rsi
-	movq (%rax), %rcx
-	movq 8(%rcx), %rdi
-	movq %rsi, %rbx
-	movq 8(%rax), %rsi
-	callq compiler_parser_ast_PString
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	jmp .Lbb138
+	movq 16(%rbx), %rbx
+	movq 8(%rax), %r13
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $6, (%r12)
+	movq $1, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	jmp .Lbb139
 .Lbb132:
 	movq 8(%rbx), %rax
-	movq 16(%rbx), %rsi
+	movq 16(%rbx), %rbx
 	movq (%rax), %rcx
-	movq 8(%rcx), %rdi
-	movq %rsi, %rbx
-	movq 8(%rax), %rsi
-	callq compiler_parser_ast_PFloat
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	jmp .Lbb138
+	movq 8(%rcx), %r14
+	movq 8(%rax), %r13
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $5, (%r12)
+	movq %r14, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	jmp .Lbb139
 .Lbb133:
 	movq 8(%rbx), %rax
+	movq 16(%rbx), %rbx
+	movq (%rax), %rcx
+	movq 8(%rcx), %r14
+	movq 8(%rax), %r13
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $4, (%r12)
+	movq %r14, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	jmp .Lbb139
+.Lbb134:
+	movq 8(%rbx), %rax
 	movq 16(%rbx), %rcx
-	movq 8(%rax), %rsi
+	movq 8(%rax), %r13
 	movq 8(%rcx), %rax
 	movq 16(%rcx), %rbx
 	movq (%rax), %rax
-	movq %rsi, %r12
 	movq 8(%rax), %rsi
-	leaq str170(%rip), %rdi
+	leaq str184(%rip), %rdi
 	callq __rt_str_concat
-	movq %r12, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_ast_PInt
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	jmp .Lbb138
-.Lbb134:
-	movq 8(%rbx), %rax
-	movq 16(%rbx), %rsi
-	movq (%rax), %rcx
-	movq 8(%rcx), %rdi
-	movq %rsi, %rbx
-	movq 8(%rax), %rsi
-	callq compiler_parser_ast_PInt
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	jmp .Lbb138
+	movq %rax, %r14
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $3, (%r12)
+	movq %r14, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	jmp .Lbb139
 .Lbb135:
 	movq 8(%rbx), %rax
-	movq 16(%rbx), %rsi
+	movq 16(%rbx), %rbx
 	movq (%rax), %rcx
-	movq 8(%rcx), %rdi
-	movq %rsi, %rbx
-	movq 8(%rax), %rsi
-	callq compiler_parser_ast_PDiscard
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	jmp .Lbb138
+	movq 8(%rcx), %r14
+	movq 8(%rax), %r13
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $3, (%r12)
+	movq %r14, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	jmp .Lbb139
 .Lbb136:
 	movq 8(%rbx), %rax
 	movq 16(%rbx), %rbx
-	movq 8(%rax), %rdi
-	callq compiler_parser_ast_PWild
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-	jmp .Lbb138
+	movq (%rax), %rcx
+	movq 8(%rcx), %r14
+	movq 8(%rax), %r13
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $1, (%r12)
+	movq %r14, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	jmp .Lbb139
 .Lbb137:
+	movq 8(%rbx), %rax
+	movq 16(%rbx), %rbx
+	movq 8(%rax), %r13
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $0, (%r12)
+	movq %r13, 8(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+	jmp .Lbb139
+.Lbb138:
 	leaq str8(%rip), %rdi
 	callq utilities_location_zero
-	movq %rax, %rsi
-	leaq str7(%rip), %rdi
-	callq errors_error_ParseUnexpectedEof
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
-.Lbb138:
+	movq %rax, %r12
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rbx
+	movq $7, (%rbx)
+	leaq str7(%rip), %rax
+	movq %rax, 8(%rbx)
+	movq %r12, 16(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
+.Lbb139:
 	movq %rbp, %rsp
-	subq $64, %rsp
+	subq $96, %rsp
 	popq %r15
 	popq %r14
 	popq %r13
@@ -965,10 +1108,10 @@ compiler_parser_parse_patterns_parse_paren_patterns:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb141
+	jnz .Lbb142
 	movl $0, %ecx
-	jmp .Lbb142
-.Lbb141:
+	jmp .Lbb143
+.Lbb142:
 	movq 8(%rax), %rcx
 	movq (%rcx), %rcx
 	movq (%rcx), %rcx
@@ -976,9 +1119,9 @@ compiler_parser_parse_patterns_parse_paren_patterns:
 	setz %cl
 	movzbq %cl, %rcx
 	andq $1, %rcx
-.Lbb142:
+.Lbb143:
 	cmpl $0, %ecx
-	jnz .Lbb167
+	jnz .Lbb168
 	movq %rdi, %rbx
 	movq %rax, %rdi
 	callq compiler_parser_parse_patterns_parse_pattern
@@ -990,7 +1133,7 @@ compiler_parser_parse_patterns_parse_paren_patterns:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb166
+	jnz .Lbb167
 	movq 8(%rax), %r15
 	movq 16(%rax), %rax
 	subq $16, %rsp
@@ -1002,11 +1145,11 @@ compiler_parser_parse_patterns_parse_paren_patterns:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpl $0, %ecx
-	jnz .Lbb147
+	jnz .Lbb148
 	movq $0, (%rsi)
 	movl $0, %ecx
-	jmp .Lbb148
-.Lbb147:
+	jmp .Lbb149
+.Lbb148:
 	movq 8(%rax), %rcx
 	movq (%rcx), %rcx
 	movq (%rcx), %rcx
@@ -1015,17 +1158,17 @@ compiler_parser_parse_patterns_parse_paren_patterns:
 	movzbq %cl, %rcx
 	andq $1, %rcx
 	movq %rcx, (%rsi)
-.Lbb148:
+.Lbb149:
 	cmpl $0, %ecx
-	jnz .Lbb163
+	jnz .Lbb164
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rdx
-	jz .Lbb152
+	jz .Lbb153
 	movq $0, (%rsi)
 	movl $0, %ecx
-	jmp .Lbb153
-.Lbb152:
+	jmp .Lbb154
+.Lbb153:
 	movq 8(%rax), %rcx
 	movq (%rcx), %rcx
 	movq (%rcx), %rcx
@@ -1034,45 +1177,59 @@ compiler_parser_parse_patterns_parse_paren_patterns:
 	movzbq %cl, %rcx
 	andq $1, %rcx
 	movq %rcx, (%rsi)
-.Lbb153:
+.Lbb154:
 	cmpl $0, %ecx
-	jnz .Lbb162
+	jnz .Lbb163
 	subq $16, %rsp
 	movq %rsp, %rcx
 	cmpq $1, %rdx
-	jz .Lbb157
+	jz .Lbb158
 	movq $0, (%rcx)
 	movl $0, %ecx
-	jmp .Lbb159
-.Lbb157:
+	jmp .Lbb160
+.Lbb158:
 	movq $1, (%rcx)
 	movl $1, %ecx
-.Lbb159:
+.Lbb160:
 	cmpl $0, %ecx
-	jnz .Lbb161
-	leaq str817(%rip), %rdi
+	jnz .Lbb162
+	leaq str908(%rip), %rdi
 	callq utilities_location_zero
-	movq %rax, %rsi
-	leaq str816(%rip), %rdi
-	callq errors_error_ParseUnexpectedEof
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movq %rax, %r14
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r13
+	movq $7, (%r13)
+	leaq str907(%rip), %rax
+	movq %rax, 8(%r13)
+	movq %r14, 16(%r13)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r13, 8(%rax)
 	movq %rax, (%r12)
-	jmp .Lbb165
-.Lbb161:
+	jmp .Lbb166
+.Lbb162:
 	movq 8(%rax), %rax
 	movq (%rax), %rdi
-	movq 8(%rax), %r13
+	movq 8(%rax), %r14
 	callq compiler_lexer_token_to_string
-	movq %r13, %rdx
-	movq %rax, %rdi
-	leaq str813(%rip), %rsi
-	callq errors_error_ParseUnexpectedToken
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movq %rax, %r15
+	movl $32, %edi
+	callq malloc
+	movq %rax, %r13
+	movq $6, (%r13)
+	movq %r15, 8(%r13)
+	leaq str900(%rip), %rax
+	movq %rax, 16(%r13)
+	movq %r14, 24(%r13)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r13, 8(%rax)
 	movq %rax, (%r12)
-	jmp .Lbb165
-.Lbb162:
+	jmp .Lbb166
+.Lbb163:
 	movq 16(%rax), %r13
 	movq %rdi, %r14
 	movl $24, %edi
@@ -1082,12 +1239,15 @@ compiler_parser_parse_patterns_parse_paren_patterns:
 	movq %r15, 8(%rdi)
 	movq %r14, 16(%rdi)
 	callq donna_list_reverse
-	movq %r13, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
+	movq %rax, %r14
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r14, 8(%rax)
+	movq %r13, 16(%rax)
 	movq %rax, (%r12)
-	jmp .Lbb165
-.Lbb163:
+	jmp .Lbb166
+.Lbb164:
 	movq %r15, %r14
 	movq %rdi, %r13
 	movq 16(%rax), %rdi
@@ -1103,21 +1263,27 @@ compiler_parser_parse_patterns_parse_paren_patterns:
 	movq %r13, 16(%rsi)
 	callq compiler_parser_parse_patterns_parse_paren_patterns
 	movq %rax, (%r12)
-.Lbb165:
-	movq %rax, (%rbx)
-	jmp .Lbb168
 .Lbb166:
-	movq 8(%rax), %rdi
-	callq compiler_parser_parse_result_PErr
 	movq %rax, (%rbx)
-	jmp .Lbb168
+	jmp .Lbb169
 .Lbb167:
+	movq 8(%rax), %r12
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
+	movq %rax, (%rbx)
+	jmp .Lbb169
+.Lbb168:
 	movq 16(%rax), %rbx
 	callq donna_list_reverse
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-.Lbb168:
+	movq %rax, %r12
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+.Lbb169:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %r15
@@ -1143,10 +1309,10 @@ compiler_parser_parse_patterns_strip_pattern_label:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb171
+	jnz .Lbb172
 	movl $0, %ecx
-	jmp .Lbb176
-.Lbb171:
+	jmp .Lbb177
+.Lbb172:
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rdx
 	movq (%rcx), %rcx
@@ -1158,11 +1324,11 @@ compiler_parser_parse_patterns_strip_pattern_label:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpl $0, %edi
-	jnz .Lbb174
+	jnz .Lbb175
 	movq $0, (%rsi)
 	movl $0, %edx
-	jmp .Lbb175
-.Lbb174:
+	jmp .Lbb176
+.Lbb175:
 	movq 8(%rdx), %rdx
 	movq (%rdx), %rdx
 	movq (%rdx), %rdx
@@ -1171,18 +1337,18 @@ compiler_parser_parse_patterns_strip_pattern_label:
 	movzbq %dl, %rdx
 	andq $1, %rdx
 	movq %rdx, (%rsi)
-.Lbb175:
+.Lbb176:
 	cmpq $4, %rcx
 	setz %cl
 	movzbq %cl, %rcx
 	andq $1, %rcx
 	andq %rdx, %rcx
-.Lbb176:
+.Lbb177:
 	cmpl $0, %ecx
-	jz .Lbb178
+	jz .Lbb179
 	movq 16(%rax), %rax
 	movq 16(%rax), %rax
-.Lbb178:
+.Lbb179:
 	movq %rbp, %rsp
 	subq $0, %rsp
 	leave
@@ -1197,20 +1363,20 @@ compiler_parser_parse_patterns_parse_list_pattern:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	subq $8, %rsp
 	pushq %rbx
+	pushq %r12
 	movq %rsi, %rbx
 	callq compiler_parser_parse_result_skip_newlines
-	movq %rbx, %rdx
+	movq %rbx, %rsi
 	movq (%rax), %rcx
 	cmpq $1, %rcx
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb181
+	jnz .Lbb182
 	movl $0, %ecx
-	jmp .Lbb182
-.Lbb181:
+	jmp .Lbb183
+.Lbb182:
 	movq 8(%rax), %rcx
 	movq (%rcx), %rcx
 	movq (%rcx), %rcx
@@ -1218,25 +1384,34 @@ compiler_parser_parse_patterns_parse_list_pattern:
 	setz %cl
 	movzbq %cl, %rcx
 	andq $1, %rcx
-.Lbb182:
+.Lbb183:
 	cmpl $0, %ecx
-	jnz .Lbb184
-	movq %rdx, %rbx
+	jnz .Lbb185
 	leaq donna_nil(%rip), %rdx
-	movq %rbx, %rsi
+	movq %rsi, %r12
 	movq %rax, %rdi
 	callq compiler_parser_parse_patterns_parse_list_elems
-	jmp .Lbb185
-.Lbb184:
-	movq 16(%rax), %rsi
-	movq %rsi, %rbx
-	leaq donna_option_None(%rip), %rsi
-	leaq donna_nil(%rip), %rdi
-	callq compiler_parser_ast_PList
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
+	jmp .Lbb187
 .Lbb185:
+	movq %rsi, %r12
+	movq 16(%rax), %rbx
+	movl $32, %edi
+	callq malloc
+	movq %r12, %rsi
+	movq %rax, %r12
+	movq $8, (%r12)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 8(%r12)
+	leaq donna_option_None(%rip), %rax
+	movq %rax, 16(%r12)
+	movq %rsi, 24(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+.Lbb187:
+	popq %r12
 	popq %rbx
 	leave
 	ret
@@ -1262,7 +1437,7 @@ compiler_parser_parse_patterns_parse_list_elems:
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb227
+	jnz .Lbb226
 	movq 8(%rax), %rbx
 	movq 16(%rax), %r12
 	movl $24, %edi
@@ -1282,53 +1457,56 @@ compiler_parser_parse_patterns_parse_list_elems:
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpl $0, %eax
-	jnz .Lbb190
+	jnz .Lbb192
 	movq $0, (%rdx)
+	movq %rsi, %r13
 	movl $0, %eax
-	jmp .Lbb195
-.Lbb190:
+	jmp .Lbb197
+.Lbb192:
 	movq 8(%r12), %rax
-	movq 16(%r12), %r8
+	movq 16(%r12), %r9
 	movq (%rax), %rax
 	movq (%rax), %rax
-	movq (%r8), %r9
-	cmpq $1, %r9
+	movq (%r9), %r8
+	cmpq $1, %r8
 	setz %r10b
 	movzbq %r10b, %r10
 	subq $16, %rsp
-	movq %rsp, %r9
+	movq %rsp, %r8
 	cmpl $0, %r10d
-	jnz .Lbb193
-	movq $0, (%r9)
-	movl $0, %r8d
-	jmp .Lbb194
-.Lbb193:
-	movq 8(%r8), %r8
-	movq (%r8), %r8
-	movq (%r8), %r8
-	cmpq $27, %r8
-	setz %r8b
-	movzbq %r8b, %r8
-	andq $1, %r8
-	movq %r8, (%r9)
-.Lbb194:
+	jnz .Lbb195
+	movq $0, (%r8)
+	movq %rsi, %r13
+	movl $0, %esi
+	jmp .Lbb196
+.Lbb195:
+	movq 8(%r9), %r9
+	movq (%r9), %r9
+	movq (%r9), %r9
+	cmpq $27, %r9
+	movq %rsi, %r13
+	setz %sil
+	movzbq %sil, %rsi
+	andq $1, %rsi
+	movq %rsi, (%r8)
+.Lbb196:
 	cmpq $25, %rax
 	setz %al
 	movzbq %al, %rax
 	andq $1, %rax
-	andq %r8, %rax
+	andq %rsi, %rax
 	movq %rax, (%rdx)
-.Lbb195:
+.Lbb197:
 	cmpl $0, %eax
 	jnz .Lbb225
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rcx
-	jz .Lbb199
+	jz .Lbb201
 	movq $0, (%rdx)
 	movl $0, %eax
-	jmp .Lbb200
-.Lbb199:
+	jmp .Lbb202
+.Lbb201:
 	movq 8(%r12), %rax
 	movq (%rax), %rax
 	movq (%rax), %rax
@@ -1337,17 +1515,17 @@ compiler_parser_parse_patterns_parse_list_elems:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rdx)
-.Lbb200:
+.Lbb202:
 	cmpl $0, %eax
 	jnz .Lbb223
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rcx
-	jz .Lbb204
+	jz .Lbb206
 	movq $0, (%rdx)
 	movl $0, %eax
-	jmp .Lbb205
-.Lbb204:
+	jmp .Lbb207
+.Lbb206:
 	movq 8(%r12), %rax
 	movq (%rax), %rax
 	movq (%rax), %rax
@@ -1356,17 +1534,17 @@ compiler_parser_parse_patterns_parse_list_elems:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rdx)
-.Lbb205:
+.Lbb207:
 	cmpl $0, %eax
-	jnz .Lbb221
+	jnz .Lbb222
 	subq $16, %rsp
 	movq %rsp, %rdx
 	cmpq $1, %rcx
-	jz .Lbb209
+	jz .Lbb211
 	movq $0, (%rdx)
 	movl $0, %eax
-	jmp .Lbb210
-.Lbb209:
+	jmp .Lbb212
+.Lbb211:
 	movq 8(%r12), %rax
 	movq (%rax), %rax
 	movq (%rax), %rax
@@ -1375,44 +1553,56 @@ compiler_parser_parse_patterns_parse_list_elems:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rdx)
-.Lbb210:
+.Lbb212:
 	cmpl $0, %eax
-	jnz .Lbb219
+	jnz .Lbb221
 	subq $16, %rsp
 	movq %rsp, %rax
 	cmpq $1, %rcx
-	jz .Lbb214
+	jz .Lbb216
 	movq $0, (%rax)
 	movl $0, %eax
-	jmp .Lbb216
-.Lbb214:
+	jmp .Lbb218
+.Lbb216:
 	movq $1, (%rax)
 	movl $1, %eax
-.Lbb216:
-	cmpl $0, %eax
-	jnz .Lbb218
-	movq %rsi, %r13
-	leaq str1102(%rip), %rdi
-	callq errors_error_ParseUnexpectedEof
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
-	movq %rax, (%rbx)
-	jmp .Lbb228
 .Lbb218:
+	cmpl $0, %eax
+	jnz .Lbb220
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $7, (%r12)
+	leaq str1211(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
+	movq %rax, (%rbx)
+	jmp .Lbb227
+.Lbb220:
 	movq 8(%r12), %rax
 	movq (%rax), %rdi
-	movq 8(%rax), %r12
+	movq 8(%rax), %r13
 	callq compiler_lexer_token_to_string
-	movq %r12, %rdx
-	movq %rax, %rdi
-	leaq str1099(%rip), %rsi
-	callq errors_error_ParseUnexpectedToken
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movq %rax, %r14
+	movl $32, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $6, (%r12)
+	movq %r14, 8(%r12)
+	leaq str1204(%rip), %rax
+	movq %rax, 16(%r12)
+	movq %r13, 24(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb228
-.Lbb219:
-	movq %rsi, %r13
+	jmp .Lbb227
+.Lbb221:
 	movq 16(%r12), %r12
 	callq donna_list_reverse
 	movq %r13, %rsi
@@ -1421,26 +1611,30 @@ compiler_parser_parse_patterns_parse_list_elems:
 	movq %rsi, %r13
 	callq compiler_parser_parse_patterns_parse_list_spread
 	movq %rax, (%rbx)
-	jmp .Lbb228
-.Lbb221:
-	movq %rsi, %r13
+	jmp .Lbb227
+.Lbb222:
 	movq %r12, %r14
 	movq 16(%r12), %r12
 	callq donna_list_reverse
-	movq %r12, %rsi
-	movq %rax, %rdi
-	movq %r13, %rdx
-	movq %rsi, %r12
-	leaq donna_option_None(%rip), %rsi
-	callq compiler_parser_ast_PList
-	movq %r12, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
+	movq %rax, %r14
+	movl $32, %edi
+	callq malloc
+	movq %r13, %rsi
+	movq %rax, %r13
+	movq $8, (%r13)
+	movq %r14, 8(%r13)
+	leaq donna_option_None(%rip), %rax
+	movq %rax, 16(%r13)
+	movq %rsi, 24(%r13)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb228
+	jmp .Lbb227
 .Lbb223:
 	movq %r12, %r14
-	movq %rsi, %r13
 	movq %rdi, %r12
 	movq 16(%r14), %rdi
 	callq compiler_parser_parse_result_skip_newlines
@@ -1450,9 +1644,8 @@ compiler_parser_parse_patterns_parse_list_elems:
 	movq %rsi, %r13
 	callq compiler_parser_parse_patterns_parse_list_elems
 	movq %rax, (%rbx)
-	jmp .Lbb228
+	jmp .Lbb227
 .Lbb225:
-	movq %rsi, %r13
 	movq 16(%r12), %rax
 	movq 16(%rax), %r12
 	callq donna_list_reverse
@@ -1461,11 +1654,14 @@ compiler_parser_parse_patterns_parse_list_elems:
 	movq %rax, %rdx
 	callq compiler_parser_parse_patterns_parse_list_spread
 	movq %rax, (%rbx)
-	jmp .Lbb228
+	jmp .Lbb227
+.Lbb226:
+	movq 8(%rax), %rbx
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
 .Lbb227:
-	movq 8(%rax), %rdi
-	callq compiler_parser_parse_result_PErr
-.Lbb228:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %r14
@@ -1490,104 +1686,104 @@ compiler_parser_parse_patterns_parse_list_spread:
 	pushq %r13
 	pushq %r14
 	pushq %r15
-	movq %rsi, %r15
-	movq %rdi, %rbx
-	movq %rdx, %rdi
-	movq (%rbx), %rax
+	movq %rdx, %r15
+	movq (%rdi), %rax
 	cmpq $1, %rax
 	setz %cl
 	movzbq %cl, %rcx
 	cmpl $0, %ecx
-	jnz .Lbb231
+	jnz .Lbb230
 	movl $0, %ecx
-	jmp .Lbb232
-.Lbb231:
-	movq 8(%rbx), %rcx
+	jmp .Lbb231
+.Lbb230:
+	movq 8(%rdi), %rcx
 	movq (%rcx), %rcx
 	movq (%rcx), %rcx
 	cmpq $33, %rcx
 	setz %cl
 	movzbq %cl, %rcx
 	andq $1, %rcx
-.Lbb232:
+.Lbb231:
 	cmpl $0, %ecx
-	jnz .Lbb304
-	movq %rbx, %r12
+	jnz .Lbb303
 	subq $16, %rsp
 	movq %rsp, %rbx
 	cmpq $1, %rax
-	jz .Lbb236
+	jz .Lbb235
 	movq $0, (%rbx)
 	movq %r15, %rdx
 	movl $0, %eax
-	jmp .Lbb241
-.Lbb236:
-	movq 8(%r12), %rax
+	jmp .Lbb240
+.Lbb235:
+	movq 8(%rdi), %rax
 	movq (%rax), %rax
 	movq (%rax), %rcx
 	cmpq $6, %rcx
-	setz %r13b
-	movzbq %r13b, %r13
+	setz %r12b
+	movzbq %r12b, %r12
 	subq $16, %rsp
 	movq %rsp, %rcx
 	movq %rcx, -16(%rbp)
-	cmpl $0, %r13d
-	jnz .Lbb239
+	cmpl $0, %r12d
+	jnz .Lbb238
 	movq $0, (%rcx)
 	movq %r15, %rdx
 	movl $0, %eax
-	jmp .Lbb240
-.Lbb239:
-	movq %rdi, %r14
+	jmp .Lbb239
+.Lbb238:
+	movq %rdi, %r13
 	movq 8(%rax), %rdi
-	leaq str1160(%rip), %rsi
+	movq %rsi, %r14
+	leaq str1278(%rip), %rsi
 	callq strcmp
 	movq %r15, %rdx
-	movq %r14, %rdi
+	movq %r14, %rsi
+	movq %r13, %rdi
 	movq -16(%rbp), %rcx
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
-	andq %r13, %rax
+	andq %r12, %rax
 	movq %rax, (%rcx)
-.Lbb240:
+.Lbb239:
 	andq $1, %rax
 	movq %rax, (%rbx)
-.Lbb241:
+.Lbb240:
 	cmpl $0, %eax
 	jnz .Lbb289
-	movq (%r12), %rcx
+	movq (%rdi), %rcx
 	cmpq $1, %rcx
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
-	movq %rsp, %rsi
+	movq %rsp, %r8
 	cmpl $0, %eax
-	jnz .Lbb245
-	movq $0, (%rsi)
+	jnz .Lbb244
+	movq $0, (%r8)
 	movl $0, %eax
-	jmp .Lbb246
-.Lbb245:
-	movq 8(%r12), %rax
+	jmp .Lbb245
+.Lbb244:
+	movq 8(%rdi), %rax
 	movq (%rax), %rax
 	movq (%rax), %rax
 	cmpq $6, %rax
 	setz %al
 	movzbq %al, %rax
 	andq $1, %rax
-	movq %rax, (%rsi)
-.Lbb246:
+	movq %rax, (%r8)
+.Lbb245:
 	cmpl $0, %eax
 	jnz .Lbb274
+	movq %rsi, %rbx
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rcx
-	jz .Lbb250
+	jz .Lbb249
 	movq $0, (%rsi)
 	movl $0, %eax
-	jmp .Lbb251
-.Lbb250:
-	movq 8(%r12), %rax
+	jmp .Lbb250
+.Lbb249:
+	movq 8(%rdi), %rax
 	movq (%rax), %rax
 	movq (%rax), %rax
 	cmpq $4, %rax
@@ -1595,53 +1791,68 @@ compiler_parser_parse_patterns_parse_list_spread:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rsi)
-.Lbb251:
+.Lbb250:
 	cmpl $0, %eax
-	jnz .Lbb260
+	jnz .Lbb259
 	subq $16, %rsp
 	movq %rsp, %rax
 	cmpq $1, %rcx
-	jz .Lbb255
+	jz .Lbb254
 	movq $0, (%rax)
 	movl $0, %eax
-	jmp .Lbb257
-.Lbb255:
+	jmp .Lbb256
+.Lbb254:
 	movq $1, (%rax)
 	movl $1, %eax
-.Lbb257:
+.Lbb256:
 	cmpl $0, %eax
-	jnz .Lbb259
-	movq %rdx, %rsi
-	leaq str1453(%rip), %rdi
-	callq errors_error_ParseUnexpectedEof
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
-	jmp .Lbb306
-.Lbb259:
-	movq 8(%r12), %rax
+	jnz .Lbb258
+	movl $24, %edi
+	callq malloc
+	movq %rbx, %rsi
+	movq %rax, %rbx
+	movq $7, (%rbx)
+	leaq str1614(%rip), %rax
+	movq %rax, 8(%rbx)
+	movq %rsi, 16(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
+	jmp .Lbb305
+.Lbb258:
+	movq 8(%rdi), %rax
 	movq (%rax), %rdi
-	movq 8(%rax), %rbx
+	movq 8(%rax), %r12
 	callq compiler_lexer_token_to_string
-	movq %rbx, %rdx
-	movq %rax, %rdi
-	leaq str1450(%rip), %rsi
-	callq errors_error_ParseUnexpectedToken
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
-	jmp .Lbb306
-.Lbb260:
-	movq 8(%r12), %rcx
-	movq 16(%r12), %rax
+	movq %rax, %r13
+	movl $32, %edi
+	callq malloc
+	movq %rax, %rbx
+	movq $6, (%rbx)
+	movq %r13, 8(%rbx)
+	leaq str1607(%rip), %rax
+	movq %rax, 16(%rbx)
+	movq %r12, 24(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %rbx, 8(%rax)
+	jmp .Lbb305
+.Lbb259:
+	movq %rbx, %rsi
+	movq 8(%rdi), %rcx
+	movq 16(%rdi), %rax
 	movq (%rcx), %rcx
-	movq %rdi, %r13
-	movq 8(%rcx), %rdi
+	movq 8(%rcx), %r14
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rdx, %r14
+	movq %rdx, %r15
 	movq (%rax), %rdx
 	cmpq $1, %rdx
 	setz %cl
 	movzbq %cl, %rcx
+	movq %rsi, %r13
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpl $0, %ecx
@@ -1674,68 +1885,96 @@ compiler_parser_parse_patterns_parse_list_spread:
 .Lbb270:
 	cmpl $0, %ecx
 	jnz .Lbb272
-	movq %r14, %rsi
-	leaq str1423(%rip), %rdi
-	callq errors_error_ParseUnexpectedEof
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $7, (%r12)
+	leaq str1577(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
+	jmp .Lbb305
 .Lbb272:
 	movq 8(%rax), %rax
 	movq (%rax), %rdi
-	movq 8(%rax), %r12
+	movq 8(%rax), %r13
 	callq compiler_lexer_token_to_string
-	movq %r12, %rdx
-	movq %rax, %rdi
-	leaq str1420(%rip), %rsi
-	callq errors_error_ParseUnexpectedToken
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movq %rax, %r14
+	movl $32, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $6, (%r12)
+	movq %r14, 8(%r12)
+	leaq str1570(%rip), %rax
+	movq %rax, 16(%r12)
+	movq %r13, 24(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
+	jmp .Lbb305
 .Lbb273:
 	movq 16(%rax), %r12
-	callq donna_option_Some
-	movq %r14, %rdx
-	movq %r13, %rdi
-	movq %rax, %rsi
-	callq compiler_parser_ast_PList
-	movq %r12, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
+	movl $16, %edi
+	callq malloc
+	xchgq %rax, %r14
+	movq $1, (%r14)
+	movq %rax, 8(%r14)
+	movl $32, %edi
+	callq malloc
+	movq %r15, %rdx
+	movq %r13, %rsi
+	movq %rax, %r13
+	movq $8, (%r13)
+	movq %rdx, 8(%r13)
+	movq %r14, 16(%r13)
+	movq %rsi, 24(%r13)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
+	jmp .Lbb305
 .Lbb274:
-	movq %rdx, %rbx
-	movq 8(%r12), %rax
-	movq 16(%r12), %r12
+	movq %rdx, %r13
+	movq 8(%rdi), %rax
+	movq 16(%rdi), %r12
 	movq (%rax), %rax
+	movq %rsi, %rbx
 	movq 8(%rax), %rsi
-	movq %rdi, %r13
-	leaq str1272(%rip), %rdi
+	leaq str1403(%rip), %rdi
 	callq __rt_str_concat
-	movq %rbx, %rdx
-	movq %rax, %rdi
+	movq %r13, %rdx
+	movq %rbx, %rsi
 	subq $16, %rsp
 	movq %rsp, %rbx
 	movq (%r12), %rcx
 	cmpq $1, %rcx
-	setz %al
-	movzbq %al, %rax
-	movq %rdx, %r14
+	setz %dil
+	movzbq %dil, %rdi
+	movq %rdx, %r15
 	subq $16, %rsp
 	movq %rsp, %rdx
-	cmpl $0, %eax
+	cmpl $0, %edi
 	jnz .Lbb278
 	movq $0, (%rdx)
+	movq %rax, %r14
+	movq %rsi, %r13
 	movl $0, %eax
 	jmp .Lbb279
 .Lbb278:
-	movq 8(%r12), %rax
-	movq (%rax), %rax
-	movq (%rax), %rax
-	cmpq $33, %rax
+	movq %rsi, %r13
+	movq 8(%r12), %rsi
+	movq (%rsi), %rsi
+	movq (%rsi), %rsi
+	cmpq $33, %rsi
+	movq %rax, %r14
 	setz %al
 	movzbq %al, %rax
 	andq $1, %rax
@@ -1756,56 +1995,80 @@ compiler_parser_parse_patterns_parse_list_spread:
 .Lbb285:
 	cmpl $0, %eax
 	jnz .Lbb287
-	movq %r14, %rsi
-	leaq str1332(%rip), %rdi
-	callq errors_error_ParseUnexpectedEof
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $7, (%r12)
+	leaq str1473(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
+	jmp .Lbb305
 .Lbb287:
 	movq 8(%r12), %rax
 	movq (%rax), %rdi
-	movq 8(%rax), %r12
+	movq 8(%rax), %r13
 	callq compiler_lexer_token_to_string
-	movq %r12, %rdx
-	movq %rax, %rdi
-	leaq str1329(%rip), %rsi
-	callq errors_error_ParseUnexpectedToken
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movq %rax, %r14
+	movl $32, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $6, (%r12)
+	movq %r14, 8(%r12)
+	leaq str1466(%rip), %rax
+	movq %rax, 16(%r12)
+	movq %r13, 24(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
+	jmp .Lbb305
 .Lbb288:
 	movq 16(%r12), %r12
-	callq donna_option_Some
-	movq %r14, %rdx
-	movq %r13, %rdi
-	movq %rax, %rsi
-	callq compiler_parser_ast_PList
-	movq %r12, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
+	movl $16, %edi
+	callq malloc
+	xchgq %rax, %r14
+	movq $1, (%r14)
+	movq %rax, 8(%r14)
+	movl $32, %edi
+	callq malloc
+	movq %r15, %rdx
+	movq %r13, %rsi
+	movq %rax, %r13
+	movq $8, (%r13)
+	movq %rdx, 8(%r13)
+	movq %r14, 16(%r13)
+	movq %rsi, 24(%r13)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
+	jmp .Lbb305
 .Lbb289:
-	movq %r12, %rbx
-	movq 16(%rbx), %rax
+	movq 16(%rdi), %rax
 	subq $16, %rsp
 	movq %rsp, %rbx
-	movq %rdx, %r14
+	movq %rdx, %r15
 	movq (%rax), %rdx
 	cmpq $1, %rdx
 	setz %cl
 	movzbq %cl, %rcx
+	movq %rsi, %r13
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpl $0, %ecx
-	jnz .Lbb293
+	jnz .Lbb292
 	movq $0, (%rsi)
 	movl $0, %ecx
-	jmp .Lbb294
-.Lbb293:
+	jmp .Lbb293
+.Lbb292:
 	movq 8(%rax), %rcx
 	movq (%rcx), %rcx
 	movq (%rcx), %rcx
@@ -1814,71 +2077,104 @@ compiler_parser_parse_patterns_parse_list_spread:
 	movzbq %cl, %rcx
 	andq $1, %rcx
 	movq %rcx, (%rsi)
-.Lbb294:
+.Lbb293:
 	cmpl $0, %ecx
-	jnz .Lbb303
+	jnz .Lbb302
 	subq $16, %rsp
 	movq %rsp, %rcx
 	cmpq $1, %rdx
-	jz .Lbb298
+	jz .Lbb297
 	movq $0, (%rcx)
 	movl $0, %ecx
-	jmp .Lbb300
-.Lbb298:
+	jmp .Lbb299
+.Lbb297:
 	movq $1, (%rcx)
 	movl $1, %ecx
-.Lbb300:
+.Lbb299:
 	cmpl $0, %ecx
-	jnz .Lbb302
-	movq %r14, %rsi
-	leaq str1239(%rip), %rdi
-	callq errors_error_ParseUnexpectedEof
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	jnz .Lbb301
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $7, (%r12)
+	leaq str1367(%rip), %rax
+	movq %rax, 8(%r12)
+	movq %r13, 16(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
-.Lbb302:
+	jmp .Lbb305
+.Lbb301:
 	movq 8(%rax), %rax
 	movq (%rax), %rdi
-	movq 8(%rax), %r12
+	movq 8(%rax), %r13
 	callq compiler_lexer_token_to_string
-	movq %r12, %rdx
-	movq %rax, %rdi
-	leaq str1236(%rip), %rsi
-	callq errors_error_ParseUnexpectedToken
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_PErr
+	movq %rax, %r14
+	movl $32, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $6, (%r12)
+	movq %r14, 8(%r12)
+	leaq str1360(%rip), %rax
+	movq %rax, 16(%r12)
+	movq %r13, 24(%r12)
+	movl $16, %edi
+	callq malloc
+	movq $1, (%rax)
+	movq %r12, 8(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
-.Lbb303:
+	jmp .Lbb305
+.Lbb302:
 	movq 16(%rax), %r12
-	movq %rdi, %r13
-	leaq str1209(%rip), %rdi
-	callq donna_option_Some
-	movq %r14, %rdx
-	movq %r13, %rdi
-	movq %rax, %rsi
-	movq %rdx, %r13
-	callq compiler_parser_ast_PList
-	movq %r12, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r14
+	movq $1, (%r14)
+	leaq str1327(%rip), %rax
+	movq %rax, 8(%r14)
+	movl $32, %edi
+	callq malloc
+	movq %r15, %rdx
+	movq %r13, %rsi
+	movq %rax, %r13
+	movq $8, (%r13)
+	movq %rdx, 8(%r13)
+	movq %r14, 16(%r13)
+	movq %rsi, 24(%r13)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r13, 8(%rax)
+	movq %r12, 16(%rax)
 	movq %rax, (%rbx)
-	jmp .Lbb306
-.Lbb304:
-	movq %r15, %r13
-	movq 16(%rbx), %rbx
-	movq %rdi, %r12
-	leaq str1136(%rip), %rdi
-	callq donna_option_Some
-	movq %r13, %rdx
-	movq %r12, %rdi
-	movq %rax, %rsi
-	callq compiler_parser_ast_PList
-	movq %rbx, %rsi
-	movq %rax, %rdi
-	callq compiler_parser_parse_result_POk
-.Lbb306:
+	jmp .Lbb305
+.Lbb303:
+	movq %r15, %r14
+	movq %rsi, %r12
+	movq 16(%rdi), %rbx
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r13
+	movq $1, (%r13)
+	leaq str1248(%rip), %rax
+	movq %rax, 8(%r13)
+	movl $32, %edi
+	callq malloc
+	movq %r14, %rdx
+	movq %r12, %rsi
+	movq %rax, %r12
+	movq $8, (%r12)
+	movq %rdx, 8(%r12)
+	movq %r13, 16(%r12)
+	movq %rsi, 24(%r12)
+	movl $24, %edi
+	callq malloc
+	movq $0, (%rax)
+	movq %r12, 8(%rax)
+	movq %rbx, 16(%rax)
+.Lbb305:
 	movq %rbp, %rsp
 	subq $64, %rsp
 	popq %r15

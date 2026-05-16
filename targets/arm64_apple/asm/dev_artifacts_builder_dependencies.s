@@ -28,448 +28,315 @@ _str27:
 
 .data
 .balign 8
-_str33:
-	.ascii "dev-dependencies"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str41:
-	.ascii "donna.lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str45:
-	.ascii "dependencies"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str52:
-	.ascii "donna.lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str56:
-	.ascii "dev-dependencies"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 _donna_nil:
 	.quad 0
 /* end data */
 
 .data
 .balign 8
-_str121:
+_str40:
+	.ascii "dev-dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str55:
+	.ascii "donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str59:
+	.ascii "dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str73:
+	.ascii "donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str77:
+	.ascii "dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str90:
+	.ascii "dev-dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str131:
+	.ascii "donna.toml"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str145:
+	.ascii "dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str226:
 	.ascii "path"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str139:
+_str246:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str166:
+_str273:
 	.ascii "mkdir -p "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str189:
+_str301:
 	.ascii "rm -rf "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str192:
+_str304:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str199:
+_str311:
 	.ascii "advice.detachedHead=false"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str203:
+_str315:
 	.ascii "-c"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str207:
-	.ascii "clone"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str212:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str216:
-	.ascii "checkout"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str223:
-	.ascii "-C"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str262:
-	.ascii "version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str271:
-	.ascii "tag"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str279:
-	.ascii "branch"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str287:
-	.ascii "rev"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str293:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str297:
-	.ascii "--sort=-v:refname"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str301:
-	.ascii "--tags"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str305:
-	.ascii "ls-remote"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str310:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 _str319:
-	.ascii ""
+	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str324:
-	.byte 9
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str339:
-	.ascii "^{}"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str347:
-	.ascii "refs/tags/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str387:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str394:
-	.ascii "1"
+_str328:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str335:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str389:
+	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str398:
-	.ascii "--depth"
+	.ascii "tag"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str402:
-	.ascii "clone"
+_str406:
+	.ascii "branch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str407:
+_str414:
+	.ascii "rev"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str420:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str417:
-	.ascii "--branch"
+_str424:
+	.ascii "--sort=-v:refname"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str421:
-	.ascii "1"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str425:
-	.ascii "--depth"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str429:
-	.ascii "clone"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str440:
-	.ascii "rm -rf "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str443:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str450:
-	.ascii "clone"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str461:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str465:
-	.ascii "checkout"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str472:
-	.ascii "-C"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str487:
-	.ascii "rm -rf "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str491:
-	.ascii "git"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str492:
-	.ascii "origin"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str496:
-	.ascii "--prune"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str500:
-	.ascii "--force"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str504:
+_str428:
 	.ascii "--tags"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str508:
-	.ascii "fetch"
+_str432:
+	.ascii "ls-remote"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str515:
-	.ascii "-C"
+_str437:
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str526:
+_str446:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str451:
+	.byte 9
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str466:
+	.ascii "^{}"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str474:
+	.ascii "refs/tags/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str514:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str527:
-	.ascii "--ff-only"
+_str521:
+	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str531:
-	.ascii "pull"
+_str525:
+	.ascii "--depth"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str538:
-	.ascii "-C"
+_str529:
+	.ascii "clone"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str546:
+_str534:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str550:
-	.ascii "checkout"
+_str544:
+	.ascii "--branch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str557:
-	.ascii "-C"
+_str548:
+	.ascii "1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str568:
+_str552:
+	.ascii "--depth"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str556:
+	.ascii "clone"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str567:
+	.ascii "rm -rf "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str570:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str572:
-	.ascii "origin"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str576:
-	.ascii "fetch"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str583:
-	.ascii "-C"
+_str577:
+	.ascii "clone"
 	.byte 0
 /* end data */
 
@@ -496,91 +363,245 @@ _str599:
 
 .data
 .balign 8
-_str605:
+_str614:
+	.ascii "rm -rf "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str618:
 	.ascii "git"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str606:
-	.ascii "remote.origin.url"
+_str619:
+	.ascii "origin"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str610:
-	.ascii "--get"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str614:
-	.ascii "config"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str621:
-	.ascii "-C"
+_str623:
+	.ascii "--prune"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str627:
-	.ascii "HOME"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str629:
-	.ascii ".donna"
+	.ascii "--force"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str631:
-	.ascii "packages"
+	.ascii "--tags"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str633:
-	.ascii "git"
+_str635:
+	.ascii "fetch"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str634:
-	.ascii "HEAD"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str638:
-	.ascii "rev-parse"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str645:
+_str642:
 	.ascii "-C"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str660:
+_str653:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str654:
+	.ascii "--ff-only"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str658:
+	.ascii "pull"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str665:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str673:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str677:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str684:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str695:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str699:
+	.ascii "origin"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str703:
+	.ascii "fetch"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str710:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str715:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str719:
+	.ascii "checkout"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str726:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str732:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str733:
+	.ascii "remote.origin.url"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str737:
+	.ascii "--get"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str741:
+	.ascii "config"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str748:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str754:
+	.ascii "HOME"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str756:
+	.ascii ".donna"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str758:
+	.ascii "packages"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str760:
+	.ascii "git"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str761:
+	.ascii "HEAD"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str765:
+	.ascii "rev-parse"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str772:
+	.ascii "-C"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str787:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -704,16 +725,43 @@ _builder_dependencies_resolve_all:
 	mov	x21, x1
 	mov	x19, x0
 	bl	_builder_dependencies_parse_section
+	mov	x1, x0
+	mov	x0, x19
+	mov	x19, x0
+	ldr	x0, [x1]
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x1, [x1]
+	adrp	x3, _donna_nil@page
+	add	x3, x3, _donna_nil@pageoff
+	adrp	x2, _donna_nil@page
+	add	x2, x2, _donna_nil@pageoff
+	bl	_builder_dependencies_expand_deps
 	mov	x1, x21
 	mov	x2, x0
 	mov	x0, x19
 	ldr	x19, [x2]
 	mov	x3, #8
-	add	x2, x2, x3
-	ldr	x3, [x2]
-	adrp	x2, _str33@page
-	add	x2, x2, _str33@pageoff
+	add	x3, x2, x3
+	ldr	x3, [x3]
+	mov	x4, #16
+	add	x2, x2, x4
+	ldr	x2, [x2]
+	mov	x21, x2
+	adrp	x2, _str40@page
+	add	x2, x2, _str40@pageoff
 	bl	_builder_dependencies_parse_section
+	mov	x2, x21
+	mov	x1, x0
+	mov	x0, x20
+	mov	x20, x0
+	ldr	x0, [x1]
+	mov	x3, #8
+	add	x1, x1, x3
+	ldr	x1, [x1]
+	adrp	x3, _donna_nil@page
+	add	x3, x3, _donna_nil@pageoff
+	bl	_builder_dependencies_expand_deps
 	mov	x1, x0
 	mov	x0, x20
 	ldr	x20, [x1]
@@ -742,8 +790,8 @@ _builder_dependencies_resolve_deps:
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
 	mov	x20, x1
-	adrp	x1, _str41@page
-	add	x1, x1, _str41@pageoff
+	adrp	x1, _str55@page
+	add	x1, x1, _str55@pageoff
 	mov	x19, x0
 	mov	x0, x20
 	bl	_donna_files_join
@@ -759,9 +807,21 @@ _builder_dependencies_resolve_deps:
 	bl	_donna_files_read
 	mov	x3, x21
 	mov	x1, x20
-	adrp	x2, _str45@page
-	add	x2, x2, _str45@pageoff
+	adrp	x2, _str59@page
+	add	x2, x2, _str59@pageoff
 	bl	_builder_dependencies_parse_section
+	mov	x1, x0
+	mov	x0, x19
+	mov	x19, x0
+	ldr	x0, [x1]
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x1, [x1]
+	adrp	x3, _donna_nil@page
+	add	x3, x3, _donna_nil@pageoff
+	adrp	x2, _donna_nil@page
+	add	x2, x2, _donna_nil@pageoff
+	bl	_builder_dependencies_expand_deps
 	mov	x1, x0
 	mov	x0, x19
 	ldr	x19, [x1]
@@ -788,8 +848,8 @@ _builder_dependencies_resolve_dev_deps:
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
 	mov	x20, x1
-	adrp	x1, _str52@page
-	add	x1, x1, _str52@pageoff
+	adrp	x1, _str73@page
+	add	x1, x1, _str73@pageoff
 	mov	x19, x0
 	mov	x0, x20
 	bl	_donna_files_join
@@ -805,9 +865,47 @@ _builder_dependencies_resolve_dev_deps:
 	bl	_donna_files_read
 	mov	x3, x21
 	mov	x1, x20
-	adrp	x2, _str56@page
-	add	x2, x2, _str56@pageoff
+	adrp	x2, _str77@page
+	add	x2, x2, _str77@pageoff
+	mov	x21, x1
+	mov	x20, x0
 	bl	_builder_dependencies_parse_section
+	mov	x1, x0
+	mov	x0, x20
+	mov	x20, x0
+	ldr	x0, [x1]
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x1, [x1]
+	adrp	x3, _donna_nil@page
+	add	x3, x3, _donna_nil@pageoff
+	adrp	x2, _donna_nil@page
+	add	x2, x2, _donna_nil@pageoff
+	bl	_builder_dependencies_expand_deps
+	mov	x1, x21
+	mov	x2, x0
+	mov	x0, x20
+	mov	x3, #8
+	add	x3, x2, x3
+	ldr	x3, [x3]
+	mov	x4, #16
+	add	x2, x2, x4
+	ldr	x2, [x2]
+	mov	x20, x2
+	adrp	x2, _str90@page
+	add	x2, x2, _str90@pageoff
+	bl	_builder_dependencies_parse_section
+	mov	x2, x20
+	mov	x1, x0
+	mov	x0, x19
+	mov	x19, x0
+	ldr	x0, [x1]
+	mov	x3, #8
+	add	x1, x1, x3
+	ldr	x1, [x1]
+	adrp	x3, _donna_nil@page
+	add	x3, x3, _donna_nil@pageoff
+	bl	_builder_dependencies_expand_deps
 	mov	x1, x0
 	mov	x0, x19
 	ldr	x19, [x1]
@@ -822,6 +920,209 @@ _builder_dependencies_resolve_dev_deps:
 	ldp	x29, x30, [sp], 48
 	ret
 /* end function builder_dependencies_resolve_dev_deps */
+
+.text
+.balign 4
+_builder_dependencies_expand_deps:
+	hint	#34
+	stp	x29, x30, [sp, -80]!
+	mov	x29, sp
+	str	x19, [x29, 72]
+	str	x20, [x29, 64]
+	str	x21, [x29, 56]
+	str	x22, [x29, 48]
+	str	x23, [x29, 40]
+	str	x24, [x29, 32]
+	str	x25, [x29, 24]
+	str	x26, [x29, 16]
+	mov	x25, x3
+	ldr	x3, [x0]
+	cmp	x3, #0
+	beq	L25
+	mov	x23, x2
+	mov	x2, #8
+	add	x2, x0, x2
+	ldr	x22, [x2]
+	mov	x20, x1
+	mov	x1, #16
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	mov	x19, x0
+	mov	x0, x22
+	bl	_builder_dependencies_dep_name
+	mov	x1, x20
+	mov	x24, x0
+	mov	x0, x19
+	mov	x19, x1
+	mov	x1, x24
+	mov	x21, x0
+	mov	x0, x23
+	bl	_donna_list_contains_str
+	mov	x1, x19
+	mov	x20, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	cmp	x0, #1
+	beq	L23
+	mov	x0, #24
+	bl	_malloc
+	mov	x2, x23
+	mov	x23, x0
+	mov	x0, #1
+	str	x0, [x23]
+	mov	x0, #8
+	add	x0, x23, x0
+	str	x24, [x0]
+	mov	x0, #16
+	add	x0, x23, x0
+	str	x2, [x0]
+	mov	x0, x22
+	bl	_builder_dependencies_dep_path
+	mov	x1, x20
+	mov	x24, x1
+	adrp	x1, _str131@page
+	add	x1, x1, _str131@pageoff
+	bl	_donna_files_join
+	mov	x20, x0
+	bl	_donna_files_exists
+	mov	x2, x23
+	mov	x1, x0
+	mov	x0, x20
+	mov	x26, x2
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x20, sp
+	cmp	x1, #0
+	beq	L20
+	bl	_donna_files_read
+	mov	x23, x0
+	mov	x0, x22
+	bl	_builder_dependencies_dep_path
+	mov	x2, x26
+	mov	x1, x0
+	mov	x0, x23
+	mov	x3, x24
+	mov	x23, x2
+	adrp	x2, _str145@page
+	add	x2, x2, _str145@pageoff
+	bl	_builder_dependencies_parse_section
+	mov	x2, x23
+	mov	x1, x0
+	ldr	x0, [x1]
+	mov	x3, #8
+	add	x1, x1, x3
+	ldr	x1, [x1]
+	adrp	x3, _donna_nil@page
+	add	x3, x3, _donna_nil@pageoff
+	bl	_builder_dependencies_expand_deps
+	mov	x1, x0
+	ldr	x0, [x1]
+	mov	x2, #8
+	add	x2, x1, x2
+	ldr	x24, [x2]
+	mov	x2, #16
+	add	x1, x1, x2
+	ldr	x26, [x1]
+	mov	x23, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x2, x26
+	mov	x1, x24
+	mov	x24, x0
+	mov	x0, x23
+	mov	x3, #1
+	str	x3, [x24]
+	mov	x3, #8
+	add	x3, x24, x3
+	str	x22, [x3]
+	mov	x23, x2
+	mov	x2, #16
+	add	x2, x24, x2
+	mov	x22, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
+	bl	_donna_list_reverse
+	mov	x1, x22
+	mov	x22, x1
+	mov	x1, x25
+	bl	_donna_list_append
+	mov	x1, x0
+	mov	x0, x24
+	bl	_donna_list_append
+	mov	x2, x23
+	mov	x1, x22
+	mov	x3, x0
+	mov	x0, x21
+	bl	_builder_dependencies_expand_deps
+	str	x0, [x20]
+	b	L22
+L20:
+	mov	x0, x21
+	mov	x21, x25
+	mov	x25, x26
+	mov	x23, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x2, x25
+	mov	x1, x24
+	mov	x3, x0
+	mov	x0, x23
+	mov	x4, #1
+	str	x4, [x3]
+	mov	x4, #8
+	add	x4, x3, x4
+	str	x22, [x4]
+	mov	x4, #16
+	add	x4, x3, x4
+	str	x21, [x4]
+	bl	_builder_dependencies_expand_deps
+	str	x0, [x20]
+L22:
+	str	x0, [x19]
+	b	L27
+L23:
+	mov	x0, x21
+	mov	x2, x23
+	mov	x1, x20
+	mov	x20, x25
+	mov	x3, x20
+	mov	x21, x2
+	mov	x20, x1
+	bl	_builder_dependencies_expand_deps
+	str	x0, [x19]
+	b	L27
+L25:
+	mov	x0, x25
+	mov	x21, x2
+	mov	x20, x1
+	bl	_donna_list_reverse
+	mov	x19, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x2, x21
+	mov	x1, x20
+	str	x19, [x0]
+	mov	x3, #8
+	add	x3, x0, x3
+	str	x1, [x3]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x2, [x1]
+L27:
+	ldr	x19, [x29, 72]
+	ldr	x20, [x29, 64]
+	ldr	x21, [x29, 56]
+	ldr	x22, [x29, 48]
+	ldr	x23, [x29, 40]
+	ldr	x24, [x29, 32]
+	ldr	x25, [x29, 24]
+	ldr	x26, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 80
+	ret
+/* end function builder_dependencies_expand_deps */
 
 .text
 .balign 4
@@ -842,7 +1143,7 @@ _builder_dependencies_parse_section:
 	mov	x1, x0
 	mov	x0, x22
 	cmp	x1, #1
-	beq	L25
+	beq	L37
 	bl	_parsetoml_parsetoml_unwrap_table
 	mov	x1, x20
 	bl	_parsetoml_parsetoml_get_table
@@ -852,7 +1153,7 @@ _builder_dependencies_parse_section:
 	mov	x19, sp
 	ldr	x2, [x0]
 	cmp	x2, #1
-	beq	L23
+	beq	L35
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -861,7 +1162,7 @@ _builder_dependencies_parse_section:
 	mov	x20, sp
 	ldr	x2, [x0]
 	cmp	x2, #4
-	beq	L20
+	beq	L32
 	mov	x0, #16
 	bl	_malloc
 	mov	x3, x21
@@ -872,8 +1173,8 @@ _builder_dependencies_parse_section:
 	add	x1, x0, x1
 	str	x3, [x1]
 	str	x0, [x20]
-	b	L22
-L20:
+	b	L34
+L32:
 	mov	x3, x21
 	mov	x2, #8
 	add	x0, x0, x2
@@ -885,10 +1186,10 @@ L20:
 	mov	x2, x21
 	bl	_builder_dependencies_collect_deps
 	str	x0, [x20]
-L22:
+L34:
 	str	x0, [x19]
-	b	L27
-L23:
+	b	L39
+L35:
 	mov	x20, x21
 	mov	x0, #16
 	bl	_malloc
@@ -900,8 +1201,8 @@ L23:
 	add	x1, x0, x1
 	str	x3, [x1]
 	str	x0, [x19]
-	b	L27
-L25:
+	b	L39
+L37:
 	mov	x19, x21
 	mov	x0, #16
 	bl	_malloc
@@ -912,7 +1213,7 @@ L25:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x3, [x1]
-L27:
+L39:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -941,22 +1242,22 @@ _builder_dependencies_collect_deps:
 	mov	x23, x2
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L37
+	beq	L49
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
 	mov	x3, #16
 	add	x0, x0, x3
-	ldr	x22, [x0]
-	ldr	x0, [x2]
+	ldr	x0, [x0]
+	ldr	x26, [x2]
 	mov	x3, #8
 	add	x2, x2, x3
-	ldr	x26, [x2]
+	ldr	x22, [x2]
 	mov	x20, x1
-	adrp	x1, _str121@page
-	add	x1, x1, _str121@pageoff
+	adrp	x1, _str226@page
+	add	x1, x1, _str226@pageoff
 	mov	x19, x0
-	mov	x0, x26
+	mov	x0, x22
 	bl	_parsetoml_parsetoml_get_string
 	mov	x1, x20
 	mov	x2, x0
@@ -966,14 +1267,14 @@ _builder_dependencies_collect_deps:
 	mov	x19, sp
 	ldr	x3, [x2]
 	cmp	x3, #0
-	beq	L35
+	beq	L47
 	mov	x24, x1
-	adrp	x1, _str139@page
-	add	x1, x1, _str139@pageoff
+	adrp	x1, _str246@page
+	add	x1, x1, _str246@pageoff
 	mov	x20, x0
-	mov	x0, x26
+	mov	x0, x22
 	bl	_parsetoml_parsetoml_get_string
-	mov	x2, x26
+	mov	x2, x22
 	mov	x1, x0
 	mov	x0, x20
 	mov	x3, #16
@@ -981,11 +1282,13 @@ _builder_dependencies_collect_deps:
 	mov	x20, sp
 	ldr	x3, [x1]
 	cmp	x3, #1
-	beq	L32
+	beq	L44
 	mov	x3, #8
 	add	x1, x1, x3
 	ldr	x1, [x1]
 	mov	x3, x23
+	mov	x22, x0
+	mov	x0, x26
 	bl	_builder_dependencies_resolve_git_dep
 	mov	x4, x25
 	mov	x2, x23
@@ -1019,43 +1322,52 @@ _builder_dependencies_collect_deps:
 	str	x21, [x5]
 	bl	_builder_dependencies_collect_deps
 	str	x0, [x20]
-	b	L34
-L32:
-	mov	x0, x22
+	b	L46
+L44:
 	mov	x4, x25
 	mov	x2, x23
 	mov	x1, x24
 	mov	x25, x4
 	mov	x3, x21
-	mov	x23, x1
-	mov	x21, x0
+	mov	x24, x1
 	bl	_builder_dependencies_collect_deps
 	str	x0, [x20]
-L34:
+L46:
 	str	x0, [x19]
-	b	L39
-L35:
+	b	L51
+L47:
 	mov	x20, x21
-	mov	x21, x22
-	mov	x17, x2
-	mov	x2, x1
-	mov	x1, x17
-	mov	x17, x23
-	mov	x23, x2
-	mov	x2, x17
-	mov	x24, x2
+	mov	x24, x1
+	mov	x1, x2
+	mov	x2, x23
+	mov	x23, x26
+	mov	x26, x2
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x1, [x1]
-	mov	x22, x0
-	mov	x0, x23
+	mov	x21, x0
+	mov	x0, x24
 	bl	_donna_files_join
-	mov	x1, x0
-	mov	x0, x22
-	bl	_builder_dependencies_Dep
+	mov	x22, x0
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x2, x26
+	mov	x1, x24
 	mov	x17, x0
 	mov	x0, x21
 	mov	x21, x17
+	mov	x3, #0
+	str	x3, [x21]
+	mov	x24, x2
+	mov	x2, #8
+	add	x2, x21, x2
+	str	x23, [x2]
+	mov	x23, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x22, [x1]
 	mov	x22, x0
 	mov	x0, #24
 	bl	_malloc
@@ -1075,8 +1387,8 @@ L35:
 	mov	x20, x4
 	bl	_builder_dependencies_collect_deps
 	str	x0, [x19]
-	b	L39
-L37:
+	b	L51
+L49:
 	mov	x20, x25
 	mov	x0, x21
 	bl	_donna_list_reverse
@@ -1088,7 +1400,7 @@ L37:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x4, [x1]
-L39:
+L51:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -1114,356 +1426,458 @@ _builder_dependencies_resolve_git_dep:
 	str	x22, [x29, 32]
 	str	x23, [x29, 24]
 	str	x24, [x29, 16]
-	mov	x22, x3
-	mov	x20, x2
-	mov	x21, x1
+	mov	x20, x3
+	mov	x21, x2
+	mov	x22, x1
 	mov	x19, x0
 	bl	_builder_dependencies_git_cache_dir
 	mov	x1, x0
 	mov	x23, x0
-	adrp	x0, _str166@page
-	add	x0, x0, _str166@pageoff
+	adrp	x0, _str273@page
+	add	x0, x0, _str273@pageoff
 	bl	___rt_str_concat
 	bl	_donna_shell_run
 	mov	x0, x23
 	mov	x1, x19
 	bl	_donna_files_join
 	mov	x17, x0
-	mov	x0, x22
-	mov	x22, x17
+	mov	x0, x20
+	mov	x20, x17
 	mov	x1, x19
 	bl	_builder_lock_find_rev
-	mov	x23, x0
+	mov	x17, x0
 	mov	x0, x19
-	mov	x19, x0
-	mov	x0, x22
+	mov	x19, x17
+	mov	x23, x0
+	mov	x0, x20
 	bl	_builder_lock_read_cached_rev
 	mov	x24, x0
-	mov	x0, x19
-	mov	x19, x0
 	mov	x0, x23
+	mov	x23, x0
+	mov	x0, x19
 	bl	_donna_string_is_empty
 	mov	x1, x24
 	mov	x2, x0
-	mov	x0, x19
+	mov	x0, x23
 	cmp	x2, #0
-	beq	L44
+	beq	L56
 	mov	x19, x0
-	mov	x0, x22
+	mov	x0, x20
 	bl	_donna_files_is_dir
-	mov	x1, x20
+	mov	x1, x21
 	mov	x2, x0
 	mov	x0, x19
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	L43
+	beq	L55
 	mov	x23, x1
-	mov	x1, x21
-	mov	x20, x0
+	mov	x1, x22
+	mov	x21, x0
 	bl	_utilities_logger_fetch
 	bl	_donna_shell_flush
 	mov	x1, x23
-	mov	x0, x20
-	mov	x20, x0
 	mov	x0, x21
+	mov	x21, x0
+	mov	x0, x22
 	bl	_builder_dependencies_pick_ref
 	mov	x1, x22
 	mov	x2, x0
-	mov	x0, x20
-	mov	x22, x1
-	mov	x20, x0
 	mov	x0, x21
-	bl	_builder_dependencies_clone_at_ref
-	mov	x0, x20
-	mov	x20, x0
-	mov	x0, x22
-	bl	_builder_dependencies_head_sha
-	mov	x1, x22
-	mov	x22, x0
-	mov	x0, x20
-	mov	x23, x1
-	mov	x1, x22
-	mov	x20, x0
-	mov	x0, x23
-	bl	_builder_lock_write_cached_rev
-	mov	x1, x23
-	mov	x0, x20
-	mov	x20, x0
-	bl	_builder_dependencies_Dep
-	mov	x2, x22
-	mov	x1, x21
-	mov	x21, x0
-	mov	x0, x20
-	bl	_builder_lock_LockedDep
-	mov	x20, x0
-	mov	x0, #16
-	bl	_malloc
-	str	x21, [x0]
-	mov	x1, #8
-	add	x1, x0, x1
-	str	x20, [x1]
-	str	x0, [x19]
-	b	L49
-L43:
-	mov	x20, x0
-	mov	x0, x21
-	bl	_builder_dependencies_pick_ref
-	mov	x1, x22
-	mov	x2, x0
-	mov	x0, x20
 	mov	x22, x1
-	mov	x1, x21
-	mov	x20, x0
-	mov	x0, x22
-	bl	_builder_dependencies_refresh_cached_dep
-	mov	x0, x20
-	mov	x20, x0
-	mov	x0, x22
-	bl	_builder_dependencies_head_sha
-	mov	x1, x22
-	mov	x22, x0
-	mov	x0, x20
-	mov	x23, x1
-	mov	x1, x22
-	mov	x20, x0
-	mov	x0, x23
-	bl	_builder_lock_write_cached_rev
-	mov	x1, x23
-	mov	x0, x20
-	mov	x20, x1
-	mov	x20, x0
-	bl	_builder_dependencies_Dep
-	mov	x2, x22
-	mov	x1, x21
-	mov	x21, x0
-	mov	x0, x20
-	bl	_builder_lock_LockedDep
-	mov	x20, x0
-	mov	x0, #16
-	bl	_malloc
-	str	x21, [x0]
-	mov	x1, #8
-	add	x1, x0, x1
-	str	x20, [x1]
-	str	x0, [x19]
-	b	L49
-L44:
-	mov	x20, x22
-	mov	x19, x0
-	mov	x0, x23
-	bl	_donna_string_equal
 	mov	x1, x20
+	mov	x21, x0
+	mov	x0, x22
+	bl	_builder_dependencies_clone_at_ref
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, x20
+	bl	_builder_dependencies_head_sha
+	mov	x1, x22
+	mov	x22, x0
+	mov	x0, x21
+	mov	x23, x1
+	mov	x1, x22
+	mov	x21, x0
+	mov	x0, x20
+	bl	_builder_lock_write_cached_rev
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x23
+	mov	x17, x0
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #0
+	str	x2, [x21]
+	mov	x2, #8
+	add	x2, x21, x2
+	str	x0, [x2]
+	mov	x23, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x20, [x1]
+	mov	x20, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x1, x23
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x2, #0
+	str	x2, [x20]
+	mov	x2, #8
+	add	x2, x20, x2
+	str	x0, [x2]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x1, [x0]
+	mov	x0, #24
+	add	x0, x20, x0
+	str	x22, [x0]
+	mov	x0, #16
+	bl	_malloc
+	str	x21, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	str	x0, [x19]
+	b	L61
+L55:
+	mov	x21, x0
+	mov	x0, x22
+	bl	_builder_dependencies_pick_ref
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x21
+	mov	x22, x1
+	mov	x21, x0
+	mov	x0, x20
+	bl	_builder_dependencies_refresh_cached_dep
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, x20
+	bl	_builder_dependencies_head_sha
+	mov	x1, x22
+	mov	x22, x0
+	mov	x0, x21
+	mov	x23, x1
+	mov	x1, x22
+	mov	x21, x0
+	mov	x0, x20
+	bl	_builder_lock_write_cached_rev
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x23
+	mov	x17, x0
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #0
+	str	x2, [x21]
+	mov	x2, #8
+	add	x2, x21, x2
+	str	x0, [x2]
+	mov	x23, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x20, [x1]
+	mov	x20, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x1, x23
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x2, #0
+	str	x2, [x20]
+	mov	x2, #8
+	add	x2, x20, x2
+	str	x0, [x2]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x1, [x0]
+	mov	x0, #24
+	add	x0, x20, x0
+	str	x22, [x0]
+	mov	x0, #16
+	bl	_malloc
+	str	x21, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	str	x0, [x19]
+	b	L61
+L56:
+	mov	x21, x22
+	mov	x22, x19
+	mov	x19, x0
+	mov	x0, x22
+	bl	_donna_string_equal
+	mov	x1, x21
 	mov	x2, x0
 	mov	x0, x19
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	L47
-	mov	x22, x1
-	mov	x20, x0
-	adrp	x0, _str189@page
-	add	x0, x0, _str189@pageoff
+	beq	L59
+	mov	x23, x1
+	mov	x1, x20
+	mov	x21, x0
+	adrp	x0, _str301@page
+	add	x0, x0, _str301@pageoff
 	bl	___rt_str_concat
 	bl	_donna_shell_run
-	mov	x0, x20
-	mov	x20, x0
+	mov	x0, x21
+	mov	x21, x0
 	mov	x0, #24
 	bl	_malloc
-	mov	x2, x23
-	mov	x1, x22
-	mov	x22, x0
-	mov	x0, x20
-	mov	x3, #1
-	str	x3, [x22]
-	mov	x3, #8
-	add	x3, x22, x3
-	str	x1, [x3]
-	mov	x24, x2
+	mov	x1, x23
+	mov	x23, x0
+	mov	x0, x21
+	mov	x2, #1
+	str	x2, [x23]
+	mov	x2, #8
+	add	x2, x23, x2
+	str	x20, [x2]
 	mov	x2, #16
-	add	x2, x22, x2
-	mov	x23, x1
+	add	x2, x23, x2
+	mov	x24, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-	mov	x20, x0
+	mov	x21, x0
 	mov	x0, #24
 	bl	_malloc
-	mov	x2, x24
-	mov	x1, x23
+	mov	x1, x24
 	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	mov	x3, #1
-	str	x3, [x20]
-	mov	x24, x2
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #1
+	str	x2, [x21]
 	mov	x2, #8
-	add	x2, x20, x2
-	str	x21, [x2]
-	mov	x23, x1
+	add	x2, x21, x2
+	str	x1, [x2]
+	mov	x24, x1
 	mov	x1, #16
-	add	x1, x20, x1
-	str	x22, [x1]
-	mov	x22, x0
-	mov	x0, #24
-	bl	_malloc
-	mov	x2, x24
-	mov	x1, x23
-	mov	x23, x0
-	mov	x0, x22
-	mov	x3, #1
-	str	x3, [x23]
-	mov	x3, #8
-	add	x3, x23, x3
-	mov	x24, x2
-	adrp	x2, _str199@page
-	add	x2, x2, _str199@pageoff
-	str	x2, [x3]
-	mov	x22, x1
-	mov	x1, #16
-	add	x1, x23, x1
-	str	x20, [x1]
-	mov	x20, x0
-	mov	x0, #24
-	bl	_malloc
-	mov	x2, x24
-	mov	x1, x22
-	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	mov	x3, #1
-	str	x3, [x20]
-	mov	x3, #8
-	add	x3, x20, x3
-	mov	x24, x2
-	adrp	x2, _str203@page
-	add	x2, x2, _str203@pageoff
-	str	x2, [x3]
-	mov	x22, x1
-	mov	x1, #16
-	add	x1, x20, x1
+	add	x1, x21, x1
 	str	x23, [x1]
 	mov	x23, x0
 	mov	x0, #24
 	bl	_malloc
-	mov	x2, x24
-	mov	x1, x0
+	mov	x1, x24
+	mov	x24, x0
 	mov	x0, x23
-	mov	x3, #1
-	str	x3, [x1]
-	mov	x3, #8
-	add	x4, x1, x3
-	adrp	x3, _str207@page
-	add	x3, x3, _str207@pageoff
-	str	x3, [x4]
-	mov	x23, x2
-	mov	x2, #16
-	add	x2, x1, x2
-	str	x20, [x2]
-	mov	x20, x0
-	adrp	x0, _str192@page
-	add	x0, x0, _str192@pageoff
-	bl	_donna_shell_exec
-	mov	x0, x20
-	mov	x20, x0
+	mov	x2, #1
+	str	x2, [x24]
+	mov	x2, #8
+	add	x3, x24, x2
+	adrp	x2, _str311@page
+	add	x2, x2, _str311@pageoff
+	str	x2, [x3]
+	mov	x23, x1
+	mov	x1, #16
+	add	x1, x24, x1
+	str	x21, [x1]
+	mov	x21, x0
 	mov	x0, #24
 	bl	_malloc
-	mov	x2, x23
-	mov	x1, x22
+	mov	x1, x23
 	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	mov	x3, #1
-	str	x3, [x20]
-	mov	x3, #8
-	add	x3, x20, x3
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #1
+	str	x2, [x21]
+	mov	x2, #8
+	add	x3, x21, x2
+	adrp	x2, _str315@page
+	add	x2, x2, _str315@pageoff
 	str	x2, [x3]
-	mov	x24, x2
-	mov	x2, #16
-	add	x2, x20, x2
 	mov	x23, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x24, [x1]
+	mov	x24, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x0
+	mov	x0, x24
+	mov	x2, #1
+	str	x2, [x1]
+	mov	x2, #8
+	add	x3, x1, x2
+	adrp	x2, _str319@page
+	add	x2, x2, _str319@pageoff
+	str	x2, [x3]
+	mov	x2, #16
+	add	x2, x1, x2
+	str	x21, [x2]
+	mov	x21, x0
+	adrp	x0, _str304@page
+	add	x0, x0, _str304@pageoff
+	bl	_donna_shell_exec
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x23
+	mov	x17, x0
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #1
+	str	x2, [x21]
+	mov	x2, #8
+	add	x2, x21, x2
+	str	x22, [x2]
+	mov	x2, #16
+	add	x2, x21, x2
+	mov	x24, x1
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-	mov	x22, x0
+	mov	x23, x0
 	mov	x0, #24
 	bl	_malloc
-	mov	x2, x24
-	mov	x1, x23
-	mov	x17, x0
-	mov	x0, x22
-	mov	x22, x17
-	mov	x3, #1
-	str	x3, [x22]
-	mov	x3, #8
-	add	x3, x22, x3
-	mov	x24, x2
-	adrp	x2, _str216@page
-	add	x2, x2, _str216@pageoff
+	mov	x1, x24
+	mov	x24, x0
+	mov	x0, x23
+	mov	x2, #1
+	str	x2, [x24]
+	mov	x2, #8
+	add	x3, x24, x2
+	adrp	x2, _str328@page
+	add	x2, x2, _str328@pageoff
 	str	x2, [x3]
 	mov	x23, x1
 	mov	x1, #16
-	add	x1, x22, x1
-	str	x20, [x1]
-	mov	x20, x0
+	add	x1, x24, x1
+	str	x21, [x1]
+	mov	x21, x0
 	mov	x0, #24
 	bl	_malloc
-	mov	x2, x24
+	mov	x1, x23
+	mov	x17, x0
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #1
+	str	x2, [x21]
+	mov	x2, #8
+	add	x2, x21, x2
+	str	x20, [x2]
+	mov	x23, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x24, [x1]
+	mov	x24, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x0
+	mov	x0, x24
+	mov	x2, #1
+	str	x2, [x1]
+	mov	x2, #8
+	add	x3, x1, x2
+	adrp	x2, _str335@page
+	add	x2, x2, _str335@pageoff
+	str	x2, [x3]
+	mov	x2, #16
+	add	x2, x1, x2
+	str	x21, [x2]
+	mov	x21, x0
+	adrp	x0, _str324@page
+	add	x0, x0, _str324@pageoff
+	bl	_donna_shell_exec
+	mov	x1, x23
+	mov	x0, x21
+	mov	x23, x1
+	mov	x1, x22
+	mov	x21, x0
+	mov	x0, x20
+	bl	_builder_lock_write_cached_rev
+	mov	x0, x21
+	mov	x21, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x23
+	mov	x17, x0
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #0
+	str	x2, [x21]
+	mov	x2, #8
+	add	x2, x21, x2
+	str	x0, [x2]
+	mov	x23, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x20, [x1]
+	mov	x20, x0
+	mov	x0, #32
+	bl	_malloc
 	mov	x1, x23
 	mov	x17, x0
 	mov	x0, x20
 	mov	x20, x17
-	mov	x3, #1
-	str	x3, [x20]
-	mov	x24, x2
-	mov	x2, #8
-	add	x2, x20, x2
-	str	x1, [x2]
+	mov	x2, #0
+	str	x2, [x20]
 	mov	x23, x1
-	mov	x1, #16
+	mov	x1, #8
 	add	x1, x20, x1
-	str	x22, [x1]
-	mov	x22, x0
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x23, [x0]
+	mov	x0, #24
+	add	x0, x20, x0
+	str	x22, [x0]
+	mov	x0, #16
+	bl	_malloc
+	str	x21, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	str	x0, [x19]
+	b	L61
+L59:
+	mov	x23, x1
+	mov	x21, x0
 	mov	x0, #24
 	bl	_malloc
-	mov	x2, x24
-	mov	x1, x0
-	mov	x0, x22
-	mov	x3, #1
-	str	x3, [x1]
-	mov	x3, #8
-	add	x4, x1, x3
-	adrp	x3, _str223@page
-	add	x3, x3, _str223@pageoff
-	str	x3, [x4]
-	mov	x22, x2
-	mov	x2, #16
-	add	x2, x1, x2
-	str	x20, [x2]
-	mov	x20, x0
-	adrp	x0, _str212@page
-	add	x0, x0, _str212@pageoff
-	bl	_donna_shell_exec
 	mov	x1, x23
-	mov	x0, x20
+	mov	x17, x0
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #0
+	str	x2, [x21]
+	mov	x2, #8
+	add	x2, x21, x2
+	str	x0, [x2]
 	mov	x23, x1
-	mov	x1, x22
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x20, [x1]
 	mov	x20, x0
-	mov	x0, x23
-	bl	_builder_lock_write_cached_rev
+	mov	x0, #32
+	bl	_malloc
 	mov	x1, x23
+	mov	x17, x0
 	mov	x0, x20
-	mov	x20, x0
-	bl	_builder_dependencies_Dep
-	mov	x2, x22
-	mov	x1, x21
-	mov	x21, x0
-	mov	x0, x20
-	mov	x22, x2
-	bl	_builder_lock_LockedDep
-	mov	x20, x0
+	mov	x20, x17
+	mov	x2, #0
+	str	x2, [x20]
+	mov	x2, #8
+	add	x2, x20, x2
+	str	x0, [x2]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x1, [x0]
+	mov	x0, #24
+	add	x0, x20, x0
+	str	x22, [x0]
 	mov	x0, #16
 	bl	_malloc
 	str	x21, [x0]
@@ -1471,25 +1885,7 @@ L44:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L49
-L47:
-	mov	x22, x23
-	mov	x20, x0
-	bl	_builder_dependencies_Dep
-	mov	x2, x22
-	mov	x1, x21
-	mov	x21, x0
-	mov	x0, x20
-	bl	_builder_lock_LockedDep
-	mov	x20, x0
-	mov	x0, #16
-	bl	_malloc
-	str	x21, [x0]
-	mov	x1, #8
-	add	x1, x0, x1
-	str	x20, [x1]
-	str	x0, [x19]
-L49:
+L61:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1512,8 +1908,8 @@ _builder_dependencies_pick_ref:
 	str	x21, [x29, 24]
 	mov	x19, x0
 	mov	x0, x1
-	adrp	x1, _str262@page
-	add	x1, x1, _str262@pageoff
+	adrp	x1, _str389@page
+	add	x1, x1, _str389@pageoff
 	mov	x20, x0
 	bl	_builder_dependencies_opt_string
 	mov	x21, x0
@@ -1525,9 +1921,9 @@ _builder_dependencies_pick_ref:
 	mov	x2, x0
 	mov	x0, x20
 	cmp	x2, #0
-	beq	L59
-	adrp	x1, _str271@page
-	add	x1, x1, _str271@pageoff
+	beq	L71
+	adrp	x1, _str398@page
+	add	x1, x1, _str398@pageoff
 	mov	x19, x0
 	bl	_builder_dependencies_opt_string
 	mov	x20, x0
@@ -1541,9 +1937,9 @@ _builder_dependencies_pick_ref:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #0
-	beq	L57
-	adrp	x1, _str279@page
-	add	x1, x1, _str279@pageoff
+	beq	L69
+	adrp	x1, _str406@page
+	add	x1, x1, _str406@pageoff
 	mov	x20, x0
 	bl	_builder_dependencies_opt_string
 	mov	x21, x0
@@ -1557,26 +1953,26 @@ _builder_dependencies_pick_ref:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #0
-	beq	L54
-	adrp	x1, _str287@page
-	add	x1, x1, _str287@pageoff
+	beq	L66
+	adrp	x1, _str414@page
+	add	x1, x1, _str414@pageoff
 	bl	_builder_dependencies_opt_string
 	str	x0, [x20]
-	b	L56
-L54:
+	b	L68
+L66:
 	mov	x0, x21
 	str	x0, [x20]
-L56:
+L68:
 	str	x0, [x19]
-	b	L61
-L57:
+	b	L73
+L69:
 	mov	x0, x20
 	str	x0, [x19]
-	b	L61
-L59:
+	b	L73
+L71:
 	mov	x0, x19
 	bl	_builder_dependencies_resolve_version_range
-L61:
+L73:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1625,8 +2021,8 @@ _builder_dependencies_resolve_version_range:
 	mov	x0, #8
 	mov	x19, x1
 	add	x1, x21, x0
-	adrp	x0, _str297@page
-	add	x0, x0, _str297@pageoff
+	adrp	x0, _str424@page
+	add	x0, x0, _str424@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x21, x0
@@ -1640,8 +2036,8 @@ _builder_dependencies_resolve_version_range:
 	mov	x0, #8
 	mov	x19, x1
 	add	x1, x20, x0
-	adrp	x0, _str301@page
-	add	x0, x0, _str301@pageoff
+	adrp	x0, _str428@page
+	add	x0, x0, _str428@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x20, x0
@@ -1653,19 +2049,19 @@ _builder_dependencies_resolve_version_range:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, _str305@page
-	add	x0, x0, _str305@pageoff
+	adrp	x0, _str432@page
+	add	x0, x0, _str432@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x20, [x0]
-	adrp	x0, _str293@page
-	add	x0, x0, _str293@pageoff
+	adrp	x0, _str420@page
+	add	x0, x0, _str420@pageoff
 	bl	_donna_shell_output
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str310@page
-	add	x1, x1, _str310@pageoff
+	adrp	x1, _str437@page
+	add	x1, x1, _str437@pageoff
 	bl	_donna_string_split
 	mov	x1, x19
 	bl	_builder_dependencies_find_best_tag
@@ -1692,7 +2088,7 @@ _builder_dependencies_find_best_tag:
 	mov	x2, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	L85
+	beq	L97
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -1700,8 +2096,8 @@ _builder_dependencies_find_best_tag:
 	add	x2, x2, x3
 	ldr	x23, [x2]
 	mov	x20, x1
-	adrp	x1, _str324@page
-	add	x1, x1, _str324@pageoff
+	adrp	x1, _str451@page
+	add	x1, x1, _str451@pageoff
 	mov	x19, x0
 	bl	_donna_string_index_of
 	mov	x1, x20
@@ -1714,7 +2110,7 @@ _builder_dependencies_find_best_tag:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L83
+	beq	L95
 	mov	x1, #1
 	add	x24, x21, x1
 	mov	x22, x0
@@ -1728,8 +2124,8 @@ _builder_dependencies_find_best_tag:
 	bl	_donna_string_slice
 	mov	x1, x20
 	mov	x21, x1
-	adrp	x1, _str339@page
-	add	x1, x1, _str339@pageoff
+	adrp	x1, _str466@page
+	add	x1, x1, _str466@pageoff
 	mov	x20, x0
 	bl	_donna_string_ends_with
 	mov	x1, x21
@@ -1739,10 +2135,10 @@ _builder_dependencies_find_best_tag:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	L80
+	beq	L92
 	mov	x24, x1
-	adrp	x1, _str347@page
-	add	x1, x1, _str347@pageoff
+	adrp	x1, _str474@page
+	add	x1, x1, _str474@pageoff
 	mov	x21, x0
 	bl	_donna_string_starts_with
 	mov	x1, x0
@@ -1751,7 +2147,7 @@ _builder_dependencies_find_best_tag:
 	sub	sp, sp, x2
 	mov	x21, sp
 	cmp	x1, #0
-	beq	L77
+	beq	L89
 	mov	x22, x0
 	bl	_donna_string_length
 	mov	x1, x24
@@ -1770,7 +2166,7 @@ _builder_dependencies_find_best_tag:
 	mov	x22, sp
 	ldr	x2, [x0]
 	cmn	x2, #1
-	beq	L74
+	beq	L86
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -1783,48 +2179,48 @@ _builder_dependencies_find_best_tag:
 	sub	sp, sp, x3
 	mov	x23, sp
 	cmp	x2, #0
-	beq	L72
+	beq	L84
 	mov	x0, x24
 	str	x0, [x23]
-	b	L73
-L72:
+	b	L85
+L84:
 	bl	_builder_dependencies_find_best_tag
 	str	x0, [x23]
-L73:
+L85:
 	str	x0, [x22]
-	b	L76
-L74:
+	b	L88
+L86:
 	mov	x0, x23
 	bl	_builder_dependencies_find_best_tag
 	str	x0, [x22]
-L76:
+L88:
 	str	x0, [x21]
-	b	L79
-L77:
+	b	L91
+L89:
 	mov	x0, x23
 	mov	x1, x24
 	bl	_builder_dependencies_find_best_tag
 	str	x0, [x21]
-L79:
+L91:
 	str	x0, [x20]
-	b	L82
-L80:
+	b	L94
+L92:
 	mov	x0, x23
 	bl	_builder_dependencies_find_best_tag
 	str	x0, [x20]
-L82:
+L94:
 	str	x0, [x19]
-	b	L86
-L83:
+	b	L98
+L95:
 	mov	x0, x23
 	mov	x1, x20
 	bl	_builder_dependencies_find_best_tag
 	str	x0, [x19]
-	b	L86
-L85:
-	adrp	x0, _str319@page
-	add	x0, x0, _str319@pageoff
-L86:
+	b	L98
+L97:
+	adrp	x0, _str446@page
+	add	x0, x0, _str446@pageoff
+L98:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -1856,7 +2252,7 @@ _builder_dependencies_clone_at_ref:
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #1
-	beq	L95
+	beq	L107
 	mov	x19, x0
 	mov	x0, #24
 	bl	_malloc
@@ -1925,8 +2321,8 @@ _builder_dependencies_clone_at_ref:
 	mov	x3, #8
 	add	x3, x19, x3
 	mov	x22, x2
-	adrp	x2, _str417@page
-	add	x2, x2, _str417@pageoff
+	adrp	x2, _str544@page
+	add	x2, x2, _str544@pageoff
 	str	x2, [x3]
 	mov	x21, x1
 	mov	x1, #16
@@ -1944,8 +2340,8 @@ _builder_dependencies_clone_at_ref:
 	mov	x3, #8
 	add	x3, x21, x3
 	mov	x22, x2
-	adrp	x2, _str421@page
-	add	x2, x2, _str421@pageoff
+	adrp	x2, _str548@page
+	add	x2, x2, _str548@pageoff
 	str	x2, [x3]
 	mov	x20, x1
 	mov	x1, #16
@@ -1964,8 +2360,8 @@ _builder_dependencies_clone_at_ref:
 	mov	x3, #8
 	add	x3, x19, x3
 	mov	x22, x2
-	adrp	x2, _str425@page
-	add	x2, x2, _str425@pageoff
+	adrp	x2, _str552@page
+	add	x2, x2, _str552@pageoff
 	str	x2, [x3]
 	mov	x20, x1
 	mov	x1, #16
@@ -1981,16 +2377,16 @@ _builder_dependencies_clone_at_ref:
 	str	x3, [x1]
 	mov	x3, #8
 	add	x4, x1, x3
-	adrp	x3, _str429@page
-	add	x3, x3, _str429@pageoff
+	adrp	x3, _str556@page
+	add	x3, x3, _str556@pageoff
 	str	x3, [x4]
 	mov	x22, x2
 	mov	x2, #16
 	add	x2, x1, x2
 	str	x19, [x2]
 	mov	x19, x0
-	adrp	x0, _str407@page
-	add	x0, x0, _str407@pageoff
+	adrp	x0, _str534@page
+	add	x0, x0, _str534@pageoff
 	bl	_donna_shell_exec
 	mov	x1, x20
 	mov	x2, x0
@@ -2001,11 +2397,11 @@ _builder_dependencies_clone_at_ref:
 	sub	sp, sp, x4
 	mov	x19, sp
 	cmp	x3, #1
-	beq	L93
+	beq	L105
 	mov	x21, x1
 	mov	x20, x0
-	adrp	x0, _str440@page
-	add	x0, x0, _str440@pageoff
+	adrp	x0, _str567@page
+	add	x0, x0, _str567@pageoff
 	bl	___rt_str_concat
 	bl	_donna_shell_run
 	mov	x0, x20
@@ -2054,14 +2450,14 @@ _builder_dependencies_clone_at_ref:
 	mov	x0, #8
 	mov	x21, x2
 	add	x2, x1, x0
-	adrp	x0, _str450@page
-	add	x0, x0, _str450@pageoff
+	adrp	x0, _str577@page
+	add	x0, x0, _str577@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x22, [x0]
-	adrp	x0, _str443@page
-	add	x0, x0, _str443@pageoff
+	adrp	x0, _str570@page
+	add	x0, x0, _str570@pageoff
 	bl	_donna_shell_exec
 	mov	x2, x21
 	mov	x1, x20
@@ -2073,7 +2469,7 @@ _builder_dependencies_clone_at_ref:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #0
-	beq	L91
+	beq	L103
 	mov	x0, #24
 	bl	_malloc
 	mov	x2, x22
@@ -2099,8 +2495,8 @@ _builder_dependencies_clone_at_ref:
 	mov	x0, #8
 	mov	x21, x1
 	add	x1, x22, x0
-	adrp	x0, _str465@page
-	add	x0, x0, _str465@pageoff
+	adrp	x0, _str592@page
+	add	x0, x0, _str592@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x22, x0
@@ -2124,27 +2520,27 @@ _builder_dependencies_clone_at_ref:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, _str472@page
-	add	x0, x0, _str472@pageoff
+	adrp	x0, _str599@page
+	add	x0, x0, _str599@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x21, [x0]
-	adrp	x0, _str461@page
-	add	x0, x0, _str461@pageoff
+	adrp	x0, _str588@page
+	add	x0, x0, _str588@pageoff
 	bl	_donna_shell_exec
 	str	x0, [x20]
-	b	L92
-L91:
+	b	L104
+L103:
 	str	x0, [x20]
-L92:
+L104:
 	str	x0, [x19]
-	b	L96
-L93:
+	b	L108
+L105:
 	mov	x0, x2
 	str	x0, [x19]
-	b	L96
-L95:
+	b	L108
+L107:
 	mov	x19, x0
 	mov	x0, #24
 	bl	_malloc
@@ -2182,8 +2578,8 @@ L95:
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str394@page
-	add	x0, x0, _str394@pageoff
+	adrp	x0, _str521@page
+	add	x0, x0, _str521@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x20, x0
@@ -2195,8 +2591,8 @@ L95:
 	str	x0, [x19]
 	mov	x0, #8
 	add	x1, x19, x0
-	adrp	x0, _str398@page
-	add	x0, x0, _str398@pageoff
+	adrp	x0, _str525@page
+	add	x0, x0, _str525@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x19, x0
@@ -2208,16 +2604,16 @@ L95:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, _str402@page
-	add	x0, x0, _str402@pageoff
+	adrp	x0, _str529@page
+	add	x0, x0, _str529@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x19, [x0]
-	adrp	x0, _str387@page
-	add	x0, x0, _str387@pageoff
+	adrp	x0, _str514@page
+	add	x0, x0, _str514@pageoff
 	bl	_donna_shell_exec
-L96:
+L108:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2251,7 +2647,7 @@ _builder_dependencies_refresh_cached_dep:
 	mov	x1, x0
 	mov	x0, x21
 	cmp	x1, #0
-	beq	L102
+	beq	L114
 	mov	x0, #24
 	bl	_malloc
 	mov	x2, x20
@@ -2262,8 +2658,8 @@ _builder_dependencies_refresh_cached_dep:
 	mov	x0, #8
 	mov	x20, x2
 	add	x2, x22, x0
-	adrp	x0, _str492@page
-	add	x0, x0, _str492@pageoff
+	adrp	x0, _str619@page
+	add	x0, x0, _str619@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	mov	x19, x1
@@ -2280,8 +2676,8 @@ _builder_dependencies_refresh_cached_dep:
 	mov	x0, #8
 	mov	x19, x1
 	add	x1, x21, x0
-	adrp	x0, _str496@page
-	add	x0, x0, _str496@pageoff
+	adrp	x0, _str623@page
+	add	x0, x0, _str623@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x21, x0
@@ -2295,8 +2691,8 @@ _builder_dependencies_refresh_cached_dep:
 	mov	x0, #8
 	mov	x19, x1
 	add	x1, x22, x0
-	adrp	x0, _str500@page
-	add	x0, x0, _str500@pageoff
+	adrp	x0, _str627@page
+	add	x0, x0, _str627@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x22, x0
@@ -2310,8 +2706,8 @@ _builder_dependencies_refresh_cached_dep:
 	mov	x0, #8
 	mov	x19, x1
 	add	x1, x21, x0
-	adrp	x0, _str504@page
-	add	x0, x0, _str504@pageoff
+	adrp	x0, _str631@page
+	add	x0, x0, _str631@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x21, x0
@@ -2325,8 +2721,8 @@ _builder_dependencies_refresh_cached_dep:
 	mov	x0, #8
 	mov	x19, x1
 	add	x1, x22, x0
-	adrp	x0, _str508@page
-	add	x0, x0, _str508@pageoff
+	adrp	x0, _str635@page
+	add	x0, x0, _str635@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x22, x0
@@ -2351,14 +2747,14 @@ _builder_dependencies_refresh_cached_dep:
 	mov	x0, #8
 	mov	x20, x2
 	add	x2, x1, x0
-	adrp	x0, _str515@page
-	add	x0, x0, _str515@pageoff
+	adrp	x0, _str642@page
+	add	x0, x0, _str642@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x21, [x0]
-	adrp	x0, _str491@page
-	add	x0, x0, _str491@pageoff
+	adrp	x0, _str618@page
+	add	x0, x0, _str618@pageoff
 	bl	_donna_shell_exec
 	mov	x0, x20
 	bl	_donna_string_is_empty
@@ -2369,14 +2765,14 @@ _builder_dependencies_refresh_cached_dep:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x0, #1
-	beq	L100
+	beq	L112
 	mov	x20, x1
 	mov	x1, x21
 	mov	x0, x20
 	bl	_builder_dependencies_checkout_ref
 	str	x0, [x19]
-	b	L104
-L100:
+	b	L116
+L112:
 	mov	x20, x1
 	mov	x0, #24
 	bl	_malloc
@@ -2386,8 +2782,8 @@ L100:
 	str	x0, [x22]
 	mov	x0, #8
 	add	x2, x22, x0
-	adrp	x0, _str527@page
-	add	x0, x0, _str527@pageoff
+	adrp	x0, _str654@page
+	add	x0, x0, _str654@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	mov	x20, x1
@@ -2404,8 +2800,8 @@ L100:
 	mov	x0, #8
 	mov	x20, x1
 	add	x1, x21, x0
-	adrp	x0, _str531@page
-	add	x0, x0, _str531@pageoff
+	adrp	x0, _str658@page
+	add	x0, x0, _str658@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x21, x0
@@ -2429,31 +2825,31 @@ L100:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, _str538@page
-	add	x0, x0, _str538@pageoff
+	adrp	x0, _str665@page
+	add	x0, x0, _str665@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x20, [x0]
-	adrp	x0, _str526@page
-	add	x0, x0, _str526@pageoff
+	adrp	x0, _str653@page
+	add	x0, x0, _str653@pageoff
 	bl	_donna_shell_exec
 	str	x0, [x19]
-	b	L104
-L102:
+	b	L116
+L114:
 	mov	x21, x20
 	mov	x1, x19
 	mov	x20, x1
 	mov	x19, x0
-	adrp	x0, _str487@page
-	add	x0, x0, _str487@pageoff
+	adrp	x0, _str614@page
+	add	x0, x0, _str614@pageoff
 	bl	___rt_str_concat
 	bl	_donna_shell_run
 	mov	x2, x21
 	mov	x1, x20
 	mov	x0, x19
 	bl	_builder_dependencies_clone_at_ref
-L104:
+L116:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2501,8 +2897,8 @@ _builder_dependencies_checkout_ref:
 	str	x2, [x21]
 	mov	x2, #8
 	add	x3, x21, x2
-	adrp	x2, _str550@page
-	add	x2, x2, _str550@pageoff
+	adrp	x2, _str677@page
+	add	x2, x2, _str677@pageoff
 	str	x2, [x3]
 	mov	x20, x1
 	mov	x1, #16
@@ -2533,22 +2929,22 @@ _builder_dependencies_checkout_ref:
 	str	x2, [x1]
 	mov	x2, #8
 	add	x3, x1, x2
-	adrp	x2, _str557@page
-	add	x2, x2, _str557@pageoff
+	adrp	x2, _str684@page
+	add	x2, x2, _str684@pageoff
 	str	x2, [x3]
 	mov	x2, #16
 	add	x2, x1, x2
 	str	x19, [x2]
 	mov	x19, x0
-	adrp	x0, _str546@page
-	add	x0, x0, _str546@pageoff
+	adrp	x0, _str673@page
+	add	x0, x0, _str673@pageoff
 	bl	_donna_shell_exec
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
 	cset	x2, eq
 	cmp	x2, #1
-	beq	L107
+	beq	L119
 	mov	x19, x0
 	mov	x0, #24
 	bl	_malloc
@@ -2577,8 +2973,8 @@ _builder_dependencies_checkout_ref:
 	str	x2, [x19]
 	mov	x2, #8
 	add	x3, x19, x2
-	adrp	x2, _str572@page
-	add	x2, x2, _str572@pageoff
+	adrp	x2, _str699@page
+	add	x2, x2, _str699@pageoff
 	str	x2, [x3]
 	mov	x21, x1
 	mov	x1, #16
@@ -2594,8 +2990,8 @@ _builder_dependencies_checkout_ref:
 	str	x2, [x21]
 	mov	x2, #8
 	add	x3, x21, x2
-	adrp	x2, _str576@page
-	add	x2, x2, _str576@pageoff
+	adrp	x2, _str703@page
+	add	x2, x2, _str703@pageoff
 	str	x2, [x3]
 	mov	x20, x1
 	mov	x1, #16
@@ -2626,15 +3022,15 @@ _builder_dependencies_checkout_ref:
 	str	x2, [x1]
 	mov	x2, #8
 	add	x3, x1, x2
-	adrp	x2, _str583@page
-	add	x2, x2, _str583@pageoff
+	adrp	x2, _str710@page
+	add	x2, x2, _str710@pageoff
 	str	x2, [x3]
 	mov	x2, #16
 	add	x2, x1, x2
 	str	x19, [x2]
 	mov	x19, x0
-	adrp	x0, _str568@page
-	add	x0, x0, _str568@pageoff
+	adrp	x0, _str695@page
+	add	x0, x0, _str695@pageoff
 	bl	_donna_shell_exec
 	mov	x0, x19
 	mov	x19, x0
@@ -2664,8 +3060,8 @@ _builder_dependencies_checkout_ref:
 	str	x1, [x20]
 	mov	x1, #8
 	add	x2, x20, x1
-	adrp	x1, _str592@page
-	add	x1, x1, _str592@pageoff
+	adrp	x1, _str719@page
+	add	x1, x1, _str719@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x1, x20, x1
@@ -2691,19 +3087,19 @@ _builder_dependencies_checkout_ref:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, _str599@page
-	add	x0, x0, _str599@pageoff
+	adrp	x0, _str726@page
+	add	x0, x0, _str726@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x19, [x0]
-	adrp	x0, _str588@page
-	add	x0, x0, _str588@pageoff
+	adrp	x0, _str715@page
+	add	x0, x0, _str715@pageoff
 	bl	_donna_shell_exec
-	b	L108
-L107:
+	b	L120
+L119:
 	mov	x0, x1
-L108:
+L120:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2728,8 +3124,8 @@ _builder_dependencies_origin_url:
 	str	x1, [x20]
 	mov	x1, #8
 	add	x2, x20, x1
-	adrp	x1, _str606@page
-	add	x1, x1, _str606@pageoff
+	adrp	x1, _str733@page
+	add	x1, x1, _str733@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x20, x1
@@ -2746,8 +3142,8 @@ _builder_dependencies_origin_url:
 	str	x1, [x19]
 	mov	x1, #8
 	add	x2, x19, x1
-	adrp	x1, _str610@page
-	add	x1, x1, _str610@pageoff
+	adrp	x1, _str737@page
+	add	x1, x1, _str737@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x1, x19, x1
@@ -2762,8 +3158,8 @@ _builder_dependencies_origin_url:
 	str	x1, [x20]
 	mov	x1, #8
 	add	x2, x20, x1
-	adrp	x1, _str614@page
-	add	x1, x1, _str614@pageoff
+	adrp	x1, _str741@page
+	add	x1, x1, _str741@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x1, x20, x1
@@ -2789,14 +3185,14 @@ _builder_dependencies_origin_url:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, _str621@page
-	add	x0, x0, _str621@pageoff
+	adrp	x0, _str748@page
+	add	x0, x0, _str748@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x19, [x0]
-	adrp	x0, _str605@page
-	add	x0, x0, _str605@pageoff
+	adrp	x0, _str732@page
+	add	x0, x0, _str732@pageoff
 	bl	_donna_shell_output
 	bl	_donna_string_trim
 	ldr	x19, [x29, 24]
@@ -2811,14 +3207,14 @@ _builder_dependencies_git_cache_dir:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x0, _str627@page
-	add	x0, x0, _str627@pageoff
+	adrp	x0, _str754@page
+	add	x0, x0, _str754@pageoff
 	bl	_donna_shell_getenv
-	adrp	x1, _str629@page
-	add	x1, x1, _str629@pageoff
+	adrp	x1, _str756@page
+	add	x1, x1, _str756@pageoff
 	bl	_donna_files_join
-	adrp	x1, _str631@page
-	add	x1, x1, _str631@pageoff
+	adrp	x1, _str758@page
+	add	x1, x1, _str758@pageoff
 	bl	_donna_files_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -2842,8 +3238,8 @@ _builder_dependencies_head_sha:
 	str	x1, [x19]
 	mov	x1, #8
 	add	x2, x19, x1
-	adrp	x1, _str634@page
-	add	x1, x1, _str634@pageoff
+	adrp	x1, _str761@page
+	add	x1, x1, _str761@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x2, x19, x1
@@ -2860,8 +3256,8 @@ _builder_dependencies_head_sha:
 	str	x1, [x20]
 	mov	x1, #8
 	add	x2, x20, x1
-	adrp	x1, _str638@page
-	add	x1, x1, _str638@pageoff
+	adrp	x1, _str765@page
+	add	x1, x1, _str765@pageoff
 	str	x1, [x2]
 	mov	x1, #16
 	add	x1, x20, x1
@@ -2887,14 +3283,14 @@ _builder_dependencies_head_sha:
 	str	x0, [x1]
 	mov	x0, #8
 	add	x2, x1, x0
-	adrp	x0, _str645@page
-	add	x0, x0, _str645@pageoff
+	adrp	x0, _str772@page
+	add	x0, x0, _str772@pageoff
 	str	x0, [x2]
 	mov	x0, #16
 	add	x0, x1, x0
 	str	x19, [x0]
-	adrp	x0, _str633@page
-	add	x0, x0, _str633@pageoff
+	adrp	x0, _str760@page
+	add	x0, x0, _str760@pageoff
 	bl	_donna_shell_output
 	bl	_donna_string_trim
 	ldr	x19, [x29, 24]
@@ -2912,15 +3308,15 @@ _builder_dependencies_opt_string:
 	bl	_parsetoml_parsetoml_get_string
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L117
+	beq	L129
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	L118
-L117:
-	adrp	x0, _str660@page
-	add	x0, x0, _str660@pageoff
-L118:
+	b	L130
+L129:
+	adrp	x0, _str787@page
+	add	x0, x0, _str787@pageoff
+L130:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function builder_dependencies_opt_string */

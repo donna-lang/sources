@@ -20,49 +20,49 @@ _donna_nil:
 
 .data
 .balign 8
-_str159:
+_str163:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str164:
+_str168:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str200:
+_str204:
 	.ascii " and "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str253:
+_str257:
 	.ascii ">="
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str276:
+_str282:
 	.ascii ">"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str299:
+_str307:
 	.ascii "<="
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str322:
+_str332:
 	.ascii "<"
 	.byte 0
 /* end data */
@@ -191,11 +191,13 @@ _builder_semver_Lt:
 .globl _builder_semver_parse
 _builder_semver_parse:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
 	adrp	x1, _str12@page
 	add	x1, x1, _str12@pageoff
 	mov	x19, x0
@@ -294,34 +296,51 @@ L27:
 	ldr	x1, [x1]
 	mov	x2, #8
 	add	x2, x1, x2
-	ldr	x20, [x2]
+	ldr	x21, [x2]
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x2, #8
 	add	x1, x1, x2
-	ldr	x21, [x1]
+	ldr	x20, [x1]
 	bl	_builder_semver_parse_nat
-	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	bl	_builder_semver_parse_nat
-	mov	x17, x0
+	mov	x23, x0
 	mov	x0, x21
-	mov	x21, x17
 	bl	_builder_semver_parse_nat
-	mov	x1, x21
-	mov	x2, x0
+	mov	x22, x0
 	mov	x0, x20
-	bl	_builder_semver_Version
-	bl	_donna_option_Some
+	bl	_builder_semver_parse_nat
+	mov	x21, x0
+	mov	x0, #32
+	bl	_malloc
+	mov	x20, x0
+	mov	x0, #0
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x23, [x0]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x22, [x0]
+	mov	x0, #24
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 L28:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 /* end function builder_semver_parse */
 
@@ -525,8 +544,8 @@ _builder_semver_to_string:
 	mov	x0, x19
 	bl	_builder_semver_vmajor
 	bl	_donna_int_to_string
-	adrp	x1, _str159@page
-	add	x1, x1, _str159@pageoff
+	adrp	x1, _str163@page
+	add	x1, x1, _str163@pageoff
 	bl	___rt_str_concat
 	mov	x20, x0
 	mov	x0, x19
@@ -535,8 +554,8 @@ _builder_semver_to_string:
 	mov	x1, x0
 	mov	x0, x20
 	bl	___rt_str_concat
-	adrp	x1, _str164@page
-	add	x1, x1, _str164@pageoff
+	adrp	x1, _str168@page
+	add	x1, x1, _str168@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -610,8 +629,8 @@ _builder_semver_split_and:
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
 	str	x22, [x29, 16]
-	adrp	x1, _str200@page
-	add	x1, x1, _str200@pageoff
+	adrp	x1, _str204@page
+	add	x1, x1, _str204@pageoff
 	mov	x19, x0
 	bl	_donna_string_index_of
 	mov	x17, x0
@@ -751,22 +770,24 @@ L84:
 .balign 4
 _builder_semver_parse_one:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -64]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
-	adrp	x1, _str253@page
-	add	x1, x1, _str253@pageoff
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
+	adrp	x1, _str257@page
+	add	x1, x1, _str257@pageoff
 	mov	x19, x0
 	bl	_donna_string_starts_with
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #1
 	beq	L111
-	adrp	x1, _str276@page
-	add	x1, x1, _str276@pageoff
+	adrp	x1, _str282@page
+	add	x1, x1, _str282@pageoff
 	mov	x19, x0
 	bl	_donna_string_starts_with
 	mov	x1, x0
@@ -776,8 +797,8 @@ _builder_semver_parse_one:
 	mov	x19, sp
 	cmp	x1, #1
 	beq	L106
-	adrp	x1, _str299@page
-	add	x1, x1, _str299@pageoff
+	adrp	x1, _str307@page
+	add	x1, x1, _str307@pageoff
 	mov	x20, x0
 	bl	_donna_string_starts_with
 	mov	x1, x0
@@ -787,8 +808,8 @@ _builder_semver_parse_one:
 	mov	x20, sp
 	cmp	x1, #1
 	beq	L100
-	adrp	x1, _str322@page
-	add	x1, x1, _str322@pageoff
+	adrp	x1, _str332@page
+	add	x1, x1, _str332@pageoff
 	mov	x21, x0
 	bl	_donna_string_starts_with
 	mov	x1, x0
@@ -808,9 +829,22 @@ _builder_semver_parse_one:
 	beq	L91
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_builder_semver_Gte
-	bl	_donna_option_Some
+	ldr	x24, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x23, x0
+	mov	x0, #0
+	str	x0, [x23]
+	mov	x0, #8
+	add	x0, x23, x0
+	str	x24, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x23, [x1]
 	str	x0, [x22]
 	b	L93
 L91:
@@ -841,9 +875,22 @@ L94:
 	beq	L96
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_builder_semver_Lt
-	bl	_donna_option_Some
+	ldr	x24, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x23, x0
+	mov	x0, #3
+	str	x0, [x23]
+	mov	x0, #8
+	add	x0, x23, x0
+	str	x24, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x23, [x1]
 	str	x0, [x22]
 	b	L98
 L96:
@@ -876,9 +923,22 @@ L100:
 	beq	L102
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_builder_semver_Lte
-	bl	_donna_option_Some
+	ldr	x23, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x22, x0
+	mov	x0, #2
+	str	x0, [x22]
+	mov	x0, #8
+	add	x0, x22, x0
+	str	x23, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
 	str	x0, [x21]
 	b	L104
 L102:
@@ -911,9 +971,22 @@ L106:
 	beq	L108
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_builder_semver_Gt
-	bl	_donna_option_Some
+	ldr	x22, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x21, x0
+	mov	x0, #1
+	str	x0, [x21]
+	mov	x0, #8
+	add	x0, x21, x0
+	str	x22, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
 	str	x0, [x20]
 	b	L110
 L108:
@@ -944,9 +1017,22 @@ L111:
 	beq	L113
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_builder_semver_Gte
-	bl	_donna_option_Some
+	ldr	x21, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x20, x0
+	mov	x0, #0
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	L115
 L113:
@@ -956,12 +1042,14 @@ L113:
 	adrp	x0, _donna_option_None@page
 	add	x0, x0, _donna_option_None@pageoff
 L115:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
 	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	ldp	x29, x30, [sp], 64
 	ret
 /* end function builder_semver_parse_one */
 
