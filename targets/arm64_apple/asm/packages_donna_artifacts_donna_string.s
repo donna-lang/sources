@@ -27,91 +27,84 @@ _donna_nil:
 
 .data
 .balign 8
-_str167:
+_str145:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str192:
+_str170:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str210:
+_str188:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str218:
+_str196:
 	.byte 9
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str226:
+_str204:
 	.byte 13
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str234:
+_str212:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str248:
+_str225:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str289:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str374:
+_str310:
 	.ascii "-"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str416:
+_str352:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str444:
+_str380:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str460:
+_str396:
 	.ascii "-"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str468:
+_str404:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -445,63 +438,10 @@ _donna_string_index_of:
 .globl _donna_string_index_of_from
 _donna_string_index_of_from:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
-	mov	x20, x2
-	mov	x21, x1
-	mov	x19, x0
-	bl	_strlen
-	mov	x17, x0
-	mov	x0, x19
-	mov	x19, x17
-	mov	x22, x0
-	mov	x0, x21
-	bl	_strlen
-	mov	x1, x0
-	mov	x0, x22
-	add	x2, x20, x1
-	cmp	x2, x19
-	cset	x2, gt
-	cmp	x2, #1
-	beq	L43
-	mov	x19, x0
-	add	x0, x0, x20
-	bl	_strndup
-	mov	x1, x21
-	mov	x21, x1
-	bl	_strcmp
-	mov	x1, x21
-	mov	x2, x0
-	mov	x0, x19
-	cmp	x2, #0
-	cset	x2, eq
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	cmp	x2, #1
-	beq	L41
-	mov	x2, #1
-	add	x2, x20, x2
-	bl	_donna_string_index_of_from
-	str	x0, [x19]
-	b	L44
-L41:
-	mov	x0, x20
-	str	x0, [x19]
-	b	L44
-L43:
-	mov	x0, #-1
-L44:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
-	mov sp, x29
-	ldp	x29, x30, [sp], 48
+	bl	_donna_ffi_string_index_of
+	ldp	x29, x30, [sp], 16
 	ret
 /* end function donna_string_index_of_from */
 
@@ -528,15 +468,15 @@ _donna_string_split:
 	cmp	x3, #0
 	cset	x0, eq
 	cmp	x0, #1
-	beq	L47
+	beq	L42
 	adrp	x6, _donna_nil@page
 	add	x6, x6, _donna_nil@pageoff
 	mov	x5, #0
 	mov	x4, #0
 	mov	x0, x19
 	bl	_donna_string_split_helper
-	b	L48
-L47:
+	b	L43
+L42:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
@@ -549,7 +489,7 @@ L47:
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-L48:
+L43:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -582,7 +522,7 @@ _donna_string_split_helper:
 	add	x7, x0, x23
 	str	x7, [x29, 16]
 	cmp	x2, #1
-	beq	L54
+	beq	L49
 	mov	x19, x0
 	add	x0, x0, x24
 	mov	x20, x1
@@ -606,7 +546,7 @@ _donna_string_split_helper:
 	sub	sp, sp, x9
 	mov	x19, sp
 	cmp	x8, #1
-	beq	L52
+	beq	L47
 	mov	x7, #1
 	add	x5, x5, x7
 	mov	x20, x6
@@ -615,8 +555,8 @@ _donna_string_split_helper:
 	mov	x21, x0
 	bl	_donna_string_split_helper
 	str	x0, [x19]
-	b	L56
-L52:
+	b	L51
+L47:
 	mov	x20, x6
 	mov	x25, x3
 	mov	x24, x2
@@ -648,8 +588,8 @@ L52:
 	mov	x5, x4
 	bl	_donna_string_split_helper
 	str	x0, [x19]
-	b	L56
-L54:
+	b	L51
+L49:
 	mov	x0, x7
 	mov	x20, x25
 	mov	x4, x23
@@ -669,7 +609,7 @@ L54:
 	add	x1, x0, x1
 	str	x6, [x1]
 	bl	_donna_string_list_reverse
-L56:
+L51:
 	ldr	x19, [x29, 88]
 	ldr	x20, [x29, 80]
 	ldr	x21, [x29, 72]
@@ -708,7 +648,7 @@ _donna_string_list_reverse_helper:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L61
+	beq	L56
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x20, [x1]
@@ -729,10 +669,10 @@ _donna_string_list_reverse_helper:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_donna_string_list_reverse_helper
-	b	L62
-L61:
+	b	L57
+L56:
 	mov	x0, x19
-L62:
+L57:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -773,7 +713,7 @@ _donna_string_trim_start_from:
 	mov	x22, x2
 	cset	x2, ge
 	cmp	x2, #1
-	beq	L70
+	beq	L65
 	add	x20, x0, x1
 	mov	x21, x1
 	mov	x1, #1
@@ -789,22 +729,22 @@ _donna_string_trim_start_from:
 	sub	sp, sp, x4
 	mov	x19, sp
 	cmp	x3, #1
-	beq	L69
+	beq	L64
 	mov	x0, x20
 	sub	x1, x2, x1
 	bl	_strndup
 	str	x0, [x19]
-	b	L71
-L69:
+	b	L66
+L64:
 	mov	x3, #1
 	add	x1, x1, x3
 	bl	_donna_string_trim_start_from
 	str	x0, [x19]
-	b	L71
-L70:
-	adrp	x0, _str167@page
-	add	x0, x0, _str167@pageoff
-L71:
+	b	L66
+L65:
+	adrp	x0, _str145@page
+	add	x0, x0, _str145@pageoff
+L66:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -845,7 +785,7 @@ _donna_string_trim_end_to:
 	cmp	x1, #0
 	cset	x2, lt
 	cmp	x2, #1
-	beq	L78
+	beq	L73
 	mov	x19, x0
 	add	x0, x0, x1
 	mov	x20, x1
@@ -859,22 +799,22 @@ _donna_string_trim_end_to:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	L77
+	beq	L72
 	mov	x2, #1
 	add	x1, x1, x2
 	bl	_strndup
 	str	x0, [x19]
-	b	L79
-L77:
+	b	L74
+L72:
 	mov	x2, #1
 	sub	x1, x1, x2
 	bl	_donna_string_trim_end_to
 	str	x0, [x19]
-	b	L79
-L78:
-	adrp	x0, _str192@page
-	add	x0, x0, _str192@pageoff
-L79:
+	b	L74
+L73:
+	adrp	x0, _str170@page
+	add	x0, x0, _str170@pageoff
+L74:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -903,8 +843,8 @@ _donna_string_is_ws:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	str	x20, [x29, 16]
-	adrp	x1, _str210@page
-	add	x1, x1, _str210@pageoff
+	adrp	x1, _str188@page
+	add	x1, x1, _str188@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
@@ -912,9 +852,9 @@ _donna_string_is_ws:
 	cmp	x1, #0
 	cset	x1, eq
 	cmp	x1, #1
-	beq	L91
-	adrp	x1, _str218@page
-	add	x1, x1, _str218@pageoff
+	beq	L86
+	adrp	x1, _str196@page
+	add	x1, x1, _str196@pageoff
 	mov	x19, x0
 	bl	_strcmp
 	mov	x1, x0
@@ -925,9 +865,9 @@ _donna_string_is_ws:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L89
-	adrp	x1, _str226@page
-	add	x1, x1, _str226@pageoff
+	beq	L84
+	adrp	x1, _str204@page
+	add	x1, x1, _str204@pageoff
 	mov	x20, x0
 	bl	_strcmp
 	mov	x1, x0
@@ -938,29 +878,29 @@ _donna_string_is_ws:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #1
-	beq	L86
-	adrp	x1, _str234@page
-	add	x1, x1, _str234@pageoff
+	beq	L81
+	adrp	x1, _str212@page
+	add	x1, x1, _str212@pageoff
 	bl	_strcmp
 	cmp	x0, #0
 	cset	x0, eq
 	str	x0, [x20]
-	b	L88
-L86:
+	b	L83
+L81:
 	mov	x0, #1
 	str	x0, [x20]
 	mov	x0, #1
-L88:
+L83:
 	str	x0, [x19]
-	b	L92
-L89:
+	b	L87
+L84:
 	mov	x0, #1
 	str	x0, [x19]
 	mov	x0, #1
-	b	L92
-L91:
+	b	L87
+L86:
 	mov	x0, #1
-L92:
+L87:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -973,157 +913,12 @@ L92:
 .globl _donna_string_replace
 _donna_string_replace:
 	hint	#34
-	stp	x29, x30, [sp, -48]!
+	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	str	x19, [x29, 40]
-	str	x20, [x29, 32]
-	str	x21, [x29, 24]
-	str	x22, [x29, 16]
-	mov	x21, x2
-	mov	x20, x1
-	mov	x19, x0
-	bl	_strlen
-	mov	x22, x0
-	mov	x0, x19
-	mov	x19, x0
-	mov	x0, x20
-	bl	_strlen
-	mov	x3, x22
-	mov	x2, x21
-	mov	x1, x20
-	mov	x4, x0
-	mov	x0, x19
-	cmp	x4, #0
-	cset	x5, eq
-	cmp	x5, #1
-	beq	L95
-	adrp	x7, _str248@page
-	add	x7, x7, _str248@pageoff
-	mov	x6, #0
-	mov	x5, #0
-	bl	_donna_string_replace_helper
-L95:
-	ldr	x19, [x29, 40]
-	ldr	x20, [x29, 32]
-	ldr	x21, [x29, 24]
-	ldr	x22, [x29, 16]
-	ldp	x29, x30, [sp], 48
+	bl	_donna_ffi_string_replace
+	ldp	x29, x30, [sp], 16
 	ret
 /* end function donna_string_replace */
-
-.text
-.balign 4
-_donna_string_replace_helper:
-	hint	#34
-	stp	x29, x30, [sp, -96]!
-	mov	x29, sp
-	str	x19, [x29, 88]
-	str	x20, [x29, 80]
-	str	x21, [x29, 72]
-	str	x22, [x29, 64]
-	str	x23, [x29, 56]
-	str	x24, [x29, 48]
-	str	x25, [x29, 40]
-	str	x26, [x29, 32]
-	mov	x26, x7
-	mov	x25, x6
-	mov	x23, x4
-	mov	x22, x3
-	mov	x24, x5
-	add	x5, x23, x25
-	str	x5, [x29, 16]
-	cmp	x5, x22
-	mov	x21, x2
-	cset	x2, gt
-	add	x7, x0, x24
-	str	x7, [x29, 24]
-	cmp	x2, #1
-	beq	L101
-	mov	x19, x0
-	add	x0, x0, x25
-	mov	x20, x1
-	mov	x1, x23
-	bl	_strndup
-	mov	x1, x20
-	mov	x20, x1
-	bl	_strcmp
-	mov	x6, x25
-	mov	x5, x24
-	mov	x4, x23
-	mov	x3, x22
-	mov	x2, x21
-	mov	x1, x20
-	mov	x8, x0
-	mov	x0, x19
-	ldr	x7, [x29, 24]
-	ldr	x25, [x29, 16]
-	cmp	x8, #0
-	cset	x8, eq
-	mov	x9, #16
-	sub	sp, sp, x9
-	mov	x19, sp
-	cmp	x8, #1
-	beq	L99
-	mov	x7, #1
-	add	x6, x6, x7
-	mov	x7, x26
-	mov	x24, x4
-	mov	x23, x3
-	mov	x22, x2
-	mov	x20, x0
-	bl	_donna_string_replace_helper
-	str	x0, [x19]
-	b	L103
-L99:
-	mov	x24, x4
-	mov	x23, x3
-	mov	x22, x2
-	mov	x20, x0
-	mov	x0, x7
-	mov	x21, x1
-	sub	x1, x6, x5
-	bl	_strndup
-	mov	x1, x0
-	mov	x0, x26
-	bl	___rt_str_concat
-	mov	x1, x21
-	mov	x21, x1
-	mov	x1, x22
-	bl	___rt_str_concat
-	mov	x5, x25
-	mov	x4, x24
-	mov	x3, x23
-	mov	x2, x22
-	mov	x1, x21
-	mov	x7, x0
-	mov	x0, x20
-	mov	x6, x5
-	bl	_donna_string_replace_helper
-	str	x0, [x19]
-	b	L103
-L101:
-	mov	x0, x7
-	mov	x19, x26
-	mov	x5, x24
-	mov	x3, x22
-	sub	x1, x3, x5
-	bl	_strndup
-	mov	x1, x0
-	mov	x0, x19
-	bl	___rt_str_concat
-L103:
-	ldr	x19, [x29, 88]
-	ldr	x20, [x29, 80]
-	ldr	x21, [x29, 72]
-	ldr	x22, [x29, 64]
-	ldr	x23, [x29, 56]
-	ldr	x24, [x29, 48]
-	ldr	x25, [x29, 40]
-	ldr	x26, [x29, 32]
-	mov sp, x29
-	ldp	x29, x30, [sp], 96
-	ret
-/* end function donna_string_replace_helper */
 
 .text
 .balign 4
@@ -1136,17 +931,17 @@ _donna_string_join:
 	str	x20, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L112
+	beq	L98
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x3, sp
 	cmp	x2, #1
-	beq	L108
+	beq	L94
 	mov	x2, #0
 	str	x2, [x3]
 	mov	x2, #0
-	b	L109
-L108:
+	b	L95
+L94:
 	mov	x2, #16
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -1156,9 +951,9 @@ L108:
 	mov	x4, #1
 	and	x2, x2, x4
 	str	x2, [x3]
-L109:
+L95:
 	cmp	w2, #0
-	bne	L111
+	bne	L97
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -1176,16 +971,16 @@ L109:
 	mov	x1, x0
 	mov	x0, x19
 	bl	___rt_str_concat
-	b	L113
-L111:
+	b	L99
+L97:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	L113
-L112:
-	adrp	x0, _str289@page
-	add	x0, x0, _str289@pageoff
-L113:
+	b	L99
+L98:
+	adrp	x0, _str225@page
+	add	x0, x0, _str225@pageoff
+L99:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -1215,15 +1010,15 @@ _donna_string_pad_left:
 	cmp	x2, x1
 	cset	x3, ge
 	cmp	x3, #1
-	beq	L116
+	beq	L102
 	sub	x1, x1, x2
 	bl	_donna_string_repeat
 	mov	x1, x19
 	bl	___rt_str_concat
-	b	L117
-L116:
+	b	L103
+L102:
 	mov	x0, x19
-L117:
+L103:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1246,13 +1041,13 @@ _donna_string_is_digits:
 	cmp	x2, #0
 	cset	x1, eq
 	cmp	x1, #1
-	beq	L120
+	beq	L106
 	mov	x1, #0
 	bl	_donna_string_all_digits
-	b	L121
-L120:
+	b	L107
+L106:
 	mov	x0, #0
-L121:
+L107:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -1269,7 +1064,7 @@ _donna_string_all_digits:
 	cmp	x1, x2
 	cset	x3, eq
 	cmp	x3, #1
-	beq	L131
+	beq	L117
 	add	x3, x0, x1
 	ldrb	w3, [x3]
 	cmp	x3, #48
@@ -1278,34 +1073,34 @@ _donna_string_all_digits:
 	sub	sp, sp, x5
 	mov	x19, sp
 	cmp	x4, #1
-	beq	L129
+	beq	L115
 	cmp	x3, #57
 	cset	x3, gt
 	mov	x4, #16
 	sub	sp, sp, x4
 	mov	x20, sp
 	cmp	x3, #1
-	beq	L126
+	beq	L112
 	mov	x3, #1
 	add	x1, x1, x3
 	bl	_donna_string_all_digits
 	str	x0, [x20]
-	b	L128
-L126:
+	b	L114
+L112:
 	mov	x0, #0
 	str	x0, [x20]
 	mov	x0, #0
-L128:
+L114:
 	str	x0, [x19]
-	b	L132
-L129:
+	b	L118
+L115:
 	mov	x0, #0
 	str	x0, [x19]
 	mov	x0, #0
-	b	L132
-L131:
+	b	L118
+L117:
 	mov	x0, #1
-L132:
+L118:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -1335,12 +1130,12 @@ _donna_string_to_int:
 	cmp	x20, #0
 	cset	x1, eq
 	cmp	x1, #1
-	beq	L137
+	beq	L123
 	mov	x1, #1
 	mov	x19, x0
 	bl	_strndup
-	adrp	x1, _str374@page
-	add	x1, x1, _str374@pageoff
+	adrp	x1, _str310@page
+	add	x1, x1, _str310@pageoff
 	bl	_strcmp
 	mov	x2, x20
 	mov	x1, x0
@@ -1351,13 +1146,13 @@ _donna_string_to_int:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L136
+	beq	L122
 	mov	x3, #0
 	mov	x1, #0
 	bl	_donna_string_parse_digits
 	str	x0, [x19]
-	b	L138
-L136:
+	b	L124
+L122:
 	mov	x3, #0
 	mov	x1, #1
 	bl	_donna_string_parse_digits
@@ -1365,10 +1160,10 @@ L136:
 	mov	x0, #0
 	sub	x0, x0, x1
 	str	x0, [x19]
-	b	L138
-L137:
+	b	L124
+L123:
 	mov	x0, #0
-L138:
+L124:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -1388,7 +1183,7 @@ _donna_string_parse_digits:
 	cmp	x1, x2
 	cset	x3, ge
 	cmp	x3, #1
-	beq	L148
+	beq	L134
 	add	x3, x0, x1
 	ldrb	w3, [x3]
 	mov	x5, #48
@@ -1399,14 +1194,14 @@ _donna_string_parse_digits:
 	sub	sp, sp, x6
 	mov	x19, sp
 	cmp	x5, #1
-	beq	L146
+	beq	L132
 	cmp	x3, #9
 	cset	x5, gt
 	mov	x6, #16
 	sub	sp, sp, x6
 	mov	x20, sp
 	cmp	x5, #1
-	beq	L143
+	beq	L129
 	mov	x5, #1
 	add	x1, x1, x5
 	mov	x5, #10
@@ -1414,20 +1209,20 @@ _donna_string_parse_digits:
 	add	x3, x3, x4
 	bl	_donna_string_parse_digits
 	str	x0, [x20]
-	b	L145
-L143:
+	b	L131
+L129:
 	mov	x0, x4
 	str	x0, [x20]
-L145:
+L131:
 	str	x0, [x19]
-	b	L149
-L146:
+	b	L135
+L132:
 	mov	x0, x4
 	str	x0, [x19]
-	b	L149
-L148:
+	b	L135
+L134:
 	mov	x0, x4
-L149:
+L135:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -1447,8 +1242,8 @@ _donna_string_lowercase:
 	bl	_strlen
 	mov	x2, x0
 	mov	x0, x19
-	adrp	x3, _str416@page
-	add	x3, x3, _str416@pageoff
+	adrp	x3, _str352@page
+	add	x3, x3, _str352@pageoff
 	mov	x1, #0
 	bl	_donna_string_lowercase_helper
 	ldr	x19, [x29, 24]
@@ -1473,7 +1268,7 @@ _donna_string_lowercase_helper:
 	cmp	x20, x2
 	cset	x1, ge
 	cmp	x1, #1
-	beq	L159
+	beq	L145
 	mov	x22, x0
 	add	x0, x19, x20
 	ldrb	w0, [x0]
@@ -1487,7 +1282,7 @@ _donna_string_lowercase_helper:
 	sub	sp, sp, x2
 	mov	x21, sp
 	cmp	x1, #1
-	beq	L157
+	beq	L143
 	mov	x0, x22
 	mov	x1, x20
 	mov	x22, x0
@@ -1497,8 +1292,8 @@ _donna_string_lowercase_helper:
 	str	x1, [x21]
 	mov	x0, x22
 	mov	x2, x23
-	b	L158
-L157:
+	b	L144
+L143:
 	mov	x1, #32
 	add	x0, x0, x1
 	bl	_donna_string_char_from_code
@@ -1506,7 +1301,7 @@ L157:
 	mov	x1, x0
 	mov	x0, x22
 	str	x1, [x21]
-L158:
+L144:
 	mov	x21, x2
 	mov	x2, #1
 	add	x20, x20, x2
@@ -1516,7 +1311,7 @@ L158:
 	mov	x3, x0
 	mov	x0, x19
 	bl	_donna_string_lowercase_helper
-L159:
+L145:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1543,8 +1338,8 @@ _donna_string_to_slug:
 	bl	_strlen
 	mov	x2, x0
 	mov	x0, x19
-	adrp	x3, _str444@page
-	add	x3, x3, _str444@pageoff
+	adrp	x3, _str380@page
+	add	x3, x3, _str380@pageoff
 	mov	x1, #0
 	bl	_donna_string_slug_helper
 	ldr	x19, [x29, 24]
@@ -1570,7 +1365,7 @@ _donna_string_slug_helper:
 	cmp	x20, x2
 	cset	x1, ge
 	cmp	x1, #1
-	beq	L173
+	beq	L159
 	mov	x22, x0
 	add	x0, x19, x20
 	ldrb	w0, [x0]
@@ -1581,7 +1376,7 @@ _donna_string_slug_helper:
 	sub	sp, sp, x2
 	mov	x21, sp
 	cmp	x1, #1
-	beq	L169
+	beq	L155
 	bl	_donna_string_is_slug_char
 	mov	x2, x23
 	mov	x1, x0
@@ -1591,15 +1386,15 @@ _donna_string_slug_helper:
 	sub	sp, sp, x2
 	mov	x22, sp
 	cmp	x1, #1
-	beq	L167
-	adrp	x1, _str468@page
-	add	x1, x1, _str468@pageoff
+	beq	L153
+	adrp	x1, _str404@page
+	add	x1, x1, _str404@pageoff
 	str	x1, [x22]
 	mov	x2, x24
-	adrp	x1, _str468@page
-	add	x1, x1, _str468@pageoff
-	b	L168
-L167:
+	adrp	x1, _str404@page
+	add	x1, x1, _str404@pageoff
+	b	L154
+L153:
 	mov	x1, x20
 	mov	x23, x0
 	mov	x0, x19
@@ -1608,18 +1403,18 @@ L167:
 	mov	x1, x0
 	mov	x0, x23
 	str	x1, [x22]
-L168:
+L154:
 	str	x1, [x21]
-	b	L172
-L169:
+	b	L158
+L155:
 	mov	x0, x22
 	mov	x2, x23
-	adrp	x1, _str460@page
-	add	x1, x1, _str460@pageoff
+	adrp	x1, _str396@page
+	add	x1, x1, _str396@pageoff
 	str	x1, [x21]
-	adrp	x1, _str460@page
-	add	x1, x1, _str460@pageoff
-L172:
+	adrp	x1, _str396@page
+	add	x1, x1, _str396@pageoff
+L158:
 	mov	x21, x2
 	mov	x2, #1
 	add	x20, x20, x2
@@ -1629,7 +1424,7 @@ L172:
 	mov	x3, x0
 	mov	x0, x19
 	bl	_donna_string_slug_helper
-L173:
+L159:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1653,7 +1448,7 @@ _donna_string_is_slug_char:
 	cset	x2, le
 	and	x1, x1, x2
 	cmp	x1, #1
-	beq	L179
+	beq	L165
 	cmp	x0, #48
 	cset	x1, ge
 	cmp	x0, #57
@@ -1663,19 +1458,19 @@ _donna_string_is_slug_char:
 	sub	sp, sp, x1
 	mov	x1, sp
 	cmp	x2, #1
-	beq	L177
+	beq	L163
 	cmp	x0, #45
 	cset	x0, eq
 	str	x0, [x1]
-	b	L180
-L177:
+	b	L166
+L163:
 	mov	x0, #1
 	str	x0, [x1]
 	mov	x0, #1
-	b	L180
-L179:
+	b	L166
+L165:
 	mov	x0, #1
-L180:
+L166:
 	mov sp, x29
 	ldp	x29, x30, [sp], 16
 	ret

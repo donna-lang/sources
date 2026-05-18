@@ -34,7 +34,7 @@ _str115:
 
 .data
 .balign 8
-_str167:
+_str193:
 	.ascii "# donna.lock "
 	.byte 226
 	.byte 128
@@ -47,21 +47,21 @@ _str167:
 
 .data
 .balign 8
-_str168:
+_str194:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str181:
+_str207:
 	.ascii "[packages."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str184:
+_str210:
 	.ascii "]"
 	.byte 10
 	.byte 0
@@ -69,7 +69,7 @@ _str184:
 
 .data
 .balign 8
-_str186:
+_str212:
 	.ascii "git = "
 	.byte 34
 	.byte 0
@@ -77,7 +77,7 @@ _str186:
 
 .data
 .balign 8
-_str189:
+_str215:
 	.byte 34
 	.byte 10
 	.byte 0
@@ -85,7 +85,7 @@ _str189:
 
 .data
 .balign 8
-_str191:
+_str217:
 	.ascii "rev = "
 	.byte 34
 	.byte 0
@@ -93,7 +93,7 @@ _str191:
 
 .data
 .balign 8
-_str194:
+_str220:
 	.byte 34
 	.byte 10
 	.byte 10
@@ -102,28 +102,28 @@ _str194:
 
 .data
 .balign 8
-_str201:
+_str227:
 	.ascii ".donna_rev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str204:
+_str230:
 	.ascii ".donna_rev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str212:
+_str238:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str225:
+_str251:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -578,6 +578,92 @@ L46:
 
 .text
 .balign 4
+.globl _builder_lock_remove
+_builder_lock_remove:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	adrp	x2, _donna_nil@page
+	add	x2, x2, _donna_nil@pageoff
+	bl	_builder_lock_remove_loop
+	ldp	x29, x30, [sp], 16
+	ret
+/* end function builder_lock_remove */
+
+.text
+.balign 4
+_builder_lock_remove_loop:
+	hint	#34
+	stp	x29, x30, [sp, -64]!
+	mov	x29, sp
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	mov	x20, x2
+	ldr	x2, [x0]
+	cmp	x2, #0
+	beq	L54
+	mov	x2, #8
+	add	x2, x0, x2
+	ldr	x21, [x2]
+	mov	x22, x1
+	mov	x1, #16
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	mov	x19, x0
+	mov	x0, x21
+	bl	_builder_lock_locked_name
+	mov	x1, x22
+	mov	x23, x1
+	bl	_donna_string_equal
+	mov	x1, x0
+	mov	x0, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x1, #1
+	beq	L52
+	mov	x22, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x23
+	mov	x2, x0
+	mov	x0, x22
+	mov	x3, #1
+	str	x3, [x2]
+	mov	x3, #8
+	add	x3, x2, x3
+	str	x21, [x3]
+	mov	x3, #16
+	add	x3, x2, x3
+	str	x20, [x3]
+	bl	_builder_lock_remove_loop
+	str	x0, [x19]
+	b	L56
+L52:
+	mov	x1, x23
+	mov	x2, x20
+	bl	_builder_lock_remove_loop
+	str	x0, [x19]
+	b	L56
+L54:
+	mov	x0, x20
+	bl	_donna_list_reverse
+L56:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 64
+	ret
+/* end function builder_lock_remove_loop */
+
+.text
+.balign 4
 .globl _builder_lock_write
 _builder_lock_write:
 	hint	#34
@@ -601,12 +687,12 @@ _builder_lock_format_lock:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x1, _str168@page
-	add	x1, x1, _str168@pageoff
+	adrp	x1, _str194@page
+	add	x1, x1, _str194@pageoff
 	bl	_builder_lock_format_deps
 	mov	x1, x0
-	adrp	x0, _str167@page
-	add	x0, x0, _str167@pageoff
+	adrp	x0, _str193@page
+	add	x0, x0, _str193@pageoff
 	bl	___rt_str_concat
 	ldp	x29, x30, [sp], 16
 	ret
@@ -628,7 +714,7 @@ _builder_lock_format_deps:
 	mov	x20, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L53
+	beq	L63
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -640,11 +726,11 @@ _builder_lock_format_deps:
 	mov	x1, x0
 	mov	x0, x21
 	mov	x21, x0
-	adrp	x0, _str181@page
-	add	x0, x0, _str181@pageoff
+	adrp	x0, _str207@page
+	add	x0, x0, _str207@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str184@page
-	add	x1, x1, _str184@pageoff
+	adrp	x1, _str210@page
+	add	x1, x1, _str210@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x21
@@ -654,11 +740,11 @@ _builder_lock_format_deps:
 	mov	x1, x0
 	mov	x0, x22
 	mov	x22, x0
-	adrp	x0, _str186@page
-	add	x0, x0, _str186@pageoff
+	adrp	x0, _str212@page
+	add	x0, x0, _str212@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str189@page
-	add	x1, x1, _str189@pageoff
+	adrp	x1, _str215@page
+	add	x1, x1, _str215@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x22
@@ -667,13 +753,13 @@ _builder_lock_format_deps:
 	mov	x1, x0
 	mov	x0, x21
 	mov	x21, x0
-	adrp	x0, _str191@page
-	add	x0, x0, _str191@pageoff
+	adrp	x0, _str217@page
+	add	x0, x0, _str217@pageoff
 	bl	___rt_str_concat
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, _str194@page
-	add	x1, x1, _str194@pageoff
+	adrp	x1, _str220@page
+	add	x1, x1, _str220@pageoff
 	bl	___rt_str_concat
 	mov	x1, x22
 	mov	x17, x0
@@ -688,10 +774,10 @@ _builder_lock_format_deps:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_builder_lock_format_deps
-	b	L54
-L53:
+	b	L64
+L63:
 	mov	x0, x20
-L54:
+L64:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -709,8 +795,8 @@ _builder_lock_write_cached_rev:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x1
-	adrp	x1, _str201@page
-	add	x1, x1, _str201@pageoff
+	adrp	x1, _str227@page
+	add	x1, x1, _str227@pageoff
 	bl	_donna_files_join
 	mov	x1, x19
 	bl	_donna_files_write
@@ -727,22 +813,22 @@ _builder_lock_read_cached_rev:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, _str204@page
-	add	x1, x1, _str204@pageoff
+	adrp	x1, _str230@page
+	add	x1, x1, _str230@pageoff
 	bl	_donna_files_join
 	mov	x19, x0
 	bl	_donna_files_exists
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L59
+	beq	L69
 	bl	_donna_files_read
 	bl	_donna_string_trim
-	b	L60
-L59:
-	adrp	x0, _str212@page
-	add	x0, x0, _str212@pageoff
-L60:
+	b	L70
+L69:
+	adrp	x0, _str238@page
+	add	x0, x0, _str238@pageoff
+L70:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -757,15 +843,15 @@ _builder_lock_opt_str:
 	bl	_parsetoml_parsetoml_get_string
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	L63
+	beq	L73
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	L64
-L63:
-	adrp	x0, _str225@page
-	add	x0, x0, _str225@pageoff
-L64:
+	b	L74
+L73:
+	adrp	x0, _str251@page
+	add	x0, x0, _str251@pageoff
+L74:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function builder_lock_opt_str */

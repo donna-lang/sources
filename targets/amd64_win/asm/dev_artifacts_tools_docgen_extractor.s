@@ -389,13 +389,11 @@ tools_docgen_extractor_extract:
 	movq %rax, %rdi
 	subq $-32, %rsp
 	subq $32, %rsp
-	movq %rdx, %rbx
 	callq compiler_lexer_lexer_lex
-	movq %rbx, %rdx
 	movq %rsi, %rcx
 	subq $-32, %rsp
-	movq (%rax), %rsi
-	cmpq $1, %rsi
+	movq (%rax), %rdx
+	cmpq $1, %rdx
 	jz Lbb16
 	movq %rcx, %rsi
 	movq 8(%rax), %rcx

@@ -34,7 +34,7 @@ str115:
 
 .data
 .balign 8
-str167:
+str193:
 	.ascii "# donna.lock "
 	.byte 226
 	.byte 128
@@ -47,21 +47,21 @@ str167:
 
 .data
 .balign 8
-str168:
+str194:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str181:
+str207:
 	.ascii "[packages."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str184:
+str210:
 	.ascii "]"
 	.byte 10
 	.byte 0
@@ -69,7 +69,7 @@ str184:
 
 .data
 .balign 8
-str186:
+str212:
 	.ascii "git = "
 	.byte 34
 	.byte 0
@@ -77,7 +77,7 @@ str186:
 
 .data
 .balign 8
-str189:
+str215:
 	.byte 34
 	.byte 10
 	.byte 0
@@ -85,7 +85,7 @@ str189:
 
 .data
 .balign 8
-str191:
+str217:
 	.ascii "rev = "
 	.byte 34
 	.byte 0
@@ -93,7 +93,7 @@ str191:
 
 .data
 .balign 8
-str194:
+str220:
 	.byte 34
 	.byte 10
 	.byte 10
@@ -102,28 +102,28 @@ str194:
 
 .data
 .balign 8
-str201:
+str227:
 	.ascii ".donna_rev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str204:
+str230:
 	.ascii ".donna_rev"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str212:
+str238:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str225:
+str251:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -561,6 +561,97 @@ Lbb43:
 
 .text
 .balign 16
+.globl builder_lock_remove
+builder_lock_remove:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $32, %rsp
+	leaq donna_nil(%rip), %r8
+	callq builder_lock_remove_loop
+	subq $-32, %rsp
+	leave
+	ret
+/* end function builder_lock_remove */
+
+.text
+.balign 16
+builder_lock_remove_loop:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	pushq %rsi
+	pushq %rdi
+	movq %r8, %rdi
+	movq %rdx, %r12
+	movq (%rcx), %rax
+	cmpq $0, %rax
+	jz Lbb51
+	movq 8(%rcx), %rbx
+	movq 16(%rcx), %rcx
+	subq $32, %rsp
+	movq %rcx, %rsi
+	movq %rbx, %rcx
+	callq builder_lock_locked_name
+	movq %r12, %rdx
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rdx, %r13
+	callq donna_string_equal
+	movq %rsi, %rcx
+	subq $-32, %rsp
+	subq $16, %rsp
+	movq %rsp, %rsi
+	cmpq $1, %rax
+	jz Lbb49
+	subq $32, %rsp
+	movq %rcx, %r12
+	movl $24, %ecx
+	callq malloc
+	movq %r13, %rdx
+	movq %r12, %rcx
+	movq %rax, %r8
+	subq $-32, %rsp
+	movq $1, (%r8)
+	movq %rbx, 8(%r8)
+	movq %rdi, 16(%r8)
+	subq $32, %rsp
+	callq builder_lock_remove_loop
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb53
+Lbb49:
+	movq %r13, %rdx
+	subq $32, %rsp
+	movq %rdi, %r8
+	callq builder_lock_remove_loop
+	subq $-32, %rsp
+	movq %rax, (%rsi)
+	jmp Lbb53
+Lbb51:
+	movq %rdi, %rcx
+	subq $32, %rsp
+	callq donna_list_reverse
+	subq $-32, %rsp
+Lbb53:
+	movq %rbp, %rsp
+	subq $48, %rsp
+	popq %rdi
+	popq %rsi
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+/* end function builder_lock_remove_loop */
+
+.text
+.balign 16
 .globl builder_lock_write
 builder_lock_write:
 	endbr64
@@ -590,12 +681,12 @@ builder_lock_format_lock:
 	pushq %rbp
 	movq %rsp, %rbp
 	subq $32, %rsp
-	leaq str168(%rip), %rdx
+	leaq str194(%rip), %rdx
 	callq builder_lock_format_deps
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str167(%rip), %rcx
+	leaq str193(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	leave
@@ -616,7 +707,7 @@ builder_lock_format_deps:
 	movq %rcx, %rax
 	movq (%rax), %rcx
 	cmpq $0, %rcx
-	jz Lbb50
+	jz Lbb60
 	movq 8(%rax), %rcx
 	movq 16(%rax), %rdi
 	subq $32, %rsp
@@ -627,12 +718,12 @@ builder_lock_format_deps:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rbx
-	leaq str181(%rip), %rcx
+	leaq str207(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str184(%rip), %rdx
+	leaq str210(%rip), %rdx
 	callq __rt_str_concat
 	movq %rbx, %rcx
 	movq %rax, %rbx
@@ -645,12 +736,12 @@ builder_lock_format_deps:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %r12
-	leaq str186(%rip), %rcx
+	leaq str212(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str189(%rip), %rdx
+	leaq str215(%rip), %rdx
 	callq __rt_str_concat
 	movq %r12, %rcx
 	movq %rax, %r12
@@ -662,14 +753,14 @@ builder_lock_format_deps:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rbx
-	leaq str191(%rip), %rcx
+	leaq str217(%rip), %rcx
 	callq __rt_str_concat
 	movq %r12, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %r12
-	leaq str194(%rip), %rdx
+	leaq str220(%rip), %rdx
 	callq __rt_str_concat
 	movq %r12, %rdx
 	movq %rbx, %rcx
@@ -696,10 +787,10 @@ builder_lock_format_deps:
 	subq $32, %rsp
 	callq builder_lock_format_deps
 	subq $-32, %rsp
-	jmp Lbb51
-Lbb50:
+	jmp Lbb61
+Lbb60:
 	movq %rsi, %rax
-Lbb51:
+Lbb61:
 	popq %rdi
 	popq %rsi
 	popq %r12
@@ -719,7 +810,7 @@ builder_lock_write_cached_rev:
 	pushq %rsi
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str201(%rip), %rdx
+	leaq str227(%rip), %rdx
 	callq donna_files_join
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -742,7 +833,7 @@ builder_lock_read_cached_rev:
 	subq $8, %rsp
 	pushq %rsi
 	subq $32, %rsp
-	leaq str204(%rip), %rdx
+	leaq str230(%rip), %rdx
 	callq donna_files_join
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -752,7 +843,7 @@ builder_lock_read_cached_rev:
 	movq %rsi, %rcx
 	subq $-32, %rsp
 	cmpq $0, %rax
-	jz Lbb56
+	jz Lbb66
 	subq $32, %rsp
 	callq donna_files_read
 	movq %rax, %rcx
@@ -760,10 +851,10 @@ builder_lock_read_cached_rev:
 	subq $32, %rsp
 	callq donna_string_trim
 	subq $-32, %rsp
-	jmp Lbb57
-Lbb56:
-	leaq str212(%rip), %rax
-Lbb57:
+	jmp Lbb67
+Lbb66:
+	leaq str238(%rip), %rax
+Lbb67:
 	popq %rsi
 	leave
 	ret
@@ -780,12 +871,12 @@ builder_lock_opt_str:
 	subq $-32, %rsp
 	movq (%rax), %rcx
 	cmpq $1, %rcx
-	jz Lbb60
+	jz Lbb70
 	movq 8(%rax), %rax
-	jmp Lbb61
-Lbb60:
-	leaq str225(%rip), %rax
-Lbb61:
+	jmp Lbb71
+Lbb70:
+	leaq str251(%rip), %rax
+Lbb71:
 	leave
 	ret
 /* end function builder_lock_opt_str */

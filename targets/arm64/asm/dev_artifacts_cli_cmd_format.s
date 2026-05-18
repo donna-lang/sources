@@ -28,118 +28,76 @@ donna_nil:
 .data
 .balign 8
 str39:
-	.ascii "  no changes"
+	.ascii "no changes"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str41:
-	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str44:
+str42:
 	.ascii " file(s) changed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str69:
+str67:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str97:
+str95:
 	.ascii "src/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str112:
+str110:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str133:
+str131:
 	.ascii "skip (parse error): "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str153:
+str151:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str155:
+str153:
 	.ascii ": file not found: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str169:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str171:
-	.ascii ": "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str182:
-	.ascii "formatted"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str184:
-	.ascii "  no changes"
+str175:
+	.ascii "no changes"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str188:
-	.ascii "formatted"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str190:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str203:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str216:
+str201:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -211,20 +169,16 @@ cli_cmd_format_format_project:
 	cmp	x1, #1
 	beq	.L7
 	bl	donna_string_from_int
-	mov	x1, x0
-	adrp	x0, str41
-	add	x0, x0, #:lo12:str41
+	adrp	x1, str42
+	add	x1, x1, #:lo12:str42
 	bl	__rt_str_concat
-	adrp	x1, str44
-	add	x1, x1, #:lo12:str44
-	bl	__rt_str_concat
-	bl	utilities_colors_dim
+	bl	utilities_logger_format_summary
 	str	x0, [x19]
 	b	.L9
 .L7:
 	adrp	x0, str39
 	add	x0, x0, #:lo12:str39
-	bl	utilities_colors_dim
+	bl	utilities_logger_format_summary
 	str	x0, [x19]
 	b	.L9
 .L8:
@@ -318,8 +272,8 @@ cli_cmd_format_collect_entries:
 	cmp	x2, #1
 	beq	.L20
 	mov	x24, x1
-	adrp	x1, str69
-	add	x1, x1, #:lo12:str69
+	adrp	x1, str67
+	add	x1, x1, #:lo12:str67
 	bl	donna_string_ends_with
 	mov	x1, x0
 	mov	x0, x21
@@ -429,8 +383,8 @@ cli_cmd_format_path_to_module:
 	str	x19, [x29, 40]
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
-	adrp	x1, str97
-	add	x1, x1, #:lo12:str97
+	adrp	x1, str95
+	add	x1, x1, #:lo12:str95
 	mov	x19, x0
 	bl	donna_string_index_of
 	mov	x17, x0
@@ -452,8 +406,8 @@ cli_cmd_format_path_to_module:
 	sub	x2, x2, x3
 	bl	donna_string_slice
 .L31:
-	adrp	x1, str112
-	add	x1, x1, #:lo12:str112
+	adrp	x1, str110
+	add	x1, x1, #:lo12:str110
 	mov	x19, x0
 	bl	donna_string_ends_with
 	mov	x1, x0
@@ -534,8 +488,8 @@ cli_cmd_format_format_one:
 	b	.L44
 .L41:
 	mov	x1, x20
-	adrp	x0, str133
-	add	x0, x0, #:lo12:str133
+	adrp	x0, str131
+	add	x0, x0, #:lo12:str131
 	bl	__rt_str_concat
 	bl	utilities_logger_step
 	mov	x0, #0
@@ -591,33 +545,13 @@ cli_cmd_format_format_file:
 	mov	x21, x0
 	bl	donna_files_write
 	mov	x0, x21
-	mov	x21, x0
-	adrp	x0, str188
-	add	x0, x0, #:lo12:str188
-	bl	utilities_colors_green
-	adrp	x1, str190
-	add	x1, x1, #:lo12:str190
-	bl	__rt_str_concat
-	mov	x17, x0
-	mov	x0, x21
-	mov	x21, x17
-	bl	utilities_colors_dim
-	mov	x1, x0
-	mov	x0, x21
-	bl	__rt_str_concat
+	bl	utilities_logger_format_summary
 	str	x0, [x20]
 	b	.L50
 .L49:
-	adrp	x0, str182
-	add	x0, x0, #:lo12:str182
-	bl	utilities_colors_green
-	mov	x21, x0
-	adrp	x0, str184
-	add	x0, x0, #:lo12:str184
-	bl	utilities_colors_dim
-	mov	x1, x0
-	mov	x0, x21
-	bl	__rt_str_concat
+	adrp	x0, str175
+	add	x0, x0, #:lo12:str175
+	bl	utilities_logger_format_summary
 	str	x0, [x20]
 .L50:
 	str	x0, [x19]
@@ -626,27 +560,17 @@ cli_cmd_format_format_file:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x20, [x0]
-	adrp	x0, str169
-	add	x0, x0, #:lo12:str169
-	bl	utilities_colors_red
-	mov	x1, x20
-	mov	x20, x1
-	adrp	x1, str171
-	add	x1, x1, #:lo12:str171
-	bl	__rt_str_concat
-	mov	x1, x20
-	bl	__rt_str_concat
+	ldr	x0, [x0]
 	str	x0, [x19]
 	b	.L55
 .L53:
 	mov	x0, x20
 	mov	x19, x0
-	adrp	x0, str153
-	add	x0, x0, #:lo12:str153
+	adrp	x0, str151
+	add	x0, x0, #:lo12:str151
 	bl	utilities_colors_red
-	adrp	x1, str155
-	add	x1, x1, #:lo12:str155
+	adrp	x1, str153
+	add	x1, x1, #:lo12:str153
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -692,8 +616,8 @@ cli_cmd_format_first_positional:
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, str216
-	add	x1, x1, #:lo12:str216
+	adrp	x1, str201
+	add	x1, x1, #:lo12:str201
 	bl	strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -719,8 +643,8 @@ cli_cmd_format_first_positional:
 	ldr	x0, [x0]
 	b	.L65
 .L64:
-	adrp	x0, str203
-	add	x0, x0, #:lo12:str203
+	adrp	x0, str188
+	add	x0, x0, #:lo12:str188
 .L65:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]

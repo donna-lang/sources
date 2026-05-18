@@ -28,118 +28,76 @@ donna_nil:
 .data
 .balign 8
 str39:
-	.ascii "  no changes"
+	.ascii "no changes"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str41:
-	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str44:
+str42:
 	.ascii " file(s) changed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str69:
+str67:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str97:
+str95:
 	.ascii "src/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str112:
+str110:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str133:
+str131:
 	.ascii "skip (parse error): "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str153:
+str151:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str155:
+str153:
 	.ascii ": file not found: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str169:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str171:
-	.ascii ": "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str182:
-	.ascii "formatted"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str184:
-	.ascii "  no changes"
+str175:
+	.ascii "no changes"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str188:
-	.ascii "formatted"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str190:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str203:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str216:
+str201:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -215,19 +173,16 @@ cli_cmd_format_format_project:
 	cmpq $1, %rax
 	jz .Lbb7
 	callq donna_string_from_int
-	movq %rax, %rsi
-	leaq str41(%rip), %rdi
+	movq %rax, %rdi
+	leaq str42(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
-	leaq str44(%rip), %rsi
-	callq __rt_str_concat
-	movq %rax, %rdi
-	callq utilities_colors_dim
+	callq utilities_logger_format_summary
 	movq %rax, (%rbx)
 	jmp .Lbb9
 .Lbb7:
 	leaq str39(%rip), %rdi
-	callq utilities_colors_dim
+	callq utilities_logger_format_summary
 	movq %rax, (%rbx)
 	jmp .Lbb9
 .Lbb8:
@@ -314,7 +269,7 @@ cli_cmd_format_collect_entries:
 	cmpq $1, %rax
 	jz .Lbb20
 	movq %rsi, %r15
-	leaq str69(%rip), %rsi
+	leaq str67(%rip), %rsi
 	callq donna_string_ends_with
 	movq %r13, %rdi
 	subq $16, %rsp
@@ -414,7 +369,7 @@ cli_cmd_format_path_to_module:
 	pushq %r12
 	pushq %r13
 	movq %rdi, %rbx
-	leaq str97(%rip), %rsi
+	leaq str95(%rip), %rsi
 	movq %rbx, %rdi
 	callq donna_string_index_of
 	xchgq %rax, %rbx
@@ -441,7 +396,7 @@ cli_cmd_format_path_to_module:
 	movq %r12, %rax
 .Lbb32:
 	movq %rax, %r12
-	leaq str112(%rip), %rsi
+	leaq str110(%rip), %rsi
 	movq %r12, %rdi
 	callq donna_string_ends_with
 	subq $16, %rsp
@@ -518,7 +473,7 @@ cli_cmd_format_format_one:
 	jmp .Lbb46
 .Lbb43:
 	movq %r12, %rsi
-	leaq str133(%rip), %rdi
+	leaq str131(%rip), %rdi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	callq utilities_logger_step
@@ -575,55 +530,27 @@ cli_cmd_format_format_file:
 	movq %rdi, %r13
 	callq donna_files_write
 	movq %r13, %rdi
-	movq %rdi, %r13
-	leaq str188(%rip), %rdi
-	callq utilities_colors_green
-	movq %rax, %rdi
-	leaq str190(%rip), %rsi
-	callq __rt_str_concat
-	movq %r13, %rdi
-	movq %rax, %r13
-	callq utilities_colors_dim
-	movq %r13, %rdi
-	movq %rax, %rsi
-	callq __rt_str_concat
+	callq utilities_logger_format_summary
 	movq %rax, (%r12)
 	jmp .Lbb52
 .Lbb51:
-	leaq str182(%rip), %rdi
-	callq utilities_colors_green
-	movq %rax, %rdi
-	movq %rdi, %r13
-	leaq str184(%rip), %rdi
-	callq utilities_colors_dim
-	movq %r13, %rdi
-	movq %rax, %rsi
-	callq __rt_str_concat
+	leaq str175(%rip), %rdi
+	callq utilities_logger_format_summary
 	movq %rax, (%r12)
 .Lbb52:
 	movq %rax, (%rbx)
 	jmp .Lbb56
 .Lbb53:
-	movq 8(%rax), %r12
-	leaq str169(%rip), %rdi
-	callq utilities_colors_red
-	movq %r12, %rsi
-	movq %rax, %rdi
-	movq %rsi, %r12
-	leaq str171(%rip), %rsi
-	callq __rt_str_concat
-	movq %r12, %rsi
-	movq %rax, %rdi
-	callq __rt_str_concat
+	movq 8(%rax), %rax
 	movq %rax, (%rbx)
 	jmp .Lbb56
 .Lbb54:
 	movq %r12, %rdi
 	movq %rdi, %rbx
-	leaq str153(%rip), %rdi
+	leaq str151(%rip), %rdi
 	callq utilities_colors_red
 	movq %rax, %rdi
-	leaq str155(%rip), %rsi
+	leaq str153(%rip), %rsi
 	callq __rt_str_concat
 	movq %rbx, %rdi
 	movq %rax, %rbx
@@ -668,7 +595,7 @@ cli_cmd_format_first_positional:
 	movq 8(%rdi), %rax
 	movq %rdi, %r12
 	movq (%rax), %rdi
-	leaq str216(%rip), %rsi
+	leaq str201(%rip), %rsi
 	callq strcmp
 	movq %r12, %rdi
 	cmpq $0, %rax
@@ -687,7 +614,7 @@ cli_cmd_format_first_positional:
 	movq 8(%rax), %rax
 	jmp .Lbb66
 .Lbb65:
-	leaq str203(%rip), %rax
+	leaq str188(%rip), %rax
 .Lbb66:
 	movq %rbp, %rsp
 	subq $16, %rsp

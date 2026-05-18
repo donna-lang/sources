@@ -396,9 +396,7 @@ tools_docgen_extractor_extract:
 	movq %r13, %rsi
 	movq %r12, %rdi
 	movq %rax, %r12
-	movq %rsi, %r13
 	callq compiler_lexer_lexer_lex
-	movq %r13, %rsi
 	movq %rbx, %rdi
 	movq (%rax), %rcx
 	cmpq $1, %rcx

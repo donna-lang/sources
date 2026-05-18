@@ -444,18 +444,15 @@ tools_docgen_extractor_extract:
 	mov	x19, x0
 	bl	tools_docgen_extractor_scan_doc_comments
 	mov	x1, x21
-	mov	x21, x0
+	mov	x17, x0
 	mov	x0, x19
-	mov	x19, x1
+	mov	x19, x17
 	bl	compiler_lexer_lexer_lex
-	mov	x2, x21
-	mov	x1, x19
-	ldr	x3, [x0]
-	cmp	x3, #1
+	ldr	x1, [x0]
+	cmp	x1, #1
 	beq	.L17
-	mov	x19, x2
-	mov	x2, #8
-	add	x0, x0, x2
+	mov	x1, #8
+	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	compiler_parser_parser_parse
 	mov	x2, x19

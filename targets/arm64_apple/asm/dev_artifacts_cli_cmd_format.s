@@ -28,118 +28,76 @@ _donna_nil:
 .data
 .balign 8
 _str39:
-	.ascii "  no changes"
+	.ascii "no changes"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str41:
-	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str44:
+_str42:
 	.ascii " file(s) changed"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str69:
+_str67:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str97:
+_str95:
 	.ascii "src/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str112:
+_str110:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str133:
+_str131:
 	.ascii "skip (parse error): "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str153:
+_str151:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str155:
+_str153:
 	.ascii ": file not found: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str169:
-	.ascii "error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str171:
-	.ascii ": "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str182:
-	.ascii "formatted"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str184:
-	.ascii "  no changes"
+_str175:
+	.ascii "no changes"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str188:
-	.ascii "formatted"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str190:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str203:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str216:
+_str201:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -209,20 +167,16 @@ _cli_cmd_format_format_project:
 	cmp	x1, #1
 	beq	L7
 	bl	_donna_string_from_int
-	mov	x1, x0
-	adrp	x0, _str41@page
-	add	x0, x0, _str41@pageoff
+	adrp	x1, _str42@page
+	add	x1, x1, _str42@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str44@page
-	add	x1, x1, _str44@pageoff
-	bl	___rt_str_concat
-	bl	_utilities_colors_dim
+	bl	_utilities_logger_format_summary
 	str	x0, [x19]
 	b	L9
 L7:
 	adrp	x0, _str39@page
 	add	x0, x0, _str39@pageoff
-	bl	_utilities_colors_dim
+	bl	_utilities_logger_format_summary
 	str	x0, [x19]
 	b	L9
 L8:
@@ -312,8 +266,8 @@ _cli_cmd_format_collect_entries:
 	cmp	x2, #1
 	beq	L20
 	mov	x24, x1
-	adrp	x1, _str69@page
-	add	x1, x1, _str69@pageoff
+	adrp	x1, _str67@page
+	add	x1, x1, _str67@pageoff
 	bl	_donna_string_ends_with
 	mov	x1, x0
 	mov	x0, x21
@@ -419,8 +373,8 @@ _cli_cmd_format_path_to_module:
 	str	x19, [x29, 40]
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
-	adrp	x1, _str97@page
-	add	x1, x1, _str97@pageoff
+	adrp	x1, _str95@page
+	add	x1, x1, _str95@pageoff
 	mov	x19, x0
 	bl	_donna_string_index_of
 	mov	x17, x0
@@ -442,8 +396,8 @@ _cli_cmd_format_path_to_module:
 	sub	x2, x2, x3
 	bl	_donna_string_slice
 L31:
-	adrp	x1, _str112@page
-	add	x1, x1, _str112@pageoff
+	adrp	x1, _str110@page
+	add	x1, x1, _str110@pageoff
 	mov	x19, x0
 	bl	_donna_string_ends_with
 	mov	x1, x0
@@ -522,8 +476,8 @@ L39:
 	b	L44
 L41:
 	mov	x1, x20
-	adrp	x0, _str133@page
-	add	x0, x0, _str133@pageoff
+	adrp	x0, _str131@page
+	add	x0, x0, _str131@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_logger_step
 	mov	x0, #0
@@ -577,33 +531,13 @@ _cli_cmd_format_format_file:
 	mov	x21, x0
 	bl	_donna_files_write
 	mov	x0, x21
-	mov	x21, x0
-	adrp	x0, _str188@page
-	add	x0, x0, _str188@pageoff
-	bl	_utilities_colors_green
-	adrp	x1, _str190@page
-	add	x1, x1, _str190@pageoff
-	bl	___rt_str_concat
-	mov	x17, x0
-	mov	x0, x21
-	mov	x21, x17
-	bl	_utilities_colors_dim
-	mov	x1, x0
-	mov	x0, x21
-	bl	___rt_str_concat
+	bl	_utilities_logger_format_summary
 	str	x0, [x20]
 	b	L50
 L49:
-	adrp	x0, _str182@page
-	add	x0, x0, _str182@pageoff
-	bl	_utilities_colors_green
-	mov	x21, x0
-	adrp	x0, _str184@page
-	add	x0, x0, _str184@pageoff
-	bl	_utilities_colors_dim
-	mov	x1, x0
-	mov	x0, x21
-	bl	___rt_str_concat
+	adrp	x0, _str175@page
+	add	x0, x0, _str175@pageoff
+	bl	_utilities_logger_format_summary
 	str	x0, [x20]
 L50:
 	str	x0, [x19]
@@ -612,27 +546,17 @@ L51:
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x20, [x0]
-	adrp	x0, _str169@page
-	add	x0, x0, _str169@pageoff
-	bl	_utilities_colors_red
-	mov	x1, x20
-	mov	x20, x1
-	adrp	x1, _str171@page
-	add	x1, x1, _str171@pageoff
-	bl	___rt_str_concat
-	mov	x1, x20
-	bl	___rt_str_concat
+	ldr	x0, [x0]
 	str	x0, [x19]
 	b	L55
 L53:
 	mov	x0, x20
 	mov	x19, x0
-	adrp	x0, _str153@page
-	add	x0, x0, _str153@pageoff
+	adrp	x0, _str151@page
+	add	x0, x0, _str151@pageoff
 	bl	_utilities_colors_red
-	adrp	x1, _str155@page
-	add	x1, x1, _str155@pageoff
+	adrp	x1, _str153@page
+	add	x1, x1, _str153@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -676,8 +600,8 @@ L60:
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, _str216@page
-	add	x1, x1, _str216@pageoff
+	adrp	x1, _str201@page
+	add	x1, x1, _str201@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -703,8 +627,8 @@ L63:
 	ldr	x0, [x0]
 	b	L65
 L64:
-	adrp	x0, _str203@page
-	add	x0, x0, _str203@pageoff
+	adrp	x0, _str188@page
+	add	x0, x0, _str188@pageoff
 L65:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]

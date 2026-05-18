@@ -235,692 +235,811 @@ str108:
 .data
 .balign 8
 str110:
-	.ascii "docs"
+	.ascii "deps"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str111:
-	.ascii "Generate HTML documentation"
+	.ascii "Manage package dependencies"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str113:
-	.ascii "format"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str114:
-	.ascii "Format source files (alias: fmt)"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str116:
-	.ascii "new"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str117:
-	.ascii "Create a new project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str119:
-	.ascii "run"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str120:
-	.ascii "Build and run the project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str122:
-	.ascii "test"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str123:
-	.ascii "Run the project tests"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str125:
-	.ascii "version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str126:
-	.ascii "Print the compiler version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str128:
-	.ascii "help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str129:
-	.ascii "Show help for Donna or a command"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str161:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str163:
-	.ascii "build"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str164:
-	.ascii "Build the project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str165:
-	.ascii "donna build [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str166:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str167:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str174:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str175:
-	.ascii "Build another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str183:
-	.ascii "check"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str184:
-	.ascii "Type check the project entry module"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str185:
-	.ascii "donna check [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str186:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str187:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str194:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str195:
-	.ascii "Check another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str203:
-	.ascii "clean"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str204:
-	.ascii "Delete generated files"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str205:
-	.ascii "donna clean [DIR] [--docs] [--lock] [--all]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str206:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str207:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str214:
-	.ascii "--all"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str215:
-	.ascii "Delete build/, docs/, and donna.lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str222:
-	.ascii "--lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str223:
-	.ascii "Also delete donna.lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str230:
-	.ascii "--docs"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str231:
-	.ascii "Also delete generated docs/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str238:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str239:
-	.ascii "Clean another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str247:
 	.ascii "docs"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str248:
+str114:
 	.ascii "Generate HTML documentation"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str249:
-	.ascii "donna docs [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str250:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str251:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str258:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str259:
-	.ascii "Generate docs for another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str267:
+str116:
 	.ascii "format"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str268:
-	.ascii "Format Donna source files"
+str117:
+	.ascii "Format source files (alias: fmt)"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str269:
-	.ascii "donna format [DIR|FILE]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str270:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str271:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str278:
-	.ascii "FILE"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str279:
-	.ascii "Format one .donna file"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str286:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str287:
-	.ascii "Format all .donna files in a project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str295:
+str119:
 	.ascii "new"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str296:
-	.ascii "Create a new Donna project"
+str120:
+	.ascii "Create a new project"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str297:
-	.ascii "donna new <NAME>"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str298:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str299:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str306:
-	.ascii "NAME"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str307:
-	.ascii "Directory and package name for the new project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str315:
+str122:
 	.ascii "run"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str316:
-	.ascii "Build and run an application project"
+str123:
+	.ascii "Build and run the project"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str317:
-	.ascii "donna run [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str318:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str319:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str326:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str327:
-	.ascii "Run another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str335:
+str125:
 	.ascii "test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str336:
+str126:
 	.ascii "Run the project tests"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str337:
-	.ascii "donna test [DIR] [FILTER] | donna test --only FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str338:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str339:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str346:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str347:
-	.ascii "Run tests in another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str354:
-	.ascii "FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str355:
-	.ascii "Run matching tests in the current project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str362:
-	.ascii "--only FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str363:
-	.ascii "Run tests whose module or function name contains FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str371:
+str128:
 	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str372:
+str129:
 	.ascii "Print the compiler version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str373:
-	.ascii "donna version"
+str131:
+	.ascii "help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str374:
-	.ascii "-h, --help"
+str132:
+	.ascii "Show help for Donna or a command"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str375:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str382:
-	.ascii "-V, --version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str383:
-	.ascii "Print version from the top-level command"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str391:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str392:
-	.ascii "Print help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str397:
-	.ascii "-V, --version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str398:
-	.ascii "Print version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str409:
+str167:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str411:
-	.ascii "  "
+str169:
+	.ascii "build"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str422:
-	.ascii "  "
+str170:
+	.ascii "Build the project"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str438:
-	.ascii " "
+str171:
+	.ascii "donna build [DIR] [--release] [--target TARGET]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str172:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str173:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str180:
+	.ascii "--target TARGET"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str181:
+	.ascii "Release target name, or all"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str188:
+	.ascii "--release"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str189:
+	.ascii "Build optimized output under build/release/target/<target>/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str196:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str197:
+	.ascii "Build another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str205:
+	.ascii "check"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str206:
+	.ascii "Type check the project entry module"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str207:
+	.ascii "donna check [DIR]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str208:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str209:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str216:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str217:
+	.ascii "Check another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str225:
+	.ascii "clean"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str226:
+	.ascii "Delete generated files"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str227:
+	.ascii "donna clean [DIR] [--docs] [--lock] [--all]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str228:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str229:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str236:
+	.ascii "--all"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str237:
+	.ascii "Delete build/, docs/, and donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str244:
+	.ascii "--lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str245:
+	.ascii "Also delete donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str252:
+	.ascii "--docs"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str253:
+	.ascii "Also delete generated docs/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str260:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str261:
+	.ascii "Clean another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str269:
+	.ascii "deps"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str270:
+	.ascii "Manage package dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str271:
+	.ascii "donna deps <COMMAND>"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str272:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str273:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str280:
+	.ascii "tree"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str281:
+	.ascii "Show resolved dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str288:
+	.ascii "update [NAME]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str289:
+	.ascii "Refresh all dependencies or one dependency"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str296:
+	.ascii "clean [NAME]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str297:
+	.ascii "Remove all cached packages or one cached package"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str305:
+	.ascii "docs"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str306:
+	.ascii "Generate HTML documentation"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str307:
+	.ascii "donna docs [DIR]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str308:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str309:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str316:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str317:
+	.ascii "Generate docs for another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str325:
+	.ascii "format"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str326:
+	.ascii "Format Donna source files"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str327:
+	.ascii "donna format [DIR|FILE]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str328:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str329:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str336:
+	.ascii "FILE"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str337:
+	.ascii "Format one .donna file"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str344:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str345:
+	.ascii "Format all .donna files in a project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str353:
+	.ascii "new"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str354:
+	.ascii "Create a new Donna project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str355:
+	.ascii "donna new <NAME>"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str356:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str357:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str364:
+	.ascii "NAME"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str365:
+	.ascii "Directory and package name for the new project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str373:
+	.ascii "run"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str374:
+	.ascii "Build and run an application project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str375:
+	.ascii "donna run [DIR]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str376:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str377:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str384:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str385:
+	.ascii "Run another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str393:
+	.ascii "test"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str394:
+	.ascii "Run the project tests"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str395:
+	.ascii "donna test [DIR] [FILTER] | donna test --only FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str396:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str397:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str404:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str405:
+	.ascii "Run tests in another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str412:
+	.ascii "FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str413:
+	.ascii "Run matching tests in the current project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str420:
+	.ascii "--only FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str421:
+	.ascii "Run tests whose module or function name contains FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str429:
+	.ascii "version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str430:
+	.ascii "Print the compiler version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str431:
+	.ascii "donna version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str432:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str433:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str440:
+	.ascii "-V, --version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str441:
+	.ascii "Print version from the top-level command"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str449:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str450:
+	.ascii "Print help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str455:
+	.ascii "-V, --version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str456:
+	.ascii "Print version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str467:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str469:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str480:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str496:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str499:
 	.ascii "  "
 	.byte 0
 /* end data */
@@ -1224,6 +1343,10 @@ cli_help_commands_block:
 	leaq str129(%rip), %rsi
 	leaq str128(%rip), %rdi
 	callq cli_help_command_row
+	movq %rax, -8(%rbp)
+	leaq str132(%rip), %rsi
+	leaq str131(%rip), %rdi
+	callq cli_help_command_row
 	movq %rax, %r13
 	movl $24, %edi
 	callq malloc
@@ -1231,6 +1354,13 @@ cli_help_commands_block:
 	movq %r13, 8(%rax)
 	movq %rax, %r13
 	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%r13)
+	movl $24, %edi
+	callq malloc
+	xchgq %rax, %r13
+	movq -8(%rbp), %rcx
+	movq $1, (%r13)
+	movq %rcx, 8(%r13)
 	movq %rax, 16(%r13)
 	movl $24, %edi
 	callq malloc
@@ -1291,7 +1421,7 @@ cli_help_commands_block:
 	movq $1, (%rdi)
 	movq %r12, 8(%rdi)
 	movq %rbx, 16(%rdi)
-	leaq str161(%rip), %rsi
+	leaq str167(%rip), %rsi
 	callq donna_string_join
 	popq %r15
 	popq %r14
@@ -1311,14 +1441,16 @@ cli_help_build_help:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
+	subq $8, %rsp
 	pushq %rbx
 	pushq %r12
+	pushq %r13
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str166(%rip), %rax
+	leaq str172(%rip), %rax
 	movq %rax, (%r12)
-	leaq str167(%rip), %rax
+	leaq str173(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1329,10 +1461,36 @@ cli_help_build_help:
 	movq %rax, 16(%rbx)
 	movl $16, %edi
 	callq malloc
+	movq %rax, %r13
+	leaq str180(%rip), %rax
+	movq %rax, (%r13)
+	leaq str181(%rip), %rax
+	movq %rax, 8(%r13)
+	movl $24, %edi
+	callq malloc
 	movq %rax, %r12
-	leaq str174(%rip), %rax
+	movq $1, (%r12)
+	movq %r13, 8(%r12)
+	movq %rbx, 16(%r12)
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r13
+	leaq str188(%rip), %rax
+	movq %rax, (%r13)
+	leaq str189(%rip), %rax
+	movq %rax, 8(%r13)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %r13, 8(%rbx)
+	movq %r12, 16(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r12
+	leaq str196(%rip), %rax
 	movq %rax, (%r12)
-	leaq str175(%rip), %rax
+	leaq str197(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1340,10 +1498,11 @@ cli_help_build_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str165(%rip), %rdx
-	leaq str164(%rip), %rsi
-	leaq str163(%rip), %rdi
+	leaq str171(%rip), %rdx
+	leaq str170(%rip), %rsi
+	leaq str169(%rip), %rdi
 	callq cli_help_command_help
+	popq %r13
 	popq %r12
 	popq %rbx
 	leave
@@ -1364,9 +1523,9 @@ cli_help_check_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str186(%rip), %rax
+	leaq str208(%rip), %rax
 	movq %rax, (%r12)
-	leaq str187(%rip), %rax
+	leaq str209(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1378,9 +1537,9 @@ cli_help_check_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str194(%rip), %rax
+	leaq str216(%rip), %rax
 	movq %rax, (%r12)
-	leaq str195(%rip), %rax
+	leaq str217(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1388,9 +1547,9 @@ cli_help_check_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str185(%rip), %rdx
-	leaq str184(%rip), %rsi
-	leaq str183(%rip), %rdi
+	leaq str207(%rip), %rdx
+	leaq str206(%rip), %rsi
+	leaq str205(%rip), %rdi
 	callq cli_help_command_help
 	popq %r12
 	popq %rbx
@@ -1414,9 +1573,9 @@ cli_help_clean_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %rbx
-	leaq str206(%rip), %rax
+	leaq str228(%rip), %rax
 	movq %rax, (%rbx)
-	leaq str207(%rip), %rax
+	leaq str229(%rip), %rax
 	movq %rax, 8(%rbx)
 	movl $24, %edi
 	callq malloc
@@ -1428,9 +1587,9 @@ cli_help_clean_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r13
-	leaq str214(%rip), %rax
+	leaq str236(%rip), %rax
 	movq %rax, (%r13)
-	leaq str215(%rip), %rax
+	leaq str237(%rip), %rax
 	movq %rax, 8(%r13)
 	movl $24, %edi
 	callq malloc
@@ -1441,9 +1600,9 @@ cli_help_clean_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r13
-	leaq str222(%rip), %rax
+	leaq str244(%rip), %rax
 	movq %rax, (%r13)
-	leaq str223(%rip), %rax
+	leaq str245(%rip), %rax
 	movq %rax, 8(%r13)
 	movl $24, %edi
 	callq malloc
@@ -1454,9 +1613,9 @@ cli_help_clean_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r13
-	leaq str230(%rip), %rax
+	leaq str252(%rip), %rax
 	movq %rax, (%r13)
-	leaq str231(%rip), %rax
+	leaq str253(%rip), %rax
 	movq %rax, 8(%r13)
 	movl $24, %edi
 	callq malloc
@@ -1467,9 +1626,9 @@ cli_help_clean_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str238(%rip), %rax
+	leaq str260(%rip), %rax
 	movq %rax, (%r12)
-	leaq str239(%rip), %rax
+	leaq str261(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1477,9 +1636,9 @@ cli_help_clean_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str205(%rip), %rdx
-	leaq str204(%rip), %rsi
-	leaq str203(%rip), %rdi
+	leaq str227(%rip), %rdx
+	leaq str226(%rip), %rsi
+	leaq str225(%rip), %rdi
 	callq cli_help_command_help
 	popq %r13
 	popq %r12
@@ -1489,6 +1648,83 @@ cli_help_clean_help:
 .type cli_help_clean_help, @function
 .size cli_help_clean_help, .-cli_help_clean_help
 /* end function cli_help_clean_help */
+
+.text
+.balign 16
+.globl cli_help_deps_help
+cli_help_deps_help:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rbx
+	pushq %r12
+	pushq %r13
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r12
+	leaq str272(%rip), %rax
+	movq %rax, (%r12)
+	leaq str273(%rip), %rax
+	movq %rax, 8(%r12)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %r12, 8(%rbx)
+	leaq donna_nil(%rip), %rax
+	movq %rax, 16(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r13
+	leaq str280(%rip), %rax
+	movq %rax, (%r13)
+	leaq str281(%rip), %rax
+	movq %rax, 8(%r13)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %r12
+	movq $1, (%r12)
+	movq %r13, 8(%r12)
+	movq %rbx, 16(%r12)
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r13
+	leaq str288(%rip), %rax
+	movq %rax, (%r13)
+	leaq str289(%rip), %rax
+	movq %rax, 8(%r13)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rbx
+	movq $1, (%rbx)
+	movq %r13, 8(%rbx)
+	movq %r12, 16(%rbx)
+	movl $16, %edi
+	callq malloc
+	movq %rax, %r12
+	leaq str296(%rip), %rax
+	movq %rax, (%r12)
+	leaq str297(%rip), %rax
+	movq %rax, 8(%r12)
+	movl $24, %edi
+	callq malloc
+	movq %rax, %rcx
+	movq $1, (%rcx)
+	movq %r12, 8(%rcx)
+	movq %rbx, 16(%rcx)
+	leaq str271(%rip), %rdx
+	leaq str270(%rip), %rsi
+	leaq str269(%rip), %rdi
+	callq cli_help_command_help
+	popq %r13
+	popq %r12
+	popq %rbx
+	leave
+	ret
+.type cli_help_deps_help, @function
+.size cli_help_deps_help, .-cli_help_deps_help
+/* end function cli_help_deps_help */
 
 .text
 .balign 16
@@ -1502,9 +1738,9 @@ cli_help_docs_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str250(%rip), %rax
+	leaq str308(%rip), %rax
 	movq %rax, (%r12)
-	leaq str251(%rip), %rax
+	leaq str309(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1516,9 +1752,9 @@ cli_help_docs_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str258(%rip), %rax
+	leaq str316(%rip), %rax
 	movq %rax, (%r12)
-	leaq str259(%rip), %rax
+	leaq str317(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1526,9 +1762,9 @@ cli_help_docs_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str249(%rip), %rdx
-	leaq str248(%rip), %rsi
-	leaq str247(%rip), %rdi
+	leaq str307(%rip), %rdx
+	leaq str306(%rip), %rsi
+	leaq str305(%rip), %rdi
 	callq cli_help_command_help
 	popq %r12
 	popq %rbx
@@ -1552,9 +1788,9 @@ cli_help_format_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %rbx
-	leaq str270(%rip), %rax
+	leaq str328(%rip), %rax
 	movq %rax, (%rbx)
-	leaq str271(%rip), %rax
+	leaq str329(%rip), %rax
 	movq %rax, 8(%rbx)
 	movl $24, %edi
 	callq malloc
@@ -1566,9 +1802,9 @@ cli_help_format_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r13
-	leaq str278(%rip), %rax
+	leaq str336(%rip), %rax
 	movq %rax, (%r13)
-	leaq str279(%rip), %rax
+	leaq str337(%rip), %rax
 	movq %rax, 8(%r13)
 	movl $24, %edi
 	callq malloc
@@ -1579,9 +1815,9 @@ cli_help_format_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str286(%rip), %rax
+	leaq str344(%rip), %rax
 	movq %rax, (%r12)
-	leaq str287(%rip), %rax
+	leaq str345(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1589,9 +1825,9 @@ cli_help_format_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str269(%rip), %rdx
-	leaq str268(%rip), %rsi
-	leaq str267(%rip), %rdi
+	leaq str327(%rip), %rdx
+	leaq str326(%rip), %rsi
+	leaq str325(%rip), %rdi
 	callq cli_help_command_help
 	popq %r13
 	popq %r12
@@ -1614,9 +1850,9 @@ cli_help_new_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str298(%rip), %rax
+	leaq str356(%rip), %rax
 	movq %rax, (%r12)
-	leaq str299(%rip), %rax
+	leaq str357(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1628,9 +1864,9 @@ cli_help_new_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str306(%rip), %rax
+	leaq str364(%rip), %rax
 	movq %rax, (%r12)
-	leaq str307(%rip), %rax
+	leaq str365(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1638,9 +1874,9 @@ cli_help_new_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str297(%rip), %rdx
-	leaq str296(%rip), %rsi
-	leaq str295(%rip), %rdi
+	leaq str355(%rip), %rdx
+	leaq str354(%rip), %rsi
+	leaq str353(%rip), %rdi
 	callq cli_help_command_help
 	popq %r12
 	popq %rbx
@@ -1662,9 +1898,9 @@ cli_help_run_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str318(%rip), %rax
+	leaq str376(%rip), %rax
 	movq %rax, (%r12)
-	leaq str319(%rip), %rax
+	leaq str377(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1676,9 +1912,9 @@ cli_help_run_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str326(%rip), %rax
+	leaq str384(%rip), %rax
 	movq %rax, (%r12)
-	leaq str327(%rip), %rax
+	leaq str385(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1686,9 +1922,9 @@ cli_help_run_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str317(%rip), %rdx
-	leaq str316(%rip), %rsi
-	leaq str315(%rip), %rdi
+	leaq str375(%rip), %rdx
+	leaq str374(%rip), %rsi
+	leaq str373(%rip), %rdi
 	callq cli_help_command_help
 	popq %r12
 	popq %rbx
@@ -1712,9 +1948,9 @@ cli_help_test_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str338(%rip), %rax
+	leaq str396(%rip), %rax
 	movq %rax, (%r12)
-	leaq str339(%rip), %rax
+	leaq str397(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1726,9 +1962,9 @@ cli_help_test_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r13
-	leaq str346(%rip), %rax
+	leaq str404(%rip), %rax
 	movq %rax, (%r13)
-	leaq str347(%rip), %rax
+	leaq str405(%rip), %rax
 	movq %rax, 8(%r13)
 	movl $24, %edi
 	callq malloc
@@ -1739,9 +1975,9 @@ cli_help_test_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r13
-	leaq str354(%rip), %rax
+	leaq str412(%rip), %rax
 	movq %rax, (%r13)
-	leaq str355(%rip), %rax
+	leaq str413(%rip), %rax
 	movq %rax, 8(%r13)
 	movl $24, %edi
 	callq malloc
@@ -1752,9 +1988,9 @@ cli_help_test_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str362(%rip), %rax
+	leaq str420(%rip), %rax
 	movq %rax, (%r12)
-	leaq str363(%rip), %rax
+	leaq str421(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1762,9 +1998,9 @@ cli_help_test_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str337(%rip), %rdx
-	leaq str336(%rip), %rsi
-	leaq str335(%rip), %rdi
+	leaq str395(%rip), %rdx
+	leaq str394(%rip), %rsi
+	leaq str393(%rip), %rdi
 	callq cli_help_command_help
 	popq %r13
 	popq %r12
@@ -1787,9 +2023,9 @@ cli_help_version_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str374(%rip), %rax
+	leaq str432(%rip), %rax
 	movq %rax, (%r12)
-	leaq str375(%rip), %rax
+	leaq str433(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1801,9 +2037,9 @@ cli_help_version_help:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %r12
-	leaq str382(%rip), %rax
+	leaq str440(%rip), %rax
 	movq %rax, (%r12)
-	leaq str383(%rip), %rax
+	leaq str441(%rip), %rax
 	movq %rax, 8(%r12)
 	movl $24, %edi
 	callq malloc
@@ -1811,9 +2047,9 @@ cli_help_version_help:
 	movq $1, (%rcx)
 	movq %r12, 8(%rcx)
 	movq %rbx, 16(%rcx)
-	leaq str373(%rip), %rdx
-	leaq str372(%rip), %rsi
-	leaq str371(%rip), %rdi
+	leaq str431(%rip), %rdx
+	leaq str430(%rip), %rsi
+	leaq str429(%rip), %rdi
 	callq cli_help_command_help
 	popq %r12
 	popq %rbx
@@ -1836,18 +2072,18 @@ cli_help_options_block:
 	movl $16, %edi
 	callq malloc
 	movq %rax, %rdi
-	leaq str391(%rip), %rax
+	leaq str449(%rip), %rax
 	movq %rax, (%rdi)
-	leaq str392(%rip), %rax
+	leaq str450(%rip), %rax
 	movq %rax, 8(%rdi)
 	callq cli_help_option_row
 	movq %rax, %r12
 	movl $16, %edi
 	callq malloc
 	movq %rax, %rdi
-	leaq str397(%rip), %rax
+	leaq str455(%rip), %rax
 	movq %rax, (%rdi)
-	leaq str398(%rip), %rax
+	leaq str456(%rip), %rax
 	movq %rax, 8(%rdi)
 	callq cli_help_option_row
 	movq %rax, %r13
@@ -1864,7 +2100,7 @@ cli_help_options_block:
 	movq $1, (%rdi)
 	movq %r12, 8(%rdi)
 	movq %rbx, 16(%rdi)
-	leaq str409(%rip), %rsi
+	leaq str467(%rip), %rsi
 	callq donna_string_join
 	popq %r13
 	popq %r12
@@ -1888,7 +2124,7 @@ cli_help_command_row:
 	movq %rax, %rdi
 	callq cli_help_pad_right
 	movq %rax, %rsi
-	leaq str411(%rip), %rdi
+	leaq str469(%rip), %rdi
 	callq __rt_str_concat
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -1915,7 +2151,7 @@ cli_help_option_row:
 	movq %rax, %rdi
 	callq cli_help_pad_right
 	movq %rax, %rsi
-	leaq str422(%rip), %rdi
+	leaq str480(%rip), %rdi
 	callq __rt_str_concat
 	movq %rbx, %rsi
 	movq %rax, %rdi
@@ -1959,18 +2195,18 @@ cli_help_pad_right:
 	setg %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz .Lbb38
-	leaq str441(%rip), %rsi
+	jz .Lbb40
+	leaq str499(%rip), %rsi
 	callq __rt_str_concat
-	jmp .Lbb39
-.Lbb38:
+	jmp .Lbb41
+.Lbb40:
 	movq %rdi, %rbx
-	leaq str438(%rip), %rdi
+	leaq str496(%rip), %rdi
 	callq donna_string_repeat
 	movq %rbx, %rdi
 	movq %rax, %rsi
 	callq __rt_str_concat
-.Lbb39:
+.Lbb41:
 	popq %rbx
 	leave
 	ret
