@@ -1,19 +1,5 @@
 .data
 .balign 8
-str9:
-	.ascii "cannot format: lex error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str23:
-	.ascii "cannot format: parse error"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 str46:
 	.byte 10
 	.byte 10
@@ -35,119 +21,127 @@ donna_nil:
 
 .data
 .balign 8
-str107:
+str53:
+	.byte 10
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str126:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str133:
-	.ascii "////"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str134:
-	.ascii "//// "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str138:
+str152:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str165:
-	.ascii "/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str174:
+str171:
 	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str175:
-	.ascii " as "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str178:
+	.ascii "////"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str179:
+	.ascii "//// "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str183:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str210:
+	.ascii "/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str219:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str220:
+	.ascii " as "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str223:
 	.ascii "import "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str215:
+str260:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str254:
+str299:
 	.ascii "pub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str255:
+str300:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str263:
+str308:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str266:
+str311:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str271:
+str316:
 	.ascii "const "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str275:
+str320:
 	.ascii " = "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str281:
+str326:
 	.byte 10
 	.byte 10
 	.byte 0
@@ -155,126 +149,126 @@ str281:
 
 .data
 .balign 8
-str322:
+str367:
 	.ascii "pub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str323:
+str368:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str330:
+str375:
 	.ascii "opaque "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str331:
+str376:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str339:
+str384:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str340:
+str385:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str341:
+str386:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str344:
+str389:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str348:
+str393:
 	.ascii "type "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str352:
+str397:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str356:
+str401:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str358:
+str403:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str402:
+str447:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str404:
+str449:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str407:
+str452:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str433:
+str478:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str441:
+str486:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str453:
+str498:
 	.byte 10
 	.byte 10
 	.byte 0
@@ -282,21 +276,21 @@ str453:
 
 .data
 .balign 8
-str500:
+str545:
 	.ascii "pub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str501:
+str546:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str503:
+str548:
 	.ascii "@external("
 	.byte 34
 	.byte 0
@@ -304,7 +298,7 @@ str503:
 
 .data
 .balign 8
-str505:
+str550:
 	.byte 34
 	.ascii ", "
 	.byte 34
@@ -313,7 +307,7 @@ str505:
 
 .data
 .balign 8
-str508:
+str553:
 	.byte 34
 	.ascii ")"
 	.byte 10
@@ -322,42 +316,42 @@ str508:
 
 .data
 .balign 8
-str512:
+str557:
 	.ascii "fn "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str539:
+str584:
 	.ascii "pub "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str540:
+str585:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str542:
+str587:
 	.ascii "fn "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str549:
+str594:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str559:
+str604:
 	.ascii "("
 	.byte 10
 	.byte 0
@@ -365,7 +359,7 @@ str559:
 
 .data
 .balign 8
-str561:
+str606:
 	.ascii ","
 	.byte 10
 	.byte 0
@@ -373,7 +367,7 @@ str561:
 
 .data
 .balign 8
-str564:
+str609:
 	.byte 10
 	.ascii ")"
 	.byte 0
@@ -381,210 +375,210 @@ str564:
 
 .data
 .balign 8
-str567:
+str612:
 	.ascii ":"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str571:
+str616:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str577:
+str622:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str579:
+str624:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str582:
+str627:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str636:
+str681:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str648:
+str693:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str651:
+str696:
 	.ascii " -> "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str666:
+str711:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str709:
+str754:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str712:
+str757:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str717:
+str762:
 	.ascii "let "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str721:
+str766:
 	.ascii " = "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str736:
-	.ascii "let "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str740:
-	.ascii " = "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str778:
-	.byte 34
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str781:
+	.ascii "let "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str785:
+	.ascii " = "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str823:
 	.byte 34
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str800:
+str826:
+	.byte 34
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str845:
 	.ascii "True"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str818:
+str863:
 	.ascii "False"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str838:
+str883:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str867:
+str912:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str871:
+str916:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str890:
+str935:
 	.ascii "-"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str891:
+str936:
 	.ascii "!"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str907:
+str952:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str911:
+str956:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str947:
+str992:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str957:
+str1002:
 	.ascii "#("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str960:
+str1005:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str971:
+str1016:
 	.ascii "#("
 	.byte 10
 	.byte 0
@@ -592,7 +586,7 @@ str971:
 
 .data
 .balign 8
-str972:
+str1017:
 	.ascii ","
 	.byte 10
 	.byte 0
@@ -600,73 +594,22 @@ str972:
 
 .data
 .balign 8
-str975:
+str1020:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str979:
+str1024:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str996:
+str1041:
 	.ascii "[]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str997:
-	.ascii "["
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1000:
-	.ascii "]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1011:
-	.ascii "["
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1012:
-	.ascii ","
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1015:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1019:
-	.ascii "]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1033:
-	.ascii ".."
 	.byte 0
 /* end data */
 
@@ -679,36 +622,30 @@ str1042:
 
 .data
 .balign 8
-str1044:
+str1045:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1046:
+str1056:
 	.ascii "["
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1049:
-	.ascii ", "
+str1057:
+	.ascii ","
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1052:
-	.ascii "]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1063:
-	.ascii "["
+str1060:
 	.byte 10
 	.byte 0
 /* end data */
@@ -716,100 +653,63 @@ str1063:
 .data
 .balign 8
 str1064:
-	.ascii ","
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1067:
-	.ascii ","
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1074:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1078:
 	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1092:
-	.ascii "fn"
+str1078:
+	.ascii ".."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1095:
-	.ascii " -> "
+str1087:
+	.ascii "["
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1107:
-	.ascii "echo "
+str1089:
+	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1118:
-	.ascii "panic "
+str1091:
+	.ascii "["
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1123:
-	.ascii "todo"
+str1094:
+	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1132:
-	.ascii "()"
+str1097:
+	.ascii "]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1134:
-	.ascii "("
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1138:
-	.ascii ")"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1149:
-	.ascii "("
+str1108:
+	.ascii "["
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1151:
+str1109:
 	.ascii ","
 	.byte 10
 	.byte 0
@@ -817,63 +717,157 @@ str1151:
 
 .data
 .balign 8
-str1154:
+str1112:
+	.ascii ","
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1158:
-	.ascii ")"
+str1119:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1123:
+	.ascii "]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1137:
+	.ascii "fn"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1140:
+	.ascii " -> "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1152:
+	.ascii "echo "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str1163:
+	.ascii "panic "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1168:
+	.ascii "todo"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1177:
+	.ascii "()"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1179:
+	.ascii "("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1183:
+	.ascii ")"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1194:
+	.ascii "("
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1196:
+	.ascii ","
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1199:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1203:
+	.ascii ")"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1208:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1229:
+str1274:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1257:
+str1302:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1259:
+str1304:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1275:
+str1320:
 	.ascii "|> "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1288:
+str1333:
 	.ascii "case "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1290:
+str1335:
 	.ascii ":"
 	.byte 10
 	.byte 0
@@ -881,330 +875,288 @@ str1290:
 
 .data
 .balign 8
-str1292:
+str1337:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1329:
+str1374:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1332:
+str1377:
 	.ascii " if "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1339:
+str1384:
 	.ascii " ->"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1356:
+str1401:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1358:
+str1403:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1362:
+str1407:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1371:
+str1416:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1399:
-	.ascii "("
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1402:
-	.ascii ")"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1429:
-	.ascii "("
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1432:
-	.ascii ")"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 str1444:
-	.ascii "+"
+	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1449:
-	.ascii "-"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1454:
-	.ascii "*"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1459:
-	.ascii "/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1464:
-	.ascii "%"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1469:
-	.ascii "+."
+str1447:
+	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str1474:
-	.ascii "-."
+	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1479:
-	.ascii "*."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1484:
-	.ascii "/."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1489:
-	.ascii "=="
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1494:
-	.ascii "!="
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1499:
-	.ascii "<"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1504:
-	.ascii "<="
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1509:
-	.ascii ">"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1514:
-	.ascii ">="
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1519:
-	.ascii "<."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1524:
-	.ascii "<=."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1529:
-	.ascii ">."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1534:
-	.ascii ">=."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1539:
-	.ascii "&&"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1544:
-	.ascii "||"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1545:
-	.ascii "<>"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1642:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1651:
-	.ascii "_"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1685:
-	.byte 34
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1688:
-	.byte 34
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1707:
-	.ascii "True"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1725:
-	.ascii "False"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1734:
-	.ascii "#("
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1736:
-	.ascii ", "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1739:
+str1477:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1758:
-	.ascii "["
+str1489:
+	.ascii "+"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1759:
-	.ascii ", "
+str1494:
+	.ascii "-"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1762:
-	.ascii "]"
+str1499:
+	.ascii "*"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1772:
+str1504:
+	.ascii "/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1509:
+	.ascii "%"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1514:
+	.ascii "+."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1519:
+	.ascii "-."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1524:
+	.ascii "*."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1529:
+	.ascii "/."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1534:
+	.ascii "=="
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1539:
+	.ascii "!="
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1544:
+	.ascii "<"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1549:
+	.ascii "<="
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1554:
+	.ascii ">"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1559:
+	.ascii ">="
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1564:
+	.ascii "<."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1569:
+	.ascii "<=."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1574:
+	.ascii ">."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1579:
+	.ascii ">=."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1584:
+	.ascii "&&"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1589:
+	.ascii "||"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1590:
+	.ascii "<>"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1687:
 	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1696:
+	.ascii "_"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1730:
+	.byte 34
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1733:
+	.byte 34
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1752:
+	.ascii "True"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1770:
+	.ascii "False"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1779:
+	.ascii "#("
 	.byte 0
 /* end data */
 
@@ -1217,36 +1169,22 @@ str1781:
 
 .data
 .balign 8
-str1789:
-	.ascii "[.._]"
+str1784:
+	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1790:
+str1803:
 	.ascii "["
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1792:
-	.ascii ", .._]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1797:
+str1804:
 	.ascii ", "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1805:
-	.ascii "[.."
 	.byte 0
 /* end data */
 
@@ -1259,42 +1197,42 @@ str1807:
 
 .data
 .balign 8
-str1809:
-	.ascii "["
+str1817:
+	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1811:
-	.ascii ", .."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str1814:
-	.ascii "]"
+str1826:
+	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str1834:
-	.ascii "."
+	.ascii "[.._]"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1844:
-	.ascii "("
+str1835:
+	.ascii "["
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1847:
+str1837:
+	.ascii ", .._]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1842:
 	.ascii ", "
 	.byte 0
 /* end data */
@@ -1302,83 +1240,139 @@ str1847:
 .data
 .balign 8
 str1850:
-	.ascii ")"
+	.ascii "[.."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1903:
+str1852:
+	.ascii "]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1854:
+	.ascii "["
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1856:
+	.ascii ", .."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1859:
+	.ascii "]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1879:
+	.ascii "."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1889:
 	.ascii "("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1906:
+str1892:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1909:
+str1895:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1919:
+str1948:
+	.ascii "("
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1951:
+	.ascii ", "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1954:
+	.ascii ")"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str1964:
 	.ascii "#("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1921:
+str1966:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1924:
+str1969:
 	.ascii ")"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1932:
+str1977:
 	.ascii "fn("
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1934:
+str1979:
 	.ascii ", "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1937:
+str1982:
 	.ascii ") -> "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1960:
+str2005:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str1974:
+str2019:
 	.byte 92
 	.byte 34
 	.byte 0
@@ -1386,7 +1380,7 @@ str1974:
 
 .data
 .balign 8
-str1978:
+str2023:
 	.byte 92
 	.byte 92
 	.byte 0
@@ -1394,7 +1388,7 @@ str1978:
 
 .data
 .balign 8
-str1982:
+str2027:
 	.byte 92
 	.ascii "n"
 	.byte 0
@@ -1402,7 +1396,7 @@ str1982:
 
 .data
 .balign 8
-str1986:
+str2031:
 	.byte 92
 	.ascii "t"
 	.byte 0
@@ -1410,7 +1404,7 @@ str1986:
 
 .data
 .balign 8
-str1990:
+str2035:
 	.byte 92
 	.ascii "r"
 	.byte 0
@@ -1418,7 +1412,7 @@ str1990:
 
 .data
 .balign 8
-str1994:
+str2039:
 	.byte 92
 	.ascii "u{001b}"
 	.byte 0
@@ -1426,56 +1420,56 @@ str1994:
 
 .data
 .balign 8
-str2001:
+str2046:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2007:
+str2052:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2017:
+str2062:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2018:
+str2063:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2020:
+str2065:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2029:
+str2074:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2032:
+str2077:
 	.ascii "///"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str2039:
+str2084:
 	.ascii "////"
 	.byte 0
 /* end data */
@@ -1537,27 +1531,33 @@ tools_fmt_formatter_format_source:
 	str	x0, [x19]
 	b	.L5
 .L3:
+	mov	x2, #8
+	add	x0, x0, x2
+	ldr	x0, [x0]
+	bl	tools_fmt_formatter_render_error_block
+	mov	x20, x0
 	mov	x0, #16
 	bl	malloc
 	mov	x1, #1
 	str	x1, [x0]
 	mov	x1, #8
-	add	x2, x0, x1
-	adrp	x1, str23
-	add	x1, x1, #:lo12:str23
-	str	x1, [x2]
+	add	x1, x0, x1
+	str	x20, [x1]
 	str	x0, [x19]
 	b	.L5
 .L4:
+	mov	x2, #8
+	add	x0, x0, x2
+	ldr	x0, [x0]
+	bl	tools_fmt_formatter_render_error_block
+	mov	x19, x0
 	mov	x0, #16
 	bl	malloc
 	mov	x1, #1
 	str	x1, [x0]
 	mov	x1, #8
-	add	x2, x0, x1
-	adrp	x1, str9
-	add	x1, x1, #:lo12:str9
-	str	x1, [x2]
+	add	x1, x0, x1
+	str	x19, [x1]
 .L5:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1607,6 +1607,152 @@ tools_fmt_formatter_format_module:
 
 .text
 .balign 16
+tools_fmt_formatter_render_error_block:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	adrp	x2, donna_nil
+	add	x2, x2, #:lo12:donna_nil
+	bl	tools_fmt_formatter_render_errors
+	adrp	x1, donna_nil
+	add	x1, x1, #:lo12:donna_nil
+	bl	tools_fmt_formatter_unique_strings
+	adrp	x1, str53
+	add	x1, x1, #:lo12:str53
+	bl	donna_string_join
+	ldp	x29, x30, [sp], 16
+	ret
+.type tools_fmt_formatter_render_error_block, @function
+.size tools_fmt_formatter_render_error_block, .-tools_fmt_formatter_render_error_block
+/* end function tools_fmt_formatter_render_error_block */
+
+.text
+.balign 16
+tools_fmt_formatter_unique_strings:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	str	x22, [x29, 16]
+	mov	x20, x1
+	ldr	x1, [x0]
+	cmp	x1, #0
+	beq	.L14
+	mov	x1, #8
+	add	x1, x0, x1
+	ldr	x21, [x1]
+	mov	x1, #16
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	mov	x1, x21
+	mov	x19, x0
+	mov	x0, x20
+	bl	donna_list_contains_str
+	mov	x1, x0
+	mov	x0, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x1, #1
+	beq	.L13
+	mov	x22, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x0
+	mov	x0, x22
+	mov	x2, #1
+	str	x2, [x1]
+	mov	x2, #8
+	add	x2, x1, x2
+	str	x21, [x2]
+	mov	x2, #16
+	add	x2, x1, x2
+	str	x20, [x2]
+	bl	tools_fmt_formatter_unique_strings
+	str	x0, [x19]
+	b	.L16
+.L13:
+	mov	x1, x20
+	bl	tools_fmt_formatter_unique_strings
+	str	x0, [x19]
+	b	.L16
+.L14:
+	mov	x0, x20
+	bl	donna_list_reverse
+.L16:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldr	x22, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
+	ret
+.type tools_fmt_formatter_unique_strings, @function
+.size tools_fmt_formatter_unique_strings, .-tools_fmt_formatter_unique_strings
+/* end function tools_fmt_formatter_unique_strings */
+
+.text
+.balign 16
+tools_fmt_formatter_render_errors:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	str	x22, [x29, 16]
+	mov	x17, x2
+	mov	x2, x0
+	mov	x0, x17
+	mov	x19, x0
+	ldr	x0, [x2]
+	cmp	x0, #0
+	beq	.L19
+	mov	x0, #8
+	add	x0, x2, x0
+	ldr	x0, [x0]
+	mov	x3, #16
+	add	x2, x2, x3
+	ldr	x20, [x2]
+	mov	x22, x1
+	bl	errors_reporter_render_error
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x21, x0
+	mov	x0, #24
+	bl	malloc
+	mov	x1, x22
+	mov	x2, x0
+	mov	x0, x21
+	mov	x3, #1
+	str	x3, [x2]
+	mov	x3, #8
+	add	x3, x2, x3
+	str	x20, [x3]
+	mov	x3, #16
+	add	x3, x2, x3
+	str	x19, [x3]
+	bl	tools_fmt_formatter_render_errors
+	b	.L21
+.L19:
+	mov	x0, x19
+	bl	donna_list_reverse
+.L21:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldr	x22, [x29, 16]
+	ldp	x29, x30, [sp], 48
+	ret
+.type tools_fmt_formatter_render_errors, @function
+.size tools_fmt_formatter_render_errors, .-tools_fmt_formatter_render_errors
+/* end function tools_fmt_formatter_render_errors */
+
+.text
+.balign 16
 tools_fmt_formatter_collect_sections:
 	hint	#34
 	stp	x29, x30, [sp, -80]!
@@ -1630,7 +1776,7 @@ tools_fmt_formatter_collect_sections:
 	mov	x2, x0
 	mov	x0, x23
 	cmp	x2, #1
-	beq	.L10
+	beq	.L24
 	mov	x24, x1
 	bl	tools_fmt_formatter_format_functions
 	mov	x23, x0
@@ -1653,13 +1799,13 @@ tools_fmt_formatter_collect_sections:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	str	x1, [x2]
-	b	.L12
-.L10:
+	b	.L26
+.L24:
 	mov	x23, x1
 	mov	x0, x22
 	adrp	x22, donna_nil
 	add	x22, x22, #:lo12:donna_nil
-.L12:
+.L26:
 	mov	x24, x22
 	mov	x22, x0
 	bl	donna_list_is_empty
@@ -1670,7 +1816,7 @@ tools_fmt_formatter_collect_sections:
 	sub	sp, sp, x3
 	mov	x22, sp
 	cmp	x2, #1
-	beq	.L14
+	beq	.L28
 	mov	x25, x1
 	bl	tools_fmt_formatter_format_type_defs
 	mov	x23, x0
@@ -1692,13 +1838,13 @@ tools_fmt_formatter_collect_sections:
 	add	x1, x21, x1
 	str	x24, [x1]
 	str	x21, [x22]
-	b	.L16
-.L14:
+	b	.L30
+.L28:
 	mov	x23, x1
 	mov	x0, x21
 	mov	x21, x24
 	str	x21, [x22]
-.L16:
+.L30:
 	mov	x22, x21
 	mov	x21, x0
 	bl	donna_list_is_empty
@@ -1709,7 +1855,7 @@ tools_fmt_formatter_collect_sections:
 	sub	sp, sp, x3
 	mov	x21, sp
 	cmp	x2, #1
-	beq	.L18
+	beq	.L32
 	bl	tools_fmt_formatter_format_consts
 	mov	x23, x0
 	mov	x0, x20
@@ -1728,12 +1874,12 @@ tools_fmt_formatter_collect_sections:
 	add	x1, x20, x1
 	str	x22, [x1]
 	str	x20, [x21]
-	b	.L20
-.L18:
+	b	.L34
+.L32:
 	mov	x0, x20
 	mov	x20, x22
 	str	x20, [x21]
-.L20:
+.L34:
 	mov	x21, x20
 	mov	x20, x0
 	bl	donna_list_is_empty
@@ -1743,7 +1889,7 @@ tools_fmt_formatter_collect_sections:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #1
-	beq	.L22
+	beq	.L36
 	bl	tools_fmt_formatter_format_imports
 	mov	x22, x0
 	mov	x0, x19
@@ -1762,12 +1908,12 @@ tools_fmt_formatter_collect_sections:
 	add	x1, x19, x1
 	str	x21, [x1]
 	str	x19, [x20]
-	b	.L24
-.L22:
+	b	.L38
+.L36:
 	mov	x0, x19
 	mov	x19, x21
 	str	x19, [x20]
-.L24:
+.L38:
 	mov	x20, x19
 	mov	x19, x0
 	bl	donna_list_is_empty
@@ -1777,7 +1923,7 @@ tools_fmt_formatter_collect_sections:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L26
+	beq	.L40
 	bl	tools_fmt_formatter_format_doc_block
 	mov	x21, x0
 	mov	x0, x20
@@ -1793,11 +1939,11 @@ tools_fmt_formatter_collect_sections:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	.L28
-.L26:
+	b	.L42
+.L40:
 	mov	x0, x20
 	str	x0, [x19]
-.L28:
+.L42:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -1821,8 +1967,8 @@ tools_fmt_formatter_format_doc_block:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_doc_lines
-	adrp	x1, str107
-	add	x1, x1, #:lo12:str107
+	adrp	x1, str152
+	add	x1, x1, #:lo12:str152
 	bl	donna_string_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -1845,7 +1991,7 @@ tools_fmt_formatter_format_doc_lines:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L33
+	beq	.L47
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -1870,11 +2016,11 @@ tools_fmt_formatter_format_doc_lines:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	tools_fmt_formatter_format_doc_lines
-	b	.L35
-.L33:
+	b	.L49
+.L47:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L35:
+.L49:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1893,21 +2039,21 @@ tools_fmt_formatter_format_doc_line:
 	str	x19, [x29, 24]
 	mov	x1, x0
 	mov	x19, x1
-	adrp	x1, str126
-	add	x1, x1, #:lo12:str126
+	adrp	x1, str171
+	add	x1, x1, #:lo12:str171
 	mov	x0, x19
 	bl	donna_string_equal
 	mov	x1, x19
 	cmp	x0, #1
-	beq	.L38
-	adrp	x0, str134
-	add	x0, x0, #:lo12:str134
+	beq	.L52
+	adrp	x0, str179
+	add	x0, x0, #:lo12:str179
 	bl	__rt_str_concat
-	b	.L39
-.L38:
-	adrp	x0, str133
-	add	x0, x0, #:lo12:str133
-.L39:
+	b	.L53
+.L52:
+	adrp	x0, str178
+	add	x0, x0, #:lo12:str178
+.L53:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -1924,8 +2070,8 @@ tools_fmt_formatter_format_imports:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_import_list
-	adrp	x1, str138
-	add	x1, x1, #:lo12:str138
+	adrp	x1, str183
+	add	x1, x1, #:lo12:str183
 	bl	donna_string_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -1948,7 +2094,7 @@ tools_fmt_formatter_format_import_list:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L44
+	beq	.L58
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -1973,11 +2119,11 @@ tools_fmt_formatter_format_import_list:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	tools_fmt_formatter_format_import_list
-	b	.L46
-.L44:
+	b	.L60
+.L58:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L46:
+.L60:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2003,8 +2149,8 @@ tools_fmt_formatter_format_import:
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x20, x1
-	adrp	x1, str165
-	add	x1, x1, #:lo12:str165
+	adrp	x1, str210
+	add	x1, x1, #:lo12:str210
 	mov	x19, x0
 	bl	donna_string_join
 	mov	x1, x20
@@ -2018,20 +2164,20 @@ tools_fmt_formatter_format_import:
 	bl	donna_string_equal
 	mov	x1, x20
 	cmp	x0, #1
-	beq	.L49
-	adrp	x0, str175
-	add	x0, x0, #:lo12:str175
+	beq	.L63
+	adrp	x0, str220
+	add	x0, x0, #:lo12:str220
 	bl	__rt_str_concat
 	mov	x1, x19
 	mov	x19, x0
-	b	.L51
-.L49:
+	b	.L65
+.L63:
 	mov	x1, x19
-	adrp	x19, str174
-	add	x19, x19, #:lo12:str174
-.L51:
-	adrp	x0, str178
-	add	x0, x0, #:lo12:str178
+	adrp	x19, str219
+	add	x19, x19, #:lo12:str219
+.L65:
+	adrp	x0, str223
+	add	x0, x0, #:lo12:str223
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
@@ -2051,17 +2197,17 @@ tools_fmt_formatter_path_last:
 	mov	x29, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L61
+	beq	.L75
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x3, sp
 	cmp	x2, #1
-	beq	.L57
+	beq	.L71
 	mov	x2, #0
 	str	x2, [x3]
 	mov	x2, #0
-	b	.L58
-.L57:
+	b	.L72
+.L71:
 	mov	x2, #16
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -2071,22 +2217,22 @@ tools_fmt_formatter_path_last:
 	mov	x4, #1
 	and	x2, x2, x4
 	str	x2, [x3]
-.L58:
+.L72:
 	cmp	w2, #0
-	bne	.L60
+	bne	.L74
 	mov	x2, #16
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	bl	tools_fmt_formatter_path_last
-	b	.L62
-.L60:
+	b	.L76
+.L74:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L62
-.L61:
+	b	.L76
+.L75:
 	mov	x0, x1
-.L62:
+.L76:
 	mov sp, x29
 	ldp	x29, x30, [sp], 16
 	ret
@@ -2103,8 +2249,8 @@ tools_fmt_formatter_format_consts:
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_const_list
-	adrp	x1, str215
-	add	x1, x1, #:lo12:str215
+	adrp	x1, str260
+	add	x1, x1, #:lo12:str260
 	bl	donna_string_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -2128,7 +2274,7 @@ tools_fmt_formatter_format_const_list:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L67
+	beq	.L81
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -2155,11 +2301,11 @@ tools_fmt_formatter_format_const_list:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_const_list
-	b	.L69
-.L67:
+	b	.L83
+.L81:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L69:
+.L83:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2206,21 +2352,21 @@ tools_fmt_formatter_format_const:
 	bl	tools_fmt_formatter_preceding_doc
 	mov	x1, x21
 	cmp	x20, #1
-	beq	.L72
-	adrp	x23, str255
-	add	x23, x23, #:lo12:str255
-	b	.L73
-.L72:
-	adrp	x23, str254
-	add	x23, x23, #:lo12:str254
-.L73:
+	beq	.L86
+	adrp	x23, str300
+	add	x23, x23, #:lo12:str300
+	b	.L87
+.L86:
+	adrp	x23, str299
+	add	x23, x23, #:lo12:str299
+.L87:
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x22, sp
 	mov	x21, x1
 	ldr	x1, [x24]
 	cmp	x1, #0
-	beq	.L75
+	beq	.L89
 	mov	x20, x0
 	mov	x0, #8
 	add	x0, x24, x0
@@ -2229,36 +2375,36 @@ tools_fmt_formatter_format_const:
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, str266
-	add	x0, x0, #:lo12:str266
+	adrp	x0, str311
+	add	x0, x0, #:lo12:str311
 	bl	__rt_str_concat
 	mov	x1, x23
 	mov	x17, x0
 	mov	x0, x20
 	mov	x20, x17
 	str	x20, [x22]
-	b	.L78
-.L75:
+	b	.L92
+.L89:
 	mov	x20, x22
 	mov	x1, x23
-	adrp	x2, str263
-	add	x2, x2, #:lo12:str263
+	adrp	x2, str308
+	add	x2, x2, #:lo12:str308
 	str	x2, [x20]
-	adrp	x20, str263
-	add	x20, x20, #:lo12:str263
-.L78:
+	adrp	x20, str308
+	add	x20, x20, #:lo12:str308
+.L92:
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str271
-	add	x1, x1, #:lo12:str271
+	adrp	x1, str316
+	add	x1, x1, #:lo12:str316
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
 	mov	x1, x20
 	bl	__rt_str_concat
-	adrp	x1, str275
-	add	x1, x1, #:lo12:str275
+	adrp	x1, str320
+	add	x1, x1, #:lo12:str320
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -2290,8 +2436,8 @@ tools_fmt_formatter_format_type_defs:
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_type_def_list
-	adrp	x1, str281
-	add	x1, x1, #:lo12:str281
+	adrp	x1, str326
+	add	x1, x1, #:lo12:str326
 	bl	donna_string_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -2315,7 +2461,7 @@ tools_fmt_formatter_format_type_def_list:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L84
+	beq	.L98
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -2342,11 +2488,11 @@ tools_fmt_formatter_format_type_def_list:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_type_def_list
-	b	.L86
-.L84:
+	b	.L100
+.L98:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L86:
+.L100:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2399,34 +2545,34 @@ tools_fmt_formatter_format_type_def:
 	mov	x0, x19
 	mov	x19, x17
 	cmp	x21, #1
-	beq	.L89
-	adrp	x21, str323
-	add	x21, x21, #:lo12:str323
-	b	.L90
-.L89:
-	adrp	x21, str322
-	add	x21, x21, #:lo12:str322
-.L90:
+	beq	.L103
+	adrp	x21, str368
+	add	x21, x21, #:lo12:str368
+	b	.L104
+.L103:
+	adrp	x21, str367
+	add	x21, x21, #:lo12:str367
+.L104:
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x22, #1
-	beq	.L93
-	adrp	x3, str331
-	add	x3, x3, #:lo12:str331
+	beq	.L107
+	adrp	x3, str376
+	add	x3, x3, #:lo12:str376
 	str	x3, [x2]
 	mov	x22, x1
-	adrp	x24, str331
-	add	x24, x24, #:lo12:str331
-	b	.L95
-.L93:
+	adrp	x24, str376
+	add	x24, x24, #:lo12:str376
+	b	.L109
+.L107:
 	mov	x22, x1
-	adrp	x1, str330
-	add	x1, x1, #:lo12:str330
+	adrp	x1, str375
+	add	x1, x1, #:lo12:str375
 	str	x1, [x2]
-	adrp	x24, str330
-	add	x24, x24, #:lo12:str330
-.L95:
+	adrp	x24, str375
+	add	x24, x24, #:lo12:str375
+.L109:
 	mov	x23, x0
 	bl	donna_list_is_empty
 	mov	x1, x24
@@ -2436,49 +2582,49 @@ tools_fmt_formatter_format_type_def:
 	sub	sp, sp, x3
 	mov	x23, sp
 	cmp	x2, #1
-	beq	.L97
+	beq	.L111
 	mov	x24, x1
-	adrp	x1, str341
-	add	x1, x1, #:lo12:str341
+	adrp	x1, str386
+	add	x1, x1, #:lo12:str386
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x21
 	mov	x21, x0
-	adrp	x0, str340
-	add	x0, x0, #:lo12:str340
+	adrp	x0, str385
+	add	x0, x0, #:lo12:str385
 	bl	__rt_str_concat
 	mov	x1, x24
 	mov	x24, x1
-	adrp	x1, str344
-	add	x1, x1, #:lo12:str344
+	adrp	x1, str389
+	add	x1, x1, #:lo12:str389
 	bl	__rt_str_concat
 	mov	x1, x24
 	mov	x17, x0
 	mov	x0, x21
 	mov	x21, x17
 	str	x21, [x23]
-	b	.L100
-.L97:
+	b	.L114
+.L111:
 	mov	x0, x21
 	mov	x21, x23
-	adrp	x2, str339
-	add	x2, x2, #:lo12:str339
+	adrp	x2, str384
+	add	x2, x2, #:lo12:str384
 	str	x2, [x21]
-	adrp	x21, str339
-	add	x21, x21, #:lo12:str339
-.L100:
+	adrp	x21, str384
+	add	x21, x21, #:lo12:str384
+.L114:
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str348
-	add	x1, x1, #:lo12:str348
+	adrp	x1, str393
+	add	x1, x1, #:lo12:str393
 	bl	__rt_str_concat
 	mov	x1, x22
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
-	adrp	x1, str352
-	add	x1, x1, #:lo12:str352
+	adrp	x1, str397
+	add	x1, x1, #:lo12:str397
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x0, x20
@@ -2491,14 +2637,14 @@ tools_fmt_formatter_format_type_def:
 	mov	x0, x19
 	mov	x19, x17
 	bl	__rt_str_concat
-	adrp	x1, str356
-	add	x1, x1, #:lo12:str356
+	adrp	x1, str401
+	add	x1, x1, #:lo12:str401
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, str358
-	add	x1, x1, #:lo12:str358
+	adrp	x1, str403
+	add	x1, x1, #:lo12:str403
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x19
@@ -2531,7 +2677,7 @@ tools_fmt_formatter_format_ctor_list:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L104
+	beq	.L118
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -2556,11 +2702,11 @@ tools_fmt_formatter_format_ctor_list:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	tools_fmt_formatter_format_ctor_list
-	b	.L106
-.L104:
+	b	.L120
+.L118:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L106:
+.L120:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2596,7 +2742,7 @@ tools_fmt_formatter_format_ctor_def:
 	mov	x2, x0
 	mov	x0, x19
 	cmp	x2, #1
-	beq	.L109
+	beq	.L123
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_ctor_fields
@@ -2607,23 +2753,23 @@ tools_fmt_formatter_format_ctor_def:
 	bl	tools_fmt_formatter_ind
 	mov	x1, x20
 	bl	__rt_str_concat
-	adrp	x1, str402
-	add	x1, x1, #:lo12:str402
+	adrp	x1, str447
+	add	x1, x1, #:lo12:str447
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, str404
-	add	x1, x1, #:lo12:str404
+	adrp	x1, str449
+	add	x1, x1, #:lo12:str449
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	adrp	x1, str407
-	add	x1, x1, #:lo12:str407
+	adrp	x1, str452
+	add	x1, x1, #:lo12:str452
 	bl	__rt_str_concat
-	b	.L111
-.L109:
+	b	.L125
+.L123:
 	mov	x19, x20
 	adrp	x0, tools_fmt_formatter_step
 	add	x0, x0, #:lo12:tools_fmt_formatter_step
@@ -2631,7 +2777,7 @@ tools_fmt_formatter_format_ctor_def:
 	bl	tools_fmt_formatter_ind
 	mov	x1, x19
 	bl	__rt_str_concat
-.L111:
+.L125:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2659,7 +2805,7 @@ tools_fmt_formatter_format_ctor_fields:
 	mov	x20, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L122
+	beq	.L136
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -2671,7 +2817,7 @@ tools_fmt_formatter_format_ctor_fields:
 	mov	x19, sp
 	ldr	x2, [x1]
 	cmp	x2, #0
-	beq	.L120
+	beq	.L134
 	mov	x2, #8
 	add	x2, x1, x2
 	ldr	x22, [x2]
@@ -2679,8 +2825,8 @@ tools_fmt_formatter_format_ctor_fields:
 	add	x1, x1, x2
 	ldr	x1, [x1]
 	mov	x24, x1
-	adrp	x1, str433
-	add	x1, x1, #:lo12:str433
+	adrp	x1, str478
+	add	x1, x1, #:lo12:str478
 	mov	x23, x0
 	bl	donna_string_equal
 	mov	x1, x24
@@ -2690,10 +2836,10 @@ tools_fmt_formatter_format_ctor_fields:
 	sub	sp, sp, x3
 	mov	x24, sp
 	cmp	x2, #1
-	beq	.L117
+	beq	.L131
 	mov	x23, x1
-	adrp	x1, str441
-	add	x1, x1, #:lo12:str441
+	adrp	x1, str486
+	add	x1, x1, #:lo12:str486
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x22
@@ -2706,8 +2852,8 @@ tools_fmt_formatter_format_ctor_fields:
 	str	x22, [x24]
 	mov	x0, x21
 	mov	x21, x22
-	b	.L119
-.L117:
+	b	.L133
+.L131:
 	mov	x23, x1
 	mov	x0, x22
 	mov	x22, x24
@@ -2716,7 +2862,7 @@ tools_fmt_formatter_format_ctor_fields:
 	mov	x0, x21
 	mov	x21, x17
 	str	x21, [x22]
-.L119:
+.L133:
 	mov	x22, x0
 	mov	x0, #24
 	bl	malloc
@@ -2733,16 +2879,16 @@ tools_fmt_formatter_format_ctor_fields:
 	str	x20, [x3]
 	bl	tools_fmt_formatter_format_ctor_fields
 	str	x0, [x19]
-	b	.L124
-.L120:
+	b	.L138
+.L134:
 	mov	x0, x20
 	bl	donna_list_reverse
 	str	x0, [x19]
-	b	.L124
-.L122:
+	b	.L138
+.L136:
 	mov	x0, x20
 	bl	donna_list_reverse
-.L124:
+.L138:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2765,8 +2911,8 @@ tools_fmt_formatter_format_functions:
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_fn_list
-	adrp	x1, str453
-	add	x1, x1, #:lo12:str453
+	adrp	x1, str498
+	add	x1, x1, #:lo12:str498
 	bl	donna_string_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -2790,7 +2936,7 @@ tools_fmt_formatter_format_fn_list:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L129
+	beq	.L143
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -2817,11 +2963,11 @@ tools_fmt_formatter_format_fn_list:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_fn_list
-	b	.L131
-.L129:
+	b	.L145
+.L143:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L131:
+.L145:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2848,7 +2994,7 @@ tools_fmt_formatter_format_function:
 	mov	x24, x1
 	ldr	x1, [x0]
 	cmp	x1, #1
-	beq	.L144
+	beq	.L158
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -2879,25 +3025,25 @@ tools_fmt_formatter_format_function:
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x21, #1
-	beq	.L136
-	adrp	x3, str540
-	add	x3, x3, #:lo12:str540
+	beq	.L150
+	adrp	x3, str585
+	add	x3, x3, #:lo12:str585
 	str	x3, [x2]
 	mov	x21, x0
-	adrp	x0, str540
-	add	x0, x0, #:lo12:str540
-	b	.L138
-.L136:
+	adrp	x0, str585
+	add	x0, x0, #:lo12:str585
+	b	.L152
+.L150:
 	mov	x21, x0
-	adrp	x0, str539
-	add	x0, x0, #:lo12:str539
+	adrp	x0, str584
+	add	x0, x0, #:lo12:str584
 	str	x0, [x2]
-	adrp	x0, str539
-	add	x0, x0, #:lo12:str539
-.L138:
+	adrp	x0, str584
+	add	x0, x0, #:lo12:str584
+.L152:
 	mov	x23, x1
-	adrp	x1, str542
-	add	x1, x1, #:lo12:str542
+	adrp	x1, str587
+	add	x1, x1, #:lo12:str587
 	bl	__rt_str_concat
 	mov	x1, x23
 	bl	__rt_str_concat
@@ -2916,8 +3062,8 @@ tools_fmt_formatter_format_function:
 	bl	__rt_str_concat
 	mov	x1, x23
 	bl	__rt_str_concat
-	adrp	x1, str549
-	add	x1, x1, #:lo12:str549
+	adrp	x1, str594
+	add	x1, x1, #:lo12:str594
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x0, x20
@@ -2933,7 +3079,7 @@ tools_fmt_formatter_format_function:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	.L141
+	beq	.L155
 	mov	x1, x23
 	mov	x23, x1
 	adrp	x1, tools_fmt_formatter_step
@@ -2947,40 +3093,40 @@ tools_fmt_formatter_format_function:
 	mov	x0, x22
 	mov	x22, x17
 	mov	x23, x1
-	adrp	x1, str559
-	add	x1, x1, #:lo12:str559
+	adrp	x1, str604
+	add	x1, x1, #:lo12:str604
 	bl	__rt_str_concat
 	mov	x1, x23
 	mov	x23, x0
 	mov	x0, x22
 	mov	x22, x1
-	adrp	x1, str561
-	add	x1, x1, #:lo12:str561
+	adrp	x1, str606
+	add	x1, x1, #:lo12:str606
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x23
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str564
-	add	x1, x1, #:lo12:str564
+	adrp	x1, str609
+	add	x1, x1, #:lo12:str609
 	bl	__rt_str_concat
 	mov	x1, x22
 	bl	__rt_str_concat
-	adrp	x1, str567
-	add	x1, x1, #:lo12:str567
+	adrp	x1, str612
+	add	x1, x1, #:lo12:str612
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x0, x21
 	str	x1, [x20]
-	b	.L143
-.L141:
+	b	.L157
+.L155:
 	mov	x0, x21
 	str	x1, [x20]
-.L143:
+.L157:
 	bl	__rt_str_concat
-	adrp	x1, str571
-	add	x1, x1, #:lo12:str571
+	adrp	x1, str616
+	add	x1, x1, #:lo12:str616
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -2992,8 +3138,8 @@ tools_fmt_formatter_format_function:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L151
-.L144:
+	b	.L165
+.L158:
 	mov	x25, x24
 	mov	x1, #8
 	add	x1, x0, x1
@@ -3027,35 +3173,35 @@ tools_fmt_formatter_format_function:
 	sub	sp, sp, x2
 	mov	x3, sp
 	cmp	x22, #1
-	beq	.L148
-	adrp	x2, str501
-	add	x2, x2, #:lo12:str501
+	beq	.L162
+	adrp	x2, str546
+	add	x2, x2, #:lo12:str546
 	str	x2, [x3]
-	adrp	x22, str501
-	add	x22, x22, #:lo12:str501
-	b	.L150
-.L148:
-	adrp	x2, str500
-	add	x2, x2, #:lo12:str500
+	adrp	x22, str546
+	add	x22, x22, #:lo12:str546
+	b	.L164
+.L162:
+	adrp	x2, str545
+	add	x2, x2, #:lo12:str545
 	str	x2, [x3]
-	adrp	x22, str500
-	add	x22, x22, #:lo12:str500
-.L150:
+	adrp	x22, str545
+	add	x22, x22, #:lo12:str545
+.L164:
 	mov	x23, x0
-	adrp	x0, str503
-	add	x0, x0, #:lo12:str503
+	adrp	x0, str548
+	add	x0, x0, #:lo12:str548
 	bl	__rt_str_concat
 	mov	x1, x24
 	mov	x24, x1
-	adrp	x1, str505
-	add	x1, x1, #:lo12:str505
+	adrp	x1, str550
+	add	x1, x1, #:lo12:str550
 	bl	__rt_str_concat
 	mov	x1, x24
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str508
-	add	x1, x1, #:lo12:str508
+	adrp	x1, str553
+	add	x1, x1, #:lo12:str553
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x0, x23
@@ -3064,8 +3210,8 @@ tools_fmt_formatter_format_function:
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str512
-	add	x1, x1, #:lo12:str512
+	adrp	x1, str557
+	add	x1, x1, #:lo12:str557
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
@@ -3083,7 +3229,7 @@ tools_fmt_formatter_format_function:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-.L151:
+.L165:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -3107,15 +3253,15 @@ tools_fmt_formatter_format_params_inline:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_param_list
-	adrp	x1, str579
-	add	x1, x1, #:lo12:str579
+	adrp	x1, str624
+	add	x1, x1, #:lo12:str624
 	bl	donna_string_join
 	mov	x1, x0
-	adrp	x0, str577
-	add	x0, x0, #:lo12:str577
+	adrp	x0, str622
+	add	x0, x0, #:lo12:str622
 	bl	__rt_str_concat
-	adrp	x1, str582
-	add	x1, x1, #:lo12:str582
+	adrp	x1, str627
+	add	x1, x1, #:lo12:str627
 	bl	__rt_str_concat
 	ldp	x29, x30, [sp], 16
 	ret
@@ -3138,7 +3284,7 @@ tools_fmt_formatter_format_param_list:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L156
+	beq	.L170
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -3163,11 +3309,11 @@ tools_fmt_formatter_format_param_list:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	tools_fmt_formatter_format_param_list
-	b	.L158
-.L156:
+	b	.L172
+.L170:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L158:
+.L172:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3193,7 +3339,7 @@ tools_fmt_formatter_format_params_multiline:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L161
+	beq	.L175
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -3228,11 +3374,11 @@ tools_fmt_formatter_format_params_multiline:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_params_multiline
-	b	.L163
-.L161:
+	b	.L177
+.L175:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L163:
+.L177:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3259,12 +3405,12 @@ tools_fmt_formatter_format_param:
 	ldr	x1, [x1]
 	ldr	x2, [x1]
 	cmp	x2, #0
-	beq	.L166
+	beq	.L180
 	mov	x2, #8
 	add	x1, x1, x2
 	ldr	x19, [x1]
-	adrp	x1, str636
-	add	x1, x1, #:lo12:str636
+	adrp	x1, str681
+	add	x1, x1, #:lo12:str681
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -3273,7 +3419,7 @@ tools_fmt_formatter_format_param:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-.L166:
+.L180:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -3289,20 +3435,20 @@ tools_fmt_formatter_format_ret_ann:
 	mov	x29, sp
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L169
+	beq	.L183
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	tools_fmt_formatter_format_type_ann
 	mov	x1, x0
-	adrp	x0, str651
-	add	x0, x0, #:lo12:str651
+	adrp	x0, str696
+	add	x0, x0, #:lo12:str696
 	bl	__rt_str_concat
-	b	.L170
-.L169:
-	adrp	x0, str648
-	add	x0, x0, #:lo12:str648
-.L170:
+	b	.L184
+.L183:
+	adrp	x0, str693
+	add	x0, x0, #:lo12:str693
+.L184:
 	ldp	x29, x30, [sp], 16
 	ret
 .type tools_fmt_formatter_format_ret_ann, @function
@@ -3320,7 +3466,7 @@ tools_fmt_formatter_format_body:
 	mov	x20, x1
 	ldr	x1, [x0]
 	cmp	x1, #13
-	beq	.L173
+	beq	.L187
 	mov	x19, x0
 	mov	x0, x20
 	bl	tools_fmt_formatter_ind
@@ -3332,8 +3478,8 @@ tools_fmt_formatter_format_body:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L175
-.L173:
+	b	.L189
+.L187:
 	mov	x1, x20
 	mov	x2, #8
 	add	x0, x0, x2
@@ -3341,10 +3487,10 @@ tools_fmt_formatter_format_body:
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_stmts_list
-	adrp	x1, str666
-	add	x1, x1, #:lo12:str666
+	adrp	x1, str711
+	add	x1, x1, #:lo12:str711
 	bl	donna_string_join
-.L175:
+.L189:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -3369,7 +3515,7 @@ tools_fmt_formatter_format_stmts_list:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L178
+	beq	.L192
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -3396,11 +3542,11 @@ tools_fmt_formatter_format_stmts_list:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_stmts_list
-	b	.L180
-.L178:
+	b	.L194
+.L192:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L180:
+.L194:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3425,9 +3571,9 @@ tools_fmt_formatter_format_stmt:
 	mov	x2, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L186
+	beq	.L200
 	cmp	x0, #1
-	beq	.L184
+	beq	.L198
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -3442,8 +3588,8 @@ tools_fmt_formatter_format_stmt:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L194
-.L184:
+	b	.L208
+.L198:
 	mov	x1, x20
 	mov	x0, #8
 	add	x0, x2, x0
@@ -3457,8 +3603,8 @@ tools_fmt_formatter_format_stmt:
 	bl	tools_fmt_formatter_ind
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str736
-	add	x1, x1, #:lo12:str736
+	adrp	x1, str781
+	add	x1, x1, #:lo12:str781
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x21
@@ -3469,8 +3615,8 @@ tools_fmt_formatter_format_stmt:
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str740
-	add	x1, x1, #:lo12:str740
+	adrp	x1, str785
+	add	x1, x1, #:lo12:str785
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x17, x0
@@ -3480,8 +3626,8 @@ tools_fmt_formatter_format_stmt:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L194
-.L186:
+	b	.L208
+.L200:
 	mov	x1, x20
 	mov	x0, #8
 	add	x0, x2, x0
@@ -3498,7 +3644,7 @@ tools_fmt_formatter_format_stmt:
 	mov	x21, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L190
+	beq	.L204
 	mov	x22, x1
 	mov	x1, #8
 	add	x0, x0, x1
@@ -3507,8 +3653,8 @@ tools_fmt_formatter_format_stmt:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str712
-	add	x0, x0, #:lo12:str712
+	adrp	x0, str757
+	add	x0, x0, #:lo12:str757
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x17, x0
@@ -3516,25 +3662,25 @@ tools_fmt_formatter_format_stmt:
 	mov	x19, x17
 	str	x19, [x21]
 	mov	x22, x1
-	b	.L193
-.L190:
+	b	.L207
+.L204:
 	mov	x0, x19
 	mov	x19, x21
 	mov	x22, x1
-	adrp	x1, str709
-	add	x1, x1, #:lo12:str709
+	adrp	x1, str754
+	add	x1, x1, #:lo12:str754
 	str	x1, [x19]
-	adrp	x19, str709
-	add	x19, x19, #:lo12:str709
-.L193:
+	adrp	x19, str754
+	add	x19, x19, #:lo12:str754
+.L207:
 	mov	x21, x19
 	mov	x19, x0
 	mov	x0, x20
 	bl	tools_fmt_formatter_ind
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str717
-	add	x1, x1, #:lo12:str717
+	adrp	x1, str762
+	add	x1, x1, #:lo12:str762
 	bl	__rt_str_concat
 	mov	x1, x22
 	bl	__rt_str_concat
@@ -3542,8 +3688,8 @@ tools_fmt_formatter_format_stmt:
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str721
-	add	x1, x1, #:lo12:str721
+	adrp	x1, str766
+	add	x1, x1, #:lo12:str766
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x17, x0
@@ -3553,7 +3699,7 @@ tools_fmt_formatter_format_stmt:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-.L194:
+.L208:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3579,23 +3725,23 @@ tools_fmt_formatter_format_expr:
 	str	x23, [x29, 24]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L267
+	beq	.L281
 	cmp	x2, #1
-	beq	.L266
+	beq	.L280
 	cmp	x2, #2
-	beq	.L265
+	beq	.L279
 	cmp	x2, #3
 	cset	x5, eq
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x4, sp
 	cmp	w5, #0
-	bne	.L201
+	bne	.L215
 	mov	x3, #0
 	str	x3, [x4]
 	mov	x3, #0
-	b	.L202
-.L201:
+	b	.L216
+.L215:
 	mov	x3, #8
 	add	x3, x0, x3
 	ldr	x3, [x3]
@@ -3603,19 +3749,19 @@ tools_fmt_formatter_format_expr:
 	cset	x3, eq
 	and	x3, x3, x5
 	str	x3, [x4]
-.L202:
+.L216:
 	cmp	w3, #0
-	bne	.L264
+	bne	.L278
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x4, sp
 	cmp	x2, #3
-	beq	.L206
+	beq	.L220
 	mov	x3, #0
 	str	x3, [x4]
 	mov	x3, #0
-	b	.L207
-.L206:
+	b	.L221
+.L220:
 	mov	x3, #8
 	add	x3, x0, x3
 	ldr	x3, [x3]
@@ -3623,61 +3769,61 @@ tools_fmt_formatter_format_expr:
 	cset	x3, eq
 	and	x3, x3, x5
 	str	x3, [x4]
-.L207:
+.L221:
 	cmp	w3, #0
-	bne	.L263
+	bne	.L277
 	cmp	x2, #4
-	beq	.L262
+	beq	.L276
 	cmp	x2, #5
-	beq	.L261
+	beq	.L275
 	cmp	x2, #9
-	beq	.L260
+	beq	.L274
 	cmp	x2, #10
-	beq	.L258
+	beq	.L272
 	cmp	x2, #11
-	beq	.L249
+	beq	.L263
 	cmp	x2, #14
-	beq	.L248
+	beq	.L262
 	cmp	x2, #12
-	beq	.L247
+	beq	.L261
 	cmp	x2, #13
-	beq	.L246
+	beq	.L260
 	cmp	x2, #6
-	beq	.L242
+	beq	.L256
 	cmp	x2, #7
-	beq	.L234
+	beq	.L248
 	cmp	x2, #8
-	beq	.L226
+	beq	.L240
 	cmp	x2, #15
-	beq	.L225
+	beq	.L239
 	cmp	x2, #16
-	beq	.L224
+	beq	.L238
 	cmp	x2, #17
-	beq	.L223
-	adrp	x0, str1123
-	add	x0, x0, #:lo12:str1123
-	b	.L268
-.L223:
+	beq	.L237
+	adrp	x0, str1168
+	add	x0, x0, #:lo12:str1168
+	b	.L282
+.L237:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	bl	tools_fmt_formatter_format_expr
 	mov	x1, x0
-	adrp	x0, str1118
-	add	x0, x0, #:lo12:str1118
+	adrp	x0, str1163
+	add	x0, x0, #:lo12:str1163
 	bl	__rt_str_concat
-	b	.L268
-.L224:
+	b	.L282
+.L238:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	bl	tools_fmt_formatter_format_expr
 	mov	x1, x0
-	adrp	x0, str1107
-	add	x0, x0, #:lo12:str1107
+	adrp	x0, str1152
+	add	x0, x0, #:lo12:str1152
 	bl	__rt_str_concat
-	b	.L268
-.L225:
+	b	.L282
+.L239:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -3690,13 +3836,13 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str1092
-	add	x0, x0, #:lo12:str1092
+	adrp	x0, str1137
+	add	x0, x0, #:lo12:str1137
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str1095
-	add	x1, x1, #:lo12:str1095
+	adrp	x1, str1140
+	add	x1, x1, #:lo12:str1140
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x17, x0
@@ -3707,8 +3853,8 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L268
-.L226:
+	b	.L282
+.L240:
 	mov	x21, x1
 	mov	x1, #8
 	add	x1, x0, x1
@@ -3721,8 +3867,8 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str1033
-	add	x0, x0, #:lo12:str1033
+	adrp	x0, str1078
+	add	x0, x0, #:lo12:str1078
 	bl	__rt_str_concat
 	mov	x20, x0
 	mov	x0, x19
@@ -3735,7 +3881,7 @@ tools_fmt_formatter_format_expr:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L233
+	beq	.L247
 	mov	x22, x1
 	mov	x1, x21
 	mov	x20, x0
@@ -3743,21 +3889,21 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, str1046
-	add	x0, x0, #:lo12:str1046
+	adrp	x0, str1091
+	add	x0, x0, #:lo12:str1091
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str1049
-	add	x1, x1, #:lo12:str1049
+	adrp	x1, str1094
+	add	x1, x1, #:lo12:str1094
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x22, x1
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str1052
-	add	x1, x1, #:lo12:str1052
+	adrp	x1, str1097
+	add	x1, x1, #:lo12:str1097
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x22, x0
@@ -3774,7 +3920,7 @@ tools_fmt_formatter_format_expr:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	.L230
+	beq	.L244
 	mov	x22, x1
 	adrp	x1, tools_fmt_formatter_step
 	add	x1, x1, #:lo12:tools_fmt_formatter_step
@@ -3785,17 +3931,17 @@ tools_fmt_formatter_format_expr:
 	bl	tools_fmt_formatter_format_args_multiline
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str1064
-	add	x1, x1, #:lo12:str1064
+	adrp	x1, str1109
+	add	x1, x1, #:lo12:str1109
 	bl	donna_string_join
 	mov	x1, x0
-	adrp	x0, str1063
-	add	x0, x0, #:lo12:str1063
+	adrp	x0, str1108
+	add	x0, x0, #:lo12:str1108
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str1067
-	add	x1, x1, #:lo12:str1067
+	adrp	x1, str1112
+	add	x1, x1, #:lo12:str1112
 	bl	__rt_str_concat
 	mov	x23, x0
 	adrp	x0, tools_fmt_formatter_step
@@ -3810,8 +3956,8 @@ tools_fmt_formatter_format_expr:
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str1074
-	add	x1, x1, #:lo12:str1074
+	adrp	x1, str1119
+	add	x1, x1, #:lo12:str1119
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x0
@@ -3820,27 +3966,27 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x21
 	bl	__rt_str_concat
-	adrp	x1, str1078
-	add	x1, x1, #:lo12:str1078
+	adrp	x1, str1123
+	add	x1, x1, #:lo12:str1123
 	bl	__rt_str_concat
 	str	x0, [x20]
-	b	.L232
-.L230:
+	b	.L246
+.L244:
 	mov	x0, x22
 	str	x0, [x20]
-.L232:
+.L246:
 	str	x0, [x19]
-	b	.L268
-.L233:
-	adrp	x0, str1042
-	add	x0, x0, #:lo12:str1042
+	b	.L282
+.L247:
+	adrp	x0, str1087
+	add	x0, x0, #:lo12:str1087
 	bl	__rt_str_concat
-	adrp	x1, str1044
-	add	x1, x1, #:lo12:str1044
+	adrp	x1, str1089
+	add	x1, x1, #:lo12:str1089
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L268
-.L234:
+	b	.L282
+.L248:
 	mov	x20, x1
 	mov	x1, #8
 	add	x0, x0, x1
@@ -3854,20 +4000,20 @@ tools_fmt_formatter_format_expr:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L240
+	beq	.L254
 	mov	x21, x1
 	mov	x20, x0
 	bl	tools_fmt_formatter_format_exprs_inline
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, str997
-	add	x0, x0, #:lo12:str997
+	adrp	x0, str1042
+	add	x0, x0, #:lo12:str1042
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str1000
-	add	x1, x1, #:lo12:str1000
+	adrp	x1, str1045
+	add	x1, x1, #:lo12:str1045
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x0
@@ -3883,7 +4029,7 @@ tools_fmt_formatter_format_expr:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	.L237
+	beq	.L251
 	mov	x21, x1
 	adrp	x1, tools_fmt_formatter_step
 	add	x1, x1, #:lo12:tools_fmt_formatter_step
@@ -3894,17 +4040,17 @@ tools_fmt_formatter_format_expr:
 	bl	tools_fmt_formatter_format_args_multiline
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str1012
-	add	x1, x1, #:lo12:str1012
+	adrp	x1, str1057
+	add	x1, x1, #:lo12:str1057
 	bl	donna_string_join
 	mov	x1, x0
-	adrp	x0, str1011
-	add	x0, x0, #:lo12:str1011
+	adrp	x0, str1056
+	add	x0, x0, #:lo12:str1056
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str1015
-	add	x1, x1, #:lo12:str1015
+	adrp	x1, str1060
+	add	x1, x1, #:lo12:str1060
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x0
@@ -3913,25 +4059,25 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x21
 	bl	__rt_str_concat
-	adrp	x1, str1019
-	add	x1, x1, #:lo12:str1019
+	adrp	x1, str1064
+	add	x1, x1, #:lo12:str1064
 	bl	__rt_str_concat
 	str	x0, [x20]
-	b	.L239
-.L237:
+	b	.L253
+.L251:
 	mov	x0, x21
 	str	x0, [x20]
-.L239:
+.L253:
 	str	x0, [x19]
-	b	.L268
-.L240:
-	adrp	x0, str996
-	add	x0, x0, #:lo12:str996
+	b	.L282
+.L254:
+	adrp	x0, str1041
+	add	x0, x0, #:lo12:str1041
 	str	x0, [x19]
-	adrp	x0, str996
-	add	x0, x0, #:lo12:str996
-	b	.L268
-.L242:
+	adrp	x0, str1041
+	add	x0, x0, #:lo12:str1041
+	b	.L282
+.L256:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x20, [x0]
@@ -3939,13 +4085,13 @@ tools_fmt_formatter_format_expr:
 	mov	x0, x20
 	bl	tools_fmt_formatter_format_exprs_inline
 	mov	x1, x0
-	adrp	x0, str957
-	add	x0, x0, #:lo12:str957
+	adrp	x0, str1002
+	add	x0, x0, #:lo12:str1002
 	bl	__rt_str_concat
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str960
-	add	x1, x1, #:lo12:str960
+	adrp	x1, str1005
+	add	x1, x1, #:lo12:str1005
 	bl	__rt_str_concat
 	mov	x1, x19
 	mov	x21, x1
@@ -3958,7 +4104,7 @@ tools_fmt_formatter_format_expr:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L245
+	beq	.L259
 	mov	x0, x20
 	mov	x20, x1
 	adrp	x1, tools_fmt_formatter_step
@@ -3970,17 +4116,17 @@ tools_fmt_formatter_format_expr:
 	bl	tools_fmt_formatter_format_args_multiline
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str972
-	add	x1, x1, #:lo12:str972
+	adrp	x1, str1017
+	add	x1, x1, #:lo12:str1017
 	bl	donna_string_join
 	mov	x1, x0
-	adrp	x0, str971
-	add	x0, x0, #:lo12:str971
+	adrp	x0, str1016
+	add	x0, x0, #:lo12:str1016
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, str975
-	add	x1, x1, #:lo12:str975
+	adrp	x1, str1020
+	add	x1, x1, #:lo12:str1020
 	bl	__rt_str_concat
 	mov	x1, x20
 	mov	x20, x0
@@ -3989,26 +4135,26 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str979
-	add	x1, x1, #:lo12:str979
+	adrp	x1, str1024
+	add	x1, x1, #:lo12:str1024
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L268
-.L245:
+	b	.L282
+.L259:
 	str	x0, [x19]
-	b	.L268
-.L246:
+	b	.L282
+.L260:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_stmts_list
-	adrp	x1, str947
-	add	x1, x1, #:lo12:str947
+	adrp	x1, str992
+	add	x1, x1, #:lo12:str992
 	bl	donna_string_join
-	b	.L268
-.L247:
+	b	.L282
+.L261:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -4019,11 +4165,11 @@ tools_fmt_formatter_format_expr:
 	ldr	x1, [x1]
 	mov	x2, x19
 	bl	tools_fmt_formatter_format_case
-	b	.L268
-.L248:
+	b	.L282
+.L262:
 	bl	tools_fmt_formatter_format_pipe
-	b	.L268
-.L249:
+	b	.L282
+.L263:
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -4035,39 +4181,39 @@ tools_fmt_formatter_format_expr:
 	mov	x3, sp
 	ldr	x2, [x2]
 	cmp	x2, #0
-	beq	.L252
-	adrp	x2, str891
-	add	x2, x2, #:lo12:str891
+	beq	.L266
+	adrp	x2, str936
+	add	x2, x2, #:lo12:str936
 	str	x2, [x3]
-	adrp	x20, str891
-	add	x20, x20, #:lo12:str891
-	b	.L254
-.L252:
-	adrp	x2, str890
-	add	x2, x2, #:lo12:str890
+	adrp	x20, str936
+	add	x20, x20, #:lo12:str936
+	b	.L268
+.L266:
+	adrp	x2, str935
+	add	x2, x2, #:lo12:str935
 	str	x2, [x3]
-	adrp	x20, str890
-	add	x20, x20, #:lo12:str890
-.L254:
+	adrp	x20, str935
+	add	x20, x20, #:lo12:str935
+.L268:
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	ldr	x2, [x0]
 	cmp	x2, #10
-	beq	.L256
+	beq	.L270
 	bl	tools_fmt_formatter_format_expr
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L268
-.L256:
+	b	.L282
+.L270:
 	mov	x17, x20
 	mov	x20, x0
 	mov	x0, x17
 	mov	x21, x1
-	adrp	x1, str907
-	add	x1, x1, #:lo12:str907
+	adrp	x1, str952
+	add	x1, x1, #:lo12:str952
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x17, x0
@@ -4078,12 +4224,12 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str911
-	add	x1, x1, #:lo12:str911
+	adrp	x1, str956
+	add	x1, x1, #:lo12:str956
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L268
-.L258:
+	b	.L282
+.L272:
 	mov	x21, x1
 	mov	x1, #8
 	add	x1, x0, x1
@@ -4112,8 +4258,8 @@ tools_fmt_formatter_format_expr:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x1
-	adrp	x1, str867
-	add	x1, x1, #:lo12:str867
+	adrp	x1, str912
+	add	x1, x1, #:lo12:str912
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -4124,13 +4270,13 @@ tools_fmt_formatter_format_expr:
 	bl	__rt_str_concat
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str871
-	add	x1, x1, #:lo12:str871
+	adrp	x1, str916
+	add	x1, x1, #:lo12:str916
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
-	b	.L268
-.L260:
+	b	.L282
+.L274:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -4141,8 +4287,8 @@ tools_fmt_formatter_format_expr:
 	ldr	x1, [x1]
 	mov	x2, x19
 	bl	tools_fmt_formatter_format_call
-	b	.L268
-.L261:
+	b	.L282
+.L275:
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -4153,48 +4299,48 @@ tools_fmt_formatter_format_expr:
 	bl	tools_fmt_formatter_format_expr
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str838
-	add	x1, x1, #:lo12:str838
+	adrp	x1, str883
+	add	x1, x1, #:lo12:str883
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
-	b	.L268
-.L262:
+	b	.L282
+.L276:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L268
-.L263:
-	adrp	x0, str818
-	add	x0, x0, #:lo12:str818
-	b	.L268
-.L264:
-	adrp	x0, str800
-	add	x0, x0, #:lo12:str800
-	b	.L268
-.L265:
+	b	.L282
+.L277:
+	adrp	x0, str863
+	add	x0, x0, #:lo12:str863
+	b	.L282
+.L278:
+	adrp	x0, str845
+	add	x0, x0, #:lo12:str845
+	b	.L282
+.L279:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	tools_fmt_formatter_escape_string
 	mov	x1, x0
-	adrp	x0, str778
-	add	x0, x0, #:lo12:str778
+	adrp	x0, str823
+	add	x0, x0, #:lo12:str823
 	bl	__rt_str_concat
-	adrp	x1, str781
-	add	x1, x1, #:lo12:str781
+	adrp	x1, str826
+	add	x1, x1, #:lo12:str826
 	bl	__rt_str_concat
-	b	.L268
-.L266:
+	b	.L282
+.L280:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L268
-.L267:
+	b	.L282
+.L281:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-.L268:
+.L282:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -4225,9 +4371,9 @@ tools_fmt_formatter_format_call:
 	mov	x0, x19
 	bl	donna_list_is_empty
 	cmp	x0, #1
-	beq	.L274
-	adrp	x1, str1134
-	add	x1, x1, #:lo12:str1134
+	beq	.L288
+	adrp	x1, str1179
+	add	x1, x1, #:lo12:str1179
 	mov	x0, x21
 	bl	__rt_str_concat
 	mov	x1, x20
@@ -4237,8 +4383,8 @@ tools_fmt_formatter_format_call:
 	mov	x1, x0
 	mov	x0, x22
 	bl	__rt_str_concat
-	adrp	x1, str1138
-	add	x1, x1, #:lo12:str1138
+	adrp	x1, str1183
+	add	x1, x1, #:lo12:str1183
 	bl	__rt_str_concat
 	mov	x22, x0
 	mov	x0, x19
@@ -4252,7 +4398,7 @@ tools_fmt_formatter_format_call:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L272
+	beq	.L286
 	adrp	x1, tools_fmt_formatter_step
 	add	x1, x1, #:lo12:tools_fmt_formatter_step
 	ldr	x1, [x1]
@@ -4263,20 +4409,20 @@ tools_fmt_formatter_format_call:
 	mov	x17, x0
 	mov	x0, x21
 	mov	x21, x17
-	adrp	x1, str1149
-	add	x1, x1, #:lo12:str1149
+	adrp	x1, str1194
+	add	x1, x1, #:lo12:str1194
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x21
 	mov	x21, x17
-	adrp	x1, str1151
-	add	x1, x1, #:lo12:str1151
+	adrp	x1, str1196
+	add	x1, x1, #:lo12:str1196
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x21
 	bl	__rt_str_concat
-	adrp	x1, str1154
-	add	x1, x1, #:lo12:str1154
+	adrp	x1, str1199
+	add	x1, x1, #:lo12:str1199
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -4285,21 +4431,21 @@ tools_fmt_formatter_format_call:
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str1158
-	add	x1, x1, #:lo12:str1158
+	adrp	x1, str1203
+	add	x1, x1, #:lo12:str1203
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L276
-.L272:
+	b	.L290
+.L286:
 	mov	x0, x22
 	str	x0, [x19]
-	b	.L276
-.L274:
+	b	.L290
+.L288:
 	mov	x0, x21
-	adrp	x1, str1132
-	add	x1, x1, #:lo12:str1132
+	adrp	x1, str1177
+	add	x1, x1, #:lo12:str1177
 	bl	__rt_str_concat
-.L276:
+.L290:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -4320,8 +4466,8 @@ tools_fmt_formatter_format_exprs_inline:
 	adrp	x2, donna_nil
 	add	x2, x2, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_exprs_loop
-	adrp	x1, str1163
-	add	x1, x1, #:lo12:str1163
+	adrp	x1, str1208
+	add	x1, x1, #:lo12:str1208
 	bl	donna_string_join
 	ldp	x29, x30, [sp], 16
 	ret
@@ -4345,7 +4491,7 @@ tools_fmt_formatter_format_exprs_loop:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L281
+	beq	.L295
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -4372,11 +4518,11 @@ tools_fmt_formatter_format_exprs_loop:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_exprs_loop
-	b	.L283
-.L281:
+	b	.L297
+.L295:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L283:
+.L297:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -4403,7 +4549,7 @@ tools_fmt_formatter_format_args_multiline:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L286
+	beq	.L300
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -4440,11 +4586,11 @@ tools_fmt_formatter_format_args_multiline:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_args_multiline
-	b	.L288
-.L286:
+	b	.L302
+.L300:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L288:
+.L302:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -4488,7 +4634,7 @@ tools_fmt_formatter_flatten_pipe:
 	mov	x20, x0
 	ldr	x0, [x20]
 	cmp	x0, #14
-	beq	.L293
+	beq	.L307
 	mov	x0, #24
 	bl	malloc
 	mov	x1, #1
@@ -4499,8 +4645,8 @@ tools_fmt_formatter_flatten_pipe:
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x19, [x1]
-	b	.L294
-.L293:
+	b	.L308
+.L307:
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
@@ -4521,7 +4667,7 @@ tools_fmt_formatter_flatten_pipe:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	tools_fmt_formatter_flatten_pipe
-.L294:
+.L308:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -4541,17 +4687,17 @@ tools_fmt_formatter_format_pipe_chain:
 	str	x20, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	.L303
+	beq	.L317
 	mov	x3, #16
 	sub	sp, sp, x3
 	mov	x3, sp
 	cmp	x2, #1
-	beq	.L299
+	beq	.L313
 	mov	x2, #0
 	str	x2, [x3]
 	mov	x2, #0
-	b	.L300
-.L299:
+	b	.L314
+.L313:
 	mov	x2, #16
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -4561,9 +4707,9 @@ tools_fmt_formatter_format_pipe_chain:
 	mov	x4, #1
 	and	x2, x2, x4
 	str	x2, [x3]
-.L300:
+.L314:
 	cmp	w2, #0
-	bne	.L302
+	bne	.L316
 	mov	x2, x0
 	mov	x0, #8
 	add	x0, x2, x0
@@ -4583,29 +4729,29 @@ tools_fmt_formatter_format_pipe_chain:
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, str1257
-	add	x1, x1, #:lo12:str1257
+	adrp	x1, str1302
+	add	x1, x1, #:lo12:str1302
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, str1259
-	add	x1, x1, #:lo12:str1259
+	adrp	x1, str1304
+	add	x1, x1, #:lo12:str1304
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L304
-.L302:
+	b	.L318
+.L316:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	bl	tools_fmt_formatter_format_expr
-	b	.L304
-.L303:
-	adrp	x0, str1229
-	add	x0, x0, #:lo12:str1229
-.L304:
+	b	.L318
+.L317:
+	adrp	x0, str1274
+	add	x0, x0, #:lo12:str1274
+.L318:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -4631,7 +4777,7 @@ tools_fmt_formatter_format_pipe_rest:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L307
+	beq	.L321
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -4643,8 +4789,8 @@ tools_fmt_formatter_format_pipe_rest:
 	bl	tools_fmt_formatter_ind
 	mov	x1, x22
 	mov	x22, x1
-	adrp	x1, str1275
-	add	x1, x1, #:lo12:str1275
+	adrp	x1, str1320
+	add	x1, x1, #:lo12:str1320
 	bl	__rt_str_concat
 	mov	x1, x22
 	mov	x17, x0
@@ -4673,11 +4819,11 @@ tools_fmt_formatter_format_pipe_rest:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_pipe_rest
-	b	.L309
-.L307:
+	b	.L323
+.L321:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L309:
+.L323:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -4713,17 +4859,17 @@ tools_fmt_formatter_format_case:
 	bl	tools_fmt_formatter_format_clauses_list
 	mov	x1, x19
 	mov	x19, x0
-	adrp	x0, str1288
-	add	x0, x0, #:lo12:str1288
+	adrp	x0, str1333
+	add	x0, x0, #:lo12:str1333
 	bl	__rt_str_concat
-	adrp	x1, str1290
-	add	x1, x1, #:lo12:str1290
+	adrp	x1, str1335
+	add	x1, x1, #:lo12:str1335
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, str1292
-	add	x1, x1, #:lo12:str1292
+	adrp	x1, str1337
+	add	x1, x1, #:lo12:str1337
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x19
@@ -4752,7 +4898,7 @@ tools_fmt_formatter_format_clauses_list:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	.L314
+	beq	.L328
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -4779,11 +4925,11 @@ tools_fmt_formatter_format_clauses_list:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	tools_fmt_formatter_format_clauses_list
-	b	.L316
-.L314:
+	b	.L330
+.L328:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L316:
+.L330:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -4823,7 +4969,7 @@ tools_fmt_formatter_format_clause:
 	mov	x20, x2
 	ldr	x2, [x21]
 	cmp	x2, #0
-	beq	.L319
+	beq	.L333
 	mov	x19, x0
 	mov	x0, #8
 	add	x0, x21, x0
@@ -4834,17 +4980,17 @@ tools_fmt_formatter_format_clause:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str1332
-	add	x0, x0, #:lo12:str1332
+	adrp	x0, str1377
+	add	x0, x0, #:lo12:str1377
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x0, x19
-	b	.L321
-.L319:
+	b	.L335
+.L333:
 	mov	x22, x1
-	adrp	x1, str1329
-	add	x1, x1, #:lo12:str1329
-.L321:
+	adrp	x1, str1374
+	add	x1, x1, #:lo12:str1374
+.L335:
 	mov	x21, x1
 	mov	x19, x0
 	mov	x0, x20
@@ -4853,8 +4999,8 @@ tools_fmt_formatter_format_clause:
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
-	adrp	x1, str1339
-	add	x1, x1, #:lo12:str1339
+	adrp	x1, str1384
+	add	x1, x1, #:lo12:str1384
 	bl	__rt_str_concat
 	mov	x2, x20
 	mov	x1, x0
@@ -4887,15 +5033,15 @@ tools_fmt_formatter_format_clause_body:
 	add	x1, x2, x1
 	ldr	x2, [x0]
 	cmp	x2, #13
-	beq	.L328
+	beq	.L342
 	mov	x20, x1
 	bl	tools_fmt_formatter_format_expr
 	mov	x1, x20
 	mov	x20, x0
 	mov	x0, x19
 	mov	x21, x1
-	adrp	x1, str1362
-	add	x1, x1, #:lo12:str1362
+	adrp	x1, str1407
+	add	x1, x1, #:lo12:str1407
 	mov	x19, x0
 	bl	__rt_str_concat
 	mov	x1, x21
@@ -4917,10 +5063,10 @@ tools_fmt_formatter_format_clause_body:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L326
+	beq	.L340
 	mov	x21, x1
-	adrp	x1, str1371
-	add	x1, x1, #:lo12:str1371
+	adrp	x1, str1416
+	add	x1, x1, #:lo12:str1416
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x0
@@ -4932,12 +5078,12 @@ tools_fmt_formatter_format_clause_body:
 	mov	x1, x20
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L329
-.L326:
+	b	.L343
+.L340:
 	mov	x0, x21
 	str	x0, [x19]
-	b	.L329
-.L328:
+	b	.L343
+.L342:
 	mov	x2, #8
 	add	x0, x0, x2
 	ldr	x0, [x0]
@@ -4947,19 +5093,19 @@ tools_fmt_formatter_format_clause_body:
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, str1356
-	add	x1, x1, #:lo12:str1356
+	adrp	x1, str1401
+	add	x1, x1, #:lo12:str1401
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
-	adrp	x1, str1358
-	add	x1, x1, #:lo12:str1358
+	adrp	x1, str1403
+	add	x1, x1, #:lo12:str1403
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-.L329:
+.L343:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -4984,11 +5130,11 @@ tools_fmt_formatter_format_binop_left:
 	mov	x1, x2
 	ldr	x2, [x0]
 	cmp	x2, #10
-	beq	.L332
+	beq	.L346
 	mov	x21, x1
 	bl	tools_fmt_formatter_format_expr
-	b	.L336
-.L332:
+	b	.L350
+.L346:
 	mov	x21, x1
 	mov	x20, x0
 	mov	x0, #8
@@ -5004,21 +5150,21 @@ tools_fmt_formatter_format_binop_left:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L335
+	beq	.L349
 	bl	tools_fmt_formatter_format_expr
 	str	x0, [x19]
-	b	.L336
-.L335:
+	b	.L350
+.L349:
 	bl	tools_fmt_formatter_format_expr
 	mov	x1, x0
-	adrp	x0, str1399
-	add	x0, x0, #:lo12:str1399
+	adrp	x0, str1444
+	add	x0, x0, #:lo12:str1444
 	bl	__rt_str_concat
-	adrp	x1, str1402
-	add	x1, x1, #:lo12:str1402
+	adrp	x1, str1447
+	add	x1, x1, #:lo12:str1447
 	bl	__rt_str_concat
 	str	x0, [x19]
-.L336:
+.L350:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5042,11 +5188,11 @@ tools_fmt_formatter_format_binop_right:
 	mov	x1, x2
 	ldr	x2, [x0]
 	cmp	x2, #10
-	beq	.L339
+	beq	.L353
 	mov	x21, x1
 	bl	tools_fmt_formatter_format_expr
-	b	.L343
-.L339:
+	b	.L357
+.L353:
 	mov	x21, x1
 	mov	x20, x0
 	mov	x0, #8
@@ -5062,21 +5208,21 @@ tools_fmt_formatter_format_binop_right:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	.L342
+	beq	.L356
 	bl	tools_fmt_formatter_format_expr
 	str	x0, [x19]
-	b	.L343
-.L342:
+	b	.L357
+.L356:
 	bl	tools_fmt_formatter_format_expr
 	mov	x1, x0
-	adrp	x0, str1429
-	add	x0, x0, #:lo12:str1429
+	adrp	x0, str1474
+	add	x0, x0, #:lo12:str1474
 	bl	__rt_str_concat
-	adrp	x1, str1432
-	add	x1, x1, #:lo12:str1432
+	adrp	x1, str1477
+	add	x1, x1, #:lo12:str1477
 	bl	__rt_str_concat
 	str	x0, [x19]
-.L343:
+.L357:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5095,134 +5241,134 @@ tools_fmt_formatter_binop_str:
 	mov	x29, sp
 	ldr	x0, [x0]
 	cmp	x0, #0
-	beq	.L386
+	beq	.L400
 	cmp	x0, #1
-	beq	.L385
+	beq	.L399
 	cmp	x0, #2
-	beq	.L384
+	beq	.L398
 	cmp	x0, #3
-	beq	.L383
+	beq	.L397
 	cmp	x0, #4
-	beq	.L382
+	beq	.L396
 	cmp	x0, #5
-	beq	.L381
+	beq	.L395
 	cmp	x0, #6
-	beq	.L380
+	beq	.L394
 	cmp	x0, #7
-	beq	.L379
+	beq	.L393
 	cmp	x0, #8
-	beq	.L378
+	beq	.L392
 	cmp	x0, #9
-	beq	.L377
+	beq	.L391
 	cmp	x0, #10
-	beq	.L376
+	beq	.L390
 	cmp	x0, #11
-	beq	.L375
+	beq	.L389
 	cmp	x0, #12
-	beq	.L374
+	beq	.L388
 	cmp	x0, #13
-	beq	.L373
+	beq	.L387
 	cmp	x0, #14
-	beq	.L372
+	beq	.L386
 	cmp	x0, #15
-	beq	.L371
+	beq	.L385
 	cmp	x0, #16
-	beq	.L370
+	beq	.L384
 	cmp	x0, #17
-	beq	.L369
+	beq	.L383
 	cmp	x0, #18
-	beq	.L368
+	beq	.L382
 	cmp	x0, #19
-	beq	.L367
+	beq	.L381
 	cmp	x0, #20
-	beq	.L366
-	adrp	x0, str1545
-	add	x0, x0, #:lo12:str1545
-	b	.L387
-.L366:
+	beq	.L380
+	adrp	x0, str1590
+	add	x0, x0, #:lo12:str1590
+	b	.L401
+.L380:
+	adrp	x0, str1589
+	add	x0, x0, #:lo12:str1589
+	b	.L401
+.L381:
+	adrp	x0, str1584
+	add	x0, x0, #:lo12:str1584
+	b	.L401
+.L382:
+	adrp	x0, str1579
+	add	x0, x0, #:lo12:str1579
+	b	.L401
+.L383:
+	adrp	x0, str1574
+	add	x0, x0, #:lo12:str1574
+	b	.L401
+.L384:
+	adrp	x0, str1569
+	add	x0, x0, #:lo12:str1569
+	b	.L401
+.L385:
+	adrp	x0, str1564
+	add	x0, x0, #:lo12:str1564
+	b	.L401
+.L386:
+	adrp	x0, str1559
+	add	x0, x0, #:lo12:str1559
+	b	.L401
+.L387:
+	adrp	x0, str1554
+	add	x0, x0, #:lo12:str1554
+	b	.L401
+.L388:
+	adrp	x0, str1549
+	add	x0, x0, #:lo12:str1549
+	b	.L401
+.L389:
 	adrp	x0, str1544
 	add	x0, x0, #:lo12:str1544
-	b	.L387
-.L367:
+	b	.L401
+.L390:
 	adrp	x0, str1539
 	add	x0, x0, #:lo12:str1539
-	b	.L387
-.L368:
+	b	.L401
+.L391:
 	adrp	x0, str1534
 	add	x0, x0, #:lo12:str1534
-	b	.L387
-.L369:
+	b	.L401
+.L392:
 	adrp	x0, str1529
 	add	x0, x0, #:lo12:str1529
-	b	.L387
-.L370:
+	b	.L401
+.L393:
 	adrp	x0, str1524
 	add	x0, x0, #:lo12:str1524
-	b	.L387
-.L371:
+	b	.L401
+.L394:
 	adrp	x0, str1519
 	add	x0, x0, #:lo12:str1519
-	b	.L387
-.L372:
+	b	.L401
+.L395:
 	adrp	x0, str1514
 	add	x0, x0, #:lo12:str1514
-	b	.L387
-.L373:
+	b	.L401
+.L396:
 	adrp	x0, str1509
 	add	x0, x0, #:lo12:str1509
-	b	.L387
-.L374:
+	b	.L401
+.L397:
 	adrp	x0, str1504
 	add	x0, x0, #:lo12:str1504
-	b	.L387
-.L375:
+	b	.L401
+.L398:
 	adrp	x0, str1499
 	add	x0, x0, #:lo12:str1499
-	b	.L387
-.L376:
+	b	.L401
+.L399:
 	adrp	x0, str1494
 	add	x0, x0, #:lo12:str1494
-	b	.L387
-.L377:
+	b	.L401
+.L400:
 	adrp	x0, str1489
 	add	x0, x0, #:lo12:str1489
-	b	.L387
-.L378:
-	adrp	x0, str1484
-	add	x0, x0, #:lo12:str1484
-	b	.L387
-.L379:
-	adrp	x0, str1479
-	add	x0, x0, #:lo12:str1479
-	b	.L387
-.L380:
-	adrp	x0, str1474
-	add	x0, x0, #:lo12:str1474
-	b	.L387
-.L381:
-	adrp	x0, str1469
-	add	x0, x0, #:lo12:str1469
-	b	.L387
-.L382:
-	adrp	x0, str1464
-	add	x0, x0, #:lo12:str1464
-	b	.L387
-.L383:
-	adrp	x0, str1459
-	add	x0, x0, #:lo12:str1459
-	b	.L387
-.L384:
-	adrp	x0, str1454
-	add	x0, x0, #:lo12:str1454
-	b	.L387
-.L385:
-	adrp	x0, str1449
-	add	x0, x0, #:lo12:str1449
-	b	.L387
-.L386:
-	adrp	x0, str1444
-	add	x0, x0, #:lo12:str1444
-.L387:
+.L401:
 	ldp	x29, x30, [sp], 16
 	ret
 .type tools_fmt_formatter_binop_str, @function
@@ -5237,112 +5383,112 @@ tools_fmt_formatter_binop_prec:
 	mov	x29, sp
 	ldr	x0, [x0]
 	cmp	x0, #2
-	beq	.L430
+	beq	.L444
 	cmp	x0, #3
-	beq	.L429
+	beq	.L443
 	cmp	x0, #4
-	beq	.L428
+	beq	.L442
 	cmp	x0, #7
-	beq	.L427
+	beq	.L441
 	cmp	x0, #8
-	beq	.L426
+	beq	.L440
 	cmp	x0, #0
-	beq	.L425
+	beq	.L439
 	cmp	x0, #1
-	beq	.L424
+	beq	.L438
 	cmp	x0, #5
-	beq	.L423
+	beq	.L437
 	cmp	x0, #6
-	beq	.L422
+	beq	.L436
 	cmp	x0, #11
-	beq	.L421
+	beq	.L435
 	cmp	x0, #12
-	beq	.L420
+	beq	.L434
 	cmp	x0, #13
-	beq	.L419
+	beq	.L433
 	cmp	x0, #14
-	beq	.L418
+	beq	.L432
 	cmp	x0, #15
-	beq	.L417
+	beq	.L431
 	cmp	x0, #16
-	beq	.L416
+	beq	.L430
 	cmp	x0, #17
-	beq	.L415
+	beq	.L429
 	cmp	x0, #18
-	beq	.L414
+	beq	.L428
 	cmp	x0, #9
-	beq	.L413
+	beq	.L427
 	cmp	x0, #10
-	beq	.L412
+	beq	.L426
 	cmp	x0, #19
-	beq	.L411
+	beq	.L425
 	cmp	x0, #20
-	beq	.L410
+	beq	.L424
 	mov	x0, #1
-	b	.L431
-.L410:
-	mov	x0, #2
-	b	.L431
-.L411:
-	mov	x0, #3
-	b	.L431
-.L412:
-	mov	x0, #4
-	b	.L431
-.L413:
-	mov	x0, #4
-	b	.L431
-.L414:
-	mov	x0, #5
-	b	.L431
-.L415:
-	mov	x0, #5
-	b	.L431
-.L416:
-	mov	x0, #5
-	b	.L431
-.L417:
-	mov	x0, #5
-	b	.L431
-.L418:
-	mov	x0, #5
-	b	.L431
-.L419:
-	mov	x0, #5
-	b	.L431
-.L420:
-	mov	x0, #5
-	b	.L431
-.L421:
-	mov	x0, #5
-	b	.L431
-.L422:
-	mov	x0, #6
-	b	.L431
-.L423:
-	mov	x0, #6
-	b	.L431
+	b	.L445
 .L424:
-	mov	x0, #6
-	b	.L431
+	mov	x0, #2
+	b	.L445
 .L425:
-	mov	x0, #6
-	b	.L431
+	mov	x0, #3
+	b	.L445
 .L426:
-	mov	x0, #7
-	b	.L431
+	mov	x0, #4
+	b	.L445
 .L427:
-	mov	x0, #7
-	b	.L431
+	mov	x0, #4
+	b	.L445
 .L428:
-	mov	x0, #7
-	b	.L431
+	mov	x0, #5
+	b	.L445
 .L429:
-	mov	x0, #7
-	b	.L431
+	mov	x0, #5
+	b	.L445
 .L430:
-	mov	x0, #7
+	mov	x0, #5
+	b	.L445
 .L431:
+	mov	x0, #5
+	b	.L445
+.L432:
+	mov	x0, #5
+	b	.L445
+.L433:
+	mov	x0, #5
+	b	.L445
+.L434:
+	mov	x0, #5
+	b	.L445
+.L435:
+	mov	x0, #5
+	b	.L445
+.L436:
+	mov	x0, #6
+	b	.L445
+.L437:
+	mov	x0, #6
+	b	.L445
+.L438:
+	mov	x0, #6
+	b	.L445
+.L439:
+	mov	x0, #6
+	b	.L445
+.L440:
+	mov	x0, #7
+	b	.L445
+.L441:
+	mov	x0, #7
+	b	.L445
+.L442:
+	mov	x0, #7
+	b	.L445
+.L443:
+	mov	x0, #7
+	b	.L445
+.L444:
+	mov	x0, #7
+.L445:
 	ldp	x29, x30, [sp], 16
 	ret
 .type tools_fmt_formatter_binop_prec, @function
@@ -5363,29 +5509,29 @@ tools_fmt_formatter_format_pattern:
 	str	x23, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L482
+	beq	.L496
 	cmp	x1, #1
-	beq	.L481
+	beq	.L495
 	cmp	x1, #2
-	beq	.L480
+	beq	.L494
 	cmp	x1, #3
-	beq	.L479
+	beq	.L493
 	cmp	x1, #4
-	beq	.L478
+	beq	.L492
 	cmp	x1, #5
-	beq	.L477
+	beq	.L491
 	cmp	x1, #6
 	cset	x4, eq
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x3, sp
 	cmp	w4, #0
-	bne	.L441
+	bne	.L455
 	mov	x2, #0
 	str	x2, [x3]
 	mov	x2, #0
-	b	.L442
-.L441:
+	b	.L456
+.L455:
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -5393,19 +5539,19 @@ tools_fmt_formatter_format_pattern:
 	cset	x2, eq
 	and	x2, x2, x4
 	str	x2, [x3]
-.L442:
+.L456:
 	cmp	w2, #0
-	bne	.L476
+	bne	.L490
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x3, sp
 	cmp	x1, #6
-	beq	.L446
+	beq	.L460
 	mov	x2, #0
 	str	x2, [x3]
 	mov	x2, #0
-	b	.L447
-.L446:
+	b	.L461
+.L460:
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -5413,13 +5559,13 @@ tools_fmt_formatter_format_pattern:
 	cset	x2, eq
 	and	x2, x2, x4
 	str	x2, [x3]
-.L447:
+.L461:
 	cmp	w2, #0
-	bne	.L475
+	bne	.L489
 	cmp	x1, #7
-	beq	.L474
+	beq	.L488
 	cmp	x1, #8
-	beq	.L457
+	beq	.L471
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -5435,21 +5581,21 @@ tools_fmt_formatter_format_pattern:
 	mov	x19, sp
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	.L452
+	beq	.L466
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	adrp	x1, str1834
-	add	x1, x1, #:lo12:str1834
+	adrp	x1, str1879
+	add	x1, x1, #:lo12:str1879
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L454
-.L452:
+	b	.L468
+.L466:
 	mov	x0, x21
 	str	x0, [x19]
-.L454:
+.L468:
 	mov	x19, x0
 	mov	x0, x20
 	bl	donna_list_is_empty
@@ -5459,9 +5605,9 @@ tools_fmt_formatter_format_pattern:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L456
-	adrp	x1, str1844
-	add	x1, x1, #:lo12:str1844
+	beq	.L470
+	adrp	x1, str1889
+	add	x1, x1, #:lo12:str1889
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -5469,21 +5615,21 @@ tools_fmt_formatter_format_pattern:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_pattern_list
-	adrp	x1, str1847
-	add	x1, x1, #:lo12:str1847
+	adrp	x1, str1892
+	add	x1, x1, #:lo12:str1892
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str1850
-	add	x1, x1, #:lo12:str1850
+	adrp	x1, str1895
+	add	x1, x1, #:lo12:str1895
 	bl	__rt_str_concat
 	str	x0, [x19]
-	b	.L483
-.L456:
+	b	.L497
+.L470:
 	str	x0, [x19]
-	b	.L483
-.L457:
+	b	.L497
+.L471:
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -5499,25 +5645,25 @@ tools_fmt_formatter_format_pattern:
 	mov	x19, sp
 	ldr	x1, [x20]
 	cmp	x1, #0
-	beq	.L473
+	beq	.L487
 	cmp	x1, #1
 	cset	x22, eq
 	mov	x1, #16
 	sub	sp, sp, x1
 	mov	x21, sp
 	cmp	w22, #0
-	bne	.L461
+	bne	.L475
 	mov	x1, #0
 	str	x1, [x21]
 	mov	x1, #0
-	b	.L462
-.L461:
+	b	.L476
+.L475:
 	mov	x23, x0
 	mov	x0, #8
 	add	x0, x20, x0
 	ldr	x0, [x0]
-	adrp	x1, str1772
-	add	x1, x1, #:lo12:str1772
+	adrp	x1, str1817
+	add	x1, x1, #:lo12:str1817
 	bl	strcmp
 	mov	x1, x0
 	mov	x0, x23
@@ -5525,14 +5671,14 @@ tools_fmt_formatter_format_pattern:
 	cset	x1, eq
 	and	x1, x1, x22
 	str	x1, [x21]
-.L462:
+.L476:
 	cmp	w1, #0
-	bne	.L468
+	bne	.L482
 	mov	x1, #8
 	add	x1, x20, x1
 	ldr	x21, [x1]
-	adrp	x1, str1797
-	add	x1, x1, #:lo12:str1797
+	adrp	x1, str1842
+	add	x1, x1, #:lo12:str1842
 	bl	donna_string_join
 	mov	x20, x0
 	mov	x0, x20
@@ -5542,143 +5688,143 @@ tools_fmt_formatter_format_pattern:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x0, #1
-	beq	.L465
-	adrp	x0, str1809
-	add	x0, x0, #:lo12:str1809
+	beq	.L479
+	adrp	x0, str1854
+	add	x0, x0, #:lo12:str1854
 	bl	__rt_str_concat
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, str1811
-	add	x1, x1, #:lo12:str1811
+	adrp	x1, str1856
+	add	x1, x1, #:lo12:str1856
 	bl	__rt_str_concat
 	mov	x1, x21
 	bl	__rt_str_concat
-	adrp	x1, str1814
-	add	x1, x1, #:lo12:str1814
+	adrp	x1, str1859
+	add	x1, x1, #:lo12:str1859
 	bl	__rt_str_concat
 	str	x0, [x20]
-	b	.L467
-.L465:
+	b	.L481
+.L479:
 	mov	x1, x21
-	adrp	x0, str1805
-	add	x0, x0, #:lo12:str1805
+	adrp	x0, str1850
+	add	x0, x0, #:lo12:str1850
+	bl	__rt_str_concat
+	adrp	x1, str1852
+	add	x1, x1, #:lo12:str1852
+	bl	__rt_str_concat
+	str	x0, [x20]
+.L481:
+	str	x0, [x19]
+	b	.L497
+.L482:
+	adrp	x1, str1826
+	add	x1, x1, #:lo12:str1826
+	bl	donna_string_join
+	mov	x20, x0
+	mov	x0, x20
+	bl	donna_string_is_empty
+	mov	x1, x20
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x20, sp
+	cmp	x0, #1
+	beq	.L484
+	adrp	x0, str1835
+	add	x0, x0, #:lo12:str1835
+	bl	__rt_str_concat
+	adrp	x1, str1837
+	add	x1, x1, #:lo12:str1837
+	bl	__rt_str_concat
+	str	x0, [x20]
+	b	.L486
+.L484:
+	adrp	x0, str1834
+	add	x0, x0, #:lo12:str1834
+	str	x0, [x20]
+	adrp	x0, str1834
+	add	x0, x0, #:lo12:str1834
+.L486:
+	str	x0, [x19]
+	b	.L497
+.L487:
+	adrp	x1, str1804
+	add	x1, x1, #:lo12:str1804
+	bl	donna_string_join
+	mov	x1, x0
+	adrp	x0, str1803
+	add	x0, x0, #:lo12:str1803
 	bl	__rt_str_concat
 	adrp	x1, str1807
 	add	x1, x1, #:lo12:str1807
 	bl	__rt_str_concat
-	str	x0, [x20]
-.L467:
 	str	x0, [x19]
-	b	.L483
-.L468:
-	adrp	x1, str1781
-	add	x1, x1, #:lo12:str1781
-	bl	donna_string_join
-	mov	x20, x0
-	mov	x0, x20
-	bl	donna_string_is_empty
-	mov	x1, x20
-	mov	x2, #16
-	sub	sp, sp, x2
-	mov	x20, sp
-	cmp	x0, #1
-	beq	.L470
-	adrp	x0, str1790
-	add	x0, x0, #:lo12:str1790
-	bl	__rt_str_concat
-	adrp	x1, str1792
-	add	x1, x1, #:lo12:str1792
-	bl	__rt_str_concat
-	str	x0, [x20]
-	b	.L472
-.L470:
-	adrp	x0, str1789
-	add	x0, x0, #:lo12:str1789
-	str	x0, [x20]
-	adrp	x0, str1789
-	add	x0, x0, #:lo12:str1789
-.L472:
-	str	x0, [x19]
-	b	.L483
-.L473:
-	adrp	x1, str1759
-	add	x1, x1, #:lo12:str1759
-	bl	donna_string_join
-	mov	x1, x0
-	adrp	x0, str1758
-	add	x0, x0, #:lo12:str1758
-	bl	__rt_str_concat
-	adrp	x1, str1762
-	add	x1, x1, #:lo12:str1762
-	bl	__rt_str_concat
-	str	x0, [x19]
-	b	.L483
-.L474:
+	b	.L497
+.L488:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_pattern_list
-	adrp	x1, str1736
-	add	x1, x1, #:lo12:str1736
+	adrp	x1, str1781
+	add	x1, x1, #:lo12:str1781
 	bl	donna_string_join
 	mov	x1, x0
-	adrp	x0, str1734
-	add	x0, x0, #:lo12:str1734
+	adrp	x0, str1779
+	add	x0, x0, #:lo12:str1779
 	bl	__rt_str_concat
-	adrp	x1, str1739
-	add	x1, x1, #:lo12:str1739
+	adrp	x1, str1784
+	add	x1, x1, #:lo12:str1784
 	bl	__rt_str_concat
-	b	.L483
-.L475:
-	adrp	x0, str1725
-	add	x0, x0, #:lo12:str1725
-	b	.L483
-.L476:
-	adrp	x0, str1707
-	add	x0, x0, #:lo12:str1707
-	b	.L483
-.L477:
+	b	.L497
+.L489:
+	adrp	x0, str1770
+	add	x0, x0, #:lo12:str1770
+	b	.L497
+.L490:
+	adrp	x0, str1752
+	add	x0, x0, #:lo12:str1752
+	b	.L497
+.L491:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	tools_fmt_formatter_escape_string
 	mov	x1, x0
-	adrp	x0, str1685
-	add	x0, x0, #:lo12:str1685
+	adrp	x0, str1730
+	add	x0, x0, #:lo12:str1730
 	bl	__rt_str_concat
-	adrp	x1, str1688
-	add	x1, x1, #:lo12:str1688
+	adrp	x1, str1733
+	add	x1, x1, #:lo12:str1733
 	bl	__rt_str_concat
-	b	.L483
-.L478:
+	b	.L497
+.L492:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L483
-.L479:
+	b	.L497
+.L493:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L483
-.L480:
+	b	.L497
+.L494:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-	b	.L483
-.L481:
+	b	.L497
+.L495:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x1, [x0]
-	adrp	x0, str1651
-	add	x0, x0, #:lo12:str1651
+	adrp	x0, str1696
+	add	x0, x0, #:lo12:str1696
 	bl	__rt_str_concat
-	b	.L483
-.L482:
-	adrp	x0, str1642
-	add	x0, x0, #:lo12:str1642
-.L483:
+	b	.L497
+.L496:
+	adrp	x0, str1687
+	add	x0, x0, #:lo12:str1687
+.L497:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -5706,7 +5852,7 @@ tools_fmt_formatter_format_pattern_list:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L486
+	beq	.L500
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -5731,11 +5877,11 @@ tools_fmt_formatter_format_pattern_list:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	tools_fmt_formatter_format_pattern_list
-	b	.L488
-.L486:
+	b	.L502
+.L500:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L488:
+.L502:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5757,10 +5903,10 @@ tools_fmt_formatter_format_type_ann:
 	cmp	x1, #0
 	cset	x2, eq
 	cmp	w2, #0
-	bne	.L491
+	bne	.L505
 	mov	x2, #0
-	b	.L492
-.L491:
+	b	.L506
+.L505:
 	mov	x3, #16
 	add	x3, x0, x3
 	ldr	x3, [x3]
@@ -5768,13 +5914,13 @@ tools_fmt_formatter_format_type_ann:
 	cmp	x3, #0
 	cset	x3, eq
 	and	x2, x2, x3
-.L492:
+.L506:
 	cmp	w2, #0
-	bne	.L498
+	bne	.L512
 	cmp	x1, #0
-	beq	.L497
+	beq	.L511
 	cmp	x1, #1
-	beq	.L496
+	beq	.L510
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -5785,17 +5931,17 @@ tools_fmt_formatter_format_type_ann:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_type_ann_list
-	adrp	x1, str1934
-	add	x1, x1, #:lo12:str1934
+	adrp	x1, str1979
+	add	x1, x1, #:lo12:str1979
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str1932
-	add	x0, x0, #:lo12:str1932
+	adrp	x0, str1977
+	add	x0, x0, #:lo12:str1977
 	bl	__rt_str_concat
-	adrp	x1, str1937
-	add	x1, x1, #:lo12:str1937
+	adrp	x1, str1982
+	add	x1, x1, #:lo12:str1982
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -5804,26 +5950,26 @@ tools_fmt_formatter_format_type_ann:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	b	.L499
-.L496:
+	b	.L513
+.L510:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_type_ann_list
-	adrp	x1, str1921
-	add	x1, x1, #:lo12:str1921
+	adrp	x1, str1966
+	add	x1, x1, #:lo12:str1966
 	bl	donna_string_join
 	mov	x1, x0
-	adrp	x0, str1919
-	add	x0, x0, #:lo12:str1919
+	adrp	x0, str1964
+	add	x0, x0, #:lo12:str1964
 	bl	__rt_str_concat
-	adrp	x1, str1924
-	add	x1, x1, #:lo12:str1924
+	adrp	x1, str1969
+	add	x1, x1, #:lo12:str1969
 	bl	__rt_str_concat
-	b	.L499
-.L497:
+	b	.L513
+.L511:
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -5831,8 +5977,8 @@ tools_fmt_formatter_format_type_ann:
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x19, [x1]
-	adrp	x1, str1903
-	add	x1, x1, #:lo12:str1903
+	adrp	x1, str1948
+	add	x1, x1, #:lo12:str1948
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -5840,21 +5986,21 @@ tools_fmt_formatter_format_type_ann:
 	adrp	x1, donna_nil
 	add	x1, x1, #:lo12:donna_nil
 	bl	tools_fmt_formatter_format_type_ann_list
-	adrp	x1, str1906
-	add	x1, x1, #:lo12:str1906
+	adrp	x1, str1951
+	add	x1, x1, #:lo12:str1951
 	bl	donna_string_join
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	adrp	x1, str1909
-	add	x1, x1, #:lo12:str1909
+	adrp	x1, str1954
+	add	x1, x1, #:lo12:str1954
 	bl	__rt_str_concat
-	b	.L499
-.L498:
+	b	.L513
+.L512:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
-.L499:
+.L513:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -5877,7 +6023,7 @@ tools_fmt_formatter_format_type_ann_list:
 	mov	x19, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	.L502
+	beq	.L516
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -5902,11 +6048,11 @@ tools_fmt_formatter_format_type_ann_list:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	tools_fmt_formatter_format_type_ann_list
-	b	.L504
-.L502:
+	b	.L518
+.L516:
 	mov	x0, x19
 	bl	donna_list_reverse
-.L504:
+.L518:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -5927,8 +6073,8 @@ tools_fmt_formatter_escape_string:
 	bl	donna_string_length
 	mov	x2, x0
 	mov	x0, x19
-	adrp	x3, str1960
-	add	x3, x3, #:lo12:str1960
+	adrp	x3, str2005
+	add	x3, x3, #:lo12:str2005
 	mov	x1, #0
 	bl	tools_fmt_formatter_escape_chars
 	ldr	x19, [x29, 24]
@@ -5956,7 +6102,7 @@ tools_fmt_formatter_escape_chars:
 	cmp	x20, x22
 	cset	x1, ge
 	cmp	x1, #1
-	beq	.L534
+	beq	.L548
 	mov	x1, x20
 	mov	x21, x0
 	mov	x0, x19
@@ -5969,17 +6115,17 @@ tools_fmt_formatter_escape_chars:
 	sub	sp, sp, x2
 	mov	x21, sp
 	cmp	x1, #34
-	beq	.L530
+	beq	.L544
 	cmp	x1, #92
-	beq	.L527
+	beq	.L541
 	cmp	x1, #10
-	beq	.L524
+	beq	.L538
 	cmp	x1, #9
-	beq	.L521
+	beq	.L535
 	cmp	x1, #13
-	beq	.L518
+	beq	.L532
 	cmp	x1, #27
-	beq	.L515
+	beq	.L529
 	mov	x1, x20
 	mov	x22, x0
 	mov	x0, x19
@@ -5988,55 +6134,55 @@ tools_fmt_formatter_escape_chars:
 	mov	x1, x0
 	mov	x0, x22
 	str	x1, [x21]
-	b	.L533
-.L515:
+	b	.L547
+.L529:
 	mov	x2, x23
-	adrp	x1, str1994
-	add	x1, x1, #:lo12:str1994
+	adrp	x1, str2039
+	add	x1, x1, #:lo12:str2039
 	str	x1, [x21]
-	adrp	x1, str1994
-	add	x1, x1, #:lo12:str1994
-	b	.L533
-.L518:
+	adrp	x1, str2039
+	add	x1, x1, #:lo12:str2039
+	b	.L547
+.L532:
 	mov	x2, x23
-	adrp	x1, str1990
-	add	x1, x1, #:lo12:str1990
+	adrp	x1, str2035
+	add	x1, x1, #:lo12:str2035
 	str	x1, [x21]
-	adrp	x1, str1990
-	add	x1, x1, #:lo12:str1990
-	b	.L533
-.L521:
+	adrp	x1, str2035
+	add	x1, x1, #:lo12:str2035
+	b	.L547
+.L535:
 	mov	x2, x23
-	adrp	x1, str1986
-	add	x1, x1, #:lo12:str1986
+	adrp	x1, str2031
+	add	x1, x1, #:lo12:str2031
 	str	x1, [x21]
-	adrp	x1, str1986
-	add	x1, x1, #:lo12:str1986
-	b	.L533
-.L524:
+	adrp	x1, str2031
+	add	x1, x1, #:lo12:str2031
+	b	.L547
+.L538:
 	mov	x2, x23
-	adrp	x1, str1982
-	add	x1, x1, #:lo12:str1982
+	adrp	x1, str2027
+	add	x1, x1, #:lo12:str2027
 	str	x1, [x21]
-	adrp	x1, str1982
-	add	x1, x1, #:lo12:str1982
-	b	.L533
-.L527:
+	adrp	x1, str2027
+	add	x1, x1, #:lo12:str2027
+	b	.L547
+.L541:
 	mov	x2, x23
-	adrp	x1, str1978
-	add	x1, x1, #:lo12:str1978
+	adrp	x1, str2023
+	add	x1, x1, #:lo12:str2023
 	str	x1, [x21]
-	adrp	x1, str1978
-	add	x1, x1, #:lo12:str1978
-	b	.L533
-.L530:
+	adrp	x1, str2023
+	add	x1, x1, #:lo12:str2023
+	b	.L547
+.L544:
 	mov	x2, x23
-	adrp	x1, str1974
-	add	x1, x1, #:lo12:str1974
+	adrp	x1, str2019
+	add	x1, x1, #:lo12:str2019
 	str	x1, [x21]
-	adrp	x1, str1974
-	add	x1, x1, #:lo12:str1974
-.L533:
+	adrp	x1, str2019
+	add	x1, x1, #:lo12:str2019
+.L547:
 	mov	x21, x2
 	mov	x2, #1
 	add	x20, x20, x2
@@ -6046,7 +6192,7 @@ tools_fmt_formatter_escape_chars:
 	mov	x3, x0
 	mov	x0, x19
 	bl	tools_fmt_formatter_escape_chars
-.L534:
+.L548:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -6066,8 +6212,8 @@ tools_fmt_formatter_ind:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	mov	x1, x0
-	adrp	x0, str2001
-	add	x0, x0, #:lo12:str2001
+	adrp	x0, str2046
+	add	x0, x0, #:lo12:str2046
 	bl	donna_string_repeat
 	ldp	x29, x30, [sp], 16
 	ret
@@ -6106,8 +6252,8 @@ tools_fmt_formatter_preceding_doc:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x1
-	adrp	x1, str2007
-	add	x1, x1, #:lo12:str2007
+	adrp	x1, str2052
+	add	x1, x1, #:lo12:str2052
 	bl	donna_string_split
 	mov	x1, x19
 	mov	x2, #2
@@ -6120,18 +6266,18 @@ tools_fmt_formatter_preceding_doc:
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #1
-	beq	.L541
-	adrp	x1, str2018
-	add	x1, x1, #:lo12:str2018
+	beq	.L555
+	adrp	x1, str2063
+	add	x1, x1, #:lo12:str2063
 	bl	donna_string_join
-	adrp	x1, str2020
-	add	x1, x1, #:lo12:str2020
+	adrp	x1, str2065
+	add	x1, x1, #:lo12:str2065
 	bl	__rt_str_concat
-	b	.L542
-.L541:
-	adrp	x0, str2017
-	add	x0, x0, #:lo12:str2017
-.L542:
+	b	.L556
+.L555:
+	adrp	x0, str2062
+	add	x0, x0, #:lo12:str2062
+.L556:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -6155,9 +6301,9 @@ tools_fmt_formatter_collect_item_doc:
 	cmp	x1, #0
 	cset	x2, lt
 	cmp	x2, #1
-	beq	.L552
-	adrp	x2, str2029
-	add	x2, x2, #:lo12:str2029
+	beq	.L566
+	adrp	x2, str2074
+	add	x2, x2, #:lo12:str2074
 	mov	x20, x1
 	mov	x19, x0
 	bl	donna_list_nth
@@ -6166,8 +6312,8 @@ tools_fmt_formatter_collect_item_doc:
 	mov	x22, x0
 	mov	x0, x19
 	mov	x20, x1
-	adrp	x1, str2032
-	add	x1, x1, #:lo12:str2032
+	adrp	x1, str2077
+	add	x1, x1, #:lo12:str2077
 	mov	x19, x0
 	mov	x0, x22
 	bl	donna_string_starts_with
@@ -6178,10 +6324,10 @@ tools_fmt_formatter_collect_item_doc:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #0
-	beq	.L550
+	beq	.L564
 	mov	x23, x1
-	adrp	x1, str2039
-	add	x1, x1, #:lo12:str2039
+	adrp	x1, str2084
+	add	x1, x1, #:lo12:str2084
 	mov	x20, x0
 	mov	x0, x22
 	bl	donna_string_starts_with
@@ -6192,7 +6338,7 @@ tools_fmt_formatter_collect_item_doc:
 	sub	sp, sp, x3
 	mov	x20, sp
 	cmp	x2, #1
-	beq	.L547
+	beq	.L561
 	mov	x2, #1
 	sub	x24, x1, x2
 	mov	x23, x0
@@ -6211,20 +6357,20 @@ tools_fmt_formatter_collect_item_doc:
 	str	x21, [x3]
 	bl	tools_fmt_formatter_collect_item_doc
 	str	x0, [x20]
-	b	.L549
-.L547:
+	b	.L563
+.L561:
 	mov	x0, x21
 	str	x0, [x20]
-.L549:
+.L563:
 	str	x0, [x19]
-	b	.L553
-.L550:
+	b	.L567
+.L564:
 	mov	x0, x21
 	str	x0, [x19]
-	b	.L553
-.L552:
+	b	.L567
+.L566:
 	mov	x0, x21
-.L553:
+.L567:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]

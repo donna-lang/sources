@@ -48,32 +48,14 @@ str39:
 
 .data
 .balign 8
-str44:
-	.ascii "  Docs"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str46:
-	.ascii " "
-	.byte 226
-	.byte 134
-	.byte 146
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str60:
+str55:
 	.ascii "could not derive GitHub owner/repo from donna.toml"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str61:
+str56:
 	.ascii "set `repository = { type = "
 	.byte 34
 	.ascii "github"
@@ -92,49 +74,49 @@ str61:
 
 .data
 .balign 8
-str82:
+str77:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str96:
+str91:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str107:
+str102:
 	.ascii "README.md"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str116:
+str111:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str138:
+str133:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str158:
+str153:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str171:
+str166:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -245,18 +227,7 @@ cli_cmd_docs_run:
 	movq %r13, %rdi
 	callq cli_cmd_docs_warn_missing_github_repo
 	movq %r12, %rdi
-	movq %rdi, %r12
-	leaq str44(%rip), %rdi
-	callq utilities_colors_orange
-	movq %rax, %rdi
-	leaq str46(%rip), %rsi
-	callq __rt_str_concat
-	movq %r12, %rdi
-	movq %rax, %r12
-	callq utilities_colors_dim
-	movq %r12, %rdi
-	movq %rax, %rsi
-	callq __rt_str_concat
+	callq utilities_logger_docs_output
 	movq %rax, (%rbx)
 	jmp .Lbb4
 .Lbb3:
@@ -296,9 +267,9 @@ cli_cmd_docs_warn_missing_github_repo:
 	movq (%rax), %rax
 	cmpq $1, %rax
 	jz .Lbb7
-	leaq str60(%rip), %rdi
+	leaq str55(%rip), %rdi
 	callq utilities_logger_warn
-	leaq str61(%rip), %rdi
+	leaq str56(%rip), %rdi
 	callq utilities_logger_hint
 .Lbb7:
 	movl $0, %eax
@@ -380,7 +351,7 @@ cli_cmd_docs_path_to_module:
 	pushq %r13
 	movq %rdi, %r12
 	movq %rsi, %rdi
-	leaq str82(%rip), %rsi
+	leaq str77(%rip), %rsi
 	callq __rt_str_concat
 	movq %rax, %rdi
 	movq %rdi, %rsi
@@ -409,7 +380,7 @@ cli_cmd_docs_path_to_module:
 	callq donna_string_slice
 	movq %rax, %r12
 .Lbb17:
-	leaq str96(%rip), %rsi
+	leaq str91(%rip), %rsi
 	movq %r12, %rdi
 	callq donna_string_ends_with
 	subq $16, %rsp
@@ -450,7 +421,7 @@ cli_cmd_docs_read_readme:
 	movq %rsp, %rbp
 	subq $8, %rsp
 	pushq %rbx
-	leaq str107(%rip), %rsi
+	leaq str102(%rip), %rsi
 	callq donna_files_join
 	movq %rax, %rdi
 	movq %rdi, %rbx
@@ -458,7 +429,7 @@ cli_cmd_docs_read_readme:
 	movq %rbx, %rdi
 	cmpq $1, %rax
 	jz .Lbb24
-	leaq str116(%rip), %rax
+	leaq str111(%rip), %rax
 	jmp .Lbb25
 .Lbb24:
 	callq donna_files_read
@@ -531,7 +502,7 @@ cli_cmd_docs_collect_entries:
 	cmpq $1, %rax
 	jz .Lbb36
 	movq %rsi, %r15
-	leaq str138(%rip), %rsi
+	leaq str133(%rip), %rsi
 	callq donna_string_ends_with
 	movq %r13, %rdi
 	subq $16, %rsp
@@ -611,7 +582,7 @@ cli_cmd_docs_first_positional:
 	movq 8(%rdi), %rax
 	movq %rdi, %r12
 	movq (%rax), %rdi
-	leaq str171(%rip), %rsi
+	leaq str166(%rip), %rsi
 	callq strcmp
 	movq %r12, %rdi
 	cmpq $0, %rax
@@ -630,7 +601,7 @@ cli_cmd_docs_first_positional:
 	movq 8(%rax), %rax
 	jmp .Lbb50
 .Lbb49:
-	leaq str158(%rip), %rax
+	leaq str153(%rip), %rax
 .Lbb50:
 	movq %rbp, %rsp
 	subq $16, %rsp

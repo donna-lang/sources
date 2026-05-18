@@ -7,272 +7,482 @@ _str1:
 
 .data
 .balign 8
-_str16:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str17:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str29:
-	.ascii "lex error: "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str44:
-	.ascii "parse error: "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 _donna_nil:
 	.quad 0
 /* end data */
 
 .data
 .balign 8
-_str60:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str182:
+_str206:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str224:
+_str248:
 	.ascii "command -v qbe >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str227:
+_str251:
 	.ascii "DONNA_CC"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str236:
+_str260:
 	.ascii "command -v cc >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str244:
+_str268:
 	.ascii "cc"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str245:
+_str269:
 	.ascii "command -v zig >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str253:
+_str277:
 	.ascii "zig cc"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str254:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str262:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str267:
-	.ascii ".s"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str275:
-	.ascii "qbe -o "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
 _str278:
-	.ascii " "
+	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str282:
-	.ascii " >/dev/null 2>&1"
+	.ascii "DONNA_CC"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str291:
-	.ascii ""
+_str297:
+	.ascii "zig cc"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str307:
+	.ascii "command -v zig >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str311:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str315:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str320:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str325:
+	.ascii ".s"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str333:
+	.ascii "qbe -o "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str336:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str340:
+	.ascii " >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str349:
-	.ascii "error"
+	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str351:
-	.ascii ": QBE failed to compile "
+_str353:
+	.ascii ".s"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str355:
-	.byte 10
+_str367:
+	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str357:
-	.ascii "  hint: run `qbe "
+_str368:
+	.ascii " -t "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str359:
-	.ascii "` to see the backend error"
+_str372:
+	.ascii "qbe"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str381:
-	.ascii "-o"
+_str374:
+	.ascii " -o "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str388:
-	.ascii "-O2"
+_str378:
+	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str392:
-	.ascii "-c"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str397:
+_str382:
 	.ascii " >/dev/null 2>&1"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str412:
+_str391:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str479:
+	.ascii "error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str481:
+	.ascii ": QBE failed to compile "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str485:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str487:
+	.ascii "  hint: run `qbe "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str489:
+	.ascii "` to see the backend error"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str511:
+	.ascii "-o"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str518:
+	.ascii "-O2"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str522:
+	.ascii "-c"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str527:
+	.ascii " >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str557:
+	.ascii "-O2"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str561:
+	.ascii "-c"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str569:
+	.ascii "-o"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str579:
+	.ascii " >/dev/null 2>&1"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str594:
 	.ascii "ffi"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str434:
+_str605:
+	.ascii "ffi"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str627:
 	.ascii ".c"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str444:
+_str637:
 	.ascii ".o"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str452:
+_str656:
+	.ascii ".c"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str666:
+	.ascii ".o"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str675:
+	.ascii "zig cc"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str692:
+	.ascii "-target"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str699:
+	.ascii "zig cc"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str716:
+	.ascii "-target"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str724:
+	.ascii "amd64_sysv"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str729:
+	.ascii "x86_64-linux-gnu"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str730:
+	.ascii "amd64_apple"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str735:
+	.ascii "x86_64-macos"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str736:
+	.ascii "amd64_win"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str741:
+	.ascii "x86_64-windows-gnu"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str742:
+	.ascii "arm64"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str747:
+	.ascii "aarch64-linux-gnu"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str748:
+	.ascii "arm64_apple"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str753:
+	.ascii "aarch64-macos"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str754:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str756:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str453:
+_str757:
 	.ascii "_"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str461:
+_str765:
 	.ascii "test "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str464:
+_str768:
 	.ascii " -nt "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str471:
+_str775:
 	.ascii "'"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str472:
+_str776:
 	.ascii "'"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str473:
+_str777:
 	.ascii "'"
 	.byte 92
 	.ascii "''"
@@ -281,105 +491,113 @@ _str473:
 
 .data
 .balign 8
-_str476:
+_str780:
 	.ascii "'"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str484:
+_str788:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str511:
+_str815:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str544:
-	.ascii ".donna"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str571:
-	.ascii ".donna"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str585:
-	.ascii "/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str609:
-	.ascii "/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str660:
+_str839:
+	.byte 10
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str684:
+_str876:
+	.ascii ".donna"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str903:
+	.ascii ".donna"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str917:
+	.ascii "/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str941:
+	.ascii "/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str992:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str1016:
 	.ascii "import "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str703:
+_str1035:
 	.ascii " as "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str757:
+_str1089:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str772:
+_str1104:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str774:
+_str1106:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str974:
+_str1306:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str987:
+_str1319:
 	.ascii "import "
 	.byte 0
 /* end data */
@@ -398,140 +616,123 @@ _builder_pipeline_compile_module:
 	str	x23, [x29, 40]
 	str	x24, [x29, 32]
 	str	x25, [x29, 24]
-	mov	x22, x4
-	mov	x20, x3
-	mov	x21, x1
+	mov	x21, x4
+	mov	x24, x3
+	mov	x20, x1
 	mov	x19, x0
 	mov	x0, x2
-	mov	x23, x0
-	mov	x0, x21
+	mov	x22, x0
+	mov	x0, x20
 	bl	_builder_pipeline_mod_name_to_stem
-	mov	x1, x21
-	mov	x21, x1
+	mov	x1, x20
+	mov	x20, x1
 	adrp	x1, _str1@page
 	add	x1, x1, _str1@pageoff
 	bl	___rt_str_concat
 	mov	x1, x0
-	mov	x0, x23
+	mov	x0, x22
 	bl	_donna_files_join
-	mov	x4, x22
-	mov	x1, x21
-	mov	x24, x0
-	cmp	x4, #1
-	beq	L2
-	mov	x22, x1
-	mov	x1, x24
+	mov	x22, x0
 	mov	x0, x19
-	bl	_builder_pipeline_file_is_current
+	mov	x19, x0
+	mov	x0, x22
+	bl	_builder_interface_cache_path_for
+	mov	x1, x20
 	mov	x23, x0
+	mov	x0, x19
+	cmp	x21, #1
+	beq	L2
+	mov	x20, x1
+	mov	x1, x22
+	mov	x19, x0
+	bl	_builder_pipeline_file_is_current
+	mov	x4, x21
+	mov	x1, x20
+	mov	x5, x0
+	mov	x0, x19
 	b	L4
 L2:
-	mov	x22, x1
-	mov	x23, #0
+	mov	x4, x21
+	mov	x5, #0
 L4:
-	mov	x0, #16
-	sub	sp, sp, x0
-	mov	x21, sp
-	cmp	x23, #1
-	beq	L6
-	mov	x0, x22
-	bl	_utilities_logger_step
-	adrp	x0, _str17@page
-	add	x0, x0, _str17@pageoff
-	str	x0, [x21]
-	b	L7
-L6:
-	adrp	x0, _str16@page
-	add	x0, x0, _str16@pageoff
-	str	x0, [x21]
-L7:
-	mov	x0, x19
-	bl	_donna_files_read
-	mov	x1, x19
-	mov	x21, x0
-	mov	x19, x1
-	mov	x0, x21
-	bl	_compiler_lexer_lexer_lex
-	mov	x2, x20
-	mov	x1, x19
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x19, sp
-	mov	x25, x2
-	ldr	x2, [x0]
-	cmp	x2, #1
-	beq	L19
-	mov	x20, x1
-	mov	x1, #8
-	add	x0, x0, x1
-	ldr	x0, [x0]
-	bl	_compiler_parser_parser_parse
-	mov	x2, x25
-	mov	x1, x20
-	mov	x3, #16
-	sub	sp, sp, x3
-	mov	x20, sp
-	ldr	x3, [x0]
-	cmp	x3, #1
-	beq	L17
-	mov	x1, x22
-	mov	x3, #8
-	add	x0, x0, x3
-	ldr	x0, [x0]
-	bl	_compiler_typesystem_checker_check_module_with_imports
-	mov	x1, x21
+	mov	x25, x5
 	mov	x2, #16
 	sub	sp, sp, x2
-	mov	x21, sp
-	ldr	x2, [x0]
+	mov	x19, sp
+	cmp	x4, #1
+	beq	L6
+	mov	x21, x1
+	mov	x1, x23
+	mov	x20, x0
+	bl	_builder_pipeline_file_is_current
+	mov	x5, x25
+	mov	x4, x24
+	mov	x3, x23
+	mov	x1, x21
+	mov	x2, x0
+	mov	x0, x20
+	str	x2, [x19]
+	b	L9
+L6:
+	mov	x5, x25
+	mov	x3, x23
+	mov	x4, x24
+	mov	x2, #0
+	str	x2, [x19]
+	mov	x2, #0
+L9:
+	and	x2, x5, x2
+	mov	x6, #16
+	sub	sp, sp, x6
+	mov	x19, sp
 	cmp	x2, #1
-	beq	L15
+	beq	L11
+	mov	x25, x5
+	mov	x24, x4
+	mov	x23, x3
+	mov	x2, x22
+	mov	x21, x1
+	bl	_builder_pipeline_compile_module_uncached
+	str	x0, [x19]
+	b	L17
+L11:
+	mov	x25, x5
+	mov	x23, x3
+	mov	x24, x4
+	mov	x21, x1
+	mov	x20, x0
+	mov	x0, x23
+	bl	_builder_interface_cache_read
+	mov	x5, x25
+	mov	x4, x24
+	mov	x3, x23
+	mov	x1, x21
+	mov	x2, x0
+	mov	x0, x20
+	mov	x6, #16
+	sub	sp, sp, x6
+	mov	x20, sp
+	ldr	x6, [x2]
+	cmp	x6, #1
+	beq	L14
+	mov	x2, x22
+	bl	_builder_pipeline_compile_module_uncached
+	str	x0, [x20]
+	b	L16
+L14:
+	mov	x0, x2
 	mov	x1, #8
 	add	x0, x0, x1
-	ldr	x0, [x0]
-	mov	x22, x0
-	bl	_compiler_typesystem_checker_extract_interface
-	mov	x25, x0
-	mov	x0, x22
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x22, sp
-	cmp	x23, #1
-	beq	L13
-	bl	_compiler_codegen_codegen_generate
-	mov	x1, x0
-	mov	x0, x24
-	bl	_donna_files_write
+	ldr	x23, [x0]
 	mov	x0, #24
 	bl	_malloc
-	mov	x23, x0
-	str	x25, [x23]
+	mov	x21, x0
+	str	x23, [x21]
 	mov	x0, #8
-	add	x0, x23, x0
-	str	x24, [x0]
+	add	x0, x21, x0
+	str	x22, [x0]
 	mov	x0, #16
-	add	x1, x23, x0
-	mov	x0, #1
-	str	x0, [x1]
-	mov	x0, #16
-	bl	_malloc
-	mov	x1, #0
-	str	x1, [x0]
-	mov	x1, #8
-	add	x1, x0, x1
-	str	x23, [x1]
-	str	x0, [x22]
-	b	L14
-L13:
-	mov	x0, #24
-	bl	_malloc
-	mov	x23, x0
-	str	x25, [x23]
-	mov	x0, #8
-	add	x0, x23, x0
-	str	x24, [x0]
-	mov	x0, #16
-	add	x1, x23, x0
+	add	x1, x21, x0
 	mov	x0, #0
 	str	x0, [x1]
 	mov	x0, #16
@@ -540,63 +741,11 @@ L13:
 	str	x1, [x0]
 	mov	x1, #8
 	add	x1, x0, x1
-	str	x23, [x1]
-	str	x0, [x22]
-L14:
-	str	x0, [x21]
-	b	L16
-L15:
-	mov	x2, #8
-	add	x0, x0, x2
-	ldr	x0, [x0]
-	adrp	x2, _donna_nil@page
-	add	x2, x2, _donna_nil@pageoff
-	bl	_builder_pipeline_render_errors
-	adrp	x1, _str60@page
-	add	x1, x1, _str60@pageoff
-	bl	_donna_string_join
-	mov	x22, x0
-	mov	x0, #16
-	bl	_malloc
-	mov	x1, #1
-	str	x1, [x0]
-	mov	x1, #8
-	add	x1, x0, x1
-	str	x22, [x1]
-	str	x0, [x21]
-L16:
-	str	x0, [x20]
-	b	L18
-L17:
-	adrp	x0, _str44@page
-	add	x0, x0, _str44@pageoff
-	bl	___rt_str_concat
-	mov	x21, x0
-	mov	x0, #16
-	bl	_malloc
-	mov	x1, #1
-	str	x1, [x0]
-	mov	x1, #8
-	add	x1, x0, x1
 	str	x21, [x1]
 	str	x0, [x20]
-L18:
+L16:
 	str	x0, [x19]
-	b	L20
-L19:
-	adrp	x0, _str29@page
-	add	x0, x0, _str29@pageoff
-	bl	___rt_str_concat
-	mov	x20, x0
-	mov	x0, #16
-	bl	_malloc
-	mov	x1, #1
-	str	x1, [x0]
-	mov	x1, #8
-	add	x1, x0, x1
-	str	x20, [x1]
-	str	x0, [x19]
-L20:
+L17:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -608,6 +757,198 @@ L20:
 	ldp	x29, x30, [sp], 80
 	ret
 /* end function builder_pipeline_compile_module */
+
+.text
+.balign 4
+_builder_pipeline_compile_module_uncached:
+	hint	#34
+	stp	x29, x30, [sp, -64]!
+	mov	x29, sp
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
+	mov	x24, x5
+	mov	x23, x4
+	mov	x22, x2
+	mov	x19, x1
+	mov	x21, x0
+	mov	x0, x3
+	mov	x20, x0
+	mov	x0, x19
+	bl	_utilities_logger_step
+	mov	x0, x20
+	mov	x20, x0
+	mov	x0, x21
+	bl	_donna_files_read
+	mov	x1, x21
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x21, x0
+	mov	x0, x20
+	bl	_compiler_lexer_lexer_lex
+	mov	x2, x23
+	mov	x1, x19
+	mov	x23, x2
+	ldr	x2, [x0]
+	cmp	x2, #1
+	beq	L30
+	mov	x19, x1
+	mov	x1, #8
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	bl	_compiler_parser_parser_parse
+	mov	x2, x23
+	mov	x1, x19
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	ldr	x3, [x0]
+	cmp	x3, #1
+	beq	L28
+	mov	x3, #8
+	add	x0, x0, x3
+	ldr	x0, [x0]
+	bl	_compiler_typesystem_checker_check_module_with_imports
+	mov	x2, x22
+	mov	x1, x20
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x20, sp
+	ldr	x3, [x0]
+	cmp	x3, #1
+	beq	L26
+	mov	x1, x0
+	mov	x0, x21
+	mov	x22, x2
+	mov	x2, #8
+	add	x1, x1, x2
+	ldr	x21, [x1]
+	mov	x23, x0
+	mov	x0, x21
+	bl	_compiler_typesystem_checker_extract_interface
+	mov	x17, x0
+	mov	x0, x23
+	mov	x23, x17
+	mov	x1, x23
+	bl	_builder_interface_cache_write
+	mov	x5, x24
+	mov	x0, x21
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x21, sp
+	cmp	x5, #1
+	beq	L24
+	bl	_compiler_codegen_codegen_generate
+	mov	x1, x0
+	mov	x0, x22
+	bl	_donna_files_write
+	mov	x0, #24
+	bl	_malloc
+	mov	x2, x22
+	mov	x22, x0
+	str	x23, [x22]
+	mov	x0, #8
+	add	x0, x22, x0
+	str	x2, [x0]
+	mov	x0, #16
+	add	x1, x22, x0
+	mov	x0, #1
+	str	x0, [x1]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
+	str	x0, [x21]
+	b	L25
+L24:
+	mov	x0, #24
+	bl	_malloc
+	mov	x2, x22
+	mov	x22, x0
+	str	x23, [x22]
+	mov	x0, #8
+	add	x0, x22, x0
+	str	x2, [x0]
+	mov	x0, #16
+	add	x1, x22, x0
+	mov	x0, #0
+	str	x0, [x1]
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x22, [x1]
+	str	x0, [x21]
+L25:
+	str	x0, [x20]
+	b	L27
+L26:
+	mov	x2, #8
+	add	x0, x0, x2
+	ldr	x0, [x0]
+	bl	_builder_pipeline_render_error_block
+	mov	x21, x0
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x21, [x1]
+	str	x0, [x20]
+L27:
+	str	x0, [x19]
+	b	L32
+L28:
+	mov	x1, x20
+	mov	x2, #8
+	add	x0, x0, x2
+	ldr	x0, [x0]
+	bl	_builder_pipeline_render_error_block
+	mov	x20, x0
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	str	x0, [x19]
+	b	L32
+L30:
+	mov	x1, x20
+	mov	x2, #8
+	add	x0, x0, x2
+	ldr	x0, [x0]
+	bl	_builder_pipeline_render_error_block
+	mov	x19, x0
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
+L32:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 64
+	ret
+/* end function builder_pipeline_compile_module_uncached */
 
 .text
 .balign 4
@@ -638,6 +979,35 @@ _builder_pipeline_compile_file_list:
 	ldp	x29, x30, [sp], 48
 	ret
 /* end function builder_pipeline_compile_file_list */
+
+.text
+.balign 4
+.globl _builder_pipeline_compile_named_file_list
+_builder_pipeline_compile_named_file_list:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x21, x3
+	mov	x20, x2
+	mov	x19, x1
+	bl	_builder_pipeline_topo_sort_pairs
+	mov	x5, x21
+	mov	x2, x20
+	mov	x1, x19
+	adrp	x4, _donna_nil@page
+	add	x4, x4, _donna_nil@pageoff
+	adrp	x3, _donna_nil@page
+	add	x3, x3, _donna_nil@pageoff
+	bl	_builder_pipeline_compile_pairs_loop
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function builder_pipeline_compile_named_file_list */
 
 .text
 .balign 4
@@ -700,7 +1070,7 @@ _builder_pipeline_compile_pairs_loop:
 	mov	x22, x3
 	ldr	x3, [x0]
 	cmp	x3, #0
-	beq	L36
+	beq	L50
 	mov	x26, x2
 	mov	x2, #8
 	add	x2, x0, x2
@@ -736,7 +1106,7 @@ _builder_pipeline_compile_pairs_loop:
 	mov	x23, sp
 	ldr	x4, [x3]
 	cmp	x4, #1
-	beq	L34
+	beq	L48
 	mov	x4, #8
 	add	x3, x3, x4
 	ldr	x3, [x3]
@@ -754,19 +1124,19 @@ _builder_pipeline_compile_pairs_loop:
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x3, #1
-	beq	L30
+	beq	L44
 	str	x19, [x2]
 	mov	x24, x1
 	mov	x26, x19
 	mov	x19, x23
-	b	L33
-L30:
+	b	L47
+L44:
 	mov	x19, x23
 	mov	x24, x1
 	mov	x1, #1
 	str	x1, [x2]
 	mov	x26, #1
-L33:
+L47:
 	mov	x23, x0
 	mov	x0, #16
 	bl	_malloc
@@ -820,8 +1190,8 @@ L33:
 	str	x20, [x6]
 	bl	_builder_pipeline_compile_pairs_loop
 	str	x0, [x19]
-	b	L38
-L34:
+	b	L52
+L48:
 	mov	x19, x23
 	mov	x0, x3
 	mov	x1, #8
@@ -835,8 +1205,8 @@ L34:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L38
-L36:
+	b	L52
+L50:
 	mov	x0, x22
 	bl	_donna_list_reverse
 	mov	x21, x0
@@ -861,7 +1231,7 @@ L36:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x19, [x1]
-L38:
+L52:
 	ldr	x19, [x29, 88]
 	ldr	x20, [x29, 80]
 	ldr	x21, [x29, 72]
@@ -899,7 +1269,7 @@ _builder_pipeline_compile_loop:
 	mov	x20, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L54
+	beq	L68
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -926,10 +1296,10 @@ _builder_pipeline_compile_loop:
 	mov	x23, sp
 	str	x23, [x29, 40]
 	cmp	x2, #1
-	beq	L42
+	beq	L56
 	mov	x23, x1
-	adrp	x1, _str182@page
-	add	x1, x1, _str182@pageoff
+	adrp	x1, _str206@page
+	add	x1, x1, _str206@pageoff
 	mov	x21, x0
 	mov	x0, x23
 	bl	___rt_str_concat
@@ -943,11 +1313,11 @@ _builder_pipeline_compile_loop:
 	mov	x0, x21
 	mov	x21, x17
 	str	x21, [x23]
-	b	L44
-L42:
+	b	L58
+L56:
 	mov	x21, x27
 	str	x21, [x23]
-L44:
+L58:
 	mov	x24, x1
 	mov	x1, x22
 	mov	x23, x0
@@ -971,7 +1341,7 @@ L44:
 	mov	x22, sp
 	ldr	x4, [x3]
 	cmp	x4, #1
-	beq	L52
+	beq	L66
 	mov	x4, #8
 	add	x3, x3, x4
 	ldr	x3, [x3]
@@ -989,19 +1359,19 @@ L44:
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x3, #1
-	beq	L48
+	beq	L62
 	str	x19, [x2]
 	mov	x23, x1
 	mov	x26, x19
 	mov	x19, x22
-	b	L51
-L48:
+	b	L65
+L62:
 	mov	x19, x22
 	mov	x23, x1
 	mov	x1, #1
 	str	x1, [x2]
 	mov	x26, #1
-L51:
+L65:
 	mov	x22, x0
 	mov	x0, #16
 	bl	_malloc
@@ -1059,8 +1429,8 @@ L51:
 	str	x20, [x7]
 	bl	_builder_pipeline_compile_loop
 	str	x0, [x19]
-	b	L56
-L52:
+	b	L70
+L66:
 	mov	x19, x22
 	mov	x0, x3
 	mov	x1, #8
@@ -1074,8 +1444,8 @@ L52:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L56
-L54:
+	b	L70
+L68:
 	mov	x0, x22
 	bl	_donna_list_reverse
 	mov	x21, x0
@@ -1100,7 +1470,7 @@ L54:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x19, [x1]
-L56:
+L70:
 	ldr	x19, [x29, 120]
 	ldr	x20, [x29, 112]
 	ldr	x21, [x29, 104]
@@ -1122,8 +1492,8 @@ _builder_pipeline_qbe_available:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x0, _str224@page
-	add	x0, x0, _str224@pageoff
+	adrp	x0, _str248@page
+	add	x0, x0, _str248@pageoff
 	bl	_donna_shell_run
 	cmp	x0, #0
 	cset	x0, eq
@@ -1139,8 +1509,8 @@ _builder_pipeline_c_compiler_command:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x0, _str227@page
-	add	x0, x0, _str227@pageoff
+	adrp	x0, _str251@page
+	add	x0, x0, _str251@pageoff
 	bl	_donna_shell_getenv
 	bl	_donna_string_trim
 	mov	x19, x0
@@ -1148,9 +1518,9 @@ _builder_pipeline_c_compiler_command:
 	mov	x1, x0
 	mov	x0, x19
 	cmp	x1, #0
-	beq	L69
-	adrp	x0, _str236@page
-	add	x0, x0, _str236@pageoff
+	beq	L83
+	adrp	x0, _str260@page
+	add	x0, x0, _str260@pageoff
 	bl	_donna_shell_run
 	cmp	x0, #0
 	cset	x0, eq
@@ -1158,9 +1528,9 @@ _builder_pipeline_c_compiler_command:
 	sub	sp, sp, x1
 	mov	x19, sp
 	cmp	x0, #1
-	beq	L67
-	adrp	x0, _str245@page
-	add	x0, x0, _str245@pageoff
+	beq	L81
+	adrp	x0, _str269@page
+	add	x0, x0, _str269@pageoff
 	bl	_donna_shell_run
 	cmp	x0, #0
 	cset	x0, eq
@@ -1168,34 +1538,74 @@ _builder_pipeline_c_compiler_command:
 	sub	sp, sp, x1
 	mov	x1, sp
 	cmp	x0, #1
-	beq	L64
-	adrp	x0, _str254@page
-	add	x0, x0, _str254@pageoff
+	beq	L78
+	adrp	x0, _str278@page
+	add	x0, x0, _str278@pageoff
 	str	x0, [x1]
-	adrp	x0, _str254@page
-	add	x0, x0, _str254@pageoff
-	b	L66
-L64:
-	adrp	x0, _str253@page
-	add	x0, x0, _str253@pageoff
+	adrp	x0, _str278@page
+	add	x0, x0, _str278@pageoff
+	b	L80
+L78:
+	adrp	x0, _str277@page
+	add	x0, x0, _str277@pageoff
 	str	x0, [x1]
-	adrp	x0, _str253@page
-	add	x0, x0, _str253@pageoff
-L66:
+	adrp	x0, _str277@page
+	add	x0, x0, _str277@pageoff
+L80:
 	str	x0, [x19]
-	b	L69
-L67:
-	adrp	x0, _str244@page
-	add	x0, x0, _str244@pageoff
+	b	L83
+L81:
+	adrp	x0, _str268@page
+	add	x0, x0, _str268@pageoff
 	str	x0, [x19]
-	adrp	x0, _str244@page
-	add	x0, x0, _str244@pageoff
-L69:
+	adrp	x0, _str268@page
+	add	x0, x0, _str268@pageoff
+L83:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
 	ret
 /* end function builder_pipeline_c_compiler_command */
+
+.text
+.balign 4
+.globl _builder_pipeline_release_c_compiler_command
+_builder_pipeline_release_c_compiler_command:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	adrp	x0, _str282@page
+	add	x0, x0, _str282@pageoff
+	bl	_donna_shell_getenv
+	bl	_donna_string_trim
+	mov	x19, x0
+	bl	_donna_string_is_empty
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	beq	L89
+	bl	_builder_pipeline_zig_available
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	cmp	x0, #1
+	beq	L87
+	bl	_builder_pipeline_c_compiler_command
+	str	x0, [x19]
+	b	L89
+L87:
+	adrp	x0, _str297@page
+	add	x0, x0, _str297@pageoff
+	str	x0, [x19]
+	adrp	x0, _str297@page
+	add	x0, x0, _str297@pageoff
+L89:
+	ldr	x19, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function builder_pipeline_release_c_compiler_command */
 
 .text
 .balign 4
@@ -1214,6 +1624,37 @@ _builder_pipeline_c_compiler_available:
 
 .text
 .balign 4
+.globl _builder_pipeline_release_c_compiler_available
+_builder_pipeline_release_c_compiler_available:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	bl	_builder_pipeline_release_c_compiler_command
+	bl	_donna_string_is_empty
+	cmp	x0, #0
+	cset	x0, eq
+	ldp	x29, x30, [sp], 16
+	ret
+/* end function builder_pipeline_release_c_compiler_available */
+
+.text
+.balign 4
+.globl _builder_pipeline_zig_available
+_builder_pipeline_zig_available:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	adrp	x0, _str307@page
+	add	x0, x0, _str307@pageoff
+	bl	_donna_shell_run
+	cmp	x0, #0
+	cset	x0, eq
+	ldp	x29, x30, [sp], 16
+	ret
+/* end function builder_pipeline_zig_available */
+
+.text
+.balign 4
 .globl _builder_pipeline_c_command
 _builder_pipeline_c_command:
 	hint	#34
@@ -1222,8 +1663,8 @@ _builder_pipeline_c_command:
 	str	x19, [x29, 24]
 	mov	x19, x0
 	bl	_builder_pipeline_c_compiler_command
-	adrp	x1, _str262@page
-	add	x1, x1, _str262@pageoff
+	adrp	x1, _str311@page
+	add	x1, x1, _str311@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -1239,6 +1680,55 @@ _builder_pipeline_c_command:
 
 .text
 .balign 4
+.globl _builder_pipeline_c_command_with
+_builder_pipeline_c_command_with:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x1
+	adrp	x1, _str315@page
+	add	x1, x1, _str315@pageoff
+	bl	___rt_str_concat
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	bl	_builder_pipeline_join_shell_args
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function builder_pipeline_c_command_with */
+
+.text
+.balign 4
+.globl _builder_pipeline_release_c_command
+_builder_pipeline_release_c_command:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	bl	_builder_pipeline_release_c_compiler_command
+	adrp	x1, _str320@page
+	add	x1, x1, _str320@pageoff
+	bl	___rt_str_concat
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	bl	_builder_pipeline_join_shell_args
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function builder_pipeline_release_c_command */
+
+.text
+.balign 4
 .globl _builder_pipeline_run_qbe
 _builder_pipeline_run_qbe:
 	hint	#34
@@ -1248,8 +1738,8 @@ _builder_pipeline_run_qbe:
 	str	x20, [x29, 16]
 	mov	x19, x0
 	bl	_donna_files_drop_extension
-	adrp	x1, _str267@page
-	add	x1, x1, _str267@pageoff
+	adrp	x1, _str325@page
+	add	x1, x1, _str325@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -1260,18 +1750,18 @@ _builder_pipeline_run_qbe:
 	mov	x1, x0
 	mov	x0, x20
 	cmp	x1, #1
-	beq	L79
+	beq	L107
 	mov	x20, x0
 	mov	x0, x19
 	bl	_builder_pipeline_sh_quote
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, _str275@page
-	add	x0, x0, _str275@pageoff
+	adrp	x0, _str333@page
+	add	x0, x0, _str333@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str278@page
-	add	x1, x1, _str278@pageoff
+	adrp	x1, _str336@page
+	add	x1, x1, _str336@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -1280,8 +1770,8 @@ _builder_pipeline_run_qbe:
 	mov	x1, x0
 	mov	x0, x20
 	bl	___rt_str_concat
-	adrp	x1, _str282@page
-	add	x1, x1, _str282@pageoff
+	adrp	x1, _str340@page
+	add	x1, x1, _str340@pageoff
 	bl	___rt_str_concat
 	bl	_donna_shell_run
 	mov	x1, x0
@@ -1292,25 +1782,139 @@ _builder_pipeline_run_qbe:
 	sub	sp, sp, x1
 	mov	x1, sp
 	cmp	x2, #1
-	beq	L78
-	adrp	x0, _str291@page
-	add	x0, x0, _str291@pageoff
+	beq	L106
+	adrp	x0, _str349@page
+	add	x0, x0, _str349@pageoff
 	str	x0, [x1]
-	adrp	x0, _str291@page
-	add	x0, x0, _str291@pageoff
-	b	L80
-L78:
+	adrp	x0, _str349@page
+	add	x0, x0, _str349@pageoff
+	b	L108
+L106:
 	str	x0, [x1]
-	b	L80
-L79:
+	b	L108
+L107:
 	mov	x0, x19
-L80:
+L108:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
 	ret
 /* end function builder_pipeline_run_qbe */
+
+.text
+.balign 4
+.globl _builder_pipeline_run_qbe_target
+_builder_pipeline_run_qbe_target:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x20, x0
+	mov	x0, x1
+	mov	x19, x0
+	mov	x0, x20
+	bl	_donna_files_drop_extension
+	adrp	x1, _str353@page
+	add	x1, x1, _str353@pageoff
+	bl	___rt_str_concat
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	mov	x1, x19
+	mov	x21, x0
+	mov	x0, x20
+	bl	_builder_pipeline_file_is_current
+	mov	x1, x0
+	mov	x0, x21
+	cmp	x1, #1
+	beq	L120
+	mov	x21, x0
+	bl	_donna_string_is_empty
+	mov	x1, x0
+	mov	x0, x21
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x21, sp
+	cmp	x1, #1
+	beq	L113
+	bl	_builder_pipeline_sh_quote
+	mov	x1, x0
+	mov	x0, x20
+	mov	x20, x0
+	adrp	x0, _str368@page
+	add	x0, x0, _str368@pageoff
+	bl	___rt_str_concat
+	mov	x1, x0
+	mov	x0, x20
+	str	x1, [x21]
+	mov	x20, x0
+	b	L116
+L113:
+	mov	x0, x20
+	mov	x20, x0
+	adrp	x0, _str367@page
+	add	x0, x0, _str367@pageoff
+	str	x0, [x21]
+	adrp	x1, _str367@page
+	add	x1, x1, _str367@pageoff
+L116:
+	adrp	x0, _str372@page
+	add	x0, x0, _str372@pageoff
+	bl	___rt_str_concat
+	adrp	x1, _str374@page
+	add	x1, x1, _str374@pageoff
+	bl	___rt_str_concat
+	mov	x21, x0
+	mov	x0, x19
+	bl	_builder_pipeline_sh_quote
+	mov	x1, x0
+	mov	x0, x21
+	bl	___rt_str_concat
+	adrp	x1, _str378@page
+	add	x1, x1, _str378@pageoff
+	bl	___rt_str_concat
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	bl	_builder_pipeline_sh_quote
+	mov	x1, x0
+	mov	x0, x20
+	bl	___rt_str_concat
+	adrp	x1, _str382@page
+	add	x1, x1, _str382@pageoff
+	bl	___rt_str_concat
+	bl	_donna_shell_run
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	cset	x2, eq
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x1, sp
+	cmp	x2, #1
+	beq	L119
+	adrp	x0, _str391@page
+	add	x0, x0, _str391@pageoff
+	str	x0, [x1]
+	adrp	x0, _str391@page
+	add	x0, x0, _str391@pageoff
+	b	L121
+L119:
+	str	x0, [x1]
+	b	L121
+L120:
+	mov	x0, x19
+L121:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function builder_pipeline_run_qbe_target */
 
 .text
 .balign 4
@@ -1329,7 +1933,7 @@ _builder_pipeline_run_qbe_all:
 	mov	x20, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L85
+	beq	L126
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -1348,7 +1952,7 @@ _builder_pipeline_run_qbe_all:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L84
+	beq	L125
 	mov	x22, x0
 	mov	x0, #24
 	bl	_malloc
@@ -1364,16 +1968,16 @@ _builder_pipeline_run_qbe_all:
 	str	x20, [x2]
 	bl	_builder_pipeline_run_qbe_all
 	str	x0, [x19]
-	b	L87
-L84:
+	b	L128
+L125:
 	mov	x1, x20
 	bl	_builder_pipeline_run_qbe_all
 	str	x0, [x19]
-	b	L87
-L85:
+	b	L128
+L126:
 	mov	x0, x20
 	bl	_donna_list_reverse
-L87:
+L128:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1399,6 +2003,20 @@ _builder_pipeline_run_qbe_all_checked:
 
 .text
 .balign 4
+.globl _builder_pipeline_run_qbe_all_checked_target
+_builder_pipeline_run_qbe_all_checked_target:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	adrp	x2, _donna_nil@page
+	add	x2, x2, _donna_nil@pageoff
+	bl	_builder_pipeline_run_qbe_all_checked_target_loop
+	ldp	x29, x30, [sp], 16
+	ret
+/* end function builder_pipeline_run_qbe_all_checked_target */
+
+.text
+.balign 4
 _builder_pipeline_run_qbe_all_checked_loop:
 	hint	#34
 	stp	x29, x30, [sp, -48]!
@@ -1413,7 +2031,7 @@ _builder_pipeline_run_qbe_all_checked_loop:
 	mov	x20, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L95
+	beq	L138
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -1433,7 +2051,7 @@ _builder_pipeline_run_qbe_all_checked_loop:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L94
+	beq	L137
 	mov	x0, x22
 	mov	x22, x0
 	mov	x0, #24
@@ -1450,8 +2068,8 @@ _builder_pipeline_run_qbe_all_checked_loop:
 	str	x20, [x2]
 	bl	_builder_pipeline_run_qbe_all_checked_loop
 	str	x0, [x19]
-	b	L97
-L94:
+	b	L140
+L137:
 	bl	_builder_pipeline_qbe_compile_error
 	mov	x20, x0
 	mov	x0, #16
@@ -1462,8 +2080,8 @@ L94:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L97
-L95:
+	b	L140
+L138:
 	mov	x0, x20
 	bl	_donna_list_reverse
 	mov	x19, x0
@@ -1474,7 +2092,7 @@ L95:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x19, [x1]
-L97:
+L140:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1486,6 +2104,97 @@ L97:
 
 .text
 .balign 4
+_builder_pipeline_run_qbe_all_checked_target_loop:
+	hint	#34
+	stp	x29, x30, [sp, -64]!
+	mov	x29, sp
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	mov	x17, x2
+	mov	x2, x0
+	mov	x0, x17
+	mov	x20, x0
+	ldr	x0, [x2]
+	cmp	x0, #0
+	beq	L146
+	mov	x0, #8
+	add	x0, x2, x0
+	ldr	x0, [x0]
+	mov	x3, #16
+	add	x2, x2, x3
+	ldr	x22, [x2]
+	mov	x23, x1
+	mov	x19, x0
+	bl	_builder_pipeline_run_qbe_target
+	mov	x21, x0
+	mov	x0, x19
+	mov	x19, x0
+	mov	x0, x21
+	bl	_donna_string_is_empty
+	mov	x1, x0
+	mov	x0, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x1, #1
+	beq	L145
+	mov	x0, x22
+	mov	x22, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x23
+	mov	x2, x0
+	mov	x0, x22
+	mov	x3, #1
+	str	x3, [x2]
+	mov	x3, #8
+	add	x3, x2, x3
+	str	x21, [x3]
+	mov	x3, #16
+	add	x3, x2, x3
+	str	x20, [x3]
+	bl	_builder_pipeline_run_qbe_all_checked_target_loop
+	str	x0, [x19]
+	b	L148
+L145:
+	bl	_builder_pipeline_qbe_compile_error
+	mov	x20, x0
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x20, [x1]
+	str	x0, [x19]
+	b	L148
+L146:
+	mov	x0, x20
+	bl	_donna_list_reverse
+	mov	x19, x0
+	mov	x0, #16
+	bl	_malloc
+	mov	x1, #0
+	str	x1, [x0]
+	mov	x1, #8
+	add	x1, x0, x1
+	str	x19, [x1]
+L148:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 64
+	ret
+/* end function builder_pipeline_run_qbe_all_checked_target_loop */
+
+.text
+.balign 4
 _builder_pipeline_qbe_compile_error:
 	hint	#34
 	stp	x29, x30, [sp, -32]!
@@ -1493,13 +2202,13 @@ _builder_pipeline_qbe_compile_error:
 	str	x19, [x29, 24]
 	str	x20, [x29, 16]
 	mov	x19, x0
-	adrp	x0, _str349@page
-	add	x0, x0, _str349@pageoff
+	adrp	x0, _str479@page
+	add	x0, x0, _str479@pageoff
 	bl	_utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str351@page
-	add	x1, x1, _str351@pageoff
+	adrp	x1, _str481@page
+	add	x1, x1, _str481@pageoff
 	bl	___rt_str_concat
 	mov	x20, x0
 	mov	x0, x19
@@ -1509,16 +2218,16 @@ _builder_pipeline_qbe_compile_error:
 	bl	___rt_str_concat
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str355@page
-	add	x1, x1, _str355@pageoff
+	adrp	x1, _str485@page
+	add	x1, x1, _str485@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	mov	x19, x0
-	adrp	x0, _str357@page
-	add	x0, x0, _str357@pageoff
+	adrp	x0, _str487@page
+	add	x0, x0, _str487@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str359@page
-	add	x1, x1, _str359@pageoff
+	adrp	x1, _str489@page
+	add	x1, x1, _str489@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_dim
 	mov	x1, x0
@@ -1548,7 +2257,7 @@ _builder_pipeline_compile_c:
 	mov	x2, x0
 	mov	x0, x19
 	cmp	x2, #0
-	beq	L109
+	beq	L160
 	mov	x21, x1
 	mov	x19, x0
 	bl	_builder_pipeline_file_is_current
@@ -1558,7 +2267,7 @@ _builder_pipeline_compile_c:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L107
+	beq	L158
 	mov	x20, x0
 	mov	x0, #24
 	bl	_malloc
@@ -1588,8 +2297,8 @@ _builder_pipeline_compile_c:
 	str	x2, [x21]
 	mov	x2, #8
 	add	x3, x21, x2
-	adrp	x2, _str381@page
-	add	x2, x2, _str381@pageoff
+	adrp	x2, _str511@page
+	add	x2, x2, _str511@pageoff
 	str	x2, [x3]
 	mov	x22, x1
 	mov	x1, #16
@@ -1619,8 +2328,8 @@ _builder_pipeline_compile_c:
 	mov	x0, #8
 	mov	x20, x1
 	add	x1, x21, x0
-	adrp	x0, _str388@page
-	add	x0, x0, _str388@pageoff
+	adrp	x0, _str518@page
+	add	x0, x0, _str518@pageoff
 	str	x0, [x1]
 	mov	x0, #16
 	add	x0, x21, x0
@@ -1632,8 +2341,8 @@ _builder_pipeline_compile_c:
 	str	x2, [x0]
 	mov	x2, #8
 	add	x3, x0, x2
-	adrp	x2, _str392@page
-	add	x2, x2, _str392@pageoff
+	adrp	x2, _str522@page
+	add	x2, x2, _str522@pageoff
 	str	x2, [x3]
 	mov	x20, x1
 	mov	x1, #16
@@ -1642,8 +2351,8 @@ _builder_pipeline_compile_c:
 	bl	_builder_pipeline_c_command
 	mov	x1, x20
 	mov	x20, x1
-	adrp	x1, _str397@page
-	add	x1, x1, _str397@pageoff
+	adrp	x1, _str527@page
+	add	x1, x1, _str527@pageoff
 	bl	___rt_str_concat
 	bl	_donna_shell_run
 	mov	x1, x20
@@ -1654,14 +2363,14 @@ _builder_pipeline_compile_c:
 	sub	sp, sp, x1
 	mov	x20, sp
 	cmp	x0, #1
-	beq	L105
+	beq	L156
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
 	str	x0, [x20]
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-	b	L106
-L105:
+	b	L157
+L156:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, x21
@@ -1676,10 +2385,10 @@ L105:
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
 	str	x0, [x20]
-L106:
+L157:
 	str	x0, [x19]
-	b	L110
-L107:
+	b	L161
+L158:
 	mov	x20, x21
 	mov	x0, #24
 	bl	_malloc
@@ -1695,11 +2404,11 @@ L107:
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
 	str	x0, [x19]
-	b	L110
-L109:
+	b	L161
+L160:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L110:
+L161:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -1711,6 +2420,203 @@ L110:
 
 .text
 .balign 4
+.globl _builder_pipeline_compile_c_target
+_builder_pipeline_compile_c_target:
+	hint	#34
+	stp	x29, x30, [sp, -64]!
+	mov	x29, sp
+	str	x19, [x29, 56]
+	str	x20, [x29, 48]
+	str	x21, [x29, 40]
+	str	x22, [x29, 32]
+	str	x23, [x29, 24]
+	str	x24, [x29, 16]
+	mov	x20, x1
+	mov	x23, x0
+	mov	x0, x2
+	mov	x19, x0
+	mov	x0, x23
+	bl	_donna_files_exists
+	mov	x1, x20
+	mov	x2, x0
+	mov	x0, x19
+	cmp	x2, #0
+	beq	L171
+	mov	x21, x1
+	mov	x19, x0
+	mov	x0, x23
+	bl	_builder_pipeline_file_is_current
+	mov	x1, x0
+	mov	x0, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x1, #1
+	beq	L169
+	mov	x20, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x21
+	mov	x17, x0
+	mov	x0, x20
+	mov	x20, x17
+	mov	x2, #1
+	str	x2, [x20]
+	mov	x2, #8
+	add	x3, x20, x2
+	adrp	x2, _str557@page
+	add	x2, x2, _str557@pageoff
+	str	x2, [x3]
+	mov	x2, #16
+	add	x2, x20, x2
+	mov	x22, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
+	mov	x21, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x22
+	mov	x17, x0
+	mov	x0, x21
+	mov	x21, x17
+	mov	x2, #1
+	str	x2, [x21]
+	mov	x2, #8
+	add	x3, x21, x2
+	adrp	x2, _str561@page
+	add	x2, x2, _str561@pageoff
+	str	x2, [x3]
+	mov	x22, x1
+	mov	x1, #16
+	add	x1, x21, x1
+	str	x20, [x1]
+	bl	_builder_pipeline_release_cc_target_flags
+	mov	x20, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x22
+	mov	x24, x0
+	mov	x0, x20
+	mov	x2, #1
+	str	x2, [x24]
+	mov	x2, #8
+	add	x2, x24, x2
+	str	x1, [x2]
+	mov	x2, #16
+	add	x2, x24, x2
+	mov	x22, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
+	mov	x20, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x22
+	mov	x22, x0
+	mov	x0, x20
+	mov	x2, #1
+	str	x2, [x22]
+	mov	x2, #8
+	add	x3, x22, x2
+	adrp	x2, _str569@page
+	add	x2, x2, _str569@pageoff
+	str	x2, [x3]
+	mov	x20, x1
+	mov	x1, #16
+	add	x1, x22, x1
+	str	x24, [x1]
+	mov	x24, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x0
+	mov	x0, x24
+	mov	x2, #1
+	str	x2, [x1]
+	mov	x2, #8
+	add	x2, x1, x2
+	str	x23, [x2]
+	mov	x2, #16
+	add	x2, x1, x2
+	str	x22, [x2]
+	bl	_donna_list_append
+	mov	x1, x0
+	mov	x0, x21
+	bl	_donna_list_append
+	bl	_builder_pipeline_release_c_command
+	mov	x1, x20
+	mov	x20, x1
+	adrp	x1, _str579@page
+	add	x1, x1, _str579@pageoff
+	bl	___rt_str_concat
+	bl	_donna_shell_run
+	mov	x1, x20
+	cmp	x0, #0
+	cset	x0, eq
+	mov	x21, x1
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x20, sp
+	cmp	x0, #1
+	beq	L167
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	str	x0, [x20]
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	b	L168
+L167:
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x21
+	mov	x2, #1
+	str	x2, [x0]
+	mov	x2, #8
+	add	x2, x0, x2
+	str	x1, [x2]
+	mov	x1, #16
+	add	x2, x0, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
+	str	x0, [x20]
+L168:
+	str	x0, [x19]
+	b	L172
+L169:
+	mov	x20, x21
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x20
+	mov	x2, #1
+	str	x2, [x0]
+	mov	x2, #8
+	add	x2, x0, x2
+	str	x1, [x2]
+	mov	x1, #16
+	add	x2, x0, x1
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	str	x1, [x2]
+	str	x0, [x19]
+	b	L172
+L171:
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+L172:
+	ldr	x19, [x29, 56]
+	ldr	x20, [x29, 48]
+	ldr	x21, [x29, 40]
+	ldr	x22, [x29, 32]
+	ldr	x23, [x29, 24]
+	ldr	x24, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 64
+	ret
+/* end function builder_pipeline_compile_c_target */
+
+.text
+.balign 4
 .globl _builder_pipeline_compile_ffi
 _builder_pipeline_compile_ffi:
 	hint	#34
@@ -1719,14 +2625,14 @@ _builder_pipeline_compile_ffi:
 	str	x19, [x29, 24]
 	str	x20, [x29, 16]
 	mov	x20, x1
-	adrp	x1, _str412@page
-	add	x1, x1, _str412@pageoff
+	adrp	x1, _str594@page
+	add	x1, x1, _str594@pageoff
 	bl	_donna_files_join
 	mov	x19, x0
 	mov	x0, x19
 	bl	_donna_files_is_dir
 	cmp	x0, #0
-	beq	L113
+	beq	L175
 	mov	x0, x19
 	bl	_donna_files_list_dir
 	mov	x2, x20
@@ -1734,16 +2640,56 @@ _builder_pipeline_compile_ffi:
 	adrp	x3, _donna_nil@page
 	add	x3, x3, _donna_nil@pageoff
 	bl	_builder_pipeline_compile_c_files
-	b	L114
-L113:
+	b	L176
+L175:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L114:
+L176:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
 	ret
 /* end function builder_pipeline_compile_ffi */
+
+.text
+.balign 4
+.globl _builder_pipeline_compile_ffi_target
+_builder_pipeline_compile_ffi_target:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x21, x2
+	mov	x20, x1
+	adrp	x1, _str605@page
+	add	x1, x1, _str605@pageoff
+	bl	_donna_files_join
+	mov	x19, x0
+	mov	x0, x19
+	bl	_donna_files_is_dir
+	cmp	x0, #0
+	beq	L179
+	mov	x0, x19
+	bl	_donna_files_list_dir
+	mov	x3, x21
+	mov	x2, x20
+	mov	x1, x19
+	adrp	x4, _donna_nil@page
+	add	x4, x4, _donna_nil@pageoff
+	bl	_builder_pipeline_compile_c_files_target
+	b	L180
+L179:
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+L180:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function builder_pipeline_compile_ffi_target */
 
 .text
 .balign 4
@@ -1763,7 +2709,7 @@ _builder_pipeline_compile_c_files:
 	mov	x23, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	L120
+	beq	L186
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -1771,8 +2717,8 @@ _builder_pipeline_compile_c_files:
 	add	x2, x2, x3
 	ldr	x20, [x2]
 	mov	x21, x1
-	adrp	x1, _str434@page
-	add	x1, x1, _str434@pageoff
+	adrp	x1, _str627@page
+	add	x1, x1, _str627@pageoff
 	mov	x19, x0
 	bl	_donna_string_ends_with
 	mov	x1, x21
@@ -1782,7 +2728,7 @@ _builder_pipeline_compile_c_files:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #0
-	beq	L118
+	beq	L184
 	mov	x21, x1
 	mov	x1, x0
 	mov	x24, x0
@@ -1794,8 +2740,8 @@ _builder_pipeline_compile_c_files:
 	bl	_donna_files_drop_extension
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, _str444@page
-	add	x1, x1, _str444@pageoff
+	adrp	x1, _str637@page
+	add	x1, x1, _str637@pageoff
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x0, x24
@@ -1815,19 +2761,19 @@ _builder_pipeline_compile_c_files:
 	mov	x0, x20
 	bl	_builder_pipeline_compile_c_files
 	str	x0, [x19]
-	b	L122
-L118:
+	b	L188
+L184:
 	mov	x0, x20
 	mov	x20, x23
 	mov	x2, x22
 	mov	x3, x20
 	bl	_builder_pipeline_compile_c_files
 	str	x0, [x19]
-	b	L122
-L120:
+	b	L188
+L186:
 	mov	x0, x23
 	bl	_donna_list_reverse
-L122:
+L188:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -1841,15 +2787,339 @@ L122:
 
 .text
 .balign 4
+_builder_pipeline_compile_c_files_target:
+	hint	#34
+	stp	x29, x30, [sp, -80]!
+	mov	x29, sp
+	str	x19, [x29, 72]
+	str	x20, [x29, 64]
+	str	x21, [x29, 56]
+	str	x22, [x29, 48]
+	str	x23, [x29, 40]
+	str	x24, [x29, 32]
+	str	x25, [x29, 24]
+	mov	x25, x2
+	mov	x2, x0
+	mov	x0, x4
+	mov	x24, x0
+	ldr	x0, [x2]
+	cmp	x0, #0
+	beq	L194
+	mov	x0, #8
+	add	x0, x2, x0
+	ldr	x0, [x0]
+	mov	x22, x3
+	mov	x3, #16
+	add	x2, x2, x3
+	ldr	x20, [x2]
+	mov	x21, x1
+	adrp	x1, _str656@page
+	add	x1, x1, _str656@pageoff
+	mov	x19, x0
+	bl	_donna_string_ends_with
+	mov	x3, x22
+	mov	x1, x21
+	mov	x2, x0
+	mov	x0, x19
+	mov	x23, x3
+	mov	x3, #16
+	sub	sp, sp, x3
+	mov	x19, sp
+	cmp	x2, #0
+	beq	L192
+	mov	x21, x1
+	mov	x1, x0
+	mov	x22, x0
+	mov	x0, x21
+	bl	_donna_files_join
+	mov	x17, x0
+	mov	x0, x22
+	mov	x22, x17
+	bl	_donna_files_drop_extension
+	mov	x1, x21
+	mov	x21, x1
+	adrp	x1, _str666@page
+	add	x1, x1, _str666@pageoff
+	bl	___rt_str_concat
+	mov	x1, x0
+	mov	x0, x22
+	mov	x22, x0
+	mov	x0, x25
+	bl	_donna_files_join
+	mov	x2, x25
+	mov	x1, x0
+	mov	x0, x22
+	mov	x22, x2
+	mov	x2, x23
+	bl	_builder_pipeline_compile_c_target
+	mov	x1, x21
+	mov	x21, x1
+	mov	x1, x24
+	bl	_donna_list_append
+	mov	x3, x23
+	mov	x2, x22
+	mov	x1, x21
+	mov	x4, x0
+	mov	x0, x20
+	bl	_builder_pipeline_compile_c_files_target
+	str	x0, [x19]
+	b	L196
+L192:
+	mov	x0, x20
+	mov	x20, x24
+	mov	x3, x23
+	mov	x2, x25
+	mov	x4, x20
+	bl	_builder_pipeline_compile_c_files_target
+	str	x0, [x19]
+	b	L196
+L194:
+	mov	x0, x24
+	bl	_donna_list_reverse
+L196:
+	ldr	x19, [x29, 72]
+	ldr	x20, [x29, 64]
+	ldr	x21, [x29, 56]
+	ldr	x22, [x29, 48]
+	ldr	x23, [x29, 40]
+	ldr	x24, [x29, 32]
+	ldr	x25, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 80
+	ret
+/* end function builder_pipeline_compile_c_files_target */
+
+.text
+.balign 4
+.globl _builder_pipeline_cc_target_flags
+_builder_pipeline_cc_target_flags:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x19, x0
+	bl	_builder_pipeline_c_compiler_command
+	adrp	x1, _str675@page
+	add	x1, x1, _str675@pageoff
+	bl	_donna_string_starts_with
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	beq	L202
+	bl	_builder_pipeline_zig_target_for_qbe
+	mov	x21, x0
+	mov	x0, x21
+	bl	_donna_string_is_empty
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	cmp	x0, #1
+	beq	L200
+	mov	x0, #24
+	bl	_malloc
+	mov	x20, x0
+	mov	x0, #1
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x1, x20, x0
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, _str692@page
+	add	x1, x1, _str692@pageoff
+	str	x1, [x2]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x20, [x1]
+	str	x0, [x19]
+	b	L203
+L200:
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	str	x0, [x19]
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	b	L203
+L202:
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+L203:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function builder_pipeline_cc_target_flags */
+
+.text
+.balign 4
+.globl _builder_pipeline_release_cc_target_flags
+_builder_pipeline_release_cc_target_flags:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x19, x0
+	bl	_builder_pipeline_release_c_compiler_command
+	adrp	x1, _str699@page
+	add	x1, x1, _str699@pageoff
+	bl	_donna_string_starts_with
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	beq	L209
+	bl	_builder_pipeline_zig_target_for_qbe
+	mov	x21, x0
+	mov	x0, x21
+	bl	_donna_string_is_empty
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x19, sp
+	cmp	x0, #1
+	beq	L207
+	mov	x0, #24
+	bl	_malloc
+	mov	x20, x0
+	mov	x0, #1
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x1, x20, x0
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, #1
+	str	x1, [x0]
+	mov	x1, #8
+	add	x2, x0, x1
+	adrp	x1, _str716@page
+	add	x1, x1, _str716@pageoff
+	str	x1, [x2]
+	mov	x1, #16
+	add	x1, x0, x1
+	str	x20, [x1]
+	str	x0, [x19]
+	b	L210
+L207:
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	str	x0, [x19]
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	b	L210
+L209:
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+L210:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function builder_pipeline_release_cc_target_flags */
+
+.text
+.balign 4
+_builder_pipeline_zig_target_for_qbe:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	adrp	x1, _str724@page
+	add	x1, x1, _str724@pageoff
+	mov	x19, x0
+	bl	_strcmp
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	beq	L221
+	adrp	x1, _str730@page
+	add	x1, x1, _str730@pageoff
+	mov	x19, x0
+	bl	_strcmp
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	beq	L220
+	adrp	x1, _str736@page
+	add	x1, x1, _str736@pageoff
+	mov	x19, x0
+	bl	_strcmp
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	beq	L219
+	adrp	x1, _str742@page
+	add	x1, x1, _str742@pageoff
+	mov	x19, x0
+	bl	_strcmp
+	mov	x1, x0
+	mov	x0, x19
+	cmp	x1, #0
+	beq	L218
+	adrp	x1, _str748@page
+	add	x1, x1, _str748@pageoff
+	bl	_strcmp
+	cmp	x0, #0
+	beq	L217
+	adrp	x0, _str754@page
+	add	x0, x0, _str754@pageoff
+	b	L222
+L217:
+	adrp	x0, _str753@page
+	add	x0, x0, _str753@pageoff
+	b	L222
+L218:
+	adrp	x0, _str747@page
+	add	x0, x0, _str747@pageoff
+	b	L222
+L219:
+	adrp	x0, _str741@page
+	add	x0, x0, _str741@pageoff
+	b	L222
+L220:
+	adrp	x0, _str735@page
+	add	x0, x0, _str735@pageoff
+	b	L222
+L221:
+	adrp	x0, _str729@page
+	add	x0, x0, _str729@pageoff
+L222:
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function builder_pipeline_zig_target_for_qbe */
+
+.text
+.balign 4
 .globl _builder_pipeline_mod_name_to_stem
 _builder_pipeline_mod_name_to_stem:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x2, _str453@page
-	add	x2, x2, _str453@pageoff
-	adrp	x1, _str452@page
-	add	x1, x1, _str452@pageoff
+	adrp	x2, _str757@page
+	add	x2, x2, _str757@pageoff
+	adrp	x1, _str756@page
+	add	x1, x1, _str756@pageoff
 	bl	_donna_string_replace
 	ldp	x29, x30, [sp], 16
 	ret
@@ -1870,16 +3140,16 @@ _builder_pipeline_file_is_current:
 	mov	x1, x0
 	mov	x0, x20
 	cmp	x1, #0
-	beq	L127
+	beq	L227
 	bl	_builder_pipeline_sh_quote
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str461@page
-	add	x0, x0, _str461@pageoff
+	adrp	x0, _str765@page
+	add	x0, x0, _str765@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str464@page
-	add	x1, x1, _str464@pageoff
+	adrp	x1, _str768@page
+	add	x1, x1, _str768@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -1891,10 +3161,10 @@ _builder_pipeline_file_is_current:
 	bl	_donna_shell_run
 	cmp	x0, #0
 	cset	x0, ne
-	b	L128
-L127:
+	b	L228
+L227:
 	mov	x0, #0
-L128:
+L228:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -1907,17 +3177,17 @@ _builder_pipeline_sh_quote:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x2, _str473@page
-	add	x2, x2, _str473@pageoff
-	adrp	x1, _str472@page
-	add	x1, x1, _str472@pageoff
+	adrp	x2, _str777@page
+	add	x2, x2, _str777@pageoff
+	adrp	x1, _str776@page
+	add	x1, x1, _str776@pageoff
 	bl	_donna_string_replace
 	mov	x1, x0
-	adrp	x0, _str471@page
-	add	x0, x0, _str471@pageoff
+	adrp	x0, _str775@page
+	add	x0, x0, _str775@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str476@page
-	add	x1, x1, _str476@pageoff
+	adrp	x1, _str780@page
+	add	x1, x1, _str780@pageoff
 	bl	___rt_str_concat
 	ldp	x29, x30, [sp], 16
 	ret
@@ -1932,17 +3202,17 @@ _builder_pipeline_join_shell_args:
 	str	x19, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L139
+	beq	L239
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x2, sp
 	cmp	x1, #1
-	beq	L135
+	beq	L235
 	mov	x1, #0
 	str	x1, [x2]
 	mov	x1, #0
-	b	L136
-L135:
+	b	L236
+L235:
 	mov	x1, #16
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -1952,9 +3222,9 @@ L135:
 	mov	x3, #1
 	and	x1, x1, x3
 	str	x1, [x2]
-L136:
+L236:
 	cmp	w1, #0
-	bne	L138
+	bne	L238
 	mov	x1, x0
 	mov	x0, #8
 	add	x0, x1, x0
@@ -1963,8 +3233,8 @@ L136:
 	add	x1, x1, x2
 	ldr	x19, [x1]
 	bl	_builder_pipeline_sh_quote
-	adrp	x1, _str511@page
-	add	x1, x1, _str511@pageoff
+	adrp	x1, _str815@page
+	add	x1, x1, _str815@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -1973,17 +3243,17 @@ L136:
 	mov	x1, x0
 	mov	x0, x19
 	bl	___rt_str_concat
-	b	L140
-L138:
+	b	L240
+L238:
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_builder_pipeline_sh_quote
-	b	L140
-L139:
-	adrp	x0, _str484@page
-	add	x0, x0, _str484@pageoff
-L140:
+	b	L240
+L239:
+	adrp	x0, _str788@page
+	add	x0, x0, _str788@pageoff
+L240:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -2006,7 +3276,7 @@ _builder_pipeline_render_errors:
 	mov	x19, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	L143
+	beq	L243
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -2033,11 +3303,11 @@ _builder_pipeline_render_errors:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	_builder_pipeline_render_errors
-	b	L145
-L143:
+	b	L245
+L243:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L145:
+L245:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2045,6 +3315,90 @@ L145:
 	ldp	x29, x30, [sp], 48
 	ret
 /* end function builder_pipeline_render_errors */
+
+.text
+.balign 4
+_builder_pipeline_render_error_block:
+	hint	#34
+	stp	x29, x30, [sp, -16]!
+	mov	x29, sp
+	adrp	x2, _donna_nil@page
+	add	x2, x2, _donna_nil@pageoff
+	bl	_builder_pipeline_render_errors
+	adrp	x1, _donna_nil@page
+	add	x1, x1, _donna_nil@pageoff
+	bl	_builder_pipeline_unique_strings
+	adrp	x1, _str839@page
+	add	x1, x1, _str839@pageoff
+	bl	_donna_string_join
+	ldp	x29, x30, [sp], 16
+	ret
+/* end function builder_pipeline_render_error_block */
+
+.text
+.balign 4
+_builder_pipeline_unique_strings:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	str	x22, [x29, 16]
+	mov	x20, x1
+	ldr	x1, [x0]
+	cmp	x1, #0
+	beq	L252
+	mov	x1, #8
+	add	x1, x0, x1
+	ldr	x21, [x1]
+	mov	x1, #16
+	add	x0, x0, x1
+	ldr	x0, [x0]
+	mov	x1, x21
+	mov	x19, x0
+	mov	x0, x20
+	bl	_donna_list_contains_str
+	mov	x1, x0
+	mov	x0, x19
+	mov	x2, #16
+	sub	sp, sp, x2
+	mov	x19, sp
+	cmp	x1, #1
+	beq	L251
+	mov	x22, x0
+	mov	x0, #24
+	bl	_malloc
+	mov	x1, x0
+	mov	x0, x22
+	mov	x2, #1
+	str	x2, [x1]
+	mov	x2, #8
+	add	x2, x1, x2
+	str	x21, [x2]
+	mov	x2, #16
+	add	x2, x1, x2
+	str	x20, [x2]
+	bl	_builder_pipeline_unique_strings
+	str	x0, [x19]
+	b	L254
+L251:
+	mov	x1, x20
+	bl	_builder_pipeline_unique_strings
+	str	x0, [x19]
+	b	L254
+L252:
+	mov	x0, x20
+	bl	_donna_list_reverse
+L254:
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldr	x22, [x29, 16]
+	mov sp, x29
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function builder_pipeline_unique_strings */
 
 .text
 .balign 4
@@ -2060,7 +3414,7 @@ _builder_pipeline_collect_donna:
 	mov	x20, x2
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L151
+	beq	L260
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x21, [x2]
@@ -2068,8 +3422,8 @@ _builder_pipeline_collect_donna:
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	mov	x22, x1
-	adrp	x1, _str544@page
-	add	x1, x1, _str544@pageoff
+	adrp	x1, _str876@page
+	add	x1, x1, _str876@pageoff
 	mov	x19, x0
 	mov	x0, x21
 	bl	_donna_string_ends_with
@@ -2080,13 +3434,13 @@ _builder_pipeline_collect_donna:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	L149
+	beq	L258
 	mov	x2, x20
 	mov	x23, x1
 	bl	_builder_pipeline_collect_donna
 	str	x0, [x19]
-	b	L153
-L149:
+	b	L262
+L258:
 	mov	x23, x1
 	mov	x1, x21
 	mov	x21, x0
@@ -2111,11 +3465,11 @@ L149:
 	str	x20, [x3]
 	bl	_builder_pipeline_collect_donna
 	str	x0, [x19]
-	b	L153
-L151:
+	b	L262
+L260:
 	mov	x0, x20
 	bl	_donna_list_reverse
-L153:
+L262:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2147,7 +3501,7 @@ _builder_pipeline_collect_pairs_recursive:
 	mov	x24, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	L171
+	beq	L280
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -2163,8 +3517,8 @@ _builder_pipeline_collect_pairs_recursive:
 	mov	x25, x0
 	mov	x0, x19
 	mov	x23, x1
-	adrp	x1, _str571@page
-	add	x1, x1, _str571@pageoff
+	adrp	x1, _str903@page
+	add	x1, x1, _str903@pageoff
 	mov	x19, x0
 	bl	_donna_string_ends_with
 	mov	x2, x20
@@ -2175,7 +3529,7 @@ _builder_pipeline_collect_pairs_recursive:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L165
+	beq	L274
 	mov	x20, x0
 	mov	x0, x25
 	bl	_donna_files_is_dir
@@ -2187,7 +3541,7 @@ _builder_pipeline_collect_pairs_recursive:
 	sub	sp, sp, x2
 	mov	x20, sp
 	cmp	x1, #0
-	beq	L162
+	beq	L271
 	mov	x22, x0
 	mov	x0, x26
 	bl	_donna_string_is_empty
@@ -2199,10 +3553,10 @@ _builder_pipeline_collect_pairs_recursive:
 	mov	x22, sp
 	str	x22, [x29, 16]
 	cmp	x2, #1
-	beq	L159
+	beq	L268
 	mov	x22, x1
-	adrp	x1, _str609@page
-	add	x1, x1, _str609@pageoff
+	adrp	x1, _str941@page
+	add	x1, x1, _str941@pageoff
 	mov	x27, x0
 	mov	x0, x26
 	bl	___rt_str_concat
@@ -2212,11 +3566,11 @@ _builder_pipeline_collect_pairs_recursive:
 	mov	x1, x27
 	bl	___rt_str_concat
 	str	x0, [x22]
-	b	L161
-L159:
+	b	L270
+L268:
 	mov	x23, x1
 	str	x0, [x22]
-L161:
+L270:
 	mov	x22, x0
 	mov	x0, x25
 	bl	_donna_files_list_dir
@@ -2240,8 +3594,8 @@ L161:
 	mov	x0, x21
 	bl	_builder_pipeline_collect_pairs_recursive
 	str	x0, [x20]
-	b	L164
-L162:
+	b	L273
+L271:
 	mov	x0, x21
 	mov	x21, x24
 	mov	x2, x26
@@ -2252,10 +3606,10 @@ L162:
 	mov	x21, x0
 	bl	_builder_pipeline_collect_pairs_recursive
 	str	x0, [x20]
-L164:
+L273:
 	str	x0, [x19]
-	b	L173
-L165:
+	b	L282
+L274:
 	mov	x20, x24
 	mov	x24, x22
 	mov	x22, x23
@@ -2273,10 +3627,10 @@ L165:
 	sub	sp, sp, x3
 	mov	x21, sp
 	cmp	x2, #1
-	beq	L168
+	beq	L277
 	mov	x25, x1
-	adrp	x1, _str585@page
-	add	x1, x1, _str585@pageoff
+	adrp	x1, _str917@page
+	add	x1, x1, _str917@pageoff
 	mov	x22, x0
 	mov	x0, x24
 	bl	___rt_str_concat
@@ -2288,12 +3642,12 @@ L165:
 	mov	x0, x22
 	mov	x22, x17
 	str	x22, [x21]
-	b	L170
-L168:
+	b	L279
+L277:
 	mov	x22, x26
 	mov	x25, x1
 	str	x22, [x21]
-L170:
+L279:
 	mov	x21, x0
 	mov	x0, #16
 	bl	_malloc
@@ -2323,11 +3677,11 @@ L170:
 	str	x20, [x4]
 	bl	_builder_pipeline_collect_pairs_recursive
 	str	x0, [x19]
-	b	L173
-L171:
+	b	L282
+L280:
 	mov	x0, x24
 	bl	_donna_list_reverse
-L173:
+L282:
 	ldr	x19, [x29, 104]
 	ldr	x20, [x29, 96]
 	ldr	x21, [x29, 88]
@@ -2380,7 +3734,7 @@ _builder_pipeline_collect_mod_names:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L178
+	beq	L287
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -2404,11 +3758,11 @@ _builder_pipeline_collect_mod_names:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_builder_pipeline_collect_mod_names
-	b	L180
-L178:
+	b	L289
+L287:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L180:
+L289:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2431,7 +3785,7 @@ _builder_pipeline_tag_with_local_deps:
 	mov	x19, x2
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L183
+	beq	L292
 	mov	x21, x1
 	mov	x1, #8
 	add	x1, x0, x1
@@ -2448,8 +3802,8 @@ _builder_pipeline_tag_with_local_deps:
 	bl	_donna_files_read
 	mov	x1, x21
 	mov	x21, x1
-	adrp	x1, _str660@page
-	add	x1, x1, _str660@pageoff
+	adrp	x1, _str992@page
+	add	x1, x1, _str992@pageoff
 	bl	_donna_string_split
 	mov	x1, x21
 	mov	x21, x1
@@ -2493,11 +3847,11 @@ _builder_pipeline_tag_with_local_deps:
 	add	x3, x2, x3
 	str	x19, [x3]
 	bl	_builder_pipeline_tag_with_local_deps
-	b	L185
-L183:
+	b	L294
+L292:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L185:
+L294:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2524,15 +3878,15 @@ _builder_pipeline_parse_import_names:
 	mov	x20, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L191
+	beq	L300
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x21, [x1]
-	adrp	x1, _str684@page
-	add	x1, x1, _str684@pageoff
+	adrp	x1, _str1016@page
+	add	x1, x1, _str1016@pageoff
 	mov	x19, x0
 	bl	_donna_string_starts_with
 	mov	x1, x0
@@ -2541,7 +3895,7 @@ _builder_pipeline_parse_import_names:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #0
-	beq	L189
+	beq	L298
 	mov	x22, x0
 	bl	_donna_string_length
 	mov	x1, x0
@@ -2569,17 +3923,17 @@ _builder_pipeline_parse_import_names:
 	str	x20, [x2]
 	bl	_builder_pipeline_parse_import_names
 	str	x0, [x19]
-	b	L193
-L189:
+	b	L302
+L298:
 	mov	x0, x21
 	mov	x1, x20
 	bl	_builder_pipeline_parse_import_names
 	str	x0, [x19]
-	b	L193
-L191:
+	b	L302
+L300:
 	mov	x0, x20
 	bl	_donna_list_reverse
-L193:
+L302:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2597,21 +3951,21 @@ _builder_pipeline_import_path_only:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	bl	_donna_string_trim
-	adrp	x1, _str703@page
-	add	x1, x1, _str703@pageoff
+	adrp	x1, _str1035@page
+	add	x1, x1, _str1035@pageoff
 	mov	x19, x0
 	bl	_donna_string_split
 	mov	x1, x0
 	mov	x0, x19
 	ldr	x2, [x1]
 	cmp	x2, #0
-	beq	L197
+	beq	L306
 	mov	x0, x1
 	mov	x1, #8
 	add	x0, x0, x1
 	ldr	x0, [x0]
 	bl	_donna_string_trim
-L197:
+L306:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -2634,7 +3988,7 @@ _builder_pipeline_filter_local_deps:
 	mov	x20, x0
 	ldr	x0, [x2]
 	cmp	x0, #0
-	beq	L203
+	beq	L312
 	mov	x0, #8
 	add	x0, x2, x0
 	ldr	x0, [x0]
@@ -2654,7 +4008,7 @@ _builder_pipeline_filter_local_deps:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L201
+	beq	L310
 	mov	x22, x0
 	mov	x0, #24
 	bl	_malloc
@@ -2671,17 +4025,17 @@ _builder_pipeline_filter_local_deps:
 	str	x20, [x3]
 	bl	_builder_pipeline_filter_local_deps
 	str	x0, [x19]
-	b	L205
-L201:
+	b	L314
+L310:
 	mov	x1, x23
 	mov	x2, x20
 	bl	_builder_pipeline_filter_local_deps
 	str	x0, [x19]
-	b	L205
-L203:
+	b	L314
+L312:
 	mov	x0, x20
 	bl	_donna_list_reverse
-L205:
+L314:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2708,12 +4062,12 @@ _builder_pipeline_local_dep_name:
 	mov	x1, x0
 	mov	x0, x20
 	cmp	x1, #1
-	beq	L208
+	beq	L317
 	bl	_builder_pipeline_path_last_segment
 	mov	x1, x0
 	mov	x0, x19
 	bl	_builder_pipeline_find_local_dep_by_last_segment
-L208:
+L317:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -2733,7 +4087,7 @@ _builder_pipeline_find_local_dep_by_last_segment:
 	mov	x1, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L214
+	beq	L323
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
@@ -2752,18 +4106,18 @@ _builder_pipeline_find_local_dep_by_last_segment:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	L213
+	beq	L322
 	mov	x0, x20
 	bl	_builder_pipeline_find_local_dep_by_last_segment
 	str	x0, [x19]
-	b	L215
-L213:
+	b	L324
+L322:
 	str	x0, [x19]
-	b	L215
-L214:
-	adrp	x0, _str757@page
-	add	x0, x0, _str757@pageoff
-L215:
+	b	L324
+L323:
+	adrp	x0, _str1089@page
+	add	x0, x0, _str1089@pageoff
+L324:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -2778,11 +4132,11 @@ _builder_pipeline_path_last_segment:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x1, _str772@page
-	add	x1, x1, _str772@pageoff
+	adrp	x1, _str1104@page
+	add	x1, x1, _str1104@pageoff
 	bl	_donna_string_split
-	adrp	x1, _str774@page
-	add	x1, x1, _str774@pageoff
+	adrp	x1, _str1106@page
+	add	x1, x1, _str1106@pageoff
 	bl	_builder_pipeline_path_last_segment_loop
 	ldp	x29, x30, [sp], 16
 	ret
@@ -2796,7 +4150,7 @@ _builder_pipeline_path_last_segment_loop:
 	mov	x29, sp
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L220
+	beq	L329
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -2804,10 +4158,10 @@ _builder_pipeline_path_last_segment_loop:
 	add	x0, x0, x2
 	ldr	x0, [x0]
 	bl	_builder_pipeline_path_last_segment_loop
-	b	L221
-L220:
+	b	L330
+L329:
 	mov	x0, x1
-L221:
+L330:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function builder_pipeline_path_last_segment_loop */
@@ -2827,7 +4181,7 @@ _builder_pipeline_kahn_sort:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L227
+	beq	L336
 	adrp	x3, _donna_nil@page
 	add	x3, x3, _donna_nil@pageoff
 	adrp	x2, _donna_nil@page
@@ -2849,7 +4203,7 @@ _builder_pipeline_kahn_sort:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L225
+	beq	L334
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	mov	x23, x0
@@ -2868,8 +4222,8 @@ _builder_pipeline_kahn_sort:
 	mov	x0, x20
 	bl	_builder_pipeline_kahn_sort
 	str	x0, [x19]
-	b	L229
-L225:
+	b	L338
+L334:
 	mov	x0, x20
 	mov	x20, x22
 	adrp	x1, _donna_nil@page
@@ -2882,11 +4236,11 @@ L225:
 	mov	x1, x20
 	bl	_donna_list_append
 	str	x0, [x19]
-	b	L229
-L227:
+	b	L338
+L336:
 	mov	x0, x22
 	bl	_donna_list_reverse
-L229:
+L338:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -2915,7 +4269,7 @@ _builder_pipeline_split_ready:
 	mov	x21, x2
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L234
+	beq	L343
 	mov	x2, #8
 	add	x2, x0, x2
 	ldr	x2, [x2]
@@ -2939,7 +4293,7 @@ _builder_pipeline_split_ready:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L233
+	beq	L342
 	mov	x22, x0
 	mov	x0, #24
 	bl	_malloc
@@ -2973,8 +4327,8 @@ _builder_pipeline_split_ready:
 	mov	x26, x1
 	bl	_builder_pipeline_split_ready
 	str	x0, [x19]
-	b	L236
-L233:
+	b	L345
+L342:
 	mov	x22, x0
 	mov	x0, #24
 	bl	_malloc
@@ -3007,8 +4361,8 @@ L233:
 	mov	x3, x20
 	bl	_builder_pipeline_split_ready
 	str	x0, [x19]
-	b	L236
-L234:
+	b	L345
+L343:
 	mov	x19, x20
 	mov	x0, x21
 	bl	_donna_list_reverse
@@ -3022,7 +4376,7 @@ L234:
 	mov	x1, #8
 	add	x1, x0, x1
 	str	x19, [x1]
-L236:
+L345:
 	ldr	x19, [x29, 72]
 	ldr	x20, [x29, 64]
 	ldr	x21, [x29, 56]
@@ -3046,7 +4400,7 @@ _builder_pipeline_all_compiled:
 	str	x20, [x29, 16]
 	ldr	x2, [x0]
 	cmp	x2, #0
-	beq	L242
+	beq	L351
 	mov	x20, x1
 	mov	x1, #8
 	add	x1, x0, x1
@@ -3064,18 +4418,18 @@ _builder_pipeline_all_compiled:
 	sub	sp, sp, x3
 	mov	x19, sp
 	cmp	x2, #1
-	beq	L241
+	beq	L350
 	mov	x0, #0
 	str	x0, [x19]
 	mov	x0, #0
-	b	L243
-L241:
+	b	L352
+L350:
 	bl	_builder_pipeline_all_compiled
 	str	x0, [x19]
-	b	L243
-L242:
+	b	L352
+L351:
 	mov	x0, #1
-L243:
+L352:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -3095,7 +4449,7 @@ _builder_pipeline_tagged_names:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L246
+	beq	L355
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -3119,11 +4473,11 @@ _builder_pipeline_tagged_names:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_builder_pipeline_tagged_names
-	b	L248
-L246:
+	b	L357
+L355:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L248:
+L357:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3144,7 +4498,7 @@ _builder_pipeline_tagged_to_pairs:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L251
+	beq	L360
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -3179,11 +4533,11 @@ _builder_pipeline_tagged_to_pairs:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_builder_pipeline_tagged_to_pairs
-	b	L253
-L251:
+	b	L362
+L360:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L253:
+L362:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3205,7 +4559,7 @@ _builder_pipeline_prepend_tagged_pairs:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L256
+	beq	L365
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -3240,10 +4594,10 @@ _builder_pipeline_prepend_tagged_pairs:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_builder_pipeline_prepend_tagged_pairs
-	b	L257
-L256:
+	b	L366
+L365:
 	mov	x0, x19
-L257:
+L366:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3282,7 +4636,7 @@ _builder_pipeline_tag_with_count:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L262
+	beq	L371
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x21, [x1]
@@ -3319,11 +4673,11 @@ _builder_pipeline_tag_with_count:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_builder_pipeline_tag_with_count
-	b	L264
-L262:
+	b	L373
+L371:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L264:
+L373:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3338,8 +4692,8 @@ _builder_pipeline_count_imports:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
-	adrp	x1, _str974@page
-	add	x1, x1, _str974@pageoff
+	adrp	x1, _str1306@page
+	add	x1, x1, _str1306@pageoff
 	bl	_donna_string_split
 	mov	x1, #0
 	bl	_builder_pipeline_count_import_lines
@@ -3361,15 +4715,15 @@ _builder_pipeline_count_import_lines:
 	mov	x20, x0
 	ldr	x0, [x1]
 	cmp	x0, #0
-	beq	L271
+	beq	L380
 	mov	x0, #8
 	add	x0, x1, x0
 	ldr	x0, [x0]
 	mov	x2, #16
 	add	x1, x1, x2
 	ldr	x19, [x1]
-	adrp	x1, _str987@page
-	add	x1, x1, _str987@pageoff
+	adrp	x1, _str1319@page
+	add	x1, x1, _str1319@pageoff
 	bl	_donna_string_starts_with
 	mov	x1, x0
 	mov	x0, x19
@@ -3377,20 +4731,20 @@ _builder_pipeline_count_import_lines:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L270
+	beq	L379
 	mov	x1, x20
 	bl	_builder_pipeline_count_import_lines
 	str	x0, [x19]
-	b	L272
-L270:
+	b	L381
+L379:
 	mov	x1, #1
 	add	x1, x20, x1
 	bl	_builder_pipeline_count_import_lines
 	str	x0, [x19]
-	b	L272
-L271:
+	b	L381
+L380:
 	mov	x0, x20
-L272:
+L381:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	mov sp, x29
@@ -3407,7 +4761,7 @@ _builder_pipeline_isort:
 	str	x19, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L275
+	beq	L384
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x19, [x1]
@@ -3418,11 +4772,11 @@ _builder_pipeline_isort:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_builder_pipeline_insert_by_count
-	b	L276
-L275:
+	b	L385
+L384:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L276:
+L385:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -3443,7 +4797,7 @@ _builder_pipeline_insert_by_count:
 	mov	x19, x0
 	ldr	x0, [x21]
 	cmp	x0, #0
-	beq	L282
+	beq	L391
 	mov	x0, #8
 	add	x0, x21, x0
 	ldr	x22, [x0]
@@ -3463,7 +4817,7 @@ _builder_pipeline_insert_by_count:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x0, #1
-	beq	L281
+	beq	L390
 	mov	x21, x22
 	mov	x0, x20
 	bl	_builder_pipeline_insert_by_count
@@ -3479,8 +4833,8 @@ _builder_pipeline_insert_by_count:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L283
-L281:
+	b	L392
+L390:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, x21
@@ -3493,8 +4847,8 @@ L281:
 	add	x2, x0, x2
 	str	x1, [x2]
 	str	x0, [x19]
-	b	L283
-L282:
+	b	L392
+L391:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
@@ -3507,7 +4861,7 @@ L282:
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-L283:
+L392:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -3541,7 +4895,7 @@ _builder_pipeline_extract_sorted:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L288
+	beq	L397
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -3565,11 +4919,11 @@ _builder_pipeline_extract_sorted:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_builder_pipeline_extract_sorted
-	b	L290
-L288:
+	b	L399
+L397:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L290:
+L399:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]
@@ -3608,7 +4962,7 @@ _builder_pipeline_tag_pairs_with_count:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L295
+	beq	L404
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -3659,11 +5013,11 @@ _builder_pipeline_tag_pairs_with_count:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_builder_pipeline_tag_pairs_with_count
-	b	L297
-L295:
+	b	L406
+L404:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L297:
+L406:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -3682,7 +5036,7 @@ _builder_pipeline_isort_pairs:
 	str	x19, [x29, 24]
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L300
+	beq	L409
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x19, [x1]
@@ -3693,11 +5047,11 @@ _builder_pipeline_isort_pairs:
 	mov	x1, x0
 	mov	x0, x19
 	bl	_builder_pipeline_insert_pair_by_count
-	b	L301
-L300:
+	b	L410
+L409:
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
-L301:
+L410:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret
@@ -3718,7 +5072,7 @@ _builder_pipeline_insert_pair_by_count:
 	mov	x19, x0
 	ldr	x0, [x21]
 	cmp	x0, #0
-	beq	L307
+	beq	L416
 	mov	x0, #8
 	add	x0, x21, x0
 	ldr	x22, [x0]
@@ -3738,7 +5092,7 @@ _builder_pipeline_insert_pair_by_count:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x0, #1
-	beq	L306
+	beq	L415
 	mov	x21, x22
 	mov	x0, x20
 	bl	_builder_pipeline_insert_pair_by_count
@@ -3754,8 +5108,8 @@ _builder_pipeline_insert_pair_by_count:
 	add	x1, x0, x1
 	str	x20, [x1]
 	str	x0, [x19]
-	b	L308
-L306:
+	b	L417
+L415:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, x21
@@ -3768,8 +5122,8 @@ L306:
 	add	x2, x0, x2
 	str	x1, [x2]
 	str	x0, [x19]
-	b	L308
-L307:
+	b	L417
+L416:
 	mov	x0, #24
 	bl	_malloc
 	mov	x1, #1
@@ -3782,7 +5136,7 @@ L307:
 	adrp	x1, _donna_nil@page
 	add	x1, x1, _donna_nil@pageoff
 	str	x1, [x2]
-L308:
+L417:
 	ldr	x19, [x29, 56]
 	ldr	x20, [x29, 48]
 	ldr	x21, [x29, 40]
@@ -3816,7 +5170,7 @@ _builder_pipeline_extract_pairs_sorted:
 	mov	x19, x1
 	ldr	x1, [x0]
 	cmp	x1, #0
-	beq	L313
+	beq	L422
 	mov	x1, #8
 	add	x1, x0, x1
 	ldr	x1, [x1]
@@ -3840,11 +5194,11 @@ _builder_pipeline_extract_pairs_sorted:
 	add	x2, x1, x2
 	str	x19, [x2]
 	bl	_builder_pipeline_extract_pairs_sorted
-	b	L315
-L313:
+	b	L424
+L422:
 	mov	x0, x19
 	bl	_donna_list_reverse
-L315:
+L424:
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
 	ldr	x21, [x29, 24]

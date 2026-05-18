@@ -48,32 +48,14 @@ _str39:
 
 .data
 .balign 8
-_str44:
-	.ascii "  Docs"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str46:
-	.ascii " "
-	.byte 226
-	.byte 134
-	.byte 146
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str60:
+_str55:
 	.ascii "could not derive GitHub owner/repo from donna.toml"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str61:
+_str56:
 	.ascii "set `repository = { type = "
 	.byte 34
 	.ascii "github"
@@ -92,49 +74,49 @@ _str61:
 
 .data
 .balign 8
-_str82:
+_str77:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str96:
+_str91:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str107:
+_str102:
 	.ascii "README.md"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str116:
+_str111:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str138:
+_str133:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str158:
+_str153:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str171:
+_str166:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -247,20 +229,7 @@ L2:
 	mov	x0, x21
 	bl	_cli_cmd_docs_warn_missing_github_repo
 	mov	x0, x20
-	mov	x20, x0
-	adrp	x0, _str44@page
-	add	x0, x0, _str44@pageoff
-	bl	_utilities_colors_orange
-	adrp	x1, _str46@page
-	add	x1, x1, _str46@pageoff
-	bl	___rt_str_concat
-	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	bl	_utilities_colors_dim
-	mov	x1, x0
-	mov	x0, x20
-	bl	___rt_str_concat
+	bl	_utilities_logger_docs_output
 	str	x0, [x19]
 	b	L5
 L4:
@@ -300,11 +269,11 @@ _cli_cmd_docs_warn_missing_github_repo:
 	ldr	x0, [x0]
 	cmp	x0, #1
 	beq	L8
-	adrp	x0, _str60@page
-	add	x0, x0, _str60@pageoff
+	adrp	x0, _str55@page
+	add	x0, x0, _str55@pageoff
 	bl	_utilities_logger_warn
-	adrp	x0, _str61@page
-	add	x0, x0, _str61@pageoff
+	adrp	x0, _str56@page
+	add	x0, x0, _str56@pageoff
 	bl	_utilities_logger_hint
 L8:
 	mov	w0, #0
@@ -390,8 +359,8 @@ _cli_cmd_docs_path_to_module:
 	str	x21, [x29, 24]
 	mov	x20, x0
 	mov	x0, x1
-	adrp	x1, _str82@page
-	add	x1, x1, _str82@pageoff
+	adrp	x1, _str77@page
+	add	x1, x1, _str77@pageoff
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x19, x0
@@ -421,8 +390,8 @@ L17:
 	sub	x2, x19, x2
 	bl	_donna_string_slice
 L18:
-	adrp	x1, _str96@page
-	add	x1, x1, _str96@pageoff
+	adrp	x1, _str91@page
+	add	x1, x1, _str91@pageoff
 	mov	x19, x0
 	bl	_donna_string_ends_with
 	mov	x1, x0
@@ -460,8 +429,8 @@ _cli_cmd_docs_read_readme:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, _str107@page
-	add	x1, x1, _str107@pageoff
+	adrp	x1, _str102@page
+	add	x1, x1, _str102@pageoff
 	bl	_donna_files_join
 	mov	x19, x0
 	bl	_donna_files_exists
@@ -469,8 +438,8 @@ _cli_cmd_docs_read_readme:
 	mov	x0, x19
 	cmp	x1, #1
 	beq	L24
-	adrp	x0, _str116@page
-	add	x0, x0, _str116@pageoff
+	adrp	x0, _str111@page
+	add	x0, x0, _str111@pageoff
 	b	L25
 L24:
 	bl	_donna_files_read
@@ -545,8 +514,8 @@ _cli_cmd_docs_collect_entries:
 	cmp	x2, #1
 	beq	L36
 	mov	x24, x1
-	adrp	x1, _str138@page
-	add	x1, x1, _str138@pageoff
+	adrp	x1, _str133@page
+	add	x1, x1, _str133@pageoff
 	bl	_donna_string_ends_with
 	mov	x1, x0
 	mov	x0, x21
@@ -633,8 +602,8 @@ L45:
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, _str171@page
-	add	x1, x1, _str171@pageoff
+	adrp	x1, _str166@page
+	add	x1, x1, _str166@pageoff
 	bl	_strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -660,8 +629,8 @@ L48:
 	ldr	x0, [x0]
 	b	L50
 L49:
-	adrp	x0, _str158@page
-	add	x0, x0, _str158@pageoff
+	adrp	x0, _str153@page
+	add	x0, x0, _str153@pageoff
 L50:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]

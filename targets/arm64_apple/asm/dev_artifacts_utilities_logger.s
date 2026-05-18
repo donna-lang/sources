@@ -119,50 +119,34 @@ _str39:
 .data
 .balign 8
 _str40:
-	.ascii "Cleaning"
+	.ascii "Docs"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str44:
-	.ascii "%s"
-	.byte 10
+	.ascii "Format"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str45:
-	.ascii "Cleaned"
+_str48:
+	.ascii "Running"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str47:
-	.ascii "in "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str52:
-	.ascii "%s"
-	.byte 10
+_str50:
+	.ascii "tests..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str53:
-	.ascii "Checking"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str56:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -170,21 +154,36 @@ _str56:
 
 .data
 .balign 8
-_str57:
-	.ascii "Checked"
+_str54:
+	.ascii "Cleaning"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str58:
+	.ascii "%s"
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str59:
+	.ascii "Cleaned"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str61:
 	.ascii "in "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str64:
+_str66:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -192,7 +191,51 @@ _str64:
 
 .data
 .balign 8
-_str66:
+_str67:
+	.ascii "Checking"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str70:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str71:
+	.ascii "Checked"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str73:
+	.ascii "in "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str78:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str79:
+	.ascii "Check"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str84:
 	.byte 226
 	.byte 134
 	.byte 146
@@ -202,14 +245,14 @@ _str66:
 
 .data
 .balign 8
-_str70:
+_str88:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str75:
+_str93:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -217,21 +260,21 @@ _str75:
 
 .data
 .balign 8
-_str76:
+_str94:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str78:
+_str96:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str81:
+_str99:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -239,21 +282,21 @@ _str81:
 
 .data
 .balign 8
-_str82:
+_str100:
 	.ascii "warning"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str84:
+_str102:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str87:
+_str105:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -261,14 +304,14 @@ _str87:
 
 .data
 .balign 8
-_str88:
+_str106:
 	.ascii "  hint: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str91:
+_str109:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -276,58 +319,14 @@ _str91:
 
 .data
 .balign 8
-_str92:
+_str110:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str95:
-	.ascii "%s"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str102:
-	.ascii "Donna found "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str105:
-	.ascii " error(s) and "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str109:
-	.ascii " warning(s)."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str111:
-	.ascii "%s"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str118:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str119:
+_str113:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -364,77 +363,121 @@ _str129:
 
 .data
 .balign 8
-_str132:
-	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str135:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str155:
+_str136:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str156:
+_str137:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str138:
+	.ascii "Donna found "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str141:
+	.ascii " error(s) and "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str145:
+	.ascii " warning(s)."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str147:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str150:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str153:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str168:
+_str173:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str174:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str186:
 	.ascii "us"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str189:
+_str207:
 	.ascii "0"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str195:
+_str213:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str198:
+_str216:
 	.ascii "ms"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str209:
+_str227:
 	.ascii "0"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str215:
+_str233:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str218:
+_str236:
 	.ascii "s"
 	.byte 0
 /* end data */
@@ -661,8 +704,8 @@ _utilities_logger_docs_ok:
 
 .text
 .balign 4
-.globl _utilities_logger_cleaning
-_utilities_logger_cleaning:
+.globl _utilities_logger_docs_output
+_utilities_logger_docs_output:
 	hint	#34
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
@@ -670,6 +713,88 @@ _utilities_logger_cleaning:
 	mov	x19, x0
 	adrp	x0, _str40@page
 	add	x0, x0, _str40@pageoff
+	bl	_utilities_logger_action
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	bl	_utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function utilities_logger_docs_output */
+
+.text
+.balign 4
+.globl _utilities_logger_format_summary
+_utilities_logger_format_summary:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, _str44@page
+	add	x0, x0, _str44@pageoff
+	bl	_utilities_logger_action
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	bl	_utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function utilities_logger_format_summary */
+
+.text
+.balign 4
+.globl _utilities_logger_running_tests
+_utilities_logger_running_tests:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	adrp	x0, _str48@page
+	add	x0, x0, _str48@pageoff
+	bl	_utilities_logger_action
+	mov	x19, x0
+	adrp	x0, _str50@page
+	add	x0, x0, _str50@pageoff
+	bl	_utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x1, #0
+	add	x1, sp, x1
+	str	x0, [x1]
+	adrp	x0, _str53@page
+	add	x0, x0, _str53@pageoff
+	bl	_printf
+	mov	x0, #16
+	add	sp, sp, x0
+	mov	w0, #0
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function utilities_logger_running_tests */
+
+.text
+.balign 4
+.globl _utilities_logger_cleaning
+_utilities_logger_cleaning:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, _str54@page
+	add	x0, x0, _str54@pageoff
 	bl	_utilities_logger_action
 	mov	x17, x0
 	mov	x0, x19
@@ -683,8 +808,8 @@ _utilities_logger_cleaning:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str44@page
-	add	x0, x0, _str44@pageoff
+	adrp	x0, _str58@page
+	add	x0, x0, _str58@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -703,11 +828,11 @@ _utilities_logger_clean_ok:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, _str45@page
-	add	x0, x0, _str45@pageoff
+	adrp	x0, _str59@page
+	add	x0, x0, _str59@pageoff
 	bl	_utilities_logger_action
-	adrp	x1, _str47@page
-	add	x1, x1, _str47@pageoff
+	adrp	x1, _str61@page
+	add	x1, x1, _str61@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -722,8 +847,8 @@ _utilities_logger_clean_ok:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str52@page
-	add	x0, x0, _str52@pageoff
+	adrp	x0, _str66@page
+	add	x0, x0, _str66@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -742,8 +867,8 @@ _utilities_logger_checking:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, _str53@page
-	add	x0, x0, _str53@pageoff
+	adrp	x0, _str67@page
+	add	x0, x0, _str67@pageoff
 	bl	_utilities_logger_action
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -752,8 +877,8 @@ _utilities_logger_checking:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str56@page
-	add	x0, x0, _str56@pageoff
+	adrp	x0, _str70@page
+	add	x0, x0, _str70@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -772,11 +897,11 @@ _utilities_logger_check_ok:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, _str57@page
-	add	x0, x0, _str57@pageoff
+	adrp	x0, _str71@page
+	add	x0, x0, _str71@pageoff
 	bl	_utilities_logger_action
-	adrp	x1, _str59@page
-	add	x1, x1, _str59@pageoff
+	adrp	x1, _str73@page
+	add	x1, x1, _str73@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -791,8 +916,8 @@ _utilities_logger_check_ok:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str64@page
-	add	x0, x0, _str64@pageoff
+	adrp	x0, _str78@page
+	add	x0, x0, _str78@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -801,6 +926,30 @@ _utilities_logger_check_ok:
 	ldp	x29, x30, [sp], 32
 	ret
 /* end function utilities_logger_check_ok */
+
+.text
+.balign 4
+.globl _utilities_logger_check_success
+_utilities_logger_check_success:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, _str79@page
+	add	x0, x0, _str79@pageoff
+	bl	_utilities_logger_action
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	bl	_utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	___rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+/* end function utilities_logger_check_success */
 
 .text
 .balign 4
@@ -814,8 +963,8 @@ _utilities_logger_success:
 	mov	x19, x2
 	mov	x20, x1
 	bl	_utilities_logger_action
-	adrp	x1, _str66@page
-	add	x1, x1, _str66@pageoff
+	adrp	x1, _str84@page
+	add	x1, x1, _str84@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -831,8 +980,8 @@ _utilities_logger_success:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str70@page
-	add	x0, x0, _str70@pageoff
+	adrp	x0, _str88@page
+	add	x0, x0, _str88@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_dim
 	mov	x1, x0
@@ -843,8 +992,8 @@ _utilities_logger_success:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str75@page
-	add	x0, x0, _str75@pageoff
+	adrp	x0, _str93@page
+	add	x0, x0, _str93@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -864,13 +1013,13 @@ _utilities_logger_error:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, _str76@page
-	add	x0, x0, _str76@pageoff
+	adrp	x0, _str94@page
+	add	x0, x0, _str94@pageoff
 	bl	_utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str78@page
-	add	x1, x1, _str78@pageoff
+	adrp	x1, _str96@page
+	add	x1, x1, _str96@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -879,8 +1028,8 @@ _utilities_logger_error:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str81@page
-	add	x0, x0, _str81@pageoff
+	adrp	x0, _str99@page
+	add	x0, x0, _str99@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -899,13 +1048,13 @@ _utilities_logger_warn:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, _str82@page
-	add	x0, x0, _str82@pageoff
+	adrp	x0, _str100@page
+	add	x0, x0, _str100@pageoff
 	bl	_utilities_colors_yellow
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str84@page
-	add	x1, x1, _str84@pageoff
+	adrp	x1, _str102@page
+	add	x1, x1, _str102@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -914,8 +1063,8 @@ _utilities_logger_warn:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str87@page
-	add	x0, x0, _str87@pageoff
+	adrp	x0, _str105@page
+	add	x0, x0, _str105@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -933,8 +1082,8 @@ _utilities_logger_hint:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	mov	x1, x0
-	adrp	x0, _str88@page
-	add	x0, x0, _str88@pageoff
+	adrp	x0, _str106@page
+	add	x0, x0, _str106@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_dim
 	mov	x1, #16
@@ -942,8 +1091,8 @@ _utilities_logger_hint:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str91@page
-	add	x0, x0, _str91@pageoff
+	adrp	x0, _str109@page
+	add	x0, x0, _str109@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -960,8 +1109,8 @@ _utilities_logger_info:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	mov	x1, x0
-	adrp	x0, _str92@page
-	add	x0, x0, _str92@pageoff
+	adrp	x0, _str110@page
+	add	x0, x0, _str110@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_dim
 	mov	x1, #16
@@ -969,8 +1118,8 @@ _utilities_logger_info:
 	mov	x1, #0
 	add	x1, sp, x1
 	str	x0, [x1]
-	adrp	x0, _str95@page
-	add	x0, x0, _str95@pageoff
+	adrp	x0, _str113@page
+	add	x0, x0, _str113@pageoff
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
@@ -992,23 +1141,23 @@ _utilities_logger_summary:
 	cmp	x0, #0
 	cset	x1, eq
 	cmp	x1, #0
-	beq	L34
+	beq	L42
 	cmp	x20, #0
 	cset	x1, eq
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L33
+	beq	L41
 	bl	_donna_int_to_string
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, _str120@page
-	add	x0, x0, _str120@pageoff
+	adrp	x0, _str138@page
+	add	x0, x0, _str138@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str123@page
-	add	x1, x1, _str123@pageoff
+	adrp	x1, _str141@page
+	add	x1, x1, _str141@pageoff
 	bl	___rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -1016,6 +1165,57 @@ _utilities_logger_summary:
 	bl	_donna_int_to_string
 	mov	x1, x0
 	mov	x0, x20
+	bl	___rt_str_concat
+	adrp	x1, _str145@page
+	add	x1, x1, _str145@pageoff
+	bl	___rt_str_concat
+	mov	x1, #16
+	sub	sp, sp, x1
+	mov	x1, #0
+	add	x1, sp, x1
+	str	x0, [x1]
+	adrp	x0, _str147@page
+	add	x0, x0, _str147@pageoff
+	bl	_printf
+	mov	x0, #16
+	add	sp, sp, x0
+	mov	x0, #0
+	str	x0, [x19]
+	b	L44
+L41:
+	mov	x0, #16
+	sub	sp, sp, x0
+	mov	x0, #0
+	add	x1, sp, x0
+	adrp	x0, _str136@page
+	add	x0, x0, _str136@pageoff
+	str	x0, [x1]
+	adrp	x0, _str137@page
+	add	x0, x0, _str137@pageoff
+	bl	_printf
+	mov	x0, #16
+	add	sp, sp, x0
+	mov	x0, #0
+	str	x0, [x19]
+	b	L44
+L42:
+	mov	x19, x20
+	bl	_donna_int_to_string
+	mov	x1, x0
+	mov	x0, x19
+	mov	x19, x0
+	adrp	x0, _str120@page
+	add	x0, x0, _str120@pageoff
+	bl	___rt_str_concat
+	adrp	x1, _str123@page
+	add	x1, x1, _str123@pageoff
+	bl	___rt_str_concat
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	bl	_donna_int_to_string
+	mov	x1, x0
+	mov	x0, x19
 	bl	___rt_str_concat
 	adrp	x1, _str127@page
 	add	x1, x1, _str127@pageoff
@@ -1030,58 +1230,7 @@ _utilities_logger_summary:
 	bl	_printf
 	mov	x0, #16
 	add	sp, sp, x0
-	mov	x0, #0
-	str	x0, [x19]
-	b	L36
-L33:
-	mov	x0, #16
-	sub	sp, sp, x0
-	mov	x0, #0
-	add	x1, sp, x0
-	adrp	x0, _str118@page
-	add	x0, x0, _str118@pageoff
-	str	x0, [x1]
-	adrp	x0, _str119@page
-	add	x0, x0, _str119@pageoff
-	bl	_printf
-	mov	x0, #16
-	add	sp, sp, x0
-	mov	x0, #0
-	str	x0, [x19]
-	b	L36
-L34:
-	mov	x19, x20
-	bl	_donna_int_to_string
-	mov	x1, x0
-	mov	x0, x19
-	mov	x19, x0
-	adrp	x0, _str102@page
-	add	x0, x0, _str102@pageoff
-	bl	___rt_str_concat
-	adrp	x1, _str105@page
-	add	x1, x1, _str105@pageoff
-	bl	___rt_str_concat
-	mov	x17, x0
-	mov	x0, x19
-	mov	x19, x17
-	bl	_donna_int_to_string
-	mov	x1, x0
-	mov	x0, x19
-	bl	___rt_str_concat
-	adrp	x1, _str109@page
-	add	x1, x1, _str109@pageoff
-	bl	___rt_str_concat
-	mov	x1, #16
-	sub	sp, sp, x1
-	mov	x1, #0
-	add	x1, sp, x1
-	str	x0, [x1]
-	adrp	x0, _str111@page
-	add	x0, x0, _str111@pageoff
-	bl	_printf
-	mov	x0, #16
-	add	sp, sp, x0
-L36:
+L44:
 	mov	w0, #0
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1099,11 +1248,11 @@ _utilities_logger_action:
 	mov	x1, #10
 	bl	_utilities_logger_pad_left
 	mov	x1, x0
-	adrp	x0, _str132@page
-	add	x0, x0, _str132@pageoff
+	adrp	x0, _str150@page
+	add	x0, x0, _str150@pageoff
 	bl	___rt_str_concat
-	adrp	x1, _str135@page
-	add	x1, x1, _str135@pageoff
+	adrp	x1, _str153@page
+	add	x1, x1, _str153@pageoff
 	bl	___rt_str_concat
 	bl	_utilities_colors_orange
 	ldp	x29, x30, [sp], 16
@@ -1125,15 +1274,15 @@ _utilities_logger_pad_left:
 	cmp	x0, x1
 	cset	x2, ge
 	cmp	x2, #1
-	beq	L42
+	beq	L50
 	sub	x0, x1, x0
 	bl	_utilities_logger_repeat_spaces
 	mov	x1, x19
 	bl	___rt_str_concat
-	b	L43
-L42:
+	b	L51
+L50:
 	mov	x0, x19
-L43:
+L51:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -1149,19 +1298,19 @@ _utilities_logger_repeat_spaces:
 	cmp	x0, #0
 	cset	x1, le
 	cmp	x1, #1
-	beq	L46
+	beq	L54
 	mov	x1, #1
 	sub	x0, x0, x1
 	bl	_utilities_logger_repeat_spaces
 	mov	x1, x0
-	adrp	x0, _str156@page
-	add	x0, x0, _str156@pageoff
+	adrp	x0, _str174@page
+	add	x0, x0, _str174@pageoff
 	bl	___rt_str_concat
-	b	L47
-L46:
-	adrp	x0, _str155@page
-	add	x0, x0, _str155@pageoff
-L47:
+	b	L55
+L54:
+	adrp	x0, _str173@page
+	add	x0, x0, _str173@pageoff
+L55:
 	ldp	x29, x30, [sp], 16
 	ret
 /* end function utilities_logger_repeat_spaces */
@@ -1176,7 +1325,7 @@ _utilities_logger_format_duration:
 	cmp	x0, #1000
 	cset	x1, lt
 	cmp	x1, #1
-	beq	L52
+	beq	L60
 	mov	x1, #16960
 	movk	x1, #0xf, lsl #16
 	cmp	x0, x1
@@ -1185,20 +1334,20 @@ _utilities_logger_format_duration:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	L51
+	beq	L59
 	bl	_utilities_logger_format_seconds
 	str	x0, [x19]
-	b	L53
-L51:
+	b	L61
+L59:
 	bl	_utilities_logger_format_ms
 	str	x0, [x19]
-	b	L53
-L52:
+	b	L61
+L60:
 	bl	_donna_int_to_string
-	adrp	x1, _str168@page
-	add	x1, x1, _str168@pageoff
+	adrp	x1, _str186@page
+	add	x1, x1, _str186@pageoff
 	bl	___rt_str_concat
-L53:
+L61:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -1222,33 +1371,33 @@ _utilities_logger_format_ms:
 	cmp	x0, #10
 	cset	x1, lt
 	cmp	x1, #1
-	beq	L57
+	beq	L65
 	bl	_donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
-	b	L58
-L57:
+	b	L66
+L65:
 	bl	_donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str189@page
-	add	x0, x0, _str189@pageoff
+	adrp	x0, _str207@page
+	add	x0, x0, _str207@pageoff
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x0, x19
-L58:
+L66:
 	mov	x19, x1
 	bl	_donna_int_to_string
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str195@page
-	add	x1, x1, _str195@pageoff
+	adrp	x1, _str213@page
+	add	x1, x1, _str213@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
-	adrp	x1, _str198@page
-	add	x1, x1, _str198@pageoff
+	adrp	x1, _str216@page
+	add	x1, x1, _str216@pageoff
 	bl	___rt_str_concat
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
@@ -1274,33 +1423,33 @@ _utilities_logger_format_seconds:
 	cmp	x0, #10
 	cset	x1, lt
 	cmp	x1, #1
-	beq	L63
+	beq	L71
 	bl	_donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
-	b	L64
-L63:
+	b	L72
+L71:
 	bl	_donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, _str209@page
-	add	x0, x0, _str209@pageoff
+	adrp	x0, _str227@page
+	add	x0, x0, _str227@pageoff
 	bl	___rt_str_concat
 	mov	x1, x0
 	mov	x0, x19
-L64:
+L72:
 	mov	x19, x1
 	bl	_donna_int_to_string
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, _str215@page
-	add	x1, x1, _str215@pageoff
+	adrp	x1, _str233@page
+	add	x1, x1, _str233@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
-	adrp	x1, _str218@page
-	add	x1, x1, _str218@pageoff
+	adrp	x1, _str236@page
+	add	x1, x1, _str236@pageoff
 	bl	___rt_str_concat
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32

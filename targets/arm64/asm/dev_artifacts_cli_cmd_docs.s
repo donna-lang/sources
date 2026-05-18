@@ -48,32 +48,14 @@ str39:
 
 .data
 .balign 8
-str44:
-	.ascii "  Docs"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str46:
-	.ascii " "
-	.byte 226
-	.byte 134
-	.byte 146
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str60:
+str55:
 	.ascii "could not derive GitHub owner/repo from donna.toml"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str61:
+str56:
 	.ascii "set `repository = { type = "
 	.byte 34
 	.ascii "github"
@@ -92,49 +74,49 @@ str61:
 
 .data
 .balign 8
-str82:
+str77:
 	.ascii "/"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str96:
+str91:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str107:
+str102:
 	.ascii "README.md"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str116:
+str111:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str138:
+str133:
 	.ascii ".donna"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str158:
+str153:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str171:
+str166:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -247,20 +229,7 @@ cli_cmd_docs_run:
 	mov	x0, x21
 	bl	cli_cmd_docs_warn_missing_github_repo
 	mov	x0, x20
-	mov	x20, x0
-	adrp	x0, str44
-	add	x0, x0, #:lo12:str44
-	bl	utilities_colors_orange
-	adrp	x1, str46
-	add	x1, x1, #:lo12:str46
-	bl	__rt_str_concat
-	mov	x17, x0
-	mov	x0, x20
-	mov	x20, x17
-	bl	utilities_colors_dim
-	mov	x1, x0
-	mov	x0, x20
-	bl	__rt_str_concat
+	bl	utilities_logger_docs_output
 	str	x0, [x19]
 	b	.L5
 .L4:
@@ -302,11 +271,11 @@ cli_cmd_docs_warn_missing_github_repo:
 	ldr	x0, [x0]
 	cmp	x0, #1
 	beq	.L8
-	adrp	x0, str60
-	add	x0, x0, #:lo12:str60
+	adrp	x0, str55
+	add	x0, x0, #:lo12:str55
 	bl	utilities_logger_warn
-	adrp	x0, str61
-	add	x0, x0, #:lo12:str61
+	adrp	x0, str56
+	add	x0, x0, #:lo12:str56
 	bl	utilities_logger_hint
 .L8:
 	mov	w0, #0
@@ -396,8 +365,8 @@ cli_cmd_docs_path_to_module:
 	str	x21, [x29, 24]
 	mov	x20, x0
 	mov	x0, x1
-	adrp	x1, str82
-	add	x1, x1, #:lo12:str82
+	adrp	x1, str77
+	add	x1, x1, #:lo12:str77
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x19, x0
@@ -427,8 +396,8 @@ cli_cmd_docs_path_to_module:
 	sub	x2, x19, x2
 	bl	donna_string_slice
 .L18:
-	adrp	x1, str96
-	add	x1, x1, #:lo12:str96
+	adrp	x1, str91
+	add	x1, x1, #:lo12:str91
 	mov	x19, x0
 	bl	donna_string_ends_with
 	mov	x1, x0
@@ -468,8 +437,8 @@ cli_cmd_docs_read_readme:
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
 	str	x19, [x29, 24]
-	adrp	x1, str107
-	add	x1, x1, #:lo12:str107
+	adrp	x1, str102
+	add	x1, x1, #:lo12:str102
 	bl	donna_files_join
 	mov	x19, x0
 	bl	donna_files_exists
@@ -477,8 +446,8 @@ cli_cmd_docs_read_readme:
 	mov	x0, x19
 	cmp	x1, #1
 	beq	.L24
-	adrp	x0, str116
-	add	x0, x0, #:lo12:str116
+	adrp	x0, str111
+	add	x0, x0, #:lo12:str111
 	b	.L25
 .L24:
 	bl	donna_files_read
@@ -557,8 +526,8 @@ cli_cmd_docs_collect_entries:
 	cmp	x2, #1
 	beq	.L36
 	mov	x24, x1
-	adrp	x1, str138
-	add	x1, x1, #:lo12:str138
+	adrp	x1, str133
+	add	x1, x1, #:lo12:str133
 	bl	donna_string_ends_with
 	mov	x1, x0
 	mov	x0, x21
@@ -647,8 +616,8 @@ cli_cmd_docs_first_positional:
 	add	x0, x20, x0
 	ldr	x0, [x0]
 	ldr	x0, [x0]
-	adrp	x1, str171
-	add	x1, x1, #:lo12:str171
+	adrp	x1, str166
+	add	x1, x1, #:lo12:str166
 	bl	strcmp
 	mov	x1, x0
 	mov	x0, x20
@@ -674,8 +643,8 @@ cli_cmd_docs_first_positional:
 	ldr	x0, [x0]
 	b	.L50
 .L49:
-	adrp	x0, str158
-	add	x0, x0, #:lo12:str158
+	adrp	x0, str153
+	add	x0, x0, #:lo12:str153
 .L50:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]

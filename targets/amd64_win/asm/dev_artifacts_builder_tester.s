@@ -1734,19 +1734,17 @@ builder_tester_generate_filtered_runner:
 	pushq %rsi
 	pushq %rdi
 	subq $32, %rsp
-	movq %rcx, %rsi
-	callq builder_tester_filter_test_modules
-	movq %rsi, %rcx
-	movq %rax, %rdi
+	callq builder_tester_select_test_modules
+	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	movq %rdi, %rcx
 	callq builder_tester_count_total
 	movq %rsi, %rcx
 	movq %rax, %rsi
 	subq $-32, %rsp
 	subq $32, %rsp
+	movq %rcx, %rdi
 	callq builder_tester_gen_imports
 	movq %rdi, %rcx
 	movq %rax, %rdi
@@ -2435,7 +2433,8 @@ builder_tester_generate_filtered_runner:
 
 .text
 .balign 16
-builder_tester_filter_test_modules:
+.globl builder_tester_select_test_modules
+builder_tester_select_test_modules:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
@@ -2451,7 +2450,7 @@ builder_tester_filter_test_modules:
 Lbb58:
 	leave
 	ret
-/* end function builder_tester_filter_test_modules */
+/* end function builder_tester_select_test_modules */
 
 .text
 .balign 16

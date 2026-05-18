@@ -235,692 +235,811 @@ _str108:
 .data
 .balign 8
 _str110:
-	.ascii "docs"
+	.ascii "deps"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str111:
-	.ascii "Generate HTML documentation"
+	.ascii "Manage package dependencies"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str113:
-	.ascii "format"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str114:
-	.ascii "Format source files (alias: fmt)"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str116:
-	.ascii "new"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str117:
-	.ascii "Create a new project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str119:
-	.ascii "run"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str120:
-	.ascii "Build and run the project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str122:
-	.ascii "test"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str123:
-	.ascii "Run the project tests"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str125:
-	.ascii "version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str126:
-	.ascii "Print the compiler version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str128:
-	.ascii "help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str129:
-	.ascii "Show help for Donna or a command"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str161:
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str163:
-	.ascii "build"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str164:
-	.ascii "Build the project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str165:
-	.ascii "donna build [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str166:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str167:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str174:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str175:
-	.ascii "Build another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str183:
-	.ascii "check"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str184:
-	.ascii "Type check the project entry module"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str185:
-	.ascii "donna check [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str186:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str187:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str194:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str195:
-	.ascii "Check another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str203:
-	.ascii "clean"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str204:
-	.ascii "Delete generated files"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str205:
-	.ascii "donna clean [DIR] [--docs] [--lock] [--all]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str206:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str207:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str214:
-	.ascii "--all"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str215:
-	.ascii "Delete build/, docs/, and donna.lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str222:
-	.ascii "--lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str223:
-	.ascii "Also delete donna.lock"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str230:
-	.ascii "--docs"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str231:
-	.ascii "Also delete generated docs/"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str238:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str239:
-	.ascii "Clean another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str247:
 	.ascii "docs"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str248:
+_str114:
 	.ascii "Generate HTML documentation"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str249:
-	.ascii "donna docs [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str250:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str251:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str258:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str259:
-	.ascii "Generate docs for another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str267:
+_str116:
 	.ascii "format"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str268:
-	.ascii "Format Donna source files"
+_str117:
+	.ascii "Format source files (alias: fmt)"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str269:
-	.ascii "donna format [DIR|FILE]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str270:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str271:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str278:
-	.ascii "FILE"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str279:
-	.ascii "Format one .donna file"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str286:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str287:
-	.ascii "Format all .donna files in a project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str295:
+_str119:
 	.ascii "new"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str296:
-	.ascii "Create a new Donna project"
+_str120:
+	.ascii "Create a new project"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str297:
-	.ascii "donna new <NAME>"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str298:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str299:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str306:
-	.ascii "NAME"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str307:
-	.ascii "Directory and package name for the new project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str315:
+_str122:
 	.ascii "run"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str316:
-	.ascii "Build and run an application project"
+_str123:
+	.ascii "Build and run the project"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str317:
-	.ascii "donna run [DIR]"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str318:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str319:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str326:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str327:
-	.ascii "Run another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str335:
+_str125:
 	.ascii "test"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str336:
+_str126:
 	.ascii "Run the project tests"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str337:
-	.ascii "donna test [DIR] [FILTER] | donna test --only FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str338:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str339:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str346:
-	.ascii "DIR"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str347:
-	.ascii "Run tests in another project directory"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str354:
-	.ascii "FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str355:
-	.ascii "Run matching tests in the current project"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str362:
-	.ascii "--only FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str363:
-	.ascii "Run tests whose module or function name contains FILTER"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str371:
+_str128:
 	.ascii "version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str372:
+_str129:
 	.ascii "Print the compiler version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str373:
-	.ascii "donna version"
+_str131:
+	.ascii "help"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str374:
-	.ascii "-h, --help"
+_str132:
+	.ascii "Show help for Donna or a command"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str375:
-	.ascii "Show this help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str382:
-	.ascii "-V, --version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str383:
-	.ascii "Print version from the top-level command"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str391:
-	.ascii "-h, --help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str392:
-	.ascii "Print help"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str397:
-	.ascii "-V, --version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str398:
-	.ascii "Print version"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-_str409:
+_str167:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str411:
-	.ascii "  "
+_str169:
+	.ascii "build"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str422:
-	.ascii "  "
+_str170:
+	.ascii "Build the project"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-_str438:
-	.ascii " "
+_str171:
+	.ascii "donna build [DIR] [--release] [--target TARGET]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str172:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str173:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str180:
+	.ascii "--target TARGET"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str181:
+	.ascii "Release target name, or all"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str188:
+	.ascii "--release"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str189:
+	.ascii "Build optimized output under build/release/target/<target>/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str196:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str197:
+	.ascii "Build another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str205:
+	.ascii "check"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str206:
+	.ascii "Type check the project entry module"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str207:
+	.ascii "donna check [DIR]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str208:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str209:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str216:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str217:
+	.ascii "Check another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str225:
+	.ascii "clean"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str226:
+	.ascii "Delete generated files"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str227:
+	.ascii "donna clean [DIR] [--docs] [--lock] [--all]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str228:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str229:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str236:
+	.ascii "--all"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str237:
+	.ascii "Delete build/, docs/, and donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str244:
+	.ascii "--lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str245:
+	.ascii "Also delete donna.lock"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str252:
+	.ascii "--docs"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str253:
+	.ascii "Also delete generated docs/"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str260:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str261:
+	.ascii "Clean another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str269:
+	.ascii "deps"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str270:
+	.ascii "Manage package dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str271:
+	.ascii "donna deps <COMMAND>"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str272:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str273:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str280:
+	.ascii "tree"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str281:
+	.ascii "Show resolved dependencies"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str288:
+	.ascii "update [NAME]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str289:
+	.ascii "Refresh all dependencies or one dependency"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str296:
+	.ascii "clean [NAME]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str297:
+	.ascii "Remove all cached packages or one cached package"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str305:
+	.ascii "docs"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str306:
+	.ascii "Generate HTML documentation"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str307:
+	.ascii "donna docs [DIR]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str308:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str309:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str316:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str317:
+	.ascii "Generate docs for another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str325:
+	.ascii "format"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str326:
+	.ascii "Format Donna source files"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str327:
+	.ascii "donna format [DIR|FILE]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str328:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str329:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str336:
+	.ascii "FILE"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str337:
+	.ascii "Format one .donna file"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str344:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str345:
+	.ascii "Format all .donna files in a project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str353:
+	.ascii "new"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str354:
+	.ascii "Create a new Donna project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str355:
+	.ascii "donna new <NAME>"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str356:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str357:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str364:
+	.ascii "NAME"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str365:
+	.ascii "Directory and package name for the new project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str373:
+	.ascii "run"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str374:
+	.ascii "Build and run an application project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str375:
+	.ascii "donna run [DIR]"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str376:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str377:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str384:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str385:
+	.ascii "Run another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str393:
+	.ascii "test"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str394:
+	.ascii "Run the project tests"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str395:
+	.ascii "donna test [DIR] [FILTER] | donna test --only FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str396:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str397:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str404:
+	.ascii "DIR"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str405:
+	.ascii "Run tests in another project directory"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str412:
+	.ascii "FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str413:
+	.ascii "Run matching tests in the current project"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str420:
+	.ascii "--only FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str421:
+	.ascii "Run tests whose module or function name contains FILTER"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str429:
+	.ascii "version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str430:
+	.ascii "Print the compiler version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str431:
+	.ascii "donna version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str432:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str433:
+	.ascii "Show this help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str440:
+	.ascii "-V, --version"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 _str441:
+	.ascii "Print version from the top-level command"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str449:
+	.ascii "-h, --help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str450:
+	.ascii "Print help"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str455:
+	.ascii "-V, --version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str456:
+	.ascii "Print version"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str467:
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str469:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str480:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str496:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+_str499:
 	.ascii "  "
 	.byte 0
 /* end data */
@@ -1253,17 +1372,17 @@ L5:
 .balign 4
 _cli_help_commands_block:
 	hint	#34
-	stp	x29, x30, [sp, -112]!
+	stp	x29, x30, [sp, -128]!
 	mov	x29, sp
-	str	x19, [x29, 104]
-	str	x20, [x29, 96]
-	str	x21, [x29, 88]
-	str	x22, [x29, 80]
-	str	x23, [x29, 72]
-	str	x24, [x29, 64]
-	str	x25, [x29, 56]
-	str	x26, [x29, 48]
-	str	x27, [x29, 40]
+	str	x19, [x29, 120]
+	str	x20, [x29, 112]
+	str	x21, [x29, 104]
+	str	x22, [x29, 96]
+	str	x23, [x29, 88]
+	str	x24, [x29, 80]
+	str	x25, [x29, 72]
+	str	x26, [x29, 64]
+	str	x27, [x29, 56]
 	adrp	x1, _str102@page
 	add	x1, x1, _str102@pageoff
 	adrp	x0, _str101@page
@@ -1323,20 +1442,38 @@ _cli_help_commands_block:
 	adrp	x0, _str128@page
 	add	x0, x0, _str128@pageoff
 	bl	_cli_help_command_row
-	mov	x21, x0
+	str	x0, [x29, 32]
+	adrp	x1, _str132@page
+	add	x1, x1, _str132@pageoff
+	adrp	x0, _str131@page
+	add	x0, x0, _str131@pageoff
+	bl	_cli_help_command_row
+	mov	x19, x0
 	mov	x0, #24
 	bl	_malloc
-	mov	x19, x0
+	mov	x21, x0
 	mov	x0, #1
-	str	x0, [x19]
+	str	x0, [x21]
 	mov	x0, #8
-	add	x0, x19, x0
-	str	x21, [x0]
+	add	x0, x21, x0
+	str	x19, [x0]
 	mov	x0, #16
-	add	x1, x19, x0
+	add	x1, x21, x0
 	adrp	x0, _donna_nil@page
 	add	x0, x0, _donna_nil@pageoff
 	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
+	mov	x19, x0
+	ldr	x0, [x29, 32]
+	mov	x1, #1
+	str	x1, [x19]
+	mov	x1, #8
+	add	x1, x19, x1
+	str	x0, [x1]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x21, [x0]
 	mov	x0, #24
 	bl	_malloc
 	mov	x21, x0
@@ -1437,19 +1574,19 @@ _cli_help_commands_block:
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x19, [x1]
-	adrp	x1, _str161@page
-	add	x1, x1, _str161@pageoff
+	adrp	x1, _str167@page
+	add	x1, x1, _str167@pageoff
 	bl	_donna_string_join
-	ldr	x19, [x29, 104]
-	ldr	x20, [x29, 96]
-	ldr	x21, [x29, 88]
-	ldr	x22, [x29, 80]
-	ldr	x23, [x29, 72]
-	ldr	x24, [x29, 64]
-	ldr	x25, [x29, 56]
-	ldr	x26, [x29, 48]
-	ldr	x27, [x29, 40]
-	ldp	x29, x30, [sp], 112
+	ldr	x19, [x29, 120]
+	ldr	x20, [x29, 112]
+	ldr	x21, [x29, 104]
+	ldr	x22, [x29, 96]
+	ldr	x23, [x29, 88]
+	ldr	x24, [x29, 80]
+	ldr	x25, [x29, 72]
+	ldr	x26, [x29, 64]
+	ldr	x27, [x29, 56]
+	ldp	x29, x30, [sp], 128
 	ret
 /* end function cli_help_commands_block */
 
@@ -1458,20 +1595,21 @@ _cli_help_commands_block:
 .globl _cli_help_build_help
 _cli_help_build_help:
 	hint	#34
-	stp	x29, x30, [sp, -32]!
+	stp	x29, x30, [sp, -48]!
 	mov	x29, sp
-	str	x19, [x29, 24]
-	str	x20, [x29, 16]
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str166@page
-	add	x0, x0, _str166@pageoff
+	adrp	x0, _str172@page
+	add	x0, x0, _str172@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str167@page
-	add	x0, x0, _str167@pageoff
+	adrp	x0, _str173@page
+	add	x0, x0, _str173@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1488,14 +1626,58 @@ _cli_help_build_help:
 	str	x0, [x1]
 	mov	x0, #16
 	bl	_malloc
+	mov	x21, x0
+	adrp	x0, _str180@page
+	add	x0, x0, _str180@pageoff
+	str	x0, [x21]
+	mov	x0, #8
+	add	x1, x21, x0
+	adrp	x0, _str181@page
+	add	x0, x0, _str181@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str174@page
-	add	x0, x0, _str174@pageoff
+	mov	x0, #1
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x19, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x21, x0
+	adrp	x0, _str188@page
+	add	x0, x0, _str188@pageoff
+	str	x0, [x21]
+	mov	x0, #8
+	add	x1, x21, x0
+	adrp	x0, _str189@page
+	add	x0, x0, _str189@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
+	mov	x19, x0
+	mov	x0, #1
+	str	x0, [x19]
+	mov	x0, #8
+	add	x0, x19, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x20, x0
+	adrp	x0, _str196@page
+	add	x0, x0, _str196@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str175@page
-	add	x0, x0, _str175@pageoff
+	adrp	x0, _str197@page
+	add	x0, x0, _str197@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1508,16 +1690,17 @@ _cli_help_build_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str165@page
-	add	x2, x2, _str165@pageoff
-	adrp	x1, _str164@page
-	add	x1, x1, _str164@pageoff
-	adrp	x0, _str163@page
-	add	x0, x0, _str163@pageoff
+	adrp	x2, _str171@page
+	add	x2, x2, _str171@pageoff
+	adrp	x1, _str170@page
+	add	x1, x1, _str170@pageoff
+	adrp	x0, _str169@page
+	add	x0, x0, _str169@pageoff
 	bl	_cli_help_command_help
-	ldr	x19, [x29, 24]
-	ldr	x20, [x29, 16]
-	ldp	x29, x30, [sp], 32
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
 	ret
 /* end function cli_help_build_help */
 
@@ -1533,13 +1716,13 @@ _cli_help_check_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str186@page
-	add	x0, x0, _str186@pageoff
+	adrp	x0, _str208@page
+	add	x0, x0, _str208@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str187@page
-	add	x0, x0, _str187@pageoff
+	adrp	x0, _str209@page
+	add	x0, x0, _str209@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1557,13 +1740,13 @@ _cli_help_check_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str194@page
-	add	x0, x0, _str194@pageoff
+	adrp	x0, _str216@page
+	add	x0, x0, _str216@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str195@page
-	add	x0, x0, _str195@pageoff
+	adrp	x0, _str217@page
+	add	x0, x0, _str217@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1576,12 +1759,12 @@ _cli_help_check_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str185@page
-	add	x2, x2, _str185@pageoff
-	adrp	x1, _str184@page
-	add	x1, x1, _str184@pageoff
-	adrp	x0, _str183@page
-	add	x0, x0, _str183@pageoff
+	adrp	x2, _str207@page
+	add	x2, x2, _str207@pageoff
+	adrp	x1, _str206@page
+	add	x1, x1, _str206@pageoff
+	adrp	x0, _str205@page
+	add	x0, x0, _str205@pageoff
 	bl	_cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1602,13 +1785,13 @@ _cli_help_clean_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x19, x0
-	adrp	x0, _str206@page
-	add	x0, x0, _str206@pageoff
+	adrp	x0, _str228@page
+	add	x0, x0, _str228@pageoff
 	str	x0, [x19]
 	mov	x0, #8
 	add	x1, x19, x0
-	adrp	x0, _str207@page
-	add	x0, x0, _str207@pageoff
+	adrp	x0, _str229@page
+	add	x0, x0, _str229@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1626,13 +1809,13 @@ _cli_help_clean_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x21, x0
-	adrp	x0, _str214@page
-	add	x0, x0, _str214@pageoff
+	adrp	x0, _str236@page
+	add	x0, x0, _str236@pageoff
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, _str215@page
-	add	x0, x0, _str215@pageoff
+	adrp	x0, _str237@page
+	add	x0, x0, _str237@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1648,13 +1831,13 @@ _cli_help_clean_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x21, x0
-	adrp	x0, _str222@page
-	add	x0, x0, _str222@pageoff
+	adrp	x0, _str244@page
+	add	x0, x0, _str244@pageoff
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, _str223@page
-	add	x0, x0, _str223@pageoff
+	adrp	x0, _str245@page
+	add	x0, x0, _str245@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1670,13 +1853,13 @@ _cli_help_clean_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x21, x0
-	adrp	x0, _str230@page
-	add	x0, x0, _str230@pageoff
+	adrp	x0, _str252@page
+	add	x0, x0, _str252@pageoff
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, _str231@page
-	add	x0, x0, _str231@pageoff
+	adrp	x0, _str253@page
+	add	x0, x0, _str253@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1692,13 +1875,13 @@ _cli_help_clean_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str238@page
-	add	x0, x0, _str238@pageoff
+	adrp	x0, _str260@page
+	add	x0, x0, _str260@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str239@page
-	add	x0, x0, _str239@pageoff
+	adrp	x0, _str261@page
+	add	x0, x0, _str261@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1711,12 +1894,12 @@ _cli_help_clean_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str205@page
-	add	x2, x2, _str205@pageoff
-	adrp	x1, _str204@page
-	add	x1, x1, _str204@pageoff
-	adrp	x0, _str203@page
-	add	x0, x0, _str203@pageoff
+	adrp	x2, _str227@page
+	add	x2, x2, _str227@pageoff
+	adrp	x1, _str226@page
+	add	x1, x1, _str226@pageoff
+	adrp	x0, _str225@page
+	add	x0, x0, _str225@pageoff
 	bl	_cli_help_command_help
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -1724,6 +1907,120 @@ _cli_help_clean_help:
 	ldp	x29, x30, [sp], 48
 	ret
 /* end function cli_help_clean_help */
+
+.text
+.balign 4
+.globl _cli_help_deps_help
+_cli_help_deps_help:
+	hint	#34
+	stp	x29, x30, [sp, -48]!
+	mov	x29, sp
+	str	x19, [x29, 40]
+	str	x20, [x29, 32]
+	str	x21, [x29, 24]
+	mov	x0, #16
+	bl	_malloc
+	mov	x20, x0
+	adrp	x0, _str272@page
+	add	x0, x0, _str272@pageoff
+	str	x0, [x20]
+	mov	x0, #8
+	add	x1, x20, x0
+	adrp	x0, _str273@page
+	add	x0, x0, _str273@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
+	mov	x19, x0
+	mov	x0, #1
+	str	x0, [x19]
+	mov	x0, #8
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	add	x1, x19, x0
+	adrp	x0, _donna_nil@page
+	add	x0, x0, _donna_nil@pageoff
+	str	x0, [x1]
+	mov	x0, #16
+	bl	_malloc
+	mov	x21, x0
+	adrp	x0, _str280@page
+	add	x0, x0, _str280@pageoff
+	str	x0, [x21]
+	mov	x0, #8
+	add	x1, x21, x0
+	adrp	x0, _str281@page
+	add	x0, x0, _str281@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
+	mov	x20, x0
+	mov	x0, #1
+	str	x0, [x20]
+	mov	x0, #8
+	add	x0, x20, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x0, x20, x0
+	str	x19, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x21, x0
+	adrp	x0, _str288@page
+	add	x0, x0, _str288@pageoff
+	str	x0, [x21]
+	mov	x0, #8
+	add	x1, x21, x0
+	adrp	x0, _str289@page
+	add	x0, x0, _str289@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
+	mov	x19, x0
+	mov	x0, #1
+	str	x0, [x19]
+	mov	x0, #8
+	add	x0, x19, x0
+	str	x21, [x0]
+	mov	x0, #16
+	add	x0, x19, x0
+	str	x20, [x0]
+	mov	x0, #16
+	bl	_malloc
+	mov	x20, x0
+	adrp	x0, _str296@page
+	add	x0, x0, _str296@pageoff
+	str	x0, [x20]
+	mov	x0, #8
+	add	x1, x20, x0
+	adrp	x0, _str297@page
+	add	x0, x0, _str297@pageoff
+	str	x0, [x1]
+	mov	x0, #24
+	bl	_malloc
+	mov	x3, x0
+	mov	x0, #1
+	str	x0, [x3]
+	mov	x0, #8
+	add	x0, x3, x0
+	str	x20, [x0]
+	mov	x0, #16
+	add	x0, x3, x0
+	str	x19, [x0]
+	adrp	x2, _str271@page
+	add	x2, x2, _str271@pageoff
+	adrp	x1, _str270@page
+	add	x1, x1, _str270@pageoff
+	adrp	x0, _str269@page
+	add	x0, x0, _str269@pageoff
+	bl	_cli_help_command_help
+	ldr	x19, [x29, 40]
+	ldr	x20, [x29, 32]
+	ldr	x21, [x29, 24]
+	ldp	x29, x30, [sp], 48
+	ret
+/* end function cli_help_deps_help */
 
 .text
 .balign 4
@@ -1737,13 +2034,13 @@ _cli_help_docs_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str250@page
-	add	x0, x0, _str250@pageoff
+	adrp	x0, _str308@page
+	add	x0, x0, _str308@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str251@page
-	add	x0, x0, _str251@pageoff
+	adrp	x0, _str309@page
+	add	x0, x0, _str309@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1761,13 +2058,13 @@ _cli_help_docs_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str258@page
-	add	x0, x0, _str258@pageoff
+	adrp	x0, _str316@page
+	add	x0, x0, _str316@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str259@page
-	add	x0, x0, _str259@pageoff
+	adrp	x0, _str317@page
+	add	x0, x0, _str317@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1780,12 +2077,12 @@ _cli_help_docs_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str249@page
-	add	x2, x2, _str249@pageoff
-	adrp	x1, _str248@page
-	add	x1, x1, _str248@pageoff
-	adrp	x0, _str247@page
-	add	x0, x0, _str247@pageoff
+	adrp	x2, _str307@page
+	add	x2, x2, _str307@pageoff
+	adrp	x1, _str306@page
+	add	x1, x1, _str306@pageoff
+	adrp	x0, _str305@page
+	add	x0, x0, _str305@pageoff
 	bl	_cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1806,13 +2103,13 @@ _cli_help_format_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x19, x0
-	adrp	x0, _str270@page
-	add	x0, x0, _str270@pageoff
+	adrp	x0, _str328@page
+	add	x0, x0, _str328@pageoff
 	str	x0, [x19]
 	mov	x0, #8
 	add	x1, x19, x0
-	adrp	x0, _str271@page
-	add	x0, x0, _str271@pageoff
+	adrp	x0, _str329@page
+	add	x0, x0, _str329@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1830,13 +2127,13 @@ _cli_help_format_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x21, x0
-	adrp	x0, _str278@page
-	add	x0, x0, _str278@pageoff
+	adrp	x0, _str336@page
+	add	x0, x0, _str336@pageoff
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, _str279@page
-	add	x0, x0, _str279@pageoff
+	adrp	x0, _str337@page
+	add	x0, x0, _str337@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1852,13 +2149,13 @@ _cli_help_format_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str286@page
-	add	x0, x0, _str286@pageoff
+	adrp	x0, _str344@page
+	add	x0, x0, _str344@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str287@page
-	add	x0, x0, _str287@pageoff
+	adrp	x0, _str345@page
+	add	x0, x0, _str345@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1871,12 +2168,12 @@ _cli_help_format_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str269@page
-	add	x2, x2, _str269@pageoff
-	adrp	x1, _str268@page
-	add	x1, x1, _str268@pageoff
-	adrp	x0, _str267@page
-	add	x0, x0, _str267@pageoff
+	adrp	x2, _str327@page
+	add	x2, x2, _str327@pageoff
+	adrp	x1, _str326@page
+	add	x1, x1, _str326@pageoff
+	adrp	x0, _str325@page
+	add	x0, x0, _str325@pageoff
 	bl	_cli_help_command_help
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -1897,13 +2194,13 @@ _cli_help_new_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str298@page
-	add	x0, x0, _str298@pageoff
+	adrp	x0, _str356@page
+	add	x0, x0, _str356@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str299@page
-	add	x0, x0, _str299@pageoff
+	adrp	x0, _str357@page
+	add	x0, x0, _str357@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1921,13 +2218,13 @@ _cli_help_new_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str306@page
-	add	x0, x0, _str306@pageoff
+	adrp	x0, _str364@page
+	add	x0, x0, _str364@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str307@page
-	add	x0, x0, _str307@pageoff
+	adrp	x0, _str365@page
+	add	x0, x0, _str365@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1940,12 +2237,12 @@ _cli_help_new_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str297@page
-	add	x2, x2, _str297@pageoff
-	adrp	x1, _str296@page
-	add	x1, x1, _str296@pageoff
-	adrp	x0, _str295@page
-	add	x0, x0, _str295@pageoff
+	adrp	x2, _str355@page
+	add	x2, x2, _str355@pageoff
+	adrp	x1, _str354@page
+	add	x1, x1, _str354@pageoff
+	adrp	x0, _str353@page
+	add	x0, x0, _str353@pageoff
 	bl	_cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1965,13 +2262,13 @@ _cli_help_run_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str318@page
-	add	x0, x0, _str318@pageoff
+	adrp	x0, _str376@page
+	add	x0, x0, _str376@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str319@page
-	add	x0, x0, _str319@pageoff
+	adrp	x0, _str377@page
+	add	x0, x0, _str377@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -1989,13 +2286,13 @@ _cli_help_run_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str326@page
-	add	x0, x0, _str326@pageoff
+	adrp	x0, _str384@page
+	add	x0, x0, _str384@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str327@page
-	add	x0, x0, _str327@pageoff
+	adrp	x0, _str385@page
+	add	x0, x0, _str385@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -2008,12 +2305,12 @@ _cli_help_run_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str317@page
-	add	x2, x2, _str317@pageoff
-	adrp	x1, _str316@page
-	add	x1, x1, _str316@pageoff
-	adrp	x0, _str315@page
-	add	x0, x0, _str315@pageoff
+	adrp	x2, _str375@page
+	add	x2, x2, _str375@pageoff
+	adrp	x1, _str374@page
+	add	x1, x1, _str374@pageoff
+	adrp	x0, _str373@page
+	add	x0, x0, _str373@pageoff
 	bl	_cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -2034,13 +2331,13 @@ _cli_help_test_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str338@page
-	add	x0, x0, _str338@pageoff
+	adrp	x0, _str396@page
+	add	x0, x0, _str396@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str339@page
-	add	x0, x0, _str339@pageoff
+	adrp	x0, _str397@page
+	add	x0, x0, _str397@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -2058,13 +2355,13 @@ _cli_help_test_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x21, x0
-	adrp	x0, _str346@page
-	add	x0, x0, _str346@pageoff
+	adrp	x0, _str404@page
+	add	x0, x0, _str404@pageoff
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, _str347@page
-	add	x0, x0, _str347@pageoff
+	adrp	x0, _str405@page
+	add	x0, x0, _str405@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -2080,13 +2377,13 @@ _cli_help_test_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x21, x0
-	adrp	x0, _str354@page
-	add	x0, x0, _str354@pageoff
+	adrp	x0, _str412@page
+	add	x0, x0, _str412@pageoff
 	str	x0, [x21]
 	mov	x0, #8
 	add	x1, x21, x0
-	adrp	x0, _str355@page
-	add	x0, x0, _str355@pageoff
+	adrp	x0, _str413@page
+	add	x0, x0, _str413@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -2102,13 +2399,13 @@ _cli_help_test_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str362@page
-	add	x0, x0, _str362@pageoff
+	adrp	x0, _str420@page
+	add	x0, x0, _str420@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str363@page
-	add	x0, x0, _str363@pageoff
+	adrp	x0, _str421@page
+	add	x0, x0, _str421@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -2121,12 +2418,12 @@ _cli_help_test_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str337@page
-	add	x2, x2, _str337@pageoff
-	adrp	x1, _str336@page
-	add	x1, x1, _str336@pageoff
-	adrp	x0, _str335@page
-	add	x0, x0, _str335@pageoff
+	adrp	x2, _str395@page
+	add	x2, x2, _str395@pageoff
+	adrp	x1, _str394@page
+	add	x1, x1, _str394@pageoff
+	adrp	x0, _str393@page
+	add	x0, x0, _str393@pageoff
 	bl	_cli_help_command_help
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -2147,13 +2444,13 @@ _cli_help_version_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str374@page
-	add	x0, x0, _str374@pageoff
+	adrp	x0, _str432@page
+	add	x0, x0, _str432@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str375@page
-	add	x0, x0, _str375@pageoff
+	adrp	x0, _str433@page
+	add	x0, x0, _str433@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -2171,13 +2468,13 @@ _cli_help_version_help:
 	mov	x0, #16
 	bl	_malloc
 	mov	x20, x0
-	adrp	x0, _str382@page
-	add	x0, x0, _str382@pageoff
+	adrp	x0, _str440@page
+	add	x0, x0, _str440@pageoff
 	str	x0, [x20]
 	mov	x0, #8
 	add	x1, x20, x0
-	adrp	x0, _str383@page
-	add	x0, x0, _str383@pageoff
+	adrp	x0, _str441@page
+	add	x0, x0, _str441@pageoff
 	str	x0, [x1]
 	mov	x0, #24
 	bl	_malloc
@@ -2190,12 +2487,12 @@ _cli_help_version_help:
 	mov	x0, #16
 	add	x0, x3, x0
 	str	x19, [x0]
-	adrp	x2, _str373@page
-	add	x2, x2, _str373@pageoff
-	adrp	x1, _str372@page
-	add	x1, x1, _str372@pageoff
-	adrp	x0, _str371@page
-	add	x0, x0, _str371@pageoff
+	adrp	x2, _str431@page
+	add	x2, x2, _str431@pageoff
+	adrp	x1, _str430@page
+	add	x1, x1, _str430@pageoff
+	adrp	x0, _str429@page
+	add	x0, x0, _str429@pageoff
 	bl	_cli_help_command_help
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -2214,25 +2511,25 @@ _cli_help_options_block:
 	str	x21, [x29, 24]
 	mov	x0, #16
 	bl	_malloc
-	adrp	x1, _str391@page
-	add	x1, x1, _str391@pageoff
+	adrp	x1, _str449@page
+	add	x1, x1, _str449@pageoff
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, _str392@page
-	add	x1, x1, _str392@pageoff
+	adrp	x1, _str450@page
+	add	x1, x1, _str450@pageoff
 	str	x1, [x2]
 	bl	_cli_help_option_row
 	mov	x20, x0
 	mov	x0, #16
 	bl	_malloc
-	adrp	x1, _str397@page
-	add	x1, x1, _str397@pageoff
+	adrp	x1, _str455@page
+	add	x1, x1, _str455@pageoff
 	str	x1, [x0]
 	mov	x1, #8
 	add	x2, x0, x1
-	adrp	x1, _str398@page
-	add	x1, x1, _str398@pageoff
+	adrp	x1, _str456@page
+	add	x1, x1, _str456@pageoff
 	str	x1, [x2]
 	bl	_cli_help_option_row
 	mov	x21, x0
@@ -2259,8 +2556,8 @@ _cli_help_options_block:
 	mov	x1, #16
 	add	x1, x0, x1
 	str	x19, [x1]
-	adrp	x1, _str409@page
-	add	x1, x1, _str409@pageoff
+	adrp	x1, _str467@page
+	add	x1, x1, _str467@pageoff
 	bl	_donna_string_join
 	ldr	x19, [x29, 40]
 	ldr	x20, [x29, 32]
@@ -2280,8 +2577,8 @@ _cli_help_command_row:
 	bl	_utilities_colors_path
 	bl	_cli_help_pad_right
 	mov	x1, x0
-	adrp	x0, _str411@page
-	add	x0, x0, _str411@pageoff
+	adrp	x0, _str469@page
+	add	x0, x0, _str469@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -2305,8 +2602,8 @@ _cli_help_option_row:
 	bl	_utilities_colors_path
 	bl	_cli_help_pad_right
 	mov	x1, x0
-	adrp	x0, _str422@page
-	add	x0, x0, _str422@pageoff
+	adrp	x0, _str480@page
+	add	x0, x0, _str480@pageoff
 	bl	___rt_str_concat
 	mov	x1, x19
 	bl	___rt_str_concat
@@ -2343,20 +2640,20 @@ _cli_help_pad_right:
 	cmp	x1, #0
 	cset	x2, gt
 	cmp	x2, #1
-	beq	L37
-	adrp	x1, _str441@page
-	add	x1, x1, _str441@pageoff
+	beq	L39
+	adrp	x1, _str499@page
+	add	x1, x1, _str499@pageoff
 	bl	___rt_str_concat
-	b	L38
-L37:
+	b	L40
+L39:
 	mov	x19, x0
-	adrp	x0, _str438@page
-	add	x0, x0, _str438@pageoff
+	adrp	x0, _str496@page
+	add	x0, x0, _str496@pageoff
 	bl	_donna_string_repeat
 	mov	x1, x0
 	mov	x0, x19
 	bl	___rt_str_concat
-L38:
+L40:
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
 	ret

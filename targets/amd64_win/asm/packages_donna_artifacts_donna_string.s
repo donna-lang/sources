@@ -27,91 +27,84 @@ donna_nil:
 
 .data
 .balign 8
-str167:
+str145:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str192:
+str170:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str210:
+str188:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str218:
+str196:
 	.byte 9
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str226:
+str204:
 	.byte 13
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str234:
+str212:
 	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str248:
+str225:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str289:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str374:
+str310:
 	.ascii "-"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str416:
+str352:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str444:
+str380:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str460:
+str396:
 	.ascii "-"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str468:
+str404:
 	.ascii ""
 	.byte 0
 /* end data */
@@ -505,74 +498,9 @@ donna_string_index_of_from:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	pushq %rbx
-	pushq %r12
-	pushq %rsi
-	pushq %rdi
-	movq %r8, %rdi
-	movq %rdx, %rbx
 	subq $32, %rsp
-	movq %rcx, %rsi
-	callq strlen
-	movq %rsi, %rcx
-	movq %rax, %rsi
+	callq donna_ffi_string_index_of
 	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rcx, %r12
-	movq %rbx, %rcx
-	callq strlen
-	movq %r12, %rcx
-	movq %rax, %rdx
-	movq %rdi, %rax
-	subq $-32, %rsp
-	movq %rax, %rdi
-	addq %rdx, %rdi
-	cmpq %rsi, %rdi
-	movq %rax, %rsi
-	setg %al
-	movzbq %al, %rax
-	cmpq $1, %rax
-	jz Lbb43
-	movq %rcx, %rdi
-	addq %rsi, %rcx
-	subq $32, %rsp
-	callq strndup
-	movq %rbx, %rdx
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rdx, %rbx
-	callq strcmp
-	movq %rbx, %rdx
-	movq %rdi, %rcx
-	xchgq %rax, %rsi
-	subq $-32, %rsp
-	cmpq $0, %rsi
-	setz %dil
-	movzbq %dil, %rdi
-	subq $16, %rsp
-	movq %rsp, %rsi
-	cmpq $1, %rdi
-	jz Lbb42
-	movq %rax, %r8
-	addq $1, %r8
-	subq $32, %rsp
-	callq donna_string_index_of_from
-	subq $-32, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb44
-Lbb42:
-	movq %rax, (%rsi)
-	jmp Lbb44
-Lbb43:
-	movq $-1, %rax
-Lbb44:
-	movq %rbp, %rsp
-	subq $32, %rsp
-	popq %rdi
-	popq %rsi
-	popq %r12
-	popq %rbx
 	leave
 	ret
 /* end function donna_string_index_of_from */
@@ -608,7 +536,7 @@ donna_string_split:
 	setz %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb47
+	jz Lbb43
 	subq $64, %rsp
 	movq %rsp, %rax
 	leaq donna_nil(%rip), %rsi
@@ -617,8 +545,8 @@ donna_string_split:
 	movq $0, 32(%rax)
 	callq donna_string_split_helper
 	subq $-64, %rsp
-	jmp Lbb48
-Lbb47:
+	jmp Lbb44
+Lbb43:
 	subq $32, %rsp
 	movq %rcx, %rsi
 	movl $24, %ecx
@@ -629,7 +557,7 @@ Lbb47:
 	movq %rcx, 8(%rax)
 	leaq donna_nil(%rip), %rcx
 	movq %rcx, 16(%rax)
-Lbb48:
+Lbb44:
 	popq %rdi
 	popq %rsi
 	popq %rbx
@@ -669,7 +597,7 @@ donna_string_split_helper:
 	addq %r12, %r8
 	movq %r8, -16(%rbp)
 	cmpl $0, %eax
-	jnz Lbb54
+	jnz Lbb50
 	movq %rcx, %r13
 	addq %rbx, %rcx
 	subq $32, %rsp
@@ -697,7 +625,7 @@ donna_string_split_helper:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %r10
-	jz Lbb52
+	jz Lbb48
 	movq %rbx, %r10
 	addq $1, %r10
 	subq $64, %rsp
@@ -712,8 +640,8 @@ donna_string_split_helper:
 	callq donna_string_split_helper
 	subq $-64, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb56
-Lbb52:
+	jmp Lbb52
+Lbb48:
 	movq %r9, %r15
 	movq %rdx, %r14
 	movq %rbx, %rdx
@@ -748,8 +676,8 @@ Lbb52:
 	callq donna_string_split_helper
 	subq $-64, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb56
-Lbb54:
+	jmp Lbb52
+Lbb50:
 	movq %r8, %rcx
 	movq %r12, %rbx
 	movq %rdi, %rdx
@@ -769,7 +697,7 @@ Lbb54:
 	subq $32, %rsp
 	callq donna_string_list_reverse
 	subq $-32, %rsp
-Lbb56:
+Lbb52:
 	movq %rbp, %rsp
 	subq $96, %rsp
 	popq %rdi
@@ -811,7 +739,7 @@ donna_string_list_reverse_helper:
 	movq %rax, %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb61
+	jz Lbb57
 	movq 8(%rcx), %rsi
 	movq 16(%rcx), %rcx
 	subq $32, %rsp
@@ -828,10 +756,10 @@ donna_string_list_reverse_helper:
 	subq $32, %rsp
 	callq donna_string_list_reverse_helper
 	subq $-32, %rsp
-	jmp Lbb62
-Lbb61:
+	jmp Lbb58
+Lbb57:
 	movq %rdi, %rax
-Lbb62:
+Lbb58:
 	popq %rdi
 	popq %rsi
 	popq %rbx
@@ -878,7 +806,7 @@ donna_string_trim_start_from:
 	setge %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb70
+	jz Lbb66
 	movq %rcx, %rdi
 	addq %rdx, %rdi
 	subq $32, %rsp
@@ -898,7 +826,7 @@ donna_string_trim_start_from:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb69
+	jz Lbb65
 	movq %rdi, %rcx
 	negq %rdx
 	addq %r8, %rdx
@@ -906,17 +834,17 @@ donna_string_trim_start_from:
 	callq strndup
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb71
-Lbb69:
+	jmp Lbb67
+Lbb65:
 	addq $1, %rdx
 	subq $32, %rsp
 	callq donna_string_trim_start_from
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb71
-Lbb70:
-	leaq str167(%rip), %rax
-Lbb71:
+	jmp Lbb67
+Lbb66:
+	leaq str145(%rip), %rax
+Lbb67:
 	movq %rbp, %rsp
 	subq $32, %rsp
 	popq %rdi
@@ -963,7 +891,7 @@ donna_string_trim_end_to:
 	setl %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb78
+	jz Lbb74
 	movq %rcx, %rsi
 	addq %rdx, %rcx
 	subq $32, %rsp
@@ -980,23 +908,23 @@ donna_string_trim_end_to:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb77
+	jz Lbb73
 	addq $1, %rdx
 	subq $32, %rsp
 	callq strndup
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb79
-Lbb77:
+	jmp Lbb75
+Lbb73:
 	subq $1, %rdx
 	subq $32, %rsp
 	callq donna_string_trim_end_to
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb79
-Lbb78:
-	leaq str192(%rip), %rax
-Lbb79:
+	jmp Lbb75
+Lbb74:
+	leaq str170(%rip), %rax
+Lbb75:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -1032,7 +960,7 @@ donna_string_is_ws:
 	pushq %rsi
 	pushq %rdi
 	subq $32, %rsp
-	leaq str210(%rip), %rdx
+	leaq str188(%rip), %rdx
 	movq %rcx, %rsi
 	callq strcmp
 	movq %rsi, %rcx
@@ -1041,9 +969,9 @@ donna_string_is_ws:
 	setz %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb91
+	jz Lbb87
 	subq $32, %rsp
-	leaq str218(%rip), %rdx
+	leaq str196(%rip), %rdx
 	movq %rcx, %rsi
 	callq strcmp
 	movq %rsi, %rcx
@@ -1054,9 +982,9 @@ donna_string_is_ws:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb89
+	jz Lbb85
 	subq $32, %rsp
-	leaq str226(%rip), %rdx
+	leaq str204(%rip), %rdx
 	movq %rcx, %rdi
 	callq strcmp
 	movq %rdi, %rcx
@@ -1067,29 +995,29 @@ donna_string_is_ws:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %rax
-	jz Lbb86
+	jz Lbb82
 	subq $32, %rsp
-	leaq str234(%rip), %rdx
+	leaq str212(%rip), %rdx
 	callq strcmp
 	subq $-32, %rsp
 	cmpq $0, %rax
 	setz %al
 	movzbq %al, %rax
 	movq %rax, (%rdi)
-	jmp Lbb88
-Lbb86:
+	jmp Lbb84
+Lbb82:
 	movq $1, (%rdi)
 	movl $1, %eax
-Lbb88:
+Lbb84:
 	movq %rax, (%rsi)
-	jmp Lbb92
-Lbb89:
+	jmp Lbb88
+Lbb85:
 	movq $1, (%rsi)
 	movl $1, %eax
-	jmp Lbb92
-Lbb91:
+	jmp Lbb88
+Lbb87:
 	movl $1, %eax
-Lbb92:
+Lbb88:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -1105,198 +1033,12 @@ donna_string_replace:
 	endbr64
 	pushq %rbp
 	movq %rsp, %rbp
-	pushq %rbx
-	pushq %r12
-	pushq %rsi
-	pushq %rdi
-	movq %r8, %rbx
-	movq %rdx, %rdi
-	movq %rcx, %rsi
 	subq $32, %rsp
-	movq %rsi, %rcx
-	callq strlen
-	movq %rax, %r12
+	callq donna_ffi_string_replace
 	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rdi, %rcx
-	callq strlen
-	movq %r12, %r9
-	movq %rbx, %r8
-	movq %rdi, %rdx
-	movq %rax, %rcx
-	movq %rsi, %rax
-	subq $-32, %rsp
-	cmpq $0, %rcx
-	setz %sil
-	movzbq %sil, %rsi
-	cmpq $1, %rsi
-	jz Lbb95
-	subq $64, %rsp
-	movq %rsp, %rsi
-	leaq str248(%rip), %rdi
-	movq %rdi, 56(%rsi)
-	movq $0, 48(%rsi)
-	movq $0, 40(%rsi)
-	movq %rcx, 32(%rsi)
-	movq %rax, %rcx
-	callq donna_string_replace_helper
-	subq $-64, %rsp
-Lbb95:
-	popq %rdi
-	popq %rsi
-	popq %r12
-	popq %rbx
 	leave
 	ret
 /* end function donna_string_replace */
-
-.text
-.balign 16
-donna_string_replace_helper:
-	endbr64
-	pushq %rbp
-	movq %rsp, %rbp
-	subq $40, %rsp
-	pushq %rbx
-	pushq %r12
-	pushq %r13
-	pushq %r14
-	pushq %r15
-	pushq %rsi
-	pushq %rdi
-	movq 72(%rbp), %r13
-	movq %r13, -24(%rbp)
-	movq 64(%rbp), %r14
-	movq 56(%rbp), %rbx
-	movq %rbx, %r12
-	movq 48(%rbp), %rbx
-	movq %r9, %rdi
-	movq %r8, %r15
-	movq %rbx, %rsi
-	addq %r14, %rsi
-	movq %rsi, -16(%rbp)
-	cmpq %rdi, %rsi
-	setg %al
-	movzbq %al, %rax
-	cmpq $1, %rax
-	setz %sil
-	movzbq %sil, %rsi
-	movq %rcx, %rax
-	addq %r12, %rax
-	movq %rax, -8(%rbp)
-	cmpl $0, %esi
-	jnz Lbb101
-	movq %rcx, %rsi
-	addq %r14, %rcx
-	subq $32, %rsp
-	movq %rdx, %r13
-	movq %rbx, %rdx
-	callq strndup
-	movq %r13, %rdx
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rdx, %r13
-	callq strcmp
-	movq %r15, %r8
-	movq %r13, %rdx
-	movq %rsi, %rcx
-	movq %rax, %rsi
-	movq -8(%rbp), %rax
-	movq -16(%rbp), %r15
-	movq -24(%rbp), %r13
-	subq $-32, %rsp
-	cmpq $0, %rsi
-	setz %r9b
-	movzbq %r9b, %r9
-	subq $16, %rsp
-	movq %rsp, %rsi
-	movq %rsi, -32(%rbp)
-	cmpq $1, %r9
-	jz Lbb99
-	movq %r14, %r9
-	addq $1, %r9
-	subq $64, %rsp
-	movq %rsp, %rax
-	movq %r13, 56(%rax)
-	movq %r9, 48(%rax)
-	movq %r12, 40(%rax)
-	movq %rbx, 32(%rax)
-	movq %rdi, %r9
-	movq %r8, %r15
-	movq %rdx, %r14
-	movq %rcx, %r13
-	callq donna_string_replace_helper
-	subq $-64, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb103
-Lbb99:
-	movq %r13, %rsi
-	xchgq %r14, %rdx
-	movq %rcx, %r13
-	movq %rax, %rcx
-	movq %r12, %rax
-	movq %r15, %r12
-	movq %r8, %r15
-	subq %rax, %rdx
-	subq $32, %rsp
-	callq strndup
-	movq %rsi, %rcx
-	movq %rax, %rdx
-	movq -32(%rbp), %rsi
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq __rt_str_concat
-	movq %r14, %rdx
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rdx, %r14
-	movq %r15, %rdx
-	callq __rt_str_concat
-	movq %r15, %r8
-	movq %r14, %rdx
-	movq %r13, %rcx
-	movq %rax, %r9
-	subq $-32, %rsp
-	subq $64, %rsp
-	movq %rsp, %rax
-	movq %r9, 56(%rax)
-	movq %r12, 48(%rax)
-	movq %r12, 40(%rax)
-	movq %rbx, 32(%rax)
-	movq %rdi, %r9
-	callq donna_string_replace_helper
-	subq $-64, %rsp
-	movq %rax, (%rsi)
-	jmp Lbb103
-Lbb101:
-	movq %rax, %rcx
-	movq %r13, %rsi
-	movq %r12, %rbx
-	movq %rdi, %rdx
-	subq %rbx, %rdx
-	subq $32, %rsp
-	callq strndup
-	movq %rsi, %rcx
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq __rt_str_concat
-	subq $-32, %rsp
-Lbb103:
-	movq %rbp, %rsp
-	subq $96, %rsp
-	popq %rdi
-	popq %rsi
-	popq %r15
-	popq %r14
-	popq %r13
-	popq %r12
-	popq %rbx
-	leave
-	ret
-/* end function donna_string_replace_helper */
 
 .text
 .balign 16
@@ -1309,18 +1051,18 @@ donna_string_join:
 	pushq %rdi
 	movq (%rcx), %rax
 	cmpq $0, %rax
-	jz Lbb112
+	jz Lbb99
 	cmpq $1, %rax
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpl $0, %eax
-	jnz Lbb108
+	jnz Lbb95
 	movq $0, (%rsi)
 	movl $0, %eax
-	jmp Lbb109
-Lbb108:
+	jmp Lbb96
+Lbb95:
 	movq 16(%rcx), %rax
 	movq (%rax), %rax
 	cmpq $0, %rax
@@ -1328,9 +1070,9 @@ Lbb108:
 	movzbq %al, %rax
 	andq $1, %rax
 	movq %rax, (%rsi)
-Lbb109:
+Lbb96:
 	cmpl $0, %eax
-	jnz Lbb111
+	jnz Lbb98
 	movq %rcx, %rax
 	movq 8(%rcx), %rcx
 	movq 16(%rax), %rsi
@@ -1349,13 +1091,13 @@ Lbb109:
 	subq $32, %rsp
 	callq __rt_str_concat
 	subq $-32, %rsp
-	jmp Lbb113
-Lbb111:
+	jmp Lbb100
+Lbb98:
 	movq 8(%rcx), %rax
-	jmp Lbb113
-Lbb112:
-	leaq str289(%rip), %rax
-Lbb113:
+	jmp Lbb100
+Lbb99:
+	leaq str225(%rip), %rax
+Lbb100:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -1389,7 +1131,7 @@ donna_string_pad_left:
 	setge %dil
 	movzbq %dil, %rdi
 	cmpq $1, %rdi
-	jz Lbb116
+	jz Lbb103
 	subq %rax, %rdx
 	subq $32, %rsp
 	callq donna_string_repeat
@@ -1400,10 +1142,10 @@ donna_string_pad_left:
 	movq %rax, %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
-	jmp Lbb117
-Lbb116:
+	jmp Lbb104
+Lbb103:
 	movq %rsi, %rax
-Lbb117:
+Lbb104:
 	popq %rdi
 	popq %rsi
 	popq %rbx
@@ -1430,15 +1172,15 @@ donna_string_is_digits:
 	setz %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb120
+	jz Lbb107
 	subq $32, %rsp
 	movl $0, %edx
 	callq donna_string_all_digits
 	subq $-32, %rsp
-	jmp Lbb121
-Lbb120:
+	jmp Lbb108
+Lbb107:
 	movl $0, %eax
-Lbb121:
+Lbb108:
 	popq %rsi
 	leave
 	ret
@@ -1456,7 +1198,7 @@ donna_string_all_digits:
 	setz %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb131
+	jz Lbb118
 	movzbq (%rcx, %rdx, 1), %rax
 	cmpq $48, %rax
 	setl %dil
@@ -1464,33 +1206,33 @@ donna_string_all_digits:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rdi
-	jz Lbb129
+	jz Lbb116
 	cmpq $57, %rax
 	setg %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %rax
-	jz Lbb126
+	jz Lbb113
 	addq $1, %rdx
 	subq $32, %rsp
 	callq donna_string_all_digits
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb128
-Lbb126:
+	jmp Lbb115
+Lbb113:
 	movq $0, (%rdi)
 	movl $0, %eax
-Lbb128:
+Lbb115:
 	movq %rax, (%rsi)
-	jmp Lbb132
-Lbb129:
+	jmp Lbb119
+Lbb116:
 	movq $0, (%rsi)
 	movl $0, %eax
-	jmp Lbb132
-Lbb131:
+	jmp Lbb119
+Lbb118:
 	movl $1, %eax
-Lbb132:
+Lbb119:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -1529,7 +1271,7 @@ donna_string_to_int:
 	setz %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb137
+	jz Lbb124
 	subq $32, %rsp
 	movl $1, %edx
 	movq %rcx, %rsi
@@ -1537,7 +1279,7 @@ donna_string_to_int:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str374(%rip), %rdx
+	leaq str310(%rip), %rdx
 	callq strcmp
 	movq %rdi, %r8
 	movq %rsi, %rcx
@@ -1548,15 +1290,15 @@ donna_string_to_int:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb136
+	jz Lbb123
 	subq $32, %rsp
 	movl $0, %r9d
 	movl $0, %edx
 	callq donna_string_parse_digits
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb138
-Lbb136:
+	jmp Lbb125
+Lbb123:
 	subq $32, %rsp
 	movl $0, %r9d
 	movl $1, %edx
@@ -1565,10 +1307,10 @@ Lbb136:
 	negq %rax
 	addq $0, %rax
 	movq %rax, (%rsi)
-	jmp Lbb138
-Lbb137:
+	jmp Lbb125
+Lbb124:
 	movl $0, %eax
-Lbb138:
+Lbb125:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -1590,7 +1332,7 @@ donna_string_parse_digits:
 	setge %sil
 	movzbq %sil, %rsi
 	cmpq $1, %rsi
-	jz Lbb148
+	jz Lbb135
 	movq %rax, %r9
 	movzbq (%rcx, %rdx, 1), %rax
 	subq $48, %rax
@@ -1600,14 +1342,14 @@ donna_string_parse_digits:
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rdi
-	jz Lbb146
+	jz Lbb133
 	cmpq $9, %rax
 	setg %r10b
 	movzbq %r10b, %r10
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %r10
-	jz Lbb143
+	jz Lbb130
 	addq $1, %rdx
 	imulq $10, %r9, %r9
 	addq %rax, %r9
@@ -1615,17 +1357,17 @@ donna_string_parse_digits:
 	callq donna_string_parse_digits
 	subq $-32, %rsp
 	movq %rax, (%rdi)
-	jmp Lbb145
-Lbb143:
+	jmp Lbb132
+Lbb130:
 	movq %r9, %rax
 	movq %rax, (%rdi)
-Lbb145:
+Lbb132:
 	movq %rax, (%rsi)
-	jmp Lbb148
-Lbb146:
+	jmp Lbb135
+Lbb133:
 	movq %r9, %rax
 	movq %rax, (%rsi)
-Lbb148:
+Lbb135:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rdi
@@ -1650,7 +1392,7 @@ donna_string_lowercase:
 	movq %rax, %r8
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str416(%rip), %r9
+	leaq str352(%rip), %r9
 	movl $0, %edx
 	callq donna_string_lowercase_helper
 	subq $-32, %rsp
@@ -1678,7 +1420,7 @@ donna_string_lowercase_helper:
 	setge %dl
 	movzbq %dl, %rdx
 	cmpq $1, %rdx
-	jz Lbb157
+	jz Lbb144
 	movq %rax, %r12
 	movzbq (%rcx, %rsi, 1), %rax
 	cmpq $65, %rax
@@ -1691,7 +1433,7 @@ donna_string_lowercase_helper:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %rdx
-	jz Lbb155
+	jz Lbb142
 	subq $32, %rsp
 	movq %rsi, %rdx
 	movq %rcx, %r13
@@ -1701,8 +1443,8 @@ donna_string_lowercase_helper:
 	subq $-32, %rsp
 	movq %rdx, (%rdi)
 	movq %r12, %rax
-	jmp Lbb156
-Lbb155:
+	jmp Lbb143
+Lbb142:
 	movq %rcx, %r13
 	movq %rax, %rcx
 	addq $32, %rcx
@@ -1713,7 +1455,7 @@ Lbb155:
 	movq %r12, %rax
 	subq $-32, %rsp
 	movq %rdx, (%rdi)
-Lbb156:
+Lbb143:
 	movq %rsi, %rdi
 	addq $1, %rdi
 	subq $32, %rsp
@@ -1728,7 +1470,7 @@ Lbb156:
 	subq $32, %rsp
 	callq donna_string_lowercase_helper
 	subq $-32, %rsp
-Lbb157:
+Lbb144:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -1761,7 +1503,7 @@ donna_string_to_slug:
 	movq %rax, %r8
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str444(%rip), %r9
+	leaq str380(%rip), %r9
 	movl $0, %edx
 	callq donna_string_slug_helper
 	subq $-32, %rsp
@@ -1789,7 +1531,7 @@ donna_string_slug_helper:
 	setge %dl
 	movzbq %dl, %rdx
 	cmpq $1, %rdx
-	jz Lbb171
+	jz Lbb158
 	movq %rcx, %r13
 	movzbq (%rcx, %rsi, 1), %rcx
 	cmpq $32, %rcx
@@ -1799,7 +1541,7 @@ donna_string_slug_helper:
 	subq $16, %rsp
 	movq %rsp, %rdi
 	cmpq $1, %rax
-	jz Lbb168
+	jz Lbb155
 	subq $32, %rsp
 	callq donna_string_is_slug_char
 	movq %r13, %rcx
@@ -1809,15 +1551,15 @@ donna_string_slug_helper:
 	subq $16, %rsp
 	movq %rsp, %r12
 	cmpq $1, %rdx
-	jz Lbb165
-	leaq str468(%rip), %rdx
+	jz Lbb152
+	leaq str404(%rip), %rdx
 	movq %rdx, (%r12)
 	movq %rax, %r13
-	leaq str468(%rip), %rax
+	leaq str404(%rip), %rax
 	movq %rax, %rdx
 	movq %r13, %rax
-	jmp Lbb167
-Lbb165:
+	jmp Lbb154
+Lbb152:
 	movq %rax, %r13
 	subq $32, %rsp
 	movq %rsi, %rdx
@@ -1828,16 +1570,16 @@ Lbb165:
 	movq %r13, %rax
 	subq $-32, %rsp
 	movq %rdx, (%r12)
-Lbb167:
+Lbb154:
 	movq %rdx, (%rdi)
-	jmp Lbb170
-Lbb168:
+	jmp Lbb157
+Lbb155:
 	movq %r12, %rax
 	movq %r13, %rcx
-	leaq str460(%rip), %rdx
+	leaq str396(%rip), %rdx
 	movq %rdx, (%rdi)
-	leaq str460(%rip), %rdx
-Lbb170:
+	leaq str396(%rip), %rdx
+Lbb157:
 	movq %rsi, %rdi
 	addq $1, %rdi
 	subq $32, %rsp
@@ -1852,7 +1594,7 @@ Lbb170:
 	subq $32, %rsp
 	callq donna_string_slug_helper
 	subq $-32, %rsp
-Lbb171:
+Lbb158:
 	movq %rbp, %rsp
 	subq $48, %rsp
 	popq %rdi
@@ -1879,7 +1621,7 @@ donna_string_is_slug_char:
 	movzbq %dl, %rdx
 	andq %rdx, %rax
 	cmpq $1, %rax
-	jz Lbb177
+	jz Lbb164
 	cmpq $48, %rcx
 	setge %al
 	movzbq %al, %rax
@@ -1890,20 +1632,20 @@ donna_string_is_slug_char:
 	subq $16, %rsp
 	movq %rsp, %rax
 	cmpq $1, %rdx
-	jz Lbb175
+	jz Lbb162
 	cmpq $45, %rcx
 	movq %rax, %rcx
 	setz %al
 	movzbq %al, %rax
 	movq %rax, (%rcx)
-	jmp Lbb178
-Lbb175:
+	jmp Lbb165
+Lbb162:
 	movq $1, (%rax)
 	movl $1, %eax
-	jmp Lbb178
-Lbb177:
+	jmp Lbb165
+Lbb164:
 	movl $1, %eax
-Lbb178:
+Lbb165:
 	movq %rbp, %rsp
 	subq $0, %rsp
 	leave

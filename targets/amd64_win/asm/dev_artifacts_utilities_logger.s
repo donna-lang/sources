@@ -119,50 +119,34 @@ str39:
 .data
 .balign 8
 str40:
-	.ascii "Cleaning"
+	.ascii "Docs"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str44:
-	.ascii "%s"
-	.byte 10
+	.ascii "Format"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str45:
-	.ascii "Cleaned"
+str48:
+	.ascii "Running"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str47:
-	.ascii "in "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str52:
-	.ascii "%s"
-	.byte 10
+str50:
+	.ascii "tests..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str53:
-	.ascii "Checking"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str56:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -170,21 +154,36 @@ str56:
 
 .data
 .balign 8
-str57:
-	.ascii "Checked"
+str54:
+	.ascii "Cleaning"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str58:
+	.ascii "%s"
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str59:
+	.ascii "Cleaned"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str61:
 	.ascii "in "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str64:
+str66:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -192,7 +191,51 @@ str64:
 
 .data
 .balign 8
-str66:
+str67:
+	.ascii "Checking"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str70:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str71:
+	.ascii "Checked"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str73:
+	.ascii "in "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str78:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str79:
+	.ascii "Check"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str84:
 	.byte 226
 	.byte 134
 	.byte 146
@@ -202,14 +245,14 @@ str66:
 
 .data
 .balign 8
-str70:
+str88:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str75:
+str93:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -217,21 +260,21 @@ str75:
 
 .data
 .balign 8
-str76:
+str94:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str78:
+str96:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str81:
+str99:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -239,21 +282,21 @@ str81:
 
 .data
 .balign 8
-str82:
+str100:
 	.ascii "warning"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str84:
+str102:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str87:
+str105:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -261,14 +304,14 @@ str87:
 
 .data
 .balign 8
-str88:
+str106:
 	.ascii "  hint: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str91:
+str109:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -276,58 +319,14 @@ str91:
 
 .data
 .balign 8
-str92:
+str110:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str95:
-	.ascii "%s"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str102:
-	.ascii "Donna found "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str105:
-	.ascii " error(s) and "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str109:
-	.ascii " warning(s)."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str111:
-	.ascii "%s"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str118:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str119:
+str113:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -364,77 +363,121 @@ str129:
 
 .data
 .balign 8
-str132:
-	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str135:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str155:
+str136:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str156:
+str137:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str138:
+	.ascii "Donna found "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str141:
+	.ascii " error(s) and "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str145:
+	.ascii " warning(s)."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str147:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str150:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str153:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str168:
+str173:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str174:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str186:
 	.ascii "us"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str189:
+str207:
 	.ascii "0"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str195:
+str213:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str198:
+str216:
 	.ascii "ms"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str209:
+str227:
 	.ascii "0"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str215:
+str233:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str218:
+str236:
 	.ascii "s"
 	.byte 0
 /* end data */
@@ -682,6 +725,99 @@ utilities_logger_docs_ok:
 
 .text
 .balign 16
+.globl utilities_logger_docs_output
+utilities_logger_docs_output:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
+	subq $32, %rsp
+	movq %rcx, %rsi
+	leaq str40(%rip), %rcx
+	callq utilities_logger_action
+	movq %rsi, %rcx
+	movq %rax, %rsi
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq utilities_colors_dim
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	subq $-32, %rsp
+	popq %rsi
+	leave
+	ret
+/* end function utilities_logger_docs_output */
+
+.text
+.balign 16
+.globl utilities_logger_format_summary
+utilities_logger_format_summary:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
+	subq $32, %rsp
+	movq %rcx, %rsi
+	leaq str44(%rip), %rcx
+	callq utilities_logger_action
+	movq %rsi, %rcx
+	movq %rax, %rsi
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq utilities_colors_dim
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	subq $-32, %rsp
+	popq %rsi
+	leave
+	ret
+/* end function utilities_logger_format_summary */
+
+.text
+.balign 16
+.globl utilities_logger_running_tests
+utilities_logger_running_tests:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
+	subq $32, %rsp
+	leaq str48(%rip), %rcx
+	callq utilities_logger_action
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rcx, %rsi
+	leaq str50(%rip), %rcx
+	callq utilities_colors_dim
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str53(%rip), %rcx
+	callq printf
+	subq $-32, %rsp
+	movl $0, %eax
+	popq %rsi
+	leave
+	ret
+/* end function utilities_logger_running_tests */
+
+.text
+.balign 16
 .globl utilities_logger_cleaning
 utilities_logger_cleaning:
 	endbr64
@@ -691,7 +827,7 @@ utilities_logger_cleaning:
 	pushq %rsi
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str40(%rip), %rcx
+	leaq str54(%rip), %rcx
 	callq utilities_logger_action
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -706,7 +842,7 @@ utilities_logger_cleaning:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str44(%rip), %rcx
+	leaq str58(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -726,12 +862,12 @@ utilities_logger_clean_ok:
 	pushq %rsi
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str45(%rip), %rcx
+	leaq str59(%rip), %rcx
 	callq utilities_logger_action
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str47(%rip), %rdx
+	leaq str61(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -750,7 +886,7 @@ utilities_logger_clean_ok:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str52(%rip), %rcx
+	leaq str66(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -770,7 +906,7 @@ utilities_logger_checking:
 	pushq %rsi
 	movq %rcx, %rsi
 	subq $32, %rsp
-	leaq str53(%rip), %rcx
+	leaq str67(%rip), %rcx
 	callq utilities_logger_action
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -780,7 +916,7 @@ utilities_logger_checking:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str56(%rip), %rcx
+	leaq str70(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -800,12 +936,12 @@ utilities_logger_check_ok:
 	pushq %rsi
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str57(%rip), %rcx
+	leaq str71(%rip), %rcx
 	callq utilities_logger_action
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str59(%rip), %rdx
+	leaq str73(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rsi
@@ -824,7 +960,7 @@ utilities_logger_check_ok:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str64(%rip), %rcx
+	leaq str78(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -832,6 +968,35 @@ utilities_logger_check_ok:
 	leave
 	ret
 /* end function utilities_logger_check_ok */
+
+.text
+.balign 16
+.globl utilities_logger_check_success
+utilities_logger_check_success:
+	endbr64
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $8, %rsp
+	pushq %rsi
+	subq $32, %rsp
+	movq %rcx, %rsi
+	leaq str79(%rip), %rcx
+	callq utilities_logger_action
+	movq %rsi, %rcx
+	movq %rax, %rsi
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq utilities_colors_dim
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	subq $-32, %rsp
+	popq %rsi
+	leave
+	ret
+/* end function utilities_logger_check_success */
 
 .text
 .balign 16
@@ -849,7 +1014,7 @@ utilities_logger_success:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str66(%rip), %rdx
+	leaq str84(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rcx
 	movq %rax, %rdi
@@ -871,7 +1036,7 @@ utilities_logger_success:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str70(%rip), %rcx
+	leaq str88(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -885,7 +1050,7 @@ utilities_logger_success:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str75(%rip), %rcx
+	leaq str93(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -906,14 +1071,14 @@ utilities_logger_error:
 	pushq %rsi
 	movq %rcx, %rsi
 	subq $32, %rsp
-	leaq str76(%rip), %rcx
+	leaq str94(%rip), %rcx
 	callq utilities_colors_red
 	movq %rsi, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str78(%rip), %rdx
+	leaq str96(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -923,7 +1088,7 @@ utilities_logger_error:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str81(%rip), %rcx
+	leaq str99(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -943,14 +1108,14 @@ utilities_logger_warn:
 	pushq %rsi
 	movq %rcx, %rsi
 	subq $32, %rsp
-	leaq str82(%rip), %rcx
+	leaq str100(%rip), %rcx
 	callq utilities_colors_yellow
 	movq %rsi, %rdx
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str84(%rip), %rdx
+	leaq str102(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -960,7 +1125,7 @@ utilities_logger_warn:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str87(%rip), %rcx
+	leaq str105(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -978,7 +1143,7 @@ utilities_logger_hint:
 	movq %rsp, %rbp
 	movq %rcx, %rdx
 	subq $32, %rsp
-	leaq str88(%rip), %rcx
+	leaq str106(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -987,7 +1152,7 @@ utilities_logger_hint:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str91(%rip), %rcx
+	leaq str109(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -1004,7 +1169,7 @@ utilities_logger_info:
 	movq %rsp, %rbp
 	movq %rcx, %rdx
 	subq $32, %rsp
-	leaq str92(%rip), %rcx
+	leaq str110(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -1013,7 +1178,7 @@ utilities_logger_info:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str95(%rip), %rcx
+	leaq str113(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
 	movl $0, %eax
@@ -1035,14 +1200,14 @@ utilities_logger_summary:
 	setz %al
 	movzbq %al, %rax
 	cmpq $0, %rax
-	jz Lbb34
+	jz Lbb42
 	cmpq $0, %rdi
 	setz %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb33
+	jz Lbb41
 	subq $32, %rsp
 	callq donna_int_to_string
 	movq %rdi, %rcx
@@ -1050,12 +1215,12 @@ utilities_logger_summary:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rdi
-	leaq str120(%rip), %rcx
+	leaq str138(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str123(%rip), %rdx
+	leaq str141(%rip), %rdx
 	callq __rt_str_concat
 	movq %rdi, %rcx
 	movq %rax, %rdi
@@ -1063,6 +1228,53 @@ utilities_logger_summary:
 	subq $32, %rsp
 	callq donna_int_to_string
 	movq %rdi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq __rt_str_concat
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str145(%rip), %rdx
+	callq __rt_str_concat
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str147(%rip), %rcx
+	callq printf
+	subq $-32, %rsp
+	movq $0, (%rsi)
+	jmp Lbb44
+Lbb41:
+	subq $32, %rsp
+	leaq str136(%rip), %rdx
+	leaq str137(%rip), %rcx
+	callq printf
+	subq $-32, %rsp
+	movq $0, (%rsi)
+	jmp Lbb44
+Lbb42:
+	movq %rdi, %rsi
+	subq $32, %rsp
+	callq donna_int_to_string
+	movq %rsi, %rcx
+	movq %rax, %rdx
+	subq $-32, %rsp
+	subq $32, %rsp
+	movq %rcx, %rsi
+	leaq str120(%rip), %rcx
+	callq __rt_str_concat
+	movq %rax, %rcx
+	subq $-32, %rsp
+	subq $32, %rsp
+	leaq str123(%rip), %rdx
+	callq __rt_str_concat
+	movq %rsi, %rcx
+	movq %rax, %rsi
+	subq $-32, %rsp
+	subq $32, %rsp
+	callq donna_int_to_string
+	movq %rsi, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
@@ -1078,54 +1290,7 @@ utilities_logger_summary:
 	leaq str129(%rip), %rcx
 	callq printf
 	subq $-32, %rsp
-	movq $0, (%rsi)
-	jmp Lbb36
-Lbb33:
-	subq $32, %rsp
-	leaq str118(%rip), %rdx
-	leaq str119(%rip), %rcx
-	callq printf
-	subq $-32, %rsp
-	movq $0, (%rsi)
-	jmp Lbb36
-Lbb34:
-	movq %rdi, %rsi
-	subq $32, %rsp
-	callq donna_int_to_string
-	movq %rsi, %rcx
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	movq %rcx, %rsi
-	leaq str102(%rip), %rcx
-	callq __rt_str_concat
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str105(%rip), %rdx
-	callq __rt_str_concat
-	movq %rsi, %rcx
-	movq %rax, %rsi
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq donna_int_to_string
-	movq %rsi, %rcx
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	callq __rt_str_concat
-	movq %rax, %rcx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str109(%rip), %rdx
-	callq __rt_str_concat
-	movq %rax, %rdx
-	subq $-32, %rsp
-	subq $32, %rsp
-	leaq str111(%rip), %rcx
-	callq printf
-	subq $-32, %rsp
-Lbb36:
+Lbb44:
 	movl $0, %eax
 	movq %rbp, %rsp
 	subq $16, %rsp
@@ -1147,12 +1312,12 @@ utilities_logger_action:
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str132(%rip), %rcx
+	leaq str150(%rip), %rcx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str135(%rip), %rdx
+	leaq str153(%rip), %rdx
 	callq __rt_str_concat
 	movq %rax, %rcx
 	subq $-32, %rsp
@@ -1182,7 +1347,7 @@ utilities_logger_pad_left:
 	setge %cl
 	movzbq %cl, %rcx
 	cmpq $1, %rcx
-	jz Lbb42
+	jz Lbb50
 	movq %rdx, %rcx
 	subq %rax, %rcx
 	subq $32, %rsp
@@ -1194,10 +1359,10 @@ utilities_logger_pad_left:
 	movq %rax, %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
-	jmp Lbb43
-Lbb42:
+	jmp Lbb51
+Lbb50:
 	movq %rsi, %rax
-Lbb43:
+Lbb51:
 	popq %rdi
 	popq %rsi
 	leave
@@ -1214,20 +1379,20 @@ utilities_logger_repeat_spaces:
 	setle %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb46
+	jz Lbb54
 	subq $1, %rcx
 	subq $32, %rsp
 	callq utilities_logger_repeat_spaces
 	movq %rax, %rdx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str156(%rip), %rcx
+	leaq str174(%rip), %rcx
 	callq __rt_str_concat
 	subq $-32, %rsp
-	jmp Lbb47
-Lbb46:
-	leaq str155(%rip), %rax
-Lbb47:
+	jmp Lbb55
+Lbb54:
+	leaq str173(%rip), %rax
+Lbb55:
 	leave
 	ret
 /* end function utilities_logger_repeat_spaces */
@@ -1244,35 +1409,35 @@ utilities_logger_format_duration:
 	setl %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb52
+	jz Lbb60
 	cmpq $1000000, %rcx
 	setl %al
 	movzbq %al, %rax
 	subq $16, %rsp
 	movq %rsp, %rsi
 	cmpq $1, %rax
-	jz Lbb51
+	jz Lbb59
 	subq $32, %rsp
 	callq utilities_logger_format_seconds
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb53
-Lbb51:
+	jmp Lbb61
+Lbb59:
 	subq $32, %rsp
 	callq utilities_logger_format_ms
 	subq $-32, %rsp
 	movq %rax, (%rsi)
-	jmp Lbb53
-Lbb52:
+	jmp Lbb61
+Lbb60:
 	subq $32, %rsp
 	callq donna_int_to_string
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str168(%rip), %rdx
+	leaq str186(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
-Lbb53:
+Lbb61:
 	movq %rbp, %rsp
 	subq $16, %rsp
 	popq %rsi
@@ -1307,14 +1472,14 @@ utilities_logger_format_ms:
 	setl %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb57
+	jz Lbb65
 	subq $32, %rsp
 	callq donna_int_to_string
 	movq %rax, %rdx
 	subq $-32, %rsp
 	movq %rsi, %rcx
-	jmp Lbb58
-Lbb57:
+	jmp Lbb66
+Lbb65:
 	subq $32, %rsp
 	callq donna_int_to_string
 	movq %rsi, %rcx
@@ -1322,12 +1487,12 @@ Lbb57:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str189(%rip), %rcx
+	leaq str207(%rip), %rcx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
-Lbb58:
+Lbb66:
 	movq %rdx, %rsi
 	subq $32, %rsp
 	callq donna_int_to_string
@@ -1336,7 +1501,7 @@ Lbb58:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str195(%rip), %rdx
+	leaq str213(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -1346,7 +1511,7 @@ Lbb58:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str198(%rip), %rdx
+	leaq str216(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	popq %rsi
@@ -1381,14 +1546,14 @@ utilities_logger_format_seconds:
 	setl %al
 	movzbq %al, %rax
 	cmpq $1, %rax
-	jz Lbb63
+	jz Lbb71
 	subq $32, %rsp
 	callq donna_int_to_string
 	movq %rax, %rdx
 	subq $-32, %rsp
 	movq %rsi, %rcx
-	jmp Lbb64
-Lbb63:
+	jmp Lbb72
+Lbb71:
 	subq $32, %rsp
 	callq donna_int_to_string
 	movq %rsi, %rcx
@@ -1396,12 +1561,12 @@ Lbb63:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rcx, %rsi
-	leaq str209(%rip), %rcx
+	leaq str227(%rip), %rcx
 	callq __rt_str_concat
 	movq %rsi, %rcx
 	movq %rax, %rdx
 	subq $-32, %rsp
-Lbb64:
+Lbb72:
 	movq %rdx, %rsi
 	subq $32, %rsp
 	callq donna_int_to_string
@@ -1410,7 +1575,7 @@ Lbb64:
 	subq $-32, %rsp
 	subq $32, %rsp
 	movq %rdx, %rsi
-	leaq str215(%rip), %rdx
+	leaq str233(%rip), %rdx
 	callq __rt_str_concat
 	movq %rsi, %rdx
 	movq %rax, %rcx
@@ -1420,7 +1585,7 @@ Lbb64:
 	movq %rax, %rcx
 	subq $-32, %rsp
 	subq $32, %rsp
-	leaq str218(%rip), %rdx
+	leaq str236(%rip), %rdx
 	callq __rt_str_concat
 	subq $-32, %rsp
 	popq %rsi

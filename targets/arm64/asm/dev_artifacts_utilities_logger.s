@@ -119,50 +119,34 @@ str39:
 .data
 .balign 8
 str40:
-	.ascii "Cleaning"
+	.ascii "Docs"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str44:
-	.ascii "%s"
-	.byte 10
+	.ascii "Format"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str45:
-	.ascii "Cleaned"
+str48:
+	.ascii "Running"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str47:
-	.ascii "in "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str52:
-	.ascii "%s"
-	.byte 10
+str50:
+	.ascii "tests..."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str53:
-	.ascii "Checking"
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str56:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -170,21 +154,36 @@ str56:
 
 .data
 .balign 8
-str57:
-	.ascii "Checked"
+str54:
+	.ascii "Cleaning"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str58:
+	.ascii "%s"
+	.byte 10
 	.byte 0
 /* end data */
 
 .data
 .balign 8
 str59:
+	.ascii "Cleaned"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str61:
 	.ascii "in "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str64:
+str66:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -192,7 +191,51 @@ str64:
 
 .data
 .balign 8
-str66:
+str67:
+	.ascii "Checking"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str70:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str71:
+	.ascii "Checked"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str73:
+	.ascii "in "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str78:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str79:
+	.ascii "Check"
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str84:
 	.byte 226
 	.byte 134
 	.byte 146
@@ -202,14 +245,14 @@ str66:
 
 .data
 .balign 8
-str70:
+str88:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str75:
+str93:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -217,21 +260,21 @@ str75:
 
 .data
 .balign 8
-str76:
+str94:
 	.ascii "error"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str78:
+str96:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str81:
+str99:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -239,21 +282,21 @@ str81:
 
 .data
 .balign 8
-str82:
+str100:
 	.ascii "warning"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str84:
+str102:
 	.ascii ": "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str87:
+str105:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -261,14 +304,14 @@ str87:
 
 .data
 .balign 8
-str88:
+str106:
 	.ascii "  hint: "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str91:
+str109:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -276,58 +319,14 @@ str91:
 
 .data
 .balign 8
-str92:
+str110:
 	.ascii "  "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str95:
-	.ascii "%s"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str102:
-	.ascii "Donna found "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str105:
-	.ascii " error(s) and "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str109:
-	.ascii " warning(s)."
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str111:
-	.ascii "%s"
-	.byte 10
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str118:
-	.ascii ""
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str119:
+str113:
 	.ascii "%s"
 	.byte 10
 	.byte 0
@@ -364,77 +363,121 @@ str129:
 
 .data
 .balign 8
-str132:
-	.ascii "  "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str135:
-	.ascii " "
-	.byte 0
-/* end data */
-
-.data
-.balign 8
-str155:
+str136:
 	.ascii ""
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str156:
+str137:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str138:
+	.ascii "Donna found "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str141:
+	.ascii " error(s) and "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str145:
+	.ascii " warning(s)."
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str147:
+	.ascii "%s"
+	.byte 10
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str150:
+	.ascii "  "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str153:
 	.ascii " "
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str168:
+str173:
+	.ascii ""
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str174:
+	.ascii " "
+	.byte 0
+/* end data */
+
+.data
+.balign 8
+str186:
 	.ascii "us"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str189:
+str207:
 	.ascii "0"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str195:
+str213:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str198:
+str216:
 	.ascii "ms"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str209:
+str227:
 	.ascii "0"
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str215:
+str233:
 	.ascii "."
 	.byte 0
 /* end data */
 
 .data
 .balign 8
-str218:
+str236:
 	.ascii "s"
 	.byte 0
 /* end data */
@@ -637,8 +680,8 @@ utilities_logger_docs_ok:
 
 .text
 .balign 16
-.globl utilities_logger_cleaning
-utilities_logger_cleaning:
+.globl utilities_logger_docs_output
+utilities_logger_docs_output:
 	hint	#34
 	stp	x29, x30, [sp, -32]!
 	mov	x29, sp
@@ -650,13 +693,95 @@ utilities_logger_cleaning:
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
+	bl	utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	__rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+.type utilities_logger_docs_output, @function
+.size utilities_logger_docs_output, .-utilities_logger_docs_output
+/* end function utilities_logger_docs_output */
+
+.text
+.balign 16
+.globl utilities_logger_format_summary
+utilities_logger_format_summary:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, str44
+	add	x0, x0, #:lo12:str44
+	bl	utilities_logger_action
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	bl	utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	__rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+.type utilities_logger_format_summary, @function
+.size utilities_logger_format_summary, .-utilities_logger_format_summary
+/* end function utilities_logger_format_summary */
+
+.text
+.balign 16
+.globl utilities_logger_running_tests
+utilities_logger_running_tests:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	adrp	x0, str48
+	add	x0, x0, #:lo12:str48
+	bl	utilities_logger_action
+	mov	x19, x0
+	adrp	x0, str50
+	add	x0, x0, #:lo12:str50
+	bl	utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	__rt_str_concat
+	mov	x1, x0
+	adrp	x0, str53
+	add	x0, x0, #:lo12:str53
+	bl	printf
+	mov	w0, #0
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+.type utilities_logger_running_tests, @function
+.size utilities_logger_running_tests, .-utilities_logger_running_tests
+/* end function utilities_logger_running_tests */
+
+.text
+.balign 16
+.globl utilities_logger_cleaning
+utilities_logger_cleaning:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, str54
+	add	x0, x0, #:lo12:str54
+	bl	utilities_logger_action
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
 	bl	utilities_colors_path
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str44
-	add	x0, x0, #:lo12:str44
+	adrp	x0, str58
+	add	x0, x0, #:lo12:str58
 	bl	printf
 	mov	w0, #0
 	ldr	x19, [x29, 24]
@@ -675,11 +800,11 @@ utilities_logger_clean_ok:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, str45
-	add	x0, x0, #:lo12:str45
+	adrp	x0, str59
+	add	x0, x0, #:lo12:str59
 	bl	utilities_logger_action
-	adrp	x1, str47
-	add	x1, x1, #:lo12:str47
+	adrp	x1, str61
+	add	x1, x1, #:lo12:str61
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -690,8 +815,8 @@ utilities_logger_clean_ok:
 	mov	x0, x19
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str52
-	add	x0, x0, #:lo12:str52
+	adrp	x0, str66
+	add	x0, x0, #:lo12:str66
 	bl	printf
 	mov	w0, #0
 	ldr	x19, [x29, 24]
@@ -710,14 +835,14 @@ utilities_logger_checking:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, str53
-	add	x0, x0, #:lo12:str53
+	adrp	x0, str67
+	add	x0, x0, #:lo12:str67
 	bl	utilities_logger_action
 	mov	x1, x19
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str56
-	add	x0, x0, #:lo12:str56
+	adrp	x0, str70
+	add	x0, x0, #:lo12:str70
 	bl	printf
 	mov	w0, #0
 	ldr	x19, [x29, 24]
@@ -736,11 +861,11 @@ utilities_logger_check_ok:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, str57
-	add	x0, x0, #:lo12:str57
+	adrp	x0, str71
+	add	x0, x0, #:lo12:str71
 	bl	utilities_logger_action
-	adrp	x1, str59
-	add	x1, x1, #:lo12:str59
+	adrp	x1, str73
+	add	x1, x1, #:lo12:str73
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -751,8 +876,8 @@ utilities_logger_check_ok:
 	mov	x0, x19
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str64
-	add	x0, x0, #:lo12:str64
+	adrp	x0, str78
+	add	x0, x0, #:lo12:str78
 	bl	printf
 	mov	w0, #0
 	ldr	x19, [x29, 24]
@@ -761,6 +886,32 @@ utilities_logger_check_ok:
 .type utilities_logger_check_ok, @function
 .size utilities_logger_check_ok, .-utilities_logger_check_ok
 /* end function utilities_logger_check_ok */
+
+.text
+.balign 16
+.globl utilities_logger_check_success
+utilities_logger_check_success:
+	hint	#34
+	stp	x29, x30, [sp, -32]!
+	mov	x29, sp
+	str	x19, [x29, 24]
+	mov	x19, x0
+	adrp	x0, str79
+	add	x0, x0, #:lo12:str79
+	bl	utilities_logger_action
+	mov	x17, x0
+	mov	x0, x19
+	mov	x19, x17
+	bl	utilities_colors_dim
+	mov	x1, x0
+	mov	x0, x19
+	bl	__rt_str_concat
+	ldr	x19, [x29, 24]
+	ldp	x29, x30, [sp], 32
+	ret
+.type utilities_logger_check_success, @function
+.size utilities_logger_check_success, .-utilities_logger_check_success
+/* end function utilities_logger_check_success */
 
 .text
 .balign 16
@@ -774,8 +925,8 @@ utilities_logger_success:
 	mov	x19, x2
 	mov	x20, x1
 	bl	utilities_logger_action
-	adrp	x1, str66
-	add	x1, x1, #:lo12:str66
+	adrp	x1, str84
+	add	x1, x1, #:lo12:str84
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -791,16 +942,16 @@ utilities_logger_success:
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str70
-	add	x0, x0, #:lo12:str70
+	adrp	x0, str88
+	add	x0, x0, #:lo12:str88
 	bl	__rt_str_concat
 	bl	utilities_colors_dim
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str75
-	add	x0, x0, #:lo12:str75
+	adrp	x0, str93
+	add	x0, x0, #:lo12:str93
 	bl	printf
 	mov	w0, #0
 	ldr	x19, [x29, 24]
@@ -820,19 +971,19 @@ utilities_logger_error:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, str76
-	add	x0, x0, #:lo12:str76
+	adrp	x0, str94
+	add	x0, x0, #:lo12:str94
 	bl	utilities_colors_red
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str78
-	add	x1, x1, #:lo12:str78
+	adrp	x1, str96
+	add	x1, x1, #:lo12:str96
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str81
-	add	x0, x0, #:lo12:str81
+	adrp	x0, str99
+	add	x0, x0, #:lo12:str99
 	bl	printf
 	mov	w0, #0
 	ldr	x19, [x29, 24]
@@ -851,19 +1002,19 @@ utilities_logger_warn:
 	mov	x29, sp
 	str	x19, [x29, 24]
 	mov	x19, x0
-	adrp	x0, str82
-	add	x0, x0, #:lo12:str82
+	adrp	x0, str100
+	add	x0, x0, #:lo12:str100
 	bl	utilities_colors_yellow
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str84
-	add	x1, x1, #:lo12:str84
+	adrp	x1, str102
+	add	x1, x1, #:lo12:str102
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str87
-	add	x0, x0, #:lo12:str87
+	adrp	x0, str105
+	add	x0, x0, #:lo12:str105
 	bl	printf
 	mov	w0, #0
 	ldr	x19, [x29, 24]
@@ -881,13 +1032,13 @@ utilities_logger_hint:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	mov	x1, x0
-	adrp	x0, str88
-	add	x0, x0, #:lo12:str88
+	adrp	x0, str106
+	add	x0, x0, #:lo12:str106
 	bl	__rt_str_concat
 	bl	utilities_colors_dim
 	mov	x1, x0
-	adrp	x0, str91
-	add	x0, x0, #:lo12:str91
+	adrp	x0, str109
+	add	x0, x0, #:lo12:str109
 	bl	printf
 	mov	w0, #0
 	ldp	x29, x30, [sp], 16
@@ -904,13 +1055,13 @@ utilities_logger_info:
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
 	mov	x1, x0
-	adrp	x0, str92
-	add	x0, x0, #:lo12:str92
+	adrp	x0, str110
+	add	x0, x0, #:lo12:str110
 	bl	__rt_str_concat
 	bl	utilities_colors_dim
 	mov	x1, x0
-	adrp	x0, str95
-	add	x0, x0, #:lo12:str95
+	adrp	x0, str113
+	add	x0, x0, #:lo12:str113
 	bl	printf
 	mov	w0, #0
 	ldp	x29, x30, [sp], 16
@@ -932,23 +1083,23 @@ utilities_logger_summary:
 	cmp	x0, #0
 	cset	x1, eq
 	cmp	x1, #0
-	beq	.L34
+	beq	.L42
 	cmp	x20, #0
 	cset	x1, eq
 	mov	x2, #16
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L33
+	beq	.L41
 	bl	donna_int_to_string
 	mov	x1, x0
 	mov	x0, x20
 	mov	x20, x0
-	adrp	x0, str120
-	add	x0, x0, #:lo12:str120
+	adrp	x0, str138
+	add	x0, x0, #:lo12:str138
 	bl	__rt_str_concat
-	adrp	x1, str123
-	add	x1, x1, #:lo12:str123
+	adrp	x1, str141
+	add	x1, x1, #:lo12:str141
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x20
@@ -957,36 +1108,36 @@ utilities_logger_summary:
 	mov	x1, x0
 	mov	x0, x20
 	bl	__rt_str_concat
-	adrp	x1, str127
-	add	x1, x1, #:lo12:str127
+	adrp	x1, str145
+	add	x1, x1, #:lo12:str145
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str129
-	add	x0, x0, #:lo12:str129
+	adrp	x0, str147
+	add	x0, x0, #:lo12:str147
 	bl	printf
 	mov	x0, #0
 	str	x0, [x19]
-	b	.L36
-.L33:
-	adrp	x1, str118
-	add	x1, x1, #:lo12:str118
-	adrp	x0, str119
-	add	x0, x0, #:lo12:str119
+	b	.L44
+.L41:
+	adrp	x1, str136
+	add	x1, x1, #:lo12:str136
+	adrp	x0, str137
+	add	x0, x0, #:lo12:str137
 	bl	printf
 	mov	x0, #0
 	str	x0, [x19]
-	b	.L36
-.L34:
+	b	.L44
+.L42:
 	mov	x19, x20
 	bl	donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str102
-	add	x0, x0, #:lo12:str102
+	adrp	x0, str120
+	add	x0, x0, #:lo12:str120
 	bl	__rt_str_concat
-	adrp	x1, str105
-	add	x1, x1, #:lo12:str105
+	adrp	x1, str123
+	add	x1, x1, #:lo12:str123
 	bl	__rt_str_concat
 	mov	x17, x0
 	mov	x0, x19
@@ -995,14 +1146,14 @@ utilities_logger_summary:
 	mov	x1, x0
 	mov	x0, x19
 	bl	__rt_str_concat
-	adrp	x1, str109
-	add	x1, x1, #:lo12:str109
+	adrp	x1, str127
+	add	x1, x1, #:lo12:str127
 	bl	__rt_str_concat
 	mov	x1, x0
-	adrp	x0, str111
-	add	x0, x0, #:lo12:str111
+	adrp	x0, str129
+	add	x0, x0, #:lo12:str129
 	bl	printf
-.L36:
+.L44:
 	mov	w0, #0
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
@@ -1022,11 +1173,11 @@ utilities_logger_action:
 	mov	x1, #10
 	bl	utilities_logger_pad_left
 	mov	x1, x0
-	adrp	x0, str132
-	add	x0, x0, #:lo12:str132
+	adrp	x0, str150
+	add	x0, x0, #:lo12:str150
 	bl	__rt_str_concat
-	adrp	x1, str135
-	add	x1, x1, #:lo12:str135
+	adrp	x1, str153
+	add	x1, x1, #:lo12:str153
 	bl	__rt_str_concat
 	bl	utilities_colors_orange
 	ldp	x29, x30, [sp], 16
@@ -1050,15 +1201,15 @@ utilities_logger_pad_left:
 	cmp	x0, x1
 	cset	x2, ge
 	cmp	x2, #1
-	beq	.L42
+	beq	.L50
 	sub	x0, x1, x0
 	bl	utilities_logger_repeat_spaces
 	mov	x1, x19
 	bl	__rt_str_concat
-	b	.L43
-.L42:
+	b	.L51
+.L50:
 	mov	x0, x19
-.L43:
+.L51:
 	ldr	x19, [x29, 24]
 	ldr	x20, [x29, 16]
 	ldp	x29, x30, [sp], 32
@@ -1076,19 +1227,19 @@ utilities_logger_repeat_spaces:
 	cmp	x0, #0
 	cset	x1, le
 	cmp	x1, #1
-	beq	.L46
+	beq	.L54
 	mov	x1, #1
 	sub	x0, x0, x1
 	bl	utilities_logger_repeat_spaces
 	mov	x1, x0
-	adrp	x0, str156
-	add	x0, x0, #:lo12:str156
+	adrp	x0, str174
+	add	x0, x0, #:lo12:str174
 	bl	__rt_str_concat
-	b	.L47
-.L46:
-	adrp	x0, str155
-	add	x0, x0, #:lo12:str155
-.L47:
+	b	.L55
+.L54:
+	adrp	x0, str173
+	add	x0, x0, #:lo12:str173
+.L55:
 	ldp	x29, x30, [sp], 16
 	ret
 .type utilities_logger_repeat_spaces, @function
@@ -1105,7 +1256,7 @@ utilities_logger_format_duration:
 	cmp	x0, #1000
 	cset	x1, lt
 	cmp	x1, #1
-	beq	.L52
+	beq	.L60
 	mov	x1, #16960
 	movk	x1, #0xf, lsl #16
 	cmp	x0, x1
@@ -1114,20 +1265,20 @@ utilities_logger_format_duration:
 	sub	sp, sp, x2
 	mov	x19, sp
 	cmp	x1, #1
-	beq	.L51
+	beq	.L59
 	bl	utilities_logger_format_seconds
 	str	x0, [x19]
-	b	.L53
-.L51:
+	b	.L61
+.L59:
 	bl	utilities_logger_format_ms
 	str	x0, [x19]
-	b	.L53
-.L52:
+	b	.L61
+.L60:
 	bl	donna_int_to_string
-	adrp	x1, str168
-	add	x1, x1, #:lo12:str168
+	adrp	x1, str186
+	add	x1, x1, #:lo12:str186
 	bl	__rt_str_concat
-.L53:
+.L61:
 	ldr	x19, [x29, 24]
 	mov sp, x29
 	ldp	x29, x30, [sp], 32
@@ -1153,33 +1304,33 @@ utilities_logger_format_ms:
 	cmp	x0, #10
 	cset	x1, lt
 	cmp	x1, #1
-	beq	.L57
+	beq	.L65
 	bl	donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
-	b	.L58
-.L57:
+	b	.L66
+.L65:
 	bl	donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str189
-	add	x0, x0, #:lo12:str189
+	adrp	x0, str207
+	add	x0, x0, #:lo12:str207
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x0, x19
-.L58:
+.L66:
 	mov	x19, x1
 	bl	donna_int_to_string
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str195
-	add	x1, x1, #:lo12:str195
+	adrp	x1, str213
+	add	x1, x1, #:lo12:str213
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
-	adrp	x1, str198
-	add	x1, x1, #:lo12:str198
+	adrp	x1, str216
+	add	x1, x1, #:lo12:str216
 	bl	__rt_str_concat
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32
@@ -1207,33 +1358,33 @@ utilities_logger_format_seconds:
 	cmp	x0, #10
 	cset	x1, lt
 	cmp	x1, #1
-	beq	.L63
+	beq	.L71
 	bl	donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
-	b	.L64
-.L63:
+	b	.L72
+.L71:
 	bl	donna_int_to_string
 	mov	x1, x0
 	mov	x0, x19
 	mov	x19, x0
-	adrp	x0, str209
-	add	x0, x0, #:lo12:str209
+	adrp	x0, str227
+	add	x0, x0, #:lo12:str227
 	bl	__rt_str_concat
 	mov	x1, x0
 	mov	x0, x19
-.L64:
+.L72:
 	mov	x19, x1
 	bl	donna_int_to_string
 	mov	x1, x19
 	mov	x19, x1
-	adrp	x1, str215
-	add	x1, x1, #:lo12:str215
+	adrp	x1, str233
+	add	x1, x1, #:lo12:str233
 	bl	__rt_str_concat
 	mov	x1, x19
 	bl	__rt_str_concat
-	adrp	x1, str218
-	add	x1, x1, #:lo12:str218
+	adrp	x1, str236
+	add	x1, x1, #:lo12:str236
 	bl	__rt_str_concat
 	ldr	x19, [x29, 24]
 	ldp	x29, x30, [sp], 32

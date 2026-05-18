@@ -1713,16 +1713,13 @@ builder_tester_generate_filtered_runner:
 	str	x19, [x29, 40]
 	str	x20, [x29, 32]
 	str	x21, [x29, 24]
+	bl	builder_tester_select_test_modules
 	mov	x19, x0
-	bl	builder_tester_filter_test_modules
-	mov	x20, x0
-	mov	x0, x19
-	mov	x19, x0
-	mov	x0, x20
 	bl	builder_tester_count_total
 	mov	x17, x0
 	mov	x0, x19
 	mov	x19, x17
+	mov	x20, x0
 	bl	builder_tester_gen_imports
 	mov	x17, x0
 	mov	x0, x20
@@ -2212,7 +2209,8 @@ builder_tester_generate_filtered_runner:
 
 .text
 .balign 16
-builder_tester_filter_test_modules:
+.globl builder_tester_select_test_modules
+builder_tester_select_test_modules:
 	hint	#34
 	stp	x29, x30, [sp, -16]!
 	mov	x29, sp
@@ -2225,9 +2223,9 @@ builder_tester_filter_test_modules:
 .L58:
 	ldp	x29, x30, [sp], 16
 	ret
-.type builder_tester_filter_test_modules, @function
-.size builder_tester_filter_test_modules, .-builder_tester_filter_test_modules
-/* end function builder_tester_filter_test_modules */
+.type builder_tester_select_test_modules, @function
+.size builder_tester_select_test_modules, .-builder_tester_select_test_modules
+/* end function builder_tester_select_test_modules */
 
 .text
 .balign 16
